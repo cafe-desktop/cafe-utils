@@ -1,10 +1,10 @@
 [Desktop Entry]
 Name=MATE Disk Usage Analyzer
 Comment=Check folder sizes and available disk space
-TryExec=mate-disk-usage-analyzer
-Exec=mate-disk-usage-analyzer
+TryExec=cafe-disk-usage-analyzer
+Exec=cafe-disk-usage-analyzer
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=mate-disk-usage-analyzer
+Icon=cafe-disk-usage-analyzer
 Terminal=false
 Type=Application
 StartupNotify=true
@@ -13,6 +13,6 @@ Categories=GTK;System;Filesystem;
 Keywords=MATE;check;disk;usage;analyze;size;space;
 OnlyShowIn=MATE;
 X-MATE-Bugzilla-Bugzilla=MATE
-X-MATE-Bugzilla-Product=mate-utils
-X-MATE-Bugzilla-Component=mate-disk-usage-analyzer
+X-MATE-Bugzilla-Product=cafe-utils
+X-MATE-Bugzilla-Component=cafe-disk-usage-analyzer
 X-MATE-Bugzilla-Version=@VERSION@

@@ -1,12 +1,12 @@
-m4_define([mate_utils_major], [1])
-m4_define([mate_utils_minor], [24])
-m4_define([mate_utils_micro], [0])
+m4_define([cafe_utils_major], [1])
+m4_define([cafe_utils_minor], [24])
+m4_define([cafe_utils_micro], [0])
 
-m4_define([mate_utils_version], [mate_utils_major.mate_utils_minor.mate_utils_micro])
+m4_define([cafe_utils_version], [cafe_utils_major.cafe_utils_minor.cafe_utils_micro])
 
-AC_INIT([mate-utils],
-        [mate_utils_version],
-        [https://mate-desktop.org/])
+AC_INIT([cafe-utils],
+        [cafe_utils_version],
+        [https://cafe-desktop.org/])
 
 AC_CONFIG_MACRO_DIR([m4])
 
@@ -164,7 +164,7 @@ AC_SUBST(GDICT_MINOR_VERSION)
 AC_SUBST(GDICT_MICRO_VERSION)
 AC_SUBST(GDICT_VERSION)
 
-# xext for mate-screenshot; in theory checking for xext should be
+# xext for cafe-screenshot; in theory checking for xext should be
 # enough but there are a lot of broken distros out there
 PKG_CHECK_MODULES(XSHAPE, xext x11,
                   [AC_CHECK_HEADERS(X11/extensions/shape.h, XSHAPE_LIBS="-lXext -lX11")])
@@ -172,7 +172,7 @@ AC_SUBST(XSHAPE_LIBS)
 
 AC_ARG_ENABLE([gdict-applet],
                [AC_HELP_STRING([--enable-gdict-applet=@<:@yes/no@:>@],
-                               [Whether to build the Dictionary mate-panel applet])],
+                               [Whether to build the Dictionary cafe-panel applet])],
                [],
                [enable_gdict_applet=yes])
 
@@ -180,7 +180,7 @@ AS_CASE([$enable_gdict_applet],
         [yes],
         [
           # Gdict applet checks
-          PKG_CHECK_MODULES(APPLET, libmatepanelapplet-4.0 >= $LIBMATE_PANEL_APPLET_REQUIRED)
+          PKG_CHECK_MODULES(APPLET, libcafepanelapplet-4.0 >= $LIBMATE_PANEL_APPLET_REQUIRED)
           AC_SUBST(APPLET_LIBS)
           AC_SUBST(APPLET_CFLAGS)
         ],
@@ -278,16 +278,16 @@ AC_TRY_RUN([
   ]
 )
 
-dnl mate-search-tool checks
+dnl cafe-search-tool checks
 withval=""
 AC_ARG_WITH([grep],
             AC_HELP_STRING([--with-grep=@<:@grep command@:>@]
                            [Specify where to find the grep binary]),
             [
               AS_IF([test x$withval != x],
-                    [AC_MSG_RESULT(${withval} is used for mate-search-tool.)],
+                    [AC_MSG_RESULT(${withval} is used for cafe-search-tool.)],
 
-                    [AC_MSG_RESULT(grep is used for mate-search-tool.)]
+                    [AC_MSG_RESULT(grep is used for cafe-search-tool.)]
               )
             ])
 
@@ -326,7 +326,7 @@ dnl Internationalization
 AM_GNU_GETTEXT_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
 
-GETTEXT_PACKAGE=mate-utils
+GETTEXT_PACKAGE=cafe-utils
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], "$GETTEXT_PACKAGE", [Define the gettext package to use])
 AC_SUBST(GETTEXT_PACKAGE)
 
@@ -345,14 +345,14 @@ po/Makefile.in
 
 baobab/Makefile
 baobab/data/Makefile
-baobab/data/org.mate.disk-usage-analyzer.gschema.xml
+baobab/data/org.cafe.disk-usage-analyzer.gschema.xml
 baobab/pixmaps/Makefile
 baobab/src/Makefile
 baobab/help/Makefile
 
 logview/Makefile
 logview/data/Makefile
-logview/data/org.mate.system-log.gschema.xml
+logview/data/org.cafe.system-log.gschema.xml
 logview/data/icons/Makefile
 logview/help/Makefile
 logview/src/Makefile
@@ -360,35 +360,35 @@ logview/src/tests/Makefile
 
 gsearchtool/Makefile
 gsearchtool/data/Makefile
-gsearchtool/data/org.mate.search-tool.gschema.xml
+gsearchtool/data/org.cafe.search-tool.gschema.xml
 gsearchtool/help/Makefile
 gsearchtool/libeggsmclient/Makefile
-gsearchtool/libmateui-deprecated/Makefile
+gsearchtool/libcafeui-deprecated/Makefile
 gsearchtool/src/Makefile
 
-mate-dictionary/Makefile
-mate-dictionary/libgdict/Makefile
-mate-dictionary/libgdict/gdict-version.h
-mate-dictionary/libgdict/mate-dict.pc
-mate-dictionary/data/Makefile
-mate-dictionary/data/org.mate.dictionary.gschema.xml
-mate-dictionary/docs/Makefile
-mate-dictionary/docs/reference/Makefile
-mate-dictionary/docs/reference/gdict/Makefile
-mate-dictionary/docs/reference/gdict/version.xml
-mate-dictionary/help/Makefile
-mate-dictionary/src/Makefile
+cafe-dictionary/Makefile
+cafe-dictionary/libgdict/Makefile
+cafe-dictionary/libgdict/gdict-version.h
+cafe-dictionary/libgdict/cafe-dict.pc
+cafe-dictionary/data/Makefile
+cafe-dictionary/data/org.cafe.dictionary.gschema.xml
+cafe-dictionary/docs/Makefile
+cafe-dictionary/docs/reference/Makefile
+cafe-dictionary/docs/reference/gdict/Makefile
+cafe-dictionary/docs/reference/gdict/version.xml
+cafe-dictionary/help/Makefile
+cafe-dictionary/src/Makefile
 
-mate-screenshot/Makefile
-mate-screenshot/data/Makefile
-mate-screenshot/data/org.mate.screenshot.gschema.xml
-mate-screenshot/src/Makefile
+cafe-screenshot/Makefile
+cafe-screenshot/data/Makefile
+cafe-screenshot/data/org.cafe.screenshot.gschema.xml
+cafe-screenshot/src/Makefile
 ])
 
 AM_COND_IF([BUILD_DISK_IMAGE_MOUNTER],
-           [AC_CONFIG_FILES([mate-disk-image-mounter/Makefile
-                             mate-disk-image-mounter/data/Makefile
-                             mate-disk-image-mounter/src/Makefile])
+           [AC_CONFIG_FILES([cafe-disk-image-mounter/Makefile
+                             cafe-disk-image-mounter/data/Makefile
+                             cafe-disk-image-mounter/src/Makefile])
            ]
 )
 
@@ -397,7 +397,7 @@ AC_OUTPUT
 dnl <= Configuration summary =>
 
 echo "
-mate-utils $VERSION configuration summary:
+cafe-utils $VERSION configuration summary:
 
                    Compiler flags : $CFLAGS
            Compiler warning flags : $WARN_CFLAGS
@@ -409,8 +409,8 @@ mate-utils $VERSION configuration summary:
                          sbin dir : $sbindir
                          data dir : $datadir
 
-     Debug messages (libmatedict) : $enable_debug
-      API Reference (libmatedict) : $enable_gtk_doc
+     Debug messages (libcafedict) : $enable_debug
+      API Reference (libcafedict) : $enable_gtk_doc
   Logview built with ZLib support : $msg_zlib
-     Dictionary mate-panel applet : $enable_gdict_applet
+     Dictionary cafe-panel applet : $enable_gdict_applet
 "

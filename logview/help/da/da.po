@@ -8,7 +8,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 16:47+0100\n"
 "PO-Revision-Date: 2018-09-14 23:21+0000\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2020\n"
-"Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
+"Language-Team: Danish (https://www.transifex.com/cafe/teams/13566/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -340,11 +340,11 @@ msgstr "Tilbagemeldinger"
 msgid ""
 "To report a bug or make a suggestion regarding the System Log Viewer "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 "For at rapportere en fejl eller komme med et forslag jævnfør "
 "systemlogfremviseren eller denne manual, så følg retningslinjerne i <ulink "
-"url=\"help:mate-user-guide/feedback\" type=\"help\">MATE's side for "
+"url=\"help:cafe-user-guide/feedback\" type=\"help\">MATE's side for "
 "tilbagemeldinger</ulink>."
 
 #. (itstool) path: article/indexterm
@@ -432,9 +432,9 @@ msgstr "Kommandolinje"
 #. (itstool) path: listitem/para
 #: C/index.docbook:258
 msgid ""
-"Type <command>mate-system-log</command>, then press <keycap>Return</keycap>."
+"Type <command>cafe-system-log</command>, then press <keycap>Return</keycap>."
 msgstr ""
-"Tast <command>mate-system-log</command>, tryk så <keycap>Retur</keycap>."
+"Tast <command>cafe-system-log</command>, tryk så <keycap>Retur</keycap>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:265

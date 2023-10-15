@@ -1,19 +1,19 @@
 png_icons = \
-	hicolor_apps_16x16_mate-disk-usage-analyzer.png \
-	hicolor_apps_22x22_mate-disk-usage-analyzer.png \
-	hicolor_apps_24x24_mate-disk-usage-analyzer.png \
-	hicolor_apps_32x32_mate-disk-usage-analyzer.png \
-	hicolor_apps_48x48_mate-disk-usage-analyzer.png \
-	hicolor_apps_128x128_mate-disk-usage-analyzer.png \
+	hicolor_apps_16x16_cafe-disk-usage-analyzer.png \
+	hicolor_apps_22x22_cafe-disk-usage-analyzer.png \
+	hicolor_apps_24x24_cafe-disk-usage-analyzer.png \
+	hicolor_apps_32x32_cafe-disk-usage-analyzer.png \
+	hicolor_apps_48x48_cafe-disk-usage-analyzer.png \
+	hicolor_apps_128x128_cafe-disk-usage-analyzer.png \
 	$(NULL)
 
 public_icons = \
 	$(png_icons) \
-	hicolor_apps_scalable_mate-disk-usage-analyzer.svg \
+	hicolor_apps_scalable_cafe-disk-usage-analyzer.svg \
 	$(NULL)
 
 if HAVE_RSVG_CONVERT
-hicolor_apps_%.png: hicolor_apps_scalable_mate-disk-usage-analyzer.svg
+hicolor_apps_%.png: hicolor_apps_scalable_cafe-disk-usage-analyzer.svg
 	$(RSVG_CONVERT) -w $(word 1, $(subst x, ,$(word 1,$(subst _, ,$*)))) -h $(word 2, $(subst x, ,$(word 1,$(subst _, ,$*)))) $^ -o $@
 endif
 

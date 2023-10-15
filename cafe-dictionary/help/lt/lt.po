@@ -9,7 +9,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 16:47+0100\n"
 "PO-Revision-Date: 2018-09-13 10:55+0000\n"
 "Last-Translator: Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2018\n"
-"Language-Team: Lithuanian (https://www.transifex.com/mate/teams/13566/lt/)\n"
+"Language-Team: Lithuanian (https://www.transifex.com/cafe/teams/13566/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -217,11 +217,11 @@ msgstr "Atsiliepimai"
 #: C/index.docbook:112
 msgid ""
 "To report a bug or make a suggestion regarding the Dictionary application or"
-" this manual, follow the directions in the <ulink url=\"help:mate-user-"
+" this manual, follow the directions in the <ulink url=\"help:cafe-user-"
 "guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 "Pranešimui apie programos klaidą arba pasiūlymams dėl Žodyno programos ar "
-"šio žinyno, sekite nuorodas <ulink url=\"help:mate-user-guide/feedback\" "
+"šio žinyno, sekite nuorodas <ulink url=\"help:cafe-user-guide/feedback\" "
 "type=\"help\">MATE atsako puslapyje</ulink>."
 
 #. (itstool) path: article/indexterm
@@ -280,8 +280,8 @@ msgstr "Komandinė eilutė"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:158
-msgid "Execute the following command: <command>mate-dictionary</command>"
-msgstr "Įvykdykite šią komandą: <command>mate-dictionary</command>"
+msgid "Execute the following command: <command>cafe-dictionary</command>"
+msgstr "Įvykdykite šią komandą: <command>cafe-dictionary</command>"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:163
@@ -303,20 +303,20 @@ msgstr "Žodyno langas"
 #: C/index.docbook:171
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-dictionary-application.png' "
+"external ref='figures/cafe-dictionary-application.png' "
 "md5='fb48a9e5863bfb2b3811df2e28489eb7'"
 msgstr ""
-"external ref='figures/mate-dictionary-application.png' "
+"external ref='figures/cafe-dictionary-application.png' "
 "md5='fb48a9e5863bfb2b3811df2e28489eb7'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:169
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/mate-dictionary-application.png\""
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-application.png\""
 " format=\"PNG\"/> </imageobject> <textobject><phrase>Shows Dictionary main "
 "window.</phrase></textobject>"
 msgstr ""
-"<imageobject> <imagedata fileref=\"figures/mate-dictionary-application.png\""
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-application.png\""
 " format=\"PNG\"/> </imageobject> <textobject><phrase>Rodo pagrindinį Žodyno "
 "langą.</phrase></textobject>"
 
@@ -356,20 +356,20 @@ msgstr ""
 #: C/index.docbook:200
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-dictionary-lookup.png' "
+"external ref='figures/cafe-dictionary-lookup.png' "
 "md5='c41c96af4de54f457a2081aad009a8d0'"
 msgstr ""
-"external ref='figures/mate-dictionary-lookup.png' "
+"external ref='figures/cafe-dictionary-lookup.png' "
 "md5='c41c96af4de54f457a2081aad009a8d0'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:198
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/mate-dictionary-lookup.png\" "
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-lookup.png\" "
 "format=\"PNG\"/> </imageobject> <textobject><phrase>Shows a definition "
 "inside the Dictionary main window.</phrase></textobject>"
 msgstr ""
-"<imageobject> <imagedata fileref=\"figures/mate-dictionary-lookup.png\" "
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-lookup.png\" "
 "format=\"PNG\"/> </imageobject> <textobject><phrase>Rodo apibrėžimą "
 "pagrindinio Žodyno lango srityje.</phrase></textobject>"
 
@@ -452,20 +452,20 @@ msgstr "Ieškoti teksto"
 #: C/index.docbook:242
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-dictionary-find.png' "
+"external ref='figures/cafe-dictionary-find.png' "
 "md5='d8bf0677084e2d9998a7942faaab5379'"
 msgstr ""
-"external ref='figures/mate-dictionary-find.png' "
+"external ref='figures/cafe-dictionary-find.png' "
 "md5='d8bf0677084e2d9998a7942faaab5379'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:240
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/mate-dictionary-find.png\" "
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-find.png\" "
 "format=\"PNG\"/> </imageobject> <textobject><phrase>Shows the Dictionary "
 "Find pane inside the main window.</phrase></textobject>"
 msgstr ""
-"<imageobject><imagedata fileref=\"figures/mate-dictionary-find.png\" "
+"<imageobject><imagedata fileref=\"figures/cafe-dictionary-find.png\" "
 "format=\"PNG\"/></imageobject> <textobject><phrase>Pagrindiniame lange rodo "
 "žodyno paieškos polangį.</phrase></textobject>"
 
@@ -523,16 +523,16 @@ msgstr "Žodyno šaltiniai"
 #: C/index.docbook:283
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-dictionary-preferences-source.png' "
+"external ref='figures/cafe-dictionary-preferences-source.png' "
 "md5='5470b15e64e66924477f150c4f47e96d'"
 msgstr ""
-"external ref='figures/mate-dictionary-preferences-source.png' "
+"external ref='figures/cafe-dictionary-preferences-source.png' "
 "md5='5470b15e64e66924477f150c4f47e96d'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:281
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/mate-dictionary-preferences-"
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-preferences-"
 "source.png\" format=\"PNG\"/> </imageobject> <textobject><phrase>Shows the "
 "Source tab of the Preferences dialog.</phrase></textobject>"
 msgstr ""
@@ -557,16 +557,16 @@ msgstr ""
 #: C/index.docbook:303
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-dictionary-add-source.png' "
+"external ref='figures/cafe-dictionary-add-source.png' "
 "md5='d059507fee77bb176fce53373951756b'"
 msgstr ""
-"external ref='figures/mate-dictionary-add-source.png' "
+"external ref='figures/cafe-dictionary-add-source.png' "
 "md5='d059507fee77bb176fce53373951756b'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:301
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/mate-dictionary-add-source.png\" "
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-add-source.png\" "
 "format=\"PNG\"/> </imageobject> <textobject><phrase>Shows the Add Source "
 "dialog.</phrase></textobject>"
 msgstr ""
@@ -679,16 +679,16 @@ msgstr ""
 #: C/index.docbook:372
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-dictionary-preferences-print.png' "
+"external ref='figures/cafe-dictionary-preferences-print.png' "
 "md5='12a65f07cb333db4c7ba743d1d12a00f'"
 msgstr ""
-"external ref='figures/mate-dictionary-preferences-print.png' "
+"external ref='figures/cafe-dictionary-preferences-print.png' "
 "md5='12a65f07cb333db4c7ba743d1d12a00f'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:370
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/mate-dictionary-preferences-"
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-preferences-"
 "print.png\" format=\"PNG\"/> </imageobject> <textobject><phrase>Shows the "
 "Print tab inside the Preferences dialog.</phrase></textobject>"
 msgstr ""
@@ -742,16 +742,16 @@ msgstr ""
 #: C/index.docbook:406
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-dictionary-applet.png' "
+"external ref='figures/cafe-dictionary-applet.png' "
 "md5='538c7fa191540f99dd964963a1079677'"
 msgstr ""
-"external ref='figures/mate-dictionary-applet.png' "
+"external ref='figures/cafe-dictionary-applet.png' "
 "md5='538c7fa191540f99dd964963a1079677'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:404
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/mate-dictionary-applet.png\" "
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-applet.png\" "
 "format=\"PNG\"/> </imageobject> <textobject><phrase>Shows Dictionary "
 "Applet.</phrase></textobject>"
 msgstr ""
@@ -798,16 +798,16 @@ msgstr ""
 #: C/index.docbook:442
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-dictionary-applet-window.png' "
+"external ref='figures/cafe-dictionary-applet-window.png' "
 "md5='e26ac4847d2e7b53c6bba7d8e1a519c4'"
 msgstr ""
-"external ref='figures/mate-dictionary-applet-window.png' "
+"external ref='figures/cafe-dictionary-applet-window.png' "
 "md5='e26ac4847d2e7b53c6bba7d8e1a519c4'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:440
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/mate-dictionary-applet-"
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-applet-"
 "window.png\" format=\"PNG\"/> </imageobject> <textobject><phrase>Shows "
 "Dictionary Applet main window.</phrase></textobject>"
 msgstr ""
@@ -839,7 +839,7 @@ msgstr ""
 msgid ""
 "The <guilabel>Preferences</guilabel> dialog is the same used by the "
 "<application>Dictionary</application> application, so refer to <xref linkend"
-"=\"mate-dictionary-preferences\"/>"
+"=\"cafe-dictionary-preferences\"/>"
 msgstr ""
 
 #. (itstool) path: para/ulink

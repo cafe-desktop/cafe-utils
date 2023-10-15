@@ -110,7 +110,7 @@ on_about_activate (GtkMenuItem *menuitem, gpointer user_data)
 		"comments", _("A graphical tool to analyze disk usage."),
 		"copyright", _("Copyright \xc2\xa9 2005-2010 Fabio Marzocca\n"
 		               "Copyright \xc2\xa9 2011-2020 MATE developers"),
-		"logo-icon-name", "mate-disk-usage-analyzer",
+		"logo-icon-name", "cafe-disk-usage-analyzer",
 		"license", license_trans,
 		"authors", authors,
 		"documenters", documenters,
@@ -279,7 +279,7 @@ on_ck_allocated_activate (GtkToggleAction *action,
 void
 on_helpcontents_activate (GtkAction *a, gpointer user_data)
 {
-	baobab_help_display (GTK_WINDOW (baobab.window), "mate-disk-usage-analyzer", NULL);
+	baobab_help_display (GTK_WINDOW (baobab.window), "cafe-disk-usage-analyzer", NULL);
 }
 
 void

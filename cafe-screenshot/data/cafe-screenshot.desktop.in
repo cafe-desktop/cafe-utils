@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Take Screenshot
 Comment=Save images of your desktop or individual windows
-Exec=mate-screenshot --interactive
+Exec=cafe-screenshot --interactive
 Terminal=false
 Type=Application
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
@@ -12,6 +12,6 @@ Categories=GTK;Utility;
 Keywords=MATE;screenshot;snapshot;desktop;window;image;
 OnlyShowIn=MATE;
 X-MATE-Bugzilla-Bugzilla=MATE
-X-MATE-Bugzilla-Product=mate-utils
+X-MATE-Bugzilla-Product=cafe-utils
 X-MATE-Bugzilla-Component=screenshot
-X-MATE-Bugzilla-OtherBinaries=mate-panel-screenshot
+X-MATE-Bugzilla-OtherBinaries=cafe-panel-screenshot

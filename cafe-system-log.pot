@@ -199,7 +199,7 @@ msgstr ""
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:201
-msgid "To report a bug or make a suggestion regarding the System Log Viewer application or this manual, follow the directions in the <ulink url=\"help:mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+msgid "To report a bug or make a suggestion regarding the System Log Viewer application or this manual, follow the directions in the <ulink url=\"help:cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -254,7 +254,7 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:258
-msgid "Type <command>mate-system-log</command>, then press <keycap>Return</keycap>."
+msgid "Type <command>cafe-system-log</command>, then press <keycap>Return</keycap>."
 msgstr ""
 
 #. (itstool) path: sect1/para

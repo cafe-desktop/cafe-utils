@@ -10,7 +10,7 @@
 <!-- 
       (Do not remove this comment block.)
   Maintained by the MATE Documentation Project
-  http://wiki.mate-desktop.org/dev-doc:doc-team-guide
+  http://wiki.cafe-desktop.org/dev-doc:doc-team-guide
   Template version: 2.0 beta
   Template last modified Apr 11, 2002
   
@@ -121,7 +121,7 @@
       <title>Feedback</title> 
       <para>To report a bug or make a suggestion regarding the &app; application or
 	this manual, follow the directions in the 
-	<ulink url="help:mate-user-guide/feedback" type="help">MATE Feedback Page</ulink>. 
+	<ulink url="help:cafe-user-guide/feedback" type="help">MATE Feedback Page</ulink>. 
       </para>
 <!-- Translators may also add here feedback address for translations -->
     </legalnotice> 
@@ -165,7 +165,7 @@
 
 <para>If you want to start <application>&app;</application> from a terminal window, just type:</para> 
   
-<para><command>mate-disk-usage-analyzer &lt;full_path_to_a_directory&gt;</command>, then press <keycap>Return</keycap>.</para>  
+<para><command>cafe-disk-usage-analyzer &lt;full_path_to_a_directory&gt;</command>, then press <keycap>Return</keycap>.</para>  
 <para></para> 
 	<para>If launched from Mate menu, <application>&app;</application> starts and remains in a stand-by state, waiting for user action.</para> 
     <para>When you start <application>&app;</application> from the Mate Menu, the following window is displayed.</para>

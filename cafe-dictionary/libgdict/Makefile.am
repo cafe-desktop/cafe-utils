@@ -6,7 +6,7 @@ AM_CPPFLAGS = -DG_LOG_DOMAIN=\"Gdict\" 				\
 	-DSYSCONFDIR=\""$(sysconfdir)"\" 			\
 	-DPREFIX=\""$(prefix)"\" 				\
 	-DMATELOCALEDIR=\""$(datadir)/locale"\"			\
-	-DGDICTSOURCESDIR=\""$(datadir)/mate-dict/sources"\" 	\
+	-DGDICTSOURCESDIR=\""$(datadir)/cafe-dict/sources"\" 	\
 	-DGDICT_ENABLE_INTERNALS				\
 	$(NULL)
 
@@ -44,23 +44,23 @@ sources_c =	\
 	$(srcdir)/gdict-utils.c			\
 	$(NULL)
 
-lib_LTLIBRARIES = libmatedict.la
+lib_LTLIBRARIES = libcafedict.la
 
 # MATE Dictionary shared library
-libmatedict_la_SOURCES  = $(sources_h) $(sources_h_priv) $(sources_c)
-libmatedict_la_CPPFLAGS = 	\
+libcafedict_la_SOURCES  = $(sources_h) $(sources_h_priv) $(sources_c)
+libcafedict_la_CPPFLAGS = 	\
 	$(AM_CPPFLAGS)		\
 	$(LIBGDICT_CFLAGS)	\
 	$(GDICT_DEBUG_CFLAGS)	\
 	$(WARN_CFLAGS)		\
 	$(NULL)
-libmatedict_la_LIBADD   = $(LIBGDICT_LIBS)
-libmatedict_la_LDFLAGS  = \
+libcafedict_la_LIBADD   = $(LIBGDICT_LIBS)
+libcafedict_la_LDFLAGS  = \
 	-version-info $(LIBGDICT_LT_VERSION) \
 	-export-dynamic \
 	-no-undefined
 
-libgdict_includedir = $(includedir)/mate-dict/gdict
+libgdict_includedir = $(includedir)/cafe-dict/gdict
 libgdict_include_HEADERS = 	\
 	$(sources_h)		\
 	gdict-enum-types.h	\
@@ -85,7 +85,7 @@ EXTRA_DIST = \
 	gdict-enum-types.h.in \
 	gdict-enum-types.c.in \
 	gdict-marshal.list \
-	mate-dict.pc.in \
+	cafe-dict.pc.in \
 	$(NULL)
 
 BUILT_SOURCES = $(gdict_built_files)
@@ -120,7 +120,7 @@ gdict-enum-types.c: gdict-enum-types.h gdict-enum-types.c.in Makefile
 	&& rm -f xgen-cetc
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = mate-dict.pc
+pkgconfig_DATA = cafe-dict.pc
 
 distclean-local:
 	if test $(srcdir) != .; then \

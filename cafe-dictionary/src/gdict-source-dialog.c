@@ -39,7 +39,7 @@
 #include "gdict-source-dialog.h"
 #include "gdict-common.h"
 
-#define GDICT_SOURCE_UI 	PKGDATADIR "/mate-dictionary-source.ui"
+#define GDICT_SOURCE_UI 	PKGDATADIR "/cafe-dictionary-source.ui"
 
 /*********************
  * GdictSourceDialog *
@@ -346,8 +346,8 @@ build_new_source (GdictSourceDialog *dialog)
 
   name = g_strdup_printf ("%s.desktop", gdict_source_get_name (source));
   filename = g_build_filename (g_get_user_config_dir (),
-  			       "mate",
-      			       "mate-dictionary",
+  			       "cafe",
+      			       "cafe-dictionary",
       			       name,
       			       NULL);
   g_free (name);
@@ -439,8 +439,8 @@ save_source (GdictSourceDialog *dialog)
 
   name = g_strdup_printf ("%s.desktop", gdict_source_get_name (source));
   filename = g_build_filename (g_get_user_config_dir (),
-      			       "mate",
-			       "mate-dictionary",
+      			       "cafe",
+			       "cafe-dictionary",
 			       name,
 			       NULL);
   g_free (name);
@@ -470,7 +470,7 @@ gdict_source_dialog_response_cb (GtkDialog *dialog,
       break;
     case GTK_RESPONSE_HELP:
       gtk_show_uri_on_window (GTK_WINDOW (dialog),
-                    "help:mate-dictionary/mate-dictionary-add-source",
+                    "help:cafe-dictionary/cafe-dictionary-add-source",
                     gtk_get_current_event_time (), &err);
       if (err)
         {

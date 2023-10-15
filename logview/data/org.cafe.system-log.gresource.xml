@@ -16,7 +16,7 @@
     along with MATE Utils.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <gresources>
-  <gresource prefix="/org/mate/system-log">
+  <gresource prefix="/org/cafe/system-log">
     <file compressed="true">logview-filter.ui</file>
     <file compressed="true">logview-toolbar.xml</file>
   </gresource>

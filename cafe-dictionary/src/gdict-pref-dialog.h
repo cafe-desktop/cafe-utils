@@ -36,13 +36,13 @@ G_BEGIN_DECLS
 #define GDICT_DEFAULT_PRINT_FONT 	"Serif 10"
 #define GDICT_DEFAULT_SOURCE_NAME 	"Default"
 
-#define GDICT_SETTINGS_SCHEMA           "org.mate.dictionary"
+#define GDICT_SETTINGS_SCHEMA           "org.cafe.dictionary"
 #define GDICT_SETTINGS_DATABASE_KEY 	"database"
 #define GDICT_SETTINGS_STRATEGY_KEY 	"strategy"
 #define GDICT_SETTINGS_PRINT_FONT_KEY 	"print-font"
 #define GDICT_SETTINGS_SOURCE_KEY 	"source-name"
 
-#define DESKTOP_SETTINGS_SCHEMA         "org.mate.interface"
+#define DESKTOP_SETTINGS_SCHEMA         "org.cafe.interface"
 #define DOCUMENT_FONT_KEY               "document-font-name"
 
 typedef struct _GdictPrefDialog        GdictPrefDialog;

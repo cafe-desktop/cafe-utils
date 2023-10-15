@@ -5,7 +5,7 @@
 # Guillaume Fayard <guillaume2.fayard@wanadoo.fr>, 2018
 # Laurent Napias <tamplan+transifex@free.fr>, 2018
 # bf437f16c5a5796ac2a6f350075b40dc, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <cafe@raveit.de>, 2018
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019
 # Stéphane PETRUS <stephane.petrus@posteo.net>, 2019
 # 
@@ -15,7 +15,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 16:47+0100\n"
 "PO-Revision-Date: 2018-09-13 10:15+0000\n"
 "Last-Translator: Stéphane PETRUS <stephane.petrus@posteo.net>, 2019\n"
-"Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
+"Language-Team: French (https://www.transifex.com/cafe/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,7 +27,7 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Contributeurs au projet MATE :\n"
-"Voir https://www.transifex.com/mate/teams/13566/fr/\n"
+"Voir https://www.transifex.com/cafe/teams/13566/fr/\n"
 "\n"
 "Contributeurs au projet GNOME :\n"
 "Vincent Renardias <vincent@ldsol.com>, 1998-2000.\n"
@@ -363,7 +363,7 @@ msgstr "Votre avis"
 msgid ""
 "To report a bug or make a suggestion regarding the Search for Files "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -473,8 +473,8 @@ msgstr "À partir de la ligne de commande"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:247
-msgid "Execute the following command: <command>mate-search-tool</command>"
-msgstr "Exécutez la commande suivante : <command>mate-search-tool</command>"
+msgid "Execute the following command: <command>cafe-search-tool</command>"
+msgstr "Exécutez la commande suivante : <command>cafe-search-tool</command>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:254
@@ -498,16 +498,16 @@ msgstr "Fenêtre de la Recherche de fichiers"
 #: C/index.docbook:262
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-search-tool_window.png' "
+"external ref='figures/cafe-search-tool_window.png' "
 "md5='bb0f097535682e53e6bd43c66f0373c7'"
 msgstr ""
-"external ref='figures/mate-search-tool_window.png' "
+"external ref='figures/cafe-search-tool_window.png' "
 "md5='bb0f097535682e53e6bd43c66f0373c7'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:260
 msgid ""
-"<imageobject><imagedata fileref=\"figures/mate-search-tool_window.png\" "
+"<imageobject><imagedata fileref=\"figures/cafe-search-tool_window.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Search for Files "
 "main window. </phrase> </textobject>"
 msgstr ""
@@ -1055,8 +1055,8 @@ msgstr "Désactivation de la recherche rapide"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:523
-msgid "Key name: org.mate.search-tool.disable-quick-search"
-msgstr "Nom de la clé : org.mate.search-tool.disable-quick-search"
+msgid "Key name: org.cafe.search-tool.disable-quick-search"
+msgstr "Nom de la clé : org.cafe.search-tool.disable-quick-search"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:524 C/index.docbook:531 C/index.docbook:552
@@ -1086,8 +1086,8 @@ msgstr "Désactivation de la seconde passe de recherche rapide"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:530
-msgid "Key name: org.mate.search-tool.disable-quick-search-second-scan"
-msgstr "Nom de la clé : org.mate.search-tool.disable-quick-search-second-scan"
+msgid "Key name: org.cafe.search-tool.disable-quick-search-second-scan"
+msgstr "Nom de la clé : org.cafe.search-tool.disable-quick-search-second-scan"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:532
@@ -1112,8 +1112,8 @@ msgstr "Chemins exclus de la recherche rapide"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:537
-msgid "Key name: org.mate.search-tool.quick-search-excluded-paths"
-msgstr "Nom de la clé : org.mate.search-tool.quick-search-excluded-paths"
+msgid "Key name: org.cafe.search-tool.quick-search-excluded-paths"
+msgstr "Nom de la clé : org.cafe.search-tool.quick-search-excluded-paths"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:538
@@ -1141,9 +1141,9 @@ msgstr "Chemins exclus du second balayage de la recherche rapide"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:544
-msgid "Key name: org.mate.search-tool.quick-search-second-scan-excluded-paths"
+msgid "Key name: org.cafe.search-tool.quick-search-second-scan-excluded-paths"
 msgstr ""
-"Nom de la clé : org.mate.search-tool.quick-search-second-scan-excluded-paths"
+"Nom de la clé : org.cafe.search-tool.quick-search-second-scan-excluded-paths"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:545
@@ -1171,8 +1171,8 @@ msgstr "Afficher les options supplémentaires"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:551
-msgid "Key name: org.mate.search-tool.show-additional-options"
-msgstr "Nom de la clé : org.mate.search-tool.show-additional-options"
+msgid "Key name: org.cafe.search-tool.show-additional-options"
+msgstr "Nom de la clé : org.cafe.search-tool.show-additional-options"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:553

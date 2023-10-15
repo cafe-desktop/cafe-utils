@@ -1,2 +1,2 @@
-SUBDIRS = data help libeggsmclient libmateui-deprecated src
+SUBDIRS = data help libeggsmclient libcafeui-deprecated src
 

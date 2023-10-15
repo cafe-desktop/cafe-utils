@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
-# This file is distributed under the same license as the mate-utils package.
+# This file is distributed under the same license as the cafe-utils package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,36 +9,36 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-utils 1.23.1\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
+"Project-Id-Version: cafe-utils 1.23.1\n"
+"Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
 "POT-Creation-Date: 2020-01-13 16:47+0100\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
-"Language-Team: Gujarati (https://www.transifex.com/mate/teams/13566/gu/)\n"
+"Language-Team: Gujarati (https://www.transifex.com/cafe/teams/13566/gu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: gu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: baobab/data/mate-disk-usage-analyzer.desktop.in.in:3
-#: baobab/data/mate-disk-usage-analyzer.appdata.xml.in:7
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
+#: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:7
 msgid "MATE Disk Usage Analyzer"
 msgstr ""
 
-#: baobab/data/mate-disk-usage-analyzer.desktop.in.in:4
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:4
 msgid "Check folder sizes and available disk space"
 msgstr "ફોલ્ડર માપો અને ઉપલબ્ધ ડિસ્ક જગ્યા ચકાસો"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: baobab/data/mate-disk-usage-analyzer.desktop.in.in:8
-msgid "mate-disk-usage-analyzer"
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:8
+msgid "cafe-disk-usage-analyzer"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: baobab/data/mate-disk-usage-analyzer.desktop.in.in:14
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:14
 msgid "MATE;check;disk;usage;analyze;size;space;"
 msgstr ""
 
@@ -75,7 +75,7 @@ msgid "S_can Remote Folder..."
 msgstr "દૂરસ્થ ફોલ્ડર સ્કેન કરો (_c)..."
 
 #: baobab/data/baobab-main-window.ui:74 logview/src/logview-window.c:819
-#: mate-dictionary/src/gdict-window.c:1286
+#: cafe-dictionary/src/gdict-window.c:1286
 msgid "_Edit"
 msgstr "ફેરફાર (_E)"
 
@@ -88,7 +88,7 @@ msgid "_Collapse All"
 msgstr "બધું સંકોચો (_C)"
 
 #: baobab/data/baobab-main-window.ui:101 logview/src/logview-window.c:820
-#: mate-dictionary/src/gdict-window.c:1287
+#: cafe-dictionary/src/gdict-window.c:1287
 msgid "_View"
 msgstr "જુઓ (_V)"
 
@@ -105,13 +105,13 @@ msgid "All_ocated Space"
 msgstr "ફાળવેલ જગ્યા (_o)"
 
 #: baobab/data/baobab-main-window.ui:129 logview/src/logview-window.c:822
-#: mate-dictionary/src/gdict-applet.c:1183
-#: mate-dictionary/src/gdict-window.c:1289
+#: cafe-dictionary/src/gdict-applet.c:1183
+#: cafe-dictionary/src/gdict-window.c:1289
 msgid "_Help"
 msgstr "મદદ (_H)"
 
 #: baobab/data/baobab-main-window.ui:136 logview/src/logview-window.c:848
-#: mate-dictionary/src/gdict-window.c:1339
+#: cafe-dictionary/src/gdict-window.c:1339
 msgid "_Contents"
 msgstr "સમાવિષ્ટો (_C)"
 
@@ -160,66 +160,66 @@ msgstr "સ્કેન કરવાનું અટકાવો"
 msgid "Refresh"
 msgstr "પુનઃતાજું કરો"
 
-#: baobab/data/org.mate.disk-usage-analyzer.gschema.xml.in:9
+#: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:9
 msgid "Monitor Home"
 msgstr ""
 
-#: baobab/data/org.mate.disk-usage-analyzer.gschema.xml.in:10
+#: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:10
 msgid "Whether any change to the home directory should be monitored."
 msgstr "શું ઘર ડિરેક્ટરીમાંનો કોઈપણ ફેરફાર મોનીટર થવો જોઈએ."
 
-#: baobab/data/org.mate.disk-usage-analyzer.gschema.xml.in:14
+#: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:14
 msgid "Excluded partitions URIs"
 msgstr ""
 
-#: baobab/data/org.mate.disk-usage-analyzer.gschema.xml.in:15
+#: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:15
 msgid "A list of URIs for partitions to be excluded from scanning."
 msgstr ""
 
-#: baobab/data/org.mate.disk-usage-analyzer.gschema.xml.in:21
+#: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:21
 msgid "Toolbar is Visible"
 msgstr "સાધનપટ્ટી દૃશ્યમાન છે"
 
-#: baobab/data/org.mate.disk-usage-analyzer.gschema.xml.in:22
+#: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:22
 msgid "Whether the toolbar should be visible in main window."
 msgstr "શું સાધનપટ્ટી મુખ્ય વિન્ડોમાં દૃશ્યમાન હોવી જોઈએ."
 
-#: baobab/data/org.mate.disk-usage-analyzer.gschema.xml.in:26
+#: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:26
 msgid "Statusbar is Visible"
 msgstr ""
 
-#: baobab/data/org.mate.disk-usage-analyzer.gschema.xml.in:27
+#: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:27
 msgid "Whether the status bar at the bottom of main window should be visible."
 msgstr "શું મુખ્ય વિન્ડોના તળિયેની પરિસ્થિતિદર્શક પટ્ટી દૃશ્યમાન હોવી જોઈએ."
 
-#: baobab/data/org.mate.disk-usage-analyzer.gschema.xml.in:31
+#: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:31
 msgid "Subfolder tips visible"
 msgstr ""
 
-#: baobab/data/org.mate.disk-usage-analyzer.gschema.xml.in:32
+#: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:32
 msgid "Whether the subfolder tooltips of the selected folder are drawn."
 msgstr ""
 
-#: baobab/data/org.mate.disk-usage-analyzer.gschema.xml.in:36
+#: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:36
 msgid "Active Chart"
 msgstr ""
 
-#: baobab/data/org.mate.disk-usage-analyzer.gschema.xml.in:37
+#: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:37
 msgid "Which type of chart should be displayed."
 msgstr ""
 
-#: baobab/data/mate-disk-usage-analyzer.appdata.xml.in:8
+#: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:8
 msgid "A disk usage analyzing tool for MATE Desktop"
 msgstr ""
 
-#: baobab/data/mate-disk-usage-analyzer.appdata.xml.in:10
+#: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:10
 msgid ""
 "As its name implies, Disk Usage Analyzer is a graphical utility that you can"
 " use to view and monitor your disk usage and folder structure. It displays "
 "summary information in ring or treemap charts."
 msgstr ""
 
-#: baobab/data/mate-disk-usage-analyzer.appdata.xml.in:15
+#: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:15
 msgid ""
 "You can perform scans on a file system, your home or any other folder - "
 "local or remote. There is also an option to constantly monitor any external "
@@ -440,7 +440,7 @@ msgid "_Share:"
 msgstr "વહેંચો (_S):"
 
 #: baobab/src/baobab-remote-connect-dialog.c:494
-#: mate-dictionary/data/mate-dictionary-source.ui:121
+#: cafe-dictionary/data/cafe-dictionary-source.ui:121
 msgid "_Port:"
 msgstr "પોર્ટ (_P):"
 
@@ -557,12 +557,12 @@ msgid "There was an error displaying help."
 msgstr "મદદ પ્રદર્શિત કરવામાં ભૂલ હતી."
 
 #: baobab/src/callbacks.c:77 logview/src/logview-about.h:45
-#: mate-dictionary/src/gdict-about.c:52
+#: cafe-dictionary/src/gdict-about.c:52
 msgid "MATE Documentation Team"
 msgstr ""
 
 #: baobab/src/callbacks.c:82 logview/src/logview-about.h:50
-#: mate-dictionary/src/gdict-about.c:60
+#: cafe-dictionary/src/gdict-about.c:60
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -575,7 +575,7 @@ msgstr ""
 "any later version."
 
 #: baobab/src/callbacks.c:87 logview/src/logview-about.h:54
-#: mate-dictionary/src/gdict-about.c:65
+#: cafe-dictionary/src/gdict-about.c:65
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -609,7 +609,7 @@ msgid ""
 msgstr ""
 
 #: baobab/src/callbacks.c:117 logview/src/logview-about.h:64
-#: mate-dictionary/src/gdict-about.c:56
+#: cafe-dictionary/src/gdict-about.c:56
 msgid "translator-credits"
 msgstr "અનુવાદક સન્માન"
 
@@ -622,16 +622,16 @@ msgstr "દસ્તાવેજ હાજર નથી."
 msgid "The folder does not exist."
 msgstr "ફોલ્ડર અસ્તિત્વમાં નથી."
 
-#: gsearchtool/data/mate-search-tool.appdata.xml.in:7
-#: gsearchtool/data/mate-search-tool.desktop.in:3
+#: gsearchtool/data/cafe-search-tool.appdata.xml.in:7
+#: gsearchtool/data/cafe-search-tool.desktop.in:3
 msgid "MATE Search Tool"
 msgstr ""
 
-#: gsearchtool/data/mate-search-tool.appdata.xml.in:8
+#: gsearchtool/data/cafe-search-tool.appdata.xml.in:8
 msgid "A file searching tool for MATE Desktop"
 msgstr ""
 
-#: gsearchtool/data/mate-search-tool.appdata.xml.in:10
+#: gsearchtool/data/cafe-search-tool.appdata.xml.in:10
 msgid ""
 "MATE Search Tool is a simple but powerful utility that allows you to search "
 "for files and folders on any mounted file system. Its interface gives you "
@@ -640,41 +640,41 @@ msgid ""
 " exclusion, etc.."
 msgstr ""
 
-#: gsearchtool/data/mate-search-tool.desktop.in:4
+#: gsearchtool/data/cafe-search-tool.desktop.in:4
 msgid "Locate documents and folders on this computer by name or content"
 msgstr ""
 "આ કમ્પ્યૂટર પર નામ અથવા સમાવિષ્ટ દ્વારા દસ્તાવેજો અને ફોલ્ડરો સ્થિત કરો"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: gsearchtool/data/mate-search-tool.desktop.in:7
+#: gsearchtool/data/cafe-search-tool.desktop.in:7
 msgid "system-search"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: gsearchtool/data/mate-search-tool.desktop.in:13
+#: gsearchtool/data/cafe-search-tool.desktop.in:13
 msgid ""
 "MATE;search;files;locate;documents;folders;computer;name;content;find;tool;"
 msgstr ""
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:5
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:5
 msgid "Search history"
 msgstr ""
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:6
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:6
 msgid "This key defines the items which were searched for in the past."
 msgstr ""
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:10
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:10
 msgid "Show Additional Options"
 msgstr "વધારાના વિકલ્પો બતાવો"
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:14
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:14
 msgid "Disable Quick Search"
 msgstr "ઝડપી શોધ નિષ્ક્રિય કરો"
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:15
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:15
 msgid ""
 "This key determines if the search tool disables the use of the locate "
 "command when performing simple file name searches."
@@ -682,11 +682,11 @@ msgstr ""
 "આ કી નક્કી કરે છે શું શોધ સાધન locate આદેશનો ઉપયોગ નિષ્ક્રિય કરે છે જ્યારે "
 "સાદા ફાઈલ નામો શોધી રહ્યા હોય."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:19
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:19
 msgid "Quick Search Excluded Paths"
 msgstr "ઝડપી શોધ નહિં સમાવિષ્ટ પથો"
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:20
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:20
 msgid ""
 "This key defines the paths the search tool will exclude from a quick search."
 " The wildcards '*' and '?' are supported. The default values are /mnt/*, "
@@ -696,11 +696,11 @@ msgstr ""
 "વાઈલ્ડકાર્ડ '*' અને '?' આધારભૂત છે. /mnt/*, /media/*, /dev/*, /tmp/*, "
 "/proc/*, અને /var/* મૂળભુત કિંમતો છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:24
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:24
 msgid "Disable Quick Search Second Scan"
 msgstr "બીજી સ્કેનમાં ઝડપી શોધ નિષ્ક્રિય કરો"
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:25
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:25
 msgid ""
 "This key determines if the search tool disables the use of the find command "
 "after performing a quick search."
@@ -708,11 +708,11 @@ msgstr ""
 "આ કી નક્કી કરે છે કે શું શોધ સાધન find આદેશનો ઉપયોગ ઝડપી શોધ કર્યા પછી "
 "નિષ્ક્રિય બનાવે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:29
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:29
 msgid "Quick Search Second Scan Excluded Paths"
 msgstr "ઝડપી શોધ દ્વિતીય સ્કેન નહિં સમાવિષ્ટ પથો"
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:30
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:30
 msgid ""
 "This key defines the paths the search tool will exclude from a second scan "
 "when performing a quick search. The second scan uses the find command to "
@@ -725,11 +725,11 @@ msgstr ""
 "વાપરે છે. દ્વિતીય સ્કેનનો હેતુ ફાઈલો શોધવાનો છે કે જેઓ અનુક્રમિત થયેલ નથી. "
 "વાઈલ્ડકાર્ડ '*' અને '?' આધારભૂત છે. મૂળભુત કિંમત / છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:34
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:34
 msgid "Search Result Columns Order"
 msgstr "શોધ પરિણામ સ્તંભો ક્રમ"
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:35
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:35
 msgid ""
 "This key defines the order of the columns in the search results. This key "
 "should not be modified by the user."
@@ -737,11 +737,11 @@ msgstr ""
 "કી શોધ પરિણામોમાં સ્તંભોનો ક્રમ વ્યાખ્યાયિત કરે છે. આ કી વપરાશકર્તા દ્વારા "
 "બદલાવી જોઈએ નહિં."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:39
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:39
 msgid "Default Window Width"
 msgstr "મૂળભૂત વિન્ડો પહોળાઈ"
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:40
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:40
 msgid ""
 "This key defines the window width, and it's used to remember the size of the"
 " search tool between sessions. Setting it to -1 will make the search tool "
@@ -751,11 +751,11 @@ msgstr ""
 "યાદ રાખવા માટે વપરાય છે. તેને -1 માં સુયોજિત કરવાનું શોધ સાધનને મૂળભૂત "
 "પહોળાઈ વાપરવા દેશે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:44
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:44
 msgid "Default Window Height"
 msgstr "મૂળભૂત વિન્ડો ઊંચાઈ"
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:45
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:45
 msgid ""
 "This key defines the window height, and it's used to remember the size of "
 "the search tool between sessions. Setting it to -1 will make the search tool"
@@ -765,24 +765,24 @@ msgstr ""
 "યાદ રાખવા માટે વપરાય છે. તેને -1 માં સુયોજિત કરવાનું શોધ સાધનને મૂળભૂત ઊંચાઈ"
 " વાપરવા દેશે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:49
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:49
 msgid "Default Window Maximized"
 msgstr "મૂળભૂત વિન્ડો મહત્તમ થયેલ"
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:50
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:50
 msgid ""
 "This key determines if the search tool window starts in a maximized state."
 msgstr "આ કી નક્કી કરે છે કે શું શોધ સાધન વિન્ડો મહત્તમ સ્થિતિમાં શરૂ થાય છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:54
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:54
 msgid "Look in Folder"
 msgstr "ફોલ્ડરમાં જુઓ"
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:55
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:55
 msgid "This key defines the default value of the \"Look in Folder\" widget."
 msgstr "આ કી \"Look in Folder\" વિજેટની મૂળભૂત કિંમતને વ્યાખ્યાયિત કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:62
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:62
 msgid ""
 "This key determines if the \"Contains the text\" search option is selected "
 "when the search tool is started."
@@ -790,7 +790,7 @@ msgstr ""
 "આ કી જ્યારે શોધ સાધન શરૂ થાય ત્યારે શું \"લખાણ આ સમાવે છે\" શોધ વિકલ્પ પસંદ "
 "કરેલ છે તે નક્કી કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:66
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:66
 msgid ""
 "This key determines if the \"Date modified less than\" search option is "
 "selected when the search tool is started."
@@ -798,7 +798,7 @@ msgstr ""
 "આ કી જ્યારે શોધ સાધન શરૂ થાય ત્યારે શું \"આ તારીખ કરતાં ઓછા દિવસે સુધારાયેલ "
 "છે\" શોધ વિકલ્પ પસંદ કરેલ છે તે નક્કી કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:70
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:70
 msgid ""
 "This key determines if the \"Date modified more than\" search option is "
 "selected when the search tool is started."
@@ -806,7 +806,7 @@ msgstr ""
 "આ કી જ્યારે શોધ સાધન શરૂ થાય ત્યારે શું \"આ તારીખ કરતાં વધુ દિવસે સુધારાયેલ "
 "છે\" શોધ વિકલ્પ પસંદ કરેલ છે તે નક્કી કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:74
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:74
 msgid ""
 "This key determines if the \"Size at least\" search option is selected when "
 "the search tool is started."
@@ -814,7 +814,7 @@ msgstr ""
 "આ કી જ્યારે શોધ સાધન શરૂ થાય ત્યારે શું \"માપ ઓછામાં ઓછું આટલું હોય\" શોધ "
 "વિકલ્પ પસંદ કરેલ છે તે નક્કી કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:78
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:78
 msgid ""
 "This key determines if the \"Size at most\" search option is selected when "
 "the search tool is started."
@@ -822,7 +822,7 @@ msgstr ""
 "આ કી જ્યારે શોધ સાધન શરૂ થાય ત્યારે શું \"માપ વધુમાં વધુ આટલું હોય\" શોધ "
 "વિકલ્પ પસંદ કરેલ છે તે નક્કી કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:82
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:82
 msgid ""
 "This key determines if the \"File is empty\" search option is selected when "
 "the search tool is started."
@@ -830,7 +830,7 @@ msgstr ""
 "આ કી જ્યારે શોધ સાધન શરૂ થાય ત્યારે શું \"ફાઈલ ખાલી છે\" શોધ વિકલ્પ પસંદ "
 "કરેલ છે તે નક્કી કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:86
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:86
 msgid ""
 "This key determines if the \"Owned by user\" search option is selected when "
 "the search tool is started."
@@ -838,7 +838,7 @@ msgstr ""
 "આ કી જ્યારે શોધ સાધન શરૂ થાય ત્યારે શું \"વપરાશકર્તા દ્વારા માલિકી છે\" શોધ "
 "વિકલ્પ પસંદ કરેલ છે તે નક્કી કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:90
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:90
 msgid ""
 "This key determines if the \"Owned by group\" search option is selected when"
 " the search tool is started."
@@ -846,7 +846,7 @@ msgstr ""
 "આ કી જ્યારે શોધ સાધન શરૂ થાય ત્યારે શું \"જૂથ દ્વારા માલિકી છે\" શોધ વિકલ્પ "
 "પસંદ કરેલ છે તે નક્કી કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:94
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:94
 msgid ""
 "This key determines if the \"Owner is unrecognized\" search option is "
 "selected when the search tool is started."
@@ -854,7 +854,7 @@ msgstr ""
 "આ કી જ્યારે શોધ સાધન શરૂ થાય ત્યારે શું \"માલિક ઓળખાયેલ નથી\" શોધ વિકલ્પ "
 "પસંદ કરેલ છે તે નક્કી કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:98
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:98
 msgid ""
 "This key determines if the \"Name does not contain\" search option is "
 "selected when the search tool is started."
@@ -862,7 +862,7 @@ msgstr ""
 "આ કી જ્યારે શોધ સાધન શરૂ થાય ત્યારે શું \"નામ આ સમાવતું નથી\" શોધ વિકલ્પ "
 "પસંદ કરેલ છે તે નક્કી કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:102
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:102
 msgid ""
 "This key determines if the \"Name matches regular expression\" search option"
 " is selected when the search tool is started."
@@ -870,7 +870,7 @@ msgstr ""
 "આ કી જ્યારે શોધ સાધન શરૂ થાય ત્યારે શું \"નામ નિયમિત સમીકરણ બંધબેસે છે\" શોધ"
 " વિકલ્પ પસંદ કરેલ છે તે નક્કી કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:106
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:106
 msgid ""
 "This key determines if the \"Show hidden files and folders\" search option "
 "is selected when the search tool is started."
@@ -878,7 +878,7 @@ msgstr ""
 "આ કી જ્યારે શોધ સાધન શરૂ થાય ત્યારે શું \"છુપી ફાઈલો અને ફોલ્ડરો બતાવો\" શોધ"
 " વિકલ્પ પસંદ કરેલ છે તે નક્કી કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:110
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:110
 msgid ""
 "This key determines if the \"Follow symbolic links\" search option is "
 "selected when the search tool is started."
@@ -886,7 +886,7 @@ msgstr ""
 "આ કી જ્યારે શોધ સાધન શરૂ થાય ત્યારે શું \"સાંકેતિક કડીઓ અનુસરે છે\" શોધ "
 "વિકલ્પ પસંદ કરેલ છે તે નક્કી કરે છે."
 
-#: gsearchtool/data/org.mate.search-tool.gschema.xml.in:114
+#: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:114
 msgid ""
 "This key determines if the \"Exclude other filesystems\" search option is "
 "selected when the search tool is started."
@@ -1236,7 +1236,7 @@ msgid "List View"
 msgstr "યાદી દેખાવ"
 
 #: gsearchtool/src/gsearchtool.c:2412
-#: mate-dictionary/libgdict/gdict-source.c:243
+#: cafe-dictionary/libgdict/gdict-source.c:243
 msgid "Name"
 msgstr "નામ"
 
@@ -1441,7 +1441,7 @@ msgid "If you replace an existing file, its contents will be overwritten."
 msgstr "જો તમે હયાત ફાઈલને બદલો, તો એના સમાવિષ્ટો પર ફરીથી લખાઈ જશે."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:1732
-#: mate-screenshot/src/screenshot-xfer.c:82
+#: cafe-screenshot/src/screenshot-xfer.c:82
 msgid "_Replace"
 msgstr "જગ્યા બદલો (_R)"
 
@@ -1553,31 +1553,31 @@ msgstr " ("
 msgid " (%d"
 msgstr " (%d"
 
-#: logview/data/mate-system-log.desktop.in.in:3
+#: logview/data/cafe-system-log.desktop.in.in:3
 msgid "Log File Viewer"
 msgstr "લોગ ફાઇલ દર્શક"
 
-#: logview/data/mate-system-log.desktop.in.in:4
+#: logview/data/cafe-system-log.desktop.in.in:4
 msgid "View or monitor system log files"
 msgstr "સિસ્ટમ લોગ ફાઈલો જુઓ અથવા મોનીટર કરો"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: logview/data/mate-system-log.desktop.in.in:7
-msgid "mate-system-log"
+#: logview/data/cafe-system-log.desktop.in.in:7
+msgid "cafe-system-log"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: logview/data/mate-system-log.desktop.in.in:13
+#: logview/data/cafe-system-log.desktop.in.in:13
 msgid "MATE;monitor;view;system;log;files;logviewer;"
 msgstr ""
 
-#: logview/data/org.mate.system-log.gschema.xml.in:5
+#: logview/data/org.cafe.system-log.gschema.xml.in:5
 msgid "Log file to open up on startup"
 msgstr "પ્રારંભ પર ખુલનાર લોગ ફાઇલ"
 
-#: logview/data/org.mate.system-log.gschema.xml.in:6
+#: logview/data/org.cafe.system-log.gschema.xml.in:6
 msgid ""
 "Specifies the log file displayed at startup. The default is either "
 "/var/adm/messages or /var/log/messages, depending on your operating system."
@@ -1585,11 +1585,11 @@ msgstr ""
 "શરૂઆતમાં દર્શાવાયેલ લોગ ફાઈલ સ્પષ્ટ કરે છે. /var/adm/messages અથવા "
 "/var/log/messages એ મૂળભૂત છે, તમારી ઓપરેટિંગ સિસ્ટમ પર આધાર રાખીને."
 
-#: logview/data/org.mate.system-log.gschema.xml.in:10
+#: logview/data/org.cafe.system-log.gschema.xml.in:10
 msgid "Size of the font used to display the log"
 msgstr "લોગ દર્શાવવા માટે વપરાતા ફોન્ટનું માપ"
 
-#: logview/data/org.mate.system-log.gschema.xml.in:11
+#: logview/data/org.cafe.system-log.gschema.xml.in:11
 msgid ""
 "Specifies the size of the fixed-width font used to display the log in the "
 "main tree view. The default is taken from the default terminal font size."
@@ -1597,27 +1597,27 @@ msgstr ""
 "મુખ્ય વૃક્ષ દેખાવમાં લોગ દર્શાવવા માટે વપરાયેલ ચોક્કસ-પહોળાઈના ફોન્ટનું માપ "
 "સ્પષ્ટ કરે છે. મૂળભૂત એ મૂળભૂત ટર્મિનલ ફોન્ટ માપમાંથી લેવાયેલ છે."
 
-#: logview/data/org.mate.system-log.gschema.xml.in:15
+#: logview/data/org.cafe.system-log.gschema.xml.in:15
 msgid "Height of the main window in pixels"
 msgstr "મુખ્ય વિન્ડોની ઊંચાઈ પિક્સેલોમાં"
 
-#: logview/data/org.mate.system-log.gschema.xml.in:16
+#: logview/data/org.cafe.system-log.gschema.xml.in:16
 msgid "Specifies the height of the log viewer main window in pixels."
 msgstr "લોગ દર્શક મુખ્ય વિન્ડોની ઊંચાઈ પિક્સેલોમાં સ્પષ્ટ કરે છે."
 
-#: logview/data/org.mate.system-log.gschema.xml.in:20
+#: logview/data/org.cafe.system-log.gschema.xml.in:20
 msgid "Width of the main window in pixels"
 msgstr "મુખ્ય વિન્ડોની પહોળાઈ પિક્સેલોમાં"
 
-#: logview/data/org.mate.system-log.gschema.xml.in:21
+#: logview/data/org.cafe.system-log.gschema.xml.in:21
 msgid "Specifies the width of the log viewer main window in pixels."
 msgstr "લોગ દર્શક મુખ્ય વિન્ડોની પહોળાઈ પિક્સેલોમાં સ્પષ્ટ કરે છે."
 
-#: logview/data/org.mate.system-log.gschema.xml.in:25
+#: logview/data/org.cafe.system-log.gschema.xml.in:25
 msgid "Log files to open up on startup"
 msgstr "શરૂઆતમાં ખોલવા માટેની લોગ ફાઈલો"
 
-#: logview/data/org.mate.system-log.gschema.xml.in:26
+#: logview/data/org.cafe.system-log.gschema.xml.in:26
 msgid ""
 "Specifies a list of log files to open up at startup. A default list is "
 "created by reading /etc/syslog.conf."
@@ -1625,16 +1625,16 @@ msgstr ""
 "શરુઆતમાં ખોલવા માટેની લોગ ફાઈલોની યાદી સ્પષ્ટ કરે છે. મૂળભૂત યાદી "
 "/etc/syslog.conf વાંચીને બનાવી શકાય છે."
 
-#: logview/data/org.mate.system-log.gschema.xml.in:30
+#: logview/data/org.cafe.system-log.gschema.xml.in:30
 msgid "List of saved filters"
 msgstr ""
 
-#: logview/data/org.mate.system-log.gschema.xml.in:31
+#: logview/data/org.cafe.system-log.gschema.xml.in:31
 msgid "List of saved regexp filters"
 msgstr ""
 
 #: logview/data/logview-filter.ui:24
-#: mate-screenshot/data/mate-screenshot.ui:150
+#: cafe-screenshot/data/cafe-screenshot.ui:150
 msgid "_Name:"
 msgstr "નામ (_N):"
 
@@ -1662,7 +1662,7 @@ msgstr ""
 msgid "Effect:"
 msgstr ""
 
-#: logview/src/logview-about.h:42 mate-dictionary/src/gdict-about.c:49
+#: logview/src/logview-about.h:42 cafe-dictionary/src/gdict-about.c:49
 msgid "Sun GNOME Documentation Team <gdocteam@sun.com>"
 msgstr ""
 
@@ -1796,9 +1796,9 @@ msgid "Wrapped"
 msgstr "લપેટાયેલ"
 
 #: logview/src/logview-window.c:490
-#: mate-dictionary/libgdict/gdict-defbox.c:1125
-#: mate-dictionary/libgdict/gdict-defbox.c:1219
-#: mate-dictionary/libgdict/gdict-defbox.c:1253
+#: cafe-dictionary/libgdict/gdict-defbox.c:1125
+#: cafe-dictionary/libgdict/gdict-defbox.c:1219
+#: cafe-dictionary/libgdict/gdict-defbox.c:1253
 msgid "Not found"
 msgstr "મળ્યું નહિં"
 
@@ -1816,7 +1816,7 @@ msgstr ""
 msgid "A system log viewer for MATE."
 msgstr "જીનોમ માટે સિસ્ટમ લોગ દર્શક."
 
-#: logview/src/logview-window.c:818 mate-dictionary/src/gdict-window.c:1285
+#: logview/src/logview-window.c:818 cafe-dictionary/src/gdict-window.c:1285
 msgid "_File"
 msgstr "ફાઈલ (_F)"
 
@@ -1832,7 +1832,7 @@ msgstr "ખોલો (_O)..."
 msgid "Open a log from file"
 msgstr "ફાઈલમાંથી લોગ ખોલો"
 
-#: logview/src/logview-window.c:826 mate-dictionary/src/gdict-window.c:1300
+#: logview/src/logview-window.c:826 cafe-dictionary/src/gdict-window.c:1300
 msgid "_Close"
 msgstr "બંધ કરો (_C)"
 
@@ -1848,7 +1848,7 @@ msgstr "બહાર નીકળો (_Q)"
 msgid "Quit the log viewer"
 msgstr "લોગ દર્શક બંધ કરો"
 
-#: logview/src/logview-window.c:831 mate-dictionary/src/gdict-window.c:1304
+#: logview/src/logview-window.c:831 cafe-dictionary/src/gdict-window.c:1304
 msgid "_Copy"
 msgstr "નકલ કરો (_C)"
 
@@ -1856,7 +1856,7 @@ msgstr "નકલ કરો (_C)"
 msgid "Copy the selection"
 msgstr "પસંદગીની નકલ કરો"
 
-#: logview/src/logview-window.c:833 mate-dictionary/src/gdict-window.c:1306
+#: logview/src/logview-window.c:833 cafe-dictionary/src/gdict-window.c:1306
 msgid "Select _All"
 msgstr "બધું પસંદ કરો (_A)"
 
@@ -1908,8 +1908,8 @@ msgstr "ફિલ્ટરોને સંચાલિત કરો"
 msgid "Open the help contents for the log viewer"
 msgstr "લોગ દર્શક માટે મદદ સમાવિષ્ટો ખોલો"
 
-#: logview/src/logview-window.c:850 mate-dictionary/src/gdict-applet.c:1186
-#: mate-dictionary/src/gdict-window.c:1341
+#: logview/src/logview-window.c:850 cafe-dictionary/src/gdict-applet.c:1186
+#: cafe-dictionary/src/gdict-window.c:1341
 msgid "_About"
 msgstr "વિશે (_A)"
 
@@ -1954,37 +1954,37 @@ msgstr "આવૃત્તિ: "
 msgid "Could not open the following files:"
 msgstr "નીચેની ફાઇલો ને ખોલી શકાયુ નહિં:"
 
-#: mate-dictionary/data/default.desktop.in:3
+#: cafe-dictionary/data/default.desktop.in:3
 msgid "Default"
 msgstr "મૂળભૂત"
 
-#: mate-dictionary/data/mate-dictionary.desktop.in.in:3
-#: mate-dictionary/data/mate-dictionary.appdata.xml.in:7
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:3
+#: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:7
 msgid "MATE Dictionary"
 msgstr ""
 
-#: mate-dictionary/data/mate-dictionary.desktop.in.in:4
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:4
 msgid "Check word definitions and spellings in an online dictionary"
 msgstr "ઓનલાઈન શબ્દકોશમાં વ્યાખ્યાઓ અને જોડણીઓ માટે શબ્દ ચકાસો"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: mate-dictionary/data/mate-dictionary.desktop.in.in:9
-#: mate-dictionary/data/org.mate.DictionaryApplet.mate-panel-applet.desktop.in.in:12
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:9
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:12
 msgid "accessories-dictionary"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: mate-dictionary/data/mate-dictionary.desktop.in.in:13
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:13
 msgid "MATE;dictionary;applet;thesaurus;spelling;definitions;online;"
 msgstr ""
 
-#: mate-dictionary/data/mate-dictionary.appdata.xml.in:8
+#: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:8
 msgid "A dictionary for MATE Desktop"
 msgstr ""
 
-#: mate-dictionary/data/mate-dictionary.appdata.xml.in:10
+#: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:10
 msgid ""
 "MATE Dictionary allows you to look up words in on-line dictionaries. It "
 "comes preconfigured with a list of Dict servers (RFC 2229), to which you can"
@@ -1992,19 +1992,19 @@ msgid ""
 "query."
 msgstr ""
 
-#: mate-dictionary/data/org.mate.DictionaryApplet.mate-panel-applet.desktop.in.in:5
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:5
 msgid "Dictionary Applet Factory"
 msgstr ""
 
-#: mate-dictionary/data/org.mate.DictionaryApplet.mate-panel-applet.desktop.in.in:9
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:9
 msgid "Dictionary Look up"
 msgstr "શબ્દકોષમાં જુઓ"
 
-#: mate-dictionary/data/org.mate.dictionary.gschema.xml.in:6
+#: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:6
 msgid "The default database to use"
 msgstr "વાપરવા માટેનો મૂળભૂત ડેટાબેઝ"
 
-#: mate-dictionary/data/org.mate.dictionary.gschema.xml.in:7
+#: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:7
 msgid ""
 "The name of the default individual database or meta-database to use on a "
 "dictionary source. An exclamation mark (\"!\") means that all the databases "
@@ -2013,11 +2013,11 @@ msgstr ""
 "શબ્દકોષ સ્રોત પર મૂળભૂત રીતે વાપરવાના વ્યક્તિગત ડેટાબેઝ અથવા મેટા-ડેટાબેઝનું"
 " નામ. અવતરણ ચિહ્ન (\"!\") એટલે કે સ્રોત પર હાજર બધા ડેટાબેઝની શોધ થવી જોઈએ"
 
-#: mate-dictionary/data/org.mate.dictionary.gschema.xml.in:11
+#: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:11
 msgid "The default search strategy to use"
 msgstr "વાપરવા માટેની મૂળભૂત શોધ વિચારધારા"
 
-#: mate-dictionary/data/org.mate.dictionary.gschema.xml.in:12
+#: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:12
 msgid ""
 "The name of the default search strategy to use on a dictionary source, if "
 "available. The default strategy is 'exact', that is match exact words."
@@ -2025,80 +2025,80 @@ msgstr ""
 "શબ્દકોષ સ્રોત પર વાપરવાની મૂળભૂત સ્રોત વિચારધારાનું નામ, જો ઉપલબ્ધ હોય. "
 "મૂળભૂત વિચારધારા એ 'ચોક્કસ' છે, કે જે એકદમા ચોક્કસ શબ્દો જ સરખાવે છે."
 
-#: mate-dictionary/data/org.mate.dictionary.gschema.xml.in:16
+#: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:16
 msgid "The font to be used when printing"
 msgstr "છાપતી વખતે વાપરવાના ફોન્ટ"
 
-#: mate-dictionary/data/org.mate.dictionary.gschema.xml.in:17
+#: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:17
 msgid "The font to be used when printing a definition."
 msgstr "વ્યાખ્યા છાપતી વખતે વાપરવાના ફોન્ટ."
 
-#: mate-dictionary/data/org.mate.dictionary.gschema.xml.in:21
+#: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:21
 msgid "The name of the dictionary source used"
 msgstr "વાપરવા માટેના શબ્દકોષ સ્રોતનું નામ"
 
-#: mate-dictionary/data/org.mate.dictionary.gschema.xml.in:22
+#: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:22
 msgid ""
 "The name of the dictionary source used to retrieve the definitions of words."
 msgstr "શબ્દોની વ્યાખ્યા મેળવવા માટે વાપરવાના શબ્દકોષ સ્રોતનું નામ."
 
-#: mate-dictionary/data/thai.desktop.in:3
+#: cafe-dictionary/data/thai.desktop.in:3
 msgid "Thai"
 msgstr "થાઈ"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:283
+#: cafe-dictionary/libgdict/gdict-client-context.c:283
 msgid "Client Name"
 msgstr "ક્લાઈન્ટ નામ"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:284
+#: cafe-dictionary/libgdict/gdict-client-context.c:284
 msgid "The name of the client of the context object"
 msgstr "સંદર્ભ ઓબ્જેક્ટના ક્લાઈન્ટનું નામ"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:297
+#: cafe-dictionary/libgdict/gdict-client-context.c:297
 msgid "Hostname"
 msgstr "યજમાનનામ"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:298
+#: cafe-dictionary/libgdict/gdict-client-context.c:298
 msgid "The hostname of the dictionary server to connect to"
 msgstr "જોડાવા માટેના શબ્દકોષ સર્વરનું યજમાનનામ"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:311
+#: cafe-dictionary/libgdict/gdict-client-context.c:311
 msgid "Port"
 msgstr "પોર્ટ"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:312
+#: cafe-dictionary/libgdict/gdict-client-context.c:312
 msgid "The port of the dictionary server to connect to"
 msgstr "જોડાવા માટેના શબ્દકોષ સર્વરનો પોર્ટ"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:327
+#: cafe-dictionary/libgdict/gdict-client-context.c:327
 msgid "Status"
 msgstr "સ્થિતિ"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:328
+#: cafe-dictionary/libgdict/gdict-client-context.c:328
 msgid "The status code as returned by the dictionary server"
 msgstr "શબ્દકોષ દ્વારા મળેલો પરિસ્થિતિ કોડ"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:772
+#: cafe-dictionary/libgdict/gdict-client-context.c:772
 #, c-format
 msgid "No connection to the dictionary server at '%s:%d'"
 msgstr "'%s:%d' આગળ શબ્દકોષ સર્વરનું કોઈ જોડાણ નથી"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1052
+#: cafe-dictionary/libgdict/gdict-client-context.c:1052
 #, c-format
 msgid "Lookup failed for hostname '%s': no suitable resources found"
 msgstr "યજમાનનામ '%s' માટે જોવાનું નિષ્ફળ: કોઈ યોગ્ય સ્રોતો મળ્યા નથી"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1083
+#: cafe-dictionary/libgdict/gdict-client-context.c:1083
 #, c-format
 msgid "Lookup failed for host '%s': %s"
 msgstr "યજમાન '%s' માટે જોવાનું નિષ્ફળ: %s"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1117
+#: cafe-dictionary/libgdict/gdict-client-context.c:1117
 #, c-format
 msgid "Lookup failed for host '%s': host not found"
 msgstr "યજમાન '%s' માટે જોવાનું નિષ્ફળ: યજમાન મળ્યો નહિં"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1169
+#: cafe-dictionary/libgdict/gdict-client-context.c:1169
 #, c-format
 msgid ""
 "Unable to connect to the dictionary server at '%s:%d'. The server replied "
@@ -2107,7 +2107,7 @@ msgstr ""
 "'%s:%d' આગળ શબ્દકોષ સર્વર સાથે જોડાવામાં અસમર્થ. સર્વરે %d કોડ સાથે "
 "પ્રત્યુત્તર આપ્યો (સર્વર નીચું)"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1188
+#: cafe-dictionary/libgdict/gdict-client-context.c:1188
 #, c-format
 msgid ""
 "Unable to parse the dictionary server reply\n"
@@ -2116,47 +2116,47 @@ msgstr ""
 "શબ્દકોષ સર્વર પ્રત્યુત્તર પદચ્છેદ કરવામાં અસમર્થ\n"
 ": '%s'"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1217
+#: cafe-dictionary/libgdict/gdict-client-context.c:1217
 #, c-format
 msgid "No definitions found for '%s'"
 msgstr "'%s' માટે કોઈ વ્યાખ્યાઓ મળી નહિં"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1232
+#: cafe-dictionary/libgdict/gdict-client-context.c:1232
 #, c-format
 msgid "Invalid database '%s'"
 msgstr "અયોગ્ય ડેટાબેઝ '%s'"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1247
+#: cafe-dictionary/libgdict/gdict-client-context.c:1247
 #, c-format
 msgid "Invalid strategy '%s'"
 msgstr "અયોગ્ય વિચારધારા '%s'"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1262
+#: cafe-dictionary/libgdict/gdict-client-context.c:1262
 #, c-format
 msgid "Bad command '%s'"
 msgstr "ખરાબ આદેશ '%s'"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1277
+#: cafe-dictionary/libgdict/gdict-client-context.c:1277
 #, c-format
 msgid "Bad parameters for command '%s'"
 msgstr "આદેશ '%s' માટે ખરાબ પરિમાણો"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1292
+#: cafe-dictionary/libgdict/gdict-client-context.c:1292
 #, c-format
 msgid "No databases found on dictionary server at '%s'"
 msgstr "'%s' આગળ શબ્દકોષ સર્વર પર કોઈ ડેટાબેઝો મળ્યા નહિં"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1307
+#: cafe-dictionary/libgdict/gdict-client-context.c:1307
 #, c-format
 msgid "No strategies found on dictionary server at '%s'"
 msgstr "'%s' આગળ શબ્દકોષ સર્વર પર કોઈ વિચારધારાઓ મળી નહિં"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1732
+#: cafe-dictionary/libgdict/gdict-client-context.c:1732
 #, c-format
 msgid "Connection failed to the dictionary server at %s:%d"
 msgstr "%s:%d આગળ શબ્દકોષ સર્વર સાથે જોડાણ નિષ્ફળ"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1771
+#: cafe-dictionary/libgdict/gdict-client-context.c:1771
 #, c-format
 msgid ""
 "Error while reading reply from server:\n"
@@ -2165,257 +2165,257 @@ msgstr ""
 "સર્વરમાંથી પ્રત્યુત્તર વાંચતી વખતે ભૂલ:\n"
 "%s"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1844
+#: cafe-dictionary/libgdict/gdict-client-context.c:1844
 #, c-format
 msgid "Connection timeout for the dictionary server at '%s:%d'"
 msgstr "'%s:%d' આગળ શબ્દકોષ સર્વર માટે જોડાણ સમયસમાપ્તિ"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1878
+#: cafe-dictionary/libgdict/gdict-client-context.c:1878
 msgid "No hostname defined for the dictionary server"
 msgstr "શબ્દકોષ સર્વર માટે કોઈ યજમાનનામ વ્યાખ્યાયિત નથી"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1914
-#: mate-dictionary/libgdict/gdict-client-context.c:1929
+#: cafe-dictionary/libgdict/gdict-client-context.c:1914
+#: cafe-dictionary/libgdict/gdict-client-context.c:1929
 msgid "Unable to create socket"
 msgstr "સોકેટ બનાવવામાં અસમર્થ"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1955
+#: cafe-dictionary/libgdict/gdict-client-context.c:1955
 #, c-format
 msgid "Unable to set the channel as non-blocking: %s"
 msgstr "બિન-બ્લોકીંગને ચેનલ તરીકે સુયોજિત કરવામાં અસમર્થ: %s"
 
-#: mate-dictionary/libgdict/gdict-client-context.c:1970
+#: cafe-dictionary/libgdict/gdict-client-context.c:1970
 #, c-format
 msgid "Unable to connect to the dictionary server at '%s:%d'"
 msgstr "'%s:%d' આગળ શબ્દકોષ સર્વર સાથે જોડાવામાં અસમર્થ"
 
-#: mate-dictionary/libgdict/gdict-context.c:218
+#: cafe-dictionary/libgdict/gdict-context.c:218
 msgid "Local Only"
 msgstr "માત્ર સ્થાનિક"
 
-#: mate-dictionary/libgdict/gdict-context.c:219
+#: cafe-dictionary/libgdict/gdict-context.c:219
 msgid "Whether the context uses only local dictionaries or not"
 msgstr "શું સંદર્ભ માત્ર સ્થાનિક શબ્દકોષો જ વાપરે અથવા નહિં"
 
-#: mate-dictionary/libgdict/gdict-database-chooser.c:376
+#: cafe-dictionary/libgdict/gdict-database-chooser.c:376
 msgid "Reload the list of available databases"
 msgstr "ઉપલબ્ધ ડેટાબેઝોની યાદી પુનઃલાવો"
 
-#: mate-dictionary/libgdict/gdict-database-chooser.c:388
+#: cafe-dictionary/libgdict/gdict-database-chooser.c:388
 msgid "Clear the list of available databases"
 msgstr "ઉપલબ્ધ ડેટાબેઝોની યાદી સાફ કરો"
 
-#: mate-dictionary/libgdict/gdict-database-chooser.c:836
-#: mate-dictionary/libgdict/gdict-speller.c:773
-#: mate-dictionary/libgdict/gdict-strategy-chooser.c:783
+#: cafe-dictionary/libgdict/gdict-database-chooser.c:836
+#: cafe-dictionary/libgdict/gdict-speller.c:773
+#: cafe-dictionary/libgdict/gdict-strategy-chooser.c:783
 msgid "Error while matching"
 msgstr "સરખાવતી વખતે ભૂલ"
 
-#: mate-dictionary/libgdict/gdict-defbox.c:1314
+#: cafe-dictionary/libgdict/gdict-defbox.c:1314
 msgid "F_ind:"
 msgstr "શોધો (_i):"
 
-#: mate-dictionary/libgdict/gdict-defbox.c:1327
+#: cafe-dictionary/libgdict/gdict-defbox.c:1327
 msgid "_Previous"
 msgstr "પહેલાંનું (_P)"
 
-#: mate-dictionary/libgdict/gdict-defbox.c:1335
+#: cafe-dictionary/libgdict/gdict-defbox.c:1335
 msgid "_Next"
 msgstr "પછીનું (_N)"
 
-#: mate-dictionary/libgdict/gdict-defbox.c:2483
+#: cafe-dictionary/libgdict/gdict-defbox.c:2483
 msgid "Error while looking up definition"
 msgstr "વ્યાખ્યા માટે જોતી વખતે ભૂલ"
 
-#: mate-dictionary/libgdict/gdict-defbox.c:2525
-#: mate-dictionary/libgdict/gdict-speller.c:731
+#: cafe-dictionary/libgdict/gdict-defbox.c:2525
+#: cafe-dictionary/libgdict/gdict-speller.c:731
 msgid "Another search is in progress"
 msgstr "અન્ય શોધ પ્રગતિમાં છે"
 
-#: mate-dictionary/libgdict/gdict-defbox.c:2526
-#: mate-dictionary/libgdict/gdict-speller.c:732
+#: cafe-dictionary/libgdict/gdict-defbox.c:2526
+#: cafe-dictionary/libgdict/gdict-speller.c:732
 msgid "Please wait until the current search ends."
 msgstr "મહેરબાની કરીને વર્તમાન શોધનો અંત થાય ત્યાં સુધી રાહ જુઓ."
 
-#: mate-dictionary/libgdict/gdict-defbox.c:2565
+#: cafe-dictionary/libgdict/gdict-defbox.c:2565
 msgid "Error while retrieving the definition"
 msgstr "વ્યાખ્યા મેળવતી વખતે ભૂલ"
 
-#: mate-dictionary/libgdict/gdict-source.c:229
+#: cafe-dictionary/libgdict/gdict-source.c:229
 msgid "Filename"
 msgstr "ફાઇલનું નામ"
 
-#: mate-dictionary/libgdict/gdict-source.c:230
+#: cafe-dictionary/libgdict/gdict-source.c:230
 msgid "The filename used by this dictionary source"
 msgstr "આ શબ્દકોષ સ્રોત દ્વારા વપરાતું ફાઈલનામ"
 
-#: mate-dictionary/libgdict/gdict-source.c:244
+#: cafe-dictionary/libgdict/gdict-source.c:244
 msgid "The display name of this dictionary source"
 msgstr ""
 
-#: mate-dictionary/libgdict/gdict-source.c:257
+#: cafe-dictionary/libgdict/gdict-source.c:257
 msgid "Description"
 msgstr "વર્ણન"
 
-#: mate-dictionary/libgdict/gdict-source.c:258
+#: cafe-dictionary/libgdict/gdict-source.c:258
 msgid "The description of this dictionary source"
 msgstr "આ શબ્દકોષ સ્રોતનું વર્ણન"
 
-#: mate-dictionary/libgdict/gdict-source.c:271
-#: mate-dictionary/libgdict/gdict-speller.c:375
+#: cafe-dictionary/libgdict/gdict-source.c:271
+#: cafe-dictionary/libgdict/gdict-speller.c:375
 msgid "Database"
 msgstr "ડેટાબેઝ"
 
-#: mate-dictionary/libgdict/gdict-source.c:272
+#: cafe-dictionary/libgdict/gdict-source.c:272
 msgid "The default database of this dictionary source"
 msgstr ""
 
-#: mate-dictionary/libgdict/gdict-source.c:285
-#: mate-dictionary/libgdict/gdict-speller.c:382
+#: cafe-dictionary/libgdict/gdict-source.c:285
+#: cafe-dictionary/libgdict/gdict-speller.c:382
 msgid "Strategy"
 msgstr "વિચારધારા"
 
-#: mate-dictionary/libgdict/gdict-source.c:286
+#: cafe-dictionary/libgdict/gdict-source.c:286
 msgid "The default strategy of this dictionary source"
 msgstr ""
 
-#: mate-dictionary/libgdict/gdict-source.c:299
+#: cafe-dictionary/libgdict/gdict-source.c:299
 msgid "Transport"
 msgstr "પરિવહન"
 
-#: mate-dictionary/libgdict/gdict-source.c:300
+#: cafe-dictionary/libgdict/gdict-source.c:300
 msgid "The transport mechanism used by this dictionary source"
 msgstr "આ શબ્દકોષ સ્રોત દ્વારા વપરાતી પરિવહન વિચારધારા"
 
-#: mate-dictionary/libgdict/gdict-source.c:314
-#: mate-dictionary/libgdict/gdict-speller.c:368
+#: cafe-dictionary/libgdict/gdict-source.c:314
+#: cafe-dictionary/libgdict/gdict-speller.c:368
 msgid "Context"
 msgstr "સંદર્ભ"
 
-#: mate-dictionary/libgdict/gdict-source.c:315
+#: cafe-dictionary/libgdict/gdict-source.c:315
 msgid "The GdictContext bound to this source"
 msgstr "GdictContext આ સ્રોતથી બંધિત છે"
 
-#: mate-dictionary/libgdict/gdict-source.c:408
+#: cafe-dictionary/libgdict/gdict-source.c:408
 #, c-format
 msgid "Invalid transport type '%d'"
 msgstr "અયોગ્ય પરિવહન પ્રકાર '%d'"
 
-#: mate-dictionary/libgdict/gdict-source.c:436
+#: cafe-dictionary/libgdict/gdict-source.c:436
 #, c-format
 msgid "No '%s' group found inside the dictionary source definition"
 msgstr "કોઈ '%s' જૂથ શબ્દકોષ સ્રોત વ્યાખ્યામાં મળ્યું નહિં"
 
-#: mate-dictionary/libgdict/gdict-source.c:452
-#: mate-dictionary/libgdict/gdict-source.c:476
-#: mate-dictionary/libgdict/gdict-source.c:500
-#: mate-dictionary/libgdict/gdict-source.c:525
+#: cafe-dictionary/libgdict/gdict-source.c:452
+#: cafe-dictionary/libgdict/gdict-source.c:476
+#: cafe-dictionary/libgdict/gdict-source.c:500
+#: cafe-dictionary/libgdict/gdict-source.c:525
 #, c-format
 msgid "Unable to get the '%s' key inside the dictionary source definition: %s"
 msgstr "'%s' કીને શબ્દકોષ સ્રોત વ્યાખ્યામાં મેળવવામાં અસમર્થ: %s"
 
-#: mate-dictionary/libgdict/gdict-source.c:550
+#: cafe-dictionary/libgdict/gdict-source.c:550
 #, c-format
 msgid ""
 "Unable to get the '%s' key inside the dictionary source definition file: %s"
 msgstr "'%s' કીને શબ્દકોષ સ્રોત વ્યાખ્યા ફાઈલમાં મેળવવામાં અસમર્થ: %s"
 
-#: mate-dictionary/libgdict/gdict-source.c:736
+#: cafe-dictionary/libgdict/gdict-source.c:736
 msgid "Dictionary source does not have name"
 msgstr "શબ્દકોષ સ્રોતને નામ નથી"
 
-#: mate-dictionary/libgdict/gdict-source.c:745
+#: cafe-dictionary/libgdict/gdict-source.c:745
 #, c-format
 msgid "Dictionary source '%s' has invalid transport '%s'"
 msgstr "શબ્દકોષ સ્રોત '%s' ને અયોગ્ય પરિવહન '%s' છે"
 
-#: mate-dictionary/libgdict/gdict-source-chooser.c:283
+#: cafe-dictionary/libgdict/gdict-source-chooser.c:283
 msgid "Reload the list of available sources"
 msgstr "ઉપલબ્ધ સ્ત્રોતોની યાદીને પુનઃલાવો"
 
-#: mate-dictionary/libgdict/gdict-source-loader.c:163
+#: cafe-dictionary/libgdict/gdict-source-loader.c:163
 msgid "Paths"
 msgstr "પાથો"
 
-#: mate-dictionary/libgdict/gdict-source-loader.c:164
+#: cafe-dictionary/libgdict/gdict-source-loader.c:164
 msgid "Search paths used by this object"
 msgstr "આ ઓબ્જેક્ટ દ્વારા વપરાતા શોધ પાથો"
 
-#: mate-dictionary/libgdict/gdict-source-loader.c:176
+#: cafe-dictionary/libgdict/gdict-source-loader.c:176
 msgid "Sources"
 msgstr "સ્રોતો"
 
-#: mate-dictionary/libgdict/gdict-source-loader.c:177
+#: cafe-dictionary/libgdict/gdict-source-loader.c:177
 msgid "Dictionary sources found"
 msgstr "શબ્દકોષ સ્રોતો મળ્યા"
 
-#: mate-dictionary/libgdict/gdict-speller.c:347
+#: cafe-dictionary/libgdict/gdict-speller.c:347
 msgid "Clear the list of similar words"
 msgstr "સરખા શબ્દોની યાદી સાફ કરો"
 
-#: mate-dictionary/libgdict/gdict-speller.c:369
+#: cafe-dictionary/libgdict/gdict-speller.c:369
 msgid "The GdictContext object used to get the word definition"
 msgstr "શબ્દ વ્યાખ્યા મેળવવા માટે વપરાતો GdictContext ઓબ્જેક્ટ"
 
-#: mate-dictionary/libgdict/gdict-speller.c:376
+#: cafe-dictionary/libgdict/gdict-speller.c:376
 msgid "The database used to query the GdictContext"
 msgstr "ડેટાબેઝ GdictContext ને પ્રશ્ન કરવા માટે વપરાય છે"
 
-#: mate-dictionary/libgdict/gdict-speller.c:383
+#: cafe-dictionary/libgdict/gdict-speller.c:383
 msgid "The strategy used to query the GdictContext"
 msgstr "GdictContext પ્રશ્ન કરવા માટેની વિચારધારા"
 
-#: mate-dictionary/libgdict/gdict-strategy-chooser.c:358
+#: cafe-dictionary/libgdict/gdict-strategy-chooser.c:358
 msgid "Reload the list of available strategies"
 msgstr "ઉપલબ્ધ વિચારધારાઓની યાદી પુનઃલાવો"
 
-#: mate-dictionary/libgdict/gdict-strategy-chooser.c:370
+#: cafe-dictionary/libgdict/gdict-strategy-chooser.c:370
 msgid "Clear the list of available strategies"
 msgstr "ઉપલબ્ધ વિચરધારાઓની યાદી સાફ કરો"
 
-#: mate-dictionary/libgdict/gdict-utils.c:97
+#: cafe-dictionary/libgdict/gdict-utils.c:97
 msgid "GDict debugging flags to set"
 msgstr "સુયોજીત કરવા માટે GDict ડિબગીંગ ફ્લેગ"
 
-#: mate-dictionary/libgdict/gdict-utils.c:97
-#: mate-dictionary/libgdict/gdict-utils.c:99
+#: cafe-dictionary/libgdict/gdict-utils.c:97
+#: cafe-dictionary/libgdict/gdict-utils.c:99
 msgid "FLAGS"
 msgstr "FLAGS"
 
-#: mate-dictionary/libgdict/gdict-utils.c:99
+#: cafe-dictionary/libgdict/gdict-utils.c:99
 msgid "GDict debugging flags to unset"
 msgstr "નહિં સુયોજીત કરવા માટેના GDict ડિબગીંગ ફ્લેગ"
 
-#: mate-dictionary/libgdict/gdict-utils.c:157
+#: cafe-dictionary/libgdict/gdict-utils.c:157
 msgid "GDict Options"
 msgstr "GDict વિકલ્પો"
 
-#: mate-dictionary/libgdict/gdict-utils.c:158
+#: cafe-dictionary/libgdict/gdict-utils.c:158
 msgid "Show GDict Options"
 msgstr "GDict વિકલ્પો ને બતાવો"
 
-#: mate-dictionary/src/gdict-about.c:57 mate-dictionary/src/gdict-applet.c:587
+#: cafe-dictionary/src/gdict-about.c:57 cafe-dictionary/src/gdict-applet.c:587
 msgid "Look up words in dictionaries"
 msgstr "શબ્દકોષોમાં શબ્દો જુઓ"
 
-#: mate-dictionary/src/gdict-about.c:70
+#: cafe-dictionary/src/gdict-about.c:70
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: mate-dictionary/src/gdict-about.c:87 mate-dictionary/src/gdict-app.c:364
-#: mate-dictionary/src/gdict-window.c:607
-#: mate-dictionary/src/gdict-window.c:1891
+#: cafe-dictionary/src/gdict-about.c:87 cafe-dictionary/src/gdict-app.c:364
+#: cafe-dictionary/src/gdict-window.c:607
+#: cafe-dictionary/src/gdict-window.c:1891
 msgid "Dictionary"
 msgstr "શબ્દકોષ"
 
-#: mate-dictionary/src/gdict-about.c:89
+#: cafe-dictionary/src/gdict-about.c:89
 msgid "About Dictionary"
 msgstr ""
 
-#: mate-dictionary/src/gdict-about.c:90
+#: cafe-dictionary/src/gdict-about.c:90
 msgid ""
 "Copyright © 2005-2006 Emmanuele Bassi\n"
 "Copyright © 2011-2020 MATE developers"
@@ -2424,7 +2424,7 @@ msgstr ""
 #. Translators: the first is the word found, the second is the
 #. * database name and the last is the definition's text; please
 #. * keep the new lines.
-#: mate-dictionary/src/gdict-app.c:210
+#: cafe-dictionary/src/gdict-app.c:210
 #, c-format
 msgid ""
 "Definition for '%s'\n"
@@ -2437,20 +2437,20 @@ msgstr ""
 "\n"
 "%s\n"
 
-#: mate-dictionary/src/gdict-app.c:224
+#: cafe-dictionary/src/gdict-app.c:224
 #, c-format
 msgid "Error: %s\n"
 msgstr "ભૂલ: %s\n"
 
-#: mate-dictionary/src/gdict-app.c:250
-msgid "See mate-dictionary --help for usage\n"
-msgstr "વપરાશ માટે mate-dictionary --help જુઓ\n"
+#: cafe-dictionary/src/gdict-app.c:250
+msgid "See cafe-dictionary --help for usage\n"
+msgstr "વપરાશ માટે cafe-dictionary --help જુઓ\n"
 
-#: mate-dictionary/src/gdict-app.c:263
+#: cafe-dictionary/src/gdict-app.c:263
 msgid "Unable to find a suitable dictionary source"
 msgstr "વ્યાપક શબ્દકોષ સ્રોત શોધવામાં અસમર્થ"
 
-#: mate-dictionary/src/gdict-app.c:297
+#: cafe-dictionary/src/gdict-app.c:297
 #, c-format
 msgid ""
 "Error while looking up the definition of \"%s\":\n"
@@ -2459,547 +2459,547 @@ msgstr ""
 "\"%s\" ની વ્યાખ્યા જોતી વખતે ભૂલ:\n"
 "%s"
 
-#: mate-dictionary/src/gdict-app.c:326 mate-dictionary/src/gdict-app.c:336
+#: cafe-dictionary/src/gdict-app.c:326 cafe-dictionary/src/gdict-app.c:336
 msgid "Words to look up"
 msgstr "જોવા માટેના શબ્દો"
 
-#: mate-dictionary/src/gdict-app.c:326 mate-dictionary/src/gdict-app.c:328
-#: mate-dictionary/src/gdict-app.c:336
+#: cafe-dictionary/src/gdict-app.c:326 cafe-dictionary/src/gdict-app.c:328
+#: cafe-dictionary/src/gdict-app.c:336
 msgid "word"
 msgstr "શબ્દ"
 
-#: mate-dictionary/src/gdict-app.c:328
+#: cafe-dictionary/src/gdict-app.c:328
 msgid "Words to match"
 msgstr "સરખાવવા માટેના શબ્દો"
 
-#: mate-dictionary/src/gdict-app.c:330
+#: cafe-dictionary/src/gdict-app.c:330
 msgid "Dictionary source to use"
 msgstr "વાપરવા માટેનો શબ્દકોષ સ્રોત"
 
-#: mate-dictionary/src/gdict-app.c:330
+#: cafe-dictionary/src/gdict-app.c:330
 msgid "source"
 msgstr "સ્રોત"
 
-#: mate-dictionary/src/gdict-app.c:332
+#: cafe-dictionary/src/gdict-app.c:332
 msgid "Print result to the console"
 msgstr "પરિણામને કન્સોલમાં છાપો"
 
-#: mate-dictionary/src/gdict-app.c:334
+#: cafe-dictionary/src/gdict-app.c:334
 msgid "Database to use"
 msgstr "વાપરવા માટેનો ડેટાબેઝ"
 
-#: mate-dictionary/src/gdict-app.c:334
+#: cafe-dictionary/src/gdict-app.c:334
 msgid "db"
 msgstr "db"
 
-#: mate-dictionary/src/gdict-app.c:346
+#: cafe-dictionary/src/gdict-app.c:346
 msgid " - Look up words in dictionaries"
 msgstr " - શબ્દો શબ્દોકોષોમાં જુઓ"
 
-#: mate-dictionary/src/gdict-applet.c:204
-#: mate-dictionary/src/gdict-window.c:962
+#: cafe-dictionary/src/gdict-applet.c:204
+#: cafe-dictionary/src/gdict-window.c:962
 msgid "Save a Copy"
 msgstr "નકલ સંગ્રહો"
 
-#: mate-dictionary/src/gdict-applet.c:214
-#: mate-dictionary/src/gdict-window.c:972
+#: cafe-dictionary/src/gdict-applet.c:214
+#: cafe-dictionary/src/gdict-window.c:972
 msgid "Untitled document"
 msgstr "શીર્ષકવિહીન દસ્તાવેજ"
 
-#: mate-dictionary/src/gdict-applet.c:235
-#: mate-dictionary/src/gdict-window.c:993
+#: cafe-dictionary/src/gdict-applet.c:235
+#: cafe-dictionary/src/gdict-window.c:993
 #, c-format
 msgid "Error while writing to '%s'"
 msgstr "'%s' માં લખતી વખતે ભૂલ"
 
-#: mate-dictionary/src/gdict-applet.c:360
+#: cafe-dictionary/src/gdict-applet.c:360
 msgid "Clear the definitions found"
 msgstr "મળેલ વ્યાખ્યાઓ સાફ કરો"
 
-#: mate-dictionary/src/gdict-applet.c:362
+#: cafe-dictionary/src/gdict-applet.c:362
 msgid "Clear definition"
 msgstr "વ્યાખ્યા સાફ કરો"
 
-#: mate-dictionary/src/gdict-applet.c:363
+#: cafe-dictionary/src/gdict-applet.c:363
 msgid "Clear the text of the definition"
 msgstr "વ્યાખ્યાનું લખાણ સાફ કરો"
 
-#: mate-dictionary/src/gdict-applet.c:375
+#: cafe-dictionary/src/gdict-applet.c:375
 msgid "Print the definitions found"
 msgstr "મળેલ વ્યાખ્યાઓ છાપો"
 
-#: mate-dictionary/src/gdict-applet.c:377
+#: cafe-dictionary/src/gdict-applet.c:377
 msgid "Print definition"
 msgstr "વ્યાખ્યા છાપો"
 
-#: mate-dictionary/src/gdict-applet.c:378
+#: cafe-dictionary/src/gdict-applet.c:378
 msgid "Print the text of the definition"
 msgstr "વ્યાખ્યાનું લખાણ છાપો"
 
-#: mate-dictionary/src/gdict-applet.c:390
+#: cafe-dictionary/src/gdict-applet.c:390
 msgid "Save the definitions found"
 msgstr "મળેલ વ્યાખ્યાઓ સંગ્રહો"
 
-#: mate-dictionary/src/gdict-applet.c:392
+#: cafe-dictionary/src/gdict-applet.c:392
 msgid "Save definition"
 msgstr "વ્યાખ્યા સંગ્રહો"
 
-#: mate-dictionary/src/gdict-applet.c:393
+#: cafe-dictionary/src/gdict-applet.c:393
 msgid "Save the text of the definition to a file"
 msgstr "વ્યાખ્યાનું લખાણ ફાઈલમાં સંગ્રહો"
 
-#: mate-dictionary/src/gdict-applet.c:530
+#: cafe-dictionary/src/gdict-applet.c:530
 msgid "Click to view the dictionary window"
 msgstr "શબ્દકોષ વિન્ડો જોવા માટે ક્લિક કરો"
 
-#: mate-dictionary/src/gdict-applet.c:532
+#: cafe-dictionary/src/gdict-applet.c:532
 msgid "Toggle dictionary window"
 msgstr "શબ્દકોષ વિન્ડો બદલો"
 
-#: mate-dictionary/src/gdict-applet.c:533
+#: cafe-dictionary/src/gdict-applet.c:533
 msgid "Show or hide the definition window"
 msgstr "વ્યાખ્યા વિન્ડો બતાવો અથવા છુપાવો"
 
-#: mate-dictionary/src/gdict-applet.c:584
+#: cafe-dictionary/src/gdict-applet.c:584
 msgid "Type the word you want to look up"
 msgstr "તમે જે શબ્દ જોવા માંગો છો તે છાપો"
 
-#: mate-dictionary/src/gdict-applet.c:586
+#: cafe-dictionary/src/gdict-applet.c:586
 msgid "Dictionary entry"
 msgstr "શબ્દકોષ પ્રવેશ"
 
-#: mate-dictionary/src/gdict-applet.c:715
-#: mate-dictionary/src/gdict-window.c:1104
+#: cafe-dictionary/src/gdict-applet.c:715
+#: cafe-dictionary/src/gdict-window.c:1104
 msgid "Dictionary Preferences"
 msgstr "શબ્દકોષની પસંદગી"
 
-#: mate-dictionary/src/gdict-applet.c:739
-#: mate-dictionary/src/gdict-pref-dialog.c:498
-#: mate-dictionary/src/gdict-source-dialog.c:478
-#: mate-dictionary/src/gdict-window.c:1251
+#: cafe-dictionary/src/gdict-applet.c:739
+#: cafe-dictionary/src/gdict-pref-dialog.c:498
+#: cafe-dictionary/src/gdict-source-dialog.c:478
+#: cafe-dictionary/src/gdict-window.c:1251
 msgid "There was an error while displaying help"
 msgstr "મદદ દર્શાવતી વખતે ત્યાં ભૂલ હતી"
 
-#: mate-dictionary/src/gdict-applet.c:878
-#: mate-dictionary/src/gdict-window.c:522
+#: cafe-dictionary/src/gdict-applet.c:878
+#: cafe-dictionary/src/gdict-window.c:522
 #, c-format
 msgid "No dictionary source available with name '%s'"
 msgstr "કોઈ શબ્દકોષ સ્રોત '%s' નામ સાથે ઉપલબ્ધ નથી"
 
-#: mate-dictionary/src/gdict-applet.c:882
-#: mate-dictionary/src/gdict-window.c:526
+#: cafe-dictionary/src/gdict-applet.c:882
+#: cafe-dictionary/src/gdict-window.c:526
 msgid "Unable to find dictionary source"
 msgstr "શબ્દકોષ સ્રોત શોધવામાં અસમર્થ"
 
-#: mate-dictionary/src/gdict-applet.c:898
-#: mate-dictionary/src/gdict-window.c:542
+#: cafe-dictionary/src/gdict-applet.c:898
+#: cafe-dictionary/src/gdict-window.c:542
 #, c-format
 msgid "No context available for source '%s'"
 msgstr "કોઈ સંદર્ભ '%s' સ્રોત માટે ઉપલબ્ધ નથી"
 
-#: mate-dictionary/src/gdict-applet.c:902
-#: mate-dictionary/src/gdict-window.c:546
+#: cafe-dictionary/src/gdict-applet.c:902
+#: cafe-dictionary/src/gdict-window.c:546
 msgid "Unable to create a context"
 msgstr "સંદર્ભ બનાવવામાં અસમર્થ"
 
-#: mate-dictionary/src/gdict-applet.c:1168
+#: cafe-dictionary/src/gdict-applet.c:1168
 msgid "_Look Up Selected Text"
 msgstr "પસંદ કરેલ લખાણને જુઓ... (_L)"
 
-#: mate-dictionary/src/gdict-applet.c:1171
+#: cafe-dictionary/src/gdict-applet.c:1171
 msgid "Cl_ear"
 msgstr "સાફ કરો (_e)"
 
-#: mate-dictionary/src/gdict-applet.c:1174
+#: cafe-dictionary/src/gdict-applet.c:1174
 msgid "_Print"
 msgstr "છાપો (_P)"
 
-#: mate-dictionary/src/gdict-applet.c:1177
+#: cafe-dictionary/src/gdict-applet.c:1177
 msgid "_Save"
 msgstr "સંગ્રહો (_S)"
 
-#: mate-dictionary/src/gdict-applet.c:1180
+#: cafe-dictionary/src/gdict-applet.c:1180
 msgid "Preferences"
 msgstr "પસંદગીઓ"
 
-#: mate-dictionary/src/gdict-common.c:80
+#: cafe-dictionary/src/gdict-common.c:80
 #, c-format
 msgid "Unable to rename file '%s' to '%s': %s"
 msgstr "ફાઈલ '%s' નું '%s' માં નામ બદલી શક્યા નહિં: %s"
 
-#: mate-dictionary/src/gdict-common.c:104
-#: mate-dictionary/src/gdict-common.c:127
+#: cafe-dictionary/src/gdict-common.c:104
+#: cafe-dictionary/src/gdict-common.c:127
 #, c-format
 msgid "Unable to create the data directory '%s': %s"
 msgstr "માહિતી ડિરેક્ટરી '%s' બનાવવામાં અસમર્થ: %s"
 
-#: mate-dictionary/src/gdict-pref-dialog.c:240
-#: mate-dictionary/src/gdict-pref-dialog.c:429
+#: cafe-dictionary/src/gdict-pref-dialog.c:240
+#: cafe-dictionary/src/gdict-pref-dialog.c:429
 msgid "Edit Dictionary Source"
 msgstr "શબ્દકોષ સ્રોતમાં ફેરફાર કરો"
 
-#: mate-dictionary/src/gdict-pref-dialog.c:304
+#: cafe-dictionary/src/gdict-pref-dialog.c:304
 msgid "Add Dictionary Source"
 msgstr "શબ્દકોષ સ્રોત ઉમેરો"
 
-#: mate-dictionary/src/gdict-pref-dialog.c:349
+#: cafe-dictionary/src/gdict-pref-dialog.c:349
 #, c-format
 msgid "Remove \"%s\"?"
 msgstr "શું \"%s\" દૂર કરવું છે?"
 
-#: mate-dictionary/src/gdict-pref-dialog.c:351
+#: cafe-dictionary/src/gdict-pref-dialog.c:351
 msgid "This will permanently remove the dictionary source from the list."
 msgstr "આ યાદીમાંથી કાયમ માટે શબ્દકોષ સ્રોત દૂર કરશે."
 
-#: mate-dictionary/src/gdict-pref-dialog.c:381
+#: cafe-dictionary/src/gdict-pref-dialog.c:381
 #, c-format
 msgid "Unable to remove source '%s'"
 msgstr "સ્રોત '%s' દૂર કરવામાં અસમર્થ"
 
-#: mate-dictionary/src/gdict-pref-dialog.c:709
+#: cafe-dictionary/src/gdict-pref-dialog.c:709
 msgid "Add a new dictionary source"
 msgstr "નવો શબ્દકોષ સ્રોત ઉમેરો"
 
-#: mate-dictionary/src/gdict-pref-dialog.c:715
+#: cafe-dictionary/src/gdict-pref-dialog.c:715
 msgid "Remove the currently selected dictionary source"
 msgstr "વર્તમાનમાં પસંદ કરેલ શબ્દકોષ સ્રોત દૂર કરો"
 
-#: mate-dictionary/src/gdict-pref-dialog.c:721
+#: cafe-dictionary/src/gdict-pref-dialog.c:721
 msgid "Edit the currently selected dictionary source"
 msgstr ""
 
-#: mate-dictionary/src/gdict-pref-dialog.c:729
+#: cafe-dictionary/src/gdict-pref-dialog.c:729
 msgid "Set the font used for printing the definitions"
 msgstr "વ્યાખ્યાઓ છાપવા માટે વપરાતા ફોન્ટ સુયોજિત કરો"
 
-#: mate-dictionary/src/gdict-print.c:241 mate-dictionary/src/gdict-print.c:305
+#: cafe-dictionary/src/gdict-print.c:241 cafe-dictionary/src/gdict-print.c:305
 #, c-format
 msgid "Unable to display the preview: %s"
 msgstr "પૂર્વદર્શનને દર્શાવવા માટે અસમર્થ: %s"
 
-#: mate-dictionary/src/gdict-source-dialog.c:340
-#: mate-dictionary/src/gdict-source-dialog.c:433
+#: cafe-dictionary/src/gdict-source-dialog.c:340
+#: cafe-dictionary/src/gdict-source-dialog.c:433
 msgid "Unable to create a source file"
 msgstr "સ્રોત ફાઈલ બનાવવામાં અસમર્થ"
 
-#: mate-dictionary/src/gdict-source-dialog.c:358
-#: mate-dictionary/src/gdict-source-dialog.c:451
+#: cafe-dictionary/src/gdict-source-dialog.c:358
+#: cafe-dictionary/src/gdict-source-dialog.c:451
 msgid "Unable to save source file"
 msgstr "સ્રોત ફાઈલનો સંગ્રહ કરવામાં અસમર્થ"
 
-#: mate-dictionary/src/gdict-window.c:317
+#: cafe-dictionary/src/gdict-window.c:317
 #, c-format
 msgid "Searching for '%s'..."
 msgstr "'%s' માટે શોધી રહ્યા છીએ..."
 
-#: mate-dictionary/src/gdict-window.c:349
-#: mate-dictionary/src/gdict-window.c:406
+#: cafe-dictionary/src/gdict-window.c:349
+#: cafe-dictionary/src/gdict-window.c:406
 msgid "No definitions found"
 msgstr "કોઈ વ્યાખ્યાઓ મળી નહિં"
 
-#: mate-dictionary/src/gdict-window.c:351
+#: cafe-dictionary/src/gdict-window.c:351
 #, c-format
 msgid "A definition found"
 msgid_plural "%d definitions found"
 msgstr[0] ""
 msgstr[1] ""
 
-#: mate-dictionary/src/gdict-window.c:605
+#: cafe-dictionary/src/gdict-window.c:605
 #, c-format
 msgid "%s - Dictionary"
 msgstr "%s - શબ્દકોષ"
 
-#: mate-dictionary/src/gdict-window.c:1288
+#: cafe-dictionary/src/gdict-window.c:1288
 msgid "_Go"
 msgstr "જાઓ (_G)"
 
-#: mate-dictionary/src/gdict-window.c:1292
+#: cafe-dictionary/src/gdict-window.c:1292
 msgid "_New"
 msgstr "નવું (_N)"
 
-#: mate-dictionary/src/gdict-window.c:1293
+#: cafe-dictionary/src/gdict-window.c:1293
 msgid "New look up"
 msgstr "નવો દેખાવ"
 
-#: mate-dictionary/src/gdict-window.c:1294
+#: cafe-dictionary/src/gdict-window.c:1294
 msgid "_Save a Copy..."
 msgstr "નકલ સંગ્રહો (_S)..."
 
-#: mate-dictionary/src/gdict-window.c:1296
+#: cafe-dictionary/src/gdict-window.c:1296
 msgid "P_review..."
 msgstr "પૂર્વદર્શન (_r)..."
 
-#: mate-dictionary/src/gdict-window.c:1297
+#: cafe-dictionary/src/gdict-window.c:1297
 msgid "Preview this document"
 msgstr "આ દસ્તાવેજ નું પૂર્વદર્શન કરો"
 
-#: mate-dictionary/src/gdict-window.c:1298
+#: cafe-dictionary/src/gdict-window.c:1298
 msgid "_Print..."
 msgstr "છાપો (_P)..."
 
-#: mate-dictionary/src/gdict-window.c:1299
+#: cafe-dictionary/src/gdict-window.c:1299
 msgid "Print this document"
 msgstr "આ દસ્તાવેજ છાપો"
 
-#: mate-dictionary/src/gdict-window.c:1308
+#: cafe-dictionary/src/gdict-window.c:1308
 msgid "_Find"
 msgstr ""
 
-#: mate-dictionary/src/gdict-window.c:1309
+#: cafe-dictionary/src/gdict-window.c:1309
 msgid "Find a word or phrase in the document"
 msgstr "દસ્તાવેજમાં શબ્દ અથવા મહાવરો શોધો"
 
-#: mate-dictionary/src/gdict-window.c:1311
+#: cafe-dictionary/src/gdict-window.c:1311
 msgid "Find Ne_xt"
 msgstr "આગળનું શોધો (_x)"
 
-#: mate-dictionary/src/gdict-window.c:1313
+#: cafe-dictionary/src/gdict-window.c:1313
 msgid "Find Pre_vious"
 msgstr "પહેલાંનું શોધો (_v)"
 
-#: mate-dictionary/src/gdict-window.c:1315
+#: cafe-dictionary/src/gdict-window.c:1315
 msgid "_Preferences"
 msgstr "પસંદગીઓ (_P)"
 
-#: mate-dictionary/src/gdict-window.c:1319
+#: cafe-dictionary/src/gdict-window.c:1319
 msgid "_Previous Definition"
 msgstr "પહેલાંની વ્યાખ્યા (_P)"
 
-#: mate-dictionary/src/gdict-window.c:1320
+#: cafe-dictionary/src/gdict-window.c:1320
 msgid "Go to the previous definition"
 msgstr "પહેલાંની વ્યાખ્યા પર જાઓ"
 
-#: mate-dictionary/src/gdict-window.c:1321
+#: cafe-dictionary/src/gdict-window.c:1321
 msgid "_Next Definition"
 msgstr "આગળની વ્યાખ્યા (_N)"
 
-#: mate-dictionary/src/gdict-window.c:1322
+#: cafe-dictionary/src/gdict-window.c:1322
 msgid "Go to the next definition"
 msgstr "આગળની વ્યાખ્યા પર જાઓ"
 
-#: mate-dictionary/src/gdict-window.c:1323
+#: cafe-dictionary/src/gdict-window.c:1323
 msgid "_First Definition"
 msgstr "પ્રથમ વ્યાખ્યા (_F)"
 
-#: mate-dictionary/src/gdict-window.c:1324
+#: cafe-dictionary/src/gdict-window.c:1324
 msgid "Go to the first definition"
 msgstr "પ્રથમ વ્યાખ્યા પર જાઓ"
 
-#: mate-dictionary/src/gdict-window.c:1325
+#: cafe-dictionary/src/gdict-window.c:1325
 msgid "_Last Definition"
 msgstr "અંતિમ વ્યાખ્યા (_L)"
 
-#: mate-dictionary/src/gdict-window.c:1326
+#: cafe-dictionary/src/gdict-window.c:1326
 msgid "Go to the last definition"
 msgstr "અંતિમ વ્યાખ્યા પર જાઓ"
 
-#: mate-dictionary/src/gdict-window.c:1329
+#: cafe-dictionary/src/gdict-window.c:1329
 msgid "Similar _Words"
 msgstr "સરખા શબ્દો (_W)"
 
-#: mate-dictionary/src/gdict-window.c:1331
+#: cafe-dictionary/src/gdict-window.c:1331
 msgid "Dictionary Sources"
 msgstr "શબ્દકોષ સ્રોતો"
 
-#: mate-dictionary/src/gdict-window.c:1333
+#: cafe-dictionary/src/gdict-window.c:1333
 msgid "Available _Databases"
 msgstr "ઉપલબ્ધ ડેટાબેઝો (_D)"
 
-#: mate-dictionary/src/gdict-window.c:1335
+#: cafe-dictionary/src/gdict-window.c:1335
 msgid "Available St_rategies"
 msgstr "ઉપલબ્ધ વિચારધારાઓ (_r)"
 
-#: mate-dictionary/src/gdict-window.c:1352
+#: cafe-dictionary/src/gdict-window.c:1352
 msgid "_Sidebar"
 msgstr "બાજુપટ્ટી (_S)"
 
-#: mate-dictionary/src/gdict-window.c:1354
+#: cafe-dictionary/src/gdict-window.c:1354
 msgid "S_tatusbar"
 msgstr "પરિસ્થિતિદર્શક પટ્ટી (_t)"
 
-#: mate-dictionary/src/gdict-window.c:1419
+#: cafe-dictionary/src/gdict-window.c:1419
 #, c-format
 msgid "Dictionary source `%s' selected"
 msgstr "શબ્દકોષ સ્રોત `%s' પસંદ થયેલ છે"
 
-#: mate-dictionary/src/gdict-window.c:1440
+#: cafe-dictionary/src/gdict-window.c:1440
 #, c-format
 msgid "Strategy `%s' selected"
 msgstr "વિચારધારા `%s' પસંદ થયેલ છે"
 
-#: mate-dictionary/src/gdict-window.c:1460
+#: cafe-dictionary/src/gdict-window.c:1460
 #, c-format
 msgid "Database `%s' selected"
 msgstr "ડેટાબેઝ `%s' પસંદ થયેલ છે"
 
-#: mate-dictionary/src/gdict-window.c:1480
+#: cafe-dictionary/src/gdict-window.c:1480
 #, c-format
 msgid "Word `%s' selected"
 msgstr "શબ્દ `%s' પસંદ થયેલ છે"
 
-#: mate-dictionary/src/gdict-window.c:1505
+#: cafe-dictionary/src/gdict-window.c:1505
 msgid "Double-click on the word to look up"
 msgstr "જોવા માટે શબ્દ પર બેવડું-ક્લિક કરો"
 
-#: mate-dictionary/src/gdict-window.c:1511
+#: cafe-dictionary/src/gdict-window.c:1511
 msgid "Double-click on the matching strategy to use"
 msgstr "વાપરવા માટેની બંધબેસતી વિચારધારા પર બેવડું-ક્લિક કરો"
 
-#: mate-dictionary/src/gdict-window.c:1516
+#: cafe-dictionary/src/gdict-window.c:1516
 msgid "Double-click on the source to use"
 msgstr "વાપરવા માટે સ્રોત પર બેવડું ક્લિક કરો"
 
-#: mate-dictionary/src/gdict-window.c:1525
+#: cafe-dictionary/src/gdict-window.c:1525
 msgid "Double-click on the database to use"
 msgstr "વાપરવા માટે ડેટાબેઝ પર બેવડું-ક્લિક કરો"
 
-#: mate-dictionary/src/gdict-window.c:1697
+#: cafe-dictionary/src/gdict-window.c:1697
 msgid "Look _up:"
 msgstr "જુઓ (_u):"
 
-#: mate-dictionary/src/gdict-window.c:1772
+#: cafe-dictionary/src/gdict-window.c:1772
 msgid "Similar words"
 msgstr "સરખા શબ્દો"
 
-#: mate-dictionary/src/gdict-window.c:1785
+#: cafe-dictionary/src/gdict-window.c:1785
 msgid "Available dictionaries"
 msgstr "ઉપલબ્ધ શબ્દકોષો"
 
-#: mate-dictionary/src/gdict-window.c:1803
+#: cafe-dictionary/src/gdict-window.c:1803
 msgid "Available strategies"
 msgstr "ઉપલબ્ધ વિચારધારાઓ"
 
-#: mate-dictionary/src/gdict-window.c:1819
+#: cafe-dictionary/src/gdict-window.c:1819
 msgid "Dictionary sources"
 msgstr "શબ્દકોષ સ્રોતો"
 
-#: mate-dictionary/data/mate-dictionary-preferences.ui:27
+#: cafe-dictionary/data/cafe-dictionary-preferences.ui:27
 msgid "_Select a dictionary source for looking up words:"
 msgstr "શબ્દો જોવા માટે શબ્દકોષ સ્રોત પસંદ કરો (_S):"
 
-#: mate-dictionary/data/mate-dictionary-preferences.ui:132
-#: mate-dictionary/data/mate-dictionary-source.ui:236
+#: cafe-dictionary/data/cafe-dictionary-preferences.ui:132
+#: cafe-dictionary/data/cafe-dictionary-source.ui:236
 msgid "Source"
 msgstr "સ્રોત"
 
-#: mate-dictionary/data/mate-dictionary-preferences.ui:162
+#: cafe-dictionary/data/cafe-dictionary-preferences.ui:162
 msgid "_Print font:"
 msgstr "ફોન્ટ છાપો (_P):"
 
-#: mate-dictionary/data/mate-dictionary-preferences.ui:216
+#: cafe-dictionary/data/cafe-dictionary-preferences.ui:216
 msgid "Print"
 msgstr "છાપો"
 
-#: mate-dictionary/data/mate-dictionary-source.ui:39
+#: cafe-dictionary/data/cafe-dictionary-source.ui:39
 msgid "_Description:"
 msgstr "વર્ણન (_D):"
 
-#: mate-dictionary/data/mate-dictionary-source.ui:67
+#: cafe-dictionary/data/cafe-dictionary-source.ui:67
 msgid "_Transport:"
 msgstr "પરિવહન (_T):"
 
-#: mate-dictionary/data/mate-dictionary-source.ui:94
+#: cafe-dictionary/data/cafe-dictionary-source.ui:94
 msgid "H_ostname:"
 msgstr "યજમાનનામ (_o):"
 
-#: mate-dictionary/data/mate-dictionary-source.ui:154
+#: cafe-dictionary/data/cafe-dictionary-source.ui:154
 msgid "Source Name"
 msgstr "સ્રોત નામ"
 
-#: mate-dictionary/data/mate-dictionary-source.ui:273
+#: cafe-dictionary/data/cafe-dictionary-source.ui:273
 msgid "Dictionaries"
 msgstr "શબ્દકોષો"
 
-#: mate-dictionary/data/mate-dictionary-source.ui:307
+#: cafe-dictionary/data/cafe-dictionary-source.ui:307
 msgid "Strategies"
 msgstr "વિચારધારાઓ"
 
-#: mate-disk-image-mounter/data/mate-disk-image-mounter.desktop.in:3
-#: mate-disk-image-mounter/src/main.c:59
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:3
+#: cafe-disk-image-mounter/src/main.c:59
 msgid "MATE Disk Image Mounter"
 msgstr ""
 
-#: mate-disk-image-mounter/data/mate-disk-image-mounter.desktop.in:4
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:4
 msgid "Attach and mount one or more disk image files"
 msgstr ""
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: mate-disk-image-mounter/data/mate-disk-image-mounter.desktop.in:8
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:8
 msgid "drive-removable-media"
 msgstr ""
 
-#: mate-disk-image-mounter/src/main.c:57
+#: cafe-disk-image-mounter/src/main.c:57
 msgid "An error occurred"
 msgstr "ભૂલ ઉદ્ભવી"
 
-#: mate-disk-image-mounter/src/main.c:78
+#: cafe-disk-image-mounter/src/main.c:78
 msgid "Allow writing to the image"
 msgstr ""
 
-#: mate-disk-image-mounter/src/main.c:98
+#: cafe-disk-image-mounter/src/main.c:98
 msgid "All Files"
 msgstr "બધી ફાઈલો"
 
-#: mate-disk-image-mounter/src/main.c:102
+#: cafe-disk-image-mounter/src/main.c:102
 msgid "Disk Images (*.img, *.iso)"
 msgstr ""
 
-#: mate-disk-image-mounter/src/main.c:118
+#: cafe-disk-image-mounter/src/main.c:118
 msgid "Select Disk Image(s) to Mount"
 msgstr ""
 
-#: mate-disk-image-mounter/src/main.c:121
+#: cafe-disk-image-mounter/src/main.c:121
 msgid "_Cancel"
 msgstr "રદ કરો (_C)"
 
-#: mate-disk-image-mounter/src/main.c:122
+#: cafe-disk-image-mounter/src/main.c:122
 msgid "_Mount"
 msgstr "માઉન્ટ કરો (_M)"
 
-#: mate-disk-image-mounter/src/main.c:128
+#: cafe-disk-image-mounter/src/main.c:128
 msgid "Set up _read-only mount"
 msgstr ""
 
-#: mate-disk-image-mounter/src/main.c:129
+#: cafe-disk-image-mounter/src/main.c:129
 msgid ""
 "If checked, the mount will be read-only. This is useful if you don't want "
 "the underlying disk image to be modified"
 msgstr ""
 
-#: mate-disk-image-mounter/src/main.c:173
+#: cafe-disk-image-mounter/src/main.c:173
 #, c-format
 msgid "Error connecting to udisks daemon: %s (%s, %d)"
 msgstr ""
 
-#: mate-disk-image-mounter/src/main.c:181
+#: cafe-disk-image-mounter/src/main.c:181
 msgid "Attach and mount one or more disk image files."
 msgstr ""
 
-#: mate-disk-image-mounter/src/main.c:229
+#: cafe-disk-image-mounter/src/main.c:229
 #, c-format
 msgid "Cannot open `%s' - maybe the volume isn't mounted?"
 msgstr ""
 
-#: mate-disk-image-mounter/src/main.c:236
+#: cafe-disk-image-mounter/src/main.c:236
 #, c-format
 msgid "Error opening `%s': %m"
 msgstr ""
 
-#: mate-disk-image-mounter/src/main.c:257
+#: cafe-disk-image-mounter/src/main.c:257
 #, c-format
 msgid "Error attaching disk image: %s (%s, %d)"
 msgstr ""
 
-#: mate-screenshot/data/mate-screenshot.appdata.xml.in:7
+#: cafe-screenshot/data/cafe-screenshot.appdata.xml.in:7
 msgid "MATE Screenshot"
 msgstr ""
 
-#: mate-screenshot/data/mate-screenshot.appdata.xml.in:8
+#: cafe-screenshot/data/cafe-screenshot.appdata.xml.in:8
 msgid "A screenshot utility for MATE Desktop"
 msgstr ""
 
-#: mate-screenshot/data/mate-screenshot.appdata.xml.in:10
+#: cafe-screenshot/data/cafe-screenshot.appdata.xml.in:10
 msgid ""
 "MATE Screenshot is a simple utility that lets you capture screenshots of "
 "your desktop or of application windows. You can select to copy them to the "
@@ -3007,77 +3007,77 @@ msgid ""
 "format."
 msgstr ""
 
-#: mate-screenshot/data/mate-screenshot.desktop.in:3
-#: mate-screenshot/src/mate-screenshot.c:519
-#: mate-screenshot/src/mate-screenshot.c:527
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:3
+#: cafe-screenshot/src/cafe-screenshot.c:519
+#: cafe-screenshot/src/cafe-screenshot.c:527
 msgid "Take Screenshot"
 msgstr "સ્ક્રીનશોટ લો"
 
-#: mate-screenshot/data/mate-screenshot.desktop.in:4
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:4
 msgid "Save images of your desktop or individual windows"
 msgstr "તમારા ડેસ્કટોપ અથવા વ્યક્તિગત વિન્ડોના ચિત્રો સંગ્રહો"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: mate-screenshot/data/mate-screenshot.desktop.in:9
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:9
 msgid "applets-screenshooter"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: mate-screenshot/data/mate-screenshot.desktop.in:13
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:13
 msgid "MATE;screenshot;snapshot;desktop;window;image;"
 msgstr ""
 
-#: mate-screenshot/data/mate-screenshot.ui:9
+#: cafe-screenshot/data/cafe-screenshot.ui:9
 msgid "Save Screenshot"
 msgstr "ફોટો સંગ્રહો"
 
-#: mate-screenshot/data/mate-screenshot.ui:52
+#: cafe-screenshot/data/cafe-screenshot.ui:52
 msgid "C_opy to Clipboard"
 msgstr "ક્લિપબોર્ડ માં નકલ કરો (_o)"
 
-#: mate-screenshot/data/mate-screenshot.ui:166
+#: cafe-screenshot/data/cafe-screenshot.ui:166
 msgid "Save in _folder:"
 msgstr "ફોલ્ડરમાં સંગ્રહો (_f):"
 
-#: mate-screenshot/data/org.mate.screenshot.gschema.xml.in:5
+#: cafe-screenshot/data/org.cafe.screenshot.gschema.xml.in:5
 msgid "Screenshot delay"
 msgstr "સ્ક્રીનશોટ મુલતવી"
 
-#: mate-screenshot/data/org.mate.screenshot.gschema.xml.in:6
+#: cafe-screenshot/data/org.cafe.screenshot.gschema.xml.in:6
 msgid "The number of seconds to wait before taking the screenshot."
 msgstr "સ્ક્રીમશોટ ને લેતા પહેલા રાહ જોવા માટે ઘણી બધી સેકન્ડો."
 
-#: mate-screenshot/data/org.mate.screenshot.gschema.xml.in:10
+#: cafe-screenshot/data/org.cafe.screenshot.gschema.xml.in:10
 msgid "Screenshot directory"
 msgstr "સ્ક્રીનશોટ ડિરેક્ટરી"
 
-#: mate-screenshot/data/org.mate.screenshot.gschema.xml.in:11
+#: cafe-screenshot/data/org.cafe.screenshot.gschema.xml.in:11
 msgid "The directory the last screenshot was saved in."
 msgstr "છેલ્લો સ્ક્રીનશોટ સંગ્રહાયો હતો તે ડિરેક્ટરી."
 
-#: mate-screenshot/data/org.mate.screenshot.gschema.xml.in:15
+#: cafe-screenshot/data/org.cafe.screenshot.gschema.xml.in:15
 msgid "Include Border"
 msgstr "કિનારીનો સમાવેશ કરો"
 
-#: mate-screenshot/data/org.mate.screenshot.gschema.xml.in:16
+#: cafe-screenshot/data/org.cafe.screenshot.gschema.xml.in:16
 msgid "Include the window manager border along with the screenshot"
 msgstr "ફોટાની સાથે વિન્ડોવ્યવસ્થાપક કિનારીનો સમાવેશ કરો"
 
-#: mate-screenshot/data/org.mate.screenshot.gschema.xml.in:20
+#: cafe-screenshot/data/org.cafe.screenshot.gschema.xml.in:20
 msgid "Include Pointer"
 msgstr "પોઇંટરનો સમાવેશ કરો"
 
-#: mate-screenshot/data/org.mate.screenshot.gschema.xml.in:21
+#: cafe-screenshot/data/org.cafe.screenshot.gschema.xml.in:21
 msgid "Include the pointer in the screenshot"
 msgstr "સ્ક્રીનશોટમાં પોઇંટર ને સમાવો"
 
-#: mate-screenshot/data/org.mate.screenshot.gschema.xml.in:25
+#: cafe-screenshot/data/org.cafe.screenshot.gschema.xml.in:25
 msgid "Border Effect"
 msgstr "કિનારી અસર"
 
-#: mate-screenshot/data/org.mate.screenshot.gschema.xml.in:26
+#: cafe-screenshot/data/org.cafe.screenshot.gschema.xml.in:26
 msgid ""
 "Effect to add to the outside of a border. Possible values are \"shadow\", "
 "\"none\", and \"border\"."
@@ -3085,68 +3085,68 @@ msgstr ""
 "કિનારીની બહાર ઉમેરવાની અસર. \"પડછાયો\", \"કંઈ નહિં\", અને \"કિનારી\" શક્ય "
 "કિંમતો છે."
 
-#: mate-screenshot/src/mate-screenshot.c:138
+#: cafe-screenshot/src/cafe-screenshot.c:138
 msgid "Error loading the help page"
 msgstr "મદદ પાનું લાવવામાં ભૂલ"
 
-#: mate-screenshot/src/mate-screenshot.c:250
+#: cafe-screenshot/src/cafe-screenshot.c:250
 msgid "None"
 msgstr "કંઇ નહી"
 
-#: mate-screenshot/src/mate-screenshot.c:251
+#: cafe-screenshot/src/cafe-screenshot.c:251
 msgid "Drop shadow"
 msgstr "પડછાયો મૂકો"
 
-#: mate-screenshot/src/mate-screenshot.c:252
+#: cafe-screenshot/src/cafe-screenshot.c:252
 msgid "Border"
 msgstr "કિનારી"
 
-#: mate-screenshot/src/mate-screenshot.c:353
+#: cafe-screenshot/src/cafe-screenshot.c:353
 msgid "Include _pointer"
 msgstr "નિર્દેશકનો સમાવેશ કરો (_p)"
 
-#: mate-screenshot/src/mate-screenshot.c:362
+#: cafe-screenshot/src/cafe-screenshot.c:362
 msgid "Include the window _border"
 msgstr "વિન્ડો કિનારી સમાવો (_b)"
 
-#: mate-screenshot/src/mate-screenshot.c:377
+#: cafe-screenshot/src/cafe-screenshot.c:377
 msgid "Apply _effect:"
 msgstr "અસર લાગુ કરો (_e):"
 
-#: mate-screenshot/src/mate-screenshot.c:437
+#: cafe-screenshot/src/cafe-screenshot.c:437
 msgid "Grab the whole _desktop"
 msgstr "સંપૂર્ણ ડેસ્કટોપ મેળવો (_d)"
 
-#: mate-screenshot/src/mate-screenshot.c:449
+#: cafe-screenshot/src/cafe-screenshot.c:449
 msgid "Grab the current _window"
 msgstr "વર્તમાન વિન્ડો મેળવો (_w)"
 
-#: mate-screenshot/src/mate-screenshot.c:461
+#: cafe-screenshot/src/cafe-screenshot.c:461
 msgid "Select _area to grab"
 msgstr "લેવા માટે વિસ્તારને પસંદ કરો (_a)"
 
-#: mate-screenshot/src/mate-screenshot.c:479
+#: cafe-screenshot/src/cafe-screenshot.c:479
 msgid "Grab _after a delay of"
 msgstr "ના વિલંબ પછી મેળવો (_a)"
 
-#: mate-screenshot/src/mate-screenshot.c:500
-#: mate-screenshot/src/mate-screenshot.c:1320
+#: cafe-screenshot/src/cafe-screenshot.c:500
+#: cafe-screenshot/src/cafe-screenshot.c:1320
 msgid "seconds"
 msgstr "સેકન્ડો"
 
-#: mate-screenshot/src/mate-screenshot.c:528
+#: cafe-screenshot/src/cafe-screenshot.c:528
 msgid "Effects"
 msgstr "અસરો"
 
-#: mate-screenshot/src/mate-screenshot.c:532
+#: cafe-screenshot/src/cafe-screenshot.c:532
 msgid "Take _Screenshot"
 msgstr "સ્ક્રીનશોટ લો (_S)"
 
-#: mate-screenshot/src/mate-screenshot.c:651
+#: cafe-screenshot/src/cafe-screenshot.c:651
 msgid "Error while saving screenshot"
 msgstr "જ્યારે સ્ક્રીનશોટ ને સંગ્રહ કરી રહ્યા હોય ત્યારે ભૂલ"
 
-#: mate-screenshot/src/mate-screenshot.c:654
+#: cafe-screenshot/src/cafe-screenshot.c:654
 #, c-format
 msgid ""
 "Impossible to save the screenshot to %s.\n"
@@ -3157,99 +3157,99 @@ msgstr ""
 " %s ભૂલ હતી.\n"
 " મહેરબાની કરીને અન્ય સ્થાન પસંદ કરો અને પુનઃપ્રયાસ કરો."
 
-#: mate-screenshot/src/mate-screenshot.c:796
+#: cafe-screenshot/src/cafe-screenshot.c:796
 msgid "Screenshot taken"
 msgstr "સ્ક્રીનશોટ લીધેલ"
 
-#: mate-screenshot/src/mate-screenshot.c:851
+#: cafe-screenshot/src/cafe-screenshot.c:851
 msgid "Unable to take a screenshot of the current window"
 msgstr "વર્તમાન વિન્ડોનો સ્ક્રીનશોટ લેવામાં અસમર્થ"
 
-#: mate-screenshot/src/mate-screenshot.c:916
+#: cafe-screenshot/src/cafe-screenshot.c:916
 #, c-format
 msgid "Screenshot at %s.png"
 msgstr ""
 
-#: mate-screenshot/src/mate-screenshot.c:923
+#: cafe-screenshot/src/cafe-screenshot.c:923
 #, c-format
 msgid "Screenshot at %s - %d.png"
 msgstr ""
 
-#: mate-screenshot/src/mate-screenshot.c:1315
+#: cafe-screenshot/src/cafe-screenshot.c:1315
 msgid "Grab a window instead of the entire screen"
 msgstr "વર્તમાન સ્ક્રીનની જગ્યાએ વિન્ડો મેળવો"
 
-#: mate-screenshot/src/mate-screenshot.c:1316
+#: cafe-screenshot/src/cafe-screenshot.c:1316
 msgid "Grab an area of the screen instead of the entire screen"
 msgstr "આખી સ્ક્રીનની જગ્યાએ સ્ક્રીનનો વિસ્તાર મેળવો."
 
-#: mate-screenshot/src/mate-screenshot.c:1317
+#: cafe-screenshot/src/cafe-screenshot.c:1317
 msgid "Send grabbed area directly to the clipboard"
 msgstr ""
 
-#: mate-screenshot/src/mate-screenshot.c:1318
+#: cafe-screenshot/src/cafe-screenshot.c:1318
 msgid "Include the window border with the screenshot"
 msgstr "ફોટાની સાથે વિન્ડોની કિનારીનો સમાવેશ કરો"
 
-#: mate-screenshot/src/mate-screenshot.c:1319
+#: cafe-screenshot/src/cafe-screenshot.c:1319
 msgid "Remove the window border from the screenshot"
 msgstr "સ્ક્રીનશોટમાંથી વિન્ડો કિનારીને દૂર કરો"
 
-#: mate-screenshot/src/mate-screenshot.c:1320
+#: cafe-screenshot/src/cafe-screenshot.c:1320
 msgid "Take screenshot after specified delay [in seconds]"
 msgstr "થોડા સમયના વિલંબ પછી ફોટો લો [સેકન્ડમાં]"
 
-#: mate-screenshot/src/mate-screenshot.c:1321
+#: cafe-screenshot/src/cafe-screenshot.c:1321
 msgid "Effect to add to the border (shadow, border or none)"
 msgstr "કિનારીમાં ઉમેરવાની અસર (પડછાયો, કિનારી અથવા કંઈ નહિં)"
 
-#: mate-screenshot/src/mate-screenshot.c:1321
+#: cafe-screenshot/src/cafe-screenshot.c:1321
 msgid "effect"
 msgstr "અસર"
 
-#: mate-screenshot/src/mate-screenshot.c:1322
+#: cafe-screenshot/src/cafe-screenshot.c:1322
 msgid "Interactively set options"
 msgstr "પૂછપરછવાળા સુયોજન વિકલ્પો"
 
-#: mate-screenshot/src/mate-screenshot.c:1323
+#: cafe-screenshot/src/cafe-screenshot.c:1323
 msgid "Print version information and exit"
 msgstr ""
 
-#: mate-screenshot/src/mate-screenshot.c:1332
+#: cafe-screenshot/src/cafe-screenshot.c:1332
 msgid "Take a picture of the screen"
 msgstr "સ્ક્રીનનું ચિત્ર લો"
 
-#: mate-screenshot/src/mate-screenshot.c:1355
+#: cafe-screenshot/src/cafe-screenshot.c:1355
 msgid ""
 "Conflicting options: --clipboard and --interactive should not be used at the"
 " same time.\n"
 msgstr ""
 
-#: mate-screenshot/src/mate-screenshot.c:1361
+#: cafe-screenshot/src/cafe-screenshot.c:1361
 msgid ""
 "Conflicting options: --window and --area should not be used at the same "
 "time.\n"
 msgstr "તકરાતા વિકલ્પો: --window અને --area એક જ સમયે વપરાતા હોવા જોઈએ નહિં.\n"
 
-#: mate-screenshot/src/screenshot-dialog.c:205
+#: cafe-screenshot/src/screenshot-dialog.c:205
 #, c-format
 msgid ""
 "Error loading UI definition file for the screenshot program: \n"
 "%s\n"
 "\n"
-"Please check your installation of mate-utils."
+"Please check your installation of cafe-utils."
 msgstr ""
 
-#: mate-screenshot/src/screenshot-dialog.c:228
+#: cafe-screenshot/src/screenshot-dialog.c:228
 msgid "Select a folder"
 msgstr "ફોલ્ડર પસંદ કરો"
 
-#: mate-screenshot/src/screenshot-dialog.c:323
-#: mate-screenshot/src/screenshot-save.c:199
+#: cafe-screenshot/src/screenshot-dialog.c:323
+#: cafe-screenshot/src/screenshot-save.c:199
 msgid "Screenshot.png"
 msgstr "ફોટો.png"
 
-#: mate-screenshot/src/screenshot-save.c:57
+#: cafe-screenshot/src/screenshot-save.c:57
 #, c-format
 msgid ""
 "Unable to clear the temporary folder:\n"
@@ -3258,7 +3258,7 @@ msgstr ""
 "કામચલાઉ ફોલ્ડર સાફ કરવામાં અસમર્થ:\n"
 "%s"
 
-#: mate-screenshot/src/screenshot-save.c:95
+#: cafe-screenshot/src/screenshot-save.c:95
 msgid ""
 "The child save process unexpectedly exited.  We are unable to write the "
 "screenshot to disk."
@@ -3266,23 +3266,23 @@ msgstr ""
 "બાળ સંગ્રહ પ્રક્રિયા અનિચ્છનીય રીત ઉત્સુક થઈ ગઈ.  અમે ફોટાનો ડિસ્કમાં સંગ્રહ"
 " કરવામાં અસમર્થ છીએ."
 
-#: mate-screenshot/src/screenshot-save.c:225
+#: cafe-screenshot/src/screenshot-save.c:225
 msgid "Unknown error saving screenshot to disk"
 msgstr "ફોટાનો ડિસ્કમાં સંગ્રહ કરતી વખતે અજ્ઞાત ભૂલ"
 
-#: mate-screenshot/src/screenshot-xfer.c:72
+#: cafe-screenshot/src/screenshot-xfer.c:72
 msgid "File already exists"
 msgstr "ફાઈલ પહેલાથી જ હાજર છે"
 
-#: mate-screenshot/src/screenshot-xfer.c:75
+#: cafe-screenshot/src/screenshot-xfer.c:75
 #, c-format
 msgid "The file \"%s\" already exists. Would you like to replace it?"
 msgstr "ફાઈલ \"%s\" પહેલાથી જ હાજર છે. શું તમે એને બદલવા માંગો છો?"
 
-#: mate-screenshot/src/screenshot-xfer.c:120
+#: cafe-screenshot/src/screenshot-xfer.c:120
 msgid "Saving file..."
 msgstr "ફાઇલને કરી રહ્યા છીએ..."
 
-#: mate-screenshot/src/screenshot-xfer.c:290
+#: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "સ્રોત ફાઈલને દાખલ કરી શકાતુ નથી"

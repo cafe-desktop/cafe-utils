@@ -35,7 +35,7 @@
 #define LOGVIEW_DEFAULT_WIDTH 600
 
 /* logview settings */
-#define LOGVIEW_SCHEMA "org.mate.system-log"
+#define LOGVIEW_SCHEMA "org.cafe.system-log"
 #define PREF_WIDTH    "width"
 #define PREF_HEIGHT	  "height"
 #define PREF_LOGFILE 	"logfile"
@@ -300,7 +300,7 @@ logview_prefs_init (LogviewPrefs *self)
   priv = self->priv = logview_prefs_get_instance_private (self);
 
   priv->logview_prefs = g_settings_new (LOGVIEW_SCHEMA);
-  priv->interface_prefs = g_settings_new ("org.mate.interface");
+  priv->interface_prefs = g_settings_new ("org.cafe.interface");
 
   g_signal_connect (priv->interface_prefs, "changed::" MATE_MONOSPACE_FONT_NAME,
                     G_CALLBACK (monospace_font_changed_cb), self);

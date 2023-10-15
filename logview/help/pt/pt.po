@@ -1,7 +1,7 @@
 # Translators:
 # Carlos Moreira, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <cafe@raveit.de>, 2018
 # Manuela Silva <manuelarodsilva@gmail.com>, 2018
 # José Vieira <jvieira33@sapo.pt>, 2018
 # Rui <xymarior@yandex.com>, 2018
@@ -13,7 +13,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 16:47+0100\n"
 "PO-Revision-Date: 2018-09-14 23:21+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2019\n"
-"Language-Team: Portuguese (https://www.transifex.com/mate/teams/13566/pt/)\n"
+"Language-Team: Portuguese (https://www.transifex.com/cafe/teams/13566/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -326,7 +326,7 @@ msgstr "Enviar Opiniões"
 msgid ""
 "To report a bug or make a suggestion regarding the System Log Viewer "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -401,7 +401,7 @@ msgstr "Linha de comando"
 #. (itstool) path: listitem/para
 #: C/index.docbook:258
 msgid ""
-"Type <command>mate-system-log</command>, then press <keycap>Return</keycap>."
+"Type <command>cafe-system-log</command>, then press <keycap>Return</keycap>."
 msgstr ""
 
 #. (itstool) path: sect1/para

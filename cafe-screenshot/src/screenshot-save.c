@@ -142,7 +142,7 @@ make_temp_directory (void)
   i = 0;
   do
     {
-      gchar *tmp_dir = g_strdup_printf ("mate-screenshot.%u.%d",
+      gchar *tmp_dir = g_strdup_printf ("cafe-screenshot.%u.%d",
                                         (unsigned int) getpid (),
                                         i++);
 
@@ -215,7 +215,7 @@ screenshot_save_start (GdkPixbuf    *pixbuf,
 
       if (! gdk_pixbuf_save (pixbuf, tmp_filename,
 			     "png", &error,
-			     "tEXt::Software", "mate-screenshot",
+			     "tEXt::Software", "cafe-screenshot",
 			     NULL))
 	{
 	  if (error && error->message)

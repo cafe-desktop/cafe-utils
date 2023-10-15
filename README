@@ -3,22 +3,22 @@ MATE Utilities
 
 MATE Utilities for the MATE Desktop contains the following:
 
-        mate-system-log          [logview]
-        mate-search-tool         [gseachtool]
-        mate-dictionary          [mate-dictionary]
-        mate-screenshot          [mate-screenshot]
-        mate-disk-usage-analyzer [baobab]
+        cafe-system-log          [logview]
+        cafe-search-tool         [gseachtool]
+        cafe-dictionary          [cafe-dictionary]
+        cafe-screenshot          [cafe-screenshot]
+        cafe-disk-usage-analyzer [baobab]
 
 This is a fork of GNOME Utilities.
 
 Requirements:
 
         intltool                 >= 0.50.1
-        mate-common              >= 1.10.0
+        cafe-common              >= 1.10.0
         glib                     >= 2.36.0
         gio                      >= 2.36.0
         gtk+                     >= 3.14.0
-        libmate-panel-applet     >= 1.17.0
+        libcafe-panel-applet     >= 1.17.0
         libgtop                  >= 2.12.0
         libcanberra-gtk          >= 0.4
 

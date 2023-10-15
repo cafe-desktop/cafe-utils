@@ -16,7 +16,7 @@
     along with MATE Utils.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <gresources>
-  <gresource prefix="/org/mate/screenshot">
-    <file compressed="true">mate-screenshot.ui</file>
+  <gresource prefix="/org/cafe/screenshot">
+    <file compressed="true">cafe-screenshot.ui</file>
   </gresource>
 </gresources>

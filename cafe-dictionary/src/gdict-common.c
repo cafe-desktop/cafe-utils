@@ -45,8 +45,8 @@ gdict_get_data_dir (void)
   gchar *retval;
 
   retval = g_build_filename (g_get_user_config_dir (),
-		  	     "mate",
-			     "mate-dictionary",
+		  	     "cafe",
+			     "cafe-dictionary",
 			     NULL);
 
   return retval;
@@ -61,8 +61,8 @@ gdict_create_data_dir (void)
   data_dir_name = gdict_get_data_dir ();
   if (g_mkdir_with_parents (data_dir_name, 0700) == -1)
     {
-      /* this is weird, but sometimes there's a "mate-dictionary" file
-       * inside $HOME/.mate2; see bug #329126.
+      /* this is weird, but sometimes there's a "cafe-dictionary" file
+       * inside $HOME/.cafe2; see bug #329126.
        */
       if ((errno == EEXIST) &&
           (g_file_test (data_dir_name, G_FILE_TEST_IS_REGULAR)))

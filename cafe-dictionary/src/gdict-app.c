@@ -247,7 +247,7 @@ gdict_look_up_word_and_quit (GdictApp *app)
 
   if (!app->lookup_words)
     {
-      g_print (_("See mate-dictionary --help for usage\n"));
+      g_print (_("See cafe-dictionary --help for usage\n"));
 
       gdict_cleanup ();
       exit (1);
@@ -371,7 +371,7 @@ gdict_init (int *argc, char ***argv)
       exit (1);
     }
 
-  singleton->settings = g_settings_new ("org.mate.dictionary");
+  singleton->settings = g_settings_new ("org.cafe.dictionary");
 
   /* add user's path for fetching dictionary sources */
   singleton->loader = gdict_source_loader_new ();

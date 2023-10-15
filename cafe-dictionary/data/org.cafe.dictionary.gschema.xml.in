@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.mate.dictionary" path="/org/mate/dictionary/">
+  <schema id="org.cafe.dictionary" path="/org/cafe/dictionary/">
     <key name="database" type="s">
       <default>'!'</default>
       <summary>The default database to use</summary>

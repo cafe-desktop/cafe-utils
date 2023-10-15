@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=Log File Viewer
 Comment=View or monitor system log files
-Exec=mate-system-log
+Exec=cafe-system-log
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=mate-system-log
+Icon=cafe-system-log
 Terminal=false
 Type=Application
 StartupNotify=true
@@ -11,8 +11,8 @@ Categories=GTK;System;Monitor;
 # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 Keywords=MATE;monitor;view;system;log;files;logviewer;
 OnlyShowIn=MATE;
-X-MATE-DocPath=mate-system-log/mate-system-log.xml
+X-MATE-DocPath=cafe-system-log/cafe-system-log.xml
 X-MATE-Bugzilla-Bugzilla=MATE
-X-MATE-Bugzilla-Product=mate-utils
+X-MATE-Bugzilla-Product=cafe-utils
 X-MATE-Bugzilla-Component=logview
 X-MATE-Bugzilla-Version=@VERSION@

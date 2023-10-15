@@ -1,6 +1,6 @@
 # List of source files that should *not* be translated.
 # Please keep this file sorted alphabetically.
-baobab/data/mate-disk-usage-analyzer.desktop.in
-logview/data/mate-system-log.desktop.in
-mate-dictionary/data/mate-dictionary.desktop.in
+baobab/data/cafe-disk-usage-analyzer.desktop.in
+logview/data/cafe-system-log.desktop.in
+cafe-dictionary/data/cafe-dictionary.desktop.in
 

@@ -337,7 +337,7 @@ log_load_done (gpointer user_data)
 
 #ifdef HAVE_ZLIB
 
-/* GZip functions adapted for GIO from mate-vfs/gzip-method.c */
+/* GZip functions adapted for GIO from cafe-vfs/gzip-method.c */
 
 #define Z_BUFSIZE 16384
 

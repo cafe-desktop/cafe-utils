@@ -2,7 +2,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Andres Sanchez <blackatze93@gmail.com>, 2018
 # elio <micta2003@hotmail.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <cafe@raveit.de>, 2018
 # Isabel Ortuño <isabel.ortuno1@gmail.com>, 2018
 # Toni Estévez <toni.estevez@gmail.com>, 2020
 # 
@@ -12,7 +12,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 16:47+0100\n"
 "PO-Revision-Date: 2018-09-13 09:22+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
+"Language-Team: Spanish (https://www.transifex.com/cafe/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -251,11 +251,11 @@ msgstr "Comentarios"
 msgid ""
 "To report a bug or make a suggestion regarding the Disk Usage Analyzer "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 "Para informar de un error o hacer una sugerencia acerca de la aplicación de "
 "Analizador del uso del disco o de este manual, siga las instrucciones de la "
-"<ulink url=\"help:mate-user-guide/feedback\" type=\"help\">Página de "
+"<ulink url=\"help:cafe-user-guide/feedback\" type=\"help\">Página de "
 "comentarios de MATE</ulink>."
 
 #. (itstool) path: article/indexterm
@@ -337,7 +337,7 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:168
 msgid ""
-"<command>mate-disk-usage-analyzer "
+"<command>cafe-disk-usage-analyzer "
 "&lt;full_path_to_a_directory&gt;</command>, then press "
 "<keycap>Return</keycap>."
 msgstr ""

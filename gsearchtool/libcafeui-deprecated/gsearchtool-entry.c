@@ -463,7 +463,7 @@ gsearch_history_entry_init (GsearchHistoryEntry *entry)
 
 	priv->completion = NULL;
 
-	priv->settings = g_settings_new ("org.mate.search-tool");
+	priv->settings = g_settings_new ("org.cafe.search-tool");
 }
 
 void

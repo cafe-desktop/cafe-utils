@@ -63,12 +63,12 @@ is_path_hidden (const gchar * path)
 	sub_str = g_strstr_len (path, strlen (path), hidden_path_substr);
 
 	if (sub_str != NULL) {
-		gchar * mate_desktop_str;
+		gchar * cafe_desktop_str;
 
-		mate_desktop_str = g_strconcat (G_DIR_SEPARATOR_S, ".mate-desktop", G_DIR_SEPARATOR_S, NULL);
+		cafe_desktop_str = g_strconcat (G_DIR_SEPARATOR_S, ".cafe-desktop", G_DIR_SEPARATOR_S, NULL);
 
-		/* exclude the .mate-desktop folder */
-		if (strncmp (sub_str, mate_desktop_str, strlen (mate_desktop_str)) == 0) {
+		/* exclude the .cafe-desktop folder */
+		if (strncmp (sub_str, cafe_desktop_str, strlen (cafe_desktop_str)) == 0) {
 			sub_str++;
 			results = (g_strstr_len (sub_str, strlen (sub_str), hidden_path_substr) != NULL);
 		}
@@ -76,7 +76,7 @@ is_path_hidden (const gchar * path)
 			results = TRUE;
 		}
 
-		g_free (mate_desktop_str);
+		g_free (cafe_desktop_str);
 	}
 
 	g_free (hidden_path_substr);
@@ -107,7 +107,7 @@ is_quick_search_excluded_path (const gchar * path)
 	}
 	g_free (dir);
 
-	settings = g_settings_new ("org.mate.search-tool");
+	settings = g_settings_new ("org.cafe.search-tool");
 
 	/* Check path against the Quick-Search-Excluded-Paths list. */
 	exclude_path_list = g_settings_get_strv (settings, "quick-search-excluded-paths");
@@ -184,7 +184,7 @@ is_second_scan_excluded_path (const gchar * path)
 	}
 	g_free (dir);
 
-	settings = g_settings_new ("org.mate.search-tool");
+	settings = g_settings_new ("org.cafe.search-tool");
 
 	/* Check path against the Quick-Search-Excluded-Paths list. */
 	exclude_path_list = g_settings_get_strv (settings, "quick-search-second-scan-excluded-paths");
@@ -655,7 +655,7 @@ gsearchtool_pixmap_file (const gchar * partial_path)
 {
 	gchar * path;
 
-	path = g_build_filename(DATADIR "/pixmaps/mate-search-tool", partial_path, NULL);
+	path = g_build_filename(DATADIR "/pixmaps/cafe-search-tool", partial_path, NULL);
 	if (g_file_test(path, G_FILE_TEST_EXISTS)){
 		return path;
 	}
@@ -1186,7 +1186,7 @@ gsearchtool_set_columns_order (GtkTreeView * treeview)
 	GSettings * settings;
 	GVariant * value;
 
-	settings = g_settings_new ("org.mate.search-tool");
+	settings = g_settings_new ("org.cafe.search-tool");
 
 	value = g_settings_get_value (settings, "columns-order");
 
@@ -1231,7 +1231,7 @@ gsearchtool_get_stored_window_geometry (gint * width,
 		return;
 	}
 
-	settings = g_settings_new ("org.mate.search-tool");
+	settings = g_settings_new ("org.cafe.search-tool");
 
 	saved_width = g_settings_get_int (settings, "default-window-width");
 	saved_height = g_settings_get_int (settings, "default-window-height");

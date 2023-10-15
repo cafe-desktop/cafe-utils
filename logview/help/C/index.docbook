@@ -10,7 +10,7 @@
 <!-- 
       (Do not remove this comment block.)
   Maintained by the MATE Documentation Project
-  http://wiki.mate-desktop.org/dev-doc:doc-team-guide
+  http://wiki.cafe-desktop.org/dev-doc:doc-team-guide
   Template version: 2.0 beta
   Template last modified Apr 11, 2002
   
@@ -200,7 +200,7 @@
       <title>Feedback</title> 
       <para>To report a bug or make a suggestion regarding the &app; application or
 	this manual, follow the directions in the 
-	<ulink url="help:mate-user-guide/feedback"
+	<ulink url="help:cafe-user-guide/feedback"
 	  type="help">MATE Feedback Page</ulink>. 
       </para>
 <!-- Translators may also add here feedback address for translations -->
@@ -255,7 +255,7 @@
     	<varlistentry>
     		<term>Command line</term>
     		<listitem>
-    		<para>Type <command>mate-system-log</command>, then press <keycap>Return</keycap>.</para>
+    		<para>Type <command>cafe-system-log</command>, then press <keycap>Return</keycap>.</para>
     		<para> 		 
     		</para> 
     		</listitem>

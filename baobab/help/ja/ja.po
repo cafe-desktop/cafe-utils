@@ -2,7 +2,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # ABE Tsunehiko, 2018
 # あわしろいくや <ikunya@gmail.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <cafe@raveit.de>, 2018
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019
 # Aefgh Threenine <aefgh3962@gmail.com>, 2019
 # 
@@ -12,7 +12,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 16:47+0100\n"
 "PO-Revision-Date: 2018-09-13 09:22+0000\n"
 "Last-Translator: Aefgh Threenine <aefgh3962@gmail.com>, 2019\n"
-"Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
+"Language-Team: Japanese (https://www.transifex.com/cafe/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -230,7 +230,7 @@ msgstr "フィードバック"
 msgid ""
 "To report a bug or make a suggestion regarding the Disk Usage Analyzer "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -299,7 +299,7 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:168
 msgid ""
-"<command>mate-disk-usage-analyzer "
+"<command>cafe-disk-usage-analyzer "
 "&lt;full_path_to_a_directory&gt;</command>, then press "
 "<keycap>Return</keycap>."
 msgstr ""

@@ -16,7 +16,7 @@
     along with MATE Utils.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <gresources>
-  <gresource prefix="/org/mate/disk-usage-analyzer">
+  <gresource prefix="/org/cafe/disk-usage-analyzer">
     <file compressed="true">baobab-dialog-scan-props.ui</file>
     <file compressed="true">baobab-main-window.ui</file>
   </gresource>

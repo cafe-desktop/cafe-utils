@@ -1,13 +1,13 @@
 SUBDIRS = tests
 
 AM_CPPFLAGS =						\
-	-DG_LOG_DOMAIN=\"mate-system-log\"		\
+	-DG_LOG_DOMAIN=\"cafe-system-log\"		\
 	-DMATELOCALEDIR=\""$(datadir)/locale"\"		\
 	-DDATADIR=\""$(datadir)"\"			\
 	-DLOGVIEWINSTALLPREFIX=\""$(prefix)/\""		\
 	$(NULL)
 
-bin_PROGRAMS = mate-system-log
+bin_PROGRAMS = cafe-system-log
 
 BUILT_SOURCES = 		\
 	logview-marshal.c	\
@@ -15,10 +15,10 @@ BUILT_SOURCES = 		\
 	logview-resources.c	\
 	logview-resources.h
 
-nodist_mate_system_log_SOURCES = \
+nodist_cafe_system_log_SOURCES = \
 	$(BUILT_SOURCES)
 
-mate_system_log_SOURCES = 	\
+cafe_system_log_SOURCES = 	\
 	logview-app.c		\
 	logview-app.h		\
 	logview-main.c		\
@@ -42,7 +42,7 @@ mate_system_log_SOURCES = 	\
 	logview-filter-manager.h \
 	logview-filter-manager.c
 
-mate_system_log_CFLAGS =	\
+cafe_system_log_CFLAGS =	\
 	$(GLIB_CFLAGS)		\
 	$(GTHREAD_CFLAGS)	\
 	$(GIO_CFLAGS)		\
@@ -50,7 +50,7 @@ mate_system_log_CFLAGS =	\
 	$(WARN_CFLAGS)		\
 	$(NULL)
 
-mate_system_log_LDADD =		\
+cafe_system_log_LDADD =		\
 	$(GLIB_LIBS)		\
 	$(GIO_LIBS)		\
 	$(GTHREAD_LIBS)		\
@@ -65,7 +65,7 @@ logview-marshal.c: logview-marshal.list $(GLIB_GENMARSHAL)
 	echo "#include \"logview-marshal.h\"" > $@ && \
 	$(GLIB_GENMARSHAL) $< --body --prefix=logview_marshal >> $@
 
-logview-resources.h logview-resources.c: $(srcdir)/../data/org.mate.system-log.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir)/../data $(srcdir)/../data/org.mate.system-log.gresource.xml)
+logview-resources.h logview-resources.c: $(srcdir)/../data/org.cafe.system-log.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir)/../data $(srcdir)/../data/org.cafe.system-log.gresource.xml)
 	$(AM_V_GEN) XMLLINT=$(XMLLINT) $(GLIB_COMPILE_RESOURCES) --target $@ --sourcedir $(srcdir)/../data --generate --c-name logview $<
 
 EXTRA_DIST = logview-marshal.list
