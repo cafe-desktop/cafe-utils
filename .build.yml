@@ -26,11 +26,13 @@ requires:
     - libxext-dev
     - libxt-dev
     - make
-    - cafe-common
     - x11proto-xext-dev
     - xsltproc
     - yelp-tools
     - zlib1g-dev
+
+    #required for cafe-common
+    - autoconf
 
 before_scripts:
   - ./html-cppcheck
