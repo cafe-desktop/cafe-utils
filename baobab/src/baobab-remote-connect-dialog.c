@@ -634,7 +634,7 @@ baobab_remote_connect_dialog_init (BaobabRemoteConnectDialog *dialog)
 		const gchar * const *supported;
 		int j;
 
-		/* skip methods that don't have corresponding MateVFSMethods */
+		/* skip methods that don't have corresponding CafeVFSMethods */
 		supported = g_vfs_get_supported_uri_schemes (g_vfs_get_default ());
 
 		if (methods[i].scheme != NULL) {

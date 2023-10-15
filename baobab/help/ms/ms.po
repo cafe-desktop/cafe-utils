@@ -170,10 +170,10 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:56
 msgid ""
-"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Cafe "
 "desktop</orgname> </affiliation>"
 msgstr ""
-"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Cafe "
 "desktop</orgname> </affiliation>"
 
 #. (itstool) path: authorgroup/author
@@ -260,13 +260,13 @@ msgstr "Pengenalan"
 #: C/index.docbook:140
 msgid ""
 "<application>Disk Usage Analyzer</application> is a graphical, menu-driven "
-"application to analyze disk usage in any Mate environment. <application>Disk"
+"application to analyze disk usage in any Cafe environment. <application>Disk"
 " Usage Analyzer</application> can easily scan either the whole filesystem "
 "tree, or a specific user-requested directory branch (local or remote)."
 msgstr ""
 "<application>Penganalisis Penggunaan Cakera</application> ialah aplikasi "
 "terpacu-menu bergrafik untuk menganalisis penggunaan cakera dalam mana-mana "
-"persekitaran Mate. <application>Penganalisis Penggunaan Cakera</application>"
+"persekitaran Cafe. <application>Penganalisis Penggunaan Cakera</application>"
 " dapat mengimbas dengan mudah keseluruhan pepohon sistem fail, atau cabang "
 "direktori dipinta-pengguna khusus (setempat atau jauh)."
 
@@ -299,10 +299,10 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:157
 msgid ""
-"from Mate menu "
+"from Cafe menu "
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem></menuchoice>;"
 msgstr ""
-"melalui menu Mate "
+"melalui menu Cafe "
 "<menuchoice><guimenu>Aplikasi</guimenu><guimenuitem>Aksesori</guimenuitem></menuchoice>;"
 
 #. (itstool) path: listitem/para
@@ -338,21 +338,21 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:170
 msgid ""
-"If launched from Mate menu, <application>Disk Usage Analyzer</application> "
+"If launched from Cafe menu, <application>Disk Usage Analyzer</application> "
 "starts and remains in a stand-by state, waiting for user action."
 msgstr ""
-"Jika dilancarkan melalui menu Mate, <application>Penganalisis Penggunaan "
+"Jika dilancarkan melalui menu Cafe, <application>Penganalisis Penggunaan "
 "Cakera </application> bermula dan kekal dalam keadaan bersedia, menunggu "
 "tindakan pengguna."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:171
 msgid ""
-"When you start <application>Disk Usage Analyzer</application> from the Mate "
+"When you start <application>Disk Usage Analyzer</application> from the Cafe "
 "Menu, the following window is displayed."
 msgstr ""
 "Ketika anda memulakan <application>Penganalisis Penggunaan "
-"Cakera</application>, melalui Menu Mate, tetingkap berikut dipaparkan."
+"Cakera</application>, melalui Menu Cafe, tetingkap berikut dipaparkan."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:175

@@ -171,7 +171,7 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:56
 msgid ""
-"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Cafe "
 "desktop</orgname> </affiliation>"
 msgstr ""
 "<surname>Equip de documentació de CAFE</surname> <affiliation> "
@@ -262,7 +262,7 @@ msgstr "Introducció"
 #: C/index.docbook:140
 msgid ""
 "<application>Disk Usage Analyzer</application> is a graphical, menu-driven "
-"application to analyze disk usage in any Mate environment. <application>Disk"
+"application to analyze disk usage in any Cafe environment. <application>Disk"
 " Usage Analyzer</application> can easily scan either the whole filesystem "
 "tree, or a specific user-requested directory branch (local or remote)."
 msgstr ""
@@ -302,7 +302,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:157
 msgid ""
-"from Mate menu "
+"from Cafe menu "
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem></menuchoice>;"
 msgstr ""
 "des del menú de CAFE "
@@ -341,21 +341,21 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:170
 msgid ""
-"If launched from Mate menu, <application>Disk Usage Analyzer</application> "
+"If launched from Cafe menu, <application>Disk Usage Analyzer</application> "
 "starts and remains in a stand-by state, waiting for user action."
 msgstr ""
-"Si es llança des del menú de Mate, l'<application>analitzador de l'ús dels "
+"Si es llança des del menú de Cafe, l'<application>analitzador de l'ús dels "
 "discs</application> s'inicia i es manté en un estat de repòs, a l'espera "
 "d'una acció de l'usuari."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:171
 msgid ""
-"When you start <application>Disk Usage Analyzer</application> from the Mate "
+"When you start <application>Disk Usage Analyzer</application> from the Cafe "
 "Menu, the following window is displayed."
 msgstr ""
 "Quan inicieu l'<application>analitzador de l'ús dels discs</application> des"
-" del menú de Mate, es mostra la finestra següent."
+" del menú de Cafe, es mostra la finestra següent."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:175

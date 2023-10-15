@@ -102,7 +102,7 @@
 
 
 ========== bn.po ==========
-# Bengali Translation of Mate-Utils
+# Bengali Translation of Cafe-Utils
 # Copyright (C) 2005 Free Software Foundation.
 # This file is distributed under the same license as the cafe-utils package.
 #
@@ -118,7 +118,7 @@
 
 ========== bn_IN.po ==========
 # translation of bn_IN.po to Bengali INDIA
-# Bengali India Translation of Mate-Utils
+# Bengali India Translation of Cafe-Utils
 # Copyright (C) 2005 Free Software Foundation.
 # This file is distributed under the same license as the cafe-utils package.
 #
@@ -316,7 +316,7 @@
 # simos:
 #    updated this:
 #    One more update, now 701 total messages.
-# kostas: 26 Dec2002, updated translation for Mate 2.1x
+# kostas: 26 Dec2002, updated translation for Cafe 2.1x
 # kostas: 03Aug2003, update translation for 2.4
 # Nikos: 13Oct2003, review translation for 2.4
 # Nikos: 17Nov2003, update translation for 2.6
@@ -330,7 +330,7 @@
 
 ========== en@shaw.po ==========
 # Shavian translation for cafe-utils.
-# Copyright (C) 2009 The Mate Foundation.
+# Copyright (C) 2009 The Cafe Foundation.
 # Thomas Thurman <tthurman@gnome.org>, 2009.
 
 
@@ -388,8 +388,8 @@
 
 
 ========== et.po ==========
-# Mate utiliitide eesti keele tõlge.
-# Estonian translation of Mate-utils.
+# Cafe utiliitide eesti keele tõlge.
+# Estonian translation of Cafe-utils.
 #
 # Copyright (C) 1999, 2002, 2005, 2006 Free Software Foundation, Inc.
 # Copyright (C) 2007-2009 The CAFE Project.
@@ -568,7 +568,7 @@
 # Gabor Sari <saga at cafe dot hu>, 2003, 2004.
 # Laszlo Dvornik <dvornik at cafe dot hu>, 2004.
 # Gabor Kelemen <kelemeng at cafe dot hu>, 2004, 2006, 2007, 2008, 2009, 2010.
-# Mate ORY <orycafe at gmail d0t com>, 2006.
+# Cafe ORY <orycafe at gmail d0t com>, 2006.
 
 
 
@@ -1011,7 +1011,7 @@
 #
 # Andraž Tori <andraz.tori1@guest.arnes.si>, 2000.
 # Matic Žgur <mr.zgur@gmail.com>, 2006.
-# Matej Urbančič <cafeju@svn.cafe.org>, 2007 - 2010.
+# Cafej Urbančič <cafeju@svn.cafe.org>, 2007 - 2010.
 #
 
 
@@ -1162,7 +1162,7 @@
 ========== wa.po ==========
 # Translation into the walloon language.
 #
-# Si vos voloz donner on côp di spale pol ratournaedje di Mate (ou des
+# Si vos voloz donner on côp di spale pol ratournaedje di Cafe (ou des
 # ôtes libes programes) sicrijhoz-mu a l' adresse emile
 # <srtxg@chanae.alphanet.ch>; nos avans co bråmint di l' ovraedje a fé.
 #

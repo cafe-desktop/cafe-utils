@@ -9,4 +9,4 @@ Name=Dictionary Look up
 Description=Look up words in a dictionary
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=accessories-dictionary
-MateComponentId=OAFIID:CAFE_DictionaryApplet
+CafeComponentId=OAFIID:CAFE_DictionaryApplet

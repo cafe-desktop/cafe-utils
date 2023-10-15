@@ -186,7 +186,7 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:60
 msgid ""
-"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Cafe "
 "desktop</orgname> </affiliation>"
 msgstr ""
 
