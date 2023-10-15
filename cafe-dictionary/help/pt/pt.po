@@ -43,7 +43,7 @@ msgstr ""
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:33
-msgid "<year>2015-2020</year> <holder>MATE Documentation Project</holder>"
+msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
@@ -54,8 +54,8 @@ msgstr "<year>2005</year> <holder>Emmanuele Bassi</holder>"
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
 #: C/index.docbook:52 C/index.docbook:96
-msgid "MATE Documentation Project"
-msgstr "Projeto de Documentação do MATE"
+msgid "CAFE Documentation Project"
+msgstr "Projeto de Documentação do CAFE"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
@@ -84,12 +84,12 @@ msgstr ""
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:12 C/legal.xml:12
 msgid ""
-"This manual is part of a collection of MATE manuals distributed under the "
+"This manual is part of a collection of CAFE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
-"Este manual é parte de uma coleção de manuais MATE distribuídos sob a GFDL. "
+"Este manual é parte de uma coleção de manuais CAFE distribuídos sob a GFDL. "
 "Se desejar distribuir este manual separadamente da coleção, poderá fazê-lo "
 "desde que lhe adicione uma cópia da licença, tal como descrito na secção 6 "
 "desta licença."
@@ -98,15 +98,15 @@ msgstr ""
 #: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any MATE "
-"documentation, and the members of the MATE Documentation Project are made "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
 "Muitos dos nomes utilizados pelas empresas para distinguir os seus produtos "
 "e serviços são reclamados como marcas registadas. Onde esses nomes surgirem "
-"em qualquer documentação MATE, e aos membros do Projeto de Documentação do "
-"MATE for dado conhecimento dessas marcas registadas, estes nomes estarão "
+"em qualquer documentação CAFE, e aos membros do Projeto de Documentação do "
+"CAFE for dado conhecimento dessas marcas registadas, estes nomes estarão "
 "todos em maiúsculas ou com a primeira letra de cada palavra em maiúscula."
 
 #. (itstool) path: listitem/para
@@ -178,10 +178,10 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:60
 msgid ""
-"<surname>MATE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
 "desktop</orgname> </affiliation>"
 msgstr ""
-"<surname>MATE-Equipa de Documentação</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Equipa de Documentação</surname> <affiliation> <orgname>Mate "
 "desktop</orgname> </affiliation>"
 
 #. (itstool) path: authorgroup/author
@@ -227,11 +227,11 @@ msgstr "Enviar Opiniões"
 msgid ""
 "To report a bug or make a suggestion regarding the Dictionary application or"
 " this manual, follow the directions in the <ulink url=\"help:cafe-user-"
-"guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+"guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
 "Para reportar um erro ou fazer uma sugestão sobre a aplicação Dicionário "
 "deste manual, siga as indicações na <ulink url=\"help:cafe-user-"
-"guide/feedback\" type=\"help\">Página de Opiniões do MATE</ulink>."
+"guide/feedback\" type=\"help\">Página de Opiniões do CAFE</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:121

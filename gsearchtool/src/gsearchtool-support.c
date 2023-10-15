@@ -1,6 +1,6 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
 /*
- * MATE Search Tool
+ * CAFE Search Tool
  *
  *  File:  gsearchtool-support.c
  *
@@ -51,7 +51,7 @@ GtkTreeViewColumn *
 gsearchtool_gtk_tree_view_get_column_with_sort_column_id (GtkTreeView * treeview,
                                                           gint id);
 
-/* START OF GENERIC MATE-SEARCH-TOOL FUNCTIONS */
+/* START OF GENERIC CAFE-SEARCH-TOOL FUNCTIONS */
 
 gboolean
 is_path_hidden (const gchar * path)

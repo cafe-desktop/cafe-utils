@@ -7,7 +7,7 @@
 
 <book xmlns:xi="http://www.w3.org/2003/XInclude" id="libgdict">
   <bookinfo>
-    <title>MATE Dictionary Library Reference Manual</title>
+    <title>CAFE Dictionary Library Reference Manual</title>
     <authorgroup>
       <author>
         <firstname>Emmanuele</firstname>
@@ -29,7 +29,7 @@
 
       <para>
       This manual documents the &version; release of the Dictionary
-      Library for MATE 2.x
+      Library for CAFE 2.x
       </para>
 
     </abstract>
@@ -41,12 +41,12 @@
     
     <partintro>
       <para>
-      The MATE Dictionary Library is a simple yet powerful collection of
+      The CAFE Dictionary Library is a simple yet powerful collection of
       classes that can be used to access various dictionary sources.
       </para>
 
       <para>
-      It was created for the MATE Dictionary application, but it has been
+      It was created for the CAFE Dictionary application, but it has been
       made available for each developer whom wishes to access and display
       definitions stored inside language dictionaries.
       </para>
@@ -56,7 +56,7 @@
   </part>
   
   <part id="gdict">
-    <title>The MATE Dictionary Library</title>
+    <title>The CAFE Dictionary Library</title>
     
     <chapter id="context">
       <title>Dictionary Context</title>
@@ -114,12 +114,12 @@
   </part>
 
   <part id="gdictui">
-    <title>The MATE Dictionary Library Widgets</title>
+    <title>The CAFE Dictionary Library Widgets</title>
     
     <partintro>
 
       <para>
-      Apart from the low-level classes, the MATE Dictionary library
+      Apart from the low-level classes, the CAFE Dictionary library
       offers a set of widgets for accessing the dictionary sources and showing
       the results of queries.
       </para>

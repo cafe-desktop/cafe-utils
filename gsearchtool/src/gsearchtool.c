@@ -1,6 +1,6 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
 /*
- * MATE Search Tool
+ * CAFE Search Tool
  *
  *  File:  gsearchtool.c
  *
@@ -51,9 +51,9 @@
 #include "gsearchtool-support.h"
 #include "gsearchtool-entry.h"
 
-#define MATE_SEARCH_TOOL_DEFAULT_ICON_SIZE 16
-#define MATE_SEARCH_TOOL_STOCK "panel-searchtool"
-#define MATE_SEARCH_TOOL_REFRESH_DURATION  50000
+#define CAFE_SEARCH_TOOL_DEFAULT_ICON_SIZE 16
+#define CAFE_SEARCH_TOOL_STOCK "panel-searchtool"
+#define CAFE_SEARCH_TOOL_REFRESH_DURATION  50000
 #define LEFT_LABEL_SPACING "     "
 
 static GObjectClass * parent_class;
@@ -1569,7 +1569,7 @@ handle_search_command_stdout_io (GIOChannel * ioc,
 
 			g_timer_elapsed (timer, &duration);
 
-			if (duration > MATE_SEARCH_TOOL_REFRESH_DURATION) {
+			if (duration > CAFE_SEARCH_TOOL_REFRESH_DURATION) {
 				if (gtk_events_pending ()) {
 					intermediate_file_count_update (gsearch);
 					while (gtk_events_pending ()) {
@@ -2497,12 +2497,12 @@ register_gsearchtool_icon (GtkIconFactory * factory)
 
 	source = gtk_icon_source_new ();
 
-	gtk_icon_source_set_icon_name (source, MATE_SEARCH_TOOL_ICON);
+	gtk_icon_source_set_icon_name (source, CAFE_SEARCH_TOOL_ICON);
 
 	icon_set = gtk_icon_set_new ();
 	gtk_icon_set_add_source (icon_set, source);
 
-	gtk_icon_factory_add (factory, MATE_SEARCH_TOOL_STOCK, icon_set);
+	gtk_icon_factory_add (factory, CAFE_SEARCH_TOOL_STOCK, icon_set);
 
 	gtk_icon_set_unref (icon_set);
 
@@ -3035,11 +3035,11 @@ main (int argc,
 	EggSMClient * client;
 
 	setlocale (LC_ALL, "");
-	bindtextdomain (GETTEXT_PACKAGE, MATELOCALEDIR);
+	bindtextdomain (GETTEXT_PACKAGE, CAFELOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 
-	context = g_option_context_new (N_("- the MATE Search Tool"));
+	context = g_option_context_new (N_("- the CAFE Search Tool"));
 	g_option_context_set_translation_domain(context, GETTEXT_PACKAGE);
 	gsearch_setup_goption_descriptions ();
 	g_option_context_add_main_entries (context, GSearchGOptionEntries, GETTEXT_PACKAGE);
@@ -3055,7 +3055,7 @@ main (int argc,
 	g_option_context_free (context);
 
 	g_set_application_name (_("Search for Files"));
-	gtk_window_set_default_icon_name (MATE_SEARCH_TOOL_ICON);
+	gtk_window_set_default_icon_name (CAFE_SEARCH_TOOL_ICON);
 
 	gsearchtool_init_stock_icons ();
 

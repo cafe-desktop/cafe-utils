@@ -9,7 +9,7 @@
 ]>
 <!-- 
       (Do not remove this comment block.)
-  Maintained by the MATE Documentation Project
+  Maintained by the CAFE Documentation Project
   http://wiki.cafe-desktop.org/dev-doc:doc-team-guide
   Template version: 2.0 beta
   Template last modified Apr 11, 2002
@@ -29,7 +29,7 @@
 
     <copyright lang="en"> 
       <year>2015-2020</year> 
-      <holder>MATE Documentation Project</holder>
+      <holder>CAFE Documentation Project</holder>
     </copyright>
     <copyright> 
       <year>2006</year> 
@@ -44,7 +44,7 @@
 
    -->
     <publisher> 
-      <publishername>MATE Documentation Project</publishername>
+      <publishername>CAFE Documentation Project</publishername>
     </publisher> 
     <publisher> 
       <publishername>GNOME Documentation Project</publishername>
@@ -54,7 +54,7 @@
 
    <authorgroup>
       <author role="maintainer" lang="en"> 
-	<surname>MATE-Dokumentationsteam</surname> 
+	<surname>CAFE-Dokumentationsteam</surname> 
 	<affiliation> 
 	  <orgname>Mate desktop</orgname> 
 	</affiliation> 
@@ -100,7 +100,7 @@
 		<revdescription> 
 	  		<para role="author" lang="en">Wolfgang Ulbrich
 	  		</para>
-	  		<para role="publisher">MATE Documentation Project</para>
+	  		<para role="publisher">CAFE Documentation Project</para>
 		</revdescription> 
       </revision>
       <revision> 
@@ -121,7 +121,7 @@
       <title>Feedback</title> 
       <para>To report a bug or make a suggestion regarding the &app; application or
 	this manual, follow the directions in the 
-	<ulink url="help:cafe-user-guide/feedback" type="help">MATE Feedback Page</ulink>. 
+	<ulink url="help:cafe-user-guide/feedback" type="help">CAFE Feedback Page</ulink>. 
       </para>
 <!-- Translators may also add here feedback address for translations -->
     </legalnotice> 

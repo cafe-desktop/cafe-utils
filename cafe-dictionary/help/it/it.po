@@ -27,7 +27,7 @@ msgstr "Enrico Bella, 2019"
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:24
 msgid "Dictionary Manual"
-msgstr "Manuale di Dizionario di MATE"
+msgstr "Manuale di Dizionario di CAFE"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:27
@@ -35,14 +35,14 @@ msgid ""
 "Dictionary enables you to look up definitions and correct spellings of "
 "words."
 msgstr ""
-"Dizionario di MATE permette di controllare le definizioni delle parole la "
+"Dizionario di CAFE permette di controllare le definizioni delle parole la "
 "scrittura corretta."
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:33
-msgid "<year>2015-2020</year> <holder>MATE Documentation Project</holder>"
+msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
 msgstr ""
-"<year>2015-2020</year> <holder>Progetto Documentazione di MATE</holder>"
+"<year>2015-2020</year> <holder>Progetto Documentazione di CAFE</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:37
@@ -52,8 +52,8 @@ msgstr "<year>2005</year> <holder>Emmanuele Bassi</holder>"
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
 #: C/index.docbook:52 C/index.docbook:96
-msgid "MATE Documentation Project"
-msgstr "Progetto di documentazione di MATE"
+msgid "CAFE Documentation Project"
+msgstr "Progetto di documentazione di CAFE"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
@@ -82,12 +82,12 @@ msgstr ""
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:12 C/legal.xml:12
 msgid ""
-"This manual is part of a collection of MATE manuals distributed under the "
+"This manual is part of a collection of CAFE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
-"Questo manuale fa parte di una raccolta di manuali MATE distribuita in "
+"Questo manuale fa parte di una raccolta di manuali CAFE distribuita in "
 "conformità con la GFDL. Per poter distribuire questo manuale separatamente, "
 "è necessario inserirvi una copia della licenza, come descritto nella sezione"
 " 6 della licenza."
@@ -96,14 +96,14 @@ msgstr ""
 #: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any MATE "
-"documentation, and the members of the MATE Documentation Project are made "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
 "Molti dei nomi usati dalle aziende per distinguere i propri prodotti e "
 "servizi sono rivendicati come marchi. Quando questi nomi compaiono nella "
-"documentazione di MATE, e i partecipanti al MATE Documentation Project sono "
+"documentazione di CAFE, e i partecipanti al CAFE Documentation Project sono "
 "consapevoli del loro utilizzo, essi vengono scritti in lettere maiuscole o "
 "con l'iniziale maiuscola."
 
@@ -160,7 +160,7 @@ msgstr ""
 "PERDITA DI AVVIAMENTO, INTERRUZIONE DEL LAVORO, GUASTO O MALFUNZIONAMENTO "
 "DEL COMPUTER O QUALUNQUE ALTRO DANNO O PERDITA DERIVANTE O CORRELATA ALL'USO"
 " DEL DOCUMENTO O DI UNA SUA VERSIONE MODIFICATA, ANCHE QUALORA LE PERSONE "
-"CITATE FOSSERO STATE INFORMATE DELLA POSSIBILITÀ DI TALI DANNI."
+"CITATE FOSSERO STATE INFORCAFE DELLA POSSIBILITÀ DI TALI DANNI."
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:28 C/legal.xml:28
@@ -176,10 +176,10 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:60
 msgid ""
-"<surname>MATE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
 "desktop</orgname> </affiliation>"
 msgstr ""
-"<surname>MATE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
 "desktop</orgname> </affiliation>"
 
 #. (itstool) path: authorgroup/author
@@ -202,7 +202,7 @@ msgid ""
 "<revnumber>Dictionary Manual V1.10.0</revnumber> <date>July 2015</date> "
 "<_:revdescription-1/>"
 msgstr ""
-"<revnumber>Manuale di Dizionario di MATE V1.10.0</revnumber> <date>Luglio "
+"<revnumber>Manuale di Dizionario di CAFE V1.10.0</revnumber> <date>Luglio "
 "2015</date> <_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
@@ -213,7 +213,7 @@ msgstr "Emmanuele Bassi"
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:109
 msgid "This manual describes version 1.10 of Dictionary."
-msgstr "Questo manuale si riferisce alla versione 1.10 di Dizionario di MATE"
+msgstr "Questo manuale si riferisce alla versione 1.10 di Dizionario di CAFE"
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:111
@@ -225,16 +225,16 @@ msgstr "Commenti"
 msgid ""
 "To report a bug or make a suggestion regarding the Dictionary application or"
 " this manual, follow the directions in the <ulink url=\"help:cafe-user-"
-"guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+"guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
-"Per segnalare un malfunzionamento o un suggerimento per Dizionario di MATE o"
+"Per segnalare un malfunzionamento o un suggerimento per Dizionario di CAFE o"
 " questo manuale, segui le indicazioni nella <ulink url=\"help:cafe-user-"
-"guide/feedback\" type=\"help\">Pagina di feedback di MATE</ulink>."
+"guide/feedback\" type=\"help\">Pagina di feedback di CAFE</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:121
 msgid "<primary>Dictionary</primary>"
-msgstr "<primary>Dizionario di MATE</primary>"
+msgstr "<primary>Dizionario di CAFE</primary>"
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:128
@@ -247,7 +247,7 @@ msgid ""
 "The <application>Dictionary</application> application enables you to search "
 "words and terms on a dictionary source."
 msgstr ""
-"L'applicazione <application>Dizionario di MATE</application> permette di "
+"L'applicazione <application>Dizionario di CAFE</application> permette di "
 "cercare parole e termini in un dizionario."
 
 #. (itstool) path: sect1/title
@@ -258,14 +258,14 @@ msgstr "Introduzione"
 #. (itstool) path: sect2/title
 #: C/index.docbook:141
 msgid "To Start Dictionary"
-msgstr "Avviare Dizionario di MATE"
+msgstr "Avviare Dizionario di CAFE"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:143
 msgid ""
 "You can start <application>Dictionary</application> in the following ways:"
 msgstr ""
-"Puoi avviare <application>Dizionario di MATE</application> nei seguenti "
+"Puoi avviare <application>Dizionario di CAFE</application> nei seguenti "
 "modi:"
 
 #. (itstool) path: varlistentry/term
@@ -280,7 +280,7 @@ msgid ""
 "<guimenuitem>Dictionary</guimenuitem></menuchoice>."
 msgstr ""
 "Scegli <menuchoice> <guisubmenu>Accessori</guisubmenu> "
-"<guimenuitem>Dizionario di MATE</guimenuitem> </menuchoice>."
+"<guimenuitem>Dizionario di CAFE</guimenuitem> </menuchoice>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:156
@@ -297,14 +297,14 @@ msgstr "Esegui il comando: <command>cafe-dictionary</command>"
 msgid ""
 "Once started, the <application>Dictionary</application> window is displayed:"
 msgstr ""
-"Quando avvii il <application>Dizionario di MATE</application>, viene "
+"Quando avvii il <application>Dizionario di CAFE</application>, viene "
 "mostrata la seguente finestra:"
 
 #. (itstool) path: figure/title
 #: C/index.docbook:167 C/index.docbook:196 C/index.docbook:238
 #: C/index.docbook:279 C/index.docbook:299 C/index.docbook:368
 msgid "Dictionary Window"
-msgstr "Finestra di Dizionario di MATE"
+msgstr "Finestra di Dizionario di CAFE"
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -329,7 +329,7 @@ msgid ""
 msgstr ""
 "<imageobject> <imagedata fileref=\"figures/cafe-dictionary-application.png\""
 " format=\"PNG\"/> </imageobject> <textobject><phrase>Finestra principale di "
-"Dizionario di MATE.</phrase></textobject>"
+"Dizionario di CAFE.</phrase></textobject>"
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:184
@@ -382,7 +382,7 @@ msgid ""
 msgstr ""
 "<imageobject> <imagedata fileref=\"figures/cafe-dictionary-lookup.png\" "
 "format=\"PNG\"/> </imageobject> <textobject><phrase>Una definizione nella "
-"finestra di Dizionario di MATE.</phrase></textobject>"
+"finestra di Dizionario di CAFE.</phrase></textobject>"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:207

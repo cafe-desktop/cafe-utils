@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 MATE team <cafe-dev@ml.cafe-desktop.org> -->
+<!-- Copyright 2014 CAFE team <cafe-dev@ml.cafe-desktop.org> -->
 <component type="desktop">
  <id>cafe-dictionary.desktop</id>
  <metadata_license>CC0-1.0</metadata_license>
  <project_license>GPL-2.0+</project_license>
- <name>MATE Dictionary</name>
- <summary>A dictionary for MATE Desktop</summary>
+ <name>CAFE Dictionary</name>
+ <summary>A dictionary for CAFE Desktop</summary>
  <description>
   <p>
-   MATE Dictionary allows you to look up words in on-line dictionaries.
+   CAFE Dictionary allows you to look up words in on-line dictionaries.
    It comes preconfigured with a list of Dict servers (RFC 2229), to which
    you can add your own sources, while you can select specific servers
    for a specific query.
@@ -28,5 +28,5 @@
  </screenshots>
  <url type="homepage">https://cafe-desktop.org</url>
  <updatecontact>cafe-dev@ml.cafe-desktop.org</updatecontact>
- <project_group>MATE</project_group>
+ <project_group>CAFE</project_group>
 </component>

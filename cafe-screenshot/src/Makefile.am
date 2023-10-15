@@ -3,7 +3,7 @@ NULL =
 AM_CPPFLAGS =						\
 	-I.						\
 	-I$(srcdir)					\
-	-DMATELOCALEDIR=\""$(datadir)/locale"\"		\
+	-DCAFELOCALEDIR=\""$(datadir)/locale"\"		\
 	$(NULL)
 
 bin_PROGRAMS = cafe-screenshot

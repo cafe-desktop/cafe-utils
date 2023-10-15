@@ -9,10 +9,10 @@ Type=Application
 StartupNotify=true
 Categories=GTK;System;Monitor;
 # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-Keywords=MATE;monitor;view;system;log;files;logviewer;
-OnlyShowIn=MATE;
-X-MATE-DocPath=cafe-system-log/cafe-system-log.xml
-X-MATE-Bugzilla-Bugzilla=MATE
-X-MATE-Bugzilla-Product=cafe-utils
-X-MATE-Bugzilla-Component=logview
-X-MATE-Bugzilla-Version=@VERSION@
+Keywords=CAFE;monitor;view;system;log;files;logviewer;
+OnlyShowIn=CAFE;
+X-CAFE-DocPath=cafe-system-log/cafe-system-log.xml
+X-CAFE-Bugzilla-Bugzilla=CAFE
+X-CAFE-Bugzilla-Product=cafe-utils
+X-CAFE-Bugzilla-Component=logview
+X-CAFE-Bugzilla-Version=@VERSION@

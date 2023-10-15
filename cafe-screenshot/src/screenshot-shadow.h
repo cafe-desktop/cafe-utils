@@ -1,4 +1,4 @@
-/* screenshot-shadow.h - part of MATE Screenshot
+/* screenshot-shadow.h - part of CAFE Screenshot
  *
  * Copyright (C) 2001-2006  Jonathan Blandford <jrb@alum.mit.edu>
  *

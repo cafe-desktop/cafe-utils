@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 MATE team <cafe-dev@ml.cafe-desktop.org> -->
+<!-- Copyright 2014 CAFE team <cafe-dev@ml.cafe-desktop.org> -->
 <component type="desktop">
  <id>cafe-disk-usage-analyzer.desktop</id>
  <metadata_license>CC0-1.0</metadata_license>
  <project_license>GPL-2.0+</project_license>
- <name>MATE Disk Usage Analyzer</name>
- <summary>A disk usage analyzing tool for MATE Desktop</summary>
+ <name>CAFE Disk Usage Analyzer</name>
+ <summary>A disk usage analyzing tool for CAFE Desktop</summary>
  <description>
   <p>
    As its name implies, Disk Usage Analyzer is a graphical utility that you
@@ -32,5 +32,5 @@
  </screenshots>
  <url type="homepage">https://cafe-desktop.org</url>
  <updatecontact>cafe-dev@ml.cafe-desktop.org</updatecontact>
- <project_group>MATE</project_group>
+ <project_group>CAFE</project_group>
 </component>

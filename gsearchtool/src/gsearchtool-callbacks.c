@@ -1,6 +1,6 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
 /*
- * MATE Search Tool
+ * CAFE Search Tool
  *
  *  File:  gsearchtool-callbacks.c
  *

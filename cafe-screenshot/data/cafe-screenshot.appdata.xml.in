@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 MATE team <cafe-dev@ml.cafe-desktop.org> -->
+<!-- Copyright 2014 CAFE team <cafe-dev@ml.cafe-desktop.org> -->
 <component type="desktop">
  <id>cafe-screenshot.desktop</id>
  <metadata_license>CC0-1.0</metadata_license>
  <project_license>GPL-2.0+</project_license>
- <name>MATE Screenshot</name>
- <summary>A screenshot utility for MATE Desktop</summary>
+ <name>CAFE Screenshot</name>
+ <summary>A screenshot utility for CAFE Desktop</summary>
  <description>
   <p>
-   MATE Screenshot is a simple utility that lets you capture screenshots
+   CAFE Screenshot is a simple utility that lets you capture screenshots
    of your desktop or of application windows. You can select to copy them
    to the system clipboard or save them in Portable Network Graphics (.png)
    image format.
@@ -23,5 +23,5 @@
  </screenshots>
  <url type="homepage">https://cafe-desktop.org</url>
  <updatecontact>cafe-dev@ml.cafe-desktop.org</updatecontact>
- <project_group>MATE</project_group>
+ <project_group>CAFE</project_group>
 </component>

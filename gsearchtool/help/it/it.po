@@ -42,9 +42,9 @@ msgstr ""
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:31
-msgid "<year>2015-2020</year> <holder>MATE Documentation Project</holder>"
+msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
 msgstr ""
-"<year>2015-2020</year> <holder>Progetto Documentazione di MATE</holder>"
+"<year>2015-2020</year> <holder>Progetto Documentazione di CAFE</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:35
@@ -67,8 +67,8 @@ msgstr "<year>2000</year> <holder>Alexander Kirillov</holder>"
 
 #. (itstool) path: publisher/publishername
 #: C/index.docbook:58
-msgid "MATE Documentation Project"
-msgstr "Documentazione del progetto MATE"
+msgid "CAFE Documentation Project"
+msgstr "Documentazione del progetto CAFE"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
@@ -99,12 +99,12 @@ msgstr ""
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:12 C/legal.xml:12
 msgid ""
-"This manual is part of a collection of MATE manuals distributed under the "
+"This manual is part of a collection of CAFE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
-"Questo manuale fa parte di una raccolta di manuali MATE distribuita in "
+"Questo manuale fa parte di una raccolta di manuali CAFE distribuita in "
 "conformità con la GFDL. Per poter distribuire questo manuale separatamente, "
 "è necessario inserirvi una copia della licenza, come descritto nella sezione"
 " 6 della licenza."
@@ -113,14 +113,14 @@ msgstr ""
 #: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any MATE "
-"documentation, and the members of the MATE Documentation Project are made "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
 "Molti dei nomi usati dalle aziende per distinguere i propri prodotti e "
 "servizi sono rivendicati come marchi. Quando questi nomi compaiono nella "
-"documentazione di MATE, e i partecipanti al MATE Documentation Project sono "
+"documentazione di CAFE, e i partecipanti al CAFE Documentation Project sono "
 "consapevoli del loro utilizzo, essi vengono scritti in lettere maiuscole o "
 "con l'iniziale maiuscola."
 
@@ -177,7 +177,7 @@ msgstr ""
 "PERDITA DI AVVIAMENTO, INTERRUZIONE DEL LAVORO, GUASTO O MALFUNZIONAMENTO "
 "DEL COMPUTER O QUALUNQUE ALTRO DANNO O PERDITA DERIVANTE O CORRELATA ALL'USO"
 " DEL DOCUMENTO O DI UNA SUA VERSIONE MODIFICATA, ANCHE QUALORA LE PERSONE "
-"CITATE FOSSERO STATE INFORMATE DELLA POSSIBILITÀ DI TALI DANNI."
+"CITATE FOSSERO STATE INFORCAFE DELLA POSSIBILITÀ DI TALI DANNI."
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:28 C/legal.xml:28
@@ -193,10 +193,10 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:67
 msgid ""
-"<surname>MATE-Dokumentationsteam</surname> <affiliation> <orgname>Search for"
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Search for"
 " Files Maintainer</orgname> </affiliation>"
 msgstr ""
-"<surname>MATE-Dokumentationsteam</surname> <affiliation> <orgname>Maintainer"
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Maintainer"
 " di Cerca file</orgname> </affiliation>"
 
 #. (itstool) path: affiliation/address
@@ -363,11 +363,11 @@ msgstr "Commenti"
 msgid ""
 "To report a bug or make a suggestion regarding the Search for Files "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
 "Per segnalare un malfunzionamento o un suggerimento per Cerca file o questo "
 "manuale, segui le indicazioni nella <ulink url=\"help:cafe-user-"
-"guide/feedback\" type=\"help\">Pagina di feedback di MATE</ulink>."
+"guide/feedback\" type=\"help\">Pagina di feedback di CAFE</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:212
@@ -447,7 +447,7 @@ msgid ""
 "Files...</guimenuitem></menuchoice>"
 msgstr ""
 "Seleziona <menuchoice><guisubmenu>Risorse</guisubmenu><guimenuitem>Strumento"
-" di ricerca di MATE</guimenuitem></menuchoice>"
+" di ricerca di CAFE</guimenuitem></menuchoice>"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:239
@@ -461,7 +461,7 @@ msgid ""
 "Files...</guimenuitem></menuchoice>"
 msgstr ""
 "Seleziona <menuchoice><guimenuitem>Strumento di ricerca di "
-"MATE</guimenuitem></menuchoice>."
+"CAFE</guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:245

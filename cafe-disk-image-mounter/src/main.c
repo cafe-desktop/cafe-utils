@@ -56,7 +56,7 @@ show_error (const gchar *format, ...)
                                                    "<big><b>%s</b></big>",
                                                    _("An error occurred"));
       gtk_message_dialog_format_secondary_markup (GTK_MESSAGE_DIALOG (dialog), "%s", s);
-      gtk_window_set_title (GTK_WINDOW (dialog), _("MATE Disk Image Mounter"));
+      gtk_window_set_title (GTK_WINDOW (dialog), _("CAFE Disk Image Mounter"));
       gtk_dialog_run (GTK_DIALOG (dialog));
       gtk_widget_destroy (dialog);
     }
@@ -156,7 +156,7 @@ main (int argc, char *argv[])
   GSList *uris = NULL;
   GSList *l;
 
-  bindtextdomain (GETTEXT_PACKAGE, MATELOCALEDIR);
+  bindtextdomain (GETTEXT_PACKAGE, CAFELOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 

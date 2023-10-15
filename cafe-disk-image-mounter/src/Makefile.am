@@ -10,7 +10,7 @@ cafe_disk_image_mounter_CPPFLAGS = 			\
 	-I.						\
 	-I$(srcdir)					\
 	-DG_LOG_DOMAIN=\"cafe-disk-image-mounter\"	\
-	-DMATELOCALEDIR=\""$(datadir)/locale"\"		\
+	-DCAFELOCALEDIR=\""$(datadir)/locale"\"		\
 	$(NULL)
 
 cafe_disk_image_mounter_CFLAGS = 			\

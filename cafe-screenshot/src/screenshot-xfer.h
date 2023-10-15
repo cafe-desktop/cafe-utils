@@ -1,4 +1,4 @@
-/* screenshot-xfer.h - file transfer functions for MATE Screenshot
+/* screenshot-xfer.h - file transfer functions for CAFE Screenshot
  *
  * Copyright (C) 2001-2006  Jonathan Blandford <jrb@alum.mit.edu>
  * Copyright (C) 2008  Cosimo Cecchi <cosimoc@gnome.org>

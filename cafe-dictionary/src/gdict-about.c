@@ -1,6 +1,6 @@
 /* gdict-about.c - GtkAboutDialog wrapper
  *
- * This file is part of MATE Dictionary
+ * This file is part of CAFE Dictionary
  *
  * Copyright (C) 2005 Emmanuele Bassi
  *
@@ -49,7 +49,7 @@ gdict_show_about_dialog (GtkWidget *parent)
     N_("Sun GNOME Documentation Team <gdocteam@sun.com>"),
     "John Fleck <jfleck@inkstain.net>",
     "Emmanuele Bassi <ebassi@gmail.com>",
-    N_("MATE Documentation Team"),
+    N_("CAFE Documentation Team"),
     NULL
   };
 
@@ -88,7 +88,7 @@ gdict_show_about_dialog (GtkWidget *parent)
   			 "version", VERSION,
 			 "title", _("About Dictionary"),
 			 "copyright", _("Copyright \xc2\xa9 2005-2006 Emmanuele Bassi\n"
-			                "Copyright \xc2\xa9 2011-2020 MATE developers"),
+			                "Copyright \xc2\xa9 2011-2020 CAFE developers"),
   			 "comments", comments,
   			 "authors", authors,
   			 "documenters", documenters,

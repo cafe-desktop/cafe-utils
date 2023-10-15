@@ -6,7 +6,7 @@ AM_CPPFLAGS = \
 	-DLIBDIR=\""$(libdir)"\" \
 	-DDATADIR=\""$(datadir)"\" \
 	-DBAOBAB_PIX_DIR=\""$(datadir)/cafe-disk-usage-analyzer/pixmaps/"\" \
-	-DMATELOCALEDIR=\""$(datadir)/locale"\" \
+	-DCAFELOCALEDIR=\""$(datadir)/locale"\" \
 	$(NULL)
 
 bin_PROGRAMS = cafe-disk-usage-analyzer

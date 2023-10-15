@@ -1,4 +1,4 @@
-/* screenshot-dialog.c - main MATE Screenshot dialog
+/* screenshot-dialog.c - main CAFE Screenshot dialog
  *
  * Copyright (C) 2001-2006  Jonathan Blandford <jrb@alum.mit.edu>
  *

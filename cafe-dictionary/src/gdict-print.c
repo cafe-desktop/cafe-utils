@@ -1,6 +1,6 @@
 /* gdict-print.c - print-related helper functions
  *
- * This file is part of MATE Dictionary
+ * This file is part of CAFE Dictionary
  *
  * Copyright (C) 2005 Emmanuele Bassi
  *

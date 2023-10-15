@@ -1,6 +1,6 @@
 /* gdict-pref-dialog.c - preferences dialog
  *
- * This file is part of MATE Dictionary
+ * This file is part of CAFE Dictionary
  *
  * Copyright (C) 2005 Emmanuele Bassi
  *

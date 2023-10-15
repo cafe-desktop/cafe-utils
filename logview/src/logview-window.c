@@ -769,10 +769,10 @@ logview_about (GtkWidget *widget, GtkWidget *window)
                          "version", VERSION,
                          "title", _("About System Log Viewer"),
                          "copyright", _("Copyright \xc2\xa9 1998-2008 Free Software Foundation, Inc.\n"
-                                        "Copyright \xc2\xa9 2011-2020 MATE developers"),
+                                        "Copyright \xc2\xa9 2011-2020 CAFE developers"),
                          "license", license_trans,
                          "wrap-license", TRUE,
-                         "comments", _("A system log viewer for MATE."),
+                         "comments", _("A system log viewer for CAFE."),
                          "authors", logview_about_authors,
                          "documenters", logview_about_documenters,
                          "translator_credits", strcmp (logview_about_translator_credits,

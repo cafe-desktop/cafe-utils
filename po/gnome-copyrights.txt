@@ -302,7 +302,7 @@
 #    Finished! now, 700 messages fully translated.
 # simos: 780 messages, visual verification, 14Feb2001 (sgpbea).
 # simos: 483 messages, 30Oct2002, translation review.
-# kostas: 483 messages, 30Oct2002, completed translation for MATE2.
+# kostas: 483 messages, 30Oct2002, completed translation for CAFE2.
 # kostas: 468 messages, unfuzzy 3, 07Jan2003, one more update.
 # Spiros Papadimitriou <spapadim+@cs.cmu.edu>, 2000.
 # Simos Xenitellis <simos@hellug.gr>, 2000, 2001, 2002.
@@ -338,7 +338,7 @@
 
 ========== en_CA.po ==========
 # English/Canada translation of cafe-utils.
-# Copyright (C) 2004-2006 Adam Weinberger and the MATE Foundation
+# Copyright (C) 2004-2006 Adam Weinberger and the CAFE Foundation
 # This file is distributed under the same licence as the cafe-utils package.
 # Adam Weinberger <adamw@gnome.org>, 2004, 2005, 2006.
 # 
@@ -392,7 +392,7 @@
 # Estonian translation of Mate-utils.
 #
 # Copyright (C) 1999, 2002, 2005, 2006 Free Software Foundation, Inc.
-# Copyright (C) 2007-2009 The MATE Project.
+# Copyright (C) 2007-2009 The CAFE Project.
 # This file is distributed under the same license as the cafe-utils package.
 #
 # Lauris Kaplinski <lauris ariman ee>, 1999.
@@ -685,7 +685,7 @@
 
 ========== mai.po ==========
 # translation of cafe-utils.HEAD.po to Maithili
-# Copyright (C) 2006 The MATE Foundation
+# Copyright (C) 2006 The CAFE Foundation
 # This file is distributed under the same license as the PACKAGE package.
 # BOSS GNU/Linux <bosslinux@cdac.in>, 2008.
 
@@ -693,9 +693,9 @@
 
 
 ========== mg.po ==========
-# Malagasy translation of MATE-UTILS.
-# Copyright (C) 2006 THE MATE-UTILS'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the MATE-UTILS package.
+# Malagasy translation of CAFE-UTILS.
+# Copyright (C) 2006 THE CAFE-UTILS'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the CAFE-UTILS package.
 # Fano Rajaonarisoa <rajfanhar@yahoo.fr>, 2006.
 # Thierry Randrianiriana <randrianiriana@gmail.com>, 2006.
 # 
@@ -907,8 +907,8 @@
 
 
 ========== pt_BR.po ==========
-# Brazilian Portuguese translation of MATE Utils.
-# Copyright (C) 1999-2008 the MATE Utils authors.
+# Brazilian Portuguese translation of CAFE Utils.
+# Copyright (C) 1999-2008 the CAFE Utils authors.
 # This file is distributed under the same license as the cafe-utils package.
 # Alexandre Hautequest <hquest@fesppr.br>, 1999.
 # Ariel Bressan da Silva <ariel@conectiva.com.br>, 2000.
@@ -933,7 +933,7 @@
 ========== ro.po ==========
 # translation of cafe-utils.cafe-2-14.ro.po to Română
 # translation of cafe-utils.HEAD.ro.po to
-# Romanian translation for MATE Utils
+# Romanian translation for CAFE Utils
 # Copyright (C) 1999,2003, 2004, 2005, 2006 Free Software Foundation, Inc.
 # Iustin Pop <iusty@geocities.com>
 # Dan Damian <dand@dnttm.ro>, 1999, 2001.
@@ -1150,8 +1150,8 @@
 
 
 ========== vi.po ==========
-# Vietnamese Translation for MATE Utils.
-# Copyright © 2009 MATE i18n Project for Vietnamese.
+# Vietnamese Translation for CAFE Utils.
+# Copyright © 2009 CAFE i18n Project for Vietnamese.
 # Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2002,2007.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
 #
