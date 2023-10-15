@@ -1,6 +1,6 @@
 /* gdict-common.h - shared code between application and applet
  *
- * This file is part of MATE Dictionary
+ * This file is part of CAFE Dictionary
  *
  * Copyright (C) 2005 Emmanuele Bassi
  *

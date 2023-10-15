@@ -45,9 +45,9 @@ msgstr ""
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
-msgid "<year>2015-2020</year> <holder>MATE Documentation Project</holder>"
+msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
 msgstr ""
-"<year>2015-2020</year> <holder>Proyecto de documentación de MATE</holder>"
+"<year>2015-2020</year> <holder>Proyecto de documentación de CAFE</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:34
@@ -57,8 +57,8 @@ msgstr "<year>2006</year> <holder>Fabio Marzocca</holder>"
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
 #: C/index.docbook:47 C/index.docbook:103
-msgid "MATE Documentation Project"
-msgstr "Proyecto de documentación de MATE"
+msgid "CAFE Documentation Project"
+msgstr "Proyecto de documentación de CAFE"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
@@ -87,12 +87,12 @@ msgstr ""
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:12 C/legal.xml:12
 msgid ""
-"This manual is part of a collection of MATE manuals distributed under the "
+"This manual is part of a collection of CAFE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
-"Este manual es parte de una colección de manuales de MATE distribuidos bajo "
+"Este manual es parte de una colección de manuales de CAFE distribuidos bajo "
 "la GFDL. Si quiere distribuir este manual por separado de la colección, "
 "puede hacerlo añadiendo una copia de la licencia al manual, tal y como se "
 "describe en la sección 6 de la licencia."
@@ -101,15 +101,15 @@ msgstr ""
 #: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any MATE "
-"documentation, and the members of the MATE Documentation Project are made "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
 "Muchos de los nombres utilizados por las empresas para distinguir sus "
 "productos y servicios se consideran marcas comerciales. Cuando esos nombres "
-"aparecen en cualquier documentación de MATE y los miembros del proyecto de "
-"documentación de MATE son conscientes de que se trata de marcas registradas,"
+"aparecen en cualquier documentación de CAFE y los miembros del proyecto de "
+"documentación de CAFE son conscientes de que se trata de marcas registradas,"
 " dichos nombres se escriben en letras mayúsculas o con inical mayúscula."
 
 #. (itstool) path: listitem/para
@@ -182,11 +182,11 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:56
 msgid ""
-"<surname>MATE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
 "desktop</orgname> </affiliation>"
 msgstr ""
-"<surname>Equipo de documentación de MATE</surname> <affiliation> "
-"<orgname>Escritorio MATE</orgname> </affiliation>"
+"<surname>Equipo de documentación de CAFE</surname> <affiliation> "
+"<orgname>Escritorio CAFE</orgname> </affiliation>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:62
@@ -251,12 +251,12 @@ msgstr "Comentarios"
 msgid ""
 "To report a bug or make a suggestion regarding the Disk Usage Analyzer "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
 "Para informar de un error o hacer una sugerencia acerca de la aplicación de "
 "Analizador del uso del disco o de este manual, siga las instrucciones de la "
 "<ulink url=\"help:cafe-user-guide/feedback\" type=\"help\">Página de "
-"comentarios de MATE</ulink>."
+"comentarios de CAFE</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:130
@@ -278,7 +278,7 @@ msgid ""
 msgstr ""
 "<application>Analizador del uso del disco</application> es una aplicación "
 "gráfica, basada en menús, para analizar el uso de los discos en cualquier "
-"entorno MATE. <application>Analizador del uso del disco</application> puede "
+"entorno CAFE. <application>Analizador del uso del disco</application> puede "
 "explorar fácilmente todo el árbol del sistema de archivos o una rama de "
 "carpetas específica solicitada por el usuario (local o remota)."
 
@@ -312,7 +312,7 @@ msgid ""
 "from Mate menu "
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem></menuchoice>;"
 msgstr ""
-"desde el menú MATE "
+"desde el menú CAFE "
 "<menuchoice><guimenu>Aplicaciones</guimenu><guimenuitem>Accesorios</guimenuitem></menuchoice>;"
 
 #. (itstool) path: listitem/para
@@ -348,7 +348,7 @@ msgid ""
 "If launched from Mate menu, <application>Disk Usage Analyzer</application> "
 "starts and remains in a stand-by state, waiting for user action."
 msgstr ""
-"Si lo inicia desde el menú MATE, <application>Analizador del uso del "
+"Si lo inicia desde el menú CAFE, <application>Analizador del uso del "
 "disco</application> se inicia y permanece en espera, hasta que el usuario "
 "realiza una acción."
 
@@ -359,7 +359,7 @@ msgid ""
 "Menu, the following window is displayed."
 msgstr ""
 "Cuando se inicia <application>Analizador del uso del disco</application> "
-"desde el menú MATE, aparece la ventana siguiente."
+"desde el menú CAFE, aparece la ventana siguiente."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:175

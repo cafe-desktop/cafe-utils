@@ -5,7 +5,7 @@ AM_CPPFLAGS = -DG_LOG_DOMAIN=\"Gdict\" 				\
 	-DLIBDIR=\""$(libdir)"\" 				\
 	-DSYSCONFDIR=\""$(sysconfdir)"\" 			\
 	-DPREFIX=\""$(prefix)"\" 				\
-	-DMATELOCALEDIR=\""$(datadir)/locale"\"			\
+	-DCAFELOCALEDIR=\""$(datadir)/locale"\"			\
 	-DGDICTSOURCESDIR=\""$(datadir)/cafe-dict/sources"\" 	\
 	-DGDICT_ENABLE_INTERNALS				\
 	$(NULL)
@@ -46,7 +46,7 @@ sources_c =	\
 
 lib_LTLIBRARIES = libcafedict.la
 
-# MATE Dictionary shared library
+# CAFE Dictionary shared library
 libcafedict_la_SOURCES  = $(sources_h) $(sources_h_priv) $(sources_c)
 libcafedict_la_CPPFLAGS = 	\
 	$(AM_CPPFLAGS)		\

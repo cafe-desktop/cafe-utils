@@ -38,7 +38,7 @@ msgstr ""
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
-msgid "<year>2015-2020</year> <holder>MATE Documentation Project</holder>"
+msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
@@ -49,8 +49,8 @@ msgstr "<year>2006</year> <holder>Fabio Marzocca</holder>"
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
 #: C/index.docbook:47 C/index.docbook:103
-msgid "MATE Documentation Project"
-msgstr "Projecte de documentació de MATE"
+msgid "CAFE Documentation Project"
+msgstr "Projecte de documentació de CAFE"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
@@ -79,12 +79,12 @@ msgstr ""
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:12 C/legal.xml:12
 msgid ""
-"This manual is part of a collection of MATE manuals distributed under the "
+"This manual is part of a collection of CAFE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
-"Aquest manual forma part d'una col·lecció de manuals de MATE que estan "
+"Aquest manual forma part d'una col·lecció de manuals de CAFE que estan "
 "distribuïts sota la GFDL. Si voleu distribuir aquest manual per separat de "
 "la col·lecció, podeu fer-ho afegint una còpia de la llicència al manual, tal"
 " com es descriu a la secció 6 de la llicència."
@@ -93,15 +93,15 @@ msgstr ""
 #: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any MATE "
-"documentation, and the members of the MATE Documentation Project are made "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
 "Molts dels noms utilitzats per les empreses per distingir els seus productes"
 " i serveis es consideren marques comercials. Quan aquests noms apareixen en "
-"qualsevol documentació de MATE, i els membres del projecte de documentació "
-"de MATE en són conscients, els noms tenen lletres majúscules o bé comencen "
+"qualsevol documentació de CAFE, i els membres del projecte de documentació "
+"de CAFE en són conscients, els noms tenen lletres majúscules o bé comencen "
 "en majúscules."
 
 #. (itstool) path: listitem/para
@@ -171,11 +171,11 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:56
 msgid ""
-"<surname>MATE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
 "desktop</orgname> </affiliation>"
 msgstr ""
-"<surname>Equip de documentació de MATE</surname> <affiliation> "
-"<orgname>Escriptori MATE</orgname> </affiliation>"
+"<surname>Equip de documentació de CAFE</surname> <affiliation> "
+"<orgname>Escriptori CAFE</orgname> </affiliation>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:62
@@ -241,12 +241,12 @@ msgstr "Retroacció"
 msgid ""
 "To report a bug or make a suggestion regarding the Disk Usage Analyzer "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
 "Per informar d'un error o fer un suggeriment sobre l'aplicació de "
 "l'analitzador de l'ús dels discs o d'aquest manual, seguiu les instruccions "
 "de la <ulink url=\"help:cafe-user-guide/feedback\" type=\"help\">pàgina de "
-"retroacció de MATE</ulink>."
+"retroacció de CAFE</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:130
@@ -268,7 +268,7 @@ msgid ""
 msgstr ""
 "L'<application>analitzador de l'ús dels discs</application> és una aplicació"
 " gràfica, basada en menús, per analitzar l'ús dels discs en qualsevol entorn"
-" MATE. L'<application>analitzador de l'ús dels discs</application> pot "
+" CAFE. L'<application>analitzador de l'ús dels discs</application> pot "
 "explorar fàcilment tot l'arbre del sistema de fitxers, o una branca "
 "específica del directori sol·licitat per l'usuari (local o remot)."
 
@@ -305,7 +305,7 @@ msgid ""
 "from Mate menu "
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem></menuchoice>;"
 msgstr ""
-"des del menú de MATE "
+"des del menú de CAFE "
 "<menuchoice><guimenu>Aplicacions</guimenu><guimenuitem>Accessoris</guimenuitem></menuchoice>;"
 
 #. (itstool) path: listitem/para

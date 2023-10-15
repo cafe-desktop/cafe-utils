@@ -3,7 +3,7 @@ NULL =
 AM_CPPFLAGS = \
 	-I$(top_srcdir)/gsearchtool/libeggsmclient \
 	-I$(top_srcdir)/gsearchtool/libcafeui-deprecated \
-	-DMATELOCALEDIR=\""$(datadir)/locale"\" \
+	-DCAFELOCALEDIR=\""$(datadir)/locale"\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
 	-DDATADIR=\""$(datadir)"\" \
 	-DGREP_COMMAND=\""$(GREP_COMMAND)"\"

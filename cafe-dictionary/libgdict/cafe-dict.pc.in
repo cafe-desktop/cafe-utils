@@ -4,7 +4,7 @@ libdir=@libdir@
 includedir=@includedir@
 
 Name: gdict-1.0
-Description: MATE Dictionary Protocol client library
+Description: CAFE Dictionary Protocol client library
 Requires: gtk+-3.0 >= @GTK_REQUIRED@
 Version: @GDICT_VERSION@
 Libs: -L${libdir} -lcafedict

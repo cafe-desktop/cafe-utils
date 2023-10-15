@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=MATE Disk Image Mounter
+Name=CAFE Disk Image Mounter
 Comment=Attach and mount one or more disk image files
 TryExec=cafe-disk-image-mounter
 Exec=cafe-disk-image-mounter %U
@@ -10,4 +10,4 @@ Terminal=false
 StartupNotify=false
 Type=Application
 Categories=GTK;System;
-OnlyShowIn=MATE;
+OnlyShowIn=CAFE;

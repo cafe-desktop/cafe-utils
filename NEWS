@@ -17,9 +17,9 @@
 ### cafe-utils 1.23.1
 
   * Translations update
-  * Add MATE Disk Image Mounter utility
+  * Add CAFE Disk Image Mounter utility
   * WARN_CFLAGS makes MAINTAINER_CFLAGS obsolete for now
-  * Use MATE_DEBUG_CHECK for setting compiler debug flags
+  * Use CAFE_DEBUG_CHECK for setting compiler debug flags
   * Print compiler warning flags in summary
   * Add WARN_CFLAGS to CFLAGS
   * logview: Fix infinite loop parsing logs containing at least one line

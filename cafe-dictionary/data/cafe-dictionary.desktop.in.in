@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=MATE Dictionary
+Name=CAFE Dictionary
 Comment=Check word definitions and spellings in an online dictionary
 Exec=cafe-dictionary
 Terminal=false
@@ -9,10 +9,10 @@ Icon=accessories-dictionary
 StartupNotify=true
 Categories=GTK;Office;Dictionary;
 # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-Keywords=MATE;dictionary;applet;thesaurus;spelling;definitions;online;
-OnlyShowIn=MATE;
-X-MATE-DocPath=cafe-dictionary/cafe-dictionary.xml
-X-MATE-Bugzilla-Bugzilla=MATE
-X-MATE-Bugzilla-Product=cafe-utils
-X-MATE-Bugzilla-Component=gdict
-X-MATE-Bugzilla-Version=@VERSION@
+Keywords=CAFE;dictionary;applet;thesaurus;spelling;definitions;online;
+OnlyShowIn=CAFE;
+X-CAFE-DocPath=cafe-dictionary/cafe-dictionary.xml
+X-CAFE-Bugzilla-Bugzilla=CAFE
+X-CAFE-Bugzilla-Product=cafe-utils
+X-CAFE-Bugzilla-Component=gdict
+X-CAFE-Bugzilla-Version=@VERSION@

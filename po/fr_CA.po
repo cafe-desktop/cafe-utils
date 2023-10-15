@@ -5,12 +5,12 @@
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: CAFE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-29 10:58+0100\n"
 "PO-Revision-Date: 2017-09-22 02:12+0000\n"
 "Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: French (Canada) (http://www.transifex.com/cafe/MATE/language/fr_CA/)\n"
+"Language-Team: French (Canada) (http://www.transifex.com/cafe/CAFE/language/fr_CA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../baobab/data/cafe-disk-usage-analyzer.desktop.in.in.h:1
-msgid "MATE Disk Usage Analyzer"
+msgid "CAFE Disk Usage Analyzer"
 msgstr ""
 
 #: ../baobab/data/cafe-disk-usage-analyzer.desktop.in.in.h:2
@@ -196,7 +196,7 @@ msgid "Which type of chart should be displayed."
 msgstr ""
 
 #: ../baobab/data/cafe-disk-usage-analyzer.appdata.xml.in.h:1
-msgid "A disk usage analyzing tool for MATE Desktop"
+msgid "A disk usage analyzing tool for CAFE Desktop"
 msgstr ""
 
 #: ../baobab/data/cafe-disk-usage-analyzer.appdata.xml.in.h:2
@@ -586,12 +586,12 @@ msgid "The folder does not exist."
 msgstr ""
 
 #: ../gsearchtool/data/cafe-search-tool.appdata.xml.in.h:1
-msgid "A file searching tool for MATE Desktop"
+msgid "A file searching tool for CAFE Desktop"
 msgstr ""
 
 #: ../gsearchtool/data/cafe-search-tool.appdata.xml.in.h:2
 msgid ""
-"<p> MATE Search Tool is a simple but powerful utility that allows you to "
+"<p> CAFE Search Tool is a simple but powerful utility that allows you to "
 "search for files and folders on any mounted file system. Its interface gives"
 " you instant access to a wide variety of parameters for each search, such as"
 " text contained within a file, ownership, date of modification, file size, "
@@ -599,7 +599,7 @@ msgid ""
 msgstr ""
 
 #: ../gsearchtool/data/cafe-search-tool.desktop.in.h:1
-msgid "MATE Search Tool"
+msgid "CAFE Search Tool"
 msgstr ""
 
 #: ../gsearchtool/data/cafe-search-tool.desktop.in.h:2
@@ -1205,7 +1205,7 @@ msgid "Click to stop a search."
 msgstr ""
 
 #: ../gsearchtool/src/gsearchtool.c:3016
-msgid "- the MATE Search Tool"
+msgid "- the CAFE Search Tool"
 msgstr ""
 
 #: ../gsearchtool/src/gsearchtool.c:3025
@@ -1705,7 +1705,7 @@ msgid "Not found"
 msgstr ""
 
 #: ../logview/src/logview-window.c:777
-msgid "A system log viewer for MATE."
+msgid "A system log viewer for CAFE."
 msgstr ""
 
 #: ../logview/src/logview-window.c:820
@@ -1842,7 +1842,7 @@ msgid "Default Dictionary Server"
 msgstr ""
 
 #: ../cafe-dictionary/data/cafe-dictionary.desktop.in.in.h:1
-msgid "MATE Dictionary"
+msgid "CAFE Dictionary"
 msgstr ""
 
 #: ../cafe-dictionary/data/cafe-dictionary.desktop.in.in.h:2
@@ -1850,12 +1850,12 @@ msgid "Check word definitions and spellings in an online dictionary"
 msgstr ""
 
 #: ../cafe-dictionary/data/cafe-dictionary.appdata.xml.in.h:1
-msgid "A dictionary for MATE Desktop"
+msgid "A dictionary for CAFE Desktop"
 msgstr ""
 
 #: ../cafe-dictionary/data/cafe-dictionary.appdata.xml.in.h:2
 msgid ""
-"<p> MATE Dictionary allows you to look up words in on-line dictionaries. It "
+"<p> CAFE Dictionary allows you to look up words in on-line dictionaries. It "
 "comes preconfigured with a list of Dict servers (RFC 2229), to which you can"
 " add your own sources, while you can select specific servers for a specific "
 "query. </p>"
@@ -2774,12 +2774,12 @@ msgid "Strategies"
 msgstr ""
 
 #: ../cafe-screenshot/data/cafe-screenshot.appdata.xml.in.h:1
-msgid "A screenshot utility for MATE Desktop"
+msgid "A screenshot utility for CAFE Desktop"
 msgstr ""
 
 #: ../cafe-screenshot/data/cafe-screenshot.appdata.xml.in.h:2
 msgid ""
-"<p> MATE Screenshot is a simple utility that lets you capture screenshots of"
+"<p> CAFE Screenshot is a simple utility that lets you capture screenshots of"
 " your desktop or of application windows. You can select to copy them to the "
 "system clipboard or save them in Portable Network Graphics (.png) image "
 "format. </p>"

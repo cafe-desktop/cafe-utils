@@ -69,8 +69,8 @@ msgstr "Приложение для поиска файлов, папок и д�
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:31
-msgid "<year>2015-2020</year> <holder>MATE Documentation Project</holder>"
-msgstr "<year>2015—2020</year> <holder>Проект документирования MATE</holder>"
+msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
+msgstr "<year>2015—2020</year> <holder>Проект документирования CAFE</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:35
@@ -93,8 +93,8 @@ msgstr "<year>2000</year> <holder>Alexander Kirillov</holder>"
 
 #. (itstool) path: publisher/publishername
 #: C/index.docbook:58
-msgid "MATE Documentation Project"
-msgstr "Проект документирования MATE"
+msgid "CAFE Documentation Project"
+msgstr "Проект документирования CAFE"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
@@ -125,12 +125,12 @@ msgstr ""
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:12 C/legal.xml:12
 msgid ""
-"This manual is part of a collection of MATE manuals distributed under the "
+"This manual is part of a collection of CAFE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
-"Этот документ является частью документации MATE, распространяемой на "
+"Этот документ является частью документации CAFE, распространяемой на "
 "условиях лицензии GFDL. Если вы хотите распространять этот документ отдельно"
 " от общей документации, вы должны приложить копию лицензии к документу, как "
 "написано в части 6 лицензии."
@@ -139,14 +139,14 @@ msgstr ""
 #: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any MATE "
-"documentation, and the members of the MATE Documentation Project are made "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
 "Некоторые имена и марки используются компаниями для обозначения их продуктов"
 " и услуг и являются торговыми марками. Там, где эти имена присутствуют в "
-"документации и где участники проекта документирования MATE знают об этом, "
+"документации и где участники проекта документирования CAFE знают об этом, "
 "имена выделяются заглавными буквами или начальной заглавной буквой."
 
 #. (itstool) path: listitem/para
@@ -212,10 +212,10 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:67
 msgid ""
-"<surname>MATE-Dokumentationsteam</surname> <affiliation> <orgname>Search for"
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Search for"
 " Files Maintainer</orgname> </affiliation>"
 msgstr ""
-"<surname>Команда документирования MATE</surname> <affiliation> "
+"<surname>Команда документирования CAFE</surname> <affiliation> "
 "<orgname>Сопровождающий приложения «Поиск файлов»</orgname> </affiliation>"
 
 #. (itstool) path: affiliation/address
@@ -384,12 +384,12 @@ msgstr "Обратная связь"
 msgid ""
 "To report a bug or make a suggestion regarding the Search for Files "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
 "Чтобы сообщить об ошибке или внести предложение, связанное с приложением "
 "«Поиск файлов» или этим руководством, следуйте инструкциям на <ulink "
 "url=\"help:cafe-user-guide/feedback\" type=\"help\">странице обратной связи "
-"MATE</ulink>."
+"CAFE</ulink>."
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:212

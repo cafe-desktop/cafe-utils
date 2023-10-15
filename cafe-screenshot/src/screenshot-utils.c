@@ -1,4 +1,4 @@
-/* screenshot-utils.c - common functions for MATE Screenshot
+/* screenshot-utils.c - common functions for CAFE Screenshot
  *
  * Copyright (C) 2001-2006  Jonathan Blandford <jrb@alum.mit.edu>
  * Copyright (C) 2008 Cosimo Cecchi <cosimoc@gnome.org>
@@ -34,7 +34,7 @@
 
 static GtkWidget *selection_window;
 
-#define SELECTION_NAME "_MATE_PANEL_SCREENSHOT"
+#define SELECTION_NAME "_CAFE_PANEL_SCREENSHOT"
 
 /* To make sure there is only one screenshot taken at a time,
  * (Imagine key repeat for the print screen key) we hold a selection

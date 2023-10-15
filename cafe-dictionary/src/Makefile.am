@@ -6,7 +6,7 @@ AM_CPPFLAGS = \
 	-DLIBDIR=\""$(libdir)"\"			\
 	-DDATADIR=\""$(datadir)"\" 			\
 	-DPKGDATADIR=\""$(datadir)/cafe-dictionary"\" 	\
-	-DMATELOCALEDIR=\""$(datadir)/locale"\"		\
+	-DCAFELOCALEDIR=\""$(datadir)/locale"\"		\
 	$(NULL)
 
 bin_PROGRAMS = cafe-dictionary

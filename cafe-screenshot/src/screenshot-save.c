@@ -1,4 +1,4 @@
-/* screenshot-save.c - image saving functions for MATE Screenshot
+/* screenshot-save.c - image saving functions for CAFE Screenshot
  *
  * Copyright (C) 2001-2006  Jonathan Blandford <jrb@alum.mit.edu>
  *

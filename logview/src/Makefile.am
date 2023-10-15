@@ -2,7 +2,7 @@ SUBDIRS = tests
 
 AM_CPPFLAGS =						\
 	-DG_LOG_DOMAIN=\"cafe-system-log\"		\
-	-DMATELOCALEDIR=\""$(datadir)/locale"\"		\
+	-DCAFELOCALEDIR=\""$(datadir)/locale"\"		\
 	-DDATADIR=\""$(datadir)"\"			\
 	-DLOGVIEWINSTALLPREFIX=\""$(prefix)/\""		\
 	$(NULL)

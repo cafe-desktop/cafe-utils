@@ -1,6 +1,6 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
 /*
- * MATE Search Tool
+ * CAFE Search Tool
  *
  *  File:  gsearchtool.h
  *
@@ -47,7 +47,7 @@ extern "C" {
 #define GSEARCH_WINDOW_GET_CLASS(obj) \
   (G_TYPE_INSTANCE_GET_CLASS ((obj), GSEARCH_TYPE_WINDOW, GSearchWindowClass))
 
-#define MATE_SEARCH_TOOL_ICON "system-search"
+#define CAFE_SEARCH_TOOL_ICON "system-search"
 #define MINIMUM_WINDOW_WIDTH   420
 #define MINIMUM_WINDOW_HEIGHT  310
 #define DEFAULT_WINDOW_WIDTH   554

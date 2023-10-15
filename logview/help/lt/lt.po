@@ -46,7 +46,7 @@ msgstr ""
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
-msgid "<year>2015-2020</year> <holder>MATE Documentation Project</holder>"
+msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
@@ -62,8 +62,8 @@ msgstr "<year>2000</year> <holder>Judith Samson</holder>"
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
 #: C/index.docbook:51 C/index.docbook:122
-msgid "MATE Documentation Project"
-msgstr "MATE dokumentacijos projektas"
+msgid "CAFE Documentation Project"
+msgstr "CAFE dokumentacijos projektas"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
@@ -89,12 +89,12 @@ msgstr ""
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:12 C/legal.xml:12
 msgid ""
-"This manual is part of a collection of MATE manuals distributed under the "
+"This manual is part of a collection of CAFE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
-"Šis žinynas yra MATE žinynų rinkinio, platinamo GFDL sąlygomis, dalis. Jeigu"
+"Šis žinynas yra CAFE žinynų rinkinio, platinamo GFDL sąlygomis, dalis. Jeigu"
 " norite dalintis šiuo žinynu atskirai nuo šio rinkinio, galite tą daryti "
 "pridėdami šios licencijos kopiją, kaip nurodyta 6 šios licencijos dalyje."
 
@@ -102,13 +102,13 @@ msgstr ""
 #: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any MATE "
-"documentation, and the members of the MATE Documentation Project are made "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
 "Nemažai įmonių, jų produktų ir paslaugų pavadinimai laikomi prekės ženklais."
-" Kuomet šie pavadinimai pasirodo bet kur MATE dokumentacijoje, ir MATE "
+" Kuomet šie pavadinimai pasirodo bet kur CAFE dokumentacijoje, ir CAFE "
 "dokumentacijos projekto nariai atkreipia į juos dėmesį, šie pavadinimai "
 "radomi didžiosiomis raidėmis arba pradedami didžiąja raide."
 
@@ -133,7 +133,7 @@ msgstr ""
 " TIKRŲ TEISIŲ. VISA ŠIO DOKUMENTO  AR JO MODIFIKUOTOS VERSIJOS KOKYBĖS, "
 "TIKSLUMO IR VEIKIMO PRIKLAUSO JUMS. ESANT BET KOKIAM ŠIO DOKUMENTO AR JO "
 "MODIFIKUOTOS VERSIJOS TRŪKUMUI, JŪS (NE PIRMINIS RAŠYTOJAS, AUTORIUS AR "
-"KITAS PAGALBININKAS) PRISIIMATE REIKIAMO APTARNAVIMO, REMONTO AR TAISYMO "
+"KITAS PAGALBININKAS) PRISIICAFE REIKIAMO APTARNAVIMO, REMONTO AR TAISYMO "
 "IŠLAIDAS. ŠIS ATSAKOMYBĖS ATSISAKYMAS YRA ESMINĖ ŠIOS LICENCIJOS DALIS. "
 "TOLIAU NELEIDŽIAMAS JOKS ŠIO DOKUMENTO AR MODIFIKUOTOS VERSIJOS NAUDOJIMAS, "
 "IŠSKYRUS PAGAL ŠĮ ATSAKOMYBĖS ATSISAKYMĄ; IR"
@@ -176,10 +176,10 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:60
 msgid ""
-"<surname>MATE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
 "desktop</orgname> </affiliation>"
 msgstr ""
-"<surname>MATE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
 "darbalaukis</orgname> </affiliation>"
 
 #. (itstool) path: authorgroup/author
@@ -318,7 +318,7 @@ msgstr "Atsiliepimai"
 msgid ""
 "To report a bug or make a suggestion regarding the System Log Viewer "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm

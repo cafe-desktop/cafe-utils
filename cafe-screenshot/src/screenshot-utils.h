@@ -1,4 +1,4 @@
-/* screenshot-utils.h - common functions for MATE Screenshot
+/* screenshot-utils.h - common functions for CAFE Screenshot
  *
  * Copyright (C) 2001-2006  Jonathan Blandford <jrb@alum.mit.edu>
  *

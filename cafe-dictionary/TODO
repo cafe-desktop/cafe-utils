@@ -19,7 +19,7 @@
   [x] Remove MateConf stuff from the preferences: only applications should
       depend on MateConf;
 
-[MATE Dictionary]
+[CAFE Dictionary]
 
 * UI updates
   [x] Create a new HIG-compliant preferences dialog using Glade, and
@@ -31,7 +31,7 @@
   [x] Source remove
   [x] Remember window size/state across sessions
 
-[MATE Dictionary Applet]
+[CAFE Dictionary Applet]
 
 * UI updates
   [x] Use GtkAlignedWindow as the container for the Gdict::Defbox;

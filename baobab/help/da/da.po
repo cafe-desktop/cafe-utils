@@ -40,8 +40,8 @@ msgstr ""
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
-msgid "<year>2015-2020</year> <holder>MATE Documentation Project</holder>"
-msgstr "<year>2015-2020</year> <holder>MATE-dokumentationsprojektet</holder>"
+msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
+msgstr "<year>2015-2020</year> <holder>CAFE-dokumentationsprojektet</holder>"
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:34
@@ -51,8 +51,8 @@ msgstr "<year>2006</year> <holder>Fabio Marzocca</holder>"
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
 #: C/index.docbook:47 C/index.docbook:103
-msgid "MATE Documentation Project"
-msgstr "MATE-dokumentationsprojektet"
+msgid "CAFE Documentation Project"
+msgstr "CAFE-dokumentationsprojektet"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
@@ -80,12 +80,12 @@ msgstr ""
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:12 C/legal.xml:12
 msgid ""
-"This manual is part of a collection of MATE manuals distributed under the "
+"This manual is part of a collection of CAFE manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
-"Denne manual er en del af en samling af MATE-manualer distribueret under "
+"Denne manual er en del af en samling af CAFE-manualer distribueret under "
 "GFDL'en. Hvis du ønsker at distribuere denne manual separat fra samlingen, "
 "du kan gøre dette ved at tilføje en kopi af manualens licens, som beskrevet "
 "i afsnit 6 af denne licens."
@@ -94,14 +94,14 @@ msgstr ""
 #: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any MATE "
-"documentation, and the members of the MATE Documentation Project are made "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
 "En stor del af de navne som anvendes af firmaer til at identificere deres "
 "produkter og tjenester hævdes som værende varemærker. Hvor disse navne "
-"fremgår i en hvilken som helst MATE-dokumentation, og medlemmerne af  MATE-"
+"fremgår i en hvilken som helst CAFE-dokumentation, og medlemmerne af  CAFE-"
 "dokumentationsprojeket er gjort opmærksom på disse varemærker, så er disse "
 "navne vist med store bogstaver eller stort begyndelsesbogstav."
 
@@ -172,10 +172,10 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:56
 msgid ""
-"<surname>MATE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
 "desktop</orgname> </affiliation>"
 msgstr ""
-"<surname>MATE-dokumentationsholdet</surname> <affiliation> <orgname>Mate-"
+"<surname>CAFE-dokumentationsholdet</surname> <affiliation> <orgname>Mate-"
 "skrivebordet</orgname> </affiliation>"
 
 #. (itstool) path: authorgroup/author
@@ -241,11 +241,11 @@ msgstr "Tilbagemeldinger"
 msgid ""
 "To report a bug or make a suggestion regarding the Disk Usage Analyzer "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
 "For at rapportere en fejl eller komme med et forslag jævnfør programmet "
 "Diskforbrugsanalyse denne manual, så følg retningslinjerne i <ulink "
-"url=\"help:cafe-user-guide/feedback\" type=\"help\">MATE's side for "
+"url=\"help:cafe-user-guide/feedback\" type=\"help\">CAFE's side for "
 "tilbagemeldinger</ulink>."
 
 #. (itstool) path: article/indexterm
@@ -267,7 +267,7 @@ msgid ""
 "tree, or a specific user-requested directory branch (local or remote)."
 msgstr ""
 "<application>Diskforbrugsanalyse</application> er et grafisk, menudrevent "
-"program til at analyse diskforbug i MATE. "
+"program til at analyse diskforbug i CAFE. "
 "<application>Diskforbrugsanalyse</application> kan nemt skanne enten hele "
 "filsystemtræet eller en specifik mappegren anmodet om af brugeren (lokal "
 "eller ekstern)."
@@ -352,7 +352,7 @@ msgid ""
 "When you start <application>Disk Usage Analyzer</application> from the Mate "
 "Menu, the following window is displayed."
 msgstr ""
-"Når du starter <application>Diskanalyseforbrug</application> fra MATE-menuen"
+"Når du starter <application>Diskanalyseforbrug</application> fra CAFE-menuen"
 " vises det følgende vindue."
 
 #. (itstool) path: figure/title

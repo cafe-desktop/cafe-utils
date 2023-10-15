@@ -1,4 +1,4 @@
-/* gdict-applet.h - MATE Dictionary Applet
+/* gdict-applet.h - CAFE Dictionary Applet
  *
  * Copyright (c) 2005  Emmanuele Bassi <ebassi@gmail.com>
  *

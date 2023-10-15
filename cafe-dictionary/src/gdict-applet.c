@@ -1,4 +1,4 @@
-/* gdict-applet.c - MATE Dictionary Applet
+/* gdict-applet.c - CAFE Dictionary Applet
  *
  * Copyright (c) 2005  Emmanuele Bassi <ebassi@gmail.com>
  *
@@ -501,7 +501,7 @@ gdict_applet_entry_button_press_event_cb (GtkWidget      *widget,
 					  GdkEventButton *event,
 					  GdictApplet    *applet)
 {
-  cafe_panel_applet_request_focus (MATE_PANEL_APPLET (applet), event->time);
+  cafe_panel_applet_request_focus (CAFE_PANEL_APPLET (applet), event->time);
 
   return FALSE;
 }
@@ -753,13 +753,13 @@ gdict_applet_change_orient (MatePanelApplet       *applet,
   gtk_widget_get_allocation (GTK_WIDGET (applet), &allocation);
   switch (orient)
     {
-    case MATE_PANEL_APPLET_ORIENT_LEFT:
-    case MATE_PANEL_APPLET_ORIENT_RIGHT:
+    case CAFE_PANEL_APPLET_ORIENT_LEFT:
+    case CAFE_PANEL_APPLET_ORIENT_RIGHT:
       priv->orient = GTK_ORIENTATION_VERTICAL;
       new_size = allocation.width;
       break;
-    case MATE_PANEL_APPLET_ORIENT_UP:
-    case MATE_PANEL_APPLET_ORIENT_DOWN:
+    case CAFE_PANEL_APPLET_ORIENT_UP:
+    case CAFE_PANEL_APPLET_ORIENT_DOWN:
       priv->orient = GTK_ORIENTATION_HORIZONTAL;
       new_size = allocation.height;
       break;
@@ -770,8 +770,8 @@ gdict_applet_change_orient (MatePanelApplet       *applet,
 
   gdict_applet_queue_draw (GDICT_APPLET (applet));
 
-  if (MATE_PANEL_APPLET_CLASS (gdict_applet_parent_class)->change_orient)
-    MATE_PANEL_APPLET_CLASS (gdict_applet_parent_class)->change_orient (applet,
+  if (CAFE_PANEL_APPLET_CLASS (gdict_applet_parent_class)->change_orient)
+    CAFE_PANEL_APPLET_CLASS (gdict_applet_parent_class)->change_orient (applet,
     								   orient);
 }
 
@@ -1091,7 +1091,7 @@ gdict_applet_class_init (GdictAppletClass *klass)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
   GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
-  MatePanelAppletClass *applet_class = MATE_PANEL_APPLET_CLASS (klass);
+  MatePanelAppletClass *applet_class = CAFE_PANEL_APPLET_CLASS (klass);
 
   gobject_class->finalize = gdict_applet_finalize;
 
@@ -1120,8 +1120,8 @@ gdict_applet_init (GdictApplet *applet)
 
   gtk_window_set_default_icon_name ("accessories-dictionary");
 
-  cafe_panel_applet_set_flags (MATE_PANEL_APPLET (applet),
-			  MATE_PANEL_APPLET_EXPAND_MINOR);
+  cafe_panel_applet_set_flags (CAFE_PANEL_APPLET (applet),
+			  CAFE_PANEL_APPLET_EXPAND_MINOR);
 
   priv->settings = g_settings_new (GDICT_SETTINGS_SCHEMA);
   priv->desktop_settings = g_settings_new (DESKTOP_SETTINGS_SCHEMA);
@@ -1132,19 +1132,19 @@ gdict_applet_init (GdictApplet *applet)
   g_signal_connect (priv->desktop_settings, "changed",
                     G_CALLBACK (gdict_applet_settings_changed_cb), applet);
 
-  cafe_panel_applet_set_background_widget (MATE_PANEL_APPLET (applet),
+  cafe_panel_applet_set_background_widget (CAFE_PANEL_APPLET (applet),
 		  		      GTK_WIDGET (applet));
 
-  priv->size = cafe_panel_applet_get_size (MATE_PANEL_APPLET (applet));
+  priv->size = cafe_panel_applet_get_size (CAFE_PANEL_APPLET (applet));
 
-  switch (cafe_panel_applet_get_orient (MATE_PANEL_APPLET (applet)))
+  switch (cafe_panel_applet_get_orient (CAFE_PANEL_APPLET (applet)))
     {
-    case MATE_PANEL_APPLET_ORIENT_LEFT:
-    case MATE_PANEL_APPLET_ORIENT_RIGHT:
+    case CAFE_PANEL_APPLET_ORIENT_LEFT:
+    case CAFE_PANEL_APPLET_ORIENT_RIGHT:
       priv->orient = GTK_ORIENTATION_VERTICAL;
       break;
-    case MATE_PANEL_APPLET_ORIENT_UP:
-    case MATE_PANEL_APPLET_ORIENT_DOWN:
+    case CAFE_PANEL_APPLET_ORIENT_UP:
+    case CAFE_PANEL_APPLET_ORIENT_DOWN:
       priv->orient = GTK_ORIENTATION_HORIZONTAL;
       break;
     }
@@ -1225,7 +1225,7 @@ gdict_applet_factory (MatePanelApplet *applet,
 }
 
 /* this defines the main () for the applet */
-MATE_PANEL_APPLET_OUT_PROCESS_FACTORY ("DictionaryAppletFactory",
+CAFE_PANEL_APPLET_OUT_PROCESS_FACTORY ("DictionaryAppletFactory",
 			     GDICT_TYPE_APPLET,
 			     "cafe-dictionary-applet",
 			     gdict_applet_factory,

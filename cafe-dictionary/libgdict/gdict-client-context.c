@@ -126,7 +126,7 @@ typedef struct
 } GdictCommand;
 
 /* The default string to be passed to the CLIENT command */
-#define GDICT_DEFAULT_CLIENT	"MATE Dictionary (" VERSION ")"
+#define GDICT_DEFAULT_CLIENT	"CAFE Dictionary (" VERSION ")"
 
 /* Default server:port couple */
 #define GDICT_DEFAULT_HOSTNAME	"dict.org"

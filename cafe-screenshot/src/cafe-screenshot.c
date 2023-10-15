@@ -49,7 +49,7 @@
 
 #define SCREENSHOOTER_ICON "applets-screenshooter"
 
-#define MATE_SCREENSHOT_SCHEMA "org.cafe.screenshot"
+#define CAFE_SCREENSHOT_SCHEMA "org.cafe.screenshot"
 #define INCLUDE_BORDER_KEY      "include-border"
 #define INCLUDE_POINTER_KEY     "include-pointer"
 #define LAST_SAVE_DIRECTORY_KEY "last-save-directory"
@@ -585,7 +585,7 @@ set_recent_entry (ScreenshotDialog *dialog)
   recent_data.display_name = NULL;
   recent_data.description = NULL;
   recent_data.mime_type = "image/png";
-  recent_data.app_name = "MATE Screenshot";
+  recent_data.app_name = "CAFE Screenshot";
   recent_data.app_exec = app_exec;
   recent_data.groups = groups;
   recent_data.is_private = FALSE;
@@ -1325,7 +1325,7 @@ main (int argc, char *argv[])
   };
 
   setlocale (LC_ALL, "");
-  bindtextdomain (GETTEXT_PACKAGE, MATELOCALEDIR);
+  bindtextdomain (GETTEXT_PACKAGE, CAFELOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 
@@ -1366,7 +1366,7 @@ main (int argc, char *argv[])
   gtk_window_set_default_icon_name (SCREENSHOOTER_ICON);
   screenshooter_init_stock_icons ();
 
-  settings = g_settings_new (MATE_SCREENSHOT_SCHEMA);
+  settings = g_settings_new (CAFE_SCREENSHOT_SCHEMA);
   load_options ();
   /* allow the command line to override options */
   if (window_arg)

@@ -44,8 +44,8 @@
 #define PREF_FILTERS  "filters"
 
 /* desktop-wide settings */
-#define MATE_MONOSPACE_FONT_NAME "monospace-font-name"
-#define MATE_MENUS_HAVE_TEAROFF  "menus-have-tearoff"
+#define CAFE_MONOSPACE_FONT_NAME "monospace-font-name"
+#define CAFE_MENUS_HAVE_TEAROFF  "menus-have-tearoff"
 
 static LogviewPrefs *singleton = NULL;
 
@@ -302,9 +302,9 @@ logview_prefs_init (LogviewPrefs *self)
   priv->logview_prefs = g_settings_new (LOGVIEW_SCHEMA);
   priv->interface_prefs = g_settings_new ("org.cafe.interface");
 
-  g_signal_connect (priv->interface_prefs, "changed::" MATE_MONOSPACE_FONT_NAME,
+  g_signal_connect (priv->interface_prefs, "changed::" CAFE_MONOSPACE_FONT_NAME,
                     G_CALLBACK (monospace_font_changed_cb), self);
-  g_signal_connect (priv->interface_prefs, "changed::" MATE_MENUS_HAVE_TEAROFF,
+  g_signal_connect (priv->interface_prefs, "changed::" CAFE_MENUS_HAVE_TEAROFF,
                     G_CALLBACK (have_tearoff_changed_cb), self);
 
   load_filters (self);
@@ -356,7 +356,7 @@ logview_prefs_get_monospace_font_name (LogviewPrefs *prefs)
 {
   g_assert (LOGVIEW_IS_PREFS (prefs));
 
-  return (g_settings_get_string (prefs->priv->interface_prefs, MATE_MONOSPACE_FONT_NAME));
+  return (g_settings_get_string (prefs->priv->interface_prefs, CAFE_MONOSPACE_FONT_NAME));
 }
 
 gboolean
@@ -364,7 +364,7 @@ logview_prefs_get_have_tearoff (LogviewPrefs *prefs)
 {
   g_assert (LOGVIEW_IS_PREFS (prefs));
 
-	return (g_settings_get_boolean (prefs->priv->interface_prefs, MATE_MENUS_HAVE_TEAROFF));
+	return (g_settings_get_boolean (prefs->priv->interface_prefs, CAFE_MENUS_HAVE_TEAROFF));
 }
 
 /* the elements should be freed with g_free () */
