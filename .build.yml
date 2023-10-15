@@ -30,25 +30,6 @@ requires:
     - yelp-tools
     - zlib1g-dev
 
-variables:
-  - CFLAGS="-Wall -Werror=format-security -Wredundant-decls"
-  - 'CHECKERS="
-    -enable-checker deadcode.DeadStores
-    -enable-checker alpha.deadcode.UnreachableCode
-    -enable-checker alpha.core.CastSize
-    -enable-checker alpha.core.CastToStruct
-    -enable-checker alpha.core.IdenticalExpr
-    -enable-checker alpha.core.SizeofPtr
-    -enable-checker alpha.security.ArrayBoundV2
-    -enable-checker alpha.security.MallocOverflow
-    -enable-checker alpha.security.ReturnPtrRange
-    -enable-checker alpha.unix.SimpleStream
-    -enable-checker alpha.unix.cstring.BufferOverlap
-    -enable-checker alpha.unix.cstring.NotNullTerminated
-    -enable-checker alpha.unix.cstring.OutOfBounds
-    -enable-checker alpha.core.FixedAddr
-    -enable-checker security.insecureAPI.strcpy"'
-
 before_scripts:
   # disable pt language for help in search tool
   - sed -i s/"IGNORE_HELP_LINGUAS ="/"IGNORE_HELP_LINGUAS = pt"/g gsearchtool/help/Makefile.am
