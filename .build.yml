@@ -20,7 +20,6 @@ requires:
     - libglib2.0-dev
     - libgtk-3-dev
     - libgtop2-dev
-    - libcafe-panel-applet-dev
     - libudisks2-dev
     - libx11-dev
     - libxext-dev
@@ -34,11 +33,54 @@ requires:
     #required for cafe-common
     - autoconf
 
+    #required for cafe-panel
+    - gir1.2-freedesktop
+    - gobject-introspection
+    - gtk-doc-tools
+    - libatk1.0-dev
+    - libcairo2-dev
+    - libdconf-dev
+    - libgirepository1.0-dev
+    - libice-dev
+    - libpango1.0-dev
+    - librsvg2-dev
+    - libsm-dev
+    - libsoup2.4-dev
+    - libxau-dev
+    - lsb-release
+    - meson
+
+    #required for libcafeweather
+    - intltool
+    - libsoup-gnome2.4-dev
+    - libtool
+    - libxml2-dev
+    - libxml2-utils
+    - tzdata
+
+    #required for cafe-desktop
+    - iso-codes
+    - libglib2.0-doc
+    - libstartup-notification0-dev
+
+    #required for libvnck
+    - build-essential
+    - docbook-xml
+    - gettext
+    - libxres-dev
+    - ninja-build
+
 before_scripts:
   - ./html-cppcheck
   # disable pt language for help in search tool
   - sed -i s/"IGNORE_HELP_LINGUAS ="/"IGNORE_HELP_LINGUAS = pt"/g gsearchtool/help/Makefile.am
+  - ./debrepo-install 'libctk-3-dev gir1.2-ctk-3.0 libctk-3-common libctk-3-0 libctk-3-doc'
+  - ./install-from-git https://github.com/cafe-desktop/libvnck master meson
   - ./install-from-git https://github.com/cafe-desktop/cafe-common master
+  - ./install-from-git https://github.com/cafe-desktop/cafe-desktop master
+  - ./install-from-git https://github.com/cafe-desktop/cafe-menus master
+  - ./install-from-git https://github.com/cafe-desktop/libcafeweather master
+  - ./install-from-git https://github.com/cafe-desktop/cafe-panel master
 
 build_scripts:
   - ./before-build
