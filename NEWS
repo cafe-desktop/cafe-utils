@@ -1,0 +1,233 @@
+### mate-notification-daemon 1.24.0
+
+  * Translations update
+  * Fix build using gcc 10 -fno-common flag
+
+### mate-notification-daemon 1.23.2
+
+  * Translations update
+  * gettext: Fix locale dir
+  * Update copyright to 2020
+  * pull fixed galician translation from transifex
+  * migrate from intltools to gettext
+  * Use gresources for UI files
+  * avoid redundant redeclarations
+  * ci: set maximum compile warnings on step scan-build ./configure
+
+### mate-utils 1.23.1
+
+  * Translations update
+  * Add MATE Disk Image Mounter utility
+  * WARN_CFLAGS makes MAINTAINER_CFLAGS obsolete for now
+  * Use MATE_DEBUG_CHECK for setting compiler debug flags
+  * Print compiler warning flags in summary
+  * Add WARN_CFLAGS to CFLAGS
+  * logview: Fix infinite loop parsing logs containing at least one line
+  * Add hicolor_apps_24x24_mate-system-log.png
+  * Install hicolor_apps_24x24_mate-disk-usage-analyzer.png
+  * gsearchtool-entry: avoid 'g_type_class_add_private'
+  * baobab-treemap: avoid 'g_type_class_add_private'
+  * baobab-ringschart: avoid 'g_type_class_add_private'
+  * baobab-chart: avoid 'g_type_class_add_private'
+  * baobab-cell-renderer-progress: avoid 'g_type_class_add_private'
+  * gdict-aligned-window: avoid 'g_type_class_add_private'
+  * gdict-sidebar: avoid 'g_type_class_add_private'
+  * gdict-applet: avoid 'g_type_class_add_private'
+  * gdict-source-loader: avoid 'g_type_class_add_private'
+  * gdict-source: avoid 'g_type_class_add_private'
+  * gdict-client-context: avoid 'g_type_class_add_private'
+  * gdict-database-chooser: avoid 'g_type_class_add_private'
+  * logview-prefs: avoid 'g_type_class_add_private'
+  * logview-filter-manager: avoid 'g_type_class_add_private'
+  * logview-log: avoid 'g_type_class_add_private'
+  * logview-window: avoid 'g_type_class_add_private'
+  * logview-findbar: avoid 'g_type_class_add_private'
+  * logview-app: avoid 'g_type_class_add_private'
+  * logview-filter: avoid 'g_type_class_add_private'
+  * logview-loglist: avoid 'g_type_class_add_private'
+  * logview-manager: avoid 'g_type_class_add_private'
+  * logview: i18n date format in side pane
+  * logview: Use preferred date&time representation for current locale
+  * mate-disk-usage-analyzer: Remove blank space before right parenthesis
+  * Add scroll tabs with mouse wheel
+
+### mate-utils 1.23.0
+
+  * Translations update
+  * Remove trailing whitespaces
+  * Change url projet's website
+  * [ci] Add cppcheck html report
+  * Remove unused variables
+  * [ci] Remove inkscape, rsvg-convert from requires
+  * Make inkscape and rsvg-convert optional
+  * mate-screenshot: Variable is assigned a value that is never used
+  * gdict-applet: Variable 'detail' is allocated memory that is never used
+  * logview-prefs: Variable 'removed' is assigned a value that is never used
+  * [ci] Enable Clang Static Analyzer
+  * Fix -Werror=cast-function-type with GCC 8
+  * mate-disk-usage-analyzer: Memory leak
+  * Improve performance by removing unused assignments
+  * GEN png icons from svg files
+  * Update documenters in about dialog
+  * mate-dictionary: Use g_strjoin to build license text
+  * Use program-name and title in gtk_show_about_dialog call
+  * help: update copyright
+
+### mate-utils 1.22.0
+
+  * Translations update
+  * Initialize Travis CI support
+  * Make translatable the copyright in about dialog
+  * enable translations for  ca@valencia again
+  * help - bump docbook 4.5
+  * eggsmclient: avoid deprecated 'g_type_class_add_private'
+  * move appdata to metainfo directory
+
+### mate-utils 1.21.1
+
+  * Translations update
+  * disable deprecation warnings for distcheck
+  * Use make functions for HELP_LINGUAS
+  * Replace -Dokumentationsprojekt with Documentation Project
+  * mate-dictionary: Fix memory leak
+  * Fix spelling and grammar mistakes
+  * search-tool: replace deprecated gtk_menu_popup
+  * screenshot: replace deprecated gdk_flush
+  * dictionary: replace deprecated gdk_flush
+  * dictionary: replace deprecated gtk_menu_popup
+  * dictionary: Replace deprecated GtkFontButton accessors
+  * disk-usage-analyzer: replace deprecated gtk_menu_popup
+  * Update Catalan sceenshots of mate-dictionary
+  * Add Catalan screenshots
+  * add mate-dictionary help to transifex
+  * add mate-system-log help to transifex
+  * add mate-search-tool to transifex
+  * add mate-disk-usage-analyzer to transifex
+  * Baobab help: Terminal command updated to 'mate-disk-usage-analyzer'
+  * baobab-chart: avoid deprecated 'gtk_style_context_set_background'
+  * gsearchtool: avoid deprecated 'gtk_window_set_wmclass'
+
+### mate-utils 1.21.0
+
+  * Translations update
+  * Add support for non-interactive screenshot directly to clipboard
+  * avoid deprecated GtkStock
+
+### mate-utils 1.20.0
+
+  * Translations update
+  * require GTK+ 3.22 and GLib 2.50
+  * Add screenshot support for HiDPI displays
+  * mate-screenshot: added New button
+  * update copyright year to 2018
+  * screenshot-save.c: Fix build warnings with ‘pipe’ ‘write’ and ‘read’:
+  * add style class logview-window
+
+### mate-utils 1.19.1
+
+  * Translations update
+  * WidthOfScreen and HeightOfScreen implementation
+  * baobab: make zoom with mousewheel work on chart
+  * screenshot: remove some unused code
+  * screenshot: don't get window title as it's not used later
+  * baobab/logview/dictionary: add our copyright to About dialog
+  * baobab: set transient parent for remote connect dialog
+  * baobab: don't make prefs dialog visible in .ui file
+  * baobab: set parent window for About dialog
+  * avoid deprecated gdk_screen_get_active_window
+
+### mate-utils 1.19.0
+
+  * Translations update
+  * gtk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
+  * avoid deprecated gdk_screen_width/height
+  * avoid deprecated gdk_screen_get_width/height
+  * screenshot: avoid deprecated GdkDevice objects
+  * dictionary: avoid deprecated GdkDevice objects
+  * avoid deprecated gdk_screen_get_n_monitors
+  * avoid deprecated gdk_screen_make_display_name
+  * gdict-applet: don't use deprecated gtk_show_uri
+  * don't use deprecated gtk_show_uri
+  * avoid deprecated gdk_screen_get_number
+  * Restore Polish translation credits from GNOME
+  * searchtool & logview: avoid deprecated GtkAlignment
+  * mate-screenshot: fix showing busy cursor when saving area screenshot
+  * screenshot: don't translate the timestamp in the filename
+  * mate-dictionary: include correct header to fix occasional FTBFS
+
+### mate-utils 1.18.0
+
+  * NEWS: use consistent, project wide, markdown-like formatting
+    to make generating release announcements easier
+  * Build: require mate-panel >= 1.17
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and
+    --with-gtk build option
+  * Fix occasional distcheck breakage
+  * Some code cleanups
+  * Translations update
+
+### mate-utils 1.16.0
+
+  * Add --version command line option to mate-screenshot
+  * GTK+3: fix mate-dictionary segfault with 3.21
+  * GTK+3: fix lots of deprecations in all apps
+  * Translations update
+
+### mate-utils 1.14.1
+
+  * Require proper GTK+ version in mate-dict.pc file
+  * Some assorted fixes
+  * Translations update
+  * Make distcheck use currently selected GTK+ version
+
+### mate-utils 1.14.0
+
+  * Drop MateConf migration scripts
+  * Disable effects and delay options in mate-screenshot UI
+    when launched with -ai command line argument
+  * Use hyphens instead of colons in screenshot filenames
+    by default
+  * GTK+3: fix a lot of deprecations and some UI issues
+  * Don't use -Werror flag in build
+  * Some more fixes and cleanups
+  * Translations update
+  * Fix Changelog generation
+
+### mate-utils 1.12.0
+
+  * Add application icon to mate-system-log
+  * Add timestamp instead of window name to screenshot
+    filenames by default
+  * Have dictionary applet background automatically painted
+  * Translation fixes for gsettings schemas
+  * Some more fixes and cleanups (including source tree
+    reorganization)
+
+### mate-utils 1.10.3
+
+  * Fixed silent rules option by dropping obsolete "shave"
+    stuff
+  * Made mate-system-log remember the active log on exit
+  * Fixed potential crash in mate-system-log
+  * Various other bugfixes in mate-system-log
+  * Removed dead spanish server entry from mate-dictionary
+  * Fixed mate-dictionary's command-line options and manpage
+  * Made Ctrl+A and Ctrl+C work in mate-dictionary's search
+    field
+
+### mate-utils 1.10.2
+
+  * Several help fixes
+
+### mate-utils 1.10.1
+
+  * Fix gschema translations
+
+### mate-utils 1.10.0
+
+  * Add GTK3 support
+
+### mate-utils 1.8.0
+
+  * Use yelp-tools instead of mate-doc-utils
+  * Bugfixes

@@ -1,0 +1,2 @@
+SUBDIRS = data help src
+

@@ -1,0 +1,1199 @@
+# Translators:
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-01-13 16:47+0100\n"
+"PO-Revision-Date: 2018-09-13 10:15+0000\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019\n"
+"Language-Team: Catalan (https://www.transifex.com/mate/teams/13566/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>"
+
+#. (itstool) path: articleinfo/title
+#: C/index.docbook:23
+msgid "Search for Files Manual"
+msgstr "Manual de la cerca de fitxers"
+
+#. (itstool) path: abstract/para
+#: C/index.docbook:26
+msgid "A search tool to find files, folders and documents on your computer."
+msgstr ""
+"Una eina de cerca per trobar fitxers, carpetes i documents al vostre "
+"ordinador."
+
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:31
+msgid "<year>2015-2020</year> <holder>MATE Documentation Project</holder>"
+msgstr ""
+
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:35
+msgid "<year>2005</year> <holder>Dennis Cranston</holder>"
+msgstr "<year>2005</year> <holder>Dennis Cranston</holder>"
+
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:39
+msgid ""
+"<year>2002</year> <year>2003</year> <year>2004</year> <holder>Sun "
+"Microsystems</holder>"
+msgstr ""
+"<year>2002</year> <year>2003</year> <year>2004</year> <holder>Sun "
+"Microsystems</holder>"
+
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:45
+msgid "<year>2000</year> <holder>Alexander Kirillov</holder>"
+msgstr "<year>2000</year> <holder>Alexander Kirillov</holder>"
+
+#. (itstool) path: publisher/publishername
+#: C/index.docbook:58
+msgid "MATE Documentation Project"
+msgstr "Projecte de documentació de MATE"
+
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:61 C/index.docbook:155 C/index.docbook:163
+#: C/index.docbook:171 C/index.docbook:179 C/index.docbook:187
+#: C/index.docbook:197
+msgid "GNOME Documentation Project"
+msgstr "Projecte de documentació de GNOME"
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:2
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
+" of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
+"in the file COPYING-DOCS distributed with this manual."
+msgstr ""
+"Es concedeix el permís per copiar, distribuir i / o modificar aquest "
+"document sota els termes de la GFDL (GNU Free Documentation License), versió"
+" 1.1 o qualsevol versió posterior publicada per la Free Software Foundation "
+"que tinguin les seccions invariants, i sense cap text a la portada. Podeu "
+"trobar una còpia de la GFDL en aquest <ulink type=\"help\" "
+"url=\"help:fdl\">enllaç</ulink> o bé al fitxer COPYING-DOCS que es "
+"distribueix amb aquest manual."
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:12 C/legal.xml:12
+msgid ""
+"This manual is part of a collection of MATE manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in"
+" section 6 of the license."
+msgstr ""
+"Aquest manual forma part d'una col·lecció de manuals de MATE que estan "
+"distribuïts sota la GFDL. Si voleu distribuir aquest manual per separat de "
+"la col·lecció, podeu fer-ho afegint una còpia de la llicència al manual, tal"
+" com es descriu a la secció 6 de la llicència."
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:19 C/legal.xml:19
+msgid ""
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any MATE "
+"documentation, and the members of the MATE Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
+msgstr ""
+"Molts dels noms utilitzats per les empreses per distingir els seus productes"
+" i serveis es consideren marques comercials. Quan aquests noms apareixen en "
+"qualsevol documentació de MATE, i els membres del projecte de documentació "
+"de MATE en són conscients, els noms tenen lletres majúscules o bé comencen "
+"en majúscules."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:35 C/legal.xml:35
+msgid ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr ""
+"EL DOCUMENT S'OFEREIX «TAL COM ÉS», SENSE CAP TIPUS DE GARANTIA, NI "
+"EXPLÍCITA NI IMPLÍCITA; AIXÒ INCLOU, SENSE LIMITAR-S'HI, LES GARANTIES QUE "
+"EL DOCUMENT O LA VERSIÓ MODIFICADA DEL DOCUMENT NO TINGUI DEFECTES, SIGUI "
+"COMERCIALITZABLE, SIGUI ADEQUAT PER A UN ÚS CONCRET O NO INFRINGEIXI CAP "
+"LLEI. TOT EL RISC PEL QUE FA A LA QUALITAT, EXACTITUD I RENDIMENT DEL "
+"DOCUMENT O LA VERSIÓ MODIFICADA DEL DOCUMENT ÉS VOSTRE. EN CAS QUE EL "
+"DOCUMENT RESULTÉS DEFECTUÓS EN QUALSEVOL ASPECTE, VÓS (NO PAS L'ESCRIPTOR "
+"INICIAL, L'AUTOR O CAP ALTRE COL·LABORADOR) ASSUMIU TOT EL COST DE "
+"MANTENIMENT, REPARACIÓ O CORRECCIÓ. AQUESTA RENÚNCIA DE GARANTIA CONSTITUEIX"
+" UNA PART ESSENCIAL D'AQUESTA LLICÈNCIA. NO S'AUTORITZA L'ÚS DE CAP DOCUMENT"
+" O VERSIÓ MODIFICADA DEL DOCUMENT EXCEPTE SOTA AQUESTA RENÚNCIA DE GARANTIA;"
+" I"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:55 C/legal.xml:55
+msgid ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
+" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
+" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
+" POSSIBILITY OF SUCH DAMAGES."
+msgstr ""
+"EN CAP CAS I SOTA CAP INTERPRETACIÓ LEGAL, JA SIGUI PER AGREUJAMENT "
+"(INCLOENT-HI LA NEGLIGÈNCIA), CONTRACTE O ALTRE CAS, L'AUTOR, L'ESCRIPTOR "
+"ORIGINAL, QUALSEVOL DELS COL·LABORADORS O DISTRIBUÏDORS DEL DOCUMENT O UNA "
+"VERSIÓ MODIFICADA DEL DOCUMENT NI CAP PROVEÏDOR D'AQUESTES PARTS NO SERAN "
+"RESPONSABLES DAVANT DE NINGÚ PER CAP DANY DIRECTE, INDIRECTE, ESPECIAL, "
+"ACCIDENTAL O CONSECUTIU DE QUALSEVOL TIPUS; AIXÒ INCLOU, SENSE LIMITAR-S'HI,"
+" ELS DANYS PER PÈRDUA DE CLIENTS, INTERRUPCIONS DE LA FEINA, FALLADA O MAL "
+"FUNCIONAMENT DE L'ORDINADOR, O QUALSEVOL ALTRA PÈRDUA O DANY RELACIONAT AMB "
+"L'ÚS DEL DOCUMENT I LES VERSIONS MODIFICADES DEL DOCUMENT, FINS I TOT SI "
+"S'HA INFORMAT AQUESTA PART DE LA POSSIBILITAT D'AQUESTS DANYS."
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:28 C/legal.xml:28
+msgid ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<_:orderedlist-1/>"
+msgstr ""
+"EL DOCUMENT I LES VERSIONS MODIFICADES DEL DOCUMENT S'OFEREIXEN SOTA ELS "
+"TERMES DE LA LLICÈNCIA DE DOCUMENTACIÓ LLIURE DE GNU, TENINT EN COMPTE QUE: "
+"<_:orderedlist-1/>"
+
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:67
+msgid ""
+"<surname>MATE-Dokumentationsteam</surname> <affiliation> <orgname>Search for"
+" Files Maintainer</orgname> </affiliation>"
+msgstr ""
+"<surname>Equip de documentació de MATE</surname> <affiliation> "
+"<orgname>Mantenidor de cerca de fitxers</orgname> </affiliation>"
+
+#. (itstool) path: affiliation/address
+#: C/index.docbook:78
+#, no-wrap
+msgid "dennis_cranston@yahoo.com"
+msgstr "dennis_cranston@yahoo.com"
+
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:73
+msgid ""
+"<firstname>Dennis</firstname> <surname>Cranston</surname> <affiliation> "
+"<orgname>Search for Files Maintainer</orgname> <_:address-1/> </affiliation>"
+msgstr ""
+"<firstname>Dennis</firstname> <surname>Cranston</surname> <affiliation> "
+"<orgname>Mantenidor de cerca de fitxers</orgname> <_:address-1/> "
+"</affiliation>"
+
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:81
+msgid ""
+"<firstname>Sun</firstname> <surname>GNOME Documentation Team</surname> "
+"<affiliation> <orgname>Sun Microsystems</orgname> <_:address-1/> "
+"</affiliation>"
+msgstr ""
+"<firstname>Sun</firstname> <surname>Equip de documentació de GNOME</surname>"
+" <affiliation> <orgname>Sun Microsystems</orgname> <_:address-1/> "
+"</affiliation>"
+
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:89
+msgid ""
+"<firstname>Alexander</firstname> <surname>Kirillov</surname> <affiliation> "
+"<orgname>GNOME Documentation Project</orgname> <address> "
+"<email>kirillov@math.sunysb.edu</email> </address> </affiliation>"
+msgstr ""
+"<firstname>Alexander</firstname> <surname>Kirillov</surname> <affiliation> "
+"<orgname>Projecte de documentació de GNOME</orgname> <address> "
+"<email>kirillov@math.sunysb.edu</email> </address> </affiliation>"
+
+#. (itstool) path: revdescription/para
+#: C/index.docbook:125
+msgid "Wolfgang Ulbrich"
+msgstr "Wolfgang Ulbrich"
+
+#. (itstool) path: revdescription/para
+#: C/index.docbook:127 C/index.docbook:137 C/index.docbook:147
+msgid "Search for Files Maintainer"
+msgstr "Mantenidor de cerca de fitxers"
+
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:121
+msgid ""
+"<revnumber>Search for Files Manual V1.10</revnumber> <date>July 2015</date> "
+"<_:revdescription-1/>"
+msgstr ""
+"<revnumber>Versió 1.10 del manual de cerca de fitxers</revnumber> "
+"<date>Juliol de 2015</date> <_:revdescription-1/>"
+
+#. (itstool) path: revdescription/para
+#: C/index.docbook:134
+msgid "Joachim Noreiko <email>jnoreiko@yahoo.com</email>"
+msgstr "Joachim Noreiko <email>jnoreiko@yahoo.com</email>"
+
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:130
+msgid ""
+"<revnumber>Search for Files Manual V2.7</revnumber> <date>June 2005</date> "
+"<_:revdescription-1/>"
+msgstr ""
+"<revnumber>Versió 27 del manual de cerca de fitxers</revnumber> <date>Juny "
+"de 2005</date> <_:revdescription-1/>"
+
+#. (itstool) path: revdescription/para
+#: C/index.docbook:144
+msgid "Dennis Cranston <email>dennis_cranston@yahoo.com</email>"
+msgstr "Dennis Cranston <email>dennis_cranston@yahoo.com</email>"
+
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:140
+msgid ""
+"<revnumber>Search for Files Manual V2.6</revnumber> <date>January "
+"2005</date> <_:revdescription-1/>"
+msgstr ""
+"<revnumber>Versió 2.6 del manual de cerca de fitxers</revnumber> <date>Gener"
+" de 2005</date> <_:revdescription-1/>"
+
+#. (itstool) path: revdescription/para
+#: C/index.docbook:154 C/index.docbook:162 C/index.docbook:170
+#: C/index.docbook:178 C/index.docbook:186
+msgid "Sun GNOME Documentation Team"
+msgstr "Equip de documentació de GNOME de Sun"
+
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:150
+msgid ""
+"<revnumber>Search for Files Manual V2.4</revnumber> <date>February "
+"2004</date> <_:revdescription-1/>"
+msgstr ""
+"<revnumber>Versió 2.4 del manual de cerca de fitxers</revnumber> "
+"<date>Febrer de 2004</date> <_:revdescription-1/>"
+
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:158
+msgid ""
+"<revnumber>Search for Files Manual V2.3</revnumber> <date>September "
+"2002</date> <_:revdescription-1/>"
+msgstr ""
+"<revnumber>Versió 2.3 del manual de cerca de fitxers</revnumber> "
+"<date>Setembre de 2002</date> <_:revdescription-1/>"
+
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:166
+msgid ""
+"<revnumber>Search for Filesl Manual V2.2</revnumber> <date>August "
+"2002</date> <_:revdescription-1/>"
+msgstr ""
+"<revnumber>Versió 2.2 del manual de cerca de fitxers</revnumber> <date>Agost"
+" de 2002</date> <_:revdescription-1/>"
+
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:174
+msgid ""
+"<revnumber>Search for Files Manual V2.1</revnumber> <date>July 2002</date> "
+"<_:revdescription-1/>"
+msgstr ""
+"<revnumber>Versió 2.1 del manual de cerca de fitxers</revnumber> "
+"<date>Juliol de 2002</date> <_:revdescription-1/>"
+
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:182
+msgid ""
+"<revnumber>Search for Files Manual V2.0</revnumber> <date>May 2002</date> "
+"<_:revdescription-1/>"
+msgstr ""
+"<revnumber>Versió 2.0 del manual de cerca de fitxers</revnumber> <date>Maig "
+"de 2002</date> <_:revdescription-1/>"
+
+#. (itstool) path: revdescription/para
+#: C/index.docbook:194
+msgid "Alexander Kirillov <email>kirillov@math.sunysb.edu</email>"
+msgstr "Alexander Kirillov <email>kirillov@math.sunysb.edu</email>"
+
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:190
+msgid ""
+"<revnumber>Search for Files Manual</revnumber> <date>2000</date> "
+"<_:revdescription-1/>"
+msgstr ""
+"<revnumber>Manual de cerca de fitxers</revnumber> <date>2000</date> "
+"<_:revdescription-1/>"
+
+#. (itstool) path: articleinfo/releaseinfo
+#: C/index.docbook:202
+msgid "This manual describes version 1.10 of Search for Files."
+msgstr "Aquest manual descriu la versió 1.10 de cerca de fitxers."
+
+#. (itstool) path: legalnotice/title
+#: C/index.docbook:205
+msgid "Feedback"
+msgstr "Retroacció"
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:206
+msgid ""
+"To report a bug or make a suggestion regarding the Search for Files "
+"application or this manual, follow the directions in the <ulink url=\"help"
+":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+msgstr ""
+"Per informar d'un error o fer un suggeriment sobre l'aplicació de cerca de "
+"fitxers o d'aquest manual, seguiu les instruccions de la <ulink url=\"help"
+":mate-user-guide/feedback\" type=\"help\">pàgina de retroacció de "
+"MATE</ulink>."
+
+#. (itstool) path: article/indexterm
+#: C/index.docbook:212
+msgid "<primary>Search Tool</primary>"
+msgstr "<primary>Eina de cerca</primary>"
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:220
+msgid "Introduction"
+msgstr "Introducció"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:221
+msgid ""
+"The <application>Search for Files</application> application enables you to "
+"search for files on your system. To perform a basic search, you can type a "
+"filename or a partial filename, with or without wildcards. To refine your "
+"search, you can apply additional search options."
+msgstr ""
+"L'aplicació <application>Cerca de fitxers</application> us permet cercar "
+"fitxers al vostre sistema. Per realitzar una cerca bàsica, podeu teclejar un"
+" nom de fitxer o un nom de fitxer parcial, amb comodins o sense. Per refinar"
+" la cerca, podeu aplicar opcions de cerca addicionals."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:222
+msgid ""
+"<application>Search for Files</application> uses the "
+"<command>find</command>, <command>grep</command>, and "
+"<command>locate</command> UNIX commands. By default, when performing a basic"
+" search <application>Search for Files</application> first uses the "
+"<command>locate</command> command, and then uses the slower but more "
+"thorough <command>find</command> command."
+msgstr ""
+"<application>Cerca de fitxers</application> utilitza les ordres d'UNIX "
+"<command>find</command>, <command>grep</command> i "
+"<command>locate</command>. Per defecte, quan es realitza una cerca bàsica, "
+"<application>Cerca de fitxers</application> primer utilitza l'ordre "
+"<command>locate</command>, i a continuació, utilitza l'ordre més lenta però "
+"més exhaustiva <command>find</command>."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:223
+msgid ""
+"The case sensitivity of the search depends on your operating system. For "
+"example, on Linux, the <command>find</command>, <command>grep</command>, and"
+" <command>locate</command> commands support the <literal>-i</literal> "
+"option, so all searches are case-insensitive."
+msgstr ""
+"La distinció de majúscules i minúscules depèn del vostre sistema operatiu. "
+"Per exemple, a Linux, les ordres <command>find</command>, "
+"<command>grep</command> i <command>locate</command> admeten l'opció "
+"<literal>-i</literal>, de manera que totes les cerques distingeixen "
+"majúscules i minúscules."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:227
+msgid "Getting Started"
+msgstr "Primers passos"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:229
+msgid ""
+"You can start <application>Search for Files</application> in the following "
+"ways:"
+msgstr ""
+"Podeu iniciar <application>Cerca de fitxers</application> de les maneres "
+"següents:"
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:233
+msgid "From a <guimenu>Menu Bar</guimenu> on a panel"
+msgstr "Des d'una <guimenu>barra de menús</guimenu> en un tauler"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:235
+msgid ""
+"Choose <menuchoice><guisubmenu>Places</guisubmenu><guimenuitem>Search for "
+"Files...</guimenuitem></menuchoice>"
+msgstr ""
+"Seleccioneu <menuchoice><guisubmenu>Llocs</guisubmenu><guimenuitem>Cerca de "
+"fitxers...</guimenuitem></menuchoice>"
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:239
+msgid "From a <guimenu>Main Menu</guimenu> on a panel"
+msgstr "Des d'un <guimenu>menú principal</guimenu> en un tauler"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:241
+msgid ""
+"Choose <menuchoice><guimenuitem>Search for "
+"Files...</guimenuitem></menuchoice>"
+msgstr ""
+"Seleccioneu <menuchoice><guimenuitem>Cerca de "
+"fitxers...</guimenuitem></menuchoice>"
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:245
+msgid "From a command line"
+msgstr "Des d'una línia d'ordres"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:247
+msgid "Execute the following command: <command>mate-search-tool</command>"
+msgstr "Executeu l'ordre següent: <command>mate-search-tool</command>"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:254
+msgid ""
+"When you start <application>Search for Files</application>, the following "
+"window is displayed."
+msgstr ""
+"Quan inicieu <application>Cerca de fitxers</application>, es mostra la "
+"finestra següent."
+
+#. (itstool) path: figure/title
+#: C/index.docbook:258
+msgid "Search for Files Window"
+msgstr "Finestra de Cerca de fitxers"
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:262
+msgctxt "_"
+msgid ""
+"external ref='figures/mate-search-tool_window.png' "
+"md5='bb0f097535682e53e6bd43c66f0373c7'"
+msgstr ""
+"external ref='figures/mate-search-tool_window.png' "
+"md5='bb0f097535682e53e6bd43c66f0373c7'"
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:260
+msgid ""
+"<imageobject><imagedata fileref=\"figures/mate-search-tool_window.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Search for Files "
+"main window. </phrase> </textobject>"
+msgstr ""
+"<imageobject><imagedata fileref=\"figures/mate-search-tool_window.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Mostra la finestra "
+"principal de Cerca de fitxers. </phrase> </textobject>"
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:277
+msgid "Usage"
+msgstr "Utilització"
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:280
+msgid "To Perform a Basic Search"
+msgstr "Com realitzar una cerca bàsica"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:282
+msgid ""
+"To perform a basic search for a file on the system, perform the following "
+"steps:"
+msgstr ""
+"Per realitzar una cerca bàsica d'un fitxer al sistema, realitzeu els passos "
+"següents:"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:284
+msgid ""
+"Enter the search text in the <guilabel>Name contains</guilabel> field. The "
+"search text can be a filename or partial filename, with or without "
+"wildcards, as shown in the following table:"
+msgstr ""
+"Introduïu el text de cerca al camp <guilabel>El nom conté</guilabel>. El "
+"text de cerca pot ser un nom de fitxer complet o parcial, amb comodins o "
+"sense, com es mostra a la taula següent:"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:294
+msgid "Name Contains Text"
+msgstr "El nom conté el text"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:296
+msgid "Example"
+msgstr "Exemple"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:298
+msgid "Result"
+msgstr "Resultat"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:304
+msgid "Full or partial filename"
+msgstr "Nom de fitxer complet o parcial"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:308
+msgid "<userinput>myfile.txt</userinput>"
+msgstr "<userinput>fitxer.txt</userinput>"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:312
+msgid ""
+"<application>Search for Files</application> searches for all files that "
+"contain the text <userinput>myfile.txt</userinput> in the filename."
+msgstr ""
+"<application>Cerca de fitxers</application> cerca tots els fitxers que "
+"contenen el text <userinput>fitxer.txt</userinput> al nom de fitxer."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:318
+msgid "Partial filename combined with wildcards (*, [, ])"
+msgstr "Nom de fitxer parcial combinat amb comodins (*, [, ])"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:322
+msgid "<userinput>*.[ch]</userinput>"
+msgstr "<userinput>*.[ch]</userinput>"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:326
+msgid ""
+"<application>Search for Files</application> searches for all files that have"
+" extension <userinput>.c</userinput> or <userinput>.h</userinput>."
+msgstr ""
+"<application>Cerca de fitxers</application> cerca tots els fitxers que tenen"
+" l'extensió <userinput>.c</userinput> o <userinput>.h</userinput>."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:334
+msgid ""
+"In the <guilabel>Look in folder</guilabel> field, select the folder or "
+"device from which you want <application>Search for Files</application> to "
+"begin the search."
+msgstr ""
+"Al camp <guilabel>Cerca a la carpeta</guilabel>, seleccioneu la carpeta o el"
+" dispositiu des de la qual voleu que comenci <application>Cerca de "
+"fitxers</application>."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:336
+msgid "Click <guibutton>Find</guibutton> to perform the search."
+msgstr "Feu clic a <guibutton>Cerca</guibutton> per realitzar la cerca."
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:339
+msgid ""
+"<application>Search for Files</application> searches in the directory that "
+"you specify and the subdirectories of the directory. <application>Search for"
+" Files</application> displays the results of the search in the "
+"<guilabel>Search results</guilabel> list box. If <application>Search for "
+"Files</application> does not find any files that match the search criteria, "
+"the application displays the message \"No files found\" in the "
+"<guilabel>Search results</guilabel> list box."
+msgstr ""
+"<application>Cerca de fitxers</application> cerca al directori que "
+"especifiqueu, així com als subdirectoris del directori. <application>Cerca "
+"de fitxers</application> mostra els resultats de la cerca al quadre de "
+"llista <guilabel>Resultats de la cerca</guilabel>. Si <application>Cerca de "
+"fitxers</application> no troba cap fitxer que coincideixi amb els criteris "
+"de la cerca, l'aplicació mostra el missatge «No s'ha trobat cap fitxer» al "
+"quadre de llista <guilabel>Resultats de la cerca</guilabel>."
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:343
+msgid ""
+"By default, <application>Search for Files</application> will perform a quick"
+" search using the <command>locate</command> command followed by a more "
+"thorough second search using the <command>find</command> command. The "
+"<command>locate</command> command is faster because it uses a database of "
+"information about files. If this database is more than a week old, "
+"<application>Search for Files</application> could warn you that the search "
+"results may be out of date and give you the option of disabling the quick "
+"search. To update the database, run the command <command>updatedb</command> "
+"as the root user."
+msgstr ""
+"Per defecte, <application>Cerca de fitxers</application> farà una cerca "
+"ràpida utilitzant l'ordre <command>locate</command> seguida d'una segona "
+"cerca més exhaustiva utilitzant l'ordre <command>find</command>. L'ordre "
+"<command>locate</command> és més ràpida perquè utilitza una base de dades "
+"d'informació sobre fitxers. Si aquesta base de dades té més d'una setmana "
+"d'antiguitat, <application>Cerca de fitxers</application> podria avisar-vos "
+"que els resultats de la cerca poden estar desactualitzats i us ofereixen "
+"l'opció per inhabilitar la cerca ràpida. Per actualitzar la base de dades, "
+"executeu l'ordre <command>updatedb</command> amb l'usuari root."
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:347
+msgid "To Add Search Options"
+msgstr "Com afegir opcions de cerca"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:348
+msgid ""
+"You can add additional options to search for a file on the system. To add "
+"search options, perform the following steps:"
+msgstr ""
+"Podeu afegir opcions addicionals per cercar un fitxer al sistema. Per afegir"
+" opcions de cerca, seguiu els passos següents:"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:350
+msgid "Click on the <guilabel>Select more options</guilabel> text."
+msgstr "Feu clic al text <guilabel>Seleccioneu més opcions</guilabel>."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:351
+msgid "Click on the <guilabel>Available options</guilabel> drop-down list."
+msgstr ""
+"Feu clic a la llista desplegable <guilabel>Opcions disponibles</guilabel>."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:352
+msgid "Select the search option that you want to apply."
+msgstr "Seleccioneu l'opció de cerca que voleu aplicar."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:353
+msgid "Click <guibutton>Add</guibutton>."
+msgstr "Feu clic a <guibutton>Afegeix</guibutton>."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:354
+msgid ""
+"Specify the required search information for the search option, as described "
+"in <xref linkend=\"tbl-search-rules\"/>."
+msgstr ""
+"Especifiqueu la informació de cerca necessària per a l'opció de cerca, tal "
+"com es descriu a <xref linkend=\"tbl-search-rules\"/>."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:355
+msgid "Repeat the above steps for each search option that you want to apply."
+msgstr ""
+"Repetiu els passos anteriors per a cadascuna de les opcions de cerca que "
+"voleu aplicar."
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:357
+msgid ""
+"To remove a search option from the current search, click on the "
+"<guibutton>Remove</guibutton> button next to the option."
+msgstr ""
+"Per treure una opció de cerca de la cerca actual, feu clic al botó "
+"<guibutton>Suprimeix</guibutton> que està al costat de l'opció."
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:358
+msgid ""
+"To disable the search options from the current search, click on the "
+"<guilabel>Select more options</guilabel> text."
+msgstr ""
+"Per inhabilitar les opcions de cerca de la cerca actual, feu clic al botó "
+"<guilabel>Seleccioneu més opcions</guilabel>."
+
+#. (itstool) path: table/title
+#: C/index.docbook:361
+msgid "Search Options"
+msgstr "Opcions de cerca"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:368
+msgid "Option Name"
+msgstr "Nom de l'opció"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:370
+msgid "Description"
+msgstr "Descripció"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:376
+msgid "Contains the text"
+msgstr "Conté el text"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:378
+msgid "Search for files of type plain text that contain the specified text."
+msgstr "Cerca els fitxers de tipus text pla que contenen el text especificat."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:382
+msgid "Date modified less than"
+msgstr "La data de modificació és anterior a"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:384
+msgid ""
+"Search for files that are modified less than the period specified in days."
+msgstr ""
+"Cerca els fitxers que s'han modificat abans del període especificat en dies."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:388
+msgid "Date modified more than"
+msgstr "La data de modificació és posterior a"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:390
+msgid ""
+"Search for files that are modified longer than the period specified in days."
+msgstr ""
+"Cerca els fitxers que s'han modificat després del període especificat en "
+"dies."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:394
+msgid "Size at least"
+msgstr "La mida és almenys"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:396
+msgid ""
+"Search for files that are equal to or larger than the size specified in "
+"kilobytes."
+msgstr ""
+"Cerca els fitxers que són iguals o més grans que la mida especificada en "
+"kilobytes."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:400
+msgid "Size at most"
+msgstr "La mida és com a molt"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:402
+msgid ""
+"Search for files that are smaller than or equal to the size specified in "
+"kilobytes."
+msgstr ""
+"Cerca els fitxers que són iguals o més petits que la mida especificada en "
+"kilobytes."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:406
+msgid "File is empty"
+msgstr "El fitxer està buit"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:408
+msgid "Search for empty files."
+msgstr "Cerca els fitxers buits."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:412
+msgid "Owned by user"
+msgstr "Propietari del fitxer"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:414
+msgid ""
+"Search for files that are owned by the user specified. Type the name of the "
+"user in the text box provided."
+msgstr ""
+"Cerca els fitxers que són propietat de l'usuari especificat. Teclegeu el nom"
+" de l'usuari al quadre de text proporcionat."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:418
+msgid "Owned by group"
+msgstr "Grup del fitxer"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:420
+msgid ""
+"Search for files that are owned by the group specified. Type the name of the"
+" group in the text box provided."
+msgstr ""
+"Cerca els fitxers que són propietat del grup especificat. Teclegeu el nom "
+"del grup al quadre de text proporcionat."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:424
+msgid "Owner is unrecognized"
+msgstr "No es reconeix el propietari"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:426
+msgid ""
+"Search for files that are owned by a user or group that is unknown to the "
+"system."
+msgstr ""
+"Cerca els fitxers que són propietat d'un usuari o grup desconegut del "
+"sistema."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:430
+msgid "Name does not contain"
+msgstr "El nom no conté"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:432
+msgid ""
+"Search for filenames that do not contain the string that you enter. Enter a "
+"full filename or a partial filename with wildcards in the field provided. "
+"Use * to indicate a sequence of characters. Use ? to indicate a single "
+"character. The search is case-sensitive."
+msgstr ""
+"Cerca els noms de fitxer que no contenen la cadena que introduïu. Introduïu "
+"un nom de fitxer complet o un nom de fitxer parcial amb comodins al camp "
+"proporcionat. Utilitzeu * per indicar una seqüència de caràcters. Utilitzeu "
+"? per indicar un sol caràcter. La cerca distingeix majúscules i minúscules."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:436
+msgid "Name matches regular expression"
+msgstr "El nom coincideix amb una expressió regular"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:438
+msgid ""
+"Search for files that contain the specified regular expression in their "
+"directory path or filename. Type the regular expression in the text box "
+"provided."
+msgstr ""
+"Cerca els fitxers que contenen l'expressió regular especificada al seu camí "
+"o nom del fitxer. Teclegeu l'expressió regular al quadre de text "
+"proporcionat."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:442
+msgid "Show hidden and backup files"
+msgstr "Mostra els fitxers ocults i de còpia de seguretat"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:444
+msgid "Include hidden and backup files in the search."
+msgstr "Inclou els fitxers ocults i de còpia de seguretat a la cerca."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:448
+msgid "Follow symbolic links"
+msgstr "Segueix els enllaços simbòlics"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:450
+msgid "Follow symbolic links when searching for files."
+msgstr "Segueix els enllaços simbòlics quan se cerquen fitxers."
+
+#. (itstool) path: entry/para
+#: C/index.docbook:454
+msgid "Exclude other filesystems"
+msgstr "Exclou altres sistemes de fitxers"
+
+#. (itstool) path: entry/para
+#: C/index.docbook:456
+msgid ""
+"Search in directories that are in the same filesystem as the start "
+"directory."
+msgstr ""
+"Cerca als directoris que es troben al mateix sistema de fitxers que el "
+"directori d'inici."
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:466
+msgid "To Stop a Search"
+msgstr "Com aturar una cerca"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:467
+msgid ""
+"Click <guibutton>Stop</guibutton> to stop a search before "
+"<application>Search for Files</application> completes the search."
+msgstr ""
+"Feu clic a <guibutton>Atura</guibutton> per aturar <application>Cerca de "
+"fitxers</application> abans que completi la cerca."
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:471
+msgid "To Open a Displayed File"
+msgstr "Com obrir un fitxer mostrat"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:472
+msgid ""
+"To open a file displayed in the <guilabel>Search results</guilabel> list "
+"box, perform one of the following steps:"
+msgstr ""
+"Per obrir un fitxer mostrat al quadre de llista <guilabel>Resultats de la "
+"cerca</guilabel>, realitzeu uns dels passos següents:"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:474
+msgid "Right-click on the file, then choose <guimenuitem>Open</guimenuitem>."
+msgstr ""
+"Feu clic dret al fitxer, i després seleccioneu "
+"<guimenuitem>Obre</guimenuitem>."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:475
+msgid "Double-click on the file."
+msgstr "Feu doble clic al fitxer."
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:477
+msgid ""
+"To open the folder that contains a file displayed in the <guilabel>Search "
+"results</guilabel> list box, right-click on the file, then choose "
+"<guimenuitem>Open Containing Folder</guimenuitem>."
+msgstr ""
+"Per obrir la carpeta que conté un fitxer mostrat al quadre de llista "
+"<guilabel>Resultats de la cerca</guilabel>, feu clic dret al fitxer, i "
+"després seleccioneu <guimenuitem>Obre la carpeta contenidora</guimenuitem>."
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:481
+msgid "To Delete a Displayed File"
+msgstr "Com suprimir un fitxer mostrat"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:482
+msgid ""
+"To delete a file displayed in the <guilabel>Search results</guilabel> list "
+"box, right-click on the file, then choose <guimenuitem>Move to "
+"Trash</guimenuitem>."
+msgstr ""
+"Per suprimir un fitxer mostrat al quadre de llista <guilabel>Resultats de la"
+" cerca</guilabel>, feu clic dret al fitxer, i després seleccioneu "
+"<guimenuitem>Mou a la paperera</guimenuitem>."
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:493
+msgid "To Save the Search Results"
+msgstr "Com desar els resultats de la cerca"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:494
+msgid ""
+"To save the results of the last search that <application>Search for "
+"Files</application> performed, right-click in the <guilabel>Search "
+"results</guilabel> list, then choose <guimenuitem>Save Results "
+"As</guimenuitem>. Enter the name of the file to which you want to save the "
+"results, then click Save."
+msgstr ""
+"Per desar els resultats de l'última cerca realitzada per <application>Cerca "
+"de fitxers</application>, feu clic dret a la llista <guilabel>Resultats de "
+"la cerca</guilabel>, després seleccioneu <guimenuitem>Anomena i desa els "
+"resultats</guimenuitem>. Introduïu el nom del fitxer al qual voleu desar els"
+" resultats i, a continuació, feu clic a Desa."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:502
+msgid "Settings"
+msgstr "Ajusts"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:504
+msgid ""
+"<application>Search for Files</application> provides gsettings keys to "
+"modify some of its behavior. The gsettings values can be changed by starting"
+" the <application>Configuration Editor</application> in the following ways:"
+msgstr ""
+"<application>Cerca de fitxers</application> proporciona les claus gsettings "
+"per modificar el seu comportament. Els valors gsettings es poden canviar amb"
+" l'inici de l'<application>Editor de configuracions</application> de les "
+"maneres següents:"
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:508
+msgid "<guimenu>Applications</guimenu> menu"
+msgstr "Menú <guimenu>Aplicacions</guimenu>"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:510
+msgid ""
+"Choose <menuchoice><guisubmenu>System Tools</guisubmenu><guimenuitem>dconf "
+"Editor</guimenuitem></menuchoice>."
+msgstr ""
+"Seleccioneu <menuchoice><guisubmenu>Eines del "
+"sistema</guisubmenu><guimenuitem>Editor dconf</guimenuitem></menuchoice>."
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:514
+msgid "Command line"
+msgstr "Línia d'ordres"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:516
+msgid "Execute the following command: <command>dconf-editor</command>"
+msgstr "Executeu l'ordre següent: <command>dconf-editor</command>"
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:522
+msgid "Disable Quick Search"
+msgstr "Inhabilita la cerca ràpida"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:523
+msgid "Key name: org.mate.search-tool.disable-quick-search"
+msgstr "Nom de la clau: org.mate.search-tool.disable-quick-search"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:524 C/index.docbook:531 C/index.docbook:552
+msgid "Default value: false"
+msgstr "Valor predeterminat: false"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:525
+msgid ""
+"<application>Search for Files</application> speeds up file name searches by "
+"using the <command>locate</command> command. <command>Locate</command> "
+"provides a secure way to index and quickly search for file names. Because "
+"<command>locate</command> relies on a file index, the <guilabel>Search "
+"results</guilabel> list may not always be up to date."
+msgstr ""
+"<application>Cerca de fitxers</application> accelera les cerques del nom de "
+"fitxer utilitzant l'ordre <command>locate</command>. "
+"<command>Locate</command> proporciona una manera segura per indexar i cercar"
+" ràpidament els noms de fitxers. Perquè <command>locate</command> es basa en"
+" un índex de fitxers, la llista <guilabel>resultats de la cerca</guilabel> "
+"pot no estar sempre al dia."
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:529
+msgid "Disable Quick Search Second Scan"
+msgstr "Inhabilita el segon pas de la cerca ràpida"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:530
+msgid "Key name: org.mate.search-tool.disable-quick-search-second-scan"
+msgstr "Nom de la clau: org.mate.search-tool.disable-quick-search-second-scan"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:532
+msgid ""
+"After completing a quick search, <application>Search for Files</application>"
+" will perform a thorough search using the <command>find</command> command. "
+"The purpose of this second scan is to find files that have not been indexed."
+" Files that match the search criteria are added to the <guilabel>Search "
+"results</guilabel> list keeping the list up to date."
+msgstr ""
+"Després completar una cerca ràpida, <application>Cerca de "
+"fitxers</application> farà una cerca exhaustiva utilitzant l'ordre "
+"<command>find</command>. El propòsit d'aquesta segona exploració és trobar "
+"els fitxers que no s'hagin indexat. Els fitxers que coincideixen amb els "
+"criteris de cerca s'afegeixen a la llista <guilabel>Resultats de la "
+"cerca</guilabel> mantenint la llista actualitzada."
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:536
+msgid "Quick Search Excluded Paths"
+msgstr "Camins exclosos de la cerca ràpida"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:537
+msgid "Key name: org.mate.search-tool.quick-search-excluded-paths"
+msgstr "Nom de la clau: org.mate.search-tool.quick-search-excluded-paths"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:538
+msgid "Default values: [/mnt/*,/media/*,/dev/*,/tmp/*,/proc/*,/var/*]"
+msgstr "Valors predeterminats: [/mnt/*,/media/*,/dev/*,/tmp/*,/proc/*,/var/*]"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:539
+msgid ""
+"<application>Search for Files</application> will not perform a quick search "
+"for paths defined by this key. File name searches in the defined paths will "
+"use the <command>find</command> command. The wildcards '*' and '?' are "
+"supported."
+msgstr ""
+"<application>Cerca de fitxers</application> no realitzarà cap cerca ràpida "
+"als camins definits per aquesta clau. Les cerques del nom de fitxer als "
+"camins definits utilitzaran l'ordre <command>find</command>. S'admeten els "
+"comodins «*» i «?»."
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:543
+msgid "Quick Search Second Scan Excluded Paths"
+msgstr "Camins exclosos del segon pas de la cerca ràpida"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:544
+msgid "Key name: org.mate.search-tool.quick-search-second-scan-excluded-paths"
+msgstr ""
+"Nom de la clau: org.mate.search-tool.quick-search-second-scan-excluded-paths"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:545
+msgid "Default values: [/]"
+msgstr "Valors predeterminats: [/]"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:546
+msgid ""
+"<application>Search for Files</application> will not perform a second scan "
+"after a quick search for the paths defined by this key. Quick searches in "
+"the defined paths will not be followed by a thorough search using the "
+"<command>find</command> command. The wildcards '*' and '?' are supported."
+msgstr ""
+"<application>Cerca de fitxers</application> no realitzarà una segona "
+"exploració després d'una cerca ràpida als camins definits per aquesta clau. "
+"Les cerques ràpides als camins definits no seran seguides d'una cerca "
+"exhaustiva utilitzant l'ordre <command>find</command>. S'admeten els "
+"comodins «*» i «?»."
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:550
+msgid "Show Additional Options"
+msgstr "Mostra les opcions addicionals"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:551
+msgid "Key name: org.mate.search-tool.show-additional-options"
+msgstr "Nom de la clau: org.mate.search-tool.show-additional-options"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:553
+msgid ""
+"This key determines if the <guilabel>Select more options</guilabel> section "
+"is expanded when <application>Search for Files</application> is started."
+msgstr ""
+"Aquesta clau determina si la secció <guilabel>Seleccioneu més "
+"opcions</guilabel> s'expandeix quan s'inicia <application>Cerca de "
+"fitxers</application>."
+
+#. (itstool) path: para/ulink
+#: C/legal.xml:9
+msgid "link"
+msgstr "enllaç"
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:2
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
+" of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""
+"Es concedeix el permís per copiar, distribuir i / o modificar aquest "
+"document sota els termes de la GFDL (GNU Free Documentation License), versió"
+" 1.1 o qualsevol versió posterior publicada per la Free Software Foundation "
+"que tinguin les seccions invariants, i sense cap text a la portada. Podeu "
+"trobar una còpia de la GFDL en aquest <_:ulink-1/> o bé al fitxer COPYING-"
+"DOCS que es distribueix amb aquest manual."
