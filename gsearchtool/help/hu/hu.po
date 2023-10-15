@@ -3,7 +3,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Falu <info@falu.me>, 2018
 # Balázs Meskó <meskobalazs@gmail.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <cafe@raveit.de>, 2018
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019
 # Csaba Székely <szekelycsaba76@gmail.com>, 2019
 # 
@@ -13,7 +13,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 16:47+0100\n"
 "PO-Revision-Date: 2018-09-13 10:15+0000\n"
 "Last-Translator: Csaba Székely <szekelycsaba76@gmail.com>, 2019\n"
-"Language-Team: Hungarian (https://www.transifex.com/mate/teams/13566/hu/)\n"
+"Language-Team: Hungarian (https://www.transifex.com/cafe/teams/13566/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,9 +24,9 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Dvornik László<dvornik at mate dot hu>\n"
-"Kelemen Gábor<kelemeng at mate dot hu>\n"
-"Tímár András<timar at mate dot hu>\n"
+"Dvornik László<dvornik at cafe dot hu>\n"
+"Kelemen Gábor<kelemeng at cafe dot hu>\n"
+"Tímár András<timar at cafe dot hu>\n"
 "Kalman „KAMI” Szalai<kami911 at gmail dot com>\n"
 "Falu<info at falu dot me>\n"
 "Rezső Páder<rezso at rezso dot net>\n"
@@ -334,7 +334,7 @@ msgstr "Visszajelzés"
 msgid ""
 "To report a bug or make a suggestion regarding the Search for Files "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -419,7 +419,7 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:247
-msgid "Execute the following command: <command>mate-search-tool</command>"
+msgid "Execute the following command: <command>cafe-search-tool</command>"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -442,14 +442,14 @@ msgstr ""
 #: C/index.docbook:262
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-search-tool_window.png' "
+"external ref='figures/cafe-search-tool_window.png' "
 "md5='bb0f097535682e53e6bd43c66f0373c7'"
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:260
 msgid ""
-"<imageobject><imagedata fileref=\"figures/mate-search-tool_window.png\" "
+"<imageobject><imagedata fileref=\"figures/cafe-search-tool_window.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Search for Files "
 "main window. </phrase> </textobject>"
 msgstr ""
@@ -913,7 +913,7 @@ msgstr "Gyors keresés kikapcsolása"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:523
-msgid "Key name: org.mate.search-tool.disable-quick-search"
+msgid "Key name: org.cafe.search-tool.disable-quick-search"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -938,7 +938,7 @@ msgstr "Gyors keresés második körének kikapcsolása"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:530
-msgid "Key name: org.mate.search-tool.disable-quick-search-second-scan"
+msgid "Key name: org.cafe.search-tool.disable-quick-search-second-scan"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -958,7 +958,7 @@ msgstr "A gyors keresésből kihagyott útvonalak"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:537
-msgid "Key name: org.mate.search-tool.quick-search-excluded-paths"
+msgid "Key name: org.cafe.search-tool.quick-search-excluded-paths"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -982,7 +982,7 @@ msgstr "A gyors keresés második köréből kihagyandó útvonalak"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:544
-msgid "Key name: org.mate.search-tool.quick-search-second-scan-excluded-paths"
+msgid "Key name: org.cafe.search-tool.quick-search-second-scan-excluded-paths"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -1006,7 +1006,7 @@ msgstr "További beállítások megjelenítése"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:551
-msgid "Key name: org.mate.search-tool.show-additional-options"
+msgid "Key name: org.cafe.search-tool.show-additional-options"
 msgstr ""
 
 #. (itstool) path: sect2/para

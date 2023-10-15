@@ -21,7 +21,7 @@
 #define __GDICT_APPLET_H__
 
 #include <gtk/gtk.h>
-#include <mate-panel-applet.h>
+#include <cafe-panel-applet.h>
 #include <libgdict/gdict.h>
 
 G_BEGIN_DECLS

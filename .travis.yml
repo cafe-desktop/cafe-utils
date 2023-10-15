@@ -10,8 +10,8 @@ branches:
     - gh-pages
 
 before_install:
-  - curl -Ls -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/docker-build
-  - curl -Ls -o gen-index https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/gen-index.sh
+  - curl -Ls -o docker-build https://github.com/cafe-desktop/cafe-dev-scripts/raw/master/travis/docker-build
+  - curl -Ls -o gen-index https://github.com/cafe-desktop/cafe-dev-scripts/raw/master/travis/gen-index.sh
   - chmod +x docker-build gen-index
 
 install:
@@ -45,7 +45,7 @@ after_success:
   - 'if [[ "$TRAVIS_SECURE_ENV_VARS" == "true" && "$TRAVIS_PULL_REQUEST" != "false" && ${DISTRO} =~ ^fedora.*$ ]]; then
         REPO_SLUG_ARRAY=(${TRAVIS_REPO_SLUG//\// });
         REPO_NAME=${REPO_SLUG_ARRAY[1]};
-        URL="https://${REPO_NAME}.mate-desktop.dev";
+        URL="https://${REPO_NAME}.cafe-desktop.dev";
         COMMENT="Code analysis completed";
         curl -H "Authorization: token $GITHUB_TOKEN" -X POST
            -d "{\"state\": \"success\", \"description\": \"$COMMENT\", \"context\":\"scan-build\", \"target_url\": \"$URL\"}"
@@ -63,7 +63,7 @@ env:
 ##########################################################
 requires:
   archlinux:
-    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/mate-utils
+    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/cafe-utils
     - autoconf-archive
     - clang
     - gcc
@@ -72,16 +72,16 @@ requires:
     - libcanberra
     - libgtop
     - make
-    - mate-common
-    - mate-panel
+    - cafe-common
+    - cafe-panel
     - python
     - udisks2
     - which
     - yelp-tools
 
   debian:
-    # Useful URL: https://github.com/mate-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-mate-team/mate-utils
+    # Useful URL: https://github.com/cafe-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-cafe-team/cafe-utils
     - autoconf-archive
     - autopoint
     - clang
@@ -95,20 +95,20 @@ requires:
     - libglib2.0-dev
     - libgtk-3-dev
     - libgtop2-dev
-    - libmate-panel-applet-dev
+    - libcafe-panel-applet-dev
     - libudisks2-dev
     - libx11-dev
     - libxext-dev
     - libxt-dev
     - make
-    - mate-common
+    - cafe-common
     - x11proto-xext-dev
     - xsltproc
     - yelp-tools
     - zlib1g-dev
 
   fedora:
-    # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-utils.git
+    # Useful URL: https://src.fedoraproject.org/cgit/rpms/cafe-utils.git
     - autoconf-archive
     - clang
     - clang-analyzer
@@ -125,8 +125,8 @@ requires:
     - libgtop2-devel
     - libudisks2-devel
     - make
-    - mate-common
-    - mate-panel-devel
+    - cafe-common
+    - cafe-panel-devel
     - mesa-libGL-devel
     - popt-devel
     - redhat-rpm-config
@@ -145,13 +145,13 @@ requires:
     - libglib2.0-dev
     - libgtk-3-dev
     - libgtop2-dev
-    - libmate-panel-applet-dev
+    - libcafe-panel-applet-dev
     - libudisks2-dev
     - libx11-dev
     - libxext-dev
     - libxt-dev
     - make
-    - mate-common
+    - cafe-common
     - x11proto-xext-dev
     - xsltproc
     - yelp-tools
@@ -180,9 +180,9 @@ before_scripts:
   # disable pt language for help in search tool
   - sed -i s/"IGNORE_HELP_LINGUAS ="/"IGNORE_HELP_LINGUAS = pt"/g gsearchtool/help/Makefile.am
   - cd ${START_DIR}
-  - '[ -f mate-common-1.23.3.tar.xz ] || curl -Ls -o mate-common-1.23.3.tar.xz http://pub.mate-desktop.org/releases/1.23/mate-common-1.23.3.tar.xz'
-  - tar xf mate-common-1.23.3.tar.xz
-  - cd mate-common-1.23.3
+  - '[ -f cafe-common-1.23.3.tar.xz ] || curl -Ls -o cafe-common-1.23.3.tar.xz http://pub.cafe-desktop.org/releases/1.23/cafe-common-1.23.3.tar.xz'
+  - tar xf cafe-common-1.23.3.tar.xz
+  - cd cafe-common-1.23.3
   - if [ ${DISTRO_NAME} == "debian" -o ${DISTRO_NAME} == "ubuntu" ];then
   -     ./configure --prefix=/usr --libdir=/usr/lib/x86_64-linux-gnu --libexecdir=/usr/lib/x86_64-linux-gnu
   - else
@@ -216,10 +216,10 @@ releases:
   prerelease: false
   checksum: true
   file_glob: true
-  files: mate-utils-*.tar.xz
+  files: cafe-utils-*.tar.xz
   github_release:
     tags: true
     overwrite: true
     base_version: 1.20.0
     notify_servers:
-      - https://release.mate-desktop.org/release
+      - https://release.cafe-desktop.org/release

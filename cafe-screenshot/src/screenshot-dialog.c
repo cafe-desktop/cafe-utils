@@ -196,14 +196,14 @@ screenshot_dialog_new (GdkPixbuf *screenshot,
 
   dialog->screenshot = screenshot;
 
-  if (gtk_builder_add_from_resource (dialog->ui, "/org/mate/screenshot/mate-screenshot.ui", &error) == 0)
+  if (gtk_builder_add_from_resource (dialog->ui, "/org/cafe/screenshot/cafe-screenshot.ui", &error) == 0)
     {
       GtkWidget *dialog;
       dialog = gtk_message_dialog_new (NULL, 0,
 				       GTK_MESSAGE_ERROR,
 				       GTK_BUTTONS_OK,
 				       _("Error loading UI definition file for the screenshot program: \n%s\n\n"
-				         "Please check your installation of mate-utils."), error->message);
+				         "Please check your installation of cafe-utils."), error->message);
       gtk_dialog_run (GTK_DIALOG (dialog));
       gtk_widget_destroy (dialog);
 

@@ -180,7 +180,7 @@ get_print_font (void)
   static GSettings *settings = NULL;
 
   if (settings == NULL)
-    settings = g_settings_new ("org.mate.dictionary");
+    settings = g_settings_new ("org.cafe.dictionary");
 
   return g_settings_get_string (settings, "print-font");
 }

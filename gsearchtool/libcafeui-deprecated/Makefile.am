@@ -1,14 +1,14 @@
-noinst_LTLIBRARIES = libmateui-deprecated.la
+noinst_LTLIBRARIES = libcafeui-deprecated.la
 
-libmateui_deprecated_la_CFLAGS = \
+libcafeui_deprecated_la_CFLAGS = \
 	$(GLIB_CFLAGS) \
 	$(GTK_CFLAGS) \
 	$(WARN_CFLAGS)
 
-libmateui_deprecated_la_LIBADD = \
+libcafeui_deprecated_la_LIBADD = \
 	$(GLIB_LIBS) \
 	$(GTK_LIBS)
 
-libmateui_deprecated_la_SOURCES = \
+libcafeui_deprecated_la_SOURCES = \
 	gsearchtool-entry.h	\
 	gsearchtool-entry.c

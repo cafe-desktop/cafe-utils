@@ -216,7 +216,7 @@ msgstr ""
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:206
-msgid "To report a bug or make a suggestion regarding the Search for Files application or this manual, follow the directions in the <ulink url=\"help:mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+msgid "To report a bug or make a suggestion regarding the Search for Files application or this manual, follow the directions in the <ulink url=\"help:cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -281,7 +281,7 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:247
-msgid "Execute the following command: <command>mate-search-tool</command>"
+msgid "Execute the following command: <command>cafe-search-tool</command>"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -301,12 +301,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:262
 msgctxt "_"
-msgid "external ref='figures/mate-search-tool_window.png' md5='bb0f097535682e53e6bd43c66f0373c7'"
+msgid "external ref='figures/cafe-search-tool_window.png' md5='bb0f097535682e53e6bd43c66f0373c7'"
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:260
-msgid "<imageobject><imagedata fileref=\"figures/mate-search-tool_window.png\" format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Search for Files main window. </phrase> </textobject>"
+msgid "<imageobject><imagedata fileref=\"figures/cafe-search-tool_window.png\" format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Search for Files main window. </phrase> </textobject>"
 msgstr ""
 
 #. (itstool) path: sect1/title
@@ -691,7 +691,7 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:523
-msgid "Key name: org.mate.search-tool.disable-quick-search"
+msgid "Key name: org.cafe.search-tool.disable-quick-search"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -713,7 +713,7 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:530
-msgid "Key name: org.mate.search-tool.disable-quick-search-second-scan"
+msgid "Key name: org.cafe.search-tool.disable-quick-search-second-scan"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -728,7 +728,7 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:537
-msgid "Key name: org.mate.search-tool.quick-search-excluded-paths"
+msgid "Key name: org.cafe.search-tool.quick-search-excluded-paths"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -748,7 +748,7 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:544
-msgid "Key name: org.mate.search-tool.quick-search-second-scan-excluded-paths"
+msgid "Key name: org.cafe.search-tool.quick-search-second-scan-excluded-paths"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -768,7 +768,7 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:551
-msgid "Key name: org.mate.search-tool.show-additional-options"
+msgid "Key name: org.cafe.search-tool.show-additional-options"
 msgstr ""
 
 #. (itstool) path: sect2/para

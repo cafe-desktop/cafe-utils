@@ -40,7 +40,7 @@
 #include "gdict-pref-dialog.h"
 #include "gdict-common.h"
 
-#define GDICT_PREFERENCES_UI 	PKGDATADIR "/mate-dictionary-preferences.ui"
+#define GDICT_PREFERENCES_UI 	PKGDATADIR "/cafe-dictionary-preferences.ui"
 
 #define DEFAULT_MIN_WIDTH 	220
 #define DEFAULT_MIN_HEIGHT 	330
@@ -488,7 +488,7 @@ response_cb (GtkDialog *dialog,
     {
     case GTK_RESPONSE_HELP:
       gtk_show_uri_on_window (GTK_WINDOW (dialog),
-                    "help:mate-dictionary/mate-dictionary-preferences",
+                    "help:cafe-dictionary/cafe-dictionary-preferences",
                     gtk_get_current_event_time (), &err);
       if (err)
 	{

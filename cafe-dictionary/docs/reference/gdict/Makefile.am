@@ -3,7 +3,7 @@
 AUTOMAKE_OPTIONS = 1.6
 
 # The name of the module, e.g. 'glib'.
-DOC_MODULE=mate-dict
+DOC_MODULE=cafe-dict
 
 # The top-level SGML file. Change it if you want.
 DOC_MAIN_SGML_FILE=gdict-docs.sgml
@@ -26,8 +26,8 @@ MKDB_OPTIONS=--sgml-mode --output-format=xml
 FIXXREF_OPTIONS=
 
 # Used for dependencies.
-HFILE_GLOB=$(top_srcdir)/mate-dictionary/libgdict/*.h
-CFILE_GLOB=$(top_srcdir)/mate-dictionary/libgdict/*.c
+HFILE_GLOB=$(top_srcdir)/cafe-dictionary/libgdict/*.h
+CFILE_GLOB=$(top_srcdir)/cafe-dictionary/libgdict/*.c
 
 # Header files to ignore when scanning.
 IGNORE_HFILES = \
@@ -55,12 +55,12 @@ GTKDOC_CFLAGS = \
 	$(CPPFLAGS) \
 	$(LIBGDICT_CFLAGS) \
 	-I$(srcdir)/../../../libgdict \
-	-I$(top_builddir)/mate-dictionary/libgdict
+	-I$(top_builddir)/cafe-dictionary/libgdict
 
 GTKDOC_LIBS = \
 	$(LDFLAGS) \
 	$(LIBGDICT_LIBS) \
-	../../../libgdict/libmatedict.la
+	../../../libgdict/libcafedict.la
 
 include $(top_srcdir)/gtk-doc.make
 

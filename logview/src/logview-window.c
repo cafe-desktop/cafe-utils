@@ -354,7 +354,7 @@ logview_help (GtkAction *action, GtkWidget *parent_window)
   GError *error = NULL;
 
   gtk_show_uri_on_window (GTK_WINDOW (parent_window),
-                "help:mate-system-log", gtk_get_current_event_time (),
+                "help:cafe-system-log", gtk_get_current_event_time (),
                 &error);
 
   if (error) {
@@ -778,7 +778,7 @@ logview_about (GtkWidget *widget, GtkWidget *window)
                          "translator_credits", strcmp (logview_about_translator_credits,
                                                        "translator-credits") != 0 ?
                                                logview_about_translator_credits : NULL,
-                         "logo_icon_name", "mate-system-log",
+                         "logo_icon_name", "cafe-system-log",
                          NULL);
   g_free (license_trans);
 
@@ -1312,7 +1312,7 @@ logview_window_init (LogviewWindow *logview)
   gtk_window_add_accel_group (GTK_WINDOW (logview), accel_group);
 
   res = gtk_ui_manager_add_ui_from_resource (priv->ui_manager,
-                                             "/org/mate/system-log/logview-toolbar.xml",
+                                             "/org/cafe/system-log/logview-toolbar.xml",
                                              &error);
 
   if (res == FALSE) {

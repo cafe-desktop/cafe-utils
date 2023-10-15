@@ -8,7 +8,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 16:47+0100\n"
 "PO-Revision-Date: 2018-09-14 23:21+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>, 2018\n"
-"Language-Team: Malay (https://www.transifex.com/mate/teams/13566/ms/)\n"
+"Language-Team: Malay (https://www.transifex.com/cafe/teams/13566/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -337,10 +337,10 @@ msgstr "Maklumbalas"
 msgid ""
 "To report a bug or make a suggestion regarding the System Log Viewer "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 "Untuk melaporkan pepijat atau membuat saranan berkenaan aplikasi Pelihat Log"
-" Sistem atau panduan ini, ikuti arahan di dalam <ulink url=\"help:mate-user-"
+" Sistem atau panduan ini, ikuti arahan di dalam <ulink url=\"help:cafe-user-"
 "guide/feedback\" type=\"help\">Halaman Maklumbalas MATE</ulink>."
 
 #. (itstool) path: article/indexterm
@@ -429,9 +429,9 @@ msgstr "Baris perintah"
 #. (itstool) path: listitem/para
 #: C/index.docbook:258
 msgid ""
-"Type <command>mate-system-log</command>, then press <keycap>Return</keycap>."
+"Type <command>cafe-system-log</command>, then press <keycap>Return</keycap>."
 msgstr ""
-"Taip <command>mate-system-log</command>, kemudian ketik "
+"Taip <command>cafe-system-log</command>, kemudian ketik "
 "<keycap>Return</keycap>."
 
 #. (itstool) path: sect1/para

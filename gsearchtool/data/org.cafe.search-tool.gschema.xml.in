@@ -1,5 +1,5 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.mate.search-tool" path="/org/mate/search-tool/">
+  <schema id="org.cafe.search-tool" path="/org/cafe/search-tool/">
     <key name="search-history" type="a{sas}">
       <default>[ ]</default>
       <summary>Search history</summary>
@@ -54,9 +54,9 @@
       <summary>Look in Folder</summary>
       <description>This key defines the default value of the "Look in Folder" widget.</description>
     </key>
-    <child name="select" schema="org.mate.search-tool.select"/>
+    <child name="select" schema="org.cafe.search-tool.select"/>
   </schema>
-  <schema id="org.mate.search-tool.select" path="/org/mate/search-tool/select/">
+  <schema id="org.cafe.search-tool.select" path="/org/cafe/search-tool/select/">
     <key name="contains-the-text" type="b">
       <default>true</default>
       <description>This key determines if the "Contains the text" search option is selected when the search tool is started.</description>

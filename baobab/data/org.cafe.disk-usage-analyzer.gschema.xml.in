@@ -1,9 +1,9 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.mate.disk-usage-analyzer" path="/org/mate/disk-usage-analyzer/">
-    <child name="preferences" schema="org.mate.disk-usage-analyzer.preferences"/>
-    <child name="ui" schema="org.mate.disk-usage-analyzer.ui"/>
+  <schema id="org.cafe.disk-usage-analyzer" path="/org/cafe/disk-usage-analyzer/">
+    <child name="preferences" schema="org.cafe.disk-usage-analyzer.preferences"/>
+    <child name="ui" schema="org.cafe.disk-usage-analyzer.ui"/>
   </schema>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.mate.disk-usage-analyzer.preferences" path="/org/mate/disk-usage-analyzer/preferences/">
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.cafe.disk-usage-analyzer.preferences" path="/org/cafe/disk-usage-analyzer/preferences/">
     <key name="monitor-home" type="b">
       <default>false</default>
       <summary>Monitor Home</summary>
@@ -15,7 +15,7 @@
       <description>A list of URIs for partitions to be excluded from scanning.</description>
     </key>
   </schema>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.mate.disk-usage-analyzer.ui" path="/org/mate/disk-usage-analyzer/ui/">
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.cafe.disk-usage-analyzer.ui" path="/org/cafe/disk-usage-analyzer/ui/">
     <key name="toolbar-visible" type="b">
       <default>true</default>
       <summary>Toolbar is Visible</summary>

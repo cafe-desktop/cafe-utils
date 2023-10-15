@@ -1,6 +1,6 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <cafe@raveit.de>, 2018
 # Marco Z. <minaz666@gmail.com>, 2018
 # Giuseppe Pignataro <rogepix@gmail.com>, 2019
 # Enrico B. <enricobe@hotmail.com>, 2019
@@ -12,7 +12,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 16:47+0100\n"
 "PO-Revision-Date: 2018-09-14 23:21+0000\n"
 "Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2020\n"
-"Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
+"Language-Team: Italian (https://www.transifex.com/cafe/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -346,11 +346,11 @@ msgstr "Commenti"
 msgid ""
 "To report a bug or make a suggestion regarding the System Log Viewer "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 "Per segnalare un malfunzionamento o un suggerimento per il Visualizzatore "
 "registri di sistema o questo manuale, segui le indicazioni nella <ulink "
-"url=\"help:mate-user-guide/feedback\" type=\"help\">Pagina di feedback di "
+"url=\"help:cafe-user-guide/feedback\" type=\"help\">Pagina di feedback di "
 "MATE</ulink>."
 
 #. (itstool) path: article/indexterm
@@ -441,9 +441,9 @@ msgstr "Riga di comando"
 #. (itstool) path: listitem/para
 #: C/index.docbook:258
 msgid ""
-"Type <command>mate-system-log</command>, then press <keycap>Return</keycap>."
+"Type <command>cafe-system-log</command>, then press <keycap>Return</keycap>."
 msgstr ""
-"Digitare <command>mate-system-log</command> e premere "
+"Digitare <command>cafe-system-log</command> e premere "
 "<keycap>Invio</keycap>."
 
 #. (itstool) path: sect1/para

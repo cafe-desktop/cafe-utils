@@ -5,17 +5,17 @@ AM_CPPFLAGS = \
 	-DSYSCONFDIR=\""$(sysconfdir)"\"		\
 	-DLIBDIR=\""$(libdir)"\"			\
 	-DDATADIR=\""$(datadir)"\" 			\
-	-DPKGDATADIR=\""$(datadir)/mate-dictionary"\" 	\
+	-DPKGDATADIR=\""$(datadir)/cafe-dictionary"\" 	\
 	-DMATELOCALEDIR=\""$(datadir)/locale"\"		\
 	$(NULL)
 
-bin_PROGRAMS = mate-dictionary
+bin_PROGRAMS = cafe-dictionary
 
 if BUILD_GDICT_APPLET
-libexec_PROGRAMS = mate-dictionary-applet
+libexec_PROGRAMS = cafe-dictionary-applet
 endif
 
-mate_dictionary_SOURCES = \
+cafe_dictionary_SOURCES = \
 	gdict-about.c		\
 	gdict-about.h		\
 	gdict-app.c		\
@@ -35,18 +35,18 @@ mate_dictionary_SOURCES = \
 	main.c			\
 	$(NULL)
 
-mate_dictionary_CFLAGS = \
-	-I$(top_builddir)/mate-dictionary \
-	-I$(top_srcdir)/mate-dictionary \
+cafe_dictionary_CFLAGS = \
+	-I$(top_builddir)/cafe-dictionary \
+	-I$(top_srcdir)/cafe-dictionary \
 	$(GLIB_CFLAGS) \
 	$(GIO_CFLAGS) \
 	$(GTK_CFLAGS) \
 	$(WARN_CFLAGS) \
 	$(NULL)
 
-mate_dictionary_LDADD = \
+cafe_dictionary_LDADD = \
 	-lm			\
-	$(top_builddir)/mate-dictionary/libgdict/libmatedict.la \
+	$(top_builddir)/cafe-dictionary/libgdict/libcafedict.la \
 	$(GLIB_LIBS) \
 	$(GIO_LIBS) \
 	$(GTK_LIBS) \
@@ -54,7 +54,7 @@ mate_dictionary_LDADD = \
 
 if BUILD_GDICT_APPLET
 
-mate_dictionary_applet_SOURCES = \
+cafe_dictionary_applet_SOURCES = \
 	gdict-about.c 		\
 	gdict-about.h		\
 	gdict-aligned-window.c	\
@@ -73,9 +73,9 @@ mate_dictionary_applet_SOURCES = \
 	gdict-source-dialog.h 	\
 	$(NULL)
 
-mate_dictionary_applet_CFLAGS = \
-	-I$(top_builddir)/mate-dictionary \
-	-I$(top_srcdir)/mate-dictionary \
+cafe_dictionary_applet_CFLAGS = \
+	-I$(top_builddir)/cafe-dictionary \
+	-I$(top_srcdir)/cafe-dictionary \
 	$(APPLET_CFLAGS) \
 	$(GLIB_CFLAGS) \
 	$(GIO_CFLAGS) \
@@ -83,9 +83,9 @@ mate_dictionary_applet_CFLAGS = \
 	$(WARN_CFLAGS) \
 	$(NULL)
 
-mate_dictionary_applet_LDADD = \
+cafe_dictionary_applet_LDADD = \
 	-lm			\
-	$(top_builddir)/mate-dictionary/libgdict/libmatedict.la \
+	$(top_builddir)/cafe-dictionary/libgdict/libcafedict.la \
 	$(APPLET_LIBS) \
 	$(GLIB_LIBS) \
 	$(GIO_LIBS) \

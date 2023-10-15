@@ -37,7 +37,7 @@
 #include "baobab-treemap.h"
 #include "baobab-ringschart.h"
 
-#define BAOBAB_UI_RESOURCE "/org/mate/disk-usage-analyzer/baobab-main-window.ui"
+#define BAOBAB_UI_RESOURCE "/org/cafe/disk-usage-analyzer/baobab-main-window.ui"
 
 static void push_iter_in_stack (GtkTreeIter *);
 static GtkTreeIter pop_iter_from_stack (void);
@@ -559,7 +559,7 @@ home_contents_changed (GFileMonitor      *file_monitor,
 
 	excluding = g_file_get_basename (child);
 	if (strcmp (excluding, ".recently-used") == 0   ||
-	    strcmp (excluding, ".mate2_private") == 0  ||
+	    strcmp (excluding, ".cafe2_private") == 0  ||
 	    strcmp (excluding, ".xsession-errors") == 0 ||
 	    strcmp (excluding, ".bash_history") == 0) {
 		g_free (excluding);
@@ -1261,7 +1261,7 @@ main (int argc, char *argv[])
 
 	glibtop_init ();
 
-	gtk_window_set_default_icon_name ("mate-disk-usage-analyzer");
+	gtk_window_set_default_icon_name ("cafe-disk-usage-analyzer");
 
 	baobab_init ();
 

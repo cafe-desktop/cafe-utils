@@ -1,6 +1,6 @@
 [Applet Factory]
 Id=DictionaryAppletFactory
-Location=@LIBEXECDIR@/mate-dictionary-applet
+Location=@LIBEXECDIR@/cafe-dictionary-applet
 Name=Dictionary Applet Factory
 Description=Factory for the dictionary applet
 

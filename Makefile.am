@@ -8,15 +8,15 @@ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 SUBDIRS = 			\
 	po			\
 	baobab			\
-	mate-dictionary		\
-	mate-screenshot		\
+	cafe-dictionary		\
+	cafe-screenshot		\
 	gsearchtool		\
 	logview			\
 	$(NULL)
 
 if BUILD_DISK_IMAGE_MOUNTER
 SUBDIRS += 			\
-	mate-disk-image-mounter
+	cafe-disk-image-mounter
 endif
 
 EXTRA_DIST = \

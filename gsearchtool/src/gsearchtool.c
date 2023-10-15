@@ -512,7 +512,7 @@ start_animation (GSearchWindow * gsearch, gboolean first_pass)
 		gtk_window_set_title (GTK_WINDOW (gsearch->window), title);
 
 		gtk_label_set_text (GTK_LABEL (gsearch->files_found_label), "");
-		if (g_settings_get_boolean (gsearch->mate_desktop_interface_settings, "enable-animations")) {
+		if (g_settings_get_boolean (gsearch->cafe_desktop_interface_settings, "enable-animations")) {
 			gtk_spinner_start (GTK_SPINNER (gsearch->progress_spinner));
 			gtk_widget_show (gsearch->progress_spinner);
 		}
@@ -658,8 +658,8 @@ build_search_command (GSearchWindow * gsearch,
 			gboolean disable_quick_search;
 
 			locate = g_find_program_in_path ("locate");
-			disable_quick_search = g_settings_get_boolean (gsearch->mate_search_tool_settings, "disable-quick-search");
-			gsearch->command_details->is_command_second_pass_enabled = !g_settings_get_boolean (gsearch->mate_search_tool_settings, "disable-quick-search-second-scan");
+			disable_quick_search = g_settings_get_boolean (gsearch->cafe_search_tool_settings, "disable-quick-search");
+			gsearch->command_details->is_command_second_pass_enabled = !g_settings_get_boolean (gsearch->cafe_search_tool_settings, "disable-quick-search-second-scan");
 
 			/* Use caja settings for thumbnails if caja is installed, else fall back to the caja default */
 			if (gsearch->caja_schema_exists) {
@@ -1174,7 +1174,7 @@ set_constraint_gsettings_boolean (gint constraint_id,
 {
 	GSettings * select_settings;
 
-	select_settings = g_settings_new ("org.mate.search-tool.select");
+	select_settings = g_settings_new ("org.cafe.search-tool.select");
 
 	switch (constraint_id) {
 
@@ -2657,66 +2657,66 @@ set_clone_command (GSearchWindow * gsearch,
 static void
 handle_gsettings_settings (GSearchWindow * gsearch)
 {
-	if (g_settings_get_boolean (gsearch->mate_search_tool_settings, "show-additional-options")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_settings, "show-additional-options")) {
 		if (gtk_widget_get_visible (gsearch->available_options_vbox) == FALSE) {
 			gtk_expander_set_expanded (GTK_EXPANDER (gsearch->show_more_options_expander), TRUE);
 			gtk_widget_show (gsearch->available_options_vbox);
 		}
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "contains-the-text")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "contains-the-text")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_CONTAINS_THE_TEXT, "", FALSE);
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "date-modified-less-than")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "date-modified-less-than")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_DATE_MODIFIED_BEFORE, "", FALSE);
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "date-modified-more-than")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "date-modified-more-than")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_DATE_MODIFIED_AFTER, "", FALSE);
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "size-at-least")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "size-at-least")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_SIZE_IS_MORE_THAN, "", FALSE);
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "size-at-most")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "size-at-most")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_SIZE_IS_LESS_THAN, "", FALSE);
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "file-is-empty")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "file-is-empty")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_FILE_IS_EMPTY, NULL, FALSE);
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "owned-by-user")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "owned-by-user")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_OWNED_BY_USER, "", FALSE);
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "owned-by-group")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "owned-by-group")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_OWNED_BY_GROUP, "", FALSE);
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "owner-is-unrecognized")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "owner-is-unrecognized")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_OWNER_IS_UNRECOGNIZED, NULL, FALSE);
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "name-does-not-contain")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "name-does-not-contain")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_FILE_IS_NOT_NAMED, "", FALSE);
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "name-matches-regular-expression")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "name-matches-regular-expression")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_FILE_MATCHES_REGULAR_EXPRESSION, "", FALSE);
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "show-hidden-files-and-folders")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "show-hidden-files-and-folders")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_SHOW_HIDDEN_FILES_AND_FOLDERS, NULL, FALSE);
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "follow-symbolic-links")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "follow-symbolic-links")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_FOLLOW_SYMBOLIC_LINKS, NULL, FALSE);
 	}
 
-	if (g_settings_get_boolean (gsearch->mate_search_tool_select_settings, "exclude-other-filesystems")) {
+	if (g_settings_get_boolean (gsearch->cafe_search_tool_select_settings, "exclude-other-filesystems")) {
 		add_constraint (gsearch, SEARCH_CONSTRAINT_SEARCH_OTHER_FILESYSTEMS, NULL, FALSE);
 	}
 }
@@ -2744,9 +2744,9 @@ gsearch_app_create (GSearchWindow * gsearch)
 	GtkWidget * button;
 	GtkWidget * container;
 
-	gsearch->mate_search_tool_settings = g_settings_new ("org.mate.search-tool");
-	gsearch->mate_search_tool_select_settings = g_settings_new ("org.mate.search-tool.select");
-	gsearch->mate_desktop_interface_settings = g_settings_new ("org.mate.interface");
+	gsearch->cafe_search_tool_settings = g_settings_new ("org.cafe.search-tool");
+	gsearch->cafe_search_tool_select_settings = g_settings_new ("org.cafe.search-tool.select");
+	gsearch->cafe_desktop_interface_settings = g_settings_new ("org.cafe.interface");
 
 	/* Check if caja schema is installed before trying to read caja settings */
 	gsearch->caja_schema_exists = FALSE;
@@ -2766,7 +2766,7 @@ gsearch_app_create (GSearchWindow * gsearch)
 	}
 
 	gsearch->window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-	gsearch->is_window_maximized = g_settings_get_boolean (gsearch->mate_search_tool_settings, "default-window-maximized");
+	gsearch->is_window_maximized = g_settings_get_boolean (gsearch->cafe_search_tool_settings, "default-window-maximized");
 	g_signal_connect (G_OBJECT (gsearch->window), "size-allocate",
 			  G_CALLBACK (gsearch_window_size_allocate),
 			  gsearch);
@@ -2841,7 +2841,7 @@ gsearch_app_create (GSearchWindow * gsearch)
 		add_atk_namedesc (GTK_WIDGET (gsearch->look_in_folder_button), _("Look in folder"), _("Select the folder or device from which you want to begin the search."));
 	}
 
-	locale_string = g_settings_get_string (gsearch->mate_search_tool_settings, "look-in-folder");
+	locale_string = g_settings_get_string (gsearch->cafe_search_tool_settings, "look-in-folder");
 
 	if ((g_file_test (locale_string, G_FILE_TEST_EXISTS) == FALSE) ||
 	    (g_file_test (locale_string, G_FILE_TEST_IS_DIR) == FALSE)) {

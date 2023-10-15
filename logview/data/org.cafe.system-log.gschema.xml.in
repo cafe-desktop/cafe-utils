@@ -1,5 +1,5 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.mate.system-log" path="/org/mate/system-log/">
+  <schema id="org.cafe.system-log" path="/org/cafe/system-log/">
     <key name="logfile" type="s">
       <default>'/var/log/messages'</default>
       <summary>Log file to open up on startup</summary>

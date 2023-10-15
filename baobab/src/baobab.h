@@ -32,8 +32,8 @@
 struct BaobabSearchOpt;
 
 /* Settings */
-#define BAOBAB_UI_SETTINGS_SCHEMA "org.mate.disk-usage-analyzer.ui"
-#define BAOBAB_PREFS_SETTINGS_SCHEMA "org.mate.disk-usage-analyzer.preferences"
+#define BAOBAB_UI_SETTINGS_SCHEMA "org.cafe.disk-usage-analyzer.ui"
+#define BAOBAB_PREFS_SETTINGS_SCHEMA "org.cafe.disk-usage-analyzer.preferences"
 #define BAOBAB_SETTINGS_TOOLBAR_VISIBLE "toolbar-visible"
 #define BAOBAB_SETTINGS_STATUSBAR_VISIBLE "statusbar-visible"
 #define BAOBAB_SETTINGS_SUBFLSTIPS_VISIBLE "subfoldertips-visible"

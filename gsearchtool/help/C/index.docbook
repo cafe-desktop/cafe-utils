@@ -11,7 +11,7 @@
 <!-- 
       (Do not remove this comment block.)
   Maintained by the MATE Documentation Project
-  http://wiki.mate-desktop.org/dev-doc:doc-team-guide
+  http://wiki.cafe-desktop.org/dev-doc:doc-team-guide
   Template version: 2.0 beta
   Template last modified Jan 25, 2005  
 -->
@@ -203,7 +203,7 @@
     </releaseinfo> 
     <legalnotice> 
       <title>Feedback</title> 
-      <para>To report a bug or make a suggestion regarding the &app; application or this manual, follow the directions in the <ulink url="help:mate-user-guide/feedback" type="help">MATE Feedback Page</ulink>. 
+      <para>To report a bug or make a suggestion regarding the &app; application or this manual, follow the directions in the <ulink url="help:cafe-user-guide/feedback" type="help">MATE Feedback Page</ulink>. 
       </para>
 <!-- Translators may also add here feedback address for translations -->
     </legalnotice> 
@@ -244,7 +244,7 @@
     	<varlistentry>
     		<term>From a command line</term>
     		<listitem>
-    		<para>Execute the following command: <command>mate-search-tool</command></para>
+    		<para>Execute the following command: <command>cafe-search-tool</command></para>
     		<para> 		 
     		</para> 
     		</listitem>
@@ -259,7 +259,7 @@
 	<screenshot> 
 	  <mediaobject> 
 	    <imageobject><imagedata
-		fileref="figures/mate-search-tool_window.png" format="PNG"/> 
+		fileref="figures/cafe-search-tool_window.png" format="PNG"/> 
 	    </imageobject>
 	    <textobject> 
 	      <phrase>Shows &app; main window. </phrase> 
@@ -520,35 +520,35 @@
     
     <sect2 id="gsearchtool-disablequicksearch">
     <title>Disable Quick Search</title>
-    <para>Key name: org.mate.search-tool.disable-quick-search</para>
+    <para>Key name: org.cafe.search-tool.disable-quick-search</para>
     <para>Default value: false</para>
     <para><application>&app;</application> speeds up file name searches by using the <command>locate</command> command.  <command>Locate</command> provides a secure way to index and quickly search for file names.  Because <command>locate</command> relies on a file index, the <guilabel>Search results</guilabel> list may not always be up to date.</para>
     </sect2>
 
     <sect2 id="gsearchtool-disablesecondscan">
     <title>Disable Quick Search Second Scan</title>
-    <para>Key name: org.mate.search-tool.disable-quick-search-second-scan</para>
+    <para>Key name: org.cafe.search-tool.disable-quick-search-second-scan</para>
     <para>Default value: false</para>
     <para>After completing a quick search, <application>&app;</application> will perform a thorough search using the <command>find</command> command.  The purpose of this second scan is to find files that have not been indexed.  Files that match the search criteria are added to the <guilabel>Search results</guilabel> list keeping the list up to date.</para>
     </sect2>
 
     <sect2 id="gsearchtool-quicksearchexclude">
     <title>Quick Search Excluded Paths</title>
-    <para>Key name: org.mate.search-tool.quick-search-excluded-paths</para>
+    <para>Key name: org.cafe.search-tool.quick-search-excluded-paths</para>
     <para>Default values: [/mnt/*,/media/*,/dev/*,/tmp/*,/proc/*,/var/*]</para>
     <para><application>&app;</application> will not perform a quick search for paths defined by this key.  File name searches in the defined paths will use the <command>find</command> command.  The wildcards '*' and '?' are supported.</para>
     </sect2>
 
     <sect2 id="gsearchtool-secondscanexclude">
     <title>Quick Search Second Scan Excluded Paths</title>
-    <para>Key name: org.mate.search-tool.quick-search-second-scan-excluded-paths</para>
+    <para>Key name: org.cafe.search-tool.quick-search-second-scan-excluded-paths</para>
     <para>Default values: [/]</para>
     <para><application>&app;</application> will not perform a second scan after a quick search for the paths defined by this key.  Quick searches in the defined paths will not be followed by a thorough search using the <command>find</command> command.  The wildcards '*' and '?' are supported.</para>
     </sect2>
 
     <sect2 id="gsearchtool-showoptions">
     <title>Show Additional Options</title>
-    <para>Key name: org.mate.search-tool.show-additional-options</para>
+    <para>Key name: org.cafe.search-tool.show-additional-options</para>
     <para>Default value: false</para>
     <para>This key determines if the <guilabel>Select more options</guilabel> section is expanded when <application>&app;</application> is started.</para>
     </sect2>

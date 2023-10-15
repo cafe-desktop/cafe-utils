@@ -1,6 +1,6 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <cafe@raveit.de>, 2018
 # Kukuh Syafaat <syafaatkukuh@gmail.com>, 2018
 # Andika Triwidada <andika@gmail.com>, 2020
 # 
@@ -10,7 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 16:47+0100\n"
 "PO-Revision-Date: 2018-09-14 23:21+0000\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>, 2020\n"
-"Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
+"Language-Team: Indonesian (https://www.transifex.com/cafe/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Mohammad DAMT <mdamt@bisnisweb.com>\n"
 "Ahmad Riza H Nst  <ari@160c.afraid.org>\n"
 "Dirgita <dirgita@gmail.com>\n"
-"Tim MATE Indonesia <http://id.mate.org>\n"
+"Tim MATE Indonesia <http://id.cafe.org>\n"
 "Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017."
 
 #. (itstool) path: articleinfo/title
@@ -312,7 +312,7 @@ msgstr "Umpan balik"
 msgid ""
 "To report a bug or make a suggestion regarding the System Log Viewer "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -384,7 +384,7 @@ msgstr "Baris perintah"
 #. (itstool) path: listitem/para
 #: C/index.docbook:258
 msgid ""
-"Type <command>mate-system-log</command>, then press <keycap>Return</keycap>."
+"Type <command>cafe-system-log</command>, then press <keycap>Return</keycap>."
 msgstr ""
 
 #. (itstool) path: sect1/para

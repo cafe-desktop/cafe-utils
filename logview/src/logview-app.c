@@ -76,7 +76,7 @@ logview_app_set_window (LogviewApp *app)
     retval = TRUE;
   }
 
-  gtk_window_set_default_icon_name ("mate-system-log");
+  gtk_window_set_default_icon_name ("cafe-system-log");
 
   return retval;
 }

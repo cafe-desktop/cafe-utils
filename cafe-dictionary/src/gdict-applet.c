@@ -501,7 +501,7 @@ gdict_applet_entry_button_press_event_cb (GtkWidget      *widget,
 					  GdkEventButton *event,
 					  GdictApplet    *applet)
 {
-  mate_panel_applet_request_focus (MATE_PANEL_APPLET (applet), event->time);
+  cafe_panel_applet_request_focus (MATE_PANEL_APPLET (applet), event->time);
 
   return FALSE;
 }
@@ -730,7 +730,7 @@ gdict_applet_cmd_help (GtkAction *action,
   GError *err = NULL;
 
   gtk_show_uri_on_window (NULL,
-		"help:mate-dictionary/mate-dictionary-applet",
+		"help:cafe-dictionary/cafe-dictionary-applet",
 		gtk_get_current_event_time (), &err);
 
   if (err)
@@ -1120,7 +1120,7 @@ gdict_applet_init (GdictApplet *applet)
 
   gtk_window_set_default_icon_name ("accessories-dictionary");
 
-  mate_panel_applet_set_flags (MATE_PANEL_APPLET (applet),
+  cafe_panel_applet_set_flags (MATE_PANEL_APPLET (applet),
 			  MATE_PANEL_APPLET_EXPAND_MINOR);
 
   priv->settings = g_settings_new (GDICT_SETTINGS_SCHEMA);
@@ -1132,12 +1132,12 @@ gdict_applet_init (GdictApplet *applet)
   g_signal_connect (priv->desktop_settings, "changed",
                     G_CALLBACK (gdict_applet_settings_changed_cb), applet);
 
-  mate_panel_applet_set_background_widget (MATE_PANEL_APPLET (applet),
+  cafe_panel_applet_set_background_widget (MATE_PANEL_APPLET (applet),
 		  		      GTK_WIDGET (applet));
 
-  priv->size = mate_panel_applet_get_size (MATE_PANEL_APPLET (applet));
+  priv->size = cafe_panel_applet_get_size (MATE_PANEL_APPLET (applet));
 
-  switch (mate_panel_applet_get_orient (MATE_PANEL_APPLET (applet)))
+  switch (cafe_panel_applet_get_orient (MATE_PANEL_APPLET (applet)))
     {
     case MATE_PANEL_APPLET_ORIENT_LEFT:
     case MATE_PANEL_APPLET_ORIENT_RIGHT:
@@ -1209,7 +1209,7 @@ gdict_applet_factory (MatePanelApplet *applet,
 								G_N_ELEMENTS (gdict_applet_menu_actions),
 								applet);
       ui_path = g_build_filename(PKGDATADIR, "dictionary-applet-menu.xml", NULL);
-      mate_panel_applet_setup_menu_from_file (applet, ui_path,
+      cafe_panel_applet_setup_menu_from_file (applet, ui_path,
                                               priv->context_menu_action_group);
       g_free (ui_path);
 
@@ -1227,7 +1227,7 @@ gdict_applet_factory (MatePanelApplet *applet,
 /* this defines the main () for the applet */
 MATE_PANEL_APPLET_OUT_PROCESS_FACTORY ("DictionaryAppletFactory",
 			     GDICT_TYPE_APPLET,
-			     "mate-dictionary-applet",
+			     "cafe-dictionary-applet",
 			     gdict_applet_factory,
 			     NULL);
 

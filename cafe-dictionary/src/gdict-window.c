@@ -789,8 +789,8 @@ gdict_window_store_state (GdictWindow *window)
   const gchar *page_id;
 
   state_dir = g_build_filename (g_get_user_config_dir (),
-                                "mate",
-                                "mate-dictionary",
+                                "cafe",
+                                "cafe-dictionary",
                                 NULL);
 
   if (g_mkdir (state_dir, 0700) == -1)
@@ -854,8 +854,8 @@ gdict_window_load_state (GdictWindow *window)
   GError *error;
 
   state_file = g_build_filename (g_get_user_config_dir (),
-                                 "mate",
-                                 "mate-dictionary",
+                                 "cafe",
+                                 "cafe-dictionary",
                                  "window.ini",
                                  NULL);
   state_key = g_key_file_new ();
@@ -1243,7 +1243,7 @@ gdict_window_cmd_help_contents (GtkAction   *action,
   g_return_if_fail (GDICT_IS_WINDOW (window));
 
   gtk_show_uri_on_window (GTK_WINDOW (window),
-                "help:mate-dictionary",
+                "help:cafe-dictionary",
                 gtk_get_current_event_time (), &err);
   if (err)
     {
@@ -1669,7 +1669,7 @@ gdict_window_constructor (GType                  type,
 
   error = NULL;
   if (!gtk_ui_manager_add_ui_from_file (window->ui_manager,
-  					PKGDATADIR "/mate-dictionary-ui.xml",
+  					PKGDATADIR "/cafe-dictionary-ui.xml",
   					&error))
     {
       g_warning ("Building menus failed: %s", error->message);

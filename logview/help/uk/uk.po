@@ -1,6 +1,6 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <cafe@raveit.de>, 2018
 # Микола Ткач <chistomov@gmail.com>, 2018
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019
 # Vlad - <priv4417@gmail.com>, 2019
@@ -11,7 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 16:47+0100\n"
 "PO-Revision-Date: 2018-09-14 23:21+0000\n"
 "Last-Translator: Vlad - <priv4417@gmail.com>, 2019\n"
-"Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
+"Language-Team: Ukrainian (https://www.transifex.com/cafe/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -338,11 +338,11 @@ msgstr "Зворотній зв'язок"
 msgid ""
 "To report a bug or make a suggestion regarding the System Log Viewer "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 "Щоб повідомити про помилку або внести пропозицію стосовно Програми перегляду"
 " системних журналів або цього керівництва, дотримуйтеся вказівок на <ulink "
-"url=\"help:mate-user-guide/feedback\" type=\"help\">Сторінці зворотнього "
+"url=\"help:cafe-user-guide/feedback\" type=\"help\">Сторінці зворотнього "
 "зв'язку MATE</ulink>."
 
 #. (itstool) path: article/indexterm
@@ -434,9 +434,9 @@ msgstr "Командний рядок"
 #. (itstool) path: listitem/para
 #: C/index.docbook:258
 msgid ""
-"Type <command>mate-system-log</command>, then press <keycap>Return</keycap>."
+"Type <command>cafe-system-log</command>, then press <keycap>Return</keycap>."
 msgstr ""
-"Наберіть <command>mate-system-log</command>, та натисніть "
+"Наберіть <command>cafe-system-log</command>, та натисніть "
 "<keycap>Enter</keycap>."
 
 #. (itstool) path: sect1/para

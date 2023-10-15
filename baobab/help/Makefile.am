@@ -1,6 +1,6 @@
 @YELP_HELP_RULES@
 
-HELP_ID = mate-disk-usage-analyzer
+HELP_ID = cafe-disk-usage-analyzer
 HELP_FILES = index.docbook legal.xml
 
 HELP_MEDIA =                       \

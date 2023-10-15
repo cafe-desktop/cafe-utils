@@ -54,7 +54,7 @@ extern "C" {
 #define DEFAULT_WINDOW_HEIGHT  350
 #define WINDOW_HEIGHT_STEP      35
 #define NUM_VISIBLE_COLUMNS      5
-#define CAJA_PREFERENCES_SCHEMA "org.mate.caja.preferences"
+#define CAJA_PREFERENCES_SCHEMA "org.cafe.caja.preferences"
 
 typedef enum {
 	STOPPED,
@@ -150,9 +150,9 @@ struct _GSearchWindow {
 
 	gchar                 * save_results_as_default_filename;
 
-	GSettings             * mate_search_tool_settings;
-	GSettings             * mate_search_tool_select_settings;
-	GSettings             * mate_desktop_interface_settings;
+	GSettings             * cafe_search_tool_settings;
+	GSettings             * cafe_search_tool_select_settings;
+	GSettings             * cafe_desktop_interface_settings;
 	GSettings             * caja_settings;
 	gboolean                caja_schema_exists;
 

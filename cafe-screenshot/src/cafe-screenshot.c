@@ -1,4 +1,4 @@
-/* mate-screenshot.c - Take a screenshot of the desktop
+/* cafe-screenshot.c - Take a screenshot of the desktop
  *
  * Copyright (C) 2001 Jonathan Blandford <jrb@alum.mit.edu>
  * Copyright (C) 2006 Emmanuele Bassi <ebassi@gnome.org>
@@ -49,13 +49,13 @@
 
 #define SCREENSHOOTER_ICON "applets-screenshooter"
 
-#define MATE_SCREENSHOT_SCHEMA "org.mate.screenshot"
+#define MATE_SCREENSHOT_SCHEMA "org.cafe.screenshot"
 #define INCLUDE_BORDER_KEY      "include-border"
 #define INCLUDE_POINTER_KEY     "include-pointer"
 #define LAST_SAVE_DIRECTORY_KEY "last-save-directory"
 #define BORDER_EFFECT_KEY       "border-effect"
 #define DELAY_KEY               "delay"
-#define CAJA_PREFERENCES_SCHEMA "org.mate.caja.preferences"
+#define CAJA_PREFERENCES_SCHEMA "org.cafe.caja.preferences"
 
 enum
 {
@@ -128,7 +128,7 @@ display_help (GtkWindow *parent)
   GError *error = NULL;
 
   gtk_show_uri_on_window (parent,
-                          "help:mate-user-guide/goseditmainmenu-53",
+                          "help:cafe-user-guide/goseditmainmenu-53",
                           gtk_get_current_event_time (),
                           &error);
 
@@ -1143,7 +1143,7 @@ get_desktop_dir (void)
   return desktop_dir;
 }
 
-/* Taken from mate-vfs-utils.c */
+/* Taken from cafe-vfs-utils.c */
 static char *
 expand_initial_tilde (const char *path)
 {

@@ -3,7 +3,7 @@
 # Ettore Atalan <atalanttore@googlemail.com>, 2018
 # Tobias Bannert <tobannert@gmail.com>, 2018
 # Moritz Bruder <muesli4@gmail.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# Wolfgang Ulbrich <cafe@raveit.de>, 2018
 # Julian Rüger <jr98@gmx.net>, 2018
 # Marcel Artz <email@marcel-artz.de>, 2019
 # 
@@ -13,7 +13,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 16:47+0100\n"
 "PO-Revision-Date: 2018-09-13 10:15+0000\n"
 "Last-Translator: Marcel Artz <email@marcel-artz.de>, 2019\n"
-"Language-Team: German (https://www.transifex.com/mate/teams/13566/de/)\n"
+"Language-Team: German (https://www.transifex.com/cafe/teams/13566/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -343,7 +343,7 @@ msgstr "Rückmeldungen"
 msgid ""
 "To report a bug or make a suggestion regarding the Search for Files "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -428,7 +428,7 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:247
-msgid "Execute the following command: <command>mate-search-tool</command>"
+msgid "Execute the following command: <command>cafe-search-tool</command>"
 msgstr ""
 
 #. (itstool) path: sect1/para
@@ -451,14 +451,14 @@ msgstr ""
 #: C/index.docbook:262
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-search-tool_window.png' "
+"external ref='figures/cafe-search-tool_window.png' "
 "md5='bb0f097535682e53e6bd43c66f0373c7'"
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:260
 msgid ""
-"<imageobject><imagedata fileref=\"figures/mate-search-tool_window.png\" "
+"<imageobject><imagedata fileref=\"figures/cafe-search-tool_window.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Search for Files "
 "main window. </phrase> </textobject>"
 msgstr ""
@@ -922,7 +922,7 @@ msgstr "Schnellsuche deaktivieren"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:523
-msgid "Key name: org.mate.search-tool.disable-quick-search"
+msgid "Key name: org.cafe.search-tool.disable-quick-search"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -947,7 +947,7 @@ msgstr "Zweiten Durchlauf der Schnellsuche deaktivieren"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:530
-msgid "Key name: org.mate.search-tool.disable-quick-search-second-scan"
+msgid "Key name: org.cafe.search-tool.disable-quick-search-second-scan"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -967,7 +967,7 @@ msgstr "Ausgelassene Pfade bei schneller Suche"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:537
-msgid "Key name: org.mate.search-tool.quick-search-excluded-paths"
+msgid "Key name: org.cafe.search-tool.quick-search-excluded-paths"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -991,7 +991,7 @@ msgstr "Ausgelassene Pfade beim zweiten Suchlauf einer schnellen Suche"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:544
-msgid "Key name: org.mate.search-tool.quick-search-second-scan-excluded-paths"
+msgid "Key name: org.cafe.search-tool.quick-search-second-scan-excluded-paths"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -1015,7 +1015,7 @@ msgstr "Zusätzliche Optionen anzeigen"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:551
-msgid "Key name: org.mate.search-tool.show-additional-options"
+msgid "Key name: org.cafe.search-tool.show-additional-options"
 msgstr ""
 
 #. (itstool) path: sect2/para

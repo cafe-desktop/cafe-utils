@@ -11,7 +11,7 @@
 <!-- 
       (Do not remove this comment block.)
   Maintained by the MATE Documentation Project
-  http://wiki.mate-desktop.org/dev-doc:doc-team-guide
+  http://wiki.cafe-desktop.org/dev-doc:doc-team-guide
   Template version: 2.0 beta
   Template last modified 11 April, 2002
   
@@ -111,7 +111,7 @@
       <title>Feedback</title> 
       <para>To report a bug or make a suggestion regarding the &app;
       application or this manual, follow the directions in the
-      <ulink url="help:mate-user-guide/feedback" type="help">MATE Feedback
+      <ulink url="help:cafe-user-guide/feedback" type="help">MATE Feedback
       Page</ulink>.</para>
       
 <!-- Translators may also add here feedback address for translations -->
@@ -124,7 +124,7 @@
 
 <!-- ============= Document Body ============================= -->
 <!-- ============= Introduction ============================== -->
-  <sect1 id="mate-dictionary-introduction"> 
+  <sect1 id="cafe-dictionary-introduction"> 
     <title>Introduction</title>
 
     <para>The <application>&app;</application> application enables you to
@@ -133,11 +133,11 @@
   </sect1>
 
 <!-- ============= Getting Started =========================== -->  
-  <sect1 id="mate-dictionary-getting-started">
+  <sect1 id="cafe-dictionary-getting-started">
     <title>Getting Started</title>
     
 <!-- ============= To Start Dictionary ======================= -->
-    <sect2 id="mate-dictionary-start-application">
+    <sect2 id="cafe-dictionary-start-application">
       <title>To Start &app;</title>
       
       <para>You can start <application>&app;</application> in the following
@@ -155,7 +155,7 @@
     	<varlistentry>
     	  <term>Command line</term>
     	  <listitem>
-    	    <para>Execute the following command: <command>mate-dictionary</command></para>
+    	    <para>Execute the following command: <command>cafe-dictionary</command></para>
     	  </listitem>
     	</varlistentry>
       </variablelist>
@@ -163,12 +163,12 @@
       <para>Once started, the <application>&app;</application> window is
       displayed:</para>
       
-      <figure id="mate-dictionary-fig">
+      <figure id="cafe-dictionary-fig">
         <title>&app; Window</title>
         <screenshot> 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="figures/mate-dictionary-application.png" format="PNG"/>
+              <imagedata fileref="figures/cafe-dictionary-application.png" format="PNG"/>
             </imageobject>
             <textobject><phrase>Shows &app; main window.</phrase></textobject> 
           </mediaobject>
@@ -180,10 +180,10 @@
   </sect1>
   
 <!-- ============= Usage ===================================== -->
-  <sect1 id="mate-dictionary-usage">
+  <sect1 id="cafe-dictionary-usage">
     <title>Usage</title>
     
-    <sect2 id="mate-dictionary-lookup">
+    <sect2 id="cafe-dictionary-lookup">
       <title>Looking up a word</title>
       
       <para>To look up a word, type it into the <guilabel>entry field</guilabel>
@@ -192,12 +192,12 @@
       <para>If some definition for the word is found, it will appear inside
       the main window area:</para>
 
-      <figure id="mate-dictionary-lookup-fig">
+      <figure id="cafe-dictionary-lookup-fig">
         <title>&app; Window</title>
         <screenshot> 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="figures/mate-dictionary-lookup.png" format="PNG"/>
+              <imagedata fileref="figures/cafe-dictionary-lookup.png" format="PNG"/>
             </imageobject>
             <textobject><phrase>Shows a definition inside the &app; main window.</phrase></textobject> 
           </mediaobject>
@@ -209,14 +209,14 @@
     
     </sect2>
     
-    <sect2 id="mate-dictionary-save">
+    <sect2 id="cafe-dictionary-save">
       <title>Save look up results</title>
       
       <para>To save the results of a look up, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Save a Copy</guimenuitem></menuchoice>. Enter a name for the file in the <guilabel>Save a Copy</guilabel> dialog, then click <guibutton>Save</guibutton>.</para>
     
     </sect2>
     
-    <sect2 id="mate-dictionary-print">
+    <sect2 id="cafe-dictionary-print">
       <title>Print look up results</title>
       
       <para>To print the results of a look up, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Print</guimenuitem></menuchoice>.</para>
@@ -231,15 +231,15 @@
     
     </sect2>
     
-    <sect2 id="mate-dictionary-find">
+    <sect2 id="cafe-dictionary-find">
       <title>Find Text</title>
 
-      <figure id="mate-dictionary-find-fig">
+      <figure id="cafe-dictionary-find-fig">
         <title>&app; Window</title>
         <screenshot> 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="figures/mate-dictionary-find.png" format="PNG"/>
+              <imagedata fileref="figures/cafe-dictionary-find.png" format="PNG"/>
             </imageobject>
             <textobject><phrase>Shows the &app; Find pane inside the main window.</phrase></textobject> 
           </mediaobject>
@@ -265,22 +265,22 @@
   </sect1>
 
 <!-- ============= Preferences =============================== -->
-  <sect1 id="mate-dictionary-preferences">
+  <sect1 id="cafe-dictionary-preferences">
     <title>Preferences</title>
     
     <para>To change the <application>&app;</application> application
     preferences, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.</para>
 
 <!-- ============= Source Tab ================================ -->
-    <sect2 id="mate-dictionary-source-tab">
+    <sect2 id="cafe-dictionary-source-tab">
       <title>Dictionary Sources</title>
 
-      <figure id="mate-dictionary-sources-fig">
+      <figure id="cafe-dictionary-sources-fig">
         <title>&app; Window</title>
         <screenshot> 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="figures/mate-dictionary-preferences-source.png" format="PNG"/>
+              <imagedata fileref="figures/cafe-dictionary-preferences-source.png" format="PNG"/>
             </imageobject>
             <textobject><phrase>Shows the Source tab of the Preferences dialog.</phrase></textobject> 
           </mediaobject>
@@ -292,15 +292,15 @@
     </sect2>
     
 <!-- ============= Add Source ================================ -->
-    <sect2 id="mate-dictionary-add-source">
+    <sect2 id="cafe-dictionary-add-source">
       <title>Adding a new source</title>
 
-      <figure id="mate-dictionary-add-source-fig">
+      <figure id="cafe-dictionary-add-source-fig">
         <title>&app; Window</title>
         <screenshot> 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="figures/mate-dictionary-add-source.png" format="PNG"/>
+              <imagedata fileref="figures/cafe-dictionary-add-source.png" format="PNG"/>
             </imageobject>
             <textobject><phrase>Shows the Add Source dialog.</phrase></textobject> 
           </mediaobject>
@@ -343,7 +343,7 @@
     </sect2>
 
 <!-- ============= Remove Source ============================= -->
-    <sect2 id="mate-dictionary-remove-source">
+    <sect2 id="cafe-dictionary-remove-source">
       <title>Removing a source</title>
       
       <para>To remove a dictionary source, perform the following steps:</para>
@@ -361,15 +361,15 @@
     </sect2>
     
 <!-- ============= Print Tab ================================= -->
-    <sect2 id="mate-dictionary-print-tab">
+    <sect2 id="cafe-dictionary-print-tab">
       <title>Print Options</title>
 
-      <figure id="mate-dictionary-print-fig">
+      <figure id="cafe-dictionary-print-fig">
         <title>&app; Window</title>
         <screenshot> 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="figures/mate-dictionary-preferences-print.png" format="PNG"/>
+              <imagedata fileref="figures/cafe-dictionary-preferences-print.png" format="PNG"/>
             </imageobject>
             <textobject><phrase>Shows the Print tab inside the Preferences dialog.</phrase></textobject> 
           </mediaobject>
@@ -390,7 +390,7 @@
   </sect1>
 
 <!-- ============= Dictionary Applet ======================== -->
-  <sect1 id="mate-dictionary-applet">
+  <sect1 id="cafe-dictionary-applet">
   <title>The &applet;</title>
   
   <para>The <application>&app;</application> application comes with a
@@ -398,12 +398,12 @@
   the <application>&applet;</application> applet to a panel and look
   up words in dictionaries.</para>
 
-  <figure id="mate-dictionary-applet-fig">
+  <figure id="cafe-dictionary-applet-fig">
     <title>&applet; Window</title>
     <screenshot> 
       <mediaobject>
         <imageobject>
-          <imagedata fileref="figures/mate-dictionary-applet.png" format="PNG"/>
+          <imagedata fileref="figures/cafe-dictionary-applet.png" format="PNG"/>
         </imageobject>
         <textobject><phrase>Shows &applet;.</phrase></textobject> 
       </mediaobject>
@@ -412,7 +412,7 @@
 
 
 <!-- ============= Dictionary Applet Start ================== -->
-    <sect2 id="mate-dictionary-applet-start">
+    <sect2 id="cafe-dictionary-applet-start">
       <title>To Start &applet;</title>
     
       <para>To add <application>&applet;</application> to a panel, right-click
@@ -423,7 +423,7 @@
     </sect2>
 
 <!-- ============= Dictionary Applet Start ================== -->
-    <sect2 id="mate-dictionary-applet-usage">
+    <sect2 id="cafe-dictionary-applet-usage">
       <title>Using the &applet;</title>
       
       <para>To look up a word, type it into the <guilabel>entry field</guilabel>,
@@ -434,12 +434,12 @@
       <para>If some definition for the word was found, a window will appear,
       with the text of the definitions:</para>
 
-      <figure id="mate-dictionary-applet-window-fig">
+      <figure id="cafe-dictionary-applet-window-fig">
         <title>&applet; Window</title>
         <screenshot> 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="figures/mate-dictionary-applet-window.png" format="PNG"/>
+              <imagedata fileref="figures/cafe-dictionary-applet-window.png" format="PNG"/>
             </imageobject>
             <textobject><phrase>Shows &applet; main window.</phrase></textobject> 
           </mediaobject>
@@ -455,7 +455,7 @@
 
     </sect2>
     
-    <sect2 id="mate-dictionary-applet-preferences">
+    <sect2 id="cafe-dictionary-applet-preferences">
       <title>Preferences</title>
       
       <para>To configure the <application>&applet;</application>, right-click on
@@ -463,7 +463,7 @@
       
       <para>The <guilabel>Preferences</guilabel> dialog is the same used by
       the <application>&app;</application> application, so refer to
-      <xref linkend="mate-dictionary-preferences"/></para>
+      <xref linkend="cafe-dictionary-preferences"/></para>
       
     </sect2>
     
