@@ -192,7 +192,7 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:60
 msgid ""
-"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Cafe "
 "desktop</orgname> </affiliation>"
 msgstr ""
 
@@ -275,7 +275,7 @@ msgstr "Démarrer le Dictionnaire"
 msgid ""
 "You can start <application>Dictionary</application> in the following ways:"
 msgstr ""
-"Vous pouvez démarrer <application>Mate Dictionnaire</application> de la "
+"Vous pouvez démarrer <application>Cafe Dictionnaire</application> de la "
 "façon suivante:"
 
 #. (itstool) path: varlistentry/term

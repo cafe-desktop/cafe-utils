@@ -182,7 +182,7 @@
 
 ### cafe-utils 1.14.0
 
-  * Drop MateConf migration scripts
+  * Drop CafeConf migration scripts
   * Disable effects and delay options in cafe-screenshot UI
     when launched with -ai command line argument
   * Use hyphens instead of colons in screenshot filenames

@@ -832,7 +832,7 @@ msgstr "Sanes barang sing saged dilakokna"
 
 #: ../gsearchtool/libeggsmclient/eggsmclient.c:225
 msgid "Disable connection to session manager"
-msgstr "Mateni sambungan menyang manager sesi"
+msgstr "Cafeni sambungan menyang manager sesi"
 
 #: ../gsearchtool/libeggsmclient/eggsmclient.c:228
 msgid "Specify file containing saved configuration"

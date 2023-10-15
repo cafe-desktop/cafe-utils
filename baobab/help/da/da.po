@@ -172,10 +172,10 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:56
 msgid ""
-"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Cafe "
 "desktop</orgname> </affiliation>"
 msgstr ""
-"<surname>CAFE-dokumentationsholdet</surname> <affiliation> <orgname>Mate-"
+"<surname>CAFE-dokumentationsholdet</surname> <affiliation> <orgname>Cafe-"
 "skrivebordet</orgname> </affiliation>"
 
 #. (itstool) path: authorgroup/author
@@ -262,7 +262,7 @@ msgstr "Introduktion"
 #: C/index.docbook:140
 msgid ""
 "<application>Disk Usage Analyzer</application> is a graphical, menu-driven "
-"application to analyze disk usage in any Mate environment. <application>Disk"
+"application to analyze disk usage in any Cafe environment. <application>Disk"
 " Usage Analyzer</application> can easily scan either the whole filesystem "
 "tree, or a specific user-requested directory branch (local or remote)."
 msgstr ""
@@ -301,10 +301,10 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:157
 msgid ""
-"from Mate menu "
+"from Cafe menu "
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem></menuchoice>;"
 msgstr ""
-"fra Matemenuen "
+"fra Cafemenuen "
 "<menuchoice><guimenu>Programmer</guimenu><guimenuitem>Tilbehør</guimenuitem></menuchoice>;"
 
 #. (itstool) path: listitem/para
@@ -339,17 +339,17 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:170
 msgid ""
-"If launched from Mate menu, <application>Disk Usage Analyzer</application> "
+"If launched from Cafe menu, <application>Disk Usage Analyzer</application> "
 "starts and remains in a stand-by state, waiting for user action."
 msgstr ""
-"Hvis startet fra Matemenuen, starter og bliver "
+"Hvis startet fra Cafemenuen, starter og bliver "
 "<application>Diskanalyseforbrug</application> i en standby tilstand, "
 "ventende på en brugerhandling."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:171
 msgid ""
-"When you start <application>Disk Usage Analyzer</application> from the Mate "
+"When you start <application>Disk Usage Analyzer</application> from the Cafe "
 "Menu, the following window is displayed."
 msgstr ""
 "Når du starter <application>Diskanalyseforbrug</application> fra CAFE-menuen"

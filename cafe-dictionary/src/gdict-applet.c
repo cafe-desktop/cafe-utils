@@ -43,7 +43,7 @@
 
 struct _GdictAppletClass
 {
-  MatePanelAppletClass parent_class;
+  CafePanelAppletClass parent_class;
 };
 
 struct _GdictAppletPrivate
@@ -743,8 +743,8 @@ gdict_applet_cmd_help (GtkAction *action,
 }
 
 static void
-gdict_applet_change_orient (MatePanelApplet       *applet,
-			    MatePanelAppletOrient  orient)
+gdict_applet_change_orient (CafePanelApplet       *applet,
+			    CafePanelAppletOrient  orient)
 {
   GdictAppletPrivate *priv = GDICT_APPLET (applet)->priv;
   guint new_size;
@@ -1091,7 +1091,7 @@ gdict_applet_class_init (GdictAppletClass *klass)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
   GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
-  MatePanelAppletClass *applet_class = CAFE_PANEL_APPLET_CLASS (klass);
+  CafePanelAppletClass *applet_class = CAFE_PANEL_APPLET_CLASS (klass);
 
   gobject_class->finalize = gdict_applet_finalize;
 
@@ -1189,7 +1189,7 @@ static const GtkActionEntry gdict_applet_menu_actions[] = {
 };
 
 static gboolean
-gdict_applet_factory (MatePanelApplet *applet,
+gdict_applet_factory (CafePanelApplet *applet,
                       const gchar *iid,
 		      gpointer     data)
 {

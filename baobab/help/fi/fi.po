@@ -54,7 +54,7 @@ msgstr ""
 #. (itstool) path: revdescription/para
 #: C/index.docbook:47 C/index.docbook:103
 msgid "CAFE Documentation Project"
-msgstr "Maten dokumentointiprojekti"
+msgstr "Cafen dokumentointiprojekti"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
@@ -134,7 +134,7 @@ msgstr ""
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:56
 msgid ""
-"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Mate "
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Cafe "
 "desktop</orgname> </affiliation>"
 msgstr ""
 
@@ -209,7 +209,7 @@ msgstr "Johdanto"
 #: C/index.docbook:140
 msgid ""
 "<application>Disk Usage Analyzer</application> is a graphical, menu-driven "
-"application to analyze disk usage in any Mate environment. <application>Disk"
+"application to analyze disk usage in any Cafe environment. <application>Disk"
 " Usage Analyzer</application> can easily scan either the whole filesystem "
 "tree, or a specific user-requested directory branch (local or remote)."
 msgstr ""
@@ -237,7 +237,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:157
 msgid ""
-"from Mate menu "
+"from Cafe menu "
 "<menuchoice><guimenu>Applications</guimenu><guimenuitem>Accessories</guimenuitem></menuchoice>;"
 msgstr ""
 
@@ -269,14 +269,14 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:170
 msgid ""
-"If launched from Mate menu, <application>Disk Usage Analyzer</application> "
+"If launched from Cafe menu, <application>Disk Usage Analyzer</application> "
 "starts and remains in a stand-by state, waiting for user action."
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:171
 msgid ""
-"When you start <application>Disk Usage Analyzer</application> from the Mate "
+"When you start <application>Disk Usage Analyzer</application> from the Cafe "
 "Menu, the following window is displayed."
 msgstr ""
 

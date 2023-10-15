@@ -1787,7 +1787,7 @@ msgstr "Lokikatselin"
 
 #: logview/src/logview-window.c:38 logview/src/logview-window.c:768
 msgid "System Log Viewer"
-msgstr "Maten lokikatselin"
+msgstr "Cafen lokikatselin"
 
 #: logview/src/logview-window.c:213
 #, c-format

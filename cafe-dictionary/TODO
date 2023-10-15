@@ -16,8 +16,8 @@
 * Add preferences support
   [x] Implement the .desktop file prototype for selecting the preferred
       source for dictionary data;
-  [x] Remove MateConf stuff from the preferences: only applications should
-      depend on MateConf;
+  [x] Remove CafeConf stuff from the preferences: only applications should
+      depend on CafeConf;
 
 [CAFE Dictionary]
 

@@ -36,7 +36,7 @@ typedef struct _GdictAppletPrivate GdictAppletPrivate;
 
 struct _GdictApplet
 {
-  MatePanelApplet parent_instance;
+  CafePanelApplet parent_instance;
 
   GdictAppletPrivate *priv;
 };
