@@ -9,7 +9,7 @@ DOC_MODULE=cafe-dict
 DOC_MAIN_SGML_FILE=gdict-docs.sgml
 
 # The directory containing the source code. Relative to $(srcdir).
-# ctk-doc will search all .c & .h files beneath here for inline comments
+# gtk-doc will search all .c & .h files beneath here for inline comments
 # documenting functions and macros.
 DOC_SOURCE_DIR=../../../libgdict
 
@@ -62,7 +62,7 @@ CTKDOC_LIBS = \
 	$(LIBGDICT_LIBS) \
 	../../../libgdict/libcafedict.la
 
-include $(top_srcdir)/ctk-doc.make
+include $(top_srcdir)/gtk-doc.make
 
 # Other files to distribute
 # e.g. EXTRA_DIST += version.xml.in

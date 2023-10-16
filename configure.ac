@@ -332,7 +332,7 @@ AC_SUBST(GETTEXT_PACKAGE)
 
 GLIB_GSETTINGS
 
-dnl ctk-doc stuff
+dnl gtk-doc stuff
 CTK_DOC_CHECK([1.10])
 
 dnl yelp-tools stuff

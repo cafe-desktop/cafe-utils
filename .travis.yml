@@ -90,7 +90,7 @@ requires:
     - gcc
     - g++
     - git
-    - ctk-doc-tools
+    - gtk-doc-tools
     - libcanberra-ctk3-dev
     - libglib2.0-dev
     - libctk-3-dev
@@ -140,7 +140,7 @@ requires:
     - clang-tools
     - g++
     - git
-    - ctk-doc-tools
+    - gtk-doc-tools
     - libcanberra-ctk3-dev
     - libglib2.0-dev
     - libctk-3-dev
