@@ -16,7 +16,6 @@ requires:
     - g++
     - git
     - gtk-doc-tools
-    - libcanberra-ctk3-dev
     - libglib2.0-dev
     - libgtop2-dev
     - libudisks2-dev
@@ -69,6 +68,13 @@ requires:
     - libxres-dev
     - ninja-build
 
+    #required for libkanberra
+    - gnome-pkg-tools
+    - libltdl-dev
+    - libvorbis-dev
+    - libtdb-dev
+    - libgstreamer1.0-dev
+
 before_scripts:
   - ./html-cppcheck
   # disable pt language for help in search tool
@@ -80,6 +86,7 @@ before_scripts:
   - ./install-from-git https://github.com/cafe-desktop/cafe-menus master
   - ./install-from-git https://github.com/cafe-desktop/libcafeweather master
   - ./install-from-git https://github.com/cafe-desktop/cafe-panel master
+  - ./install-from-git https://github.com/cafe-desktop/libkanberra master
 
 build_scripts:
   - ./before-build
