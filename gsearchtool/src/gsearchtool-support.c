@@ -868,7 +868,7 @@ gsearchtool_get_thumbnail_image (const gchar * thumbnail)
 				scale_y = ICON_SIZE;
 			}
 
-			pixbuf = gdk_pixbuf_scale_simple (thumbnail_pixbuf, scale_x, scale_y, CDK_INTERP_BILINEAR);
+			pixbuf = gdk_pixbuf_scale_simple (thumbnail_pixbuf, scale_x, scale_y, GDK_INTERP_BILINEAR);
 			g_object_unref (thumbnail_pixbuf);
 		}
 	}
