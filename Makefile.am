@@ -27,10 +27,10 @@ EXTRA_DIST = \
 	COPYING.docs
 
 DISTCLEANFILES =                \
-	ctk-doc.make
+	gtk-doc.make
 
 DISTCHECK_CONFIGURE_FLAGS = \
-	--enable-ctk-doc \
+	--enable-gtk-doc \
 	CFLAGS='-Wno-deprecated-declarations'
 
 # Build ChangeLog from GIT  history

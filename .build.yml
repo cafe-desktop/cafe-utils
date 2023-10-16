@@ -15,7 +15,7 @@ requires:
     - gcc
     - g++
     - git
-    - ctk-doc-tools
+    - gtk-doc-tools
     - libcanberra-ctk3-dev
     - libglib2.0-dev
     - libctk-3-dev
@@ -36,7 +36,7 @@ requires:
     #required for cafe-panel
     - gir1.2-freedesktop
     - gobject-introspection
-    - ctk-doc-tools
+    - gtk-doc-tools
     - libatk1.0-dev
     - libcairo2-dev
     - libdconf-dev
