@@ -29,7 +29,7 @@
 #include <gio/gio.h>
 #include <ctk/ctk.h>
 #include <cdk/cdkkeysyms.h>
-#include <cdk-pixbuf/cdk-pixbuf.h>
+#include <gdk-pixbuf/gdk-pixbuf.h>
 
 #include "gdict-applet.h"
 #include "gdict-about.h"
