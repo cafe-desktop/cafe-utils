@@ -41,7 +41,7 @@ typedef struct _GdictAlignedWindowPrivate GdictAlignedWindowPrivate;
 struct _GdictAlignedWindow
 {
   /*< private >*/
-  GtkWindow parent_instance;
+  CtkWindow parent_instance;
 
   GdictAlignedWindowPrivate *priv;
 };
@@ -49,7 +49,7 @@ struct _GdictAlignedWindow
 struct _GdictAlignedWindowClass
 {
   /*< private >*/
-  GtkWindowClass parent_class;
+  CtkWindowClass parent_class;
 
   void (*_gdict_reserved1) (void);
   void (*_gdict_reserved2) (void);
@@ -59,10 +59,10 @@ struct _GdictAlignedWindowClass
 
 GType      gdict_aligned_window_get_type   (void) G_GNUC_CONST;
 
-GtkWidget *gdict_aligned_window_new        (GtkWidget          *align_widget);
+CtkWidget *gdict_aligned_window_new        (CtkWidget          *align_widget);
 void       gdict_aligned_window_set_widget (GdictAlignedWindow *aligned_window,
-					    GtkWidget          *align_widget);
-GtkWidget *gdict_aligned_window_get_widget (GdictAlignedWindow *aligned_window);
+					    CtkWidget          *align_widget);
+CtkWidget *gdict_aligned_window_get_widget (GdictAlignedWindow *aligned_window);
 
 G_END_DECLS
 

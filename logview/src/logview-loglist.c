@@ -33,9 +33,9 @@
 #include "logview-loglist.h"
 
 struct _LogviewLoglistPrivate {
-  GtkTreeStore *model;
+  CtkTreeStore *model;
   LogviewManager *manager;
-  GtkTreePath *selection;
+  CtkTreePath *selection;
   gboolean has_day_selection;
 };
 
@@ -58,7 +58,7 @@ enum {
 static guint signals[LAST_SIGNAL] = { 0 };
 
 static void
-save_day_selection (LogviewLoglist *loglist, GtkTreeIter *iter)
+save_day_selection (LogviewLoglist *loglist, CtkTreeIter *iter)
 {
   if (loglist->priv->selection) {
     ctk_tree_path_free (loglist->priv->selection);
@@ -70,10 +70,10 @@ save_day_selection (LogviewLoglist *loglist, GtkTreeIter *iter)
 
 static void
 update_days_and_lines_for_log (LogviewLoglist *loglist,
-                               GtkTreeIter *log, GSList *days)
+                               CtkTreeIter *log, GSList *days)
 {
   gboolean res;
-  GtkTreeIter iter, dummy;
+  CtkTreeIter iter, dummy;
   GSList *l;
   int i;
   char date[200];
@@ -114,12 +114,12 @@ update_days_and_lines_for_log (LogviewLoglist *loglist,
   }
 }
 
-static GtkTreeIter *
+static CtkTreeIter *
 logview_loglist_find_log (LogviewLoglist *list, LogviewLog *log)
 {
-  GtkTreeIter iter;
-  GtkTreeModel *model;
-  GtkTreeIter *retval = NULL;
+  CtkTreeIter iter;
+  CtkTreeModel *model;
+  CtkTreeIter *retval = NULL;
   LogviewLog *current;
 
   model = CTK_TREE_MODEL (list->priv->model);
@@ -146,7 +146,7 @@ log_changed_cb (LogviewLog *log,
 {
   LogviewLoglist *list = user_data;
   LogviewLog *active;
-  GtkTreeIter *iter;
+  CtkTreeIter *iter;
 
   active = logview_manager_get_active_log (list->priv->manager);
 
@@ -171,12 +171,12 @@ log_changed_cb (LogviewLog *log,
 
 
 static void
-tree_selection_changed_cb (GtkTreeSelection *selection,
+tree_selection_changed_cb (CtkTreeSelection *selection,
                            gpointer user_data)
 {
   LogviewLoglist *list = user_data;
-  GtkTreeModel *model;
-  GtkTreeIter iter, parent;
+  CtkTreeModel *model;
+  CtkTreeIter iter, parent;
   LogviewLog *log;
   gboolean is_bold, is_active;
   Day *day;
@@ -227,8 +227,8 @@ manager_active_changed_cb (LogviewManager *manager,
                            gpointer user_data)
 {
   LogviewLoglist *list = user_data;
-  GtkTreeIter * iter, sel_iter;
-  GtkTreeSelection * selection;
+  CtkTreeIter * iter, sel_iter;
+  CtkTreeSelection * selection;
 
   if (list->priv->selection &&
       ctk_tree_model_get_iter (CTK_TREE_MODEL (list->priv->model),
@@ -270,7 +270,7 @@ manager_log_closed_cb (LogviewManager *manager,
                        gpointer user_data)
 {
   LogviewLoglist *list = user_data;
-  GtkTreeIter *iter;
+  CtkTreeIter *iter;
   gboolean res;
 
   iter = logview_loglist_find_log (list, log);
@@ -283,7 +283,7 @@ manager_log_closed_cb (LogviewManager *manager,
 
   res = ctk_tree_store_remove (list->priv->model, iter);
   if (res) {
-    GtkTreeSelection *selection;
+    CtkTreeSelection *selection;
 
     /* iter now points to the next valid row */
     selection = ctk_tree_view_get_selection (CTK_TREE_VIEW (list));
@@ -301,7 +301,7 @@ manager_log_added_cb (LogviewManager *manager,
                       gpointer user_data)
 {
   LogviewLoglist *list = user_data;
-  GtkTreeIter iter, child;
+  CtkTreeIter iter, child;
 
   ctk_tree_store_append (list->priv->model, &iter, NULL);
   ctk_tree_store_set (list->priv->model, &iter,
@@ -319,9 +319,9 @@ manager_log_added_cb (LogviewManager *manager,
 }
 
 static void
-row_expanded_cb (GtkTreeView *view,
-                 GtkTreeIter *iter,
-                 GtkTreePath *path,
+row_expanded_cb (CtkTreeView *view,
+                 CtkTreeIter *iter,
+                 CtkTreePath *path,
                  gpointer user_data)
 {
   LogviewLoglist *list = user_data;
@@ -337,9 +337,9 @@ row_expanded_cb (GtkTreeView *view,
 }
 
 static int
-loglist_sort_func (GtkTreeModel *model,
-                   GtkTreeIter *a,
-                   GtkTreeIter *b,
+loglist_sort_func (CtkTreeModel *model,
+                   CtkTreeIter *a,
+                   CtkTreeIter *b,
                    gpointer user_data)
 {
   char *name_a, *name_b;
@@ -393,10 +393,10 @@ do_finalize (GObject *obj)
 static void
 logview_loglist_init (LogviewLoglist *list)
 {
-  GtkTreeStore *model;
-  GtkTreeViewColumn *column;
-  GtkTreeSelection *selection;
-  GtkCellRenderer *cell;
+  CtkTreeStore *model;
+  CtkTreeViewColumn *column;
+  CtkTreeSelection *selection;
+  CtkCellRenderer *cell;
 
   list->priv = logview_loglist_get_instance_private (list);
   list->priv->has_day_selection = FALSE;
@@ -425,7 +425,7 @@ logview_loglist_init (LogviewLoglist *list)
   ctk_tree_sortable_set_sort_column_id (CTK_TREE_SORTABLE (list->priv->model), LOG_NAME, CTK_SORT_ASCENDING);
   ctk_tree_sortable_set_sort_func (CTK_TREE_SORTABLE (list->priv->model),
                                    LOG_NAME,
-                                   (GtkTreeIterCompareFunc) loglist_sort_func,
+                                   (CtkTreeIterCompareFunc) loglist_sort_func,
                                    list, NULL);
   ctk_tree_view_append_column (CTK_TREE_VIEW (list), column);
   ctk_tree_view_set_search_column (CTK_TREE_VIEW (list), -1);
@@ -468,10 +468,10 @@ logview_loglist_class_init (LogviewLoglistClass *klass)
 
 /* public methods */
 
-GtkWidget *
+CtkWidget *
 logview_loglist_new (void)
 {
-  GtkWidget *widget;
+  CtkWidget *widget;
   widget = g_object_new (LOGVIEW_TYPE_LOGLIST, NULL);
   return widget;
 }
@@ -480,7 +480,7 @@ void
 logview_loglist_update_lines (LogviewLoglist *loglist, LogviewLog *log)
 {
   GSList *days;
-  GtkTreeIter *parent;
+  CtkTreeIter *parent;
 
   g_assert (LOGVIEW_IS_LOGLIST (loglist));
   g_assert (LOGVIEW_IS_LOG (log));

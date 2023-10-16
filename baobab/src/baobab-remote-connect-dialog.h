@@ -44,16 +44,16 @@ typedef struct _BaobabRemoteConnectDialogClass   BaobabRemoteConnectDialogClass;
 typedef struct _BaobabRemoteConnectDialogDetails BaobabRemoteConnectDialogDetails;
 
 struct _BaobabRemoteConnectDialog {
-	GtkDialog parent;
+	CtkDialog parent;
 	BaobabRemoteConnectDialogDetails *details;
 };
 
 struct _BaobabRemoteConnectDialogClass {
-	GtkDialogClass parent_class;
+	CtkDialogClass parent_class;
 };
 
 GType      baobab_remote_connect_dialog_get_type (void);
-GtkWidget* baobab_remote_connect_dialog_new      (GtkWindow *window,
+CtkWidget* baobab_remote_connect_dialog_new      (CtkWindow *window,
 						  GFile *location);
 
 #endif /* BAOBAB_REMOTE_CONNECT_DIALOG_H */

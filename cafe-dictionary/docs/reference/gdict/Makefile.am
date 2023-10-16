@@ -49,7 +49,7 @@ content_files = version.xml
 extra_files =
 
 # CFLAGS and LDFLAGS for compiling scan program. Only needed if your app/lib
-# contains GtkObjects/GObjects and you want to document signals and properties.
+# contains CtkObjects/GObjects and you want to document signals and properties.
 CTKDOC_CFLAGS = \
 	$(CFLAGS) \
 	$(CPPFLAGS) \

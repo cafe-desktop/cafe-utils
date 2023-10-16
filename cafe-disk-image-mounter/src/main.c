@@ -48,7 +48,7 @@ show_error (const gchar *format, ...)
 
   if (have_ctk)
     {
-      GtkWidget *dialog;
+      CtkWidget *dialog;
       dialog = ctk_message_dialog_new_with_markup (NULL,
                                                    CTK_DIALOG_MODAL,
                                                    CTK_MESSAGE_ERROR,
@@ -83,9 +83,9 @@ static const GOptionEntry opt_entries[] =
 
 /* TODO: keep in sync with src/disks/gduutils.c (ideally in shared lib) */
 static void
-_gdu_utils_configure_file_chooser_for_disk_images (GtkFileChooser *file_chooser)
+_gdu_utils_configure_file_chooser_for_disk_images (CtkFileChooser *file_chooser)
 {
-  GtkFileFilter *filter;
+  CtkFileFilter *filter;
   const gchar *folder;
 
   /* Default to the "Documents" folder since that's where we save such images */
@@ -110,8 +110,8 @@ static GSList *
 do_filechooser (void)
 {
   GSList *ret = NULL;
-  GtkWidget *dialog;
-  GtkWidget *ro_checkbutton;
+  CtkWidget *dialog;
+  CtkWidget *ro_checkbutton;
 
   ret = NULL;
 

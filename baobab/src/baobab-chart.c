@@ -66,8 +66,8 @@ struct _BaobabChartPrivate
   guint max_depth;
   gboolean model_changed;
 
-  GtkTreeModel *model;
-  GtkTreeRowReference *root;
+  CtkTreeModel *model;
+  CtkTreeRowReference *root;
 
   GList *first_item;
   GList *last_item;
@@ -102,10 +102,10 @@ const BaobabChartColor baobab_chart_tango_colors[] = {{0.94, 0.16, 0.16}, /* tan
                                                       {0.91, 0.73, 0.43}, /* tango: e9b96e */
                                                       {0.99, 0.68, 0.25}}; /* tango: fcaf3e */
 
-static void baobab_chart_realize (GtkWidget *widget);
+static void baobab_chart_realize (CtkWidget *widget);
 static void baobab_chart_dispose (GObject *object);
-static void baobab_chart_size_allocate (GtkWidget *widget,
-                                        GtkAllocation *allocation);
+static void baobab_chart_size_allocate (CtkWidget *widget,
+                                        CtkAllocation *allocation);
 static void baobab_chart_set_property (GObject *object,
                                        guint prop_id,
                                        const GValue *value,
@@ -114,56 +114,56 @@ static void baobab_chart_get_property (GObject *object,
                                        guint prop_id,
                                        GValue *value,
                                        GParamSpec *pspec);
-static void baobab_chart_free_items (GtkWidget *chart);
-static void baobab_chart_draw (GtkWidget *chart,
+static void baobab_chart_free_items (CtkWidget *chart);
+static void baobab_chart_draw (CtkWidget *chart,
                                cairo_t *cr,
                                GdkRectangle area);
 static void baobab_chart_update_draw (BaobabChart *chart,
-                                      GtkTreePath *path);
-static void baobab_chart_row_changed (GtkTreeModel *model,
-                                      GtkTreePath *path,
-                                      GtkTreeIter *iter,
+                                      CtkTreePath *path);
+static void baobab_chart_row_changed (CtkTreeModel *model,
+                                      CtkTreePath *path,
+                                      CtkTreeIter *iter,
                                       gpointer data);
-static void baobab_chart_row_inserted (GtkTreeModel *model,
-                                       GtkTreePath *path,
-                                       GtkTreeIter *iter,
+static void baobab_chart_row_inserted (CtkTreeModel *model,
+                                       CtkTreePath *path,
+                                       CtkTreeIter *iter,
                                        gpointer data);
-static void baobab_chart_row_has_child_toggled (GtkTreeModel *model,
-                                                GtkTreePath *path,
-                                                GtkTreeIter *iter,
+static void baobab_chart_row_has_child_toggled (CtkTreeModel *model,
+                                                CtkTreePath *path,
+                                                CtkTreeIter *iter,
                                                 gpointer data);
-static void baobab_chart_row_deleted (GtkTreeModel *model,
-                                      GtkTreePath *path,
+static void baobab_chart_row_deleted (CtkTreeModel *model,
+                                      CtkTreePath *path,
                                       gpointer data);
-static void baobab_chart_rows_reordered (GtkTreeModel *model,
-                                         GtkTreePath *parent,
-                                         GtkTreeIter *iter,
+static void baobab_chart_rows_reordered (CtkTreeModel *model,
+                                         CtkTreePath *parent,
+                                         CtkTreeIter *iter,
                                          gint *new_order,
                                          gpointer data);
-static gboolean baobab_chart_expose (GtkWidget *chart,
+static gboolean baobab_chart_expose (CtkWidget *chart,
                                      cairo_t *cr);
 static void baobab_chart_interpolate_colors (BaobabChartColor *color,
                                              BaobabChartColor colora,
                                              BaobabChartColor colorb,
                                              gdouble percentage);
-static gint baobab_chart_button_release (GtkWidget *widget,
+static gint baobab_chart_button_release (CtkWidget *widget,
                                          GdkEventButton *event);
-static gint baobab_chart_scroll (GtkWidget *widget,
+static gint baobab_chart_scroll (CtkWidget *widget,
                                  GdkEventScroll *event);
-static gint baobab_chart_motion_notify (GtkWidget *widget,
+static gint baobab_chart_motion_notify (CtkWidget *widget,
                                         GdkEventMotion *event);
-static gint baobab_chart_leave_notify (GtkWidget *widget,
+static gint baobab_chart_leave_notify (CtkWidget *widget,
                                        GdkEventCrossing *event);
-static inline void baobab_chart_disconnect_signals (GtkWidget *chart,
-                                                    GtkTreeModel *model);
-static inline void baobab_chart_connect_signals (GtkWidget *chart,
-                                                 GtkTreeModel *model);
-static void baobab_chart_get_items (GtkWidget *chart, GtkTreePath *root);
-static gboolean baobab_chart_query_tooltip (GtkWidget  *widget,
+static inline void baobab_chart_disconnect_signals (CtkWidget *chart,
+                                                    CtkTreeModel *model);
+static inline void baobab_chart_connect_signals (CtkWidget *chart,
+                                                 CtkTreeModel *model);
+static void baobab_chart_get_items (CtkWidget *chart, CtkTreePath *root);
+static gboolean baobab_chart_query_tooltip (CtkWidget  *widget,
                                             gint        x,
                                             gint        y,
                                             gboolean    keyboard_mode,
-                                            GtkTooltip *tooltip,
+                                            CtkTooltip *tooltip,
                                             gpointer    user_data);
 
 
@@ -171,17 +171,17 @@ static void
 baobab_chart_class_init (BaobabChartClass *class)
 {
   GObjectClass *obj_class;
-  GtkWidgetClass *widget_class;
+  CtkWidgetClass *widget_class;
 
   obj_class = G_OBJECT_CLASS (class);
   widget_class = CTK_WIDGET_CLASS (class);
 
-  /* GtkObject signals */
+  /* CtkObject signals */
   obj_class->set_property = baobab_chart_set_property;
   obj_class->get_property = baobab_chart_get_property;
   obj_class->dispose = baobab_chart_dispose;
 
-  /* GtkWidget signals */
+  /* CtkWidget signals */
   widget_class->realize = baobab_chart_realize;
   widget_class->draw = baobab_chart_expose;
   widget_class->size_allocate = baobab_chart_size_allocate;
@@ -289,12 +289,12 @@ baobab_chart_dispose (GObject *object)
 }
 
 static void
-baobab_chart_realize (GtkWidget *widget)
+baobab_chart_realize (CtkWidget *widget)
 {
   BaobabChart *chart;
   GdkWindowAttr attributes;
   gint attributes_mask;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
   GdkWindow *window;
 
   g_return_if_fail (BAOBAB_IS_CHART (widget));
@@ -329,8 +329,8 @@ baobab_chart_realize (GtkWidget *widget)
 }
 
 static void
-baobab_chart_size_allocate (GtkWidget *widget,
-                            GtkAllocation *allocation)
+baobab_chart_size_allocate (CtkWidget *widget,
+                            CtkAllocation *allocation)
 {
   BaobabChartPrivate *priv;
   BaobabChartClass *class;
@@ -419,11 +419,11 @@ baobab_chart_get_property (GObject    *object,
 }
 
 static GList
-*baobab_chart_add_item (GtkWidget *chart,
+*baobab_chart_add_item (CtkWidget *chart,
                         guint depth,
                         gdouble rel_start,
                         gdouble rel_size,
-                        GtkTreeIter iter)
+                        CtkTreeIter iter)
 {
   BaobabChartPrivate *priv;
   BaobabChartItem *item;
@@ -459,7 +459,7 @@ static GList
 }
 
 static void
-baobab_chart_free_items (GtkWidget *chart)
+baobab_chart_free_items (CtkWidget *chart)
 {
   BaobabChartPrivate *priv;
   BaobabChartItem *item;
@@ -493,19 +493,19 @@ baobab_chart_free_items (GtkWidget *chart)
 }
 
 static void
-baobab_chart_get_items (GtkWidget *chart, GtkTreePath *root)
+baobab_chart_get_items (CtkWidget *chart, CtkTreePath *root)
 {
   BaobabChartPrivate *priv;
   BaobabChartItem *item;
 
   GList *node;
-  GtkTreeIter initial_iter = {0};
+  CtkTreeIter initial_iter = {0};
   gdouble size;
-  GtkTreePath *model_root_path;
-  GtkTreeIter model_root_iter;
+  CtkTreePath *model_root_path;
+  CtkTreeIter model_root_iter;
 
   BaobabChartClass *class;
-  GtkTreeIter child_iter = {0};
+  CtkTreeIter child_iter = {0};
   GList *child_node;
   BaobabChartItem *child;
   gdouble rel_start;
@@ -586,7 +586,7 @@ baobab_chart_get_items (GtkWidget *chart, GtkTreePath *root)
 }
 
 static void
-baobab_chart_draw (GtkWidget *chart,
+baobab_chart_draw (CtkWidget *chart,
                    cairo_t *cr,
                    GdkRectangle area)
 {
@@ -631,10 +631,10 @@ baobab_chart_draw (GtkWidget *chart,
 
 static void
 baobab_chart_update_draw (BaobabChart* chart,
-                          GtkTreePath *path)
+                          CtkTreePath *path)
 {
   BaobabChartPrivate *priv;
-  GtkTreePath *root_path = NULL;
+  CtkTreePath *root_path = NULL;
   gint root_depth, node_depth;
 
   if (!ctk_widget_get_realized ( CTK_WIDGET (chart)))
@@ -671,9 +671,9 @@ baobab_chart_update_draw (BaobabChart* chart,
 }
 
 static void
-baobab_chart_row_changed (GtkTreeModel    *model,
-                          GtkTreePath     *path,
-                          GtkTreeIter     *iter,
+baobab_chart_row_changed (CtkTreeModel    *model,
+                          CtkTreePath     *path,
+                          CtkTreeIter     *iter,
                           gpointer         data)
 {
   g_return_if_fail (BAOBAB_IS_CHART (data));
@@ -685,9 +685,9 @@ baobab_chart_row_changed (GtkTreeModel    *model,
 }
 
 static void
-baobab_chart_row_inserted (GtkTreeModel    *model,
-                           GtkTreePath     *path,
-                           GtkTreeIter     *iter,
+baobab_chart_row_inserted (CtkTreeModel    *model,
+                           CtkTreePath     *path,
+                           CtkTreeIter     *iter,
                            gpointer         data)
 {
   g_return_if_fail (BAOBAB_IS_CHART (data));
@@ -699,9 +699,9 @@ baobab_chart_row_inserted (GtkTreeModel    *model,
 }
 
 static void
-baobab_chart_row_has_child_toggled (GtkTreeModel    *model,
-                                    GtkTreePath     *path,
-                                    GtkTreeIter     *iter,
+baobab_chart_row_has_child_toggled (CtkTreeModel    *model,
+                                    CtkTreePath     *path,
+                                    CtkTreeIter     *iter,
                                     gpointer         data)
 {
   g_return_if_fail (BAOBAB_IS_CHART (data));
@@ -713,8 +713,8 @@ baobab_chart_row_has_child_toggled (GtkTreeModel    *model,
 }
 
 static void
-baobab_chart_row_deleted (GtkTreeModel    *model,
-                          GtkTreePath     *path,
+baobab_chart_row_deleted (CtkTreeModel    *model,
+                          CtkTreePath     *path,
                           gpointer         data)
 {
   g_return_if_fail (BAOBAB_IS_CHART (data));
@@ -727,9 +727,9 @@ baobab_chart_row_deleted (GtkTreeModel    *model,
 }
 
 static void
-baobab_chart_rows_reordered (GtkTreeModel    *model,
-                             GtkTreePath     *path,
-                             GtkTreeIter     *iter,
+baobab_chart_rows_reordered (CtkTreeModel    *model,
+                             CtkTreePath     *path,
+                             CtkTreeIter     *iter,
                              gint            *new_order,
                              gpointer         data)
 {
@@ -743,14 +743,14 @@ baobab_chart_rows_reordered (GtkTreeModel    *model,
 }
 
 static gboolean
-baobab_chart_expose (GtkWidget *chart, cairo_t *cr)
+baobab_chart_expose (CtkWidget *chart, cairo_t *cr)
 {
   BaobabChartPrivate *priv;
   gint w, h;
   gdouble p, sx, sy;
-  GtkTreePath *root_path = NULL;
-  GtkTreePath *current_path = NULL;
-  GtkAllocation allocation;
+  CtkTreePath *root_path = NULL;
+  CtkTreePath *current_path = NULL;
+  CtkAllocation allocation;
 
   GdkRectangle area;
   gdouble x1, y1, x2, y2;
@@ -909,7 +909,7 @@ baobab_chart_get_item_color (BaobabChartColor *color,
 }
 
 static gint
-baobab_chart_button_release (GtkWidget *widget,
+baobab_chart_button_release (CtkWidget *widget,
                              GdkEventButton *event)
 {
   BaobabChartPrivate *priv;
@@ -940,7 +940,7 @@ baobab_chart_button_release (GtkWidget *widget,
 }
 
 static gint
-baobab_chart_scroll (GtkWidget *widget,
+baobab_chart_scroll (CtkWidget *widget,
                      GdkEventScroll *event)
 {
   switch (event->direction)
@@ -970,7 +970,7 @@ baobab_chart_scroll (GtkWidget *widget,
 }
 
 static void
-baobab_chart_set_item_highlight (GtkWidget *chart,
+baobab_chart_set_item_highlight (CtkWidget *chart,
                                  GList *node,
                                  gboolean highlighted)
 {
@@ -993,7 +993,7 @@ baobab_chart_set_item_highlight (GtkWidget *chart,
 }
 
 static gint
-baobab_chart_motion_notify (GtkWidget *widget,
+baobab_chart_motion_notify (CtkWidget *widget,
                             GdkEventMotion *event)
 {
   BaobabChartPrivate *priv;
@@ -1042,7 +1042,7 @@ baobab_chart_motion_notify (GtkWidget *widget,
 }
 
 static gint
-baobab_chart_leave_notify (GtkWidget *widget,
+baobab_chart_leave_notify (CtkWidget *widget,
                            GdkEventCrossing *event)
 {
   BaobabChartPrivate *priv;
@@ -1054,8 +1054,8 @@ baobab_chart_leave_notify (GtkWidget *widget,
 }
 
 static inline void
-baobab_chart_connect_signals (GtkWidget *chart,
-                              GtkTreeModel *model)
+baobab_chart_connect_signals (CtkWidget *chart,
+                              CtkTreeModel *model)
 {
   g_signal_connect (model,
                     "row_changed",
@@ -1096,8 +1096,8 @@ baobab_chart_connect_signals (GtkWidget *chart,
 }
 
 static inline void
-baobab_chart_disconnect_signals (GtkWidget *chart,
-                                 GtkTreeModel *model)
+baobab_chart_disconnect_signals (CtkWidget *chart,
+                                 CtkTreeModel *model)
 {
   g_signal_handlers_disconnect_by_func (model,
                                         baobab_chart_row_changed,
@@ -1129,11 +1129,11 @@ baobab_chart_disconnect_signals (GtkWidget *chart,
 }
 
 static gboolean
-baobab_chart_query_tooltip (GtkWidget  *widget,
+baobab_chart_query_tooltip (CtkWidget  *widget,
                             gint        x,
                             gint        y,
                             gboolean    keyboard_mode,
-                            GtkTooltip *tooltip,
+                            CtkTooltip *tooltip,
                             gpointer    user_data)
 {
   BaobabChartPrivate *priv;
@@ -1163,7 +1163,7 @@ baobab_chart_query_tooltip (GtkWidget  *widget,
 }
 
 GdkPixbuf*
-baobab_chart_get_pixbuf (GtkWidget *widget)
+baobab_chart_get_pixbuf (CtkWidget *widget)
 {
   gint w, h;
   GdkPixbuf *pixbuf;
@@ -1192,7 +1192,7 @@ baobab_chart_get_pixbuf (GtkWidget *widget)
  * Returns: a new #BaobabChart object
  *
  **/
-GtkWidget *
+CtkWidget *
 baobab_chart_new ()
 {
   return g_object_new (BAOBAB_CHART_TYPE, NULL);
@@ -1201,7 +1201,7 @@ baobab_chart_new ()
 /**
  * baobab_chart_set_model_with_columns:
  * @chart: the #BaobabChart whose model is going to be set
- * @model: the #GtkTreeModel which is going to set as the model of
+ * @model: the #CtkTreeModel which is going to set as the model of
  * @chart
  * @name_column: number of column inside @model where the file name is
  * stored
@@ -1213,16 +1213,16 @@ baobab_chart_new ()
  * usage percentage is stored
  * @valid_column: number of column inside @model where the flag indicating
  * if the row data is right or not.
- * @root: a #GtkTreePath indicating the node of @model which will be
+ * @root: a #CtkTreePath indicating the node of @model which will be
  * used as root.
  *
- * Sets @model as the #GtkTreeModel used by @chart. Indicates the
+ * Sets @model as the #CtkTreeModel used by @chart. Indicates the
  * columns inside @model where the values file name, file
  * size, file information, disk usage percentage and data correction are stored, and
  * the node which will be used as the root of @chart.  Once
  * the model has been successfully set, a redraw of the window is
  * forced.
- * This function is intended to be used the first time a #GtkTreeModel
+ * This function is intended to be used the first time a #CtkTreeModel
  * is assigned to @chart, or when the columns containing the needed data
  * are going to change. In other cases, #baobab_chart_set_model should
  * be used.
@@ -1231,17 +1231,17 @@ baobab_chart_new ()
  * #baobab_chart_thaw_updates functions.
  *
  * Fails if @chart is not a #BaobabChart or if @model is not a
- * #GtkTreeModel.
+ * #CtkTreeModel.
  **/
 void
-baobab_chart_set_model_with_columns (GtkWidget *chart,
-                                     GtkTreeModel *model,
+baobab_chart_set_model_with_columns (CtkWidget *chart,
+                                     CtkTreeModel *model,
                                      guint name_column,
                                      guint size_column,
                                      guint info_column,
                                      guint percentage_column,
                                      guint valid_column,
-                                     GtkTreePath *root)
+                                     CtkTreePath *root)
 {
   BaobabChartPrivate *priv;
 
@@ -1268,10 +1268,10 @@ baobab_chart_set_model_with_columns (GtkWidget *chart,
 /**
  * baobab_chart_set_model:
  * @chart: the #BaobabChart whose model is going to be set
- * @model: the #GtkTreeModel which is going to set as the model of
+ * @model: the #CtkTreeModel which is going to set as the model of
  * @chart
  *
- * Sets @model as the #GtkTreeModel used by @chart, and takes the needed
+ * Sets @model as the #CtkTreeModel used by @chart, and takes the needed
  * data from the columns especified in the last call to
  * #baobab_chart_set_model_with_colums.
  * This function does not change the state of the signals from the model, which
@@ -1279,11 +1279,11 @@ baobab_chart_set_model_with_columns (GtkWidget *chart,
  * #baobab_chart_thaw_updates functions.
  *
  * Fails if @chart is not a #BaobabChart or if @model is not a
- * #GtkTreeModel.
+ * #CtkTreeModel.
  **/
 void
-baobab_chart_set_model (GtkWidget *chart,
-                             GtkTreeModel *model)
+baobab_chart_set_model (CtkWidget *chart,
+                             CtkTreeModel *model)
 {
   BaobabChartPrivate *priv;
 
@@ -1324,12 +1324,12 @@ baobab_chart_set_model (GtkWidget *chart,
  * baobab_chart_get_model:
  * @chart: a #BaobabChart whose model will be returned.
  *
- * Returns the #GtkTreeModel which is the model used by @chart.
+ * Returns the #CtkTreeModel which is the model used by @chart.
  *
  * Returns: %NULL if @chart is not a #BaobabChart.
  **/
-GtkTreeModel *
-baobab_chart_get_model (GtkWidget *chart)
+CtkTreeModel *
+baobab_chart_get_model (CtkWidget *chart)
 {
   g_return_val_if_fail (BAOBAB_IS_CHART (chart), NULL);
 
@@ -1348,7 +1348,7 @@ baobab_chart_get_model (GtkWidget *chart)
  * Fails if @chart is not a #BaobabChart.
  **/
 void
-baobab_chart_set_max_depth (GtkWidget *chart,
+baobab_chart_set_max_depth (CtkWidget *chart,
                             guint max_depth)
 {
   BaobabChartPrivate *priv;
@@ -1381,7 +1381,7 @@ baobab_chart_set_max_depth (GtkWidget *chart,
  * Fails if @chart is not a #BaobabChart.
  **/
 guint
-baobab_chart_get_max_depth (GtkWidget *chart)
+baobab_chart_get_max_depth (CtkWidget *chart)
 {
   g_return_val_if_fail (BAOBAB_IS_CHART (chart), 0);
 
@@ -1391,21 +1391,21 @@ baobab_chart_get_max_depth (GtkWidget *chart)
 /**
  * baobab_chart_set_root:
  * @chart: a #BaobabChart
- * @root: a #GtkTreePath indicating the node which will be used as
+ * @root: a #CtkTreePath indicating the node which will be used as
  * the widget root.
  *
  * Sets the node pointed by @root as the new root of the widget
  * @chart.
  *
  * Fails if @chart is not a #BaobabChart or if @chart has not
- * a #GtkTreeModel set.
+ * a #CtkTreeModel set.
  **/
 void
-baobab_chart_set_root (GtkWidget *chart,
-                       GtkTreePath *root)
+baobab_chart_set_root (CtkWidget *chart,
+                       CtkTreePath *root)
 {
   BaobabChartPrivate *priv;
-  GtkTreePath *current_root;
+  CtkTreePath *current_root;
 
   g_return_if_fail (BAOBAB_IS_CHART (chart));
 
@@ -1434,15 +1434,15 @@ baobab_chart_set_root (GtkWidget *chart,
  * baobab_chart_get_root:
  * @chart: a #BaobabChart.
  *
- * Returns a #GtkTreePath pointing to the root of the widget. The
+ * Returns a #CtkTreePath pointing to the root of the widget. The
  * programmer has the responsability to free the used memory once
  * finished with the returned value. It returns NULL if there is no
  * root node defined
  *
  * Fails if @chart is not a #BaobabChart.
  **/
-GtkTreePath*
-baobab_chart_get_root (GtkWidget *chart)
+CtkTreePath*
+baobab_chart_get_root (CtkWidget *chart)
 {
   g_return_val_if_fail (BAOBAB_IS_CHART (chart), NULL);
 
@@ -1465,13 +1465,13 @@ baobab_chart_get_root (GtkWidget *chart)
  * Fails if @chart is not a #BaobabChart.
  **/
 void
-baobab_chart_freeze_updates (GtkWidget *chart)
+baobab_chart_freeze_updates (CtkWidget *chart)
 {
   BaobabChartPrivate *priv;
   cairo_surface_t *surface = NULL;
   cairo_t *cr = NULL;
   GdkRectangle area;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   g_return_if_fail (BAOBAB_IS_CHART (chart));
 
@@ -1531,7 +1531,7 @@ baobab_chart_freeze_updates (GtkWidget *chart)
  * Fails if @chart is not a #BaobabChart.
  **/
 void
-baobab_chart_thaw_updates (GtkWidget *chart)
+baobab_chart_thaw_updates (CtkWidget *chart)
 {
   BaobabChartPrivate *priv;
 
@@ -1567,7 +1567,7 @@ baobab_chart_thaw_updates (GtkWidget *chart)
  * Fails if @chart is not a #BaobabChart.
  **/
 void
-baobab_chart_zoom_in (GtkWidget *chart)
+baobab_chart_zoom_in (CtkWidget *chart)
 {
   BaobabChartPrivate *priv;
   BaobabChartClass *class;
@@ -1595,7 +1595,7 @@ baobab_chart_zoom_in (GtkWidget *chart)
  * Fails if @chart is not a #BaobabChart.
  **/
 void
-baobab_chart_zoom_out (GtkWidget *chart)
+baobab_chart_zoom_out (CtkWidget *chart)
 {
   g_return_if_fail (BAOBAB_IS_CHART (chart));
 
@@ -1612,16 +1612,16 @@ baobab_chart_zoom_out (GtkWidget *chart)
  * Fails if @chart is not a #BaobabChart.
  **/
 void
-baobab_chart_move_up_root (GtkWidget *chart)
+baobab_chart_move_up_root (CtkWidget *chart)
 {
   BaobabChartPrivate *priv;
 
-  GtkTreeIter parent_iter;
-  GtkTreePath *path;
-  GtkTreeIter root_iter;
+  CtkTreeIter parent_iter;
+  CtkTreePath *path;
+  CtkTreeIter root_iter;
 
   gint valid;
-  GtkTreePath *parent_path;
+  CtkTreePath *parent_path;
 
   g_return_if_fail (BAOBAB_IS_CHART (chart));
 
@@ -1670,17 +1670,17 @@ baobab_chart_move_up_root (GtkWidget *chart)
  * Fails if @chart is not a #BaobabChart.
  **/
 void
-baobab_chart_save_snapshot (GtkWidget *chart)
+baobab_chart_save_snapshot (CtkWidget *chart)
 {
   BaobabChartPrivate *priv;
 
   GdkPixbuf *pixbuf;
 
-  GtkWidget *fs_dlg;
-  GtkWidget *vbox;
-  GtkWidget *hbox;
-  GtkWidget *label;
-  GtkWidget *opt_menu;
+  CtkWidget *fs_dlg;
+  CtkWidget *vbox;
+  CtkWidget *hbox;
+  CtkWidget *label;
+  CtkWidget *opt_menu;
   gchar *sel_type;
   gchar *filename;
   gchar *def_filename;
@@ -1696,7 +1696,7 @@ baobab_chart_save_snapshot (GtkWidget *chart)
   pixbuf = baobab_chart_get_pixbuf (chart);
   if (pixbuf == NULL)
     {
-      GtkWidget *dialog;
+      CtkWidget *dialog;
       dialog = ctk_message_dialog_new (NULL,
                                        CTK_DIALOG_DESTROY_WITH_PARENT,
                                        CTK_MESSAGE_ERROR,
@@ -1784,7 +1784,7 @@ baobab_chart_save_snapshot (GtkWidget *chart)
  * Fails if @chart is not a #BaobabChart.
  **/
 gboolean
-baobab_chart_is_frozen (GtkWidget *chart)
+baobab_chart_is_frozen (CtkWidget *chart)
 {
   BaobabChartPrivate *priv;
 
@@ -1804,7 +1804,7 @@ baobab_chart_is_frozen (GtkWidget *chart)
  * Fails if @chart is not a #BaobabChart.
  **/
 BaobabChartItem *
-baobab_chart_get_highlighted_item (GtkWidget *chart)
+baobab_chart_get_highlighted_item (CtkWidget *chart)
 {
   BaobabChartPrivate *priv;
 
@@ -1825,7 +1825,7 @@ baobab_chart_get_highlighted_item (GtkWidget *chart)
  * Fails if @chart is not a #BaobabChart.
  **/
 gboolean
-baobab_chart_can_zoom_in (GtkWidget *chart)
+baobab_chart_can_zoom_in (CtkWidget *chart)
 {
   BaobabChartPrivate *priv;
   BaobabChartClass *class;
@@ -1851,7 +1851,7 @@ baobab_chart_can_zoom_in (GtkWidget *chart)
  * Fails if @chart is not a #BaobabChart.
  **/
 gboolean
-baobab_chart_can_zoom_out (GtkWidget *chart)
+baobab_chart_can_zoom_out (CtkWidget *chart)
 {
   BaobabChartPrivate *priv;
   BaobabChartClass *class;

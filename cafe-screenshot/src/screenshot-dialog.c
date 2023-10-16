@@ -34,7 +34,7 @@ enum {
   LAST_TYPE
 };
 
-static GtkTargetEntry drag_types[] =
+static CtkTargetEntry drag_types[] =
 {
   { "image/png", 0, TYPE_IMAGE_PNG },
   { "text/uri-list", 0, TYPE_TEXT_URI_LIST },
@@ -42,17 +42,17 @@ static GtkTargetEntry drag_types[] =
 
 struct ScreenshotDialog
 {
-  GtkBuilder *ui;
+  CtkBuilder *ui;
   GdkPixbuf *screenshot;
   GdkPixbuf *preview_image;
-  GtkWidget *save_widget;
-  GtkWidget *filename_entry;
+  CtkWidget *save_widget;
+  CtkWidget *filename_entry;
   gint drag_x;
   gint drag_y;
 };
 
 static gboolean
-on_toplevel_key_press_event (GtkWidget *widget,
+on_toplevel_key_press_event (CtkWidget *widget,
 			     GdkEventKey *key)
 {
   if (key->keyval == GDK_KEY_F1)
@@ -65,12 +65,12 @@ on_toplevel_key_press_event (GtkWidget *widget,
 }
 
 static void
-on_preview_draw (GtkWidget      *drawing_area,
+on_preview_draw (CtkWidget      *drawing_area,
                  cairo_t        *cr,
                  gpointer        data)
 {
   ScreenshotDialog *dialog = data;
-  GtkStyleContext *context;
+  CtkStyleContext *context;
   int width, height;
 
   width = ctk_widget_get_allocated_width (drawing_area);
@@ -97,7 +97,7 @@ on_preview_draw (GtkWidget      *drawing_area,
 }
 
 static gboolean
-on_preview_button_press_event (GtkWidget      *drawing_area,
+on_preview_button_press_event (CtkWidget      *drawing_area,
 			       GdkEventButton *event,
 			       gpointer        data)
 {
@@ -110,7 +110,7 @@ on_preview_button_press_event (GtkWidget      *drawing_area,
 }
 
 static gboolean
-on_preview_button_release_event (GtkWidget      *drawing_area,
+on_preview_button_release_event (CtkWidget      *drawing_area,
 				 GdkEventButton *event,
 				 gpointer        data)
 {
@@ -123,9 +123,9 @@ on_preview_button_release_event (GtkWidget      *drawing_area,
 }
 
 static void
-drag_data_get (GtkWidget          *widget,
+drag_data_get (CtkWidget          *widget,
 	       GdkDragContext     *context,
-	       GtkSelectionData   *selection_data,
+	       CtkSelectionData   *selection_data,
 	       guint               info,
 	       guint               time,
 	       ScreenshotDialog   *dialog)
@@ -154,7 +154,7 @@ drag_data_get (GtkWidget          *widget,
 }
 
 static void
-drag_begin (GtkWidget        *widget,
+drag_begin (CtkWidget        *widget,
 	    GdkDragContext   *context,
 	    ScreenshotDialog *dialog)
 {
@@ -169,10 +169,10 @@ screenshot_dialog_new (GdkPixbuf *screenshot,
 		       gboolean   take_window_shot)
 {
   ScreenshotDialog *dialog;
-  GtkWidget *toplevel;
-  GtkWidget *preview_darea;
-  GtkWidget *aspect_frame;
-  GtkWidget *file_chooser_box;
+  CtkWidget *toplevel;
+  CtkWidget *preview_darea;
+  CtkWidget *aspect_frame;
+  CtkWidget *file_chooser_box;
   gint width, height;
   char *current_folder;
   char *current_name;
@@ -198,7 +198,7 @@ screenshot_dialog_new (GdkPixbuf *screenshot,
 
   if (ctk_builder_add_from_resource (dialog->ui, "/org/cafe/screenshot/cafe-screenshot.ui", &error) == 0)
     {
-      GtkWidget *dialog;
+      CtkWidget *dialog;
       dialog = ctk_message_dialog_new (NULL, 0,
 				       CTK_MESSAGE_ERROR,
 				       CTK_BUTTONS_OK,
@@ -283,7 +283,7 @@ screenshot_dialog_focus_entry (ScreenshotDialog *dialog)
 void
 screenshot_dialog_enable_dnd (ScreenshotDialog *dialog)
 {
-  GtkWidget *preview_darea;
+  CtkWidget *preview_darea;
 
   g_return_if_fail (dialog != NULL);
 
@@ -294,7 +294,7 @@ screenshot_dialog_enable_dnd (ScreenshotDialog *dialog)
 		       GDK_ACTION_COPY);
 }
 
-GtkWidget *
+CtkWidget *
 screenshot_dialog_get_toplevel (ScreenshotDialog *dialog)
 {
   return CTK_WIDGET (ctk_builder_get_object (dialog->ui, "toplevel"));
@@ -349,7 +349,7 @@ void
 screenshot_dialog_set_busy (ScreenshotDialog *dialog,
 			    gboolean          busy)
 {
-  GtkWidget *toplevel;
+  CtkWidget *toplevel;
   GdkDisplay *display;
 
   toplevel = screenshot_dialog_get_toplevel (dialog);

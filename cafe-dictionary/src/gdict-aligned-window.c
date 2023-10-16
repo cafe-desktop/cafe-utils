@@ -35,7 +35,7 @@
 
 struct _GdictAlignedWindowPrivate
 {
-  GtkWidget *align_widget;
+  CtkWidget *align_widget;
 
   guint motion_id;
 };
@@ -57,10 +57,10 @@ static void gdict_aligned_window_set_property (GObject      *object,
 					       const GValue *value,
 					       GParamSpec   *pspec);
 
-static void     gdict_aligned_window_realize          (GtkWidget        *widget);
-static void     gdict_aligned_window_show             (GtkWidget        *widget);
+static void     gdict_aligned_window_realize          (CtkWidget        *widget);
+static void     gdict_aligned_window_show             (CtkWidget        *widget);
 
-static gboolean gdict_aligned_window_motion_notify_cb (GtkWidget        *widget,
+static gboolean gdict_aligned_window_motion_notify_cb (CtkWidget        *widget,
 						       GdkEventMotion   *event,
 						       GdictAlignedWindow *aligned_window);
 
@@ -73,7 +73,7 @@ static void
 gdict_aligned_window_class_init (GdictAlignedWindowClass *klass)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-  GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
+  CtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
 
   gobject_class->set_property = gdict_aligned_window_set_property;
   gobject_class->get_property = gdict_aligned_window_get_property;
@@ -94,7 +94,7 @@ static void
 gdict_aligned_window_init (GdictAlignedWindow *aligned_window)
 {
   GdictAlignedWindowPrivate *priv = gdict_aligned_window_get_instance_private (aligned_window);
-  GtkWindow *window = CTK_WINDOW (aligned_window);
+  CtkWindow *window = CTK_WINDOW (aligned_window);
 
   aligned_window->priv = priv;
 
@@ -152,7 +152,7 @@ static void
 gdict_aligned_window_position (GdictAlignedWindow *window)
 {
   GdictAlignedWindowPrivate *priv;
-  GtkWidget *align_widget;
+  CtkWidget *align_widget;
   gint our_width, our_height;
   gint entry_x, entry_y, entry_width, entry_height;
   gint x, y;
@@ -214,7 +214,7 @@ gdict_aligned_window_position (GdictAlignedWindow *window)
 }
 
 static void
-gdict_aligned_window_realize (GtkWidget *widget)
+gdict_aligned_window_realize (CtkWidget *widget)
 {
   CTK_WIDGET_CLASS (gdict_aligned_window_parent_class)->realize (widget);
 
@@ -222,7 +222,7 @@ gdict_aligned_window_realize (GtkWidget *widget)
 }
 
 static void
-gdict_aligned_window_show (GtkWidget *widget)
+gdict_aligned_window_show (CtkWidget *widget)
 {
   gdict_aligned_window_position (GDICT_ALIGNED_WINDOW (widget));
 
@@ -236,11 +236,11 @@ gdict_aligned_window_finalize (GObject *object)
 }
 
 static gboolean
-gdict_aligned_window_motion_notify_cb (GtkWidget        *widget,
+gdict_aligned_window_motion_notify_cb (CtkWidget        *widget,
 				       GdkEventMotion   *event,
 				       GdictAlignedWindow *aligned_window)
 {
-  GtkAllocation alloc;
+  CtkAllocation alloc;
   GdkRectangle rect;
 
   ctk_widget_get_allocation (CTK_WIDGET (aligned_window), &alloc);
@@ -260,14 +260,14 @@ gdict_aligned_window_motion_notify_cb (GtkWidget        *widget,
 
 /**
  * gdict_aligned_window_new:
- * @align_widget: a #GtkWidget to which the window should align
+ * @align_widget: a #CtkWidget to which the window should align
  *
  * Creates a new window, aligned to a previously created widget.
  *
  * Return value: a new #GdictAlignedWindow
  */
-GtkWidget *
-gdict_aligned_window_new (GtkWidget *align_widget)
+CtkWidget *
+gdict_aligned_window_new (CtkWidget *align_widget)
 {
   return g_object_new (GDICT_TYPE_ALIGNED_WINDOW,
   		       "align-widget", align_widget,
@@ -277,9 +277,9 @@ gdict_aligned_window_new (GtkWidget *align_widget)
 /**
  * gdict_aligned_window_set_widget:
  * @aligned_window: a #GdictAlignedWindow
- * @align_widget: the #GtkWidget @aligned_window should align to
+ * @align_widget: the #CtkWidget @aligned_window should align to
  *
- * Sets @align_widget as the #GtkWidget to which @aligned_window should
+ * Sets @align_widget as the #CtkWidget to which @aligned_window should
  * align.
  *
  * Note that @align_widget must have a #GdkWindow in order to
@@ -287,7 +287,7 @@ gdict_aligned_window_new (GtkWidget *align_widget)
  */
 void
 gdict_aligned_window_set_widget (GdictAlignedWindow *aligned_window,
-			         GtkWidget          *align_widget)
+			         CtkWidget          *align_widget)
 {
   GdictAlignedWindowPrivate *priv;
 
@@ -324,11 +324,11 @@ gdict_aligned_window_set_widget (GdictAlignedWindow *aligned_window,
  * gdict_aligned_window_get_widget:
  * @aligned_window: a #GdictAlignedWindow
  *
- * Retrieves the #GtkWidget to which @aligned_window is aligned to.
+ * Retrieves the #CtkWidget to which @aligned_window is aligned to.
  *
  * Return value: the align widget.
  */
-GtkWidget *
+CtkWidget *
 gdict_aligned_window_get_widget (GdictAlignedWindow *aligned_window)
 {
   g_return_val_if_fail (GDICT_IS_ALIGNED_WINDOW (aligned_window), NULL);

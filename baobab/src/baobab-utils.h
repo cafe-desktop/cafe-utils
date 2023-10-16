@@ -26,23 +26,23 @@
 #include "baobab.h"
 
 void baobab_get_filesystem (BaobabFS *fs);
-gchar* dir_select (gboolean, GtkWidget *);
-void on_toggled (GtkToggleButton *, gpointer);
+gchar* dir_select (gboolean, CtkWidget *);
+void on_toggled (CtkToggleButton *, gpointer);
 void stop_scan (void);
-gboolean show_bars (GtkTreeModel *model,
-		    GtkTreePath *path,
-		    GtkTreeIter *iter,
+gboolean show_bars (CtkTreeModel *model,
+		    CtkTreePath *path,
+		    CtkTreeIter *iter,
 		    gpointer data);
-void message (const gchar *primary_msg, const gchar *secondary_msg, GtkMessageType type, GtkWidget *parent);
-gint messageyesno (const gchar *primary_msg, const gchar *secondary_msg, GtkMessageType type, gchar * ok_button, GtkWidget *parent);
+void message (const gchar *primary_msg, const gchar *secondary_msg, CtkMessageType type, CtkWidget *parent);
+gint messageyesno (const gchar *primary_msg, const gchar *secondary_msg, CtkMessageType type, gchar * ok_button, CtkWidget *parent);
 gboolean baobab_check_dir (GFile *);
-void popupmenu_list (GtkTreePath *path, GdkEventButton *event, gboolean can_trash);
+void popupmenu_list (CtkTreePath *path, GdkEventButton *event, gboolean can_trash);
 void open_file_with_application (GFile *file);
 gboolean can_trash_file (GFile *file);
 gboolean trash_file (GFile *file);
 void set_ui_action_sens (const gchar *name, gboolean sens);
 void set_ui_widget_sens (const gchar *name, gboolean sens);
-gboolean baobab_help_display (GtkWindow *parent, const gchar *file_name, const gchar *link_id);
+gboolean baobab_help_display (CtkWindow *parent, const gchar *file_name, const gchar *link_id);
 gboolean is_virtual_filesystem (GFile *file);
 
 #endif /* __BAOBAB_UTILS_H__ */

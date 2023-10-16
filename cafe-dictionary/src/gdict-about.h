@@ -1,4 +1,4 @@
-/* gdict-about.h - GtkAboutDialog wrapper
+/* gdict-about.h - CtkAboutDialog wrapper
  *
  * This file is part of CAFE Dictionary
  *
@@ -25,6 +25,6 @@
 
 #include <ctk/ctk.h>
 
-void gdict_show_about_dialog (GtkWidget *parent);
+void gdict_show_about_dialog (CtkWidget *parent);
 
 #endif /* __GDICT_ABOUT_H__ */

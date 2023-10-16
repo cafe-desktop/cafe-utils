@@ -48,32 +48,32 @@ typedef struct _GdictWindowClass GdictWindowClass;
 
 struct _GdictWindow
 {
-  GtkWindow parent_instance;
+  CtkWindow parent_instance;
 
-  GtkWidget *main_box;
-  GtkWidget *menubar;
-  GtkWidget *entry;
+  CtkWidget *main_box;
+  CtkWidget *menubar;
+  CtkWidget *entry;
 
   /* sidebar widgets */
-  GtkWidget *speller;
-  GtkWidget *db_chooser;
-  GtkWidget *strat_chooser;
-  GtkWidget *source_chooser;
+  CtkWidget *speller;
+  CtkWidget *db_chooser;
+  CtkWidget *strat_chooser;
+  CtkWidget *source_chooser;
 
-  GtkWidget *sidebar;
-  GtkWidget *sidebar_frame;
+  CtkWidget *sidebar;
+  CtkWidget *sidebar_frame;
 
-  GtkWidget *defbox;
-  GtkWidget *defbox_frame;
+  CtkWidget *defbox;
+  CtkWidget *defbox_frame;
 
-  GtkWidget *status;
-  GtkWidget *progress;
+  CtkWidget *status;
+  CtkWidget *progress;
 
-  GtkUIManager *ui_manager;
-  GtkActionGroup *action_group;
+  CtkUIManager *ui_manager;
+  CtkActionGroup *action_group;
 
-  GtkEntryCompletion *completion;
-  GtkListStore *completion_model;
+  CtkEntryCompletion *completion;
+  CtkListStore *completion_model;
 
   GdictWindowAction action;
 
@@ -118,14 +118,14 @@ struct _GdictWindow
 
 struct _GdictWindowClass
 {
-  GtkWindowClass parent_class;
+  CtkWindowClass parent_class;
 
   void (*created) (GdictWindow *parent_window,
   		   GdictWindow *new_window);
 };
 
 GType      gdict_window_get_type (void) G_GNUC_CONST;
-GtkWidget *gdict_window_new      (GdictWindowAction  action,
+CtkWidget *gdict_window_new      (GdictWindowAction  action,
 				  GdictSourceLoader *loader,
 				  const gchar       *source_name,
 				  const gchar       *word);

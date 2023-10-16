@@ -49,7 +49,7 @@ struct _GdictAppletClass
 struct _GdictAppletPrivate
 {
   guint size;
-  GtkOrientation orient;
+  CtkOrientation orient;
 
   GSettings *settings;
   GSettings *desktop_settings;
@@ -68,15 +68,15 @@ struct _GdictAppletPrivate
 
   GdictSourceLoader *loader;
 
-  GtkWidget *box;
-  GtkWidget *toggle;
-  GtkWidget *image;
-  GtkWidget *entry;
-  GtkWidget *window;
-  GtkWidget *frame;
-  GtkWidget *defbox;
+  CtkWidget *box;
+  CtkWidget *toggle;
+  CtkWidget *image;
+  CtkWidget *entry;
+  CtkWidget *window;
+  CtkWidget *frame;
+  CtkWidget *defbox;
 
-  GtkActionGroup* context_menu_action_group;
+  CtkActionGroup* context_menu_action_group;
 
   guint idle_draw_id;
 
@@ -96,7 +96,7 @@ struct _GdictAppletPrivate
 G_DEFINE_TYPE_WITH_PRIVATE (GdictApplet, gdict_applet, PANEL_TYPE_APPLET);
 
 
-static const GtkTargetEntry drop_types[] =
+static const CtkTargetEntry drop_types[] =
 {
   { "text/plain",    0, 0 },
   { "TEXT",          0, 0 },
@@ -107,7 +107,7 @@ static const guint n_drop_types = G_N_ELEMENTS (drop_types);
 
 
 static void
-set_atk_name_description (GtkWidget  *widget,
+set_atk_name_description (CtkWidget  *widget,
 			  const char *name,
 			  const char *description)
 {
@@ -125,12 +125,12 @@ static void
 set_window_default_size (GdictApplet *applet)
 {
   GdictAppletPrivate *priv = applet->priv;
-  GtkWidget *widget, *defbox;
+  CtkWidget *widget, *defbox;
   gint width, height;
   gint font_size;
   GdkDisplay *display;
   GdkMonitor *monitor_num;
-  GtkRequisition req;
+  CtkRequisition req;
   GdkRectangle monitor;
 
   if (!priv->window)
@@ -165,7 +165,7 @@ set_window_default_size (GdictApplet *applet)
 }
 
 static void
-clear_cb (GtkWidget   *widget,
+clear_cb (CtkWidget   *widget,
 	  GdictApplet *applet)
 {
   GdictAppletPrivate *priv = applet->priv;
@@ -179,7 +179,7 @@ clear_cb (GtkWidget   *widget,
 }
 
 static void
-print_cb (GtkWidget   *widget,
+print_cb (CtkWidget   *widget,
 	  GdictApplet *applet)
 {
   GdictAppletPrivate *priv = applet->priv;
@@ -192,11 +192,11 @@ print_cb (GtkWidget   *widget,
 }
 
 static void
-save_cb (GtkWidget   *widget,
+save_cb (CtkWidget   *widget,
          GdictApplet *applet)
 {
   GdictAppletPrivate *priv = applet->priv;
-  GtkWidget *dialog;
+  CtkWidget *dialog;
 
   if (!priv->defbox)
     return;
@@ -253,7 +253,7 @@ static void
 gdict_applet_set_menu_items_sensitive (GdictApplet *applet,
 				       gboolean     is_sensitive)
 {
-  GtkAction *action;
+  CtkAction *action;
 
   action = ctk_action_group_get_action (applet->priv->context_menu_action_group,
                                         "DictionaryClear");
@@ -269,7 +269,7 @@ gdict_applet_set_menu_items_sensitive (GdictApplet *applet,
 }
 
 static gboolean
-window_key_press_event_cb (GtkWidget   *widget,
+window_key_press_event_cb (CtkWidget   *widget,
 			   GdkEventKey *event,
 			   gpointer     user_data)
 {
@@ -294,7 +294,7 @@ window_key_press_event_cb (GtkWidget   *widget,
 }
 
 static void
-window_show_cb (GtkWidget   *window,
+window_show_cb (CtkWidget   *window,
 		GdictApplet *applet)
 {
   set_window_default_size (applet);
@@ -304,11 +304,11 @@ static void
 gdict_applet_build_window (GdictApplet *applet)
 {
   GdictAppletPrivate *priv = applet->priv;
-  GtkWidget *window;
-  GtkWidget *frame;
-  GtkWidget *vbox;
-  GtkWidget *bbox;
-  GtkWidget *button;
+  CtkWidget *window;
+  CtkWidget *frame;
+  CtkWidget *vbox;
+  CtkWidget *bbox;
+  CtkWidget *button;
 
   if (!priv->entry)
     {
@@ -403,7 +403,7 @@ gdict_applet_build_window (GdictApplet *applet)
 }
 
 static gboolean
-gdict_applet_icon_toggled_cb (GtkWidget   *widget,
+gdict_applet_icon_toggled_cb (CtkWidget   *widget,
 			      GdictApplet *applet)
 {
   GdictAppletPrivate *priv = applet->priv;
@@ -435,7 +435,7 @@ gdict_applet_icon_toggled_cb (GtkWidget   *widget,
 }
 
 static void
-gdict_applet_entry_activate_cb (GtkWidget   *widget,
+gdict_applet_entry_activate_cb (CtkWidget   *widget,
 				GdictApplet *applet)
 {
   GdictAppletPrivate *priv = applet->priv;
@@ -455,7 +455,7 @@ gdict_applet_entry_activate_cb (GtkWidget   *widget,
 }
 
 static gboolean
-gdict_applet_entry_key_press_cb (GtkWidget   *widget,
+gdict_applet_entry_key_press_cb (CtkWidget   *widget,
 				 GdkEventKey *event,
 				 gpointer     user_data)
 {
@@ -481,7 +481,7 @@ gdict_applet_entry_key_press_cb (GtkWidget   *widget,
 }
 
 static gboolean
-gdict_applet_icon_button_press_event_cb (GtkWidget      *widget,
+gdict_applet_icon_button_press_event_cb (CtkWidget      *widget,
 					 GdkEventButton *event,
 					 GdictApplet    *applet)
 {
@@ -497,7 +497,7 @@ gdict_applet_icon_button_press_event_cb (GtkWidget      *widget,
 }
 
 static gboolean
-gdict_applet_entry_button_press_event_cb (GtkWidget      *widget,
+gdict_applet_entry_button_press_event_cb (CtkWidget      *widget,
 					  GdkEventButton *event,
 					  GdictApplet    *applet)
 {
@@ -510,8 +510,8 @@ static gboolean
 gdict_applet_draw (GdictApplet *applet)
 {
   GdictAppletPrivate *priv = applet->priv;
-  GtkWidget *box;
-  GtkWidget *hbox;
+  CtkWidget *box;
+  CtkWidget *hbox;
   gchar *text = NULL;
 
   if (priv->entry)
@@ -667,7 +667,7 @@ gdict_applet_error_cb (GdictContext *context,
 }
 
 static void
-gdict_applet_cmd_lookup (GtkAction *action,
+gdict_applet_cmd_lookup (CtkAction *action,
 			 GdictApplet       *applet)
 {
   GdictAppletPrivate *priv = applet->priv;
@@ -687,28 +687,28 @@ gdict_applet_cmd_lookup (GtkAction *action,
 }
 
 static void
-gdict_applet_cmd_clear (GtkAction *action,
+gdict_applet_cmd_clear (CtkAction *action,
 			GdictApplet       *applet)
 {
   clear_cb (NULL, applet);
 }
 
 static void
-gdict_applet_cmd_print (GtkAction *action,
+gdict_applet_cmd_print (CtkAction *action,
 			GdictApplet       *applet)
 {
   print_cb (NULL, applet);
 }
 
 static void
-gdict_applet_cmd_save (GtkAction *action,
+gdict_applet_cmd_save (CtkAction *action,
 			GdictApplet       *applet)
 {
   save_cb (NULL, applet);
 }
 
 static void
-gdict_applet_cmd_preferences (GtkAction *action,
+gdict_applet_cmd_preferences (CtkAction *action,
 			      GdictApplet       *applet)
 {
   gdict_show_pref_dialog (CTK_WIDGET (applet),
@@ -717,14 +717,14 @@ gdict_applet_cmd_preferences (GtkAction *action,
 }
 
 static void
-gdict_applet_cmd_about (GtkAction *action,
+gdict_applet_cmd_about (CtkAction *action,
 			GdictApplet       *applet)
 {
   gdict_show_about_dialog (CTK_WIDGET (applet));
 }
 
 static void
-gdict_applet_cmd_help (GtkAction *action,
+gdict_applet_cmd_help (CtkAction *action,
 		       GdictApplet       *applet)
 {
   GError *err = NULL;
@@ -748,7 +748,7 @@ gdict_applet_change_orient (CafePanelApplet       *applet,
 {
   GdictAppletPrivate *priv = GDICT_APPLET (applet)->priv;
   guint new_size;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   ctk_widget_get_allocation (CTK_WIDGET (applet), &allocation);
   switch (orient)
@@ -776,7 +776,7 @@ gdict_applet_change_orient (CafePanelApplet       *applet,
 }
 
 static void
-gdict_applet_size_allocate (GtkWidget    *widget,
+gdict_applet_size_allocate (CtkWidget    *widget,
 			    GdkRectangle *allocation)
 {
   GdictApplet *applet = GDICT_APPLET (widget);
@@ -815,8 +815,8 @@ gdict_applet_size_allocate (GtkWidget    *widget,
 }
 
 static void
-gdict_applet_style_set (GtkWidget *widget,
-			GtkStyle  *old_style)
+gdict_applet_style_set (CtkWidget *widget,
+			CtkStyle  *old_style)
 {
   if (CTK_WIDGET_CLASS (gdict_applet_parent_class)->style_set)
     CTK_WIDGET_CLASS (gdict_applet_parent_class)->style_set (widget,
@@ -1090,7 +1090,7 @@ static void
 gdict_applet_class_init (GdictAppletClass *klass)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-  GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
+  CtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
   CafePanelAppletClass *applet_class = CAFE_PANEL_APPLET_CLASS (klass);
 
   gobject_class->finalize = gdict_applet_finalize;
@@ -1164,7 +1164,7 @@ gdict_applet_init (GdictApplet *applet)
   gdict_applet_set_print_font (applet, NULL);
 }
 
-static const GtkActionEntry gdict_applet_menu_actions[] = {
+static const CtkActionEntry gdict_applet_menu_actions[] = {
   {"DictionaryLookup", "edit-find", N_("_Look Up Selected Text"),
     NULL, NULL,
     G_CALLBACK (gdict_applet_cmd_lookup) },

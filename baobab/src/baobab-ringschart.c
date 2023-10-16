@@ -80,23 +80,23 @@ static void baobab_ringschart_draw_sector (cairo_t *cr,
                                            gdouble init_angle, gdouble final_angle,
                                            BaobabChartColor fill_color,
                                            gboolean continued, guint border);
-static void baobab_ringschart_draw_item (GtkWidget *chart,
+static void baobab_ringschart_draw_item (CtkWidget *chart,
                                          cairo_t *cr,
                                          BaobabChartItem *item,
                                          gboolean highlighted);
-static void baobab_ringschart_calculate_item_geometry (GtkWidget *chart,
+static void baobab_ringschart_calculate_item_geometry (CtkWidget *chart,
                                                        BaobabChartItem *item);
-static gboolean baobab_ringschart_is_point_over_item (GtkWidget *chart,
+static gboolean baobab_ringschart_is_point_over_item (CtkWidget *chart,
                                                       BaobabChartItem *item,
                                                       gdouble x,
                                                       gdouble y);
 static void baobab_ringschart_get_point_min_rect (gdouble cx, gdouble cy,
                                                   gdouble radius, gdouble angle,
                                                   GdkRectangle *rect);
-static void baobab_ringschart_get_item_rectangle (GtkWidget *chart,
+static void baobab_ringschart_get_item_rectangle (CtkWidget *chart,
                                                   BaobabChartItem *item);
-static void baobab_ringschart_pre_draw (GtkWidget *chart, cairo_t *cr);
-static void baobab_ringschart_post_draw (GtkWidget *chart, cairo_t *cr);
+static void baobab_ringschart_pre_draw (CtkWidget *chart, cairo_t *cr);
+static void baobab_ringschart_post_draw (CtkWidget *chart, cairo_t *cr);
 
 
 static void
@@ -119,7 +119,7 @@ static void
 baobab_ringschart_init (BaobabRingschart *chart)
 {
   BaobabRingschartPrivate *priv;
-  GtkSettings* settings;
+  CtkSettings* settings;
   gint timeout;
 
   priv = baobab_ringschart_get_instance_private (chart);
@@ -169,7 +169,7 @@ baobab_ringschart_draw_sector (cairo_t *cr,
 }
 
 static void
-baobab_ringschart_draw_item (GtkWidget *chart,
+baobab_ringschart_draw_item (CtkWidget *chart,
                              cairo_t *cr,
                              BaobabChartItem *item,
                              gboolean highlighted)
@@ -177,7 +177,7 @@ baobab_ringschart_draw_item (GtkWidget *chart,
   BaobabRingschartPrivate *priv;
   BaobabRingschartItem *data;
   BaobabChartColor fill_color;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   priv = baobab_ringschart_get_instance_private (BAOBAB_RINGSCHART (chart));
 
@@ -216,13 +216,13 @@ baobab_ringschart_draw_item (GtkWidget *chart,
 }
 
 static void
-baobab_ringschart_calculate_item_geometry (GtkWidget *chart,
+baobab_ringschart_calculate_item_geometry (CtkWidget *chart,
                                            BaobabChartItem *item)
 {
   BaobabRingschartItem *data;
   BaobabRingschartItem p_data;
   BaobabChartItem *parent = NULL;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   gdouble max_radius;
   gdouble thickness;
@@ -277,14 +277,14 @@ baobab_ringschart_calculate_item_geometry (GtkWidget *chart,
 }
 
 static gboolean
-baobab_ringschart_is_point_over_item (GtkWidget *chart,
+baobab_ringschart_is_point_over_item (CtkWidget *chart,
                                       BaobabChartItem *item,
                                       gdouble x,
                                       gdouble y)
 {
   BaobabRingschartItem *data;
   gdouble radius, angle;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   data = (BaobabRingschartItem *) item->data;
   ctk_widget_get_allocation (chart, &allocation);
@@ -320,13 +320,13 @@ baobab_ringschart_get_point_min_rect (gdouble cx,
 }
 
 static void
-baobab_ringschart_get_item_rectangle (GtkWidget *chart,
+baobab_ringschart_get_item_rectangle (CtkWidget *chart,
                                        BaobabChartItem *item)
 {
   BaobabRingschartItem *data;
   GdkRectangle rect;
   gdouble cx, cy, r1, r2, a1, a2;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   data = (BaobabRingschartItem *) item->data;
 
@@ -381,7 +381,7 @@ baobab_ringschart_subfolder_tips_timeout (gpointer data)
 }
 
 void
-baobab_ringschart_clean_subforlder_tips_state (GtkWidget *chart)
+baobab_ringschart_clean_subforlder_tips_state (CtkWidget *chart)
 {
   BaobabRingschartPrivate *priv;
   GList *node;
@@ -417,7 +417,7 @@ baobab_ringschart_clean_subforlder_tips_state (GtkWidget *chart)
 }
 
 static void
-baobab_ringschart_draw_subfolder_tips (GtkWidget *chart, cairo_t *cr)
+baobab_ringschart_draw_subfolder_tips (CtkWidget *chart, cairo_t *cr)
 {
   BaobabRingschartPrivate *priv;
   GList *node;
@@ -431,7 +431,7 @@ baobab_ringschart_draw_subfolder_tips (GtkWidget *chart, cairo_t *cr)
   gdouble sector_center_x, sector_center_y;
   gdouble a;
   guint i;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   PangoLayout *layout;
   PangoRectangle layout_rect;
@@ -581,7 +581,7 @@ baobab_ringschart_draw_subfolder_tips (GtkWidget *chart, cairo_t *cr)
 }
 
 static void
-baobab_ringschart_pre_draw (GtkWidget *chart, cairo_t *cr)
+baobab_ringschart_pre_draw (CtkWidget *chart, cairo_t *cr)
 {
   BaobabRingschartPrivate *priv;
   BaobabChartItem *hl_item;
@@ -611,7 +611,7 @@ baobab_ringschart_pre_draw (GtkWidget *chart, cairo_t *cr)
 }
 
 static void
-baobab_ringschart_post_draw (GtkWidget *chart, cairo_t *cr)
+baobab_ringschart_post_draw (CtkWidget *chart, cairo_t *cr)
 {
   BaobabRingschartPrivate *priv;
 
@@ -636,7 +636,7 @@ baobab_ringschart_post_draw (GtkWidget *chart, cairo_t *cr)
  * Returns: a new #BaobabRingschart object
  *
  **/
-GtkWidget *
+CtkWidget *
 baobab_ringschart_new (void)
 {
   return g_object_new (BAOBAB_RINGSCHART_TYPE, NULL);
@@ -653,7 +653,7 @@ baobab_ringschart_new (void)
  *
  **/
 void
-baobab_ringschart_set_subfoldertips_enabled (GtkWidget *chart, gboolean enabled)
+baobab_ringschart_set_subfoldertips_enabled (CtkWidget *chart, gboolean enabled)
 {
   BaobabRingschartPrivate *priv;
 

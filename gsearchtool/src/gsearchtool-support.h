@@ -80,10 +80,10 @@ GdkPixbuf *
 get_file_pixbuf (GSearchWindow * gsearch,
                  GFileInfo * file_info);
 gboolean
-open_file_with_filemanager (GtkWidget * window,
+open_file_with_filemanager (CtkWidget * window,
                             const gchar * file);
 gboolean
-open_file_with_application (GtkWidget * window,
+open_file_with_application (CtkWidget * window,
                             const gchar * file,
                             GAppInfo * app);
 gboolean
@@ -92,14 +92,14 @@ launch_file (const gchar * file);
 gchar *
 gsearchtool_get_unique_filename (const gchar * path,
                                  const gchar * suffix);
-GtkWidget *
+CtkWidget *
 gsearchtool_button_new_with_icon (const gchar * string,
                                   const gchar * icon_name);
 GSList *
-gsearchtool_get_columns_order (GtkTreeView * treeview);
+gsearchtool_get_columns_order (CtkTreeView * treeview);
 
 void
-gsearchtool_set_columns_order (GtkTreeView * treeview);
+gsearchtool_set_columns_order (CtkTreeView * treeview);
 
 void
 gsearchtool_get_stored_window_geometry (gint * width,

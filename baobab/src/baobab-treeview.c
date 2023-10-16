@@ -34,10 +34,10 @@
 #include "baobab-utils.h"
 #include "callbacks.h"
 
-static GtkTreeStore *
+static CtkTreeStore *
 create_model (void)
 {
-	GtkTreeStore *mdl = ctk_tree_store_new (NUM_TREE_COLUMNS,
+	CtkTreeStore *mdl = ctk_tree_store_new (NUM_TREE_COLUMNS,
 						G_TYPE_STRING,	/* COL_DIR_NAME */
 						G_TYPE_STRING,	/* COL_H_PARSENAME */
 						G_TYPE_DOUBLE,	/* COL_H_PERC */
@@ -54,18 +54,18 @@ create_model (void)
 }
 
 static void
-on_tv_row_expanded (GtkTreeView *treeview,
-		    GtkTreeIter *arg1,
-		    GtkTreePath *arg2,
+on_tv_row_expanded (CtkTreeView *treeview,
+		    CtkTreeIter *arg1,
+		    CtkTreePath *arg2,
 		    gpointer data)
 {
 	ctk_tree_view_columns_autosize (treeview);
 }
 
 static void
-on_tv_cur_changed (GtkTreeView *treeview, gpointer data)
+on_tv_cur_changed (CtkTreeView *treeview, gpointer data)
 {
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 	gchar *parsename = NULL;
 
 	ctk_tree_selection_get_selected (ctk_tree_view_get_selection (treeview), NULL, &iter);
@@ -91,12 +91,12 @@ contents_changed (void)
 }
 
 static gboolean
-on_tv_button_press (GtkWidget *widget,
+on_tv_button_press (CtkWidget *widget,
 		    GdkEventButton *event,
 		    gpointer data)
 {
-	GtkTreePath *path;
-	GtkTreeIter iter;
+	CtkTreePath *path;
+	CtkTreeIter iter;
 	GFile *file;
 
 	ctk_tree_view_get_path_at_pos (CTK_TREE_VIEW (widget),
@@ -142,10 +142,10 @@ on_tv_button_press (GtkWidget *widget,
 }
 
 static gboolean
-baobab_treeview_equal_func (GtkTreeModel *model,
+baobab_treeview_equal_func (CtkTreeModel *model,
                             gint column,
                             const gchar *key,
-                            GtkTreeIter *iter,
+                            CtkTreeIter *iter,
                             gpointer data)
 {
 	gboolean results = TRUE;
@@ -173,10 +173,10 @@ baobab_treeview_equal_func (GtkTreeModel *model,
 }
 
 static void
-perc_cell_data_func (GtkTreeViewColumn *col,
-		     GtkCellRenderer *renderer,
-		     GtkTreeModel *model,
-		     GtkTreeIter *iter,
+perc_cell_data_func (CtkTreeViewColumn *col,
+		     CtkCellRenderer *renderer,
+		     CtkTreeModel *model,
+		     CtkTreeIter *iter,
 		     gpointer user_data)
 {
 	gdouble perc;
@@ -194,14 +194,14 @@ perc_cell_data_func (GtkTreeViewColumn *col,
 	g_object_set (renderer, "text", textperc, NULL);
 }
 
-GtkWidget *
+CtkWidget *
 create_directory_treeview (void)
 {
-	GtkCellRenderer *cell;
-	GtkTreeViewColumn *col;
-	GtkWidget *scrolled;
+	CtkCellRenderer *cell;
+	CtkTreeViewColumn *col;
+	CtkWidget *scrolled;
 
-	GtkWidget *tvw = CTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "treeview1"));
+	CtkWidget *tvw = CTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "treeview1"));
 
 	g_signal_connect (tvw, "row-expanded",
 			  G_CALLBACK (on_tv_row_expanded), NULL);
@@ -309,13 +309,13 @@ create_directory_treeview (void)
 }
 
 void
-baobab_treeview_show_allocated_size (GtkWidget *tv,
+baobab_treeview_show_allocated_size (CtkWidget *tv,
 				     gboolean show_allocated)
 {
 	gint sort_id;
 	gint new_sort_id;
-	GtkSortType order;
-	GtkTreeViewColumn *size_col;
+	CtkSortType order;
+	CtkTreeViewColumn *size_col;
 
 	g_return_if_fail (CTK_IS_TREE_VIEW (tv));
 

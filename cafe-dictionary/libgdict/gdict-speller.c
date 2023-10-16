@@ -53,12 +53,12 @@ struct _GdictSpellerPrivate
 
   gchar *word;
 
-  GtkWidget *treeview;
-  GtkWidget *clear_button;
+  CtkWidget *treeview;
+  CtkWidget *clear_button;
 
   GdkCursor *busy_cursor;
 
-  GtkListStore *store;
+  CtkListStore *store;
   gint results;
 
   guint start_id;
@@ -238,14 +238,14 @@ gdict_speller_get_property (GObject    *gobject,
 }
 
 static void
-row_activated_cb (GtkTreeView       *treeview,
-		  GtkTreePath       *path,
-		  GtkTreeViewColumn *column,
+row_activated_cb (CtkTreeView       *treeview,
+		  CtkTreePath       *path,
+		  CtkTreeViewColumn *column,
 		  gpointer           user_data)
 {
   GdictSpeller *speller = GDICT_SPELLER (user_data);
   GdictSpellerPrivate *priv = speller->priv;
-  GtkTreeIter iter;
+  CtkTreeIter iter;
   gchar *word, *db_name;
   gboolean valid;
 
@@ -279,7 +279,7 @@ row_activated_cb (GtkTreeView       *treeview,
 }
 
 static void
-clear_button_clicked_cb (GtkWidget *widget,
+clear_button_clicked_cb (CtkWidget *widget,
 			 gpointer   user_data)
 {
   GdictSpeller *speller = GDICT_SPELLER (user_data);
@@ -295,10 +295,10 @@ gdict_speller_constructor (GType                  type,
   GObject *object;
   GdictSpeller *speller;
   GdictSpellerPrivate *priv;
-  GtkWidget *sw;
-  GtkCellRenderer *renderer;
-  GtkTreeViewColumn *column;
-  GtkWidget *hbox;
+  CtkWidget *sw;
+  CtkCellRenderer *renderer;
+  CtkTreeViewColumn *column;
+  CtkWidget *hbox;
 
   object = G_OBJECT_CLASS (gdict_speller_parent_class)->constructor (type,
   						                     n_params,
@@ -432,7 +432,7 @@ gdict_speller_init (GdictSpeller *speller)
  *
  * Since:
  */
-GtkWidget *
+CtkWidget *
 gdict_speller_new (void)
 {
   return g_object_new (GDICT_TYPE_SPELLER, NULL);
@@ -448,7 +448,7 @@ gdict_speller_new (void)
  *
  * Since:
  */
-GtkWidget *
+CtkWidget *
 gdict_speller_new_with_context (GdictContext *context)
 {
   g_return_val_if_fail (GDICT_IS_CONTEXT (context), NULL);
@@ -656,7 +656,7 @@ match_found_cb (GdictContext *context,
 {
   GdictSpeller *speller = GDICT_SPELLER (user_data);
   GdictSpellerPrivate *priv = speller->priv;
-  GtkTreeIter iter;
+  CtkTreeIter iter;
 
   GDICT_NOTE (SPELLER, "MATCH: `%s' (from `%s')",
               gdict_match_get_word (match),
@@ -765,7 +765,7 @@ gdict_speller_match (GdictSpeller *speller,
 			    &match_error);
   if (match_error)
     {
-      GtkTreeIter iter;
+      CtkTreeIter iter;
 
       ctk_list_store_append (priv->store, &iter);
       ctk_list_store_set (priv->store, &iter,

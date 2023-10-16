@@ -32,7 +32,7 @@ ScreenshotDialog *screenshot_dialog_new          (GdkPixbuf        *screenshot,
 						  char             *initial_uri,
 						  gboolean          take_window_shot);
 void              screenshot_dialog_enable_dnd   (ScreenshotDialog *dialog);
-GtkWidget        *screenshot_dialog_get_toplevel (ScreenshotDialog *dialog);
+CtkWidget        *screenshot_dialog_get_toplevel (ScreenshotDialog *dialog);
 char             *screenshot_dialog_get_uri      (ScreenshotDialog *dialog);
 char             *screenshot_dialog_get_folder   (ScreenshotDialog *dialog);
 GdkPixbuf        *screenshot_dialog_get_screenshot (ScreenshotDialog *dialog);

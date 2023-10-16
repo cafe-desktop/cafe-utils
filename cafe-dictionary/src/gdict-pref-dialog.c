@@ -49,7 +49,7 @@
  * GdictPrefDialog *
  *******************/
 
-static GtkWidget *global_dialog = NULL;
+static CtkWidget *global_dialog = NULL;
 
 enum
 {
@@ -62,34 +62,34 @@ enum
 
 struct _GdictPrefDialog
 {
-  GtkDialog parent_instance;
+  CtkDialog parent_instance;
 
-  GtkBuilder *builder;
+  CtkBuilder *builder;
 
   GSettings *settings;
 
   gchar *active_source;
   GdictSourceLoader *loader;
-  GtkListStore *sources_list;
+  CtkListStore *sources_list;
 
   /* direct pointers to widgets */
-  GtkWidget *notebook;
+  CtkWidget *notebook;
 
-  GtkWidget *sources_view;
-  GtkWidget *sources_add;
-  GtkWidget *sources_remove;
-  GtkWidget *sources_edit;
+  CtkWidget *sources_view;
+  CtkWidget *sources_add;
+  CtkWidget *sources_remove;
+  CtkWidget *sources_edit;
 
   gchar *print_font;
-  GtkWidget *font_button;
+  CtkWidget *font_button;
 
-  GtkWidget *help_button;
-  GtkWidget *close_button;
+  CtkWidget *help_button;
+  CtkWidget *close_button;
 };
 
 struct _GdictPrefDialogClass
 {
-  GtkDialogClass parent_class;
+  CtkDialogClass parent_class;
 };
 
 enum
@@ -104,9 +104,9 @@ G_DEFINE_TYPE (GdictPrefDialog, gdict_pref_dialog, CTK_TYPE_DIALOG);
 
 
 static gboolean
-select_active_source_name (GtkTreeModel *model,
-			   GtkTreePath  *path,
-			   GtkTreeIter  *iter,
+select_active_source_name (CtkTreeModel *model,
+			   CtkTreePath  *path,
+			   CtkTreeIter  *iter,
 			   gpointer      data)
 {
   GdictPrefDialog *dialog = GDICT_PREF_DIALOG (data);
@@ -117,7 +117,7 @@ select_active_source_name (GtkTreeModel *model,
       		      -1);
   if (is_active)
     {
-      GtkTreeSelection *selection;
+      CtkTreeSelection *selection;
 
       selection = ctk_tree_view_get_selection (CTK_TREE_VIEW (dialog->sources_view));
 
@@ -145,7 +145,7 @@ update_sources_view (GdictPrefDialog *dialog)
   for (l = sources; l != NULL; l = l->next)
     {
       GdictSource *source = GDICT_SOURCE (l->data);
-      GtkTreeIter iter;
+      CtkTreeIter iter;
       const gchar *name, *description;
       gboolean is_active = FALSE;
 
@@ -175,12 +175,12 @@ update_sources_view (GdictPrefDialog *dialog)
 }
 
 static void
-source_renderer_toggled_cb (GtkCellRendererToggle *renderer,
+source_renderer_toggled_cb (CtkCellRendererToggle *renderer,
 			    const gchar           *path,
 			    GdictPrefDialog       *dialog)
 {
-  GtkTreePath *treepath;
-  GtkTreeIter iter;
+  CtkTreePath *treepath;
+  CtkTreeIter iter;
   gboolean res;
   gboolean is_active;
   gchar *name;
@@ -215,15 +215,15 @@ source_renderer_toggled_cb (GtkCellRendererToggle *renderer,
 }
 
 static void
-sources_view_row_activated_cb (GtkTreeView       *tree_view,
-			       GtkTreePath       *tree_path,
-			       GtkTreeViewColumn *tree_iter,
+sources_view_row_activated_cb (CtkTreeView       *tree_view,
+			       CtkTreePath       *tree_path,
+			       CtkTreeViewColumn *tree_iter,
 			       GdictPrefDialog   *dialog)
 {
-  GtkWidget *edit_dialog;
+  CtkWidget *edit_dialog;
   gchar *source_name;
-  GtkTreeModel *model;
-  GtkTreeIter iter;
+  CtkTreeModel *model;
+  CtkTreeIter iter;
 
   model = ctk_tree_view_get_model (tree_view);
   if (!model)
@@ -252,8 +252,8 @@ sources_view_row_activated_cb (GtkTreeView       *tree_view,
 static void
 build_sources_view (GdictPrefDialog *dialog)
 {
-  GtkTreeViewColumn *column;
-  GtkCellRenderer *renderer;
+  CtkTreeViewColumn *column;
+  CtkCellRenderer *renderer;
 
   if (dialog->sources_list)
     return;
@@ -295,10 +295,10 @@ build_sources_view (GdictPrefDialog *dialog)
 }
 
 static void
-source_add_clicked_cb (GtkWidget       *widget,
+source_add_clicked_cb (CtkWidget       *widget,
 		       GdictPrefDialog *dialog)
 {
-  GtkWidget *add_dialog;
+  CtkWidget *add_dialog;
 
   add_dialog = gdict_source_dialog_new (CTK_WINDOW (dialog),
   					_("Add Dictionary Source"),
@@ -314,12 +314,12 @@ source_add_clicked_cb (GtkWidget       *widget,
 }
 
 static void
-source_remove_clicked_cb (GtkWidget       *widget,
+source_remove_clicked_cb (CtkWidget       *widget,
 			  GdictPrefDialog *dialog)
 {
-  GtkTreeSelection *selection;
-  GtkTreeModel *model;
-  GtkTreeIter iter;
+  CtkTreeSelection *selection;
+  CtkTreeModel *model;
+  CtkTreeIter iter;
   gboolean is_selected;
   gchar *name, *description;
 
@@ -339,7 +339,7 @@ source_remove_clicked_cb (GtkWidget       *widget,
     return;
   else
     {
-      GtkWidget *confirm_dialog;
+      CtkWidget *confirm_dialog;
       gint response;
 
       confirm_dialog = ctk_message_dialog_new (CTK_WINDOW (dialog),
@@ -375,7 +375,7 @@ source_remove_clicked_cb (GtkWidget       *widget,
     ctk_list_store_remove (CTK_LIST_STORE (model), &iter);
   else
     {
-      GtkWidget *error_dialog;
+      CtkWidget *error_dialog;
       gchar *message;
 
       message = g_strdup_printf (_("Unable to remove source '%s'"),
@@ -401,12 +401,12 @@ out:
 }
 
 static void
-source_edit_clicked_cb (GtkButton       *button,
+source_edit_clicked_cb (CtkButton       *button,
                         GdictPrefDialog *dialog)
 {
-  GtkTreeSelection *selection;
-  GtkTreeModel *model;
-  GtkTreeIter iter;
+  CtkTreeSelection *selection;
+  CtkTreeModel *model;
+  CtkTreeIter iter;
   gboolean is_selected;
   gchar *name;
 
@@ -423,7 +423,7 @@ source_edit_clicked_cb (GtkButton       *button,
     return;
   else
     {
-      GtkWidget *edit_dialog;
+      CtkWidget *edit_dialog;
 
       edit_dialog = gdict_source_dialog_new (CTK_WINDOW (dialog),
                                              _("Edit Dictionary Source"),
@@ -456,7 +456,7 @@ set_source_loader (GdictPrefDialog   *dialog,
 }
 
 static void
-font_button_font_set_cb (GtkWidget       *font_button,
+font_button_font_set_cb (CtkWidget       *font_button,
 			 GdictPrefDialog *dialog)
 {
   gchar *font;
@@ -478,7 +478,7 @@ font_button_font_set_cb (GtkWidget       *font_button,
 }
 
 static void
-response_cb (GtkDialog *dialog,
+response_cb (CtkDialog *dialog,
 	     gint       response_id,
 	     gpointer   user_data)
 {
@@ -492,7 +492,7 @@ response_cb (GtkDialog *dialog,
                     ctk_get_current_event_time (), &err);
       if (err)
 	{
-          GtkWidget *error_dialog;
+          CtkWidget *error_dialog;
 	  gchar *message;
 
 	  message = g_strdup_printf (_("There was an error while displaying help"));
@@ -578,10 +578,10 @@ gdict_pref_dialog_get_property (GObject    *object,
 }
 
 static gboolean
-gdict_dialog_page_scroll_event_cb (GtkWidget *widget, GdkEventScroll *event, GtkWindow *window)
+gdict_dialog_page_scroll_event_cb (CtkWidget *widget, GdkEventScroll *event, CtkWindow *window)
 {
-  GtkNotebook *notebook = CTK_NOTEBOOK (widget);
-  GtkWidget *child, *event_widget, *action_widget;
+  CtkNotebook *notebook = CTK_NOTEBOOK (widget);
+  CtkWidget *child, *event_widget, *action_widget;
 
   child = ctk_notebook_get_nth_page (notebook, ctk_notebook_get_current_page (notebook));
   if (child == NULL)
@@ -678,7 +678,7 @@ gdict_pref_dialog_init (GdictPrefDialog *dialog)
 
   dialog->settings = g_settings_new (GDICT_SETTINGS_SCHEMA);
 
-  /* get the UI from the GtkBuilder file */
+  /* get the UI from the CtkBuilder file */
   dialog->builder = ctk_builder_new ();
   ctk_builder_add_from_file (dialog->builder, GDICT_PREFERENCES_UI, &error);
 
@@ -743,11 +743,11 @@ gdict_pref_dialog_init (GdictPrefDialog *dialog)
 }
 
 void
-gdict_show_pref_dialog (GtkWidget         *parent,
+gdict_show_pref_dialog (CtkWidget         *parent,
 			const gchar       *title,
 			GdictSourceLoader *loader)
 {
-  GtkWidget *dialog;
+  CtkWidget *dialog;
 
   g_return_if_fail (CTK_IS_WIDGET (parent));
   g_return_if_fail (GDICT_IS_SOURCE_LOADER (loader));

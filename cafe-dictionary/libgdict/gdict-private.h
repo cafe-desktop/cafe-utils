@@ -24,10 +24,10 @@ G_BEGIN_DECLS
 
 gboolean _gdict_has_ipv6 (void);
 
-void _gdict_show_error_dialog  (GtkWidget   *widget,
+void _gdict_show_error_dialog  (CtkWidget   *widget,
 			        const gchar *title,
 			        const gchar *detail);
-void _gdict_show_gerror_dialog (GtkWidget   *widget,
+void _gdict_show_gerror_dialog (CtkWidget   *widget,
 			        const gchar *title,
 			        GError      *error);
 

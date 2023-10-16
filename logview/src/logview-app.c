@@ -50,7 +50,7 @@ static LogviewApp *app_singleton = NULL;
 G_DEFINE_TYPE_WITH_PRIVATE (LogviewApp, logview_app, G_TYPE_OBJECT);
 
 static gboolean
-main_window_delete_cb (GtkWidget *widget,
+main_window_delete_cb (CtkWidget *widget,
                        GdkEvent *event,
                        gpointer user_data)
 {

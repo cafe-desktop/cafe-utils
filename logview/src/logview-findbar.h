@@ -44,12 +44,12 @@ typedef struct _LogviewFindbarClass LogviewFindbarClass;
 typedef struct _LogviewFindbarPrivate LogviewFindbarPrivate;
 
 struct _LogviewFindbar {
-  GtkToolbar parent_instance;
+  CtkToolbar parent_instance;
   LogviewFindbarPrivate *priv;
 };
 
 struct _LogviewFindbarClass {
-  GtkToolbarClass parent_class;
+  CtkToolbarClass parent_class;
 
   /* signals */
   void (* previous)     (LogviewFindbar *findbar);
@@ -61,7 +61,7 @@ struct _LogviewFindbarClass {
 GType logview_findbar_get_type (void);
 
 /* public methods */
-GtkWidget *  logview_findbar_new         (void);
+CtkWidget *  logview_findbar_new         (void);
 void         logview_findbar_open        (LogviewFindbar *findbar);
 const char * logview_findbar_get_text    (LogviewFindbar *findbar);
 void         logview_findbar_set_message (LogviewFindbar *findbar,

@@ -109,21 +109,21 @@ static char *border_effect = NULL;
 static guint delay = 0;
 
 /* some local prototypes */
-static void  display_help           (GtkWindow *parent);
+static void  display_help           (CtkWindow *parent);
 static void  save_done_notification (gpointer   data);
 static char *get_desktop_dir        (void);
 static void  save_options           (void);
 
-static GtkWidget *border_check = NULL;
-static GtkWidget *effect_combo = NULL;
-static GtkWidget *effect_label = NULL;
-static GtkWidget *effects_vbox = NULL;
-static GtkWidget *delay_hbox = NULL;
+static CtkWidget *border_check = NULL;
+static CtkWidget *effect_combo = NULL;
+static CtkWidget *effect_label = NULL;
+static CtkWidget *effects_vbox = NULL;
+static CtkWidget *delay_hbox = NULL;
 
 void loop_dialog_screenshot ();
 
 static void
-display_help (GtkWindow *parent)
+display_help (CtkWindow *parent)
 {
   GError *error = NULL;
 
@@ -142,7 +142,7 @@ display_help (GtkWindow *parent)
 }
 
 static void
-interactive_dialog_response_cb (GtkDialog *dialog,
+interactive_dialog_response_cb (CtkDialog *dialog,
                                 gint       response,
                                 gpointer   user_data)
 {
@@ -163,7 +163,7 @@ interactive_dialog_response_cb (GtkDialog *dialog,
 #define TARGET_TOGGLE_AREA    2
 
 static void
-target_toggled_cb (GtkToggleButton *button,
+target_toggled_cb (CtkToggleButton *button,
                    gpointer         data)
 {
   int target_toggle = GPOINTER_TO_INT (data);
@@ -183,34 +183,34 @@ target_toggled_cb (GtkToggleButton *button,
 }
 
 static void
-delay_spin_value_changed_cb (GtkSpinButton *button)
+delay_spin_value_changed_cb (CtkSpinButton *button)
 {
   delay = ctk_spin_button_get_value_as_int (button);
 }
 
 static void
-include_border_toggled_cb (GtkToggleButton *button,
+include_border_toggled_cb (CtkToggleButton *button,
                            gpointer         data)
 {
   include_border = ctk_toggle_button_get_active (button);
 }
 
 static void
-include_pointer_toggled_cb (GtkToggleButton *button,
+include_pointer_toggled_cb (CtkToggleButton *button,
                             gpointer         data)
 {
   include_pointer = ctk_toggle_button_get_active (button);
 }
 
 static void
-effect_combo_changed_cb (GtkComboBox *combo,
+effect_combo_changed_cb (CtkComboBox *combo,
                          gpointer     user_data)
 {
-  GtkTreeIter iter;
+  CtkTreeIter iter;
 
   if (ctk_combo_box_get_active_iter (combo, &iter))
     {
-      GtkTreeModel *model;
+      CtkTreeModel *model;
       gchar *effect;
 
       model = ctk_combo_box_get_model (combo);
@@ -224,7 +224,7 @@ effect_combo_changed_cb (GtkComboBox *combo,
 }
 
 static gint
-key_press_cb (GtkWidget* widget, GdkEventKey* event, gpointer data)
+key_press_cb (CtkWidget* widget, GdkEventKey* event, gpointer data)
 {
   if (event->keyval == GDK_KEY_F1)
     {
@@ -254,12 +254,12 @@ static const ScreenshotEffect effects[] = {
 
 static guint n_effects = G_N_ELEMENTS (effects);
 
-static GtkWidget *
+static CtkWidget *
 create_effects_combo (void)
 {
-  GtkWidget *retval;
-  GtkListStore *model;
-  GtkCellRenderer *renderer;
+  CtkWidget *retval;
+  CtkListStore *model;
+  CtkCellRenderer *renderer;
   gint i;
 
   model = ctk_list_store_new (N_COLUMNS,
@@ -269,7 +269,7 @@ create_effects_combo (void)
 
   for (i = 0; i < n_effects; i++)
     {
-      GtkTreeIter iter;
+      CtkTreeIter iter;
 
       ctk_list_store_insert (model, &iter, i);
       ctk_list_store_set (model, &iter,
@@ -316,13 +316,13 @@ create_effects_combo (void)
 }
 
 static void
-create_effects_frame (GtkWidget   *outer_vbox,
+create_effects_frame (CtkWidget   *outer_vbox,
                       const gchar *frame_title)
 {
-  GtkWidget *main_vbox, *vbox, *hbox;
-  GtkWidget *label;
-  GtkWidget *check;
-  GtkWidget *combo;
+  CtkWidget *main_vbox, *vbox, *hbox;
+  CtkWidget *label;
+  CtkWidget *check;
+  CtkWidget *combo;
   gchar *title;
 
   main_vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
@@ -391,15 +391,15 @@ create_effects_frame (GtkWidget   *outer_vbox,
 }
 
 static void
-create_screenshot_frame (GtkWidget   *outer_vbox,
+create_screenshot_frame (CtkWidget   *outer_vbox,
                          const gchar *frame_title)
 {
-  GtkWidget *main_vbox, *vbox, *hbox;
-  GtkWidget *radio;
-  GtkWidget *image;
-  GtkWidget *spin;
-  GtkWidget *label;
-  GtkAdjustment *adjust;
+  CtkWidget *main_vbox, *vbox, *hbox;
+  CtkWidget *radio;
+  CtkWidget *image;
+  CtkWidget *spin;
+  CtkWidget *label;
+  CtkAdjustment *adjust;
   GSList *group;
   gchar *title;
 
@@ -504,12 +504,12 @@ create_screenshot_frame (GtkWidget   *outer_vbox,
   ctk_widget_show (label);
 }
 
-static GtkWidget *
+static CtkWidget *
 create_interactive_dialog (void)
 {
-  GtkWidget *retval;
-  GtkWidget *main_vbox;
-  GtkWidget *content_area;
+  CtkWidget *retval;
+  CtkWidget *main_vbox;
+  CtkWidget *content_area;
 
   retval = ctk_dialog_new ();
   ctk_window_set_resizable (CTK_WINDOW (retval), FALSE);
@@ -563,8 +563,8 @@ static void
 set_recent_entry (ScreenshotDialog *dialog)
 {
   char *uri, *app_exec = NULL;
-  GtkRecentManager *recent;
-  GtkRecentData recent_data;
+  CtkRecentManager *recent;
+  CtkRecentData recent_data;
   GAppInfo *app;
   const char *exec_name = NULL;
   static char * groups[2] = { "Graphics", NULL };
@@ -598,7 +598,7 @@ set_recent_entry (ScreenshotDialog *dialog)
 }
 
 static void
-error_dialog_response_cb (GtkDialog *d,
+error_dialog_response_cb (CtkDialog *d,
                           gint response,
                           ScreenshotDialog *dialog)
 {
@@ -613,7 +613,7 @@ save_callback (TransferResult result,
                gpointer data)
 {
   ScreenshotDialog *dialog = data;
-  GtkWidget *toplevel;
+  CtkWidget *toplevel;
 
   toplevel = screenshot_dialog_get_toplevel (dialog);
   screenshot_dialog_set_busy (dialog, FALSE);
@@ -640,7 +640,7 @@ save_callback (TransferResult result,
       /* we had an error, display a dialog to the user and let him choose
        * another name/location to save the screenshot.
        */
-      GtkWidget *error_dialog;
+      CtkWidget *error_dialog;
       char *uri;
 
       uri = screenshot_dialog_get_uri (dialog);
@@ -698,7 +698,7 @@ save_done_notification (gpointer data)
 
   if (save_immediately)
     {
-      GtkWidget *toplevel;
+      CtkWidget *toplevel;
 
       toplevel = screenshot_dialog_get_toplevel (dialog);
       ctk_dialog_response (CTK_DIALOG (toplevel), CTK_RESPONSE_OK);
@@ -708,13 +708,13 @@ save_done_notification (gpointer data)
 static void
 save_screenshot_in_clipboard (GdkDisplay *display, GdkPixbuf *screenshot)
 {
-  GtkClipboard *clipboard =
+  CtkClipboard *clipboard =
     ctk_clipboard_get_for_display (display, GDK_SELECTION_CLIPBOARD);
   ctk_clipboard_set_image (clipboard, screenshot);
 }
 
 static void
-screenshot_dialog_response_cb (GtkDialog *d,
+screenshot_dialog_response_cb (CtkDialog *d,
                                gint response_id,
                                ScreenshotDialog *dialog)
 {
@@ -764,7 +764,7 @@ screenshot_dialog_response_cb (GtkDialog *d,
 static void
 run_dialog (ScreenshotDialog *dialog)
 {
-  GtkWidget *toplevel;
+  CtkWidget *toplevel;
 
   toplevel = screenshot_dialog_get_toplevel (dialog);
 
@@ -1219,10 +1219,10 @@ save_options (void)
 
 
 static void
-register_screenshooter_icon (GtkIconFactory * factory)
+register_screenshooter_icon (CtkIconFactory * factory)
 {
-  GtkIconSource *source;
-  GtkIconSet *icon_set;
+  CtkIconSource *source;
+  CtkIconSet *icon_set;
 
   source = ctk_icon_source_new ();
   ctk_icon_source_set_icon_name (source, SCREENSHOOTER_ICON);
@@ -1238,7 +1238,7 @@ register_screenshooter_icon (GtkIconFactory * factory)
 static void
 screenshooter_init_stock_icons (void)
 {
-  GtkIconFactory *factory;
+  CtkIconFactory *factory;
 
   factory = ctk_icon_factory_new ();
   ctk_icon_factory_add_default (factory);
@@ -1253,7 +1253,7 @@ loop_dialog_screenshot ()
   /* interactive mode overrides everything */
   if (interactive_arg)
     {
-      GtkWidget *dialog;
+      CtkWidget *dialog;
       gint response;
 
       dialog = create_interactive_dialog ();

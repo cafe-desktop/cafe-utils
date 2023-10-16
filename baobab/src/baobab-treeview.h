@@ -41,7 +41,7 @@ enum
 	NUM_TREE_COLUMNS
 };
 
-GtkWidget *create_directory_treeview (void);
-void baobab_treeview_show_allocated_size (GtkWidget *tv, gboolean show_allocated);
+CtkWidget *create_directory_treeview (void);
+void baobab_treeview_show_allocated_size (CtkWidget *tv, gboolean show_allocated);
 
 #endif /* __BAOBAB_TV_H__ */

@@ -38,7 +38,7 @@ typedef void (* TransferCallback) (TransferResult result,
 
 void screenshot_xfer_uri (GFile *source_file,
                           GFile *target_file,
-                          GtkWidget *parent,
+                          CtkWidget *parent,
                           TransferCallback done_callback,
                           gpointer done_callback_data);
 

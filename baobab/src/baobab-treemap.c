@@ -53,26 +53,26 @@ struct _BaobabTreemapPrivate
 
 G_DEFINE_TYPE_WITH_PRIVATE (BaobabTreemap, baobab_treemap, BAOBAB_CHART_TYPE);
 
-static void baobab_treemap_draw_rectangle (GtkWidget *chart,
+static void baobab_treemap_draw_rectangle (CtkWidget *chart,
                                            cairo_t *cr,
                                            gdouble x, gdouble y, gdouble width, gdouble height,
                                            BaobabChartColor fill_color,
                                            const char *text,
                                            gboolean show_text);
-static void baobab_treemap_draw_item (GtkWidget *chart,
+static void baobab_treemap_draw_item (CtkWidget *chart,
                                       cairo_t *cr,
                                       BaobabChartItem *item,
                                       gboolean highlighted);
-static void baobab_treemap_calculate_item_geometry (GtkWidget *chart,
+static void baobab_treemap_calculate_item_geometry (CtkWidget *chart,
                                                     BaobabChartItem *item);
-static gboolean baobab_treemap_is_point_over_item (GtkWidget *chart,
+static gboolean baobab_treemap_is_point_over_item (CtkWidget *chart,
                                                    BaobabChartItem *item,
                                                    gdouble x,
                                                    gdouble y);
-static void baobab_treemap_get_item_rectangle (GtkWidget *chart,
+static void baobab_treemap_get_item_rectangle (CtkWidget *chart,
                                                BaobabChartItem *item);
-guint baobab_treemap_can_zoom_in (GtkWidget *chart);
-guint baobab_treemap_can_zoom_out (GtkWidget *chart);
+guint baobab_treemap_can_zoom_in (CtkWidget *chart);
+guint baobab_treemap_can_zoom_out (CtkWidget *chart);
 
 static void
 baobab_treemap_class_init (BaobabTreemapClass *class)
@@ -101,7 +101,7 @@ baobab_treemap_init (BaobabTreemap *chart)
 }
 
 static void
-baobab_treemap_draw_rectangle (GtkWidget *chart,
+baobab_treemap_draw_rectangle (CtkWidget *chart,
                                cairo_t *cr,
                                gdouble x, gdouble y, gdouble width, gdouble height,
                                BaobabChartColor fill_color,
@@ -142,14 +142,14 @@ baobab_treemap_draw_rectangle (GtkWidget *chart,
 }
 
 static void
-baobab_treemap_draw_item (GtkWidget *chart,
+baobab_treemap_draw_item (CtkWidget *chart,
                           cairo_t *cr,
                           BaobabChartItem *item,
                           gboolean highlighted)
 {
   cairo_rectangle_t * rect;
   BaobabChartColor fill_color;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
   gdouble width, height;
 
   rect = (cairo_rectangle_t *) item->data;
@@ -183,7 +183,7 @@ baobab_treemap_draw_item (GtkWidget *chart,
 }
 
 static void
-baobab_treemap_calculate_item_geometry (GtkWidget *chart,
+baobab_treemap_calculate_item_geometry (CtkWidget *chart,
                                         BaobabChartItem *item)
 {
   BaobabTreemapPrivate *priv;
@@ -191,7 +191,7 @@ baobab_treemap_calculate_item_geometry (GtkWidget *chart,
   static cairo_rectangle_t *rect;
   gdouble width, height;
   BaobabChartItem *parent = NULL;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   priv = BAOBAB_TREEMAP (chart)->priv;
 
@@ -264,7 +264,7 @@ baobab_treemap_calculate_item_geometry (GtkWidget *chart,
 }
 
 static gboolean
-baobab_treemap_is_point_over_item (GtkWidget *chart,
+baobab_treemap_is_point_over_item (CtkWidget *chart,
                                    BaobabChartItem *item,
                                    gdouble x,
                                    gdouble y)
@@ -277,7 +277,7 @@ baobab_treemap_is_point_over_item (GtkWidget *chart,
 }
 
 static void
-baobab_treemap_get_item_rectangle (GtkWidget *chart,
+baobab_treemap_get_item_rectangle (CtkWidget *chart,
                                    BaobabChartItem *item)
 {
   cairo_rectangle_t *_rect;
@@ -300,7 +300,7 @@ baobab_treemap_get_item_rectangle (GtkWidget *chart,
 }
 
 guint
-baobab_treemap_can_zoom_in (GtkWidget *chart)
+baobab_treemap_can_zoom_in (CtkWidget *chart)
 {
   BaobabTreemapPrivate *priv;
 
@@ -310,7 +310,7 @@ baobab_treemap_can_zoom_in (GtkWidget *chart)
 }
 
 guint
-baobab_treemap_can_zoom_out (GtkWidget *chart)
+baobab_treemap_can_zoom_out (CtkWidget *chart)
 {
   BaobabTreemapPrivate *priv;
 
@@ -329,7 +329,7 @@ baobab_treemap_can_zoom_out (GtkWidget *chart)
  * Returns: a new #BaobabTreemap object
  *
  **/
-GtkWidget*
+CtkWidget*
 baobab_treemap_new (void)
 {
   return g_object_new (BAOBAB_TREEMAP_TYPE, NULL);

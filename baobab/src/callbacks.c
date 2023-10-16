@@ -38,31 +38,31 @@
 #include "baobab-chart.h"
 
 void
-on_quit_activate (GtkMenuItem *menuitem, gpointer user_data)
+on_quit_activate (CtkMenuItem *menuitem, gpointer user_data)
 {
 	baobab_quit ();
 }
 
 void
-on_menuscanhome_activate (GtkMenuItem *menuitem, gpointer user_data)
+on_menuscanhome_activate (CtkMenuItem *menuitem, gpointer user_data)
 {
 	baobab_scan_home ();
 }
 
 void
-on_menuallfs_activate (GtkMenuItem *menuitem, gpointer user_data)
+on_menuallfs_activate (CtkMenuItem *menuitem, gpointer user_data)
 {
 	baobab_scan_root ();
 }
 
 void
-on_menuscandir_activate (GtkMenuItem *menuitem, gpointer user_data)
+on_menuscandir_activate (CtkMenuItem *menuitem, gpointer user_data)
 {
 	dir_select (FALSE, baobab.window);
 }
 
 void
-on_about_activate (GtkMenuItem *menuitem, gpointer user_data)
+on_about_activate (CtkMenuItem *menuitem, gpointer user_data)
 {
 	const gchar * const authors[] = {
 		"Fabio Marzocca <thesaltydog@gmail.com>",
@@ -122,51 +122,51 @@ on_about_activate (GtkMenuItem *menuitem, gpointer user_data)
 }
 
 void
-on_menu_expand_activate (GtkMenuItem *menuitem, gpointer user_data)
+on_menu_expand_activate (CtkMenuItem *menuitem, gpointer user_data)
 {
 	ctk_tree_view_expand_all (CTK_TREE_VIEW (baobab.tree_view));
 }
 
 void
-on_menu_collapse_activate (GtkMenuItem *menuitem, gpointer user_data)
+on_menu_collapse_activate (CtkMenuItem *menuitem, gpointer user_data)
 {
 	ctk_tree_view_collapse_all (CTK_TREE_VIEW (baobab.tree_view));
 }
 
 void
-on_menu_stop_activate (GtkMenuItem *menuitem, gpointer user_data)
+on_menu_stop_activate (CtkMenuItem *menuitem, gpointer user_data)
 {
 	baobab_stop_scan ();
 }
 
 void
-on_menu_rescan_activate (GtkMenuItem *menuitem, gpointer user_data)
+on_menu_rescan_activate (CtkMenuItem *menuitem, gpointer user_data)
 {
 	baobab_rescan_current_dir ();
 }
 
 void
-on_tbscandir_clicked (GtkToolButton *toolbutton, gpointer user_data)
+on_tbscandir_clicked (CtkToolButton *toolbutton, gpointer user_data)
 {
 	dir_select (FALSE, baobab.window);
 }
 
 void
-on_tbscanhome_clicked (GtkToolButton *toolbutton, gpointer user_data)
+on_tbscanhome_clicked (CtkToolButton *toolbutton, gpointer user_data)
 {
 	baobab_scan_home ();
 }
 
 void
-on_tbscanall_clicked (GtkToolButton *toolbutton, gpointer user_data)
+on_tbscanall_clicked (CtkToolButton *toolbutton, gpointer user_data)
 {
 	baobab_scan_root ();
 }
 
 void
-on_tb_scan_remote_clicked (GtkToolButton *toolbutton, gpointer user_data)
+on_tb_scan_remote_clicked (CtkToolButton *toolbutton, gpointer user_data)
 {
-	GtkWidget *dlg;
+	CtkWidget *dlg;
 
 	dlg = baobab_remote_connect_dialog_new (CTK_WINDOW (baobab.window),
 						NULL);
@@ -176,25 +176,25 @@ on_tb_scan_remote_clicked (GtkToolButton *toolbutton, gpointer user_data)
 }
 
 void
-on_menu_scan_rem_activate (GtkMenuItem *menuitem, gpointer user_data)
+on_menu_scan_rem_activate (CtkMenuItem *menuitem, gpointer user_data)
 {
 	on_tb_scan_remote_clicked (NULL, NULL);
 }
 
 void
-on_tbstop_clicked (GtkToolButton *toolbutton, gpointer user_data)
+on_tbstop_clicked (CtkToolButton *toolbutton, gpointer user_data)
 {
 	baobab_stop_scan ();
 }
 
 void
-on_tbrescan_clicked (GtkToolButton *toolbutton, gpointer user_data)
+on_tbrescan_clicked (CtkToolButton *toolbutton, gpointer user_data)
 {
 	baobab_rescan_current_dir ();
 }
 
 gboolean
-on_delete_activate (GtkWidget *widget,
+on_delete_activate (CtkWidget *widget,
 		    GdkEvent *event, gpointer user_data)
 {
 	baobab_quit ();
@@ -202,7 +202,7 @@ on_delete_activate (GtkWidget *widget,
 }
 
 void
-open_file_cb (GtkMenuItem *pmenu, gpointer dummy)
+open_file_cb (CtkMenuItem *pmenu, gpointer dummy)
 {
 	GFile *file;
 
@@ -223,7 +223,7 @@ open_file_cb (GtkMenuItem *pmenu, gpointer dummy)
 }
 
 void
-trash_dir_cb (GtkMenuItem *pmenu, gpointer dummy)
+trash_dir_cb (CtkMenuItem *pmenu, gpointer dummy)
 {
 	GFile *file;
 
@@ -233,15 +233,15 @@ trash_dir_cb (GtkMenuItem *pmenu, gpointer dummy)
 	file = g_file_parse_name (baobab.selected_path);
 
 	if (trash_file (file)) {
-		GtkTreeIter iter;
+		CtkTreeIter iter;
 		guint64 filesize;
-		GtkTreeSelection *selection;
+		CtkTreeSelection *selection;
 
 		selection =
-		    ctk_tree_view_get_selection ((GtkTreeView *) baobab.
+		    ctk_tree_view_get_selection ((CtkTreeView *) baobab.
 						 tree_view);
 		ctk_tree_selection_get_selected (selection, NULL, &iter);
-		ctk_tree_model_get ((GtkTreeModel *) baobab.model, &iter,
+		ctk_tree_model_get ((CtkTreeModel *) baobab.model, &iter,
 				    5, &filesize, -1);
 		ctk_tree_store_remove (CTK_TREE_STORE (baobab.model),
 				       &iter);
@@ -251,13 +251,13 @@ trash_dir_cb (GtkMenuItem *pmenu, gpointer dummy)
 }
 
 void
-on_pref_menu (GtkAction *a, gpointer user_data)
+on_pref_menu (CtkAction *a, gpointer user_data)
 {
 	baobab_prefs_dialog ();
 }
 
 void
-on_ck_allocated_activate (GtkToggleAction *action,
+on_ck_allocated_activate (CtkToggleAction *action,
 			  gpointer user_data)
 {
 	if (!baobab.is_local)
@@ -277,13 +277,13 @@ on_ck_allocated_activate (GtkToggleAction *action,
 }
 
 void
-on_helpcontents_activate (GtkAction *a, gpointer user_data)
+on_helpcontents_activate (CtkAction *a, gpointer user_data)
 {
 	baobab_help_display (CTK_WINDOW (baobab.window), "cafe-disk-usage-analyzer", NULL);
 }
 
 void
-scan_folder_cb (GtkMenuItem *pmenu, gpointer dummy)
+scan_folder_cb (CtkMenuItem *pmenu, gpointer dummy)
 {
 	GFile	*file;
 
@@ -301,12 +301,12 @@ scan_folder_cb (GtkMenuItem *pmenu, gpointer dummy)
 }
 
 void
-on_tv_selection_changed (GtkTreeSelection *selection, gpointer user_data)
+on_tv_selection_changed (CtkTreeSelection *selection, gpointer user_data)
 {
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 
 	if (ctk_tree_selection_get_selected (selection, NULL, &iter)) {
-		GtkTreePath *path;
+		CtkTreePath *path;
 
 		path = ctk_tree_model_get_path (CTK_TREE_MODEL (baobab.model), &iter);
 
@@ -318,25 +318,25 @@ on_tv_selection_changed (GtkTreeSelection *selection, gpointer user_data)
 }
 
 void
-on_move_upwards_cb (GtkCheckMenuItem *checkmenuitem, gpointer user_data)
+on_move_upwards_cb (CtkCheckMenuItem *checkmenuitem, gpointer user_data)
 {
 	baobab_chart_move_up_root (baobab.current_chart);
 }
 
 void
-on_zoom_in_cb (GtkCheckMenuItem *checkmenuitem, gpointer user_data)
+on_zoom_in_cb (CtkCheckMenuItem *checkmenuitem, gpointer user_data)
 {
 	baobab_chart_zoom_in (baobab.current_chart);
 }
 
 void
-on_zoom_out_cb (GtkCheckMenuItem *checkmenuitem, gpointer user_data)
+on_zoom_out_cb (CtkCheckMenuItem *checkmenuitem, gpointer user_data)
 {
 	baobab_chart_zoom_out (baobab.current_chart);
 }
 
 void
-on_chart_snapshot_cb (GtkCheckMenuItem *checkmenuitem, gpointer user_data)
+on_chart_snapshot_cb (CtkCheckMenuItem *checkmenuitem, gpointer user_data)
 {
 	baobab_chart_save_snapshot (baobab.current_chart);
 }

@@ -28,9 +28,9 @@
 
 G_BEGIN_DECLS
 
-void gdict_show_print_preview (GtkWindow   *parent,
+void gdict_show_print_preview (CtkWindow   *parent,
                                GdictDefbox *defbox);
-void gdict_show_print_dialog  (GtkWindow   *parent,
+void gdict_show_print_dialog  (CtkWindow   *parent,
 			       GdictDefbox *defbox);
 
 G_END_DECLS

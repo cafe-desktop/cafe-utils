@@ -43,8 +43,8 @@ typedef struct
   gchar *id;
   gchar *name;
 
-  GtkWidget *child;
-  GtkWidget *menu_item;
+  CtkWidget *child;
+  CtkWidget *menu_item;
 } SidebarPage;
 
 struct _GdictSidebarPrivate
@@ -52,12 +52,12 @@ struct _GdictSidebarPrivate
   GHashTable *pages_by_id;
   GSList *pages;
 
-  GtkWidget *hbox;
-  GtkWidget *notebook;
-  GtkWidget *menu;
-  GtkWidget *close_button;
-  GtkWidget *label;
-  GtkWidget *select_button;
+  CtkWidget *hbox;
+  CtkWidget *notebook;
+  CtkWidget *menu;
+  CtkWidget *close_button;
+  CtkWidget *label;
+  CtkWidget *select_button;
 };
 
 enum
@@ -76,7 +76,7 @@ G_DEFINE_TYPE_WITH_PRIVATE (GdictSidebar, gdict_sidebar, CTK_TYPE_BOX);
 SidebarPage *
 sidebar_page_new (const gchar *id,
 		  const gchar *name,
-		  GtkWidget   *widget)
+		  CtkWidget   *widget)
 {
   SidebarPage *page;
 
@@ -135,16 +135,16 @@ gdict_sidebar_dispose (GObject *object)
 }
 
 static gboolean
-gdict_sidebar_select_button_press_cb (GtkWidget      *widget,
+gdict_sidebar_select_button_press_cb (CtkWidget      *widget,
 				      GdkEventButton *event,
 				      gpointer        user_data)
 {
   GdictSidebar *sidebar = GDICT_SIDEBAR (user_data);
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   if (event->button == 1)
     {
-      GtkRequisition req;
+      CtkRequisition req;
       gint width;
 
       ctk_widget_get_allocation (widget, &allocation);
@@ -169,7 +169,7 @@ gdict_sidebar_select_button_press_cb (GtkWidget      *widget,
 }
 
 static gboolean
-gdict_sidebar_select_key_press_cb (GtkWidget   *widget,
+gdict_sidebar_select_key_press_cb (CtkWidget   *widget,
 				   GdkEventKey *event,
 				   gpointer     user_data)
 {
@@ -194,7 +194,7 @@ gdict_sidebar_select_key_press_cb (GtkWidget   *widget,
 }
 
 static void
-gdict_sidebar_close_clicked_cb (GtkWidget *widget,
+gdict_sidebar_close_clicked_cb (CtkWidget *widget,
 				gpointer   user_data)
 {
   GdictSidebar *sidebar = GDICT_SIDEBAR (user_data);
@@ -203,19 +203,19 @@ gdict_sidebar_close_clicked_cb (GtkWidget *widget,
 }
 
 static void
-gdict_sidebar_menu_deactivate_cb (GtkWidget *widget,
+gdict_sidebar_menu_deactivate_cb (CtkWidget *widget,
 				  gpointer   user_data)
 {
   GdictSidebar *sidebar = GDICT_SIDEBAR (user_data);
   GdictSidebarPrivate *priv = sidebar->priv;
-  GtkToggleButton *select_button = CTK_TOGGLE_BUTTON (priv->select_button);
+  CtkToggleButton *select_button = CTK_TOGGLE_BUTTON (priv->select_button);
 
   ctk_toggle_button_set_active (select_button, FALSE);
 }
 
 static void
-gdict_sidebar_menu_detach_cb (GtkWidget *widget,
-			      GtkMenu   *menu)
+gdict_sidebar_menu_detach_cb (CtkWidget *widget,
+			      CtkMenu   *menu)
 {
   GdictSidebar *sidebar = GDICT_SIDEBAR (widget);
 
@@ -223,12 +223,12 @@ gdict_sidebar_menu_detach_cb (GtkWidget *widget,
 }
 
 static void
-gdict_sidebar_menu_item_activate (GtkWidget *widget,
+gdict_sidebar_menu_item_activate (CtkWidget *widget,
 				  gpointer   user_data)
 {
   GdictSidebar *sidebar = GDICT_SIDEBAR (user_data);
   GdictSidebarPrivate *priv = sidebar->priv;
-  GtkWidget *menu_item;
+  CtkWidget *menu_item;
   const gchar *id;
   SidebarPage *page;
   gint current_index;
@@ -283,11 +283,11 @@ static void
 gdict_sidebar_init (GdictSidebar *sidebar)
 {
   GdictSidebarPrivate *priv;
-  GtkWidget *hbox;
-  GtkWidget *select_hbox;
-  GtkWidget *select_button;
-  GtkWidget *close_button;
-  GtkWidget *arrow;
+  CtkWidget *hbox;
+  CtkWidget *select_hbox;
+  CtkWidget *select_button;
+  CtkWidget *close_button;
+  CtkWidget *arrow;
 
   ctk_orientable_set_orientation (CTK_ORIENTABLE (sidebar), CTK_ORIENTATION_VERTICAL);
   sidebar->priv = priv = gdict_sidebar_get_instance_private (sidebar);
@@ -367,7 +367,7 @@ gdict_sidebar_init (GdictSidebar *sidebar)
  * Public API
  */
 
-GtkWidget *
+CtkWidget *
 gdict_sidebar_new (void)
 {
   return g_object_new (GDICT_TYPE_SIDEBAR, NULL);
@@ -377,11 +377,11 @@ void
 gdict_sidebar_add_page (GdictSidebar *sidebar,
 			const gchar  *page_id,
 			const gchar  *page_name,
-			GtkWidget    *page_widget)
+			CtkWidget    *page_widget)
 {
   GdictSidebarPrivate *priv;
   SidebarPage *page;
-  GtkWidget *menu_item;
+  CtkWidget *menu_item;
 
   g_return_if_fail (GDICT_IS_SIDEBAR (sidebar));
   g_return_if_fail (page_id != NULL);
@@ -452,7 +452,7 @@ gdict_sidebar_remove_page (GdictSidebar *sidebar,
   children = ctk_container_get_children (CTK_CONTAINER (priv->menu));
   for (l = children; l != NULL; l = l->next)
     {
-      GtkWidget *menu_item = l->data;
+      CtkWidget *menu_item = l->data;
 
       if (menu_item == page->menu_item)
         {

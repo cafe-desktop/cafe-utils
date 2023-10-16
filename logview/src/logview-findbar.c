@@ -30,14 +30,14 @@
 #include "logview-findbar.h"
 
 struct _LogviewFindbarPrivate {
-  GtkWidget *entry;
-  GtkWidget *message;
+  CtkWidget *entry;
+  CtkWidget *message;
 
-  GtkToolItem *clear_button;
-  GtkToolItem *back_button;
-  GtkToolItem *forward_button;
-  GtkToolItem *status_item;
-  GtkToolItem *separator;
+  CtkToolItem *clear_button;
+  CtkToolItem *back_button;
+  CtkToolItem *forward_button;
+  CtkToolItem *status_item;
+  CtkToolItem *separator;
 
   char *string;
 
@@ -57,7 +57,7 @@ static guint signals[LAST_SIGNAL] = { 0 };
 G_DEFINE_TYPE_WITH_PRIVATE (LogviewFindbar, logview_findbar, CTK_TYPE_TOOLBAR);
 
 static void
-back_button_clicked_cb (GtkToolButton *button,
+back_button_clicked_cb (CtkToolButton *button,
                         gpointer user_data)
 {
   LogviewFindbar *findbar = user_data;
@@ -66,7 +66,7 @@ back_button_clicked_cb (GtkToolButton *button,
 }
 
 static void
-forward_button_clicked_cb (GtkToolButton *button,
+forward_button_clicked_cb (CtkToolButton *button,
                            gpointer user_data)
 {
   LogviewFindbar *findbar = user_data;
@@ -75,7 +75,7 @@ forward_button_clicked_cb (GtkToolButton *button,
 }
 
 static void
-clear_button_clicked_cb (GtkToolButton *button,
+clear_button_clicked_cb (CtkToolButton *button,
                          gpointer user_data)
 {
   LogviewFindbar *findbar = user_data;
@@ -85,7 +85,7 @@ clear_button_clicked_cb (GtkToolButton *button,
 }
 
 static void
-entry_activate_cb (GtkWidget *entry,
+entry_activate_cb (CtkWidget *entry,
                    gpointer user_data)
 {
   LogviewFindbar *findbar = user_data;
@@ -94,7 +94,7 @@ entry_activate_cb (GtkWidget *entry,
 }
 
 static void
-entry_changed_cb (GtkEditable *editable,
+entry_changed_cb (CtkEditable *editable,
                   gpointer user_data)
 {
   LogviewFindbar *findbar = user_data;
@@ -115,7 +115,7 @@ entry_changed_cb (GtkEditable *editable,
 }
 
 static gboolean
-entry_key_press_event_cb (GtkWidget *entry,
+entry_key_press_event_cb (CtkWidget *entry,
                           GdkEventKey *event,
                           gpointer user_data)
 {
@@ -147,9 +147,9 @@ unbold_timeout_cb (gpointer user_data)
 static void
 logview_findbar_init (LogviewFindbar *findbar)
 {
-  GtkWidget *label, *w, *box;
-  GtkToolbar *gtoolbar;
-  GtkToolItem *item;
+  CtkWidget *label, *w, *box;
+  CtkToolbar *gtoolbar;
+  CtkToolItem *item;
   LogviewFindbarPrivate *priv;
 
   priv = findbar->priv = logview_findbar_get_instance_private (findbar);
@@ -236,7 +236,7 @@ logview_findbar_init (LogviewFindbar *findbar)
 }
 
 static void
-do_grab_focus (GtkWidget *widget)
+do_grab_focus (CtkWidget *widget)
 {
   LogviewFindbar *findbar = LOGVIEW_FINDBAR (widget);
 
@@ -257,7 +257,7 @@ static void
 logview_findbar_class_init (LogviewFindbarClass *klass)
 {
   GObjectClass *oclass = G_OBJECT_CLASS (klass);
-  GtkWidgetClass *wclass = CTK_WIDGET_CLASS (klass);
+  CtkWidgetClass *wclass = CTK_WIDGET_CLASS (klass);
 
   oclass->finalize = do_finalize;
 
@@ -298,10 +298,10 @@ logview_findbar_class_init (LogviewFindbarClass *klass)
 
 /* public methods */
 
-GtkWidget *
+CtkWidget *
 logview_findbar_new (void)
 {
-  GtkWidget *widget;
+  CtkWidget *widget;
   widget = g_object_new (LOGVIEW_TYPE_FINDBAR, NULL);
   return widget;
 }

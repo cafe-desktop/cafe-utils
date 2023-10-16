@@ -61,18 +61,18 @@ typedef struct
 
 struct _GdictDefboxPrivate
 {
-  GtkWidget *text_view;
+  CtkWidget *text_view;
 
   /* the "find" pane */
-  GtkWidget *find_pane;
-  GtkWidget *find_entry;
-  GtkWidget *find_next;
-  GtkWidget *find_prev;
-  GtkWidget *find_label;
+  CtkWidget *find_pane;
+  CtkWidget *find_entry;
+  CtkWidget *find_next;
+  CtkWidget *find_prev;
+  CtkWidget *find_label;
 
-  GtkWidget *progress_dialog;
+  CtkWidget *progress_dialog;
 
-  GtkTextBuffer *buffer;
+  CtkTextBuffer *buffer;
 
   GdictContext *context;
   GSList *definitions;
@@ -95,8 +95,8 @@ struct _GdictDefboxPrivate
   guint error_id;
   guint hide_timeout;
 
-  GtkTextTag *link_tag;
-  GtkTextTag *visited_link_tag;
+  CtkTextTag *link_tag;
+  CtkTextTag *visited_link_tag;
 };
 
 enum
@@ -335,7 +335,7 @@ gdict_defbox_get_property (GObject    *object,
 
 /*
  * this code has been copied from ctksourceview; it's the implementation
- * for case-insensitive search in a GtkTextBuffer. this is non-trivial, as
+ * for case-insensitive search in a CtkTextBuffer. this is non-trivial, as
  * searches on a utf-8 text stream involve a norm(casefold(norm(utf8)))
  * operation which can be costly on large buffers. luckily for us, it's
  * not the case on a set of definitions.
@@ -540,7 +540,7 @@ finally_2:
 
 /* FIXME: total horror */
 static gboolean
-char_is_invisible (const GtkTextIter *iter)
+char_is_invisible (const CtkTextIter *iter)
 {
 	GSList *tags;
 	gboolean invisible = FALSE;
@@ -558,7 +558,7 @@ char_is_invisible (const GtkTextIter *iter)
 }
 
 static void
-forward_chars_with_skipping (GtkTextIter *iter,
+forward_chars_with_skipping (CtkTextIter *iter,
 			     gint         count,
 			     gboolean     skip_invisible,
 			     gboolean     skip_nontext,
@@ -612,14 +612,14 @@ forward_chars_with_skipping (GtkTextIter *iter,
 }
 
 static gboolean
-lines_match (const GtkTextIter *start,
+lines_match (const CtkTextIter *start,
 	     const gchar      **lines,
 	     gboolean           visible_only,
 	     gboolean           slice,
-	     GtkTextIter       *match_start,
-	     GtkTextIter       *match_end)
+	     CtkTextIter       *match_start,
+	     CtkTextIter       *match_end)
 {
-	GtkTextIter next;
+	CtkTextIter next;
 	gchar *line_text;
 	const gchar *found;
 	gint offset;
@@ -708,14 +708,14 @@ lines_match (const GtkTextIter *start,
 }
 
 static gboolean
-backward_lines_match (const GtkTextIter *start,
+backward_lines_match (const CtkTextIter *start,
 		      const gchar      **lines,
 		      gboolean           visible_only,
 		      gboolean           slice,
-		      GtkTextIter       *match_start,
-		      GtkTextIter       *match_end)
+		      CtkTextIter       *match_start,
+		      CtkTextIter       *match_end)
 {
-	GtkTextIter line, next;
+	CtkTextIter line, next;
 	gchar *line_text;
 	const gchar *found;
 	gint offset;
@@ -868,16 +868,16 @@ breakup_string (const char *string,
 }
 
 static gboolean
-gdict_defbox_iter_forward_search (const GtkTextIter   *iter,
+gdict_defbox_iter_forward_search (const CtkTextIter   *iter,
                                   const gchar         *str,
-                                  GtkTextIter         *match_start,
-                                  GtkTextIter         *match_end,
-                                  const GtkTextIter   *limit)
+                                  CtkTextIter         *match_start,
+                                  CtkTextIter         *match_end,
+                                  const CtkTextIter   *limit)
 {
   gchar **lines = NULL;
-  GtkTextIter match;
+  CtkTextIter match;
   gboolean retval = FALSE;
-  GtkTextIter search;
+  CtkTextIter search;
 
   g_return_val_if_fail (iter != NULL, FALSE);
   g_return_val_if_fail (str != NULL, FALSE);
@@ -918,7 +918,7 @@ gdict_defbox_iter_forward_search (const GtkTextIter   *iter,
    */
   do
     {
-      GtkTextIter end;
+      CtkTextIter end;
       gboolean res;
 
       if (limit && ctk_text_iter_compare (&search, limit) >= 0)
@@ -951,16 +951,16 @@ gdict_defbox_iter_forward_search (const GtkTextIter   *iter,
 }
 
 static gboolean
-gdict_defbox_iter_backward_search (const GtkTextIter   *iter,
+gdict_defbox_iter_backward_search (const CtkTextIter   *iter,
                                    const gchar         *str,
-                                   GtkTextIter         *match_start,
-                                   GtkTextIter         *match_end,
-                                   const GtkTextIter   *limit)
+                                   CtkTextIter         *match_start,
+                                   CtkTextIter         *match_end,
+                                   const CtkTextIter   *limit)
 {
   gchar **lines = NULL;
-  GtkTextIter match;
+  CtkTextIter match;
   gboolean retval = FALSE;
-  GtkTextIter search;
+  CtkTextIter search;
 
   g_return_val_if_fail (iter != NULL, FALSE);
   g_return_val_if_fail (str != NULL, FALSE);
@@ -1001,7 +1001,7 @@ gdict_defbox_iter_backward_search (const GtkTextIter   *iter,
    */
   while (TRUE)
     {
-      GtkTextIter end;
+      CtkTextIter end;
       gboolean res;
 
       if (limit && ctk_text_iter_compare (&search, limit) <= 0)
@@ -1047,10 +1047,10 @@ gdict_defbox_find_backward (GdictDefbox *defbox,
 			    const gchar *text)
 {
   GdictDefboxPrivate *priv = defbox->priv;
-  GtkTextIter start_iter, end_iter;
-  GtkTextIter match_start, match_end;
-  GtkTextIter iter;
-  GtkTextMark *last_search;
+  CtkTextIter start_iter, end_iter;
+  CtkTextIter match_start, match_end;
+  CtkTextIter iter;
+  CtkTextMark *last_search;
   gboolean res;
 
   g_assert (CTK_IS_TEXT_BUFFER (priv->buffer));
@@ -1103,7 +1103,7 @@ hide_find_pane (gpointer user_data)
 }
 
 static void
-find_prev_clicked_cb (GtkWidget *widget,
+find_prev_clicked_cb (CtkWidget *widget,
 		      gpointer   user_data)
 {
   GdictDefbox *defbox = GDICT_DEFBOX (user_data);
@@ -1142,10 +1142,10 @@ gdict_defbox_find_forward (GdictDefbox *defbox,
 			   gboolean     is_typing)
 {
   GdictDefboxPrivate *priv = defbox->priv;
-  GtkTextIter start_iter, end_iter;
-  GtkTextIter match_start, match_end;
-  GtkTextIter iter;
-  GtkTextMark *last_search;
+  CtkTextIter start_iter, end_iter;
+  CtkTextIter match_start, match_end;
+  CtkTextIter iter;
+  CtkTextMark *last_search;
   gboolean res;
 
   g_assert (CTK_IS_TEXT_BUFFER (priv->buffer));
@@ -1197,7 +1197,7 @@ gdict_defbox_find_forward (GdictDefbox *defbox,
 }
 
 static void
-find_next_clicked_cb (GtkWidget *widget,
+find_next_clicked_cb (CtkWidget *widget,
 		      gpointer   user_data)
 {
   GdictDefbox *defbox = GDICT_DEFBOX (user_data);
@@ -1231,7 +1231,7 @@ find_next_clicked_cb (GtkWidget *widget,
 }
 
 static void
-find_entry_changed_cb (GtkWidget *widget,
+find_entry_changed_cb (CtkWidget *widget,
 		       gpointer   user_data)
 {
   GdictDefbox *defbox = GDICT_DEFBOX (user_data);
@@ -1267,7 +1267,7 @@ find_entry_changed_cb (GtkWidget *widget,
 }
 
 static void
-close_button_clicked (GtkButton *button,
+close_button_clicked (CtkButton *button,
                       gpointer   data)
 {
   GdictDefboxPrivate *priv = GDICT_DEFBOX (data)->priv;
@@ -1278,15 +1278,15 @@ close_button_clicked (GtkButton *button,
   (void) hide_find_pane (data);
 }
 
-static GtkWidget *
+static CtkWidget *
 create_find_pane (GdictDefbox *defbox)
 {
   GdictDefboxPrivate *priv;
-  GtkWidget *find_pane;
-  GtkWidget *label;
-  GtkWidget *sep;
-  GtkWidget *hbox1, *hbox2;
-  GtkWidget *button;
+  CtkWidget *find_pane;
+  CtkWidget *label;
+  CtkWidget *sep;
+  CtkWidget *hbox1, *hbox2;
+  CtkWidget *button;
 
   priv = defbox->priv;
 
@@ -1373,11 +1373,11 @@ gdict_defbox_init_tags (GdictDefbox *defbox)
 			      NULL);
 
   {
-    GtkSettings *settings = ctk_widget_get_settings (CTK_WIDGET (defbox));
+    CtkSettings *settings = ctk_widget_get_settings (CTK_WIDGET (defbox));
     gboolean prefer_dark = FALSE;
     GdkRGBA rgba;
 
-    /* HACK: we're hardcoding the Adwaita values because GtkTextTag
+    /* HACK: we're hardcoding the Adwaita values because CtkTextTag
      * cannot be styled via CSS
      */
     g_object_get (settings, "ctk-application-prefer-dark-theme", &prefer_dark, NULL);
@@ -1433,8 +1433,8 @@ gdict_defbox_init_tags (GdictDefbox *defbox)
 
 static void
 follow_if_is_link (GdictDefbox *defbox,
-                   GtkTextView *text_view,
-                   GtkTextIter *iter)
+                   CtkTextView *text_view,
+                   CtkTextIter *iter)
 {
   GSList *tags, *l;
 
@@ -1442,7 +1442,7 @@ follow_if_is_link (GdictDefbox *defbox,
 
   for (l = tags; l != NULL; l = l->next)
     {
-      GtkTextTag *tag = l->data;
+      CtkTextTag *tag = l->data;
       gchar *name;
 
       g_object_get (G_OBJECT (tag), "name", &name, NULL);
@@ -1450,8 +1450,8 @@ follow_if_is_link (GdictDefbox *defbox,
           (strcmp (name, "link") == 0 ||
            strcmp (name, "visited-link") == 0))
         {
-          GtkTextBuffer *buffer = ctk_text_view_get_buffer (text_view);
-          GtkTextIter start, end;
+          CtkTextBuffer *buffer = ctk_text_view_get_buffer (text_view);
+          CtkTextIter start, end;
           gchar *link_str;
 
           start = *iter;
@@ -1477,12 +1477,12 @@ follow_if_is_link (GdictDefbox *defbox,
 }
 
 static gboolean
-defbox_event_after_cb (GtkWidget   *text_view,
+defbox_event_after_cb (CtkWidget   *text_view,
                        GdkEvent    *event,
                        GdictDefbox *defbox)
 {
-  GtkTextIter iter;
-  GtkTextBuffer *buffer;
+  CtkTextIter iter;
+  CtkTextBuffer *buffer;
   GdkEventButton *button_event;
   gint bx, by;
 
@@ -1514,13 +1514,13 @@ defbox_event_after_cb (GtkWidget   *text_view,
 
 static void
 set_cursor_if_appropriate (GdictDefbox *defbox,
-                           GtkTextView *text_view,
+                           CtkTextView *text_view,
                            gint         x,
                            gint         y)
 {
   GdictDefboxPrivate *priv;
   GSList *tags, *l;
-  GtkTextIter iter;
+  CtkTextIter iter;
   gboolean hovering = FALSE;
 
   priv = defbox->priv;
@@ -1542,7 +1542,7 @@ set_cursor_if_appropriate (GdictDefbox *defbox,
   tags = ctk_text_iter_get_tags (&iter);
   for (l = tags; l != NULL; l = l->next)
     {
-      GtkTextTag *tag = l->data;
+      CtkTextTag *tag = l->data;
       gchar *name;
 
       g_object_get (G_OBJECT (tag), "name", &name, NULL);
@@ -1578,7 +1578,7 @@ set_cursor_if_appropriate (GdictDefbox *defbox,
 }
 
 static gboolean
-defbox_motion_notify_cb (GtkWidget      *text_view,
+defbox_motion_notify_cb (CtkWidget      *text_view,
                          GdkEventMotion *event,
                          GdictDefbox    *defbox)
 {
@@ -1595,7 +1595,7 @@ defbox_motion_notify_cb (GtkWidget      *text_view,
 }
 
 static gboolean
-defbox_visibility_notify_cb (GtkWidget          *text_view,
+defbox_visibility_notify_cb (CtkWidget          *text_view,
                              GdkEventVisibility *event,
                              GdictDefbox        *defbox)
 {
@@ -1628,7 +1628,7 @@ gdict_defbox_constructor (GType                  type,
   GdictDefbox *defbox;
   GdictDefboxPrivate *priv;
   GObject *object;
-  GtkWidget *sw;
+  CtkWidget *sw;
 
   object = G_OBJECT_CLASS (gdict_defbox_parent_class)->constructor (type,
   						   n_construct_properties,
@@ -1672,11 +1672,11 @@ gdict_defbox_constructor (GType                  type,
   return object;
 }
 
-/* we override the GtkWidget::show_all method since we have widgets
+/* we override the CtkWidget::show_all method since we have widgets
  * we don't want to show, such as the find pane
  */
 static void
-gdict_defbox_show_all (GtkWidget *widget)
+gdict_defbox_show_all (CtkWidget *widget)
 {
   GdictDefbox *defbox = GDICT_DEFBOX (widget);
   GdictDefboxPrivate *priv = defbox->priv;
@@ -1731,8 +1731,8 @@ static void
 gdict_defbox_class_init (GdictDefboxClass *klass)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-  GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
-  GtkBindingSet *binding_set;
+  CtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
+  CtkBindingSet *binding_set;
 
   gobject_class->constructor = gdict_defbox_constructor;
   gobject_class->set_property = gdict_defbox_set_property;
@@ -1908,7 +1908,7 @@ gdict_defbox_init (GdictDefbox *defbox)
  *
  * Since: 0.1
  */
-GtkWidget *
+CtkWidget *
 gdict_defbox_new (void)
 {
   return g_object_new (GDICT_TYPE_DEFBOX, NULL);
@@ -1925,7 +1925,7 @@ gdict_defbox_new (void)
  *
  * Since: 0.1
  */
-GtkWidget *
+CtkWidget *
 gdict_defbox_new_with_context (GdictContext *context)
 {
   g_return_val_if_fail (GDICT_IS_CONTEXT (context), NULL);
@@ -2125,8 +2125,8 @@ lookup_end_cb (GdictContext *context,
 {
   GdictDefbox *defbox = GDICT_DEFBOX (user_data);
   GdictDefboxPrivate *priv = defbox->priv;
-  GtkTextBuffer *buffer;
-  GtkTextIter start;
+  CtkTextBuffer *buffer;
+  CtkTextIter start;
   GdkWindow *window;
 
   /* explicitely move the cursor to the beginning */
@@ -2144,7 +2144,7 @@ lookup_end_cb (GdictContext *context,
 
 static void
 gdict_defbox_insert_word (GdictDefbox *defbox,
-			  GtkTextIter *iter,
+			  CtkTextIter *iter,
 			  const gchar *word)
 {
   GdictDefboxPrivate *priv;
@@ -2222,13 +2222,13 @@ escape_phonethic (const gchar  *str,
 
 static void
 gdict_defbox_insert_body (GdictDefbox *defbox,
-			  GtkTextIter *iter,
+			  CtkTextIter *iter,
 			  const gchar *body)
 {
   GdictDefboxPrivate *priv;
   gchar **words;
   gint len, i;
-  GtkTextIter end_iter;
+  CtkTextIter end_iter;
 
   if (!body)
     return;
@@ -2371,7 +2371,7 @@ gdict_defbox_insert_body (GdictDefbox *defbox,
 
 static void
 gdict_defbox_insert_from (GdictDefbox *defbox,
-			  GtkTextIter *iter,
+			  CtkTextIter *iter,
 			  const gchar *database)
 {
   GdictDefboxPrivate *priv;
@@ -2396,13 +2396,13 @@ gdict_defbox_insert_from (GdictDefbox *defbox,
 
 static void
 gdict_defbox_insert_error (GdictDefbox *defbox,
-			   GtkTextIter *iter,
+			   CtkTextIter *iter,
 			   const gchar *title,
 			   const gchar *message)
 {
   GdictDefboxPrivate *priv;
-  GtkTextMark *mark;
-  GtkTextIter cur_iter;
+  CtkTextMark *mark;
+  CtkTextIter cur_iter;
 
   if (!title)
     return;
@@ -2439,7 +2439,7 @@ definition_found_cb (GdictContext    *context,
 {
   GdictDefbox *defbox = GDICT_DEFBOX (user_data);
   GdictDefboxPrivate *priv = defbox->priv;
-  GtkTextIter iter;
+  CtkTextIter iter;
   Definition *def;
 
   /* insert the word if this is the first definition */
@@ -2471,7 +2471,7 @@ error_cb (GdictContext *context,
 {
   GdictDefbox *defbox = GDICT_DEFBOX (user_data);
   GdictDefboxPrivate *priv = defbox->priv;
-  GtkTextIter iter;
+  CtkTextIter iter;
 
   if (!error)
     return;
@@ -2558,7 +2558,7 @@ gdict_defbox_lookup (GdictDefbox *defbox,
   			     &define_error);
   if (define_error)
     {
-      GtkTextIter iter;
+      CtkTextIter iter;
 
       ctk_text_buffer_get_start_iter (priv->buffer, &iter);
       gdict_defbox_insert_error (defbox, &iter,
@@ -2581,7 +2581,7 @@ void
 gdict_defbox_clear (GdictDefbox *defbox)
 {
   GdictDefboxPrivate *priv;
-  GtkTextIter start, end;
+  CtkTextIter start, end;
 
   g_return_if_fail (GDICT_IS_DEFBOX (defbox));
 
@@ -2642,8 +2642,8 @@ void
 gdict_defbox_select_all (GdictDefbox *defbox)
 {
   GdictDefboxPrivate *priv;
-  GtkTextBuffer *buffer;
-  GtkTextIter start, end;
+  CtkTextBuffer *buffer;
+  CtkTextIter start, end;
 
   g_return_if_fail (GDICT_IS_DEFBOX (defbox));
 
@@ -2657,7 +2657,7 @@ gdict_defbox_select_all (GdictDefbox *defbox)
 /**
  * gdict_defbox_copy_to_clipboard:
  * @defbox: a #GdictDefbox
- * @clipboard: a #GtkClipboard
+ * @clipboard: a #CtkClipboard
  *
  * Copies the selected text inside @defbox into @clipboard.
  *
@@ -2665,10 +2665,10 @@ gdict_defbox_select_all (GdictDefbox *defbox)
  */
 void
 gdict_defbox_copy_to_clipboard (GdictDefbox  *defbox,
-				GtkClipboard *clipboard)
+				CtkClipboard *clipboard)
 {
   GdictDefboxPrivate *priv;
-  GtkTextBuffer *buffer;
+  CtkTextBuffer *buffer;
 
   g_return_if_fail (GDICT_IS_DEFBOX (defbox));
   g_return_if_fail (CTK_IS_CLIPBOARD (clipboard));
@@ -2720,8 +2720,8 @@ gdict_defbox_jump_to_definition (GdictDefbox *defbox,
   GdictDefboxPrivate *priv;
   gint count;
   Definition *def;
-  GtkTextBuffer *buffer;
-  GtkTextIter def_start;
+  CtkTextBuffer *buffer;
+  CtkTextIter def_start;
 
   g_return_if_fail (GDICT_IS_DEFBOX (defbox));
 
@@ -2763,8 +2763,8 @@ gdict_defbox_get_text (GdictDefbox *defbox,
 		       gsize       *length)
 {
   GdictDefboxPrivate *priv;
-  GtkTextBuffer *buffer;
-  GtkTextIter start, end;
+  CtkTextBuffer *buffer;
+  CtkTextIter start, end;
   gchar *retval;
 
   g_return_val_if_fail (GDICT_IS_DEFBOX (defbox), NULL);
@@ -2856,7 +2856,7 @@ gchar *
 gdict_defbox_get_selected_word (GdictDefbox *defbox)
 {
   GdictDefboxPrivate *priv;
-  GtkTextBuffer *buffer;
+  CtkTextBuffer *buffer;
 
   g_return_val_if_fail (GDICT_IS_DEFBOX (defbox), NULL);
 
@@ -2867,7 +2867,7 @@ gdict_defbox_get_selected_word (GdictDefbox *defbox)
     return NULL;
   else
     {
-      GtkTextIter start, end;
+      CtkTextIter start, end;
       gchar *retval;
 
       ctk_text_buffer_get_selection_bounds (buffer, &start, &end);

@@ -39,7 +39,7 @@ typedef struct _GdictSourceChooserClass         GdictSourceChooserClass;
 struct _GdictSourceChooser
 {
   /*< private >*/
-  GtkBox parent_instance;
+  CtkBox parent_instance;
 
   GdictSourceChooserPrivate *priv;
 };
@@ -47,7 +47,7 @@ struct _GdictSourceChooser
 struct _GdictSourceChooserClass
 {
   /*< private >*/
-  GtkBoxClass parent_class;
+  CtkBoxClass parent_class;
 
   /*< public >*/
   void (*source_activated)  (GdictSourceChooser *chooser,
@@ -67,8 +67,8 @@ struct _GdictSourceChooserClass
 
 GType gdict_source_chooser_get_type (void) G_GNUC_CONST;
 
-GtkWidget *        gdict_source_chooser_new                (void);
-GtkWidget *        gdict_source_chooser_new_with_loader    (GdictSourceLoader *loader);
+CtkWidget *        gdict_source_chooser_new                (void);
+CtkWidget *        gdict_source_chooser_new_with_loader    (GdictSourceLoader *loader);
 void               gdict_source_chooser_set_loader         (GdictSourceChooser *chooser,
                                                             GdictSourceLoader  *loader);
 GdictSourceLoader *gdict_source_chooser_get_loader         (GdictSourceChooser *chooser);
@@ -85,7 +85,7 @@ gint               gdict_source_chooser_count_sources      (GdictSourceChooser *
 gboolean           gdict_source_chooser_has_source         (GdictSourceChooser *chooser,
                                                             const gchar        *source_name);
 void               gdict_source_chooser_refresh            (GdictSourceChooser *chooser);
-GtkWidget *        gdict_source_chooser_add_button         (GdictSourceChooser *chooser,
+CtkWidget *        gdict_source_chooser_add_button         (GdictSourceChooser *chooser,
                                                             const gchar        *button_text);
 
 G_END_DECLS

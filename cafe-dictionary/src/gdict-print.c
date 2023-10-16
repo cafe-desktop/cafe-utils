@@ -56,8 +56,8 @@ typedef struct _GdictPrintData
 } GdictPrintData;
 
 static void
-begin_print (GtkPrintOperation *operation,
-             GtkPrintContext   *context,
+begin_print (CtkPrintOperation *operation,
+             CtkPrintContext   *context,
              gpointer           user_data)
 {
   GdictPrintData *data = user_data;
@@ -82,8 +82,8 @@ begin_print (GtkPrintOperation *operation,
 }
 
 static void
-draw_page (GtkPrintOperation *operation,
-           GtkPrintContext   *context,
+draw_page (CtkPrintOperation *operation,
+           CtkPrintContext   *context,
            gint               page_number,
            gpointer           user_data)
 {
@@ -162,8 +162,8 @@ draw_page (GtkPrintOperation *operation,
 }
 
 static void
-end_print (GtkPrintOperation *operation,
-           GtkPrintContext   *context,
+end_print (CtkPrintOperation *operation,
+           CtkPrintContext   *context,
            gpointer           user_data)
 {
   GdictPrintData *data = user_data;
@@ -186,10 +186,10 @@ get_print_font (void)
 }
 
 void
-gdict_show_print_preview (GtkWindow   *parent,
+gdict_show_print_preview (CtkWindow   *parent,
                           GdictDefbox *defbox)
 {
-  GtkPrintOperation *operation;
+  CtkPrintOperation *operation;
   GdictPrintData *data;
   gchar *print_font;
   gchar *word;
@@ -232,7 +232,7 @@ gdict_show_print_preview (GtkWindow   *parent,
 
   if (error)
     {
-      GtkWidget *dialog;
+      CtkWidget *dialog;
 
       dialog = ctk_message_dialog_new (parent,
                                        CTK_DIALOG_DESTROY_WITH_PARENT,
@@ -250,10 +250,10 @@ gdict_show_print_preview (GtkWindow   *parent,
 }
 
 void
-gdict_show_print_dialog (GtkWindow   *parent,
+gdict_show_print_dialog (CtkWindow   *parent,
 			 GdictDefbox *defbox)
 {
-  GtkPrintOperation *operation;
+  CtkPrintOperation *operation;
   GdictPrintData *data;
   gchar *print_font;
   gchar *word;
@@ -296,7 +296,7 @@ gdict_show_print_dialog (GtkWindow   *parent,
 
   if (error)
     {
-      GtkWidget *dialog;
+      CtkWidget *dialog;
 
       dialog = ctk_message_dialog_new (parent,
                                        CTK_DIALOG_DESTROY_WITH_PARENT,

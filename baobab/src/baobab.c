@@ -39,21 +39,21 @@
 
 #define BAOBAB_UI_RESOURCE "/org/cafe/disk-usage-analyzer/baobab-main-window.ui"
 
-static void push_iter_in_stack (GtkTreeIter *);
-static GtkTreeIter pop_iter_from_stack (void);
+static void push_iter_in_stack (CtkTreeIter *);
+static CtkTreeIter pop_iter_from_stack (void);
 
 BaobabApplication baobab;
 
 static gint currentdepth = 0;
-static GtkTreeIter currentiter;
-static GtkTreeIter firstiter;
+static CtkTreeIter currentiter;
+static CtkTreeIter firstiter;
 static GQueue *iterstack = NULL;
 
 enum {
 	DND_TARGET_URI_LIST
 };
 
-static GtkTargetEntry dnd_target_list[] = {
+static CtkTargetEntry dnd_target_list[] = {
 	{ "text/uri-list", 0, DND_TARGET_URI_LIST },
 };
 
@@ -114,7 +114,7 @@ baobab_set_busy (gboolean busy)
 }
 
 static void
-set_drop_target (GtkWidget *target, gboolean active) {
+set_drop_target (CtkWidget *target, gboolean active) {
 	if (active) {
 		ctk_drag_dest_set (CTK_WIDGET (target),
 				   CTK_DEST_DEFAULT_DROP | CTK_DEST_DEFAULT_MOTION | CTK_DEST_DEFAULT_HIGHLIGHT,
@@ -174,7 +174,7 @@ update_scan_label (void)
 	gchar *total;
 	gchar *used;
 	gchar *available;
-	GtkWidget *label;
+	CtkWidget *label;
 
 		total = g_format_size (baobab.fs.total);
 		used = g_format_size (baobab.fs.used);
@@ -206,7 +206,7 @@ baobab_update_filesystem (void)
 void
 baobab_scan_location (GFile *file)
 {
-	GtkToggleAction *ck_allocated;
+	CtkToggleAction *ck_allocated;
 
 	if (!baobab_check_dir (file))
 		return;
@@ -310,7 +310,7 @@ baobab_stop_scan (void)
 static void
 prefill_model (struct chan_data *data)
 {
-	GtkTreeIter iter, iterparent;
+	CtkTreeIter iter, iterparent;
 	char *name;
 	char *str;
 
@@ -319,7 +319,7 @@ prefill_model (struct chan_data *data)
 		firstiter = iter;
 	}
 	else if (data->depth == 1) {
-		GtkTreePath *path;
+		CtkTreePath *path;
 
 		ctk_tree_store_append (baobab.model, &iter, &firstiter);
 		path = ctk_tree_model_get_path (CTK_TREE_MODEL (baobab.model),
@@ -332,16 +332,16 @@ prefill_model (struct chan_data *data)
 		ctk_tree_store_append (baobab.model, &iter, &currentiter);
 	}
 	else if (data->depth == currentdepth) {
-		ctk_tree_model_iter_parent ((GtkTreeModel *) baobab.model,
+		ctk_tree_model_iter_parent ((CtkTreeModel *) baobab.model,
 					    &iterparent, &currentiter);
 		ctk_tree_store_append (baobab.model, &iter, &iterparent);
 	}
 	else if (data->depth < currentdepth) {
-		GtkTreeIter tempiter;
+		CtkTreeIter tempiter;
 		gint i;
 		iter = currentiter;
 		for (i = 0; i <= (currentdepth - data->depth); i++) {
-			ctk_tree_model_iter_parent ((GtkTreeModel *)
+			ctk_tree_model_iter_parent ((CtkTreeModel *)
 						    baobab.model,
 						    &tempiter, &iter);
 			iter = tempiter;
@@ -382,7 +382,7 @@ first_row (void)
 	gdouble perc;
 	char *label;
 
-	GtkTreeIter root_iter;
+	CtkTreeIter root_iter;
 
 	gchar *capacity_label, *capacity_size;
 
@@ -434,7 +434,7 @@ first_row (void)
 void
 baobab_fill_model (struct chan_data *data)
 {
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 	GString *hardlinks;
 	GString *elements;
 	char *name;
@@ -496,7 +496,7 @@ baobab_fill_model (struct chan_data *data)
 }
 
 void
-push_iter_in_stack (GtkTreeIter *iter)
+push_iter_in_stack (CtkTreeIter *iter)
 {
 	g_queue_push_head (iterstack, iter->user_data3);
 	g_queue_push_head (iterstack, iter->user_data2);
@@ -504,10 +504,10 @@ push_iter_in_stack (GtkTreeIter *iter)
 	g_queue_push_head (iterstack, GINT_TO_POINTER (iter->stamp));
 }
 
-GtkTreeIter
+CtkTreeIter
 pop_iter_from_stack (void)
 {
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 
 	iter.stamp = GPOINTER_TO_INT (g_queue_pop_head (iterstack));
 	iter.user_data = g_queue_pop_head (iterstack);
@@ -622,11 +622,11 @@ baobab_set_statusbar (const gchar *text)
 }
 
 static void
-toolbar_reconfigured_cb (GtkToolItem *item,
-			 GtkWidget   *spinner)
+toolbar_reconfigured_cb (CtkToolItem *item,
+			 CtkWidget   *spinner)
 {
-	GtkToolbarStyle style;
-	GtkIconSize size;
+	CtkToolbarStyle style;
+	CtkIconSize size;
 
 	style = ctk_tool_item_get_toolbar_style (item);
 
@@ -645,9 +645,9 @@ toolbar_reconfigured_cb (GtkToolItem *item,
 static void
 baobab_create_toolbar (void)
 {
-	GtkWidget *toolbar;
-	GtkToolItem *item;
-	GtkToolItem *separator;
+	CtkWidget *toolbar;
+	CtkToolItem *item;
+	CtkToolItem *separator;
 
 	toolbar = CTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "toolbar1"));
 	if (toolbar == NULL) {
@@ -958,9 +958,9 @@ create_context_menu (void)
 }
 
 static void
-on_chart_item_activated (BaobabChart *chart, GtkTreeIter *iter)
+on_chart_item_activated (BaobabChart *chart, CtkTreeIter *iter)
 {
-	GtkTreePath *path;
+	CtkTreePath *path;
 
 	path = ctk_tree_model_get_path (CTK_TREE_MODEL (baobab.model), iter);
 
@@ -982,7 +982,7 @@ on_chart_button_release (BaobabChart *chart,
 
 	if (event->button== 3) /* right button */
 	{
-		GtkTreePath *root_path;
+		CtkTreePath *root_path;
 		BaobabChartMenu *menu;
 
 		root_path = baobab_chart_get_root (baobab.current_chart);
@@ -1007,11 +1007,11 @@ on_chart_button_release (BaobabChart *chart,
 }
 
 static void
-drag_data_received_handl (GtkWidget *widget,
+drag_data_received_handl (CtkWidget *widget,
 			 GdkDragContext *context,
 			 gint x,
 			 gint y,
-			 GtkSelectionData *selection_data,
+			 CtkSelectionData *selection_data,
 			 guint target_type,
 			 guint time,
 			 gpointer data)
@@ -1044,7 +1044,7 @@ drag_data_received_handl (GtkWidget *widget,
 }
 
 static void
-set_active_chart (GtkWidget *chart)
+set_active_chart (CtkWidget *chart)
 {
 	if (baobab.current_chart != chart) {
 		if (baobab.current_chart) {
@@ -1071,9 +1071,9 @@ set_active_chart (GtkWidget *chart)
 }
 
 static void
-on_chart_type_change (GtkWidget *combo, gpointer user_data)
+on_chart_type_change (CtkWidget *combo, gpointer user_data)
 {
-	GtkWidget *chart;
+	CtkWidget *chart;
 	guint active;
 
 	active = ctk_combo_box_get_active (CTK_COMBO_BOX (combo));
@@ -1095,8 +1095,8 @@ on_chart_type_change (GtkWidget *combo, gpointer user_data)
 static void
 initialize_charts (void)
 {
-	GtkWidget *hpaned_main;
-	GtkWidget *hbox1;
+	CtkWidget *hpaned_main;
+	CtkWidget *hbox1;
 	char *saved_chart;
 	gboolean visible;
 
@@ -1152,7 +1152,7 @@ initialize_charts (void)
 	baobab_chart_freeze_updates (baobab.treemap_chart);
 
 	/* Baobab's Rings Chart */
-	baobab.rings_chart = (GtkWidget *) baobab_ringschart_new ();
+	baobab.rings_chart = (CtkWidget *) baobab_ringschart_new ();
 	baobab_chart_set_model_with_columns (baobab.rings_chart,
 					     CTK_TREE_MODEL (baobab.model),
 					     COL_DIR_NAME,
@@ -1266,7 +1266,7 @@ main (int argc, char *argv[])
 	baobab_init ();
 
 	if (baobab.fs.total == 0) {
-		GtkWidget *dialog;
+		CtkWidget *dialog;
 
 		dialog = ctk_message_dialog_new (NULL,
 				CTK_DIALOG_DESTROY_WITH_PARENT,

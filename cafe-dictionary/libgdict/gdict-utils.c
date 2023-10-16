@@ -247,11 +247,11 @@ _gdict_has_ipv6 (void)
 
 /* shows an error dialog making it transient for @parent */
 static void
-show_error_dialog (GtkWindow   *parent,
+show_error_dialog (CtkWindow   *parent,
 		   const gchar *message,
 		   const gchar *detail)
 {
-  GtkWidget *dialog;
+  CtkWidget *dialog;
 
   dialog = ctk_message_dialog_new (parent,
   				   CTK_DIALOG_DESTROY_WITH_PARENT,
@@ -273,10 +273,10 @@ show_error_dialog (GtkWindow   *parent,
 }
 
 /* find the toplevel widget for @widget */
-static GtkWindow *
-get_toplevel_window (GtkWidget *widget)
+static CtkWindow *
+get_toplevel_window (CtkWidget *widget)
 {
-  GtkWidget *toplevel;
+  CtkWidget *toplevel;
 
   toplevel = ctk_widget_get_toplevel (widget);
   if (!ctk_widget_is_toplevel (toplevel))
@@ -296,7 +296,7 @@ get_toplevel_window (GtkWidget *widget)
  * Since: 1.0
  */
 void
-_gdict_show_error_dialog (GtkWidget   *widget,
+_gdict_show_error_dialog (CtkWidget   *widget,
 			  const gchar *title,
 			  const gchar *detail)
 {
@@ -319,7 +319,7 @@ _gdict_show_error_dialog (GtkWidget   *widget,
  * Since: 1.0
  */
 void
-_gdict_show_gerror_dialog (GtkWidget   *widget,
+_gdict_show_gerror_dialog (CtkWidget   *widget,
 			   const gchar *title,
 			   GError      *error)
 {

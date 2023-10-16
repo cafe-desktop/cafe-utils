@@ -71,7 +71,7 @@ gdict_create_data_dir (void)
 
 	  if (g_rename (data_dir_name, backup) == -1)
 	    {
-              GtkWidget *error_dialog;
+              CtkWidget *error_dialog;
 
 	      error_dialog = ctk_message_dialog_new (NULL,
                                                      CTK_DIALOG_MODAL,
@@ -95,7 +95,7 @@ gdict_create_data_dir (void)
 
           if (g_mkdir_with_parents (data_dir_name, 0700) == -1)
             {
-              GtkWidget *error_dialog;
+              CtkWidget *error_dialog;
 
 	      error_dialog = ctk_message_dialog_new (NULL,
 						     CTK_DIALOG_MODAL,
@@ -118,7 +118,7 @@ gdict_create_data_dir (void)
 
       if (errno != EEXIST)
         {
-          GtkWidget *error_dialog;
+          CtkWidget *error_dialog;
 
 	  error_dialog = ctk_message_dialog_new (NULL,
 						 CTK_DIALOG_MODAL,
@@ -145,11 +145,11 @@ success:
 
 /* shows an error dialog making it transient for @parent */
 void
-gdict_show_error_dialog (GtkWindow   *parent,
+gdict_show_error_dialog (CtkWindow   *parent,
 			 const gchar *message,
 			 const gchar *detail)
 {
-  GtkWidget *dialog;
+  CtkWidget *dialog;
 
   g_return_if_fail ((parent == NULL) || (CTK_IS_WINDOW (parent)));
   g_return_if_fail (message != NULL);
@@ -174,7 +174,7 @@ gdict_show_error_dialog (GtkWindow   *parent,
 }
 
 void
-gdict_show_gerror_dialog (GtkWindow   *parent,
+gdict_show_gerror_dialog (CtkWindow   *parent,
 			  const gchar *message,
 			  GError      *error)
 {

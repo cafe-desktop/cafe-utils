@@ -43,14 +43,14 @@ typedef struct _GdictStrategyChooserClass	GdictStrategyChooserClass;
 
 struct _GdictStrategyChooser
 {
-  GtkBox parent_instance;
+  CtkBox parent_instance;
 
   GdictStrategyChooserPrivate *priv;
 };
 
 struct _GdictStrategyChooserClass
 {
-  GtkBoxClass parent_class;
+  CtkBoxClass parent_class;
 
   void (*strategy_activated) (GdictStrategyChooser *chooser,
 		  	      const gchar          *name,
@@ -66,8 +66,8 @@ struct _GdictStrategyChooserClass
 
 GType         gdict_strategy_chooser_get_type             (void) G_GNUC_CONST;
 
-GtkWidget *   gdict_strategy_chooser_new                  (void);
-GtkWidget *   gdict_strategy_chooser_new_with_context     (GdictContext         *context);
+CtkWidget *   gdict_strategy_chooser_new                  (void);
+CtkWidget *   gdict_strategy_chooser_new_with_context     (GdictContext         *context);
 
 GdictContext *gdict_strategy_chooser_get_context          (GdictStrategyChooser *chooser);
 void          gdict_strategy_chooser_set_context          (GdictStrategyChooser *chooser,
@@ -86,7 +86,7 @@ gboolean      gdict_strategy_chooser_has_strategy         (GdictStrategyChooser 
 						           const gchar          *strategy);
 void          gdict_strategy_chooser_refresh              (GdictStrategyChooser *chooser);
 void          gdict_strategy_chooser_clear                (GdictStrategyChooser *chooser);
-GtkWidget *   gdict_strategy_chooser_add_button           (GdictStrategyChooser *chooser,
+CtkWidget *   gdict_strategy_chooser_add_button           (GdictStrategyChooser *chooser,
                                                            const gchar          *button_text);
 
 G_END_DECLS

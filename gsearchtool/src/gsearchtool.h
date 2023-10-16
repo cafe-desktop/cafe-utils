@@ -98,47 +98,47 @@ typedef struct _GSearchConstraint GSearchConstraint;
 typedef struct _GSearchMonitor GSearchMonitor;
 
 struct _GSearchWindow {
-	GtkWindow               parent_instance;
+	CtkWindow               parent_instance;
 
-	GtkWidget             * window;
-	GtkUIManager          * window_ui_manager;
+	CtkWidget             * window;
+	CtkUIManager          * window_ui_manager;
 	GdkGeometry             window_geometry;
 	gint                    window_width;
 	gint                    window_height;
 	gboolean                is_window_maximized;
 	gboolean                is_window_accessible;
 
-	GtkWidget             * name_contains_entry;
-	GtkWidget             * look_in_folder_button;
-	GtkWidget             * name_and_folder_table;
-	GtkWidget             * progress_spinner;
-	GtkWidget             * find_button;
-	GtkWidget             * stop_button;
-	GtkWidget             * focus;
+	CtkWidget             * name_contains_entry;
+	CtkWidget             * look_in_folder_button;
+	CtkWidget             * name_and_folder_table;
+	CtkWidget             * progress_spinner;
+	CtkWidget             * find_button;
+	CtkWidget             * stop_button;
+	CtkWidget             * focus;
 
-	GtkWidget             * show_more_options_expander;
-	GtkWidget             * available_options_vbox;
-	GtkWidget             * available_options_label;
-	GtkWidget             * available_options_combo_box;
-	GtkWidget             * available_options_add_button;
-	GtkSizeGroup          * available_options_button_size_group;
+	CtkWidget             * show_more_options_expander;
+	CtkWidget             * available_options_vbox;
+	CtkWidget             * available_options_label;
+	CtkWidget             * available_options_combo_box;
+	CtkWidget             * available_options_add_button;
+	CtkSizeGroup          * available_options_button_size_group;
 	GList                 * available_options_selected_list;
 
-	GtkWidget             * files_found_label;
-	GtkWidget             * search_results_vbox;
-	GtkWidget             * search_results_popup_menu;
-	GtkWidget             * search_results_popup_submenu;
-	GtkWidget             * search_results_save_results_as_item;
-	GtkTreeView           * search_results_tree_view;
-	GtkTreeViewColumn     * search_results_folder_column;
-	GtkTreeViewColumn     * search_results_size_column;
-	GtkTreeViewColumn     * search_results_type_column;
-	GtkTreeViewColumn     * search_results_date_column;
-	GtkListStore          * search_results_list_store;
-	GtkCellRenderer       * search_results_name_cell_renderer;
-	GtkTreeSelection      * search_results_selection;
-	GtkTreeIter             search_results_iter;
-	GtkTreePath           * search_results_hover_path;
+	CtkWidget             * files_found_label;
+	CtkWidget             * search_results_vbox;
+	CtkWidget             * search_results_popup_menu;
+	CtkWidget             * search_results_popup_submenu;
+	CtkWidget             * search_results_save_results_as_item;
+	CtkTreeView           * search_results_tree_view;
+	CtkTreeViewColumn     * search_results_folder_column;
+	CtkTreeViewColumn     * search_results_size_column;
+	CtkTreeViewColumn     * search_results_type_column;
+	CtkTreeViewColumn     * search_results_date_column;
+	CtkListStore          * search_results_list_store;
+	CtkCellRenderer       * search_results_name_cell_renderer;
+	CtkTreeSelection      * search_results_selection;
+	CtkTreeIter             search_results_iter;
+	CtkTreePath           * search_results_hover_path;
 	GHashTable            * search_results_filename_hash_table;
 	GHashTable            * search_results_pixbuf_hash_table;
 	CajaDateFormat          search_results_date_format;
@@ -185,12 +185,12 @@ struct _GSearchConstraint {
 };
 
 struct _GSearchWindowClass {
-	GtkWindowClass parent_class;
+	CtkWindowClass parent_class;
 };
 
 struct _GSearchMonitor {
 	GSearchWindow         * gsearch;
-	GtkTreeRowReference   * reference;
+	CtkTreeRowReference   * reference;
 	GFileMonitor          * handle;
 };
 
@@ -231,9 +231,9 @@ void
 update_search_counts (GSearchWindow * gsearch);
 
 gboolean
-tree_model_iter_free_monitor (GtkTreeModel * model,
-                              GtkTreePath * path,
-                              GtkTreeIter * iter,
+tree_model_iter_free_monitor (CtkTreeModel * model,
+                              CtkTreePath * path,
+                              CtkTreeIter * iter,
                               gpointer data);
 
 #ifdef __cplusplus

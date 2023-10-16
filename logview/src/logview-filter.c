@@ -33,7 +33,7 @@ enum {
 struct _LogviewFilterPrivate {
   GRegex* regex;
   gchar* name;
-  GtkTextTag* tag;
+  CtkTextTag* tag;
 };
 
 G_DEFINE_TYPE_WITH_PRIVATE (LogviewFilter, logview_filter, G_TYPE_OBJECT);
@@ -185,7 +185,7 @@ logview_filter_filter (LogviewFilter *filter, const gchar *line)
   return retval;
 }
 
-GtkTextTag *
+CtkTextTag *
 logview_filter_get_tag (LogviewFilter *filter)
 {
   g_return_val_if_fail (LOGVIEW_IS_FILTER (filter), NULL);

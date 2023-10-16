@@ -58,7 +58,7 @@ clean_up_temporary_dir (gboolean gui_on_error)
 				 tmp_filename);
       if (gui_on_error)
 	{
-	  GtkWidget *dialog;
+	  CtkWidget *dialog;
 
 	  dialog = ctk_message_dialog_new (NULL, 0,
 					   CTK_MESSAGE_ERROR,
@@ -87,7 +87,7 @@ child_done_notification (GPid     pid,
   /* We expect the child to die after the parent.  If the child dies
    * than it either segfaulted, or was randomly killed.  In either
    * case, we can't reasonably continue.  */
-  GtkWidget *dialog;
+  CtkWidget *dialog;
 
   dialog = ctk_message_dialog_new (NULL, 0,
 				   CTK_MESSAGE_ERROR,
@@ -110,7 +110,7 @@ read_pipe_from_child (GIOChannel   *source,
     {
       gchar *message = NULL;
       gchar *error_message = NULL;
-      GtkWidget *dialog;
+      CtkWidget *dialog;
       GIOStatus status;
 
       status = g_io_channel_read_line (source, &error_message, NULL, NULL, NULL);

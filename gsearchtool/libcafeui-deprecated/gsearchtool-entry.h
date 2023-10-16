@@ -46,17 +46,17 @@ typedef struct _GsearchHistoryEntryClass   GsearchHistoryEntryClass;
 typedef struct _GsearchHistoryEntryPrivate GsearchHistoryEntryPrivate;
 
 struct _GsearchHistoryEntryClass {
-	GtkComboBoxClass parent_class;
+	CtkComboBoxClass parent_class;
 };
 
 struct _GsearchHistoryEntry {
-	GtkComboBox parent_instance;
+	CtkComboBox parent_instance;
 	GsearchHistoryEntryPrivate* priv;
 };
 
 GType gsearch_history_entry_get_type(void) G_GNUC_CONST;
 
-GtkWidget* gsearch_history_entry_new(const gchar* history_id, gboolean enable_completion);
+CtkWidget* gsearch_history_entry_new(const gchar* history_id, gboolean enable_completion);
 void gsearch_history_entry_prepend_text(GsearchHistoryEntry* entry, const gchar* text);
 void gsearch_history_entry_append_text(GsearchHistoryEntry* entry, const gchar* text);
 void gsearch_history_entry_clear(GsearchHistoryEntry* entry);
@@ -69,7 +69,7 @@ gchar* gsearch_history_entry_get_history_id(GsearchHistoryEntry* entry);
 void gsearch_history_entry_set_enable_completion(GsearchHistoryEntry* entry, gboolean enable);
 gboolean gsearch_history_entry_get_enable_completion(GsearchHistoryEntry* entry);
 
-GtkWidget* gsearch_history_entry_get_entry(GsearchHistoryEntry* entry);
+CtkWidget* gsearch_history_entry_get_entry(GsearchHistoryEntry* entry);
 
 typedef gchar* (*GsearchHistoryEntryEscapeFunc)(const gchar* str);
 

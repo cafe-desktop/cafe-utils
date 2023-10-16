@@ -47,9 +47,9 @@
 
 struct _GdictSourceDialog
 {
-  GtkDialog parent_instance;
+  CtkDialog parent_instance;
 
-  GtkBuilder *builder;
+  CtkBuilder *builder;
 
   GSettings *settings;
 
@@ -62,20 +62,20 @@ struct _GdictSourceDialog
 
   GdictSourceTransport transport;
 
-  GtkWidget *add_button;
-  GtkWidget *close_button;
-  GtkWidget *cancel_button;
-  GtkWidget *help_button;
+  CtkWidget *add_button;
+  CtkWidget *close_button;
+  CtkWidget *cancel_button;
+  CtkWidget *help_button;
 
-  GtkWidget *db_chooser;
-  GtkWidget *strat_chooser;
+  CtkWidget *db_chooser;
+  CtkWidget *strat_chooser;
 
-  GtkWidget *transport_combo;
+  CtkWidget *transport_combo;
 };
 
 struct _GdictSourceDialogClass
 {
-  GtkDialogClass parent_class;
+  CtkDialogClass parent_class;
 };
 
 enum
@@ -100,7 +100,7 @@ set_source_loader (GdictSourceDialog *dialog,
 }
 
 static void
-transport_combo_changed_cb (GtkWidget *widget,
+transport_combo_changed_cb (CtkWidget *widget,
 			    gpointer   user_data)
 {
   GdictSourceDialog *dialog = GDICT_SOURCE_DIALOG (user_data);
@@ -144,7 +144,7 @@ static gchar *
 get_text_from_entry (GdictSourceDialog *dialog,
 		     const gchar       *entry_name)
 {
-  GtkWidget *entry;
+  CtkWidget *entry;
   gchar *retval;
 
   entry = CTK_WIDGET (ctk_builder_get_object (dialog->builder, entry_name));
@@ -161,7 +161,7 @@ set_text_to_entry (GdictSourceDialog *dialog,
 		   const gchar       *entry_name,
 		   const gchar       *text)
 {
-  GtkWidget *entry;
+  CtkWidget *entry;
 
   entry = CTK_WIDGET (ctk_builder_get_object (dialog->builder, entry_name));
   if (!entry)
@@ -457,7 +457,7 @@ save_source (GdictSourceDialog *dialog)
 }
 
 static void
-gdict_source_dialog_response_cb (GtkDialog *dialog,
+gdict_source_dialog_response_cb (CtkDialog *dialog,
 				 gint       response_id,
 				 gpointer   user_data)
 {
@@ -571,7 +571,7 @@ gdict_source_dialog_constructor (GType                  type,
 {
   GObject *object;
   GdictSourceDialog *dialog;
-  GtkWidget *vbox;
+  CtkWidget *vbox;
   GError *error = NULL;
 
   object = G_OBJECT_CLASS (gdict_source_dialog_parent_class)->constructor (type,
@@ -582,7 +582,7 @@ gdict_source_dialog_constructor (GType                  type,
   ctk_container_set_border_width (CTK_CONTAINER (dialog), 5);
   ctk_box_set_spacing (CTK_BOX (ctk_dialog_get_content_area (CTK_DIALOG (dialog))), 2);
 
-  /* get the UI from the GtkBuilder file */
+  /* get the UI from the CtkBuilder file */
   dialog->builder = ctk_builder_new ();
   ctk_builder_add_from_file (dialog->builder, GDICT_SOURCE_UI, &error);
 
@@ -720,14 +720,14 @@ gdict_source_dialog_init (GdictSourceDialog *dialog)
   		    NULL);
 }
 
-GtkWidget *
-gdict_source_dialog_new (GtkWindow               *parent,
+CtkWidget *
+gdict_source_dialog_new (CtkWindow               *parent,
 			 const gchar             *title,
 			 GdictSourceDialogAction  action,
 			 GdictSourceLoader       *loader,
 			 const gchar             *source_name)
 {
-  GtkWidget *retval;
+  CtkWidget *retval;
 
   g_return_val_if_fail ((parent == NULL || CTK_IS_WINDOW (parent)), NULL);
   g_return_val_if_fail (GDICT_IS_SOURCE_LOADER (loader), NULL);

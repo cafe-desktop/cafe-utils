@@ -35,18 +35,18 @@ typedef struct _LogviewWindowClass LogviewWindowClass;
 typedef struct _LogviewWindowPrivate LogviewWindowPrivate;
 
 struct _LogviewWindow {
-  GtkWindow parent_instance;
+  CtkWindow parent_instance;
   LogviewWindowPrivate *priv;
 };
 
 struct _LogviewWindowClass {
-	GtkWindowClass parent_class;
+	CtkWindowClass parent_class;
 };
 
 GType logview_window_get_type (void);
 
 /* public methods */
-GtkWidget * logview_window_new        (void);
+CtkWidget * logview_window_new        (void);
 void        logview_window_add_error  (LogviewWindow *window,
                                        const char *primary,
                                        const char *secondary);

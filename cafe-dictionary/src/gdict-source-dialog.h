@@ -43,7 +43,7 @@ typedef struct _GdictSourceDialog      GdictSourceDialog;
 typedef struct _GdictSourceDialogClass GdictSourceDialogClass;
 
 GType      gdict_source_dialog_get_type (void) G_GNUC_CONST;
-GtkWidget *gdict_source_dialog_new      (GtkWindow               *parent,
+CtkWidget *gdict_source_dialog_new      (CtkWindow               *parent,
 					 const gchar             *title,
 					 GdictSourceDialogAction  action,
 					 GdictSourceLoader       *loader,
