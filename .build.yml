@@ -18,7 +18,6 @@ requires:
     - gtk-doc-tools
     - libcanberra-ctk3-dev
     - libglib2.0-dev
-    - libctk-3-dev
     - libgtop2-dev
     - libudisks2-dev
     - libx11-dev
