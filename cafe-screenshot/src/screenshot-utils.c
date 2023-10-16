@@ -502,7 +502,7 @@ blank_rectangle_in_pixbuf (GdkPixbuf *pixbuf, CdkRectangle *rect)
   guchar *row;
   gboolean has_alpha;
 
-  g_assert (gdk_pixbuf_get_colorspace (pixbuf) == CDK_COLORSPACE_RGB);
+  g_assert (gdk_pixbuf_get_colorspace (pixbuf) == GDK_COLORSPACE_RGB);
 
   x2 = rect->x + rect->width;
   y2 = rect->y + rect->height;
@@ -700,7 +700,7 @@ screenshot_get_pixbuf (CdkWindow    *window,
               height *= scale;
             }
 
-          tmp = gdk_pixbuf_new (CDK_COLORSPACE_RGB, TRUE, 8, width, height);
+          tmp = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, width, height);
           gdk_pixbuf_fill (tmp, 0);
 
           for (i = 0; i < rectangle_count; i++)
