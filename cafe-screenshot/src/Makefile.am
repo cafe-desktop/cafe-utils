@@ -33,7 +33,7 @@ cafe_screenshot_SOURCES =		\
 cafe_screenshot_CFLAGS =		\
 	$(GLIB_CFLAGS)			\
 	$(GIO_CFLAGS)			\
-	$(LIBCANBERRA_CTK_CFLAGS)	\
+	$(LIBKANBERRA_CTK_CFLAGS)	\
 	$(GTHREAD_CFLAGS)		\
 	$(CTK_CFLAGS)			\
 	$(WARN_CFLAGS)			\
@@ -45,7 +45,7 @@ cafe_screenshot_LDADD =			\
 	$(XSHAPE_LIBS)			\
 	$(GLIB_LIBS)			\
 	$(GIO_LIBS)			\
-	$(LIBCANBERRA_CTK_LIBS)		\
+	$(LIBKANBERRA_CTK_LIBS)		\
 	$(GTHREAD_LIBS)			\
 	$(CTK_LIBS)			\
 	-lm
