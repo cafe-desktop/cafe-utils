@@ -834,7 +834,7 @@ add_file_to_search_results (const gchar * file,
 			    CtkTreeIter * iter,
 			    GSearchWindow * gsearch)
 {
-	CdkPixbuf * pixbuf;
+	GdkPixbuf * pixbuf;
 	GSearchMonitor * monitor;
 	GFileMonitor * handle;
 	GFileInfo * file_info;

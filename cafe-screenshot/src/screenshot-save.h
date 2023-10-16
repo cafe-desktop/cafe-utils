@@ -24,7 +24,7 @@
 
 typedef void (*SaveFunction) (gpointer data);
 
-void        screenshot_save_start        (CdkPixbuf    *pixbuf,
+void        screenshot_save_start        (GdkPixbuf    *pixbuf,
 					  SaveFunction  callback,
 					  gpointer      user_data);
 const char *screenshot_save_get_filename (void);

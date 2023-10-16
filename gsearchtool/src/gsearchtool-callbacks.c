@@ -1218,7 +1218,7 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 	ctk_widget_show (new1);
 
 	CtkIconTheme *icon_theme;
-	CdkPixbuf *pixbuf;
+	GdkPixbuf *pixbuf;
 	icon_theme = ctk_icon_theme_get_default ();
 	pixbuf = ctk_icon_theme_load_icon (icon_theme, "user-trash", CTK_ICON_SIZE_MENU, 0, NULL);
 	image1 = ctk_image_new_from_pixbuf (pixbuf);
@@ -1521,7 +1521,7 @@ drag_begin_file_cb (CtkWidget * widget,
 		ctk_drag_set_icon_stock (context, "ctk-dnd-multiple", 0, 0);
 	}
 	else if (number_of_selected_rows == 1) {
-		CdkPixbuf * pixbuf;
+		GdkPixbuf * pixbuf;
 		CtkTreeModel * model;
 		CtkTreeIter iter;
 		GList * list;
