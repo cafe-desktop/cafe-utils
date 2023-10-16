@@ -95,7 +95,7 @@ baobab_cell_renderer_progress_set_property (GObject *object,
 static void
 baobab_cell_renderer_progress_get_size (CtkCellRenderer *cell,
 					CtkWidget       *widget,
-					const GdkRectangle *cell_area,
+					const CdkRectangle *cell_area,
 					gint            *x_offset,
 					gint            *y_offset,
 					gint            *width,
@@ -138,9 +138,9 @@ baobab_cell_renderer_progress_get_size (CtkCellRenderer *cell,
 static void
 set_color_according_to_perc (cairo_t *cr, double value)
 {
-  static GdkRGBA red;
-  static GdkRGBA yellow;
-  static GdkRGBA green;
+  static CdkRGBA red;
+  static CdkRGBA yellow;
+  static CdkRGBA green;
   static gboolean colors_initialized = FALSE;
 
   if (!colors_initialized)
@@ -181,8 +181,8 @@ static void
 baobab_cell_renderer_progress_render (CtkCellRenderer *cell,
 				      cairo_t         *cr,
 				      CtkWidget       *widget,
-				      const GdkRectangle *background_area,
-				      const GdkRectangle  *cell_area,
+				      const CdkRectangle *background_area,
+				      const CdkRectangle  *cell_area,
 				      guint            flags)
 {
   BaobabCellRendererProgress *cellprogress = BAOBAB_CELL_RENDERER_PROGRESS (cell);

@@ -303,7 +303,7 @@ static void
 gdict_window_lookup_start_cb (GdictContext *context,
 			      GdictWindow  *window)
 {
-  GdkDisplay *display;
+  CdkDisplay *display;
   gchar *message;
 
   display = ctk_widget_get_display (CTK_WIDGET (window));
@@ -1357,7 +1357,7 @@ static const CtkToggleActionEntry toggle_entries[] = {
 
 static gboolean
 gdict_window_delete_event_cb (CtkWidget *widget,
-			      GdkEvent  *event,
+			      CdkEvent  *event,
 			      gpointer   user_data)
 {
   gdict_window_cmd_file_close_window (NULL, GDICT_WINDOW (widget));
@@ -1367,7 +1367,7 @@ gdict_window_delete_event_cb (CtkWidget *widget,
 
 static gboolean
 gdict_window_state_event_cb (CtkWidget           *widget,
-			     GdkEventWindowState *event,
+			     CdkEventWindowState *event,
 			     gpointer             user_data)
 {
   GdictWindow *window = GDICT_WINDOW (widget);
@@ -1561,7 +1561,7 @@ gdict_window_link_clicked (GdictDefbox *defbox,
 
 static void
 gdict_window_drag_data_received_cb (CtkWidget        *widget,
-				    GdkDragContext   *context,
+				    CdkDragContext   *context,
 				    gint              x,
 				    gint              y,
 				    CtkSelectionData *data,

@@ -75,10 +75,10 @@ scan_is_local (GFile	*file)
 void
 baobab_set_busy (gboolean busy)
 {
-	static GdkCursor *busy_cursor = NULL;
-	GdkCursor *cursor = NULL;
-	GdkWindow *window;
-	GdkDisplay *display;
+	static CdkCursor *busy_cursor = NULL;
+	CdkCursor *cursor = NULL;
+	CdkWindow *window;
+	CdkDisplay *display;
 
 	window = ctk_widget_get_window (baobab.window);
 
@@ -974,7 +974,7 @@ on_chart_item_activated (BaobabChart *chart, CtkTreeIter *iter)
 
 static gboolean
 on_chart_button_release (BaobabChart *chart,
-			 GdkEventButton *event,
+			 CdkEventButton *event,
 			 gpointer data)
 {
 	if (baobab_chart_is_frozen (baobab.current_chart))
@@ -998,7 +998,7 @@ on_chart_button_release (BaobabChart *chart,
 
 		/* show the menu */
 		ctk_menu_popup_at_pointer (CTK_MENU (menu->widget),
-		                           (const GdkEvent*) event);
+		                           (const CdkEvent*) event);
 
 		ctk_tree_path_free (root_path);
 	}
@@ -1008,7 +1008,7 @@ on_chart_button_release (BaobabChart *chart,
 
 static void
 drag_data_received_handl (CtkWidget *widget,
-			 GdkDragContext *context,
+			 CdkDragContext *context,
 			 gint x,
 			 gint y,
 			 CtkSelectionData *selection_data,

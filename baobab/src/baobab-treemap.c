@@ -269,7 +269,7 @@ baobab_treemap_is_point_over_item (CtkWidget *chart,
                                    gdouble x,
                                    gdouble y)
 {
-  GdkRectangle *rect;
+  CdkRectangle *rect;
 
   rect = &item->rect;
   return ((x >= rect->x) && (x <= rect->x + rect->width) &&

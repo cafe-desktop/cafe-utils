@@ -85,11 +85,11 @@ typedef struct
   char *retval;
   int iteration;
   TestType type;
-  GdkWindow *window;
-  GdkRectangle *rectangle;
+  CdkWindow *window;
+  CdkRectangle *rectangle;
 } AsyncExistenceJob;
 
-static GdkPixbuf *screenshot = NULL;
+static CdkPixbuf *screenshot = NULL;
 
 /* Global variables*/
 static char *last_save_dir = NULL;
@@ -224,7 +224,7 @@ effect_combo_changed_cb (CtkComboBox *combo,
 }
 
 static gint
-key_press_cb (CtkWidget* widget, GdkEventKey* event, gpointer data)
+key_press_cb (CtkWidget* widget, CdkEventKey* event, gpointer data)
 {
   if (event->keyval == CDK_KEY_F1)
     {
@@ -706,7 +706,7 @@ save_done_notification (gpointer data)
 }
 
 static void
-save_screenshot_in_clipboard (GdkDisplay *display, GdkPixbuf *screenshot)
+save_screenshot_in_clipboard (CdkDisplay *display, CdkPixbuf *screenshot)
 {
   CtkClipboard *clipboard =
     ctk_clipboard_get_for_display (display, CDK_SELECTION_CLIPBOARD);
@@ -777,7 +777,7 @@ run_dialog (ScreenshotDialog *dialog)
 }
 
 static void
-play_sound_effect (GdkWindow *window)
+play_sound_effect (CdkWindow *window)
 {
   ca_context *c;
   ca_proplist *p = NULL;
@@ -816,7 +816,7 @@ play_sound_effect (GdkWindow *window)
 }
 
 static void
-finish_prepare_screenshot (char *initial_uri, GdkWindow *window, GdkRectangle *rectangle)
+finish_prepare_screenshot (char *initial_uri, CdkWindow *window, CdkRectangle *rectangle)
 {
   ScreenshotDialog *dialog;
   gboolean include_mask = (!take_window_shot && !take_area_shot);
@@ -881,7 +881,7 @@ async_existence_job_free (AsyncExistenceJob *job)
   g_free (job->base_uris[2]);
 
   if (job->rectangle != NULL)
-    g_slice_free (GdkRectangle, job->rectangle);
+    g_slice_free (CdkRectangle, job->rectangle);
 
   g_slice_free (AsyncExistenceJob, job);
 }
@@ -1025,10 +1025,10 @@ out:
   return FALSE;
 }
 
-static GdkWindow *
+static CdkWindow *
 find_current_window (void)
 {
-  GdkWindow *window;
+  CdkWindow *window;
 
   if (!screenshot_grab_lock ())
     exit (0);
@@ -1051,7 +1051,7 @@ find_current_window (void)
 }
 
 static void
-push_check_file_job (GdkRectangle *rectangle)
+push_check_file_job (CdkRectangle *rectangle)
 {
   AsyncExistenceJob *job;
 
@@ -1066,7 +1066,7 @@ push_check_file_job (GdkRectangle *rectangle)
 
   if (rectangle != NULL)
     {
-      job->rectangle = g_slice_new0 (GdkRectangle);
+      job->rectangle = g_slice_new0 (CdkRectangle);
       job->rectangle->x = rectangle->x;
       job->rectangle->y = rectangle->y;
       job->rectangle->width = rectangle->width;
@@ -1090,7 +1090,7 @@ push_check_file_job (GdkRectangle *rectangle)
 }
 
 static void
-rectangle_found_cb (GdkRectangle *rectangle)
+rectangle_found_cb (CdkRectangle *rectangle)
 {
   push_check_file_job (rectangle);
 }

@@ -25,14 +25,14 @@
 
 G_BEGIN_DECLS
 
-typedef void (* SelectAreaCallback) (GdkRectangle *rectangle);
+typedef void (* SelectAreaCallback) (CdkRectangle *rectangle);
 
 gboolean   screenshot_grab_lock           (void);
 void       screenshot_release_lock        (void);
-GdkWindow *screenshot_find_current_window (void);
+CdkWindow *screenshot_find_current_window (void);
 void       screenshot_select_area_async   (SelectAreaCallback callback);
-GdkPixbuf *screenshot_get_pixbuf          (GdkWindow *win,
-                                           GdkRectangle *rectangle,
+CdkPixbuf *screenshot_get_pixbuf          (CdkWindow *win,
+                                           CdkRectangle *rectangle,
                                            gboolean include_pointer,
                                            gboolean include_border,
                                            gboolean include_mask);

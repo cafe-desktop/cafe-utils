@@ -51,7 +51,7 @@ G_DEFINE_TYPE_WITH_PRIVATE (LogviewApp, logview_app, G_TYPE_OBJECT);
 
 static gboolean
 main_window_delete_cb (CtkWidget *widget,
-                       GdkEvent *event,
+                       CdkEvent *event,
                        gpointer user_data)
 {
   LogviewApp *app = user_data;

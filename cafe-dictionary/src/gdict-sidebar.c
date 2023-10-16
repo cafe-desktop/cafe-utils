@@ -136,7 +136,7 @@ gdict_sidebar_dispose (GObject *object)
 
 static gboolean
 gdict_sidebar_select_button_press_cb (CtkWidget      *widget,
-				      GdkEventButton *event,
+				      CdkEventButton *event,
 				      gpointer        user_data)
 {
   GdictSidebar *sidebar = GDICT_SIDEBAR (user_data);
@@ -160,7 +160,7 @@ gdict_sidebar_select_button_press_cb (CtkWidget      *widget,
                                 widget,
                                 CDK_GRAVITY_SOUTH_WEST,
                                 CDK_GRAVITY_NORTH_WEST,
-                                (const GdkEvent*) event);
+                                (const CdkEvent*) event);
 
       return TRUE;
     }
@@ -170,7 +170,7 @@ gdict_sidebar_select_button_press_cb (CtkWidget      *widget,
 
 static gboolean
 gdict_sidebar_select_key_press_cb (CtkWidget   *widget,
-				   GdkEventKey *event,
+				   CdkEventKey *event,
 				   gpointer     user_data)
 {
   GdictSidebar *sidebar = GDICT_SIDEBAR (user_data);
@@ -185,7 +185,7 @@ gdict_sidebar_select_key_press_cb (CtkWidget   *widget,
                                 widget,
                                 CDK_GRAVITY_SOUTH_WEST,
                                 CDK_GRAVITY_NORTH_WEST,
-                                (const GdkEvent*) event);
+                                (const CdkEvent*) event);
 
       return TRUE;
     }

@@ -663,10 +663,10 @@ gsearchtool_pixmap_file (const gchar * partial_path)
 	return NULL;
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 gsearchtool_load_thumbnail_frame (void)
 {
-	GdkPixbuf * pixbuf = NULL;
+	CdkPixbuf * pixbuf = NULL;
 	gchar * image_path;
 
 	image_path = gsearchtool_pixmap_file("thumbnail_frame.png");
@@ -679,12 +679,12 @@ gsearchtool_load_thumbnail_frame (void)
 }
 
 static void
-gsearchtool_draw_frame_row (GdkPixbuf * frame_image,
+gsearchtool_draw_frame_row (CdkPixbuf * frame_image,
                             gint target_width,
                             gint source_width,
                             gint source_v_position,
                             gint dest_v_position,
-                            GdkPixbuf * result_pixbuf,
+                            CdkPixbuf * result_pixbuf,
                             gint left_offset,
                             gint height)
 {
@@ -704,12 +704,12 @@ gsearchtool_draw_frame_row (GdkPixbuf * frame_image,
 }
 
 static void
-gsearchtool_draw_frame_column (GdkPixbuf * frame_image,
+gsearchtool_draw_frame_column (CdkPixbuf * frame_image,
                                gint target_height,
                                gint source_height,
                                gint source_h_position,
                                gint dest_h_position,
-                               GdkPixbuf * result_pixbuf,
+                               CdkPixbuf * result_pixbuf,
                                gint top_offset,
                                gint width)
 {
@@ -728,8 +728,8 @@ gsearchtool_draw_frame_column (GdkPixbuf * frame_image,
 	}
 }
 
-static GdkPixbuf *
-gsearchtool_stretch_frame_image (GdkPixbuf *frame_image,
+static CdkPixbuf *
+gsearchtool_stretch_frame_image (CdkPixbuf *frame_image,
                                  gint left_offset,
                                  gint top_offset,
                                  gint right_offset,
@@ -738,7 +738,7 @@ gsearchtool_stretch_frame_image (GdkPixbuf *frame_image,
                                  gint dest_height,
                                  gboolean fill_flag)
 {
-	GdkPixbuf * result_pixbuf;
+	CdkPixbuf * result_pixbuf;
 	gint frame_width, frame_height;
 	gint target_width, target_frame_width;
 	gint target_height, target_frame_height;
@@ -791,15 +791,15 @@ gsearchtool_stretch_frame_image (GdkPixbuf *frame_image,
 	return result_pixbuf;
 }
 
-static GdkPixbuf *
-gsearchtool_embed_image_in_frame (GdkPixbuf * source_image,
-                                  GdkPixbuf * frame_image,
+static CdkPixbuf *
+gsearchtool_embed_image_in_frame (CdkPixbuf * source_image,
+                                  CdkPixbuf * frame_image,
                                   gint left_offset,
                                   gint top_offset,
                                   gint right_offset,
                                   gint bottom_offset)
 {
-	GdkPixbuf * result_pixbuf;
+	CdkPixbuf * result_pixbuf;
 	gint source_width, source_height;
 	gint dest_width, dest_height;
 
@@ -818,10 +818,10 @@ gsearchtool_embed_image_in_frame (GdkPixbuf * source_image,
 }
 
 static void
-gsearchtool_thumbnail_frame_image (GdkPixbuf ** pixbuf)
+gsearchtool_thumbnail_frame_image (CdkPixbuf ** pixbuf)
 {
-	GdkPixbuf * pixbuf_with_frame;
-	GdkPixbuf * frame;
+	CdkPixbuf * pixbuf_with_frame;
+	CdkPixbuf * frame;
 
 	frame = gsearchtool_load_thumbnail_frame ();
 	if (frame == NULL) {
@@ -835,15 +835,15 @@ gsearchtool_thumbnail_frame_image (GdkPixbuf ** pixbuf)
 	*pixbuf = pixbuf_with_frame;
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 gsearchtool_get_thumbnail_image (const gchar * thumbnail)
 {
-	GdkPixbuf * pixbuf = NULL;
+	CdkPixbuf * pixbuf = NULL;
 
 	if (thumbnail != NULL) {
 		if (g_file_test (thumbnail, G_FILE_TEST_EXISTS)) {
 
-			GdkPixbuf * thumbnail_pixbuf = NULL;
+			CdkPixbuf * thumbnail_pixbuf = NULL;
 			gfloat scale_factor_x = 1.0;
 			gfloat scale_factor_y = 1.0;
 			gint scale_x;
@@ -875,14 +875,14 @@ gsearchtool_get_thumbnail_image (const gchar * thumbnail)
 	return pixbuf;
 }
 
-static GdkPixbuf *
+static CdkPixbuf *
 get_themed_icon_pixbuf (GThemedIcon * icon,
                         int size,
                         CtkIconTheme * icon_theme)
 {
 	char ** icon_names;
 	CtkIconInfo * icon_info;
-	GdkPixbuf * pixbuf;
+	CdkPixbuf * pixbuf;
 	GError * error = NULL;
 
 	g_object_get (icon, "names", &icon_names, NULL);
@@ -905,11 +905,11 @@ get_themed_icon_pixbuf (GThemedIcon * icon,
 
 
 
-GdkPixbuf *
+CdkPixbuf *
 get_file_pixbuf (GSearchWindow * gsearch,
                  GFileInfo * file_info)
 {
-	GdkPixbuf * pixbuf;
+	CdkPixbuf * pixbuf;
 	GIcon * icon = NULL;
 	const gchar * thumbnail_path = NULL;
 
@@ -930,7 +930,7 @@ get_file_pixbuf (GSearchWindow * gsearch,
 		gchar * icon_string;
 
 		icon_string = g_icon_to_string (icon);
-		pixbuf = (GdkPixbuf *) g_hash_table_lookup (gsearch->search_results_filename_hash_table, icon_string);
+		pixbuf = (CdkPixbuf *) g_hash_table_lookup (gsearch->search_results_filename_hash_table, icon_string);
 
 		if (pixbuf == NULL) {
 			pixbuf = get_themed_icon_pixbuf (G_THEMED_ICON (icon), ICON_SIZE, ctk_icon_theme_get_default ());
@@ -947,9 +947,9 @@ open_file_with_filemanager (CtkWidget * window,
 {
 	GDesktopAppInfo * d_app_info;
 	GKeyFile * key_file;
-	GdkAppLaunchContext * ctx = NULL;
-	GdkScreen *screen;
-	GdkDisplay *display;
+	CdkAppLaunchContext * ctx = NULL;
+	CdkScreen *screen;
+	CdkDisplay *display;
 	GList * list = NULL;
 	GAppInfo * g_app_info;
 	GFile * g_file;
@@ -1018,9 +1018,9 @@ open_file_with_application (CtkWidget * window,
                             const gchar * file,
                             GAppInfo * app)
 {
-	GdkAppLaunchContext * context;
-	GdkDisplay *display;
-	GdkScreen * screen;
+	CdkAppLaunchContext * context;
+	CdkDisplay *display;
+	CdkScreen * screen;
 	gboolean result;
 
 	if (g_file_test (file, G_FILE_TEST_IS_DIR) == TRUE) {

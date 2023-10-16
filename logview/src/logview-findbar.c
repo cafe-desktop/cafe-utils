@@ -116,7 +116,7 @@ entry_changed_cb (CtkEditable *editable,
 
 static gboolean
 entry_key_press_event_cb (CtkWidget *entry,
-                          GdkEventKey *event,
+                          CdkEventKey *event,
                           gpointer user_data)
 {
   LogviewFindbar *findbar = user_data;

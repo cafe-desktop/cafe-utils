@@ -45,7 +45,7 @@ quit_session_cb (EggSMClient * client,
                  gpointer data);
 void
 quit_cb (CtkWidget * widget,
-         GdkEvent * event,
+         CdkEvent * event,
          gpointer data);
 void
 click_close_cb (CtkWidget * widget,
@@ -90,7 +90,7 @@ open_file_cb (CtkMenuItem * action,
               gpointer data);
 void
 open_file_event_cb (CtkWidget * widget,
-                    GdkEventButton * event,
+                    CdkEventButton * event,
                     gpointer data);
 void
 open_folder_cb (CtkAction * action,
@@ -106,11 +106,11 @@ move_to_trash_cb (CtkAction * action,
                   gpointer data);
 void
 drag_begin_file_cb (CtkWidget * widget,
-                    GdkDragContext * context,
+                    CdkDragContext * context,
                     gpointer data);
 void
 drag_file_cb (CtkWidget * widget,
-              GdkDragContext * context,
+              CdkDragContext * context,
               CtkSelectionData * selection_data,
               guint info,
               guint time,
@@ -128,31 +128,31 @@ save_session_cb (EggSMClient * client,
                  gpointer client_data);
 gboolean
 key_press_cb (CtkWidget * widget,
-              GdkEventKey * event,
+              CdkEventKey * event,
               gpointer data);
 gboolean
 file_button_release_event_cb (CtkWidget * widget,
-                              GdkEventButton * event,
+                              CdkEventButton * event,
                               gpointer data);
 gboolean
 file_event_after_cb (CtkWidget 	* widget,
-                     GdkEventButton * event,
+                     CdkEventButton * event,
                      gpointer data);
 gboolean
 file_button_press_event_cb (CtkWidget * widget,
-                            GdkEventButton * event,
+                            CdkEventButton * event,
                             gpointer data);
 gboolean
 file_key_press_event_cb (CtkWidget * widget,
-                         GdkEventKey * event,
+                         CdkEventKey * event,
                          gpointer data);
 gboolean
 file_motion_notify_cb (CtkWidget *widget,
-                       GdkEventMotion *event,
+                       CdkEventMotion *event,
                        gpointer user_data);
 gboolean
 file_leave_notify_cb (CtkWidget *widget,
-                      GdkEventCrossing *event,
+                      CdkEventCrossing *event,
                       gpointer user_data);
 gboolean
 not_running_timeout_cb (gpointer data);
@@ -170,7 +170,7 @@ columns_changed_cb (CtkTreeView * treeview,
                     gpointer user_data);
 gboolean
 window_state_event_cb (CtkWidget * widget,
-                       GdkEventWindowState * event,
+                       CdkEventWindowState * event,
                        gpointer data);
 
 #ifdef __cplusplus

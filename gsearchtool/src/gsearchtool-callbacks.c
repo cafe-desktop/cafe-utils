@@ -113,7 +113,7 @@ quit_session_cb (EggSMClient * client,
 
 void
 quit_cb (CtkWidget * widget,
-         GdkEvent * event,
+         CdkEvent * event,
 	 gpointer data)
 {
 	quit_application ((GSearchWindow *) data);
@@ -224,7 +224,7 @@ click_expander_cb (GObject * object,
 		                               CDK_HINT_MIN_SIZE);
 	}
 	else {
-		GdkGeometry default_geometry = {MINIMUM_WINDOW_WIDTH, MINIMUM_WINDOW_HEIGHT};
+		CdkGeometry default_geometry = {MINIMUM_WINDOW_WIDTH, MINIMUM_WINDOW_HEIGHT};
 
 		ctk_widget_hide (gsearch->available_options_vbox);
 		ctk_window_set_geometry_hints (CTK_WINDOW (gsearch->window),
@@ -446,7 +446,7 @@ display_dialog_could_not_open_folder (CtkWidget * window,
 
 void
 open_file_event_cb (CtkWidget * widget,
-                    GdkEventButton * event,
+                    CdkEventButton * event,
                     gpointer data)
 {
 	open_file_cb ((CtkMenuItem *) widget, data);
@@ -936,7 +936,7 @@ move_to_trash_cb (CtkAction * action,
 
 gboolean
 file_button_press_event_cb (CtkWidget * widget,
-                            GdkEventButton * event,
+                            CdkEventButton * event,
                             gpointer data)
 {
 	CtkTreeView * tree = data;
@@ -966,7 +966,7 @@ file_button_press_event_cb (CtkWidget * widget,
 
 gboolean
 file_key_press_event_cb (CtkWidget * widget,
-                         GdkEventKey * event,
+                         CdkEventKey * event,
                          gpointer data)
 {
 	if (event->keyval == CDK_KEY_space  ||
@@ -1218,7 +1218,7 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 	ctk_widget_show (new1);
 
 	CtkIconTheme *icon_theme;
-	GdkPixbuf *pixbuf;
+	CdkPixbuf *pixbuf;
 	icon_theme = ctk_icon_theme_get_default ();
 	pixbuf = ctk_icon_theme_load_icon (icon_theme, "user-trash", CTK_ICON_SIZE_MENU, 0, NULL);
 	image1 = ctk_image_new_from_pixbuf (pixbuf);
@@ -1255,7 +1255,7 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 
 gboolean
 file_button_release_event_cb (CtkWidget * widget,
-                              GdkEventButton * event,
+                              CdkEventButton * event,
                               gpointer data)
 {
 	GSearchWindow * gsearch = data;
@@ -1377,7 +1377,7 @@ file_button_release_event_cb (CtkWidget * widget,
 
 			build_popup_menu_for_file (gsearch, file);
 			ctk_menu_popup_at_pointer (CTK_MENU (gsearch->search_results_popup_menu),
-			                           (const GdkEvent*) event);
+			                           (const CdkEvent*) event);
 			g_free (file);
 
 		}
@@ -1397,7 +1397,7 @@ file_button_release_event_cb (CtkWidget * widget,
 
 gboolean
 file_event_after_cb  (CtkWidget * widget,
-                      GdkEventButton * event,
+                      CdkEventButton * event,
                       gpointer data)
 {
 	GSearchWindow * gsearch = data;
@@ -1423,12 +1423,12 @@ file_event_after_cb  (CtkWidget * widget,
 
 gboolean
 file_motion_notify_cb (CtkWidget *widget,
-                       GdkEventMotion *event,
+                       CdkEventMotion *event,
                        gpointer user_data)
 {
 	GSearchWindow * gsearch = user_data;
-	GdkDisplay *display;
-	GdkCursor * cursor;
+	CdkDisplay *display;
+	CdkCursor * cursor;
 	CtkTreePath * last_hover_path;
 	CtkTreeIter iter;
 
@@ -1484,7 +1484,7 @@ file_motion_notify_cb (CtkWidget *widget,
 
 gboolean
 file_leave_notify_cb (CtkWidget *widget,
-                      GdkEventCrossing *event,
+                      CdkEventCrossing *event,
                       gpointer user_data)
 {
         GSearchWindow * gsearch = user_data;
@@ -1509,7 +1509,7 @@ file_leave_notify_cb (CtkWidget *widget,
 
 void
 drag_begin_file_cb (CtkWidget * widget,
-                    GdkDragContext * context,
+                    CdkDragContext * context,
                     gpointer data)
 {
 	GSearchWindow * gsearch = data;
@@ -1521,7 +1521,7 @@ drag_begin_file_cb (CtkWidget * widget,
 		ctk_drag_set_icon_stock (context, "ctk-dnd-multiple", 0, 0);
 	}
 	else if (number_of_selected_rows == 1) {
-		GdkPixbuf * pixbuf;
+		CdkPixbuf * pixbuf;
 		CtkTreeModel * model;
 		CtkTreeIter iter;
 		GList * list;
@@ -1548,7 +1548,7 @@ drag_begin_file_cb (CtkWidget * widget,
 
 void
 drag_file_cb  (CtkWidget * widget,
-               GdkDragContext * context,
+               CdkDragContext * context,
                CtkSelectionData * selection_data,
                guint info,
                guint drag_time,
@@ -1834,7 +1834,7 @@ save_session_cb (EggSMClient * client,
 
 gboolean
 key_press_cb (CtkWidget * widget,
-              GdkEventKey * event,
+              CdkEventKey * event,
               gpointer data)
 {
 	GSearchWindow * gsearch = data;
@@ -1846,7 +1846,7 @@ key_press_cb (CtkWidget * widget,
 			click_stop_cb (widget, data);
 		}
 		else if (gsearch->command_details->is_command_timeout_enabled == FALSE) {
-			quit_cb (widget, (GdkEvent *) NULL, data);
+			quit_cb (widget, (CdkEvent *) NULL, data);
 		}
 	}
 	else if (event->keyval == CDK_KEY_F10) {
@@ -1873,7 +1873,7 @@ key_press_cb (CtkWidget * widget,
 
 			if (!no_files_found) {
 				ctk_menu_popup_at_pointer (CTK_MENU (gsearch->search_results_popup_menu),
-				                           (const GdkEvent*) event);
+				                           (const CdkEvent*) event);
 				return TRUE;
 			}
 		}
@@ -1943,7 +1943,7 @@ columns_changed_cb (CtkTreeView * treeview,
 
 gboolean
 window_state_event_cb (CtkWidget * widget,
-                       GdkEventWindowState * event,
+                       CdkEventWindowState * event,
                        gpointer data)
 {
 	GSearchWindow * gsearch = data;

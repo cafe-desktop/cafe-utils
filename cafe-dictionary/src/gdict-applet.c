@@ -80,7 +80,7 @@ struct _GdictAppletPrivate
 
   guint idle_draw_id;
 
-  GdkPixbuf *icon;
+  CdkPixbuf *icon;
 
   gint window_width;
   gint window_height;
@@ -128,10 +128,10 @@ set_window_default_size (GdictApplet *applet)
   CtkWidget *widget, *defbox;
   gint width, height;
   gint font_size;
-  GdkDisplay *display;
-  GdkMonitor *monitor_num;
+  CdkDisplay *display;
+  CdkMonitor *monitor_num;
   CtkRequisition req;
-  GdkRectangle monitor;
+  CdkRectangle monitor;
 
   if (!priv->window)
     return;
@@ -270,7 +270,7 @@ gdict_applet_set_menu_items_sensitive (GdictApplet *applet,
 
 static gboolean
 window_key_press_event_cb (CtkWidget   *widget,
-			   GdkEventKey *event,
+			   CdkEventKey *event,
 			   gpointer     user_data)
 {
   GdictApplet *applet = GDICT_APPLET (user_data);
@@ -456,7 +456,7 @@ gdict_applet_entry_activate_cb (CtkWidget   *widget,
 
 static gboolean
 gdict_applet_entry_key_press_cb (CtkWidget   *widget,
-				 GdkEventKey *event,
+				 CdkEventKey *event,
 				 gpointer     user_data)
 {
   GdictAppletPrivate *priv = GDICT_APPLET (user_data)->priv;
@@ -482,7 +482,7 @@ gdict_applet_entry_key_press_cb (CtkWidget   *widget,
 
 static gboolean
 gdict_applet_icon_button_press_event_cb (CtkWidget      *widget,
-					 GdkEventButton *event,
+					 CdkEventButton *event,
 					 GdictApplet    *applet)
 {
   GdictAppletPrivate *priv = applet->priv;
@@ -498,7 +498,7 @@ gdict_applet_icon_button_press_event_cb (CtkWidget      *widget,
 
 static gboolean
 gdict_applet_entry_button_press_event_cb (CtkWidget      *widget,
-					  GdkEventButton *event,
+					  CdkEventButton *event,
 					  GdictApplet    *applet)
 {
   cafe_panel_applet_request_focus (CAFE_PANEL_APPLET (applet), event->time);
@@ -550,7 +550,7 @@ gdict_applet_draw (GdictApplet *applet)
 
   if (priv->icon)
     {
-      GdkPixbuf *scaled;
+      CdkPixbuf *scaled;
 
       priv->image = ctk_image_new ();
       ctk_image_set_pixel_size (CTK_IMAGE (priv->image), priv->size - 10);
@@ -777,7 +777,7 @@ gdict_applet_change_orient (CafePanelApplet       *applet,
 
 static void
 gdict_applet_size_allocate (CtkWidget    *widget,
-			    GdkRectangle *allocation)
+			    CdkRectangle *allocation)
 {
   GdictApplet *applet = GDICT_APPLET (widget);
   GdictAppletPrivate *priv = applet->priv;
@@ -797,7 +797,7 @@ gdict_applet_size_allocate (CtkWidget    *widget,
       /* re-scale the icon, if it was found */
       if (priv->icon)
         {
-          GdkPixbuf *scaled;
+          CdkPixbuf *scaled;
 
 	  scaled = cdk_pixbuf_scale_simple (priv->icon,
 			  		    priv->size - 5,

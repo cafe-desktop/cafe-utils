@@ -142,8 +142,8 @@
   * ctk 3.22: avoid deprecated cdk_screen_get_monitor... functions:
   * avoid deprecated cdk_screen_width/height
   * avoid deprecated cdk_screen_get_width/height
-  * screenshot: avoid deprecated GdkDevice objects
-  * dictionary: avoid deprecated GdkDevice objects
+  * screenshot: avoid deprecated CdkDevice objects
+  * dictionary: avoid deprecated CdkDevice objects
   * avoid deprecated cdk_screen_get_n_monitors
   * avoid deprecated cdk_screen_make_display_name
   * gdict-applet: don't use deprecated ctk_show_uri

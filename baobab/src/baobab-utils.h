@@ -36,7 +36,7 @@ gboolean show_bars (CtkTreeModel *model,
 void message (const gchar *primary_msg, const gchar *secondary_msg, CtkMessageType type, CtkWidget *parent);
 gint messageyesno (const gchar *primary_msg, const gchar *secondary_msg, CtkMessageType type, gchar * ok_button, CtkWidget *parent);
 gboolean baobab_check_dir (GFile *);
-void popupmenu_list (CtkTreePath *path, GdkEventButton *event, gboolean can_trash);
+void popupmenu_list (CtkTreePath *path, CdkEventButton *event, gboolean can_trash);
 void open_file_with_application (GFile *file);
 gboolean can_trash_file (GFile *file);
 gboolean trash_file (GFile *file);
