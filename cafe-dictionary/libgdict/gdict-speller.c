@@ -34,7 +34,7 @@
 #include <string.h>
 #include <stdarg.h>
 
-#include <gdk/gdkkeysyms.h>
+#include <cdk/cdkkeysyms.h>
 #include <ctk/ctk.h>
 #include <glib/gi18n-lib.h>
 
@@ -624,11 +624,11 @@ lookup_start_cb (GdictContext *context,
   if (!priv->busy_cursor)
     {
       GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (speller));
-      priv->busy_cursor = gdk_cursor_new_for_display (display, GDK_WATCH);
+      priv->busy_cursor = cdk_cursor_new_for_display (display, GDK_WATCH);
     }
 
   if (ctk_widget_get_window (CTK_WIDGET (speller)))
-    gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (speller)), priv->busy_cursor);
+    cdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (speller)), priv->busy_cursor);
 
   priv->is_searching = TRUE;
 }
@@ -641,7 +641,7 @@ lookup_end_cb (GdictContext *context,
   GdictSpellerPrivate *priv = speller->priv;
 
   if (ctk_widget_get_window (CTK_WIDGET (speller)))
-    gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (speller)), NULL);
+    cdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (speller)), NULL);
 
   g_free (priv->word);
   priv->word = NULL;
@@ -686,7 +686,7 @@ error_cb (GdictContext *context,
   gdict_speller_clear (speller);
 
   if (ctk_widget_get_window (CTK_WIDGET (speller)))
-    gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (speller)), NULL);
+    cdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (speller)), NULL);
 
   g_free (priv->word);
   priv->word = NULL;

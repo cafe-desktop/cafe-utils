@@ -25,8 +25,8 @@
 /* MAYBE I LIED... -jrb */
 
 #include <config.h>
-#include <gdk/gdkx.h>
-#include <gdk/gdkkeysyms.h>
+#include <cdk/cdkx.h>
+#include <cdk/cdkkeysyms.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
@@ -856,7 +856,7 @@ finish_prepare_screenshot (char *initial_uri, GdkWindow *window, GdkRectangle *r
   play_sound_effect (window);
 
   if (noninteractive_clipboard_arg) {
-    save_screenshot_in_clipboard (gdk_window_get_display (window), screenshot);
+    save_screenshot_in_clipboard (cdk_window_get_display (window), screenshot);
     g_free (initial_uri);
     /* Done here: */
     ctk_main_quit ();
@@ -1039,12 +1039,12 @@ find_current_window (void)
       if (!window)
 	{
 	  take_window_shot = FALSE;
-	  window = gdk_get_default_root_window ();
+	  window = cdk_get_default_root_window ();
 	}
     }
   else
     {
-      window = gdk_get_default_root_window ();
+      window = cdk_get_default_root_window ();
     }
 
   return window;

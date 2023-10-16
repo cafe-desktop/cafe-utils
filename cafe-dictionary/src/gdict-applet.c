@@ -28,8 +28,8 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 #include <ctk/ctk.h>
-#include <gdk/gdkkeysyms.h>
-#include <gdk-pixbuf/gdk-pixbuf.h>
+#include <cdk/cdkkeysyms.h>
+#include <cdk-pixbuf/cdk-pixbuf.h>
 
 #include "gdict-applet.h"
 #include "gdict-about.h"
@@ -153,9 +153,9 @@ set_window_default_size (GdictApplet *applet)
 
   /* ... but make it no larger than half the monitor size */
   display = ctk_widget_get_display (widget);
-  monitor_num = gdk_display_get_monitor_at_window (display,
+  monitor_num = cdk_display_get_monitor_at_window (display,
                                                    ctk_widget_get_window (widget));
-  gdk_monitor_get_geometry (monitor_num, &monitor);
+  cdk_monitor_get_geometry (monitor_num, &monitor);
 
   width = MIN (width, monitor.width / 2);
   height = MIN (height, monitor.height / 2);
@@ -555,7 +555,7 @@ gdict_applet_draw (GdictApplet *applet)
       priv->image = ctk_image_new ();
       ctk_image_set_pixel_size (CTK_IMAGE (priv->image), priv->size - 10);
 
-      scaled = gdk_pixbuf_scale_simple (priv->icon,
+      scaled = cdk_pixbuf_scale_simple (priv->icon,
 		      			priv->size - 5,
 					priv->size - 5,
 					GDK_INTERP_BILINEAR);
@@ -799,7 +799,7 @@ gdict_applet_size_allocate (CtkWidget    *widget,
         {
           GdkPixbuf *scaled;
 
-	  scaled = gdk_pixbuf_scale_simple (priv->icon,
+	  scaled = cdk_pixbuf_scale_simple (priv->icon,
 			  		    priv->size - 5,
 					    priv->size - 5,
 					    GDK_INTERP_BILINEAR);

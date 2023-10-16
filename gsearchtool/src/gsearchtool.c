@@ -42,7 +42,7 @@
 #include <sys/wait.h>
 #include <glib.h>
 #include <glib/gi18n.h>
-#include <gdk/gdk.h>
+#include <cdk/cdk.h>
 #include <gio/gio.h>
 #include <locale.h>
 

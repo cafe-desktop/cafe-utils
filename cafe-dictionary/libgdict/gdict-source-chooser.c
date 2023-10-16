@@ -37,7 +37,7 @@
 
 #include <glib/gi18n-lib.h>
 
-#include <gdk/gdk.h>
+#include <cdk/cdk.h>
 
 #include <ctk/ctk.h>
 

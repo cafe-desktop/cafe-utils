@@ -146,9 +146,9 @@ set_color_according_to_perc (cairo_t *cr, double value)
   if (!colors_initialized)
     {
       /* hardcoded tango colors */
-      gdk_rgba_parse (&red, "#cc0000");
-      gdk_rgba_parse (&yellow, "#edd400");
-      gdk_rgba_parse (&green, "#73d216");
+      cdk_rgba_parse (&red, "#cc0000");
+      cdk_rgba_parse (&yellow, "#edd400");
+      cdk_rgba_parse (&green, "#73d216");
 
       colors_initialized = TRUE;
     }
@@ -160,17 +160,17 @@ set_color_according_to_perc (cairo_t *cr, double value)
     }
   else if (value <= 33.33)
     {
-      gdk_cairo_set_source_rgba (cr, &green);
+      cdk_cairo_set_source_rgba (cr, &green);
       return;
     }
   else if (value <= 66.66)
     {
-      gdk_cairo_set_source_rgba (cr, &yellow);
+      cdk_cairo_set_source_rgba (cr, &yellow);
       return;
     }
   else if (value <= 100.0)
     {
-      gdk_cairo_set_source_rgba (cr, &red);
+      cdk_cairo_set_source_rgba (cr, &red);
       return;
     }
   else

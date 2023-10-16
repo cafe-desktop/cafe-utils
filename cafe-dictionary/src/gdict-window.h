@@ -24,7 +24,7 @@
 #define __GDICT_WINDOW_H__
 
 #include <gio/gio.h>
-#include <gdk-pixbuf/gdk-pixbuf.h>
+#include <cdk-pixbuf/cdk-pixbuf.h>
 #include <ctk/ctk.h>
 #include <libgdict/gdict.h>
 

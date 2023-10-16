@@ -312,7 +312,7 @@ gdict_window_lookup_start_cb (GdictContext *context,
     return;
 
   if (!window->busy_cursor)
-    window->busy_cursor = gdk_cursor_new_for_display (display, GDK_WATCH);
+    window->busy_cursor = cdk_cursor_new_for_display (display, GDK_WATCH);
 
   message = g_strdup_printf (_("Searching for '%s'..."), window->word);
 
@@ -326,7 +326,7 @@ gdict_window_lookup_start_cb (GdictContext *context,
   window->last_definition = 0;
   window->current_definition = 0;
 
-  gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (window)), window->busy_cursor);
+  cdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (window)), window->busy_cursor);
 
   g_free (message);
 }
@@ -382,7 +382,7 @@ gdict_window_lookup_end_cb (GdictContext *context,
                           -1);
     }
 
-  gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (window)), NULL);
+  cdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (window)), NULL);
   g_free (message);
 
   if (count == 0)
@@ -399,7 +399,7 @@ gdict_window_error_cb (GdictContext *context,
 		       const GError *error,
 		       GdictWindow  *window)
 {
-  gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (window)), NULL);
+  cdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (window)), NULL);
 
   if (window->status && window->statusbar_visible)
     ctk_statusbar_push (CTK_STATUSBAR (window->status), 0,

@@ -169,13 +169,13 @@ load_filters (LogviewPrefs *prefs)
                   g_str_equal (tokens[FILTER_INVISIBLE], "1"), NULL);
 
     if (strlen (tokens[FILTER_FOREGROUND])) {
-      gdk_rgba_parse (&color, tokens[FILTER_FOREGROUND]);
+      cdk_rgba_parse (&color, tokens[FILTER_FOREGROUND]);
       g_object_set (tag, "foreground-rgba", &color,
                     "foreground-set", TRUE, NULL);
     }
 
     if (strlen (tokens[FILTER_BACKGROUND])) {
-      gdk_rgba_parse (&color, tokens[FILTER_BACKGROUND]);
+      cdk_rgba_parse (&color, tokens[FILTER_BACKGROUND]);
       g_object_set (tag, "paragraph-background-rgba", &color,
                     "paragraph-background-set", TRUE, NULL);
     }
@@ -234,25 +234,25 @@ save_filter_foreach_func (gpointer key, gpointer value, gpointer user_data)
   }
 
   if (foreground_set) {
-    color = gdk_rgba_to_string (foreground);
+    color = cdk_rgba_to_string (foreground);
     g_string_append (prefs_string, color);
     g_free (color);
   }
 
   if (foreground) {
-    gdk_rgba_free (foreground);
+    cdk_rgba_free (foreground);
   }
 
   g_string_append (prefs_string, DELIMITER);
 
   if (background_set) {
-    color = gdk_rgba_to_string (background);
+    color = cdk_rgba_to_string (background);
     g_string_append (prefs_string, color);
     g_free (color);
   }
 
   if (background) {
-    gdk_rgba_free (background);
+    cdk_rgba_free (background);
   }
 
   g_string_append (prefs_string, DELIMITER);

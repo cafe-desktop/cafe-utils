@@ -85,7 +85,7 @@ baobab_set_busy (gboolean busy)
 	if (busy == TRUE) {
 		if (!busy_cursor && window) {
 			display = ctk_widget_get_display (baobab.window);
-			busy_cursor = gdk_cursor_new_for_display (display, GDK_WATCH);
+			busy_cursor = cdk_cursor_new_for_display (display, GDK_WATCH);
 		}
 		cursor = busy_cursor;
 
@@ -109,7 +109,7 @@ baobab_set_busy (gboolean busy)
 
 	/* change the cursor */
 	if (window) {
-		gdk_window_set_cursor (window, cursor);
+		cdk_window_set_cursor (window, cursor);
 	}
 }
 

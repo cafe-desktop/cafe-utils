@@ -37,7 +37,7 @@
 #include <string.h>
 #include <stdarg.h>
 
-#include <gdk/gdkkeysyms.h>
+#include <cdk/cdkkeysyms.h>
 #include <ctk/ctk.h>
 #include <glib/gi18n-lib.h>
 
@@ -707,11 +707,11 @@ lookup_start_cb (GdictContext *context,
     {
       GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (chooser));
 
-      priv->busy_cursor = gdk_cursor_new_for_display (display, GDK_WATCH);
+      priv->busy_cursor = cdk_cursor_new_for_display (display, GDK_WATCH);
     }
 
   if (ctk_widget_get_window (CTK_WIDGET (chooser)))
-    gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), priv->busy_cursor);
+    cdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), priv->busy_cursor);
 
   priv->is_searching = TRUE;
 }
@@ -724,7 +724,7 @@ lookup_end_cb (GdictContext *context,
   GdictDatabaseChooserPrivate *priv = chooser->priv;
 
   if (ctk_widget_get_window (CTK_WIDGET (chooser)))
-    gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), NULL);
+    cdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), NULL);
 
   priv->is_searching = FALSE;
 }
@@ -769,7 +769,7 @@ error_cb (GdictContext *context,
   GdictDatabaseChooser *chooser = GDICT_DATABASE_CHOOSER (user_data);
 
   if (ctk_widget_get_window (CTK_WIDGET (chooser)))
-    gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), NULL);
+    cdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), NULL);
 
   chooser->priv->is_searching = FALSE;
   chooser->priv->results = 0;

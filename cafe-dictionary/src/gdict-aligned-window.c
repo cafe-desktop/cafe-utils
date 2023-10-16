@@ -29,7 +29,7 @@
 #include <string.h>
 
 #include <ctk/ctk.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdkx.h>
 
 #include "gdict-aligned-window.h"
 
@@ -157,7 +157,7 @@ gdict_aligned_window_position (GdictAlignedWindow *window)
   gint entry_x, entry_y, entry_width, entry_height;
   gint x, y;
   GdkGravity gravity = GDK_GRAVITY_NORTH_WEST;
-  GdkWindow *gdk_window;
+  GdkWindow *cdk_window;
   GdkDisplay *display;
 
   g_assert (GDICT_IS_ALIGNED_WINDOW (window));
@@ -167,12 +167,12 @@ gdict_aligned_window_position (GdictAlignedWindow *window)
     return;
 
   align_widget = priv->align_widget;
-  gdk_window = ctk_widget_get_window (align_widget);
+  cdk_window = ctk_widget_get_window (align_widget);
 
-  display = gdk_display_get_default ();
-  gdk_display_flush (display);
+  display = cdk_display_get_default ();
+  cdk_display_flush (display);
 
-  gdk_window_get_geometry (ctk_widget_get_window (CTK_WIDGET (window)), NULL, NULL, &our_width, &our_height);
+  cdk_window_get_geometry (ctk_widget_get_window (CTK_WIDGET (window)), NULL, NULL, &our_width, &our_height);
 
   /* stick, skip taskbar and pager */
   ctk_window_stick (CTK_WINDOW (window));
@@ -183,12 +183,12 @@ gdict_aligned_window_position (GdictAlignedWindow *window)
   ctk_widget_realize (align_widget);
 
   /* get the positional and dimensional attributes of the align widget */
-  gdk_window_get_origin (gdk_window,
+  cdk_window_get_origin (cdk_window,
   			 &entry_x,
   			 &entry_y);
-  gdk_window_get_geometry (gdk_window, NULL, NULL, &entry_width, &entry_height);
+  cdk_window_get_geometry (cdk_window, NULL, NULL, &entry_width, &entry_height);
 
-  if (entry_x + our_width < WidthOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ())))
+  if (entry_x + our_width < WidthOfScreen (cdk_x11_screen_get_xscreen (cdk_screen_get_default ())))
     x = entry_x + 1;
   else
     {
@@ -197,7 +197,7 @@ gdict_aligned_window_position (GdictAlignedWindow *window)
       gravity = GDK_GRAVITY_NORTH_EAST;
     }
 
-  if (entry_y + entry_height + our_height < HeightOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ())))
+  if (entry_y + entry_height + our_height < HeightOfScreen (cdk_x11_screen_get_xscreen (cdk_screen_get_default ())))
     y = entry_y + entry_height - 1;
   else
     {
@@ -250,7 +250,7 @@ gdict_aligned_window_motion_notify_cb (CtkWidget        *widget,
   rect.width = alloc.width;
   rect.height = alloc.height;
 
-  gdk_window_invalidate_rect (ctk_widget_get_window (CTK_WIDGET (aligned_window)),
+  cdk_window_invalidate_rect (ctk_widget_get_window (CTK_WIDGET (aligned_window)),
 		  	      &rect,
 			      FALSE);
 

@@ -573,7 +573,7 @@ port_insert_text (CtkEditable *editable,
 		if (!g_ascii_isdigit (new_text[pos])) {
 			CtkWidget *toplevel = ctk_widget_get_toplevel (CTK_WIDGET (editable));
 			if (toplevel != NULL) {
-				gdk_window_beep (ctk_widget_get_window (toplevel));
+				cdk_window_beep (ctk_widget_get_window (toplevel));
 			}
 		    g_signal_stop_emission_by_name (editable, "insert_text");
 		    return;
