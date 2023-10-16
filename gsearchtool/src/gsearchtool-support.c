@@ -749,7 +749,7 @@ gsearchtool_stretch_frame_image (GdkPixbuf *frame_image,
 	if (fill_flag) {
 		result_pixbuf = gdk_pixbuf_scale_simple (frame_image, dest_width, dest_height, CDK_INTERP_NEAREST);
 	} else {
-		result_pixbuf = gdk_pixbuf_new (CDK_COLORSPACE_RGB, TRUE, 8, dest_width, dest_height);
+		result_pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, dest_width, dest_height);
 	}
 
 	/* clear the new pixbuf */
