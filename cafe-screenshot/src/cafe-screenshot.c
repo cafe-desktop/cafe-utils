@@ -789,18 +789,18 @@ play_sound_effect (CdkWindow *window)
   if (res < 0)
     goto done;
 
-  res = ka_proplist_sets (p, CA_PROP_EVENT_ID, "screen-capture");
+  res = ka_proplist_sets (p, KA_PROP_EVENT_ID, "screen-capture");
   if (res < 0)
     goto done;
 
-  res = ka_proplist_sets (p, CA_PROP_EVENT_DESCRIPTION, _("Screenshot taken"));
+  res = ka_proplist_sets (p, KA_PROP_EVENT_DESCRIPTION, _("Screenshot taken"));
   if (res < 0)
     goto done;
 
   if (window != NULL)
     {
       res = ka_proplist_setf (p,
-                              CA_PROP_WINDOW_X11_XID,
+                              KA_PROP_WINDOW_X11_XID,
                               "%lu",
                               (unsigned long) CDK_WINDOW_XID (window));
       if (res < 0)
