@@ -5,7 +5,7 @@ includedir=@includedir@
 
 Name: gdict-1.0
 Description: CAFE Dictionary Protocol client library
-Requires: gtk+-3.0 >= @GTK_REQUIRED@
+Requires: ctk+-3.0 >= @GTK_REQUIRED@
 Version: @GDICT_VERSION@
 Libs: -L${libdir} -lcafedict
 Cflags: -I${includedir}/cafe-dict

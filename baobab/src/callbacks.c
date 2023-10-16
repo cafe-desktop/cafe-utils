@@ -25,7 +25,7 @@
 #endif
 
 #include <string.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 
@@ -103,7 +103,7 @@ on_about_activate (GtkMenuItem *menuitem, gpointer user_data)
 		*p = _(*p);
 #endif
 
-	gtk_show_about_dialog (GTK_WINDOW (baobab.window),
+	ctk_show_about_dialog (GTK_WINDOW (baobab.window),
 		"program-name", _("Disk Usage Analyzer"),
 		"version", VERSION,
 		"title", _("About Disk Usage Analyzer"),
@@ -124,13 +124,13 @@ on_about_activate (GtkMenuItem *menuitem, gpointer user_data)
 void
 on_menu_expand_activate (GtkMenuItem *menuitem, gpointer user_data)
 {
-	gtk_tree_view_expand_all (GTK_TREE_VIEW (baobab.tree_view));
+	ctk_tree_view_expand_all (GTK_TREE_VIEW (baobab.tree_view));
 }
 
 void
 on_menu_collapse_activate (GtkMenuItem *menuitem, gpointer user_data)
 {
-	gtk_tree_view_collapse_all (GTK_TREE_VIEW (baobab.tree_view));
+	ctk_tree_view_collapse_all (GTK_TREE_VIEW (baobab.tree_view));
 }
 
 void
@@ -170,9 +170,9 @@ on_tb_scan_remote_clicked (GtkToolButton *toolbutton, gpointer user_data)
 
 	dlg = baobab_remote_connect_dialog_new (GTK_WINDOW (baobab.window),
 						NULL);
-	gtk_dialog_run (GTK_DIALOG (dlg));
+	ctk_dialog_run (GTK_DIALOG (dlg));
 
-	gtk_widget_destroy (dlg);
+	ctk_widget_destroy (dlg);
 }
 
 void
@@ -238,12 +238,12 @@ trash_dir_cb (GtkMenuItem *pmenu, gpointer dummy)
 		GtkTreeSelection *selection;
 
 		selection =
-		    gtk_tree_view_get_selection ((GtkTreeView *) baobab.
+		    ctk_tree_view_get_selection ((GtkTreeView *) baobab.
 						 tree_view);
-		gtk_tree_selection_get_selected (selection, NULL, &iter);
-		gtk_tree_model_get ((GtkTreeModel *) baobab.model, &iter,
+		ctk_tree_selection_get_selected (selection, NULL, &iter);
+		ctk_tree_model_get ((GtkTreeModel *) baobab.model, &iter,
 				    5, &filesize, -1);
-		gtk_tree_store_remove (GTK_TREE_STORE (baobab.model),
+		ctk_tree_store_remove (GTK_TREE_STORE (baobab.model),
 				       &iter);
 	}
 
@@ -263,14 +263,14 @@ on_ck_allocated_activate (GtkToggleAction *action,
 	if (!baobab.is_local)
 		return;
 
-	baobab.show_allocated = gtk_toggle_action_get_active (action);
+	baobab.show_allocated = ctk_toggle_action_get_active (action);
 
 	baobab_treeview_show_allocated_size (baobab.tree_view,
 					     baobab.show_allocated);
 
 	baobab_set_busy (TRUE);
 	baobab_set_statusbar (_("Calculating percentage bars..."));
-	gtk_tree_model_foreach (GTK_TREE_MODEL (baobab.model),
+	ctk_tree_model_foreach (GTK_TREE_MODEL (baobab.model),
 				show_bars, NULL);
 	baobab_set_busy (FALSE);
 	baobab_set_statusbar (_("Ready"));
@@ -305,15 +305,15 @@ on_tv_selection_changed (GtkTreeSelection *selection, gpointer user_data)
 {
 	GtkTreeIter iter;
 
-	if (gtk_tree_selection_get_selected (selection, NULL, &iter)) {
+	if (ctk_tree_selection_get_selected (selection, NULL, &iter)) {
 		GtkTreePath *path;
 
-		path = gtk_tree_model_get_path (GTK_TREE_MODEL (baobab.model), &iter);
+		path = ctk_tree_model_get_path (GTK_TREE_MODEL (baobab.model), &iter);
 
 		baobab_chart_set_root (baobab.rings_chart, path);
 		baobab_chart_set_root (baobab.treemap_chart, path);
 
-		gtk_tree_path_free (path);
+		ctk_tree_path_free (path);
 	}
 }
 

@@ -2,7 +2,7 @@
 <!-- Generated with glade 3.16.1 -->
 <!--*- mode: xml -*-->
 <interface>
-  <requires lib="gtk+" version="3.10"/>
+  <requires lib="ctk+" version="3.10"/>
   <object class="GtkDialog" id="toplevel">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
@@ -23,7 +23,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="help_button">
-                <property name="label">gtk-help</property>
+                <property name="label">ctk-help</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -41,7 +41,7 @@
                 <property name="visible">False</property>
                 <property name="can_default">True</property>
                 <property name="can_focus">True</property>
-                <property name="label">gtk-new</property>
+                <property name="label">ctk-new</property>
                 <property name="use_stock">True</property>
                 <property name="relief">GTK_RELIEF_NORMAL</property>
                 <property name="focus_on_click">True</property>
@@ -65,7 +65,7 @@
             </child>
             <child>
               <object class="GtkButton" id="cancel_button">
-                <property name="label">gtk-cancel</property>
+                <property name="label">ctk-cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
@@ -80,7 +80,7 @@
             </child>
             <child>
               <object class="GtkButton" id="ok_button">
-                <property name="label">gtk-save</property>
+                <property name="label">ctk-save</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>

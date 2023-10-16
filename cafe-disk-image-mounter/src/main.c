@@ -26,11 +26,11 @@
 #include <glib-unix.h>
 #include <gio/gunixfdlist.h>
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include <udisks/udisks.h>
 
-static gboolean have_gtk = FALSE;
+static gboolean have_ctk = FALSE;
 static UDisksClient *udisks_client = NULL;
 static GMainLoop *main_loop = NULL;
 
@@ -46,19 +46,19 @@ show_error (const gchar *format, ...)
 
   s = g_strdup_vprintf (format, var_args);
 
-  if (have_gtk)
+  if (have_ctk)
     {
       GtkWidget *dialog;
-      dialog = gtk_message_dialog_new_with_markup (NULL,
+      dialog = ctk_message_dialog_new_with_markup (NULL,
                                                    GTK_DIALOG_MODAL,
                                                    GTK_MESSAGE_ERROR,
                                                    GTK_BUTTONS_CLOSE,
                                                    "<big><b>%s</b></big>",
                                                    _("An error occurred"));
-      gtk_message_dialog_format_secondary_markup (GTK_MESSAGE_DIALOG (dialog), "%s", s);
-      gtk_window_set_title (GTK_WINDOW (dialog), _("CAFE Disk Image Mounter"));
-      gtk_dialog_run (GTK_DIALOG (dialog));
-      gtk_widget_destroy (dialog);
+      ctk_message_dialog_format_secondary_markup (GTK_MESSAGE_DIALOG (dialog), "%s", s);
+      ctk_window_set_title (GTK_WINDOW (dialog), _("CAFE Disk Image Mounter"));
+      ctk_dialog_run (GTK_DIALOG (dialog));
+      ctk_widget_destroy (dialog);
     }
   else
     {
@@ -91,19 +91,19 @@ _gdu_utils_configure_file_chooser_for_disk_images (GtkFileChooser *file_chooser)
   /* Default to the "Documents" folder since that's where we save such images */
   folder = g_get_user_special_dir (G_USER_DIRECTORY_DOCUMENTS);
   if (folder != NULL)
-    gtk_file_chooser_set_current_folder (file_chooser, folder);
+    ctk_file_chooser_set_current_folder (file_chooser, folder);
 
   /* TODO: define proper mime-types */
-  filter = gtk_file_filter_new ();
-  gtk_file_filter_set_name (filter, _("All Files"));
-  gtk_file_filter_add_pattern (filter, "*");
-  gtk_file_chooser_add_filter (file_chooser, filter); /* adopts filter */
-  filter = gtk_file_filter_new ();
-  gtk_file_filter_set_name (filter, _("Disk Images (*.img, *.iso)"));
-  gtk_file_filter_add_pattern (filter, "*.img");
-  gtk_file_filter_add_pattern (filter, "*.iso");
-  gtk_file_chooser_add_filter (file_chooser, filter); /* adopts filter */
-  gtk_file_chooser_set_filter (file_chooser, filter);
+  filter = ctk_file_filter_new ();
+  ctk_file_filter_set_name (filter, _("All Files"));
+  ctk_file_filter_add_pattern (filter, "*");
+  ctk_file_chooser_add_filter (file_chooser, filter); /* adopts filter */
+  filter = ctk_file_filter_new ();
+  ctk_file_filter_set_name (filter, _("Disk Images (*.img, *.iso)"));
+  ctk_file_filter_add_pattern (filter, "*.img");
+  ctk_file_filter_add_pattern (filter, "*.iso");
+  ctk_file_chooser_add_filter (file_chooser, filter); /* adopts filter */
+  ctk_file_chooser_set_filter (file_chooser, filter);
 }
 
 static GSList *
@@ -115,31 +115,31 @@ do_filechooser (void)
 
   ret = NULL;
 
-  dialog = gtk_file_chooser_dialog_new (_("Select Disk Image(s) to Mount"),
+  dialog = ctk_file_chooser_dialog_new (_("Select Disk Image(s) to Mount"),
                                         NULL, /* parent window */
                                         GTK_FILE_CHOOSER_ACTION_OPEN,
                                         _("_Cancel"), GTK_RESPONSE_CANCEL,
                                         _("_Mount"), GTK_RESPONSE_ACCEPT,
                                         NULL);
   _gdu_utils_configure_file_chooser_for_disk_images (GTK_FILE_CHOOSER (dialog));
-  gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (dialog), FALSE);
+  ctk_file_chooser_set_local_only (GTK_FILE_CHOOSER (dialog), FALSE);
 
   /* Add a RO check button that defaults to RO */
-  ro_checkbutton = gtk_check_button_new_with_mnemonic (_("Set up _read-only mount"));
-  gtk_widget_set_tooltip_markup (ro_checkbutton, _("If checked, the mount will be read-only. This is useful if you don't want the underlying disk image to be modified"));
-  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (ro_checkbutton), !opt_writable);
-  gtk_file_chooser_set_select_multiple (GTK_FILE_CHOOSER (dialog), TRUE);
-  gtk_file_chooser_set_extra_widget (GTK_FILE_CHOOSER (dialog), ro_checkbutton);
+  ro_checkbutton = ctk_check_button_new_with_mnemonic (_("Set up _read-only mount"));
+  ctk_widget_set_tooltip_markup (ro_checkbutton, _("If checked, the mount will be read-only. This is useful if you don't want the underlying disk image to be modified"));
+  ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (ro_checkbutton), !opt_writable);
+  ctk_file_chooser_set_select_multiple (GTK_FILE_CHOOSER (dialog), TRUE);
+  ctk_file_chooser_set_extra_widget (GTK_FILE_CHOOSER (dialog), ro_checkbutton);
 
-  //gtk_widget_show_all (dialog);
-  if (gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_ACCEPT)
+  //ctk_widget_show_all (dialog);
+  if (ctk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_ACCEPT)
     goto out;
 
-  ret = gtk_file_chooser_get_uris (GTK_FILE_CHOOSER (dialog));
-  opt_writable = ! gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ro_checkbutton));
+  ret = ctk_file_chooser_get_uris (GTK_FILE_CHOOSER (dialog));
+  opt_writable = ! ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ro_checkbutton));
 
  out:
-  gtk_widget_destroy (dialog);
+  ctk_widget_destroy (dialog);
   return ret;
 }
 
@@ -160,10 +160,10 @@ main (int argc, char *argv[])
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 
-  have_gtk = gtk_init_check (&argc, &argv);
+  have_ctk = ctk_init_check (&argc, &argv);
 
-  if (have_gtk)
-    gtk_window_set_default_icon_name ("drive-removable-media");
+  if (have_ctk)
+    ctk_window_set_default_icon_name ("drive-removable-media");
 
   main_loop = g_main_loop_new (NULL, FALSE);
 
@@ -197,7 +197,7 @@ main (int argc, char *argv[])
     }
   else
     {
-      if (!have_gtk)
+      if (!have_ctk)
         {
           show_error ("No files given and GTK+ not available");
           goto out;

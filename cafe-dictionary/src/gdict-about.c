@@ -83,7 +83,7 @@ gdict_show_about_dialog (GtkWidget *parent)
     *p = _(*p);
 #endif
 
-  gtk_show_about_dialog (GTK_IS_WINDOW (parent) ? GTK_WINDOW (parent) : NULL,
+  ctk_show_about_dialog (GTK_IS_WINDOW (parent) ? GTK_WINDOW (parent) : NULL,
 			 "program-name", _("Dictionary"),
   			 "version", VERSION,
 			 "title", _("About Dictionary"),
@@ -96,7 +96,7 @@ gdict_show_about_dialog (GtkWidget *parent)
   			 "logo-icon-name", "accessories-dictionary",
 			 "license", license_trans,
   			 "wrap-license", TRUE,
-			 "screen", gtk_widget_get_screen (parent),
+			 "screen", ctk_widget_get_screen (parent),
   			 NULL);
 
   g_free(license_trans);

@@ -21,7 +21,7 @@
 #define _LOGVIEW_FILTER_MANAGER_H_
 
 #include <glib-object.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 G_BEGIN_DECLS
 

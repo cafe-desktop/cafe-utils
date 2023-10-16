@@ -76,7 +76,7 @@ logview_app_set_window (LogviewApp *app)
     retval = TRUE;
   }
 
-  gtk_window_set_default_icon_name ("cafe-system-log");
+  ctk_window_set_default_icon_name ("cafe-system-log");
 
   return retval;
 }
@@ -354,7 +354,7 @@ logview_app_initialize (LogviewApp *app, char **log_files)
     logview_manager_add_logs_from_names (priv->manager, log_files, NULL);
   }
 
-  gtk_widget_show (GTK_WIDGET (priv->window));
+  ctk_widget_show (GTK_WIDGET (priv->window));
 }
 
 void

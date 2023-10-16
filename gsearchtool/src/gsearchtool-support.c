@@ -48,7 +48,7 @@
 #define BINARY_EXEC_MIME_TYPE      "application/x-executable"
 
 GtkTreeViewColumn *
-gsearchtool_gtk_tree_view_get_column_with_sort_column_id (GtkTreeView * treeview,
+gsearchtool_ctk_tree_view_get_column_with_sort_column_id (GtkTreeView * treeview,
                                                           gint id);
 
 /* START OF GENERIC CAFE-SEARCH-TOOL FUNCTIONS */
@@ -887,11 +887,11 @@ get_themed_icon_pixbuf (GThemedIcon * icon,
 
 	g_object_get (icon, "names", &icon_names, NULL);
 
-	icon_info = gtk_icon_theme_choose_icon (icon_theme, (const char **)icon_names, size, 0);
+	icon_info = ctk_icon_theme_choose_icon (icon_theme, (const char **)icon_names, size, 0);
 	if (icon_info == NULL) {
-		icon_info = gtk_icon_theme_lookup_icon (icon_theme, "text-x-generic", size, GTK_ICON_LOOKUP_USE_BUILTIN);
+		icon_info = ctk_icon_theme_lookup_icon (icon_theme, "text-x-generic", size, GTK_ICON_LOOKUP_USE_BUILTIN);
 	}
-	pixbuf = gtk_icon_info_load_icon (icon_info, &error);
+	pixbuf = ctk_icon_info_load_icon (icon_info, &error);
 	if (pixbuf == NULL) {
 		g_warning ("Could not load icon pixbuf: %s\n", error->message);
 		g_clear_error (&error);
@@ -933,7 +933,7 @@ get_file_pixbuf (GSearchWindow * gsearch,
 		pixbuf = (GdkPixbuf *) g_hash_table_lookup (gsearch->search_results_filename_hash_table, icon_string);
 
 		if (pixbuf == NULL) {
-			pixbuf = get_themed_icon_pixbuf (G_THEMED_ICON (icon), ICON_SIZE, gtk_icon_theme_get_default ());
+			pixbuf = get_themed_icon_pixbuf (G_THEMED_ICON (icon), ICON_SIZE, ctk_icon_theme_get_default ());
 			g_hash_table_insert (gsearch->search_results_filename_hash_table, g_strdup (icon_string), pixbuf);
 		}
 		g_free (icon_string);
@@ -989,10 +989,10 @@ open_file_with_filemanager (GtkWidget * window,
 	d_app_info = g_desktop_app_info_new_from_keyfile (key_file);
 
 	if (d_app_info != NULL) {
-		screen = gtk_widget_get_screen (GTK_WIDGET (window));
+		screen = ctk_widget_get_screen (GTK_WIDGET (window));
 		display = gdk_screen_get_display (screen);
 		ctx = gdk_display_get_app_launch_context (display);
-		gdk_app_launch_context_set_screen (ctx, gtk_widget_get_screen (window));
+		gdk_app_launch_context_set_screen (ctx, ctk_widget_get_screen (window));
 
 		result = g_app_info_launch_uris (G_APP_INFO (d_app_info), list,  G_APP_LAUNCH_CONTEXT (ctx), NULL);
 	}
@@ -1027,7 +1027,7 @@ open_file_with_application (GtkWidget * window,
 		return FALSE;
 	}
 
-	screen = gtk_widget_get_screen (window);
+	screen = ctk_widget_get_screen (window);
 	display = gdk_screen_get_display (screen);
 	context = gdk_display_get_app_launch_context (display);
 	gdk_app_launch_context_set_screen (context, screen);
@@ -1125,15 +1125,15 @@ gsearchtool_button_new_with_icon (const gchar * string,
 	GtkWidget * image;
 	GtkWidget * label;
 
-	button = gtk_button_new ();
-	label = gtk_label_new_with_mnemonic (string);
-	gtk_label_set_mnemonic_widget (GTK_LABEL (label), GTK_WIDGET (button));
-	image = gtk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_BUTTON);
-	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 2);
-	gtk_box_pack_start (GTK_BOX (hbox), image, FALSE, FALSE, 0);
-	gtk_box_pack_end (GTK_BOX (hbox), label, FALSE, FALSE, 0);
-	gtk_container_add (GTK_CONTAINER (button), hbox);
-	gtk_widget_show_all (hbox);
+	button = ctk_button_new ();
+	label = ctk_label_new_with_mnemonic (string);
+	ctk_label_set_mnemonic_widget (GTK_LABEL (label), GTK_WIDGET (button));
+	image = ctk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_BUTTON);
+	hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 2);
+	ctk_box_pack_start (GTK_BOX (hbox), image, FALSE, FALSE, 0);
+	ctk_box_pack_end (GTK_BOX (hbox), label, FALSE, FALSE, 0);
+	ctk_container_add (GTK_CONTAINER (button), hbox);
+	ctk_widget_show_all (hbox);
 
 	return button;
 }
@@ -1145,12 +1145,12 @@ gsearchtool_get_columns_order (GtkTreeView * treeview)
 	GList * columns;
 	GList * col;
 
-	columns = gtk_tree_view_get_columns (treeview);
+	columns = ctk_tree_view_get_columns (treeview);
 
 	for (col = columns; col; col = col->next) {
 		gint id;
 
-		id = gtk_tree_view_column_get_sort_column_id (col->data);
+		id = ctk_tree_view_column_get_sort_column_id (col->data);
 		order = g_slist_prepend (order, GINT_TO_POINTER (id));
 	}
 	g_list_free (columns);
@@ -1160,17 +1160,17 @@ gsearchtool_get_columns_order (GtkTreeView * treeview)
 }
 
 GtkTreeViewColumn *
-gsearchtool_gtk_tree_view_get_column_with_sort_column_id (GtkTreeView * treeview,
+gsearchtool_ctk_tree_view_get_column_with_sort_column_id (GtkTreeView * treeview,
                                                           gint id)
 {
 	GtkTreeViewColumn * col = NULL;
 	GList * columns;
 	GList * it;
 
-	columns = gtk_tree_view_get_columns (treeview);
+	columns = ctk_tree_view_get_columns (treeview);
 
 	for (it = columns; it; it = it->next) {
-		if (gtk_tree_view_column_get_sort_column_id (it->data) == id) {
+		if (ctk_tree_view_column_get_sort_column_id (it->data) == id) {
 			col = it->data;
 			break;
 		}
@@ -1204,10 +1204,10 @@ gsearchtool_set_columns_order (GtkTreeView * treeview)
 
 			if (id >= 0 && id < NUM_COLUMNS) {
 
-				cur = gsearchtool_gtk_tree_view_get_column_with_sort_column_id (treeview, id);
+				cur = gsearchtool_ctk_tree_view_get_column_with_sort_column_id (treeview, id);
 
 				if (cur && cur != last) {
-					gtk_tree_view_move_column_after (treeview, cur, last);
+					ctk_tree_view_move_column_after (treeview, cur, last);
 					last = cur;
 				}
 			}

@@ -23,7 +23,7 @@
 #ifndef __GDICT_ABOUT_H__
 #define __GDICT_ABOUT_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 void gdict_show_about_dialog (GtkWidget *parent);
 

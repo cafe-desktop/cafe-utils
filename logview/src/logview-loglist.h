@@ -33,7 +33,7 @@
 #define LOGVIEW_LOGLIST_GET_CLASS(obj) \
   (G_TYPE_INSTANCE_GET_CLASS ((obj), LOGVIEW_TYPE_LOGLIST, LogviewLoglistClass))
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <glib-object.h>
 
 #include "logview-log.h"

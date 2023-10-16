@@ -24,7 +24,7 @@
 #define __GDICT_APP_H__
 
 #include <gio/gio.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <libgdict/gdict.h>
 
 #include "gdict-window.h"

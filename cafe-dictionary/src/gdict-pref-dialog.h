@@ -23,7 +23,7 @@
 #ifndef __GDICT_PREF_DIALOG_H__
 #define __GDICT_PREF_DIALOG_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <libgdict/gdict.h>
 
 G_BEGIN_DECLS

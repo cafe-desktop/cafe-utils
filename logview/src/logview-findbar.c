@@ -23,7 +23,7 @@
 #include <config.h>
 #endif
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <glib/gi18n.h>
 #include <gdk/gdkkeysyms.h>
 
@@ -81,7 +81,7 @@ clear_button_clicked_cb (GtkToolButton *button,
   LogviewFindbar *findbar = user_data;
 
   logview_findbar_set_message (findbar, NULL);
-  gtk_entry_set_text (GTK_ENTRY (findbar->priv->entry), "");
+  ctk_entry_set_text (GTK_ENTRY (findbar->priv->entry), "");
 }
 
 static void
@@ -100,7 +100,7 @@ entry_changed_cb (GtkEditable *editable,
   LogviewFindbar *findbar = user_data;
   const char *text;
 
-  text = gtk_entry_get_text (GTK_ENTRY (editable));
+  text = ctk_entry_get_text (GTK_ENTRY (editable));
 
   if (g_strcmp0 (text, "") == 0) {
     return;
@@ -136,7 +136,7 @@ unbold_timeout_cb (gpointer user_data)
   PangoFontDescription *desc;
 
   desc = pango_font_description_new ();
-  gtk_widget_override_font (findbar->priv->message, desc);
+  ctk_widget_override_font (findbar->priv->message, desc);
   pango_font_description_free (desc);
 
   findbar->priv->status_bold_id = 0;
@@ -156,67 +156,67 @@ logview_findbar_init (LogviewFindbar *findbar)
 
   gtoolbar = GTK_TOOLBAR (findbar);
 
-  gtk_toolbar_set_style (gtoolbar, GTK_TOOLBAR_BOTH_HORIZ);
+  ctk_toolbar_set_style (gtoolbar, GTK_TOOLBAR_BOTH_HORIZ);
 
   priv->status_bold_id = 0;
 
   /* Find: |_______| */
-  box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-  gtk_widget_set_halign (box, GTK_ALIGN_START);
-  gtk_widget_set_margin_start (box, 2);
-  gtk_widget_set_margin_end (box, 2);
+  box = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
+  ctk_widget_set_halign (box, GTK_ALIGN_START);
+  ctk_widget_set_margin_start (box, 2);
+  ctk_widget_set_margin_end (box, 2);
 
-  label = gtk_label_new_with_mnemonic (_("_Find:"));
-  gtk_box_pack_start (GTK_BOX (box), label, FALSE, FALSE, 0);
+  label = ctk_label_new_with_mnemonic (_("_Find:"));
+  ctk_box_pack_start (GTK_BOX (box), label, FALSE, FALSE, 0);
 
-  priv->entry = gtk_entry_new ();
-  gtk_entry_set_width_chars (GTK_ENTRY (priv->entry), 32);
-  gtk_label_set_mnemonic_widget (GTK_LABEL (label), priv->entry);
-  gtk_box_pack_start (GTK_BOX (box), priv->entry, TRUE, TRUE, 0);
+  priv->entry = ctk_entry_new ();
+  ctk_entry_set_width_chars (GTK_ENTRY (priv->entry), 32);
+  ctk_label_set_mnemonic_widget (GTK_LABEL (label), priv->entry);
+  ctk_box_pack_start (GTK_BOX (box), priv->entry, TRUE, TRUE, 0);
 
-  item = gtk_tool_item_new ();
-  gtk_container_add (GTK_CONTAINER (item), box);
-  gtk_toolbar_insert (gtoolbar, item, -1);
-  gtk_widget_show_all (GTK_WIDGET (item));
+  item = ctk_tool_item_new ();
+  ctk_container_add (GTK_CONTAINER (item), box);
+  ctk_toolbar_insert (gtoolbar, item, -1);
+  ctk_widget_show_all (GTK_WIDGET (item));
 
   /* "Previous" and "Next" buttons */
-  w = gtk_image_new_from_icon_name ("pan-start-symbolic", GTK_ICON_SIZE_BUTTON);
-  priv->back_button = gtk_tool_button_new (w, _("Find Previous"));
-  gtk_tool_item_set_is_important (priv->back_button, TRUE);
-  gtk_tool_item_set_tooltip_text (priv->back_button,
+  w = ctk_image_new_from_icon_name ("pan-start-symbolic", GTK_ICON_SIZE_BUTTON);
+  priv->back_button = ctk_tool_button_new (w, _("Find Previous"));
+  ctk_tool_item_set_is_important (priv->back_button, TRUE);
+  ctk_tool_item_set_tooltip_text (priv->back_button,
                                  _("Find previous occurrence of the search string"));
-  gtk_toolbar_insert (gtoolbar, priv->back_button, -1);
-  gtk_widget_show_all (GTK_WIDGET (priv->back_button));
+  ctk_toolbar_insert (gtoolbar, priv->back_button, -1);
+  ctk_widget_show_all (GTK_WIDGET (priv->back_button));
 
-  w = gtk_image_new_from_icon_name ("pan-end-symbolic", GTK_ICON_SIZE_BUTTON);
-  priv->forward_button = gtk_tool_button_new (w, _("Find Next"));
-  gtk_tool_item_set_is_important (priv->forward_button, TRUE);
-  gtk_tool_item_set_tooltip_text (priv->forward_button,
+  w = ctk_image_new_from_icon_name ("pan-end-symbolic", GTK_ICON_SIZE_BUTTON);
+  priv->forward_button = ctk_tool_button_new (w, _("Find Next"));
+  ctk_tool_item_set_is_important (priv->forward_button, TRUE);
+  ctk_tool_item_set_tooltip_text (priv->forward_button,
                                  _("Find next occurrence of the search string"));
-  gtk_toolbar_insert (gtoolbar, priv->forward_button, -1);
-  gtk_widget_show_all (GTK_WIDGET (priv->forward_button));
+  ctk_toolbar_insert (gtoolbar, priv->forward_button, -1);
+  ctk_widget_show_all (GTK_WIDGET (priv->forward_button));
 
   /* clear button */
-  priv->clear_button = gtk_tool_button_new_from_stock ("gtk-clear");
-  gtk_tool_item_set_tooltip_text (priv->clear_button,
+  priv->clear_button = ctk_tool_button_new_from_stock ("ctk-clear");
+  ctk_tool_item_set_tooltip_text (priv->clear_button,
                                  _("Clear the search string"));
-  gtk_toolbar_insert (gtoolbar, priv->clear_button, -1);
-  gtk_widget_show_all (GTK_WIDGET (priv->clear_button));
+  ctk_toolbar_insert (gtoolbar, priv->clear_button, -1);
+  ctk_widget_show_all (GTK_WIDGET (priv->clear_button));
 
   /* separator */
-  priv->separator = gtk_separator_tool_item_new ();
-  gtk_toolbar_insert (gtoolbar, priv->separator, -1);
+  priv->separator = ctk_separator_tool_item_new ();
+  ctk_toolbar_insert (gtoolbar, priv->separator, -1);
 
   /* message */
-  priv->status_item = gtk_tool_item_new ();
-  gtk_tool_item_set_expand (priv->status_item, TRUE);
-  priv->message = gtk_label_new ("");
-  gtk_label_set_use_markup (GTK_LABEL (priv->message), TRUE);
-  gtk_label_set_xalign (GTK_LABEL (priv->message), 0.0);
-  gtk_label_set_yalign (GTK_LABEL (priv->message), 0.5);
-  gtk_container_add (GTK_CONTAINER (priv->status_item), priv->message);
-  gtk_widget_show (priv->message);
-  gtk_toolbar_insert (gtoolbar, priv->status_item, -1);
+  priv->status_item = ctk_tool_item_new ();
+  ctk_tool_item_set_expand (priv->status_item, TRUE);
+  priv->message = ctk_label_new ("");
+  ctk_label_set_use_markup (GTK_LABEL (priv->message), TRUE);
+  ctk_label_set_xalign (GTK_LABEL (priv->message), 0.0);
+  ctk_label_set_yalign (GTK_LABEL (priv->message), 0.5);
+  ctk_container_add (GTK_CONTAINER (priv->status_item), priv->message);
+  ctk_widget_show (priv->message);
+  ctk_toolbar_insert (gtoolbar, priv->status_item, -1);
 
   priv->string = NULL;
 
@@ -240,7 +240,7 @@ do_grab_focus (GtkWidget *widget)
 {
   LogviewFindbar *findbar = LOGVIEW_FINDBAR (widget);
 
-  gtk_widget_grab_focus (findbar->priv->entry);
+  ctk_widget_grab_focus (findbar->priv->entry);
 }
 
 static void
@@ -311,8 +311,8 @@ logview_findbar_open (LogviewFindbar *findbar)
 {
   g_assert (LOGVIEW_IS_FINDBAR (findbar));
 
-  gtk_widget_show (GTK_WIDGET (findbar));
-  gtk_widget_grab_focus (GTK_WIDGET (findbar));
+  ctk_widget_show (GTK_WIDGET (findbar));
+  ctk_widget_grab_focus (GTK_WIDGET (findbar));
 }
 
 const char *
@@ -334,13 +334,13 @@ logview_findbar_set_message (LogviewFindbar *findbar,
   if (text) {
     desc = pango_font_description_new ();
     pango_font_description_set_weight (desc, PANGO_WEIGHT_BOLD);
-    gtk_widget_override_font (findbar->priv->message, desc);
+    ctk_widget_override_font (findbar->priv->message, desc);
     pango_font_description_free (desc);
 
     findbar->priv->status_bold_id = g_timeout_add (600, unbold_timeout_cb, findbar);
   }
 
-  gtk_label_set_text (GTK_LABEL (findbar->priv->message),
+  ctk_label_set_text (GTK_LABEL (findbar->priv->message),
                       text != NULL ? text : "");
   g_object_set (findbar->priv->separator, "visible", text != NULL, NULL);
   g_object_set (findbar->priv->status_item, "visible", text != NULL, NULL);

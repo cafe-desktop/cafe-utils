@@ -28,7 +28,7 @@
 #ifndef __BAOBAB_TREEMAP_H__
 #define __BAOBAB_TREEMAP_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include "baobab-chart.h"
 
 G_BEGIN_DECLS

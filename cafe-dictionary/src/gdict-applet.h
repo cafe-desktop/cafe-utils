@@ -20,7 +20,7 @@
 #ifndef __GDICT_APPLET_H__
 #define __GDICT_APPLET_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <cafe-panel-applet.h>
 #include <libgdict/gdict.h>
 

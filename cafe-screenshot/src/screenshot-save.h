@@ -20,7 +20,7 @@
 #ifndef __SCREENSHOT_SAVE_H__
 #define __SCREENSHOT_SAVE_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 typedef void (*SaveFunction) (gpointer data);
 

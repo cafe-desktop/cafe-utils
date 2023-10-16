@@ -30,7 +30,7 @@
 #include <math.h>
 #include <errno.h>
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <glib.h>
 #include <glib/gstdio.h>
 #include <glib/gi18n.h>
@@ -220,11 +220,11 @@ gdict_window_ensure_menu_state (GdictWindow *window)
     {
       GtkWidget *item;
 
-      item = gtk_ui_manager_get_widget (window->ui_manager, toggle_state[i]);
+      item = ctk_ui_manager_get_widget (window->ui_manager, toggle_state[i]);
       if (!item)
         continue;
 
-      gtk_widget_set_sensitive (item, is_sensitive);
+      ctk_widget_set_sensitive (item, is_sensitive);
     }
 }
 
@@ -243,12 +243,12 @@ gdict_window_set_sidebar_visible (GdictWindow *window,
       window->sidebar_visible = is_visible;
 
       if (window->sidebar_visible)
-	gtk_widget_show (window->sidebar_frame);
+	ctk_widget_show (window->sidebar_frame);
       else
-	gtk_widget_hide (window->sidebar_frame);
+	ctk_widget_hide (window->sidebar_frame);
 
-      action = gtk_action_group_get_action (window->action_group, "ViewSidebar");
-      gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), window->sidebar_visible);
+      action = ctk_action_group_get_action (window->action_group, "ViewSidebar");
+      ctk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), window->sidebar_visible);
     }
 }
 
@@ -267,12 +267,12 @@ gdict_window_set_statusbar_visible (GdictWindow *window,
       window->statusbar_visible = is_visible;
 
       if (window->statusbar_visible)
-	gtk_widget_show (window->status);
+	ctk_widget_show (window->status);
       else
-	gtk_widget_hide (window->status);
+	ctk_widget_hide (window->status);
 
-      action = gtk_action_group_get_action (window->action_group, "ViewStatusbar");
-      gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), window->statusbar_visible);
+      action = ctk_action_group_get_action (window->action_group, "ViewStatusbar");
+      ctk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), window->statusbar_visible);
     }
 }
 
@@ -291,10 +291,10 @@ gdict_window_definition_cb (GdictContext    *context,
 
   fraction = CLAMP (((gdouble) n / (gdouble) total), 0.0, 1.0);
 
-  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (window->progress),
+  ctk_progress_bar_set_fraction (GTK_PROGRESS_BAR (window->progress),
 		  		 fraction);
-  while (gtk_events_pending ())
-    gtk_main_iteration ();
+  while (ctk_events_pending ())
+    ctk_main_iteration ();
 
   window->current_definition = n;
 }
@@ -306,7 +306,7 @@ gdict_window_lookup_start_cb (GdictContext *context,
   GdkDisplay *display;
   gchar *message;
 
-  display = gtk_widget_get_display (GTK_WIDGET (window));
+  display = ctk_widget_get_display (GTK_WIDGET (window));
 
   if (!window->word)
     return;
@@ -317,16 +317,16 @@ gdict_window_lookup_start_cb (GdictContext *context,
   message = g_strdup_printf (_("Searching for '%s'..."), window->word);
 
   if (window->status && window->statusbar_visible)
-    gtk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
+    ctk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
 
   if (window->progress)
-    gtk_widget_show (window->progress);
+    ctk_widget_show (window->progress);
 
   window->max_definition = -1;
   window->last_definition = 0;
   window->current_definition = 0;
 
-  gdk_window_set_cursor (gtk_widget_get_window (GTK_WIDGET (window)), window->busy_cursor);
+  gdk_window_set_cursor (ctk_widget_get_window (GTK_WIDGET (window)), window->busy_cursor);
 
   g_free (message);
 }
@@ -354,10 +354,10 @@ gdict_window_lookup_end_cb (GdictContext *context,
 		    	       count);
 
   if (window->status && window->statusbar_visible)
-    gtk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
+    ctk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
 
   if (window->progress)
-    gtk_widget_hide (window->progress);
+    ctk_widget_hide (window->progress);
 
   /* we clone the context, so that the signals that it
    * fires do not get caught by the signal handlers we
@@ -376,13 +376,13 @@ gdict_window_lookup_end_cb (GdictContext *context,
     {
       gdict_speller_set_strategy (GDICT_SPELLER (window->speller), window->strategy);
       gdict_speller_match (GDICT_SPELLER (window->speller), window->word);
-      gtk_list_store_append (window->completion_model, &iter);
-      gtk_list_store_set (window->completion_model, &iter,
+      ctk_list_store_append (window->completion_model, &iter);
+      ctk_list_store_set (window->completion_model, &iter,
                           COMPLETION_TEXT_COLUMN, window->word,
                           -1);
     }
 
-  gdk_window_set_cursor (gtk_widget_get_window (GTK_WIDGET (window)), NULL);
+  gdk_window_set_cursor (ctk_widget_get_window (GTK_WIDGET (window)), NULL);
   g_free (message);
 
   if (count == 0)
@@ -399,13 +399,13 @@ gdict_window_error_cb (GdictContext *context,
 		       const GError *error,
 		       GdictWindow  *window)
 {
-  gdk_window_set_cursor (gtk_widget_get_window (GTK_WIDGET (window)), NULL);
+  gdk_window_set_cursor (ctk_widget_get_window (GTK_WIDGET (window)), NULL);
 
   if (window->status && window->statusbar_visible)
-    gtk_statusbar_push (GTK_STATUSBAR (window->status), 0,
+    ctk_statusbar_push (GTK_STATUSBAR (window->status), 0,
                         _("No definitions found"));
 
-  gtk_widget_hide (window->progress);
+  ctk_widget_hide (window->progress);
 
   /* launch the speller only on NO_MATCH */
   if (error->code == GDICT_CONTEXT_ERROR_NO_MATCH)
@@ -606,7 +606,7 @@ gdict_window_set_word (GdictWindow *window,
   else
     title = g_strdup (_("Dictionary"));
 
-  gtk_window_set_title (GTK_WINDOW (window), title);
+  ctk_window_set_title (GTK_WINDOW (window), title);
   g_free (title);
 
   if (window->defbox)
@@ -946,7 +946,7 @@ gdict_window_cmd_file_new (GtkAction   *action,
                                    window->loader,
                                    NULL, NULL);
 
-  gtk_widget_show (new_window);
+  ctk_widget_show (new_window);
 
   g_signal_emit (window, gdict_window_signals[CREATED], 0, new_window);
 }
@@ -959,26 +959,26 @@ gdict_window_cmd_save_as (GtkAction   *action,
 
   g_assert (GDICT_IS_WINDOW (window));
 
-  dialog = gtk_file_chooser_dialog_new (_("Save a Copy"),
+  dialog = ctk_file_chooser_dialog_new (_("Save a Copy"),
   					GTK_WINDOW (window),
   					GTK_FILE_CHOOSER_ACTION_SAVE,
-  					"gtk-cancel", GTK_RESPONSE_CANCEL,
-  					"gtk-save", GTK_RESPONSE_ACCEPT,
+  					"ctk-cancel", GTK_RESPONSE_CANCEL,
+  					"ctk-save", GTK_RESPONSE_ACCEPT,
   					NULL);
-  gtk_file_chooser_set_do_overwrite_confirmation (GTK_FILE_CHOOSER (dialog), TRUE);
+  ctk_file_chooser_set_do_overwrite_confirmation (GTK_FILE_CHOOSER (dialog), TRUE);
 
   /* default to user's home */
-  gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (dialog), g_get_home_dir ());
-  gtk_file_chooser_set_current_name (GTK_FILE_CHOOSER (dialog), _("Untitled document"));
+  ctk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (dialog), g_get_home_dir ());
+  ctk_file_chooser_set_current_name (GTK_FILE_CHOOSER (dialog), _("Untitled document"));
 
-  if (gtk_dialog_run (GTK_DIALOG (dialog)) == GTK_RESPONSE_ACCEPT)
+  if (ctk_dialog_run (GTK_DIALOG (dialog)) == GTK_RESPONSE_ACCEPT)
     {
       gchar *filename;
       gchar *text;
       gsize len;
       GError *write_error = NULL;
 
-      filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (dialog));
+      filename = ctk_file_chooser_get_filename (GTK_FILE_CHOOSER (dialog));
 
       text = gdict_defbox_get_text (GDICT_DEFBOX (window->defbox), &len);
 
@@ -1003,7 +1003,7 @@ gdict_window_cmd_save_as (GtkAction   *action,
       g_free (filename);
     }
 
-  gtk_widget_destroy (dialog);
+  ctk_widget_destroy (dialog);
 }
 
 static void
@@ -1039,7 +1039,7 @@ gdict_window_cmd_file_close_window (GtkAction   *action,
    * will destroy itself.
    */
   if (action)
-    gtk_widget_destroy (GTK_WIDGET (window));
+    ctk_widget_destroy (GTK_WIDGET (window));
 }
 
 static void
@@ -1048,11 +1048,11 @@ gdict_window_cmd_edit_copy (GtkAction   *action,
 {
   g_assert (GDICT_IS_WINDOW (window));
 
-  if (gtk_widget_has_focus (window->entry))
-    gtk_editable_copy_clipboard (GTK_EDITABLE (window->entry));
+  if (ctk_widget_has_focus (window->entry))
+    ctk_editable_copy_clipboard (GTK_EDITABLE (window->entry));
   else
     gdict_defbox_copy_to_clipboard (GDICT_DEFBOX (window->defbox),
-                                    gtk_clipboard_get (GDK_SELECTION_CLIPBOARD));
+                                    ctk_clipboard_get (GDK_SELECTION_CLIPBOARD));
 }
 
 static void
@@ -1061,8 +1061,8 @@ gdict_window_cmd_edit_select_all (GtkAction   *action,
 {
   g_assert (GDICT_IS_WINDOW (window));
 
-  if (gtk_widget_has_focus (window->entry))
-    gtk_editable_select_region (GTK_EDITABLE (window->entry), 0, -1);
+  if (ctk_widget_has_focus (window->entry))
+    ctk_editable_select_region (GTK_EDITABLE (window->entry), 0, -1);
   else
     gdict_defbox_select_all (GDICT_DEFBOX (window->defbox));
 }
@@ -1111,12 +1111,12 @@ gdict_window_cmd_view_sidebar (GtkToggleAction *action,
 {
   g_assert (GDICT_IS_WINDOW (window));
 
-  window->sidebar_visible = gtk_toggle_action_get_active (action);
+  window->sidebar_visible = ctk_toggle_action_get_active (action);
 
   if (window->sidebar_visible)
-    gtk_widget_show (window->sidebar_frame);
+    ctk_widget_show (window->sidebar_frame);
   else
-    gtk_widget_hide (window->sidebar_frame);
+    ctk_widget_hide (window->sidebar_frame);
 }
 
 static void
@@ -1125,12 +1125,12 @@ gdict_window_cmd_view_statusbar (GtkToggleAction *action,
 {
   g_assert (GDICT_IS_WINDOW (window));
 
-  window->statusbar_visible = gtk_toggle_action_get_active (action);
+  window->statusbar_visible = ctk_toggle_action_get_active (action);
 
   if (window->statusbar_visible)
-    gtk_widget_show (window->status);
+    ctk_widget_show (window->status);
   else
-    gtk_widget_hide (window->status);
+    ctk_widget_hide (window->status);
 
 }
 
@@ -1242,9 +1242,9 @@ gdict_window_cmd_help_contents (GtkAction   *action,
 
   g_return_if_fail (GDICT_IS_WINDOW (window));
 
-  gtk_show_uri_on_window (GTK_WINDOW (window),
+  ctk_show_uri_on_window (GTK_WINDOW (window),
                 "help:cafe-dictionary",
-                gtk_get_current_event_time (), &err);
+                ctk_get_current_event_time (), &err);
   if (err)
     {
       gdict_show_gerror_dialog (GTK_WINDOW (window),
@@ -1268,7 +1268,7 @@ gdict_window_cmd_lookup (GtkAction   *action,
 {
   g_assert (GDICT_IS_WINDOW (window));
 
-  gtk_widget_grab_focus (window->entry);
+  ctk_widget_grab_focus (window->entry);
 }
 
 static void
@@ -1392,7 +1392,7 @@ lookup_word (GdictWindow *window,
   if (!window->context)
     return;
 
-  entry_text = gtk_entry_get_text (GTK_ENTRY (window->entry));
+  entry_text = ctk_entry_get_text (GTK_ENTRY (window->entry));
   if (!entry_text || *entry_text == '\0')
     return;
 
@@ -1418,7 +1418,7 @@ source_activated_cb (GdictSourceChooser *chooser,
 
       message = g_strdup_printf (_("Dictionary source `%s' selected"),
                                  gdict_source_get_description (source));
-      gtk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
+      ctk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
       g_free (message);
     }
 }
@@ -1438,7 +1438,7 @@ strategy_activated_cb (GdictStrategyChooser *chooser,
       gchar *message;
 
       message = g_strdup_printf (_("Strategy `%s' selected"), strat_desc);
-      gtk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
+      ctk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
       g_free (message);
     }
 }
@@ -1458,7 +1458,7 @@ database_activated_cb (GdictDatabaseChooser *chooser,
       gchar *message;
 
       message = g_strdup_printf (_("Database `%s' selected"), db_desc);
-      gtk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
+      ctk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
       g_free (message);
     }
 }
@@ -1469,7 +1469,7 @@ speller_word_activated_cb (GdictSpeller *speller,
 			   const gchar  *db_name,
 			   GdictWindow  *window)
 {
-  gtk_entry_set_text (GTK_ENTRY (window->entry), word);
+  ctk_entry_set_text (GTK_ENTRY (window->entry), word);
 
   gdict_window_set_word (window, word, db_name);
 
@@ -1478,7 +1478,7 @@ speller_word_activated_cb (GdictSpeller *speller,
       gchar *message;
 
       message = g_strdup_printf (_("Word `%s' selected"), word);
-      gtk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
+      ctk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
       g_free (message);
     }
 }
@@ -1532,7 +1532,7 @@ sidebar_page_changed_cb (GdictSidebar *sidebar,
     }
 
   if (message && window->status && window->statusbar_visible)
-    gtk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
+    ctk_statusbar_push (GTK_STATUSBAR (window->status), 0, message);
 }
 
 static void
@@ -1554,7 +1554,7 @@ gdict_window_link_clicked (GdictDefbox *defbox,
   new_window = gdict_window_new (GDICT_WINDOW_ACTION_LOOKUP,
                                  window->loader,
                                  NULL, link_text);
-  gtk_widget_show (new_window);
+  ctk_widget_show (new_window);
 
   g_signal_emit (window, gdict_window_signals[CREATED], 0, new_window);
 }
@@ -1572,18 +1572,18 @@ gdict_window_drag_data_received_cb (GtkWidget        *widget,
   GdictWindow *window = GDICT_WINDOW (user_data);
   gchar *text;
 
-  text = (gchar *) gtk_selection_data_get_text (data);
+  text = (gchar *) ctk_selection_data_get_text (data);
   if (text)
     {
-      gtk_entry_set_text (GTK_ENTRY (window->entry), text);
+      ctk_entry_set_text (GTK_ENTRY (window->entry), text);
 
       gdict_window_set_word (window, text, NULL);
       g_free (text);
 
-      gtk_drag_finish (context, TRUE, FALSE, time_);
+      ctk_drag_finish (context, TRUE, FALSE, time_);
     }
   else
-    gtk_drag_finish (context, FALSE, FALSE, time_);
+    ctk_drag_finish (context, FALSE, FALSE, time_);
 }
 
 static void
@@ -1612,8 +1612,8 @@ gdict_window_handle_notify_position_cb (GtkWidget  *widget,
   gint window_width, pos;
   GtkAllocation allocation;
 
-  pos = gtk_paned_get_position (GTK_PANED (widget));
-  gtk_widget_get_allocation (GTK_WIDGET (window), &allocation);
+  pos = ctk_paned_get_position (GTK_PANED (widget));
+  ctk_widget_get_allocation (GTK_WIDGET (window), &allocation);
   window_width = allocation.width;
 
   window->sidebar_width = window_width - pos;
@@ -1646,29 +1646,29 @@ gdict_window_constructor (GType                  type,
   /* recover the state */
   gdict_window_load_state (window);
 
-  window->main_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-  gtk_container_add (GTK_CONTAINER (window), window->main_box);
-  gtk_widget_show (window->main_box);
+  window->main_box = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+  ctk_container_add (GTK_CONTAINER (window), window->main_box);
+  ctk_widget_show (window->main_box);
 
   /* build menus */
-  action_group = gtk_action_group_new ("MenuActions");
+  action_group = ctk_action_group_new ("MenuActions");
   window->action_group = action_group;
-  gtk_action_group_set_translation_domain (action_group, NULL);
-  gtk_action_group_add_actions (action_group, entries,
+  ctk_action_group_set_translation_domain (action_group, NULL);
+  ctk_action_group_add_actions (action_group, entries,
   				G_N_ELEMENTS (entries),
   				window);
-  gtk_action_group_add_toggle_actions (action_group, toggle_entries,
+  ctk_action_group_add_toggle_actions (action_group, toggle_entries,
                                        G_N_ELEMENTS (toggle_entries),
                                        window);
 
-  window->ui_manager = gtk_ui_manager_new ();
-  gtk_ui_manager_insert_action_group (window->ui_manager, action_group, 0);
+  window->ui_manager = ctk_ui_manager_new ();
+  ctk_ui_manager_insert_action_group (window->ui_manager, action_group, 0);
 
-  accel_group = gtk_ui_manager_get_accel_group (window->ui_manager);
-  gtk_window_add_accel_group (GTK_WINDOW (window), accel_group);
+  accel_group = ctk_ui_manager_get_accel_group (window->ui_manager);
+  ctk_window_add_accel_group (GTK_WINDOW (window), accel_group);
 
   error = NULL;
-  if (!gtk_ui_manager_add_ui_from_file (window->ui_manager,
+  if (!ctk_ui_manager_add_ui_from_file (window->ui_manager,
   					PKGDATADIR "/cafe-dictionary-ui.xml",
   					&error))
     {
@@ -1677,59 +1677,59 @@ gdict_window_constructor (GType                  type,
     }
   else
     {
-      window->menubar = gtk_ui_manager_get_widget (window->ui_manager, "/MainMenu");
+      window->menubar = ctk_ui_manager_get_widget (window->ui_manager, "/MainMenu");
 
-      gtk_box_pack_start (GTK_BOX (window->main_box), window->menubar, FALSE, FALSE, 0);
-      gtk_widget_show (window->menubar);
+      ctk_box_pack_start (GTK_BOX (window->main_box), window->menubar, FALSE, FALSE, 0);
+      ctk_widget_show (window->menubar);
 
       gdict_window_ensure_menu_state (window);
     }
 
-  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-  gtk_container_set_border_width (GTK_CONTAINER (vbox), 6);
-  gtk_container_add (GTK_CONTAINER (window->main_box), vbox);
-  gtk_widget_show (vbox);
+  vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+  ctk_container_set_border_width (GTK_CONTAINER (vbox), 6);
+  ctk_container_add (GTK_CONTAINER (window->main_box), vbox);
+  ctk_widget_show (vbox);
 
-  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-  gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
-  gtk_widget_show (hbox);
+  hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
+  ctk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
+  ctk_widget_show (hbox);
 
-  button = gtk_button_new_with_mnemonic (_("Look _up:"));
+  button = ctk_button_new_with_mnemonic (_("Look _up:"));
   g_signal_connect_swapped (button, "clicked",
                             G_CALLBACK (lookup_word),
                             window);
-  gtk_button_set_relief (GTK_BUTTON (button), GTK_RELIEF_NONE);
-  gtk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
-  gtk_widget_show (button);
+  ctk_button_set_relief (GTK_BUTTON (button), GTK_RELIEF_NONE);
+  ctk_box_pack_start (GTK_BOX (hbox), button, FALSE, FALSE, 0);
+  ctk_widget_show (button);
 
-  window->completion_model = gtk_list_store_new (COMPLETION_N_COLUMNS,
+  window->completion_model = ctk_list_store_new (COMPLETION_N_COLUMNS,
 		  				 G_TYPE_STRING);
 
-  window->completion = gtk_entry_completion_new ();
-  gtk_entry_completion_set_popup_completion (window->completion, TRUE);
-  gtk_entry_completion_set_model (window->completion,
+  window->completion = ctk_entry_completion_new ();
+  ctk_entry_completion_set_popup_completion (window->completion, TRUE);
+  ctk_entry_completion_set_model (window->completion,
 		  		  GTK_TREE_MODEL (window->completion_model));
-  gtk_entry_completion_set_text_column (window->completion,
+  ctk_entry_completion_set_text_column (window->completion,
 		  			COMPLETION_TEXT_COLUMN);
 
-  window->entry = gtk_entry_new ();
+  window->entry = ctk_entry_new ();
   if (window->word)
-    gtk_entry_set_text (GTK_ENTRY (window->entry), window->word);
+    ctk_entry_set_text (GTK_ENTRY (window->entry), window->word);
 
-  gtk_entry_set_completion (GTK_ENTRY (window->entry),
+  ctk_entry_set_completion (GTK_ENTRY (window->entry),
 		  	    window->completion);
   g_signal_connect_swapped (window->entry, "activate",
                             G_CALLBACK (lookup_word),
                             window);
-  gtk_box_pack_start (GTK_BOX (hbox), window->entry, TRUE, TRUE, 0);
-  gtk_widget_show (window->entry);
+  ctk_box_pack_start (GTK_BOX (hbox), window->entry, TRUE, TRUE, 0);
+  ctk_widget_show (window->entry);
 
-  handle = gtk_paned_new (GTK_ORIENTATION_HORIZONTAL);
-  gtk_box_pack_start (GTK_BOX (vbox), handle, TRUE, TRUE, 0);
-  gtk_widget_show (handle);
+  handle = ctk_paned_new (GTK_ORIENTATION_HORIZONTAL);
+  ctk_box_pack_start (GTK_BOX (vbox), handle, TRUE, TRUE, 0);
+  ctk_widget_show (handle);
 
-  frame1 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-  frame2 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+  frame1 = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+  frame2 = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 
   window->defbox = gdict_defbox_new ();
   if (window->context)
@@ -1739,15 +1739,15 @@ gdict_window_constructor (GType                  type,
                     G_CALLBACK (gdict_window_link_clicked),
                     window);
 
-  gtk_drag_dest_set (window->defbox,
+  ctk_drag_dest_set (window->defbox,
   		     GTK_DEST_DEFAULT_ALL,
   		     drop_types, n_drop_types,
   		     GDK_ACTION_COPY);
   g_signal_connect (window->defbox, "drag-data-received",
   		    G_CALLBACK (gdict_window_drag_data_received_cb),
   		    window);
-  gtk_container_add (GTK_CONTAINER (frame1), window->defbox);
-  gtk_widget_show (window->defbox);
+  ctk_container_add (GTK_CONTAINER (frame1), window->defbox);
+  ctk_widget_show (window->defbox);
 
   /* Sidebar */
   window->sidebar = gdict_sidebar_new ();
@@ -1757,7 +1757,7 @@ gdict_window_constructor (GType                  type,
   g_signal_connect (window->sidebar, "closed",
 		    G_CALLBACK (sidebar_closed_cb),
 		    window);
-  gtk_widget_show (window->sidebar);
+  ctk_widget_show (window->sidebar);
 
   /* Speller */
   window->speller = gdict_speller_new ();
@@ -1771,7 +1771,7 @@ gdict_window_constructor (GType                  type,
 		          GDICT_SIDEBAR_SPELLER_PAGE,
 			  _("Similar words"),
 			  window->speller);
-  gtk_widget_show (window->speller);
+  ctk_widget_show (window->speller);
 
   /* Database chooser */
   if (window->context)
@@ -1784,7 +1784,7 @@ gdict_window_constructor (GType                  type,
 	  		  GDICT_SIDEBAR_DATABASES_PAGE,
 			  _("Available dictionaries"),
 			  window->db_chooser);
-  gtk_widget_show (window->db_chooser);
+  ctk_widget_show (window->db_chooser);
 
   /* bind the database property to the database setting */
   g_settings_bind (window->settings, GDICT_SETTINGS_DATABASE_KEY,
@@ -1802,7 +1802,7 @@ gdict_window_constructor (GType                  type,
                           GDICT_SIDEBAR_STRATEGIES_PAGE,
                           _("Available strategies"),
                           window->strat_chooser);
-  gtk_widget_show (window->strat_chooser);
+  ctk_widget_show (window->strat_chooser);
 
   /* bind the strategy property to the strategy setting */
   g_settings_bind (window->settings, GDICT_SETTINGS_STRATEGY_KEY,
@@ -1818,45 +1818,45 @@ gdict_window_constructor (GType                  type,
                           GDICT_SIDEBAR_SOURCES_PAGE,
                           _("Dictionary sources"),
                           window->source_chooser);
-  gtk_widget_show (window->source_chooser);
+  ctk_widget_show (window->source_chooser);
 
   /* bind the source-name property to the source setting */
   g_settings_bind (window->settings, GDICT_SETTINGS_SOURCE_KEY,
                    window, "source-name",
                    G_SETTINGS_BIND_DEFAULT);
 
-  gtk_container_add (GTK_CONTAINER (frame2), window->sidebar);
+  ctk_container_add (GTK_CONTAINER (frame2), window->sidebar);
 
-  gtk_paned_pack1 (GTK_PANED (handle), frame1, TRUE, FALSE);
-  gtk_paned_pack2 (GTK_PANED (handle), frame2, FALSE, TRUE);
+  ctk_paned_pack1 (GTK_PANED (handle), frame1, TRUE, FALSE);
+  ctk_paned_pack2 (GTK_PANED (handle), frame2, FALSE, TRUE);
 
   window->defbox_frame = frame1;
   window->sidebar_frame = frame2;
 
-  gtk_widget_show (window->defbox_frame);
+  ctk_widget_show (window->defbox_frame);
 
   if (window->sidebar_visible)
     {
       GtkAction *action;
 
-      action = gtk_action_group_get_action (window->action_group, "ViewSidebar");
-      gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), TRUE);
-      gtk_widget_show (window->sidebar_frame);
+      action = ctk_action_group_get_action (window->action_group, "ViewSidebar");
+      ctk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), TRUE);
+      ctk_widget_show (window->sidebar_frame);
     }
 
-  window->status = gtk_statusbar_new ();
-  gtk_box_pack_end (GTK_BOX (window->main_box), window->status, FALSE, FALSE, 0);
+  window->status = ctk_statusbar_new ();
+  ctk_box_pack_end (GTK_BOX (window->main_box), window->status, FALSE, FALSE, 0);
   if (window->statusbar_visible)
     {
       GtkAction *action;
 
-      action = gtk_action_group_get_action (window->action_group, "ViewStatusbar");
-      gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), TRUE);
-      gtk_widget_show (window->status);
+      action = ctk_action_group_get_action (window->action_group, "ViewStatusbar");
+      ctk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), TRUE);
+      ctk_widget_show (window->status);
     }
 
-  window->progress = gtk_progress_bar_new ();
-  gtk_box_pack_end (GTK_BOX (window->status), window->progress, FALSE, FALSE, 0);
+  window->progress = ctk_progress_bar_new ();
+  ctk_box_pack_end (GTK_BOX (window->status), window->progress, FALSE, FALSE, 0);
 
   /* retrieve the document font size */
   font_name = g_settings_get_string (window->desktop_settings, DOCUMENT_FONT_KEY);
@@ -1888,15 +1888,15 @@ gdict_window_constructor (GType                  type,
 
   pango_font_description_free (font_desc);
 
-  gtk_window_set_title (GTK_WINDOW (window), _("Dictionary"));
-  gtk_window_set_default_size (GTK_WINDOW (window),
+  ctk_window_set_title (GTK_WINDOW (window), _("Dictionary"));
+  ctk_window_set_default_size (GTK_WINDOW (window),
                                window->default_width,
                                window->default_height);
   if (window->is_maximized)
-    gtk_window_maximize (GTK_WINDOW (window));
+    ctk_window_maximize (GTK_WINDOW (window));
 
-  gtk_widget_get_allocation (GTK_WIDGET (window), &allocation);
-  gtk_paned_set_position (GTK_PANED (handle), allocation.width - window->sidebar_width);
+  ctk_widget_get_allocation (GTK_WIDGET (window), &allocation);
+  ctk_paned_set_position (GTK_PANED (handle), allocation.width - window->sidebar_width);
   if (window->sidebar_page != NULL)
     gdict_sidebar_view_page (GDICT_SIDEBAR (window->sidebar), window->sidebar_page);
   else
@@ -1912,7 +1912,7 @@ gdict_window_constructor (GType                  type,
 		    G_CALLBACK (gdict_window_handle_notify_position_cb),
 		    window);
 
-  gtk_widget_grab_focus (window->entry);
+  ctk_widget_grab_focus (window->entry);
 
   window->in_construction = FALSE;
 
@@ -2076,7 +2076,7 @@ gdict_window_new (GdictWindowAction  action,
       switch (action)
         {
 	case GDICT_WINDOW_ACTION_LOOKUP:
-	  gtk_entry_set_text (GTK_ENTRY (window->entry), word);
+	  ctk_entry_set_text (GTK_ENTRY (window->entry), word);
 	  gdict_window_set_word (window, word, NULL);
 	  break;
 
@@ -2085,7 +2085,7 @@ gdict_window_new (GdictWindowAction  action,
           GdictSource *source;
           GdictContext *context;
 
-	  gtk_entry_set_text (GTK_ENTRY (window->entry), word);
+	  ctk_entry_set_text (GTK_ENTRY (window->entry), word);
 
           gdict_window_set_sidebar_visible (window, TRUE);
           gdict_sidebar_view_page (GDICT_SIDEBAR (window->sidebar),

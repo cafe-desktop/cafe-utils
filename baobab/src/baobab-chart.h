@@ -34,7 +34,7 @@
 #ifndef __BAOBAB_CHART_H__
 #define __BAOBAB_CHART_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 G_BEGIN_DECLS
 

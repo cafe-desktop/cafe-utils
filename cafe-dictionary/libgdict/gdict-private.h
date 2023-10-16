@@ -17,7 +17,7 @@
  * Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
  */
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include "gdict-debug.h"
 
 G_BEGIN_DECLS

@@ -23,7 +23,7 @@
 #ifndef __GDICT_ALIGNED_WINDOW_H__
 #define __GDICT_ALIGNED_WINDOW_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 G_BEGIN_DECLS
 

@@ -32,7 +32,7 @@
 #include <string.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "baobab.h"
 
@@ -73,19 +73,19 @@ display_error_dialog (GError *error,
 					 parse_name);
 	g_free (parse_name);
 
-	dlg = gtk_message_dialog_new (parent,
+	dlg = ctk_message_dialog_new (parent,
 				      GTK_DIALOG_DESTROY_WITH_PARENT,
 				      GTK_MESSAGE_ERROR,
 				      GTK_BUTTONS_OK,
 				      error_message, NULL);
 
-	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dlg),
+	ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dlg),
 						  "%s", error->message);
 
 	g_free (error_message);
 
-	gtk_dialog_run (GTK_DIALOG (dlg));
-	gtk_widget_destroy (dlg);
+	ctk_dialog_run (GTK_DIALOG (dlg));
+	ctk_widget_destroy (dlg);
 }
 
 static void
@@ -121,7 +121,7 @@ connect_server_dialog_present_uri (GtkWindow *app,
 {
 	GMountOperation *op;
 
-	op = gtk_mount_operation_new (GTK_WINDOW (widget));
+	op = ctk_mount_operation_new (GTK_WINDOW (widget));
 
 	g_file_mount_enclosing_volume (location,
 				       0, op,
@@ -219,35 +219,35 @@ connect_to_server (BaobabRemoteConnectDialog *dialog, GtkWindow *app)
 	GtkTreeIter iter;
 
 	/* Get our method info */
-	gtk_combo_box_get_active_iter (GTK_COMBO_BOX (dialog->details->type_combo), &iter);
-	gtk_tree_model_get (gtk_combo_box_get_model (GTK_COMBO_BOX (dialog->details->type_combo)),
+	ctk_combo_box_get_active_iter (GTK_COMBO_BOX (dialog->details->type_combo), &iter);
+	ctk_tree_model_get (ctk_combo_box_get_model (GTK_COMBO_BOX (dialog->details->type_combo)),
 			    &iter, 0, &index, -1);
 	g_assert (index < G_N_ELEMENTS (methods) && index >= 0);
 	meth = &(methods[index]);
 
 	if (meth->scheme == NULL) {
-		uri = gtk_editable_get_chars (GTK_EDITABLE (dialog->details->uri_entry), 0, -1);
+		uri = ctk_editable_get_chars (GTK_EDITABLE (dialog->details->uri_entry), 0, -1);
 		/* FIXME: we should validate it in some way? */
 	} else {
 		char *user, *port, *initial_path, *server, *folder ,*domain ;
 		char *t, *join;
 		gboolean free_initial_path, free_user, free_domain, free_port;
 
-		server = gtk_editable_get_chars (GTK_EDITABLE (dialog->details->server_entry), 0, -1);
+		server = ctk_editable_get_chars (GTK_EDITABLE (dialog->details->server_entry), 0, -1);
 		if (strlen (server) == 0) {
 			GtkWidget *dlg;
 
-			dlg = gtk_message_dialog_new (GTK_WINDOW (dialog),
+			dlg = ctk_message_dialog_new (GTK_WINDOW (dialog),
 						      GTK_DIALOG_DESTROY_WITH_PARENT,
 						      GTK_MESSAGE_ERROR,
 						      GTK_BUTTONS_OK,
 						      _("Cannot Connect to Server. You must enter a name for the server."));
 
-			gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dlg),
+			ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dlg),
 					_("Please enter a name and try again."));
 
-			gtk_dialog_run (GTK_DIALOG (dlg));
-    			gtk_widget_destroy (dlg);
+			ctk_dialog_run (GTK_DIALOG (dlg));
+    			ctk_widget_destroy (dlg);
 
 			g_free (server);
 			return;
@@ -268,30 +268,30 @@ connect_to_server (BaobabRemoteConnectDialog *dialog, GtkWindow *app)
 
 		/* SMB special case */
 		} else if (strcmp (meth->scheme, "smb") == 0) {
-			t = gtk_editable_get_chars (GTK_EDITABLE (dialog->details->share_entry), 0, -1);
+			t = ctk_editable_get_chars (GTK_EDITABLE (dialog->details->share_entry), 0, -1);
 			initial_path = g_strconcat ("/", t, NULL);
 			free_initial_path = TRUE;
 			g_free (t);
 		}
 
-		if (gtk_widget_get_parent (dialog->details->port_entry) != NULL) {
+		if (ctk_widget_get_parent (dialog->details->port_entry) != NULL) {
 			free_port = TRUE;
-			port = gtk_editable_get_chars (GTK_EDITABLE (dialog->details->port_entry), 0, -1);
+			port = ctk_editable_get_chars (GTK_EDITABLE (dialog->details->port_entry), 0, -1);
 		}
-		folder = gtk_editable_get_chars (GTK_EDITABLE (dialog->details->folder_entry), 0, -1);
-		if (gtk_widget_get_parent (dialog->details->user_entry) != NULL) {
+		folder = ctk_editable_get_chars (GTK_EDITABLE (dialog->details->folder_entry), 0, -1);
+		if (ctk_widget_get_parent (dialog->details->user_entry) != NULL) {
 			free_user = TRUE;
 
-			t = gtk_editable_get_chars (GTK_EDITABLE (dialog->details->user_entry), 0, -1);
+			t = ctk_editable_get_chars (GTK_EDITABLE (dialog->details->user_entry), 0, -1);
 
 			user = g_uri_escape_string (t, G_URI_RESERVED_CHARS_ALLOWED_IN_USERINFO, FALSE);
 
 			g_free (t);
 		}
-		if (gtk_widget_get_parent (dialog->details->domain_entry) != NULL) {
+		if (ctk_widget_get_parent (dialog->details->domain_entry) != NULL) {
 			free_domain = TRUE;
 
-			domain = gtk_editable_get_chars (GTK_EDITABLE (dialog->details->domain_entry), 0, -1);
+			domain = ctk_editable_get_chars (GTK_EDITABLE (dialog->details->domain_entry), 0, -1);
 
 			if (strlen (domain) != 0) {
 				t = user;
@@ -344,7 +344,7 @@ connect_to_server (BaobabRemoteConnectDialog *dialog, GtkWindow *app)
 		}
 	}
 
-	gtk_widget_hide (GTK_WIDGET (dialog));
+	ctk_widget_hide (GTK_WIDGET (dialog));
 
 	location = g_file_new_for_uri (uri);
 	g_free (uri);
@@ -384,7 +384,7 @@ static void
 destroy_label (GtkWidget *widget,
                gpointer   user_data)
 {
-  gtk_widget_destroy (widget);
+  ctk_widget_destroy (widget);
 }
 
 static void
@@ -396,154 +396,154 @@ setup_for_type (BaobabRemoteConnectDialog *dialog)
 	GtkTreeIter iter;
 
 	/* Get our method info */
-	gtk_combo_box_get_active_iter (GTK_COMBO_BOX (dialog->details->type_combo), &iter);
-	gtk_tree_model_get (gtk_combo_box_get_model (GTK_COMBO_BOX (dialog->details->type_combo)),
+	ctk_combo_box_get_active_iter (GTK_COMBO_BOX (dialog->details->type_combo), &iter);
+	ctk_tree_model_get (ctk_combo_box_get_model (GTK_COMBO_BOX (dialog->details->type_combo)),
 			    &iter, 0, &index, -1);
 	g_assert (index < G_N_ELEMENTS (methods) && index >= 0);
 	meth = &(methods[index]);
 
-	if (gtk_widget_get_parent (dialog->details->uri_entry) != NULL) {
-		gtk_container_remove (GTK_CONTAINER (dialog->details->grid),
+	if (ctk_widget_get_parent (dialog->details->uri_entry) != NULL) {
+		ctk_container_remove (GTK_CONTAINER (dialog->details->grid),
 				      dialog->details->uri_entry);
 	}
-	if (gtk_widget_get_parent (dialog->details->server_entry) != NULL) {
-		gtk_container_remove (GTK_CONTAINER (dialog->details->grid),
+	if (ctk_widget_get_parent (dialog->details->server_entry) != NULL) {
+		ctk_container_remove (GTK_CONTAINER (dialog->details->grid),
 				      dialog->details->server_entry);
 	}
-	if (gtk_widget_get_parent (dialog->details->share_entry) != NULL) {
-		gtk_container_remove (GTK_CONTAINER (dialog->details->grid),
+	if (ctk_widget_get_parent (dialog->details->share_entry) != NULL) {
+		ctk_container_remove (GTK_CONTAINER (dialog->details->grid),
 				      dialog->details->share_entry);
 	}
-	if (gtk_widget_get_parent (dialog->details->port_entry) != NULL) {
-		gtk_container_remove (GTK_CONTAINER (dialog->details->grid),
+	if (ctk_widget_get_parent (dialog->details->port_entry) != NULL) {
+		ctk_container_remove (GTK_CONTAINER (dialog->details->grid),
 				      dialog->details->port_entry);
 	}
-	if (gtk_widget_get_parent (dialog->details->folder_entry) != NULL) {
-		gtk_container_remove (GTK_CONTAINER (dialog->details->grid),
+	if (ctk_widget_get_parent (dialog->details->folder_entry) != NULL) {
+		ctk_container_remove (GTK_CONTAINER (dialog->details->grid),
 				      dialog->details->folder_entry);
 	}
-	if (gtk_widget_get_parent (dialog->details->user_entry) != NULL) {
-		gtk_container_remove (GTK_CONTAINER (dialog->details->grid),
+	if (ctk_widget_get_parent (dialog->details->user_entry) != NULL) {
+		ctk_container_remove (GTK_CONTAINER (dialog->details->grid),
 				      dialog->details->user_entry);
 	}
-	if (gtk_widget_get_parent (dialog->details->domain_entry) != NULL) {
-		gtk_container_remove (GTK_CONTAINER (dialog->details->grid),
+	if (ctk_widget_get_parent (dialog->details->domain_entry) != NULL) {
+		ctk_container_remove (GTK_CONTAINER (dialog->details->grid),
 				      dialog->details->domain_entry);
 	}
 	/* Destroy all labels */
-	gtk_container_foreach (GTK_CONTAINER (dialog->details->grid),
+	ctk_container_foreach (GTK_CONTAINER (dialog->details->grid),
 			       destroy_label, NULL);
 
 	i = 1;
 	grid = dialog->details->grid;
 
 	if (meth->scheme == NULL) {
-		label = gtk_label_new_with_mnemonic (_("_Location (URI):"));
-		gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-		gtk_label_set_yalign (GTK_LABEL (label), 0.5);
-		gtk_widget_show (label);
-		gtk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
+		label = ctk_label_new_with_mnemonic (_("_Location (URI):"));
+		ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+		ctk_label_set_yalign (GTK_LABEL (label), 0.5);
+		ctk_widget_show (label);
+		ctk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
 
-		gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->uri_entry);
-		gtk_widget_set_hexpand (dialog->details->uri_entry, TRUE);
-		gtk_widget_show (dialog->details->uri_entry);
-		gtk_grid_attach (GTK_GRID (grid), dialog->details->uri_entry, 1, i, 1, 1);
+		ctk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->uri_entry);
+		ctk_widget_set_hexpand (dialog->details->uri_entry, TRUE);
+		ctk_widget_show (dialog->details->uri_entry);
+		ctk_grid_attach (GTK_GRID (grid), dialog->details->uri_entry, 1, i, 1, 1);
 
 		i++;
 
 		return;
 	}
 
-	label = gtk_label_new_with_mnemonic (_("_Server:"));
-	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-	gtk_label_set_yalign (GTK_LABEL (label), 0.5);
-	gtk_widget_show (label);
-	gtk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
+	label = ctk_label_new_with_mnemonic (_("_Server:"));
+	ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+	ctk_label_set_yalign (GTK_LABEL (label), 0.5);
+	ctk_widget_show (label);
+	ctk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
 
-	gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->server_entry);
-	gtk_widget_set_hexpand (dialog->details->server_entry, TRUE);
-	gtk_widget_show (dialog->details->server_entry);
-	gtk_grid_attach (GTK_GRID (grid), dialog->details->server_entry, 1, i, 1, 1);
+	ctk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->server_entry);
+	ctk_widget_set_hexpand (dialog->details->server_entry, TRUE);
+	ctk_widget_show (dialog->details->server_entry);
+	ctk_grid_attach (GTK_GRID (grid), dialog->details->server_entry, 1, i, 1, 1);
 
 	i++;
 
-	label = gtk_label_new (_("Optional information:"));
-	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-	gtk_label_set_yalign (GTK_LABEL (label), 0.5);
-	gtk_widget_show (label);
-	gtk_grid_attach (GTK_GRID (grid), label, 0, i, 2, 1);
+	label = ctk_label_new (_("Optional information:"));
+	ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+	ctk_label_set_yalign (GTK_LABEL (label), 0.5);
+	ctk_widget_show (label);
+	ctk_grid_attach (GTK_GRID (grid), label, 0, i, 2, 1);
 
 	i++;
 
 	if (meth->flags & SHOW_SHARE) {
-		label = gtk_label_new_with_mnemonic (_("_Share:"));
-		gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-		gtk_label_set_yalign (GTK_LABEL (label), 0.5);
-		gtk_widget_show (label);
-		gtk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
+		label = ctk_label_new_with_mnemonic (_("_Share:"));
+		ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+		ctk_label_set_yalign (GTK_LABEL (label), 0.5);
+		ctk_widget_show (label);
+		ctk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
 
-		gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->share_entry);
-		gtk_widget_set_hexpand (dialog->details->share_entry, TRUE);
-		gtk_widget_show (dialog->details->share_entry);
-		gtk_grid_attach (GTK_GRID (grid), dialog->details->share_entry, 1, i, 1, 1);
+		ctk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->share_entry);
+		ctk_widget_set_hexpand (dialog->details->share_entry, TRUE);
+		ctk_widget_show (dialog->details->share_entry);
+		ctk_grid_attach (GTK_GRID (grid), dialog->details->share_entry, 1, i, 1, 1);
 
 		i++;
 	}
 
 	if (meth->flags & SHOW_PORT) {
-		label = gtk_label_new_with_mnemonic (_("_Port:"));
-		gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-		gtk_label_set_yalign (GTK_LABEL (label), 0.5);
-		gtk_widget_show (label);
-		gtk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
+		label = ctk_label_new_with_mnemonic (_("_Port:"));
+		ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+		ctk_label_set_yalign (GTK_LABEL (label), 0.5);
+		ctk_widget_show (label);
+		ctk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
 
-		gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->port_entry);
-		gtk_widget_set_hexpand (dialog->details->port_entry, TRUE);
-		gtk_widget_show (dialog->details->port_entry);
-		gtk_grid_attach (GTK_GRID (grid), dialog->details->port_entry, 1, i, 1, 1);
+		ctk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->port_entry);
+		ctk_widget_set_hexpand (dialog->details->port_entry, TRUE);
+		ctk_widget_show (dialog->details->port_entry);
+		ctk_grid_attach (GTK_GRID (grid), dialog->details->port_entry, 1, i, 1, 1);
 
 		i++;
 	}
 
-	label = gtk_label_new_with_mnemonic (_("_Folder:"));
-	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-	gtk_label_set_yalign (GTK_LABEL (label), 0.5);
-	gtk_widget_show (label);
-	gtk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
+	label = ctk_label_new_with_mnemonic (_("_Folder:"));
+	ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+	ctk_label_set_yalign (GTK_LABEL (label), 0.5);
+	ctk_widget_show (label);
+	ctk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
 
-	gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->folder_entry);
-	gtk_widget_set_hexpand (dialog->details->folder_entry, TRUE);
-	gtk_widget_show (dialog->details->folder_entry);
-	gtk_grid_attach (GTK_GRID (grid), dialog->details->folder_entry, 1, i, 1, 1);
+	ctk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->folder_entry);
+	ctk_widget_set_hexpand (dialog->details->folder_entry, TRUE);
+	ctk_widget_show (dialog->details->folder_entry);
+	ctk_grid_attach (GTK_GRID (grid), dialog->details->folder_entry, 1, i, 1, 1);
 
 	i++;
 
 	if (meth->flags & SHOW_USER) {
-		label = gtk_label_new_with_mnemonic (_("_User Name:"));
-		gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-		gtk_label_set_yalign (GTK_LABEL (label), 0.5);
-		gtk_widget_show (label);
-		gtk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
+		label = ctk_label_new_with_mnemonic (_("_User Name:"));
+		ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+		ctk_label_set_yalign (GTK_LABEL (label), 0.5);
+		ctk_widget_show (label);
+		ctk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
 
-		gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->user_entry);
-		gtk_widget_set_hexpand (dialog->details->user_entry, TRUE);
-		gtk_widget_show (dialog->details->user_entry);
-		gtk_grid_attach (GTK_GRID (grid), dialog->details->user_entry, 1, i, 1, 1);
+		ctk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->user_entry);
+		ctk_widget_set_hexpand (dialog->details->user_entry, TRUE);
+		ctk_widget_show (dialog->details->user_entry);
+		ctk_grid_attach (GTK_GRID (grid), dialog->details->user_entry, 1, i, 1, 1);
 
 		i++;
 	}
 
 	if (meth->flags & SHOW_DOMAIN) {
-		label = gtk_label_new_with_mnemonic (_("_Domain Name:"));
-		gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-		gtk_label_set_yalign (GTK_LABEL (label), 0.5);
-		gtk_widget_show (label);
-		gtk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
+		label = ctk_label_new_with_mnemonic (_("_Domain Name:"));
+		ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+		ctk_label_set_yalign (GTK_LABEL (label), 0.5);
+		ctk_widget_show (label);
+		ctk_grid_attach (GTK_GRID (grid), label, 0, i, 1, 1);
 
-		gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->domain_entry);
-		gtk_widget_set_hexpand (dialog->details->user_entry, TRUE);
-		gtk_widget_show (dialog->details->domain_entry);
-		gtk_grid_attach (GTK_GRID (grid), dialog->details->domain_entry, 1, i, 1, 1);
+		ctk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->details->domain_entry);
+		ctk_widget_set_hexpand (dialog->details->user_entry, TRUE);
+		ctk_widget_show (dialog->details->domain_entry);
+		ctk_grid_attach (GTK_GRID (grid), dialog->details->domain_entry, 1, i, 1, 1);
 
                 i++;
         }
@@ -571,9 +571,9 @@ port_insert_text (GtkEditable *editable,
 	/* Only allow digits to be inserted as port number */
 	for (pos = 0; pos < new_text_length; pos++) {
 		if (!g_ascii_isdigit (new_text[pos])) {
-			GtkWidget *toplevel = gtk_widget_get_toplevel (GTK_WIDGET (editable));
+			GtkWidget *toplevel = ctk_widget_get_toplevel (GTK_WIDGET (editable));
 			if (toplevel != NULL) {
-				gdk_window_beep (gtk_widget_get_window (toplevel));
+				gdk_window_beep (ctk_widget_get_window (toplevel));
 			}
 		    g_signal_stop_emission_by_name (editable, "insert_text");
 		    return;
@@ -595,39 +595,39 @@ baobab_remote_connect_dialog_init (BaobabRemoteConnectDialog *dialog)
 
 	dialog->details = g_new0 (BaobabRemoteConnectDialogDetails, 1);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), _("Connect to Server"));
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 2);
-	gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
+	ctk_window_set_title (GTK_WINDOW (dialog), _("Connect to Server"));
+	ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+	ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (dialog))), 2);
+	ctk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
 
-	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-	gtk_container_set_border_width (GTK_CONTAINER (vbox), 5);
-	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))),
+	vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+	ctk_container_set_border_width (GTK_CONTAINER (vbox), 5);
+	ctk_box_pack_start (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (dialog))),
 			    vbox, FALSE, TRUE, 0);
-	gtk_widget_show (vbox);
+	ctk_widget_show (vbox);
 
-	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
-	gtk_box_pack_start (GTK_BOX (vbox),
+	hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+	ctk_box_pack_start (GTK_BOX (vbox),
 			    hbox, FALSE, TRUE, 0);
-	gtk_widget_show (hbox);
+	ctk_widget_show (hbox);
 
-	label = gtk_label_new_with_mnemonic (_("Service _type:"));
-	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-	gtk_label_set_yalign (GTK_LABEL (label), 0.5);
-	gtk_widget_show (label);
-	gtk_box_pack_start (GTK_BOX (hbox),
+	label = ctk_label_new_with_mnemonic (_("Service _type:"));
+	ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+	ctk_label_set_yalign (GTK_LABEL (label), 0.5);
+	ctk_widget_show (label);
+	ctk_box_pack_start (GTK_BOX (hbox),
 			    label, FALSE, FALSE, 0);
 
-	dialog->details->type_combo = combo = gtk_combo_box_new ();
+	dialog->details->type_combo = combo = ctk_combo_box_new ();
 
 	/* each row contains: method index, textual description */
-	store = gtk_list_store_new (2, G_TYPE_INT, G_TYPE_STRING);
-	gtk_combo_box_set_model (GTK_COMBO_BOX (combo), GTK_TREE_MODEL (store));
+	store = ctk_list_store_new (2, G_TYPE_INT, G_TYPE_STRING);
+	ctk_combo_box_set_model (GTK_COMBO_BOX (combo), GTK_TREE_MODEL (store));
 	g_object_unref (G_OBJECT (store));
 
-	renderer = gtk_cell_renderer_text_new ();
-	gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (combo), renderer, TRUE);
-	gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (combo), renderer, "text", 1);
+	renderer = ctk_cell_renderer_text_new ();
+	ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (combo), renderer, TRUE);
+	ctk_cell_layout_add_attribute (GTK_CELL_LAYOUT (combo), renderer, "text", 1);
 
 	for (i = 0; i < G_N_ELEMENTS (methods); i++) {
 		GtkTreeIter iter;
@@ -653,66 +653,66 @@ baobab_remote_connect_dialog_init (BaobabRemoteConnectDialog *dialog)
 			}
 		}
 
-		gtk_list_store_append (store, &iter);
-		gtk_list_store_set (store, &iter,
+		ctk_list_store_append (store, &iter);
+		ctk_list_store_set (store, &iter,
 				    0, i,
 				    1, get_method_description (&(methods[i])),
 				    -1);
 
 
 		if (methods[i].flags & DEFAULT_METHOD) {
-			gtk_combo_box_set_active_iter (GTK_COMBO_BOX (combo), &iter);
+			ctk_combo_box_set_active_iter (GTK_COMBO_BOX (combo), &iter);
 		}
 	}
 
-	if (gtk_combo_box_get_active (GTK_COMBO_BOX (combo)) < 0) {
+	if (ctk_combo_box_get_active (GTK_COMBO_BOX (combo)) < 0) {
 		/* default method not available, use any other */
-		gtk_combo_box_set_active (GTK_COMBO_BOX (combo), 0);
+		ctk_combo_box_set_active (GTK_COMBO_BOX (combo), 0);
 	}
 
-	gtk_widget_show (combo);
-	gtk_label_set_mnemonic_widget (GTK_LABEL (label), combo);
-	gtk_box_pack_start (GTK_BOX (hbox),
+	ctk_widget_show (combo);
+	ctk_label_set_mnemonic_widget (GTK_LABEL (label), combo);
+	ctk_box_pack_start (GTK_BOX (hbox),
 			    combo, TRUE, TRUE, 0);
 	g_signal_connect (combo, "changed",
 			  G_CALLBACK (combo_changed_callback),
 			  dialog);
 
-	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
-	gtk_box_pack_start (GTK_BOX (vbox),
+	hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+	ctk_box_pack_start (GTK_BOX (vbox),
 			    hbox, FALSE, TRUE, 0);
-	gtk_widget_show (hbox);
+	ctk_widget_show (hbox);
 
-	label = gtk_label_new_with_mnemonic ("    ");
-	gtk_widget_show (label);
-	gtk_box_pack_start (GTK_BOX (hbox),
+	label = ctk_label_new_with_mnemonic ("    ");
+	ctk_widget_show (label);
+	ctk_box_pack_start (GTK_BOX (hbox),
 			    label, FALSE, FALSE, 0);
 
 
-	dialog->details->grid = grid = gtk_grid_new ();
-	gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
-	gtk_grid_set_column_spacing (GTK_GRID (grid), 12);
-	gtk_widget_show (grid);
-	gtk_box_pack_start (GTK_BOX (hbox),
+	dialog->details->grid = grid = ctk_grid_new ();
+	ctk_grid_set_row_spacing (GTK_GRID (grid), 6);
+	ctk_grid_set_column_spacing (GTK_GRID (grid), 12);
+	ctk_widget_show (grid);
+	ctk_box_pack_start (GTK_BOX (hbox),
 			    grid, TRUE, TRUE, 0);
 
-	dialog->details->uri_entry = gtk_entry_new();
-	dialog->details->server_entry = gtk_entry_new ();
-	dialog->details->share_entry = gtk_entry_new ();
-	dialog->details->port_entry = gtk_entry_new ();
+	dialog->details->uri_entry = ctk_entry_new();
+	dialog->details->server_entry = ctk_entry_new ();
+	dialog->details->share_entry = ctk_entry_new ();
+	dialog->details->port_entry = ctk_entry_new ();
 	g_signal_connect (dialog->details->port_entry, "insert_text", G_CALLBACK (port_insert_text),
 			  NULL);
-	dialog->details->folder_entry = gtk_entry_new ();
-	dialog->details->domain_entry = gtk_entry_new ();
-	dialog->details->user_entry = gtk_entry_new ();
+	dialog->details->folder_entry = ctk_entry_new ();
+	dialog->details->domain_entry = ctk_entry_new ();
+	dialog->details->user_entry = ctk_entry_new ();
 
-	gtk_entry_set_activates_default (GTK_ENTRY (dialog->details->uri_entry), TRUE);
-	gtk_entry_set_activates_default (GTK_ENTRY (dialog->details->server_entry), TRUE);
-	gtk_entry_set_activates_default (GTK_ENTRY (dialog->details->share_entry), TRUE);
-	gtk_entry_set_activates_default (GTK_ENTRY (dialog->details->port_entry), TRUE);
-	gtk_entry_set_activates_default (GTK_ENTRY (dialog->details->folder_entry), TRUE);
-	gtk_entry_set_activates_default (GTK_ENTRY (dialog->details->domain_entry), TRUE);
-	gtk_entry_set_activates_default (GTK_ENTRY (dialog->details->user_entry), TRUE);
+	ctk_entry_set_activates_default (GTK_ENTRY (dialog->details->uri_entry), TRUE);
+	ctk_entry_set_activates_default (GTK_ENTRY (dialog->details->server_entry), TRUE);
+	ctk_entry_set_activates_default (GTK_ENTRY (dialog->details->share_entry), TRUE);
+	ctk_entry_set_activates_default (GTK_ENTRY (dialog->details->port_entry), TRUE);
+	ctk_entry_set_activates_default (GTK_ENTRY (dialog->details->folder_entry), TRUE);
+	ctk_entry_set_activates_default (GTK_ENTRY (dialog->details->domain_entry), TRUE);
+	ctk_entry_set_activates_default (GTK_ENTRY (dialog->details->user_entry), TRUE);
 
 	/* We need an extra ref so we can remove them from the table */
 	g_object_ref (dialog->details->uri_entry);
@@ -725,13 +725,13 @@ baobab_remote_connect_dialog_init (BaobabRemoteConnectDialog *dialog)
 
 	setup_for_type (dialog);
 
-	gtk_dialog_add_button (GTK_DIALOG (dialog),
-			       "gtk-cancel",
+	ctk_dialog_add_button (GTK_DIALOG (dialog),
+			       "ctk-cancel",
 			       GTK_RESPONSE_CANCEL);
-	gtk_dialog_add_button (GTK_DIALOG (dialog),
+	ctk_dialog_add_button (GTK_DIALOG (dialog),
 			       _("_Scan"),
 			       RESPONSE_CONNECT);
-	gtk_dialog_set_default_response (GTK_DIALOG (dialog),
+	ctk_dialog_set_default_response (GTK_DIALOG (dialog),
 					 RESPONSE_CONNECT);
 }
 
@@ -740,17 +740,17 @@ baobab_remote_connect_dialog_new (GtkWindow *window, GFile *location)
 {
 	GtkWidget *dialog;
 
-	dialog = gtk_widget_new (BAOBAB_TYPE_REMOTE_CONNECT_DIALOG, NULL);
+	dialog = ctk_widget_new (BAOBAB_TYPE_REMOTE_CONNECT_DIALOG, NULL);
 
-	gtk_window_set_transient_for (GTK_WINDOW (dialog), window);
+	ctk_window_set_transient_for (GTK_WINDOW (dialog), window);
 
 	g_signal_connect (dialog, "response",
 			  G_CALLBACK (response_callback),
 			  window);
 
 	if (window) {
-		gtk_window_set_screen (GTK_WINDOW (dialog),
-				       gtk_window_get_screen (GTK_WINDOW (window)));
+		ctk_window_set_screen (GTK_WINDOW (dialog),
+				       ctk_window_get_screen (GTK_WINDOW (window)));
 	}
 
 	return dialog;

@@ -20,7 +20,7 @@
 #ifndef __SCREENSHOT_UTILS_H__
 #define __SCREENSHOT_UTILS_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <gdk/gdkx.h>
 
 G_BEGIN_DECLS

@@ -65,25 +65,25 @@ do_run_overwrite_confirm_dialog (gpointer _data)
   gint response;
 
   /* we need to ask the user if they want to overwrite this file */
-  dialog = gtk_message_dialog_new (GTK_WINDOW (data->parent),
+  dialog = ctk_message_dialog_new (GTK_WINDOW (data->parent),
 				   GTK_DIALOG_DESTROY_WITH_PARENT,
 				   GTK_MESSAGE_QUESTION,
 				   GTK_BUTTONS_NONE,
 				   _("File already exists"));
 
-  gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+  ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 					    _("The file \"%s\" already exists. "
                                               "Would you like to replace it?"),
 					    data->basename);
-  gtk_dialog_add_button (GTK_DIALOG (dialog),
-			 "gtk-cancel",
+  ctk_dialog_add_button (GTK_DIALOG (dialog),
+			 "ctk-cancel",
 			 GTK_RESPONSE_CANCEL);
-  gtk_dialog_add_button (GTK_DIALOG (dialog),
+  ctk_dialog_add_button (GTK_DIALOG (dialog),
 			 _("_Replace"),
 			 GTK_RESPONSE_OK);
 
-  response = gtk_dialog_run (GTK_DIALOG (dialog));
-  gtk_widget_destroy (dialog);
+  response = ctk_dialog_run (GTK_DIALOG (dialog));
+  ctk_widget_destroy (dialog);
 
   data->resp = response;
 
@@ -113,15 +113,15 @@ transfer_progress_dialog_new (TransferJob *job)
 
   dialog = g_new0 (TransferDialog, 1);
 
-  gdialog = gtk_message_dialog_new (GTK_WINDOW (job->parent),
+  gdialog = ctk_message_dialog_new (GTK_WINDOW (job->parent),
                                     GTK_DIALOG_DESTROY_WITH_PARENT,
                                     GTK_MESSAGE_OTHER,
                                     GTK_BUTTONS_CANCEL,
                                     _("Saving file..."));
-  widget = gtk_progress_bar_new ();
-  gtk_box_pack_start (GTK_BOX (gtk_message_dialog_get_message_area GTK_MESSAGE_DIALOG (gdialog)),
+  widget = ctk_progress_bar_new ();
+  ctk_box_pack_start (GTK_BOX (ctk_message_dialog_get_message_area GTK_MESSAGE_DIALOG (gdialog)),
                       widget, FALSE, 0, 0);
-  gtk_widget_show (widget);
+  ctk_widget_show (widget);
   dialog->progress_bar = widget;
   dialog->dialog = gdialog;
 
@@ -131,7 +131,7 @@ transfer_progress_dialog_new (TransferJob *job)
                     job->cancellable);
 
   job->dialog = dialog;
-  gtk_widget_show (gdialog);
+  ctk_widget_show (gdialog);
 
   return FALSE;
 }
@@ -191,7 +191,7 @@ transfer_progress_dialog_update (TransferJob *job)
 
   fraction = ((double) job->current_bytes) / ((double) job->total_bytes);
 
-  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (dialog->progress_bar),
+  ctk_progress_bar_set_fraction (GTK_PROGRESS_BAR (dialog->progress_bar),
                                  fraction);
 
   return FALSE;
@@ -211,7 +211,7 @@ transfer_job_done (gpointer user_data)
       job->dialog_timeout_id = 0;
     }
   if (dialog)
-      gtk_widget_destroy (dialog->dialog);
+      ctk_widget_destroy (dialog->dialog);
 
   if (job->callback)
     {

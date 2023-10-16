@@ -21,7 +21,7 @@
 #ifndef __LOGVIEW_FINDBAR_H__
 #define __LOGVIEW_FINDBAR_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <glib-object.h>
 
 G_BEGIN_DECLS

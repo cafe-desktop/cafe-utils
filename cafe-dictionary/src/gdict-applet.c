@@ -27,7 +27,7 @@
 
 #include <glib/gi18n.h>
 #include <gio/gio.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <gdk/gdkkeysyms.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
@@ -113,7 +113,7 @@ set_atk_name_description (GtkWidget  *widget,
 {
   AtkObject *aobj;
 
-  aobj = gtk_widget_get_accessible (widget);
+  aobj = ctk_widget_get_accessible (widget);
   if (!GTK_IS_ACCESSIBLE (aobj))
     return;
 
@@ -140,28 +140,28 @@ set_window_default_size (GdictApplet *applet)
   defbox = priv->defbox;
 
   /* Size based on the font size */
-  font_size = pango_font_description_get_size (gtk_widget_get_style (defbox)->font_desc);
+  font_size = pango_font_description_get_size (ctk_widget_get_style (defbox)->font_desc);
   font_size = PANGO_PIXELS (font_size);
 
   width = font_size * WINDOW_NUM_COLUMNS;
   height = font_size * WINDOW_NUM_ROWS;
 
   /* Use at least the requisition size of the window... */
-  gtk_widget_get_preferred_size (widget, NULL, &req);
+  ctk_widget_get_preferred_size (widget, NULL, &req);
   width = MAX (width, req.width);
   height = MAX (height, req.height);
 
   /* ... but make it no larger than half the monitor size */
-  display = gtk_widget_get_display (widget);
+  display = ctk_widget_get_display (widget);
   monitor_num = gdk_display_get_monitor_at_window (display,
-                                                   gtk_widget_get_window (widget));
+                                                   ctk_widget_get_window (widget));
   gdk_monitor_get_geometry (monitor_num, &monitor);
 
   width = MIN (width, monitor.width / 2);
   height = MIN (height, monitor.height / 2);
 
   /* Set size */
-  gtk_widget_set_size_request (priv->frame, width, height);
+  ctk_widget_set_size_request (priv->frame, width, height);
 }
 
 static void
@@ -170,7 +170,7 @@ clear_cb (GtkWidget   *widget,
 {
   GdictAppletPrivate *priv = applet->priv;
 
-  gtk_entry_set_text (GTK_ENTRY (priv->entry), "");
+  ctk_entry_set_text (GTK_ENTRY (priv->entry), "");
 
   if (!priv->defbox)
     return;
@@ -201,26 +201,26 @@ save_cb (GtkWidget   *widget,
   if (!priv->defbox)
     return;
 
-  dialog = gtk_file_chooser_dialog_new (_("Save a Copy"),
+  dialog = ctk_file_chooser_dialog_new (_("Save a Copy"),
   					GTK_WINDOW (priv->window),
   					GTK_FILE_CHOOSER_ACTION_SAVE,
-  					"gtk-cancel", GTK_RESPONSE_CANCEL,
-  					"gtk-save", GTK_RESPONSE_ACCEPT,
+  					"ctk-cancel", GTK_RESPONSE_CANCEL,
+  					"ctk-save", GTK_RESPONSE_ACCEPT,
   					NULL);
-  gtk_file_chooser_set_do_overwrite_confirmation (GTK_FILE_CHOOSER (dialog), TRUE);
+  ctk_file_chooser_set_do_overwrite_confirmation (GTK_FILE_CHOOSER (dialog), TRUE);
 
   /* default to user's $HOME */
-  gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (dialog), g_get_home_dir ());
-  gtk_file_chooser_set_current_name (GTK_FILE_CHOOSER (dialog), _("Untitled document"));
+  ctk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (dialog), g_get_home_dir ());
+  ctk_file_chooser_set_current_name (GTK_FILE_CHOOSER (dialog), _("Untitled document"));
 
-  if (gtk_dialog_run (GTK_DIALOG (dialog)) == GTK_RESPONSE_ACCEPT)
+  if (ctk_dialog_run (GTK_DIALOG (dialog)) == GTK_RESPONSE_ACCEPT)
     {
       gchar *filename;
       gchar *text;
       gsize len;
       GError *write_error = NULL;
 
-      filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (dialog));
+      filename = ctk_file_chooser_get_filename (GTK_FILE_CHOOSER (dialog));
 
       text = gdict_defbox_get_text (GDICT_DEFBOX (priv->defbox), &len);
 
@@ -246,7 +246,7 @@ save_cb (GtkWidget   *widget,
       g_free (filename);
     }
 
-  gtk_widget_destroy (dialog);
+  ctk_widget_destroy (dialog);
 }
 
 static void
@@ -255,15 +255,15 @@ gdict_applet_set_menu_items_sensitive (GdictApplet *applet,
 {
   GtkAction *action;
 
-  action = gtk_action_group_get_action (applet->priv->context_menu_action_group,
+  action = ctk_action_group_get_action (applet->priv->context_menu_action_group,
                                         "DictionaryClear");
-  gtk_action_set_sensitive (action, is_sensitive);
-  action = gtk_action_group_get_action (applet->priv->context_menu_action_group,
+  ctk_action_set_sensitive (action, is_sensitive);
+  action = ctk_action_group_get_action (applet->priv->context_menu_action_group,
                                         "DictionaryPrint");
-  gtk_action_set_sensitive (action, is_sensitive);
-  action = gtk_action_group_get_action (applet->priv->context_menu_action_group,
+  ctk_action_set_sensitive (action, is_sensitive);
+  action = ctk_action_group_get_action (applet->priv->context_menu_action_group,
                                         "DictionarySave");
-  gtk_action_set_sensitive (action, is_sensitive);
+  ctk_action_set_sensitive (action, is_sensitive);
 
 	return;
 }
@@ -277,15 +277,15 @@ window_key_press_event_cb (GtkWidget   *widget,
 
   if (event->keyval == GDK_KEY_Escape)
     {
-      gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (applet->priv->toggle), FALSE);
-      gtk_toggle_button_toggled (GTK_TOGGLE_BUTTON (applet->priv->toggle));
+      ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (applet->priv->toggle), FALSE);
+      ctk_toggle_button_toggled (GTK_TOGGLE_BUTTON (applet->priv->toggle));
 
       return TRUE;
     }
   else if ((event->keyval == GDK_KEY_l) &&
 	   (event->state & GDK_CONTROL_MASK))
     {
-      gtk_widget_grab_focus (applet->priv->entry);
+      ctk_widget_grab_focus (applet->priv->entry);
 
       return TRUE;
     }
@@ -325,78 +325,78 @@ gdict_applet_build_window (GdictApplet *applet)
   		    G_CALLBACK (window_show_cb),
 		    applet);
 
-  frame = gtk_frame_new (NULL);
-  gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_IN);
-  gtk_container_add (GTK_CONTAINER (window), frame);
-  gtk_widget_show (frame);
+  frame = ctk_frame_new (NULL);
+  ctk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_IN);
+  ctk_container_add (GTK_CONTAINER (window), frame);
+  ctk_widget_show (frame);
   priv->frame = frame;
 
-  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 12);
-  gtk_container_set_border_width (GTK_CONTAINER (vbox), 6);
-  gtk_container_add (GTK_CONTAINER (frame), vbox);
-  gtk_widget_show (vbox);
+  vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 12);
+  ctk_container_set_border_width (GTK_CONTAINER (vbox), 6);
+  ctk_container_add (GTK_CONTAINER (frame), vbox);
+  ctk_widget_show (vbox);
 
   priv->defbox = gdict_defbox_new ();
   if (priv->context)
     gdict_defbox_set_context (GDICT_DEFBOX (priv->defbox), priv->context);
 
-  gtk_box_pack_start (GTK_BOX (vbox), priv->defbox, TRUE, TRUE, 0);
-  gtk_widget_show (priv->defbox);
-  gtk_widget_set_can_focus (priv->defbox, TRUE);
-  gtk_widget_set_can_default (priv->defbox, TRUE);
+  ctk_box_pack_start (GTK_BOX (vbox), priv->defbox, TRUE, TRUE, 0);
+  ctk_widget_show (priv->defbox);
+  ctk_widget_set_can_focus (priv->defbox, TRUE);
+  ctk_widget_set_can_default (priv->defbox, TRUE);
 
-  bbox = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
-  gtk_button_box_set_layout (GTK_BUTTON_BOX (bbox), GTK_BUTTONBOX_END);
-  gtk_box_set_spacing (GTK_BOX (bbox), 6);
-  gtk_box_pack_end (GTK_BOX (vbox), bbox, FALSE, FALSE, 0);
-  gtk_widget_show (bbox);
+  bbox = ctk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
+  ctk_button_box_set_layout (GTK_BUTTON_BOX (bbox), GTK_BUTTONBOX_END);
+  ctk_box_set_spacing (GTK_BOX (bbox), 6);
+  ctk_box_pack_end (GTK_BOX (vbox), bbox, FALSE, FALSE, 0);
+  ctk_widget_show (bbox);
 
   button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
-				     "label", "gtk-clear",
+				     "label", "ctk-clear",
 				     "use-stock", TRUE,
 				     "use-underline", TRUE,
 				     NULL));
 
-  gtk_widget_set_tooltip_text (button, _("Clear the definitions found"));
+  ctk_widget_set_tooltip_text (button, _("Clear the definitions found"));
   set_atk_name_description (button,
 		  	    _("Clear definition"),
 			    _("Clear the text of the definition"));
 
   g_signal_connect (button, "clicked", G_CALLBACK (clear_cb), applet);
-  gtk_box_pack_start (GTK_BOX (bbox), button, FALSE, FALSE, 0);
-  gtk_widget_show (button);
+  ctk_box_pack_start (GTK_BOX (bbox), button, FALSE, FALSE, 0);
+  ctk_widget_show (button);
 
   button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
-				     "label", "gtk-print",
+				     "label", "ctk-print",
 				     "use-stock", TRUE,
 				     "use-underline", TRUE,
 				     NULL));
 
-  gtk_widget_set_tooltip_text (button, _("Print the definitions found"));
+  ctk_widget_set_tooltip_text (button, _("Print the definitions found"));
   set_atk_name_description (button,
 		  	    _("Print definition"),
 			    _("Print the text of the definition"));
 
   g_signal_connect (button, "clicked", G_CALLBACK (print_cb), applet);
-  gtk_box_pack_start (GTK_BOX (bbox), button, FALSE, FALSE, 0);
-  gtk_widget_show (button);
+  ctk_box_pack_start (GTK_BOX (bbox), button, FALSE, FALSE, 0);
+  ctk_widget_show (button);
 
   button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
-				     "label", "gtk-save",
+				     "label", "ctk-save",
 				     "use-stock", TRUE,
 				     "use-underline", TRUE,
 				     NULL));
 
-  gtk_widget_set_tooltip_text (button, _("Save the definitions found"));
+  ctk_widget_set_tooltip_text (button, _("Save the definitions found"));
   set_atk_name_description (button,
 		  	    _("Save definition"),
 			    _("Save the text of the definition to a file"));
 
   g_signal_connect (button, "clicked", G_CALLBACK (save_cb), applet);
-  gtk_box_pack_start (GTK_BOX (bbox), button, FALSE, FALSE, 0);
-  gtk_widget_show (button);
+  ctk_box_pack_start (GTK_BOX (bbox), button, FALSE, FALSE, 0);
+  ctk_widget_show (button);
 
-  gtk_window_set_default (GTK_WINDOW (window), priv->defbox);
+  ctk_window_set_default (GTK_WINDOW (window), priv->defbox);
 
   priv->window = window;
   priv->is_window_showing = FALSE;
@@ -411,12 +411,12 @@ gdict_applet_icon_toggled_cb (GtkWidget   *widget,
   if (!priv->window)
     gdict_applet_build_window (applet);
 
-  if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget)))
+  if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget)))
     {
-      gtk_window_set_screen (GTK_WINDOW (priv->window),
-	                     gtk_widget_get_screen (GTK_WIDGET (applet)));
-      gtk_window_present (GTK_WINDOW (priv->window));
-      gtk_widget_grab_focus (priv->defbox);
+      ctk_window_set_screen (GTK_WINDOW (priv->window),
+	                     ctk_widget_get_screen (GTK_WIDGET (applet)));
+      ctk_window_present (GTK_WINDOW (priv->window));
+      ctk_widget_grab_focus (priv->defbox);
 
       priv->is_window_showing = TRUE;
     }
@@ -425,8 +425,8 @@ gdict_applet_icon_toggled_cb (GtkWidget   *widget,
       /* force hiding the find pane */
       gdict_defbox_set_show_find (GDICT_DEFBOX (priv->defbox), FALSE);
 
-      gtk_widget_grab_focus (priv->entry);
-      gtk_widget_hide (priv->window);
+      ctk_widget_grab_focus (priv->entry);
+      ctk_widget_hide (priv->window);
 
       priv->is_window_showing = FALSE;
     }
@@ -441,7 +441,7 @@ gdict_applet_entry_activate_cb (GtkWidget   *widget,
   GdictAppletPrivate *priv = applet->priv;
   gchar *text;
 
-  text = gtk_editable_get_chars (GTK_EDITABLE (widget), 0, -1);
+  text = ctk_editable_get_chars (GTK_EDITABLE (widget), 0, -1);
   if (!text)
     return;
 
@@ -465,8 +465,8 @@ gdict_applet_entry_key_press_cb (GtkWidget   *widget,
     {
       if (priv->is_window_showing)
 	{
-          gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->toggle), FALSE);
-	  gtk_toggle_button_toggled (GTK_TOGGLE_BUTTON (priv->toggle));
+          ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->toggle), FALSE);
+	  ctk_toggle_button_toggled (GTK_TOGGLE_BUTTON (priv->toggle));
 
 	  return TRUE;
 	}
@@ -474,7 +474,7 @@ gdict_applet_entry_key_press_cb (GtkWidget   *widget,
   else if (event->keyval == GDK_KEY_Tab)
     {
       if (priv->is_window_showing)
-	gtk_widget_grab_focus (priv->defbox);
+	ctk_widget_grab_focus (priv->defbox);
     }
 
   return FALSE;
@@ -515,24 +515,24 @@ gdict_applet_draw (GdictApplet *applet)
   gchar *text = NULL;
 
   if (priv->entry)
-    text = gtk_editable_get_chars (GTK_EDITABLE (priv->entry), 0, -1);
+    text = ctk_editable_get_chars (GTK_EDITABLE (priv->entry), 0, -1);
 
   if (priv->box)
-    gtk_widget_destroy (priv->box);
+    ctk_widget_destroy (priv->box);
 
-  box = gtk_box_new (priv->orient, 0);
+  box = ctk_box_new (priv->orient, 0);
 
-  gtk_container_add (GTK_CONTAINER (applet), box);
-  gtk_widget_show (box);
+  ctk_container_add (GTK_CONTAINER (applet), box);
+  ctk_widget_show (box);
 
   /* toggle button */
-  priv->toggle = gtk_toggle_button_new ();
-  gtk_widget_set_tooltip_text (priv->toggle, _("Click to view the dictionary window"));
+  priv->toggle = ctk_toggle_button_new ();
+  ctk_widget_set_tooltip_text (priv->toggle, _("Click to view the dictionary window"));
   set_atk_name_description (priv->toggle,
 			    _("Toggle dictionary window"),
 		  	    _("Show or hide the definition window"));
 
-  gtk_button_set_relief (GTK_BUTTON (priv->toggle),
+  ctk_button_set_relief (GTK_BUTTON (priv->toggle),
 		  	 GTK_RELIEF_NONE);
   g_signal_connect (priv->toggle, "toggled",
 		    G_CALLBACK (gdict_applet_icon_toggled_cb),
@@ -540,54 +540,54 @@ gdict_applet_draw (GdictApplet *applet)
   g_signal_connect (priv->toggle, "button-press-event",
 		    G_CALLBACK (gdict_applet_icon_button_press_event_cb),
 		    applet);
-  gtk_box_pack_start (GTK_BOX (box), priv->toggle, FALSE, FALSE, 0);
-  gtk_widget_show (priv->toggle);
+  ctk_box_pack_start (GTK_BOX (box), priv->toggle, FALSE, FALSE, 0);
+  ctk_widget_show (priv->toggle);
 
-  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-  gtk_container_set_border_width (GTK_CONTAINER (hbox), 0);
-  gtk_container_add (GTK_CONTAINER (priv->toggle), hbox);
-  gtk_widget_show (hbox);
+  hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+  ctk_container_set_border_width (GTK_CONTAINER (hbox), 0);
+  ctk_container_add (GTK_CONTAINER (priv->toggle), hbox);
+  ctk_widget_show (hbox);
 
   if (priv->icon)
     {
       GdkPixbuf *scaled;
 
-      priv->image = gtk_image_new ();
-      gtk_image_set_pixel_size (GTK_IMAGE (priv->image), priv->size - 10);
+      priv->image = ctk_image_new ();
+      ctk_image_set_pixel_size (GTK_IMAGE (priv->image), priv->size - 10);
 
       scaled = gdk_pixbuf_scale_simple (priv->icon,
 		      			priv->size - 5,
 					priv->size - 5,
 					GDK_INTERP_BILINEAR);
 
-      gtk_image_set_from_pixbuf (GTK_IMAGE (priv->image), scaled);
+      ctk_image_set_from_pixbuf (GTK_IMAGE (priv->image), scaled);
       g_object_unref (scaled);
 
-      gtk_box_pack_start (GTK_BOX (hbox), priv->image, FALSE, FALSE, 0);
+      ctk_box_pack_start (GTK_BOX (hbox), priv->image, FALSE, FALSE, 0);
 
-      gtk_widget_show (priv->image);
+      ctk_widget_show (priv->image);
     }
   else
     {
-      priv->image = gtk_image_new ();
+      priv->image = ctk_image_new ();
 
-      gtk_image_set_pixel_size (GTK_IMAGE (priv->image), priv->size - 10);
-      gtk_image_set_from_icon_name (GTK_IMAGE (priv->image),
+      ctk_image_set_pixel_size (GTK_IMAGE (priv->image), priv->size - 10);
+      ctk_image_set_from_icon_name (GTK_IMAGE (priv->image),
                                     "image-missing", -1);
 
-      gtk_box_pack_start (GTK_BOX (hbox), priv->image, FALSE, FALSE, 0);
-      gtk_widget_show (priv->image);
+      ctk_box_pack_start (GTK_BOX (hbox), priv->image, FALSE, FALSE, 0);
+      ctk_widget_show (priv->image);
     }
 
   /* entry */
-  priv->entry = gtk_entry_new ();
-  gtk_widget_set_tooltip_text (priv->entry, _("Type the word you want to look up"));
+  priv->entry = ctk_entry_new ();
+  ctk_widget_set_tooltip_text (priv->entry, _("Type the word you want to look up"));
   set_atk_name_description (priv->entry,
 		  	    _("Dictionary entry"),
 			    _("Look up words in dictionaries"));
 
-  gtk_editable_set_editable (GTK_EDITABLE (priv->entry), TRUE);
-  gtk_entry_set_width_chars (GTK_ENTRY (priv->entry), 12);
+  ctk_editable_set_editable (GTK_EDITABLE (priv->entry), TRUE);
+  ctk_entry_set_width_chars (GTK_ENTRY (priv->entry), 12);
   g_signal_connect (priv->entry, "activate",
   		    G_CALLBACK (gdict_applet_entry_activate_cb),
   		    applet);
@@ -597,12 +597,12 @@ gdict_applet_draw (GdictApplet *applet)
   g_signal_connect (priv->entry, "key-press-event",
 		    G_CALLBACK (gdict_applet_entry_key_press_cb),
 		    applet);
-  gtk_box_pack_end (GTK_BOX (box), priv->entry, FALSE, FALSE, 0);
-  gtk_widget_show (priv->entry);
+  ctk_box_pack_end (GTK_BOX (box), priv->entry, FALSE, FALSE, 0);
+  ctk_widget_show (priv->entry);
 
   if (text)
     {
-      gtk_entry_set_text (GTK_ENTRY (priv->entry), text);
+      ctk_entry_set_text (GTK_ENTRY (priv->entry), text);
 
       g_free (text);
     }
@@ -610,10 +610,10 @@ gdict_applet_draw (GdictApplet *applet)
   priv->box = box;
 
 #if 0
-  gtk_widget_grab_focus (priv->entry);
+  ctk_widget_grab_focus (priv->entry);
 #endif
 
-  gtk_widget_show_all (GTK_WIDGET (applet));
+  ctk_widget_show_all (GTK_WIDGET (applet));
 
   return FALSE;
 }
@@ -637,10 +637,10 @@ gdict_applet_lookup_start_cb (GdictContext *context,
 
   if (!priv->is_window_showing)
     {
-      gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->toggle), TRUE);
+      ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->toggle), TRUE);
 
-      gtk_window_present (GTK_WINDOW (priv->window));
-      gtk_widget_grab_focus (priv->defbox);
+      ctk_window_present (GTK_WINDOW (priv->window));
+      ctk_widget_grab_focus (priv->defbox);
 
       priv->is_window_showing = TRUE;
     }
@@ -654,7 +654,7 @@ gdict_applet_lookup_end_cb (GdictContext *context,
 {
   gdict_applet_set_menu_items_sensitive (applet, TRUE);
 
-  gtk_window_present (GTK_WINDOW (applet->priv->window));
+  ctk_window_present (GTK_WINDOW (applet->priv->window));
 }
 
 static void
@@ -673,7 +673,7 @@ gdict_applet_cmd_lookup (GtkAction *action,
   GdictAppletPrivate *priv = applet->priv;
   gchar *text = NULL;;
 
-  text = gtk_editable_get_chars (GTK_EDITABLE (priv->entry), 0, -1);
+  text = ctk_editable_get_chars (GTK_EDITABLE (priv->entry), 0, -1);
   if (!text)
     return;
 
@@ -729,9 +729,9 @@ gdict_applet_cmd_help (GtkAction *action,
 {
   GError *err = NULL;
 
-  gtk_show_uri_on_window (NULL,
+  ctk_show_uri_on_window (NULL,
 		"help:cafe-dictionary/cafe-dictionary-applet",
-		gtk_get_current_event_time (), &err);
+		ctk_get_current_event_time (), &err);
 
   if (err)
     {
@@ -750,7 +750,7 @@ gdict_applet_change_orient (CafePanelApplet       *applet,
   guint new_size;
   GtkAllocation allocation;
 
-  gtk_widget_get_allocation (GTK_WIDGET (applet), &allocation);
+  ctk_widget_get_allocation (GTK_WIDGET (applet), &allocation);
   switch (orient)
     {
     case CAFE_PANEL_APPLET_ORIENT_LEFT:
@@ -792,7 +792,7 @@ gdict_applet_size_allocate (GtkWidget    *widget,
     {
       priv->size = new_size;
 
-      gtk_image_set_pixel_size (GTK_IMAGE (priv->image), priv->size - 10);
+      ctk_image_set_pixel_size (GTK_IMAGE (priv->image), priv->size - 10);
 
       /* re-scale the icon, if it was found */
       if (priv->icon)
@@ -804,7 +804,7 @@ gdict_applet_size_allocate (GtkWidget    *widget,
 					    priv->size - 5,
 					    GDK_INTERP_BILINEAR);
 
-	  gtk_image_set_from_pixbuf (GTK_IMAGE (priv->image), scaled);
+	  ctk_image_set_from_pixbuf (GTK_IMAGE (priv->image), scaled);
 	  g_object_unref (scaled);
 	}
      }
@@ -1118,7 +1118,7 @@ gdict_applet_init (GdictApplet *applet)
   gdict_source_loader_add_search_path (priv->loader, data_dir);
   g_free (data_dir);
 
-  gtk_window_set_default_icon_name ("accessories-dictionary");
+  ctk_window_set_default_icon_name ("accessories-dictionary");
 
   cafe_panel_applet_set_flags (CAFE_PANEL_APPLET (applet),
 			  CAFE_PANEL_APPLET_EXPAND_MINOR);
@@ -1149,7 +1149,7 @@ gdict_applet_init (GdictApplet *applet)
       break;
     }
 
-  priv->icon = gtk_icon_theme_load_icon (gtk_icon_theme_get_default (),
+  priv->icon = ctk_icon_theme_load_icon (ctk_icon_theme_get_default (),
 		  			 "accessories-dictionary",
 					 48,
 					 0,
@@ -1201,10 +1201,10 @@ gdict_applet_factory (CafePanelApplet *applet,
   if (((!strcmp (iid, "DictionaryApplet"))) && gdict_create_data_dir ())
     {
       /* Set up the menu */
-      priv->context_menu_action_group = gtk_action_group_new ("Dictionary Applet Actions");
-      gtk_action_group_set_translation_domain(priv->context_menu_action_group,
+      priv->context_menu_action_group = ctk_action_group_new ("Dictionary Applet Actions");
+      ctk_action_group_set_translation_domain(priv->context_menu_action_group,
                                               GETTEXT_PACKAGE);
-      gtk_action_group_add_actions(priv->context_menu_action_group,
+      ctk_action_group_add_actions(priv->context_menu_action_group,
 								gdict_applet_menu_actions,
 								G_N_ELEMENTS (gdict_applet_menu_actions),
 								applet);
@@ -1213,7 +1213,7 @@ gdict_applet_factory (CafePanelApplet *applet,
                                               priv->context_menu_action_group);
       g_free (ui_path);
 
-      gtk_widget_show (GTK_WIDGET (applet));
+      ctk_widget_show (GTK_WIDGET (applet));
 
       /* set the menu items insensitive */
       gdict_applet_set_menu_items_sensitive (dictionary_applet, FALSE);

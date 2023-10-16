@@ -39,7 +39,7 @@
 
 #include <gdk/gdk.h>
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gdict-source-chooser.h"
 #include "gdict-utils.h"
@@ -180,10 +180,10 @@ row_activated_cb (GtkTreeView       *treeview,
   if (!priv->loader)
     return;
 
-  if (!gtk_tree_model_get_iter (GTK_TREE_MODEL (priv->store), &iter, path))
+  if (!ctk_tree_model_get_iter (GTK_TREE_MODEL (priv->store), &iter, path))
     return;
 
-  gtk_tree_model_get (GTK_TREE_MODEL (priv->store), &iter,
+  ctk_tree_model_get (GTK_TREE_MODEL (priv->store), &iter,
                       SOURCE_NAME, &name,
                       -1);
   if (!name)
@@ -237,53 +237,53 @@ gdict_source_chooser_constructor (GType                  gtype,
   chooser = GDICT_SOURCE_CHOOSER (retval);
   priv = chooser->priv;
 
-  sw = gtk_scrolled_window_new (NULL, NULL);
-  gtk_widget_set_vexpand (sw, TRUE);
-  gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (sw),
+  sw = ctk_scrolled_window_new (NULL, NULL);
+  ctk_widget_set_vexpand (sw, TRUE);
+  ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (sw),
                                   GTK_POLICY_AUTOMATIC,
                                   GTK_POLICY_AUTOMATIC);
-  gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (sw),
+  ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (sw),
                                        GTK_SHADOW_IN);
-  gtk_box_pack_start (GTK_BOX (chooser), sw, TRUE, TRUE, 0);
-  gtk_widget_show (sw);
+  ctk_box_pack_start (GTK_BOX (chooser), sw, TRUE, TRUE, 0);
+  ctk_widget_show (sw);
 
-  renderer = gtk_cell_renderer_text_new ();
-  column = gtk_tree_view_column_new_with_attributes ("sources",
+  renderer = ctk_cell_renderer_text_new ();
+  column = ctk_tree_view_column_new_with_attributes ("sources",
                                                      renderer,
                                                      "text", SOURCE_DESCRIPTION,
                                                      "weight", SOURCE_CURRENT,
                                                      NULL);
-  priv->treeview = gtk_tree_view_new ();
-  gtk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview),
+  priv->treeview = ctk_tree_view_new ();
+  ctk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview),
                            GTK_TREE_MODEL (priv->store));
-  gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (priv->treeview), FALSE);
-  gtk_tree_view_append_column (GTK_TREE_VIEW (priv->treeview), column);
-  g_signal_connect (gtk_tree_view_get_selection (GTK_TREE_VIEW (priv->treeview)),
+  ctk_tree_view_set_headers_visible (GTK_TREE_VIEW (priv->treeview), FALSE);
+  ctk_tree_view_append_column (GTK_TREE_VIEW (priv->treeview), column);
+  g_signal_connect (ctk_tree_view_get_selection (GTK_TREE_VIEW (priv->treeview)),
                     "changed", G_CALLBACK (selection_changed_cb),
                     chooser);
   g_signal_connect (priv->treeview,
                     "row-activated", G_CALLBACK (row_activated_cb),
                     chooser);
-  gtk_container_add (GTK_CONTAINER (sw), priv->treeview);
-  gtk_widget_show (priv->treeview);
+  ctk_container_add (GTK_CONTAINER (sw), priv->treeview);
+  ctk_widget_show (priv->treeview);
 
-  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+  hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
   priv->buttons_box = hbox;
 
-  priv->refresh_button = gtk_button_new ();
-  gtk_button_set_image (GTK_BUTTON (priv->refresh_button),
-                        gtk_image_new_from_icon_name ("view-refresh",
+  priv->refresh_button = ctk_button_new ();
+  ctk_button_set_image (GTK_BUTTON (priv->refresh_button),
+                        ctk_image_new_from_icon_name ("view-refresh",
                                                       GTK_ICON_SIZE_BUTTON));
   g_signal_connect (priv->refresh_button,
                     "clicked", G_CALLBACK (refresh_button_clicked_cb),
                     chooser);
-  gtk_box_pack_start (GTK_BOX (hbox), priv->refresh_button, FALSE, FALSE, 0);
-  gtk_widget_show (priv->refresh_button);
-  gtk_widget_set_tooltip_text (priv->refresh_button,
+  ctk_box_pack_start (GTK_BOX (hbox), priv->refresh_button, FALSE, FALSE, 0);
+  ctk_widget_show (priv->refresh_button);
+  ctk_widget_set_tooltip_text (priv->refresh_button,
                                _("Reload the list of available sources"));
 
-  gtk_box_pack_end (GTK_BOX (chooser), hbox, FALSE, FALSE, 0);
-  gtk_widget_show (hbox);
+  ctk_box_pack_end (GTK_BOX (chooser), hbox, FALSE, FALSE, 0);
+  ctk_widget_show (hbox);
 
   return retval;
 }
@@ -378,9 +378,9 @@ gdict_source_chooser_init (GdictSourceChooser *chooser)
 
   chooser->priv = priv = gdict_source_chooser_get_instance_private (chooser);
 
-  gtk_orientable_set_orientation (GTK_ORIENTABLE (chooser), GTK_ORIENTATION_VERTICAL);
+  ctk_orientable_set_orientation (GTK_ORIENTABLE (chooser), GTK_ORIENTATION_VERTICAL);
 
-  priv->store = gtk_list_store_new (SOURCE_N_COLUMNS,
+  priv->store = ctk_list_store_new (SOURCE_N_COLUMNS,
                                     G_TYPE_INT,    /* TRANSPORT */
                                     G_TYPE_STRING, /* NAME */
                                     G_TYPE_STRING, /* DESCRIPTION */
@@ -502,7 +502,7 @@ scan_for_source_name (GtkTreeModel *model,
   if (!select_data)
     return TRUE;
 
-  gtk_tree_model_get (model, iter, SOURCE_NAME, &source_name, -1);
+  ctk_tree_model_get (model, iter, SOURCE_NAME, &source_name, -1);
   if (!source_name)
     return FALSE;
 
@@ -519,24 +519,24 @@ scan_for_source_name (GtkTreeModel *model,
         {
           GtkTreeViewColumn *column;
 
-          column = gtk_tree_view_get_column (tree_view, 2);
+          column = ctk_tree_view_get_column (tree_view, 2);
 
-          gtk_list_store_set (GTK_LIST_STORE (model), iter,
+          ctk_list_store_set (GTK_LIST_STORE (model), iter,
                               SOURCE_CURRENT, PANGO_WEIGHT_BOLD,
                               -1);
 
-          gtk_tree_view_row_activated (tree_view, path, column);
+          ctk_tree_view_row_activated (tree_view, path, column);
         }
 
-      selection = gtk_tree_view_get_selection (tree_view);
+      selection = ctk_tree_view_get_selection (tree_view);
       if (select_data->do_select)
-        gtk_tree_selection_select_path (selection, path);
+        ctk_tree_selection_select_path (selection, path);
       else
-        gtk_tree_selection_unselect_path (selection, path);
+        ctk_tree_selection_unselect_path (selection, path);
     }
   else
     {
-      gtk_list_store_set (GTK_LIST_STORE (model), iter,
+      ctk_list_store_set (GTK_LIST_STORE (model), iter,
                           SOURCE_CURRENT, PANGO_WEIGHT_NORMAL,
                           -1);
     }
@@ -578,7 +578,7 @@ gdict_source_chooser_select_source (GdictSourceChooser *chooser,
   data.do_select = TRUE;
   data.do_activate = FALSE;
 
-  gtk_tree_model_foreach (GTK_TREE_MODEL (priv->store),
+  ctk_tree_model_foreach (GTK_TREE_MODEL (priv->store),
                           scan_for_source_name,
                           &data);
 
@@ -619,7 +619,7 @@ gdict_source_chooser_unselect_source (GdictSourceChooser *chooser,
   data.do_select = FALSE;
   data.do_activate = FALSE;
 
-  gtk_tree_model_foreach (GTK_TREE_MODEL (priv->store),
+  ctk_tree_model_foreach (GTK_TREE_MODEL (priv->store),
                           scan_for_source_name,
                           &data);
 
@@ -664,7 +664,7 @@ gdict_source_chooser_set_current_source (GdictSourceChooser *chooser,
   data.do_select = TRUE;
   data.do_activate = TRUE;
 
-  gtk_tree_model_foreach (GTK_TREE_MODEL (priv->store),
+  ctk_tree_model_foreach (GTK_TREE_MODEL (priv->store),
                           scan_for_source_name,
                           &data);
 
@@ -709,11 +709,11 @@ gdict_source_chooser_get_current_source (GdictSourceChooser *chooser)
 
   priv = chooser->priv;
 
-  selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (priv->treeview));
-  if (!gtk_tree_selection_get_selected (selection, &model, &iter))
+  selection = ctk_tree_view_get_selection (GTK_TREE_VIEW (priv->treeview));
+  if (!ctk_tree_selection_get_selected (selection, &model, &iter))
     return NULL;
 
-  gtk_tree_model_get (model, &iter, SOURCE_NAME, &retval, -1);
+  ctk_tree_model_get (model, &iter, SOURCE_NAME, &retval, -1);
 
   g_free (priv->current_source);
   priv->current_source = g_strdup (retval);
@@ -825,9 +825,9 @@ gdict_source_chooser_refresh (GdictSourceChooser *chooser)
       const GSList *sources, *l;
 
       if (priv->treeview)
-        gtk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview), NULL);
+        ctk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview), NULL);
 
-      gtk_list_store_clear (priv->store);
+      ctk_list_store_clear (priv->store);
 
       sources = gdict_source_loader_get_sources (priv->loader);
       for (l = sources; l != NULL; l = l->next)
@@ -845,7 +845,7 @@ gdict_source_chooser_refresh (GdictSourceChooser *chooser)
           if (priv->current_source && !strcmp (priv->current_source, name))
             weight = PANGO_WEIGHT_BOLD;
 
-          gtk_list_store_insert_with_values (priv->store, NULL, -1,
+          ctk_list_store_insert_with_values (priv->store, NULL, -1,
                                              SOURCE_TRANSPORT, transport,
                                              SOURCE_NAME, name,
                                              SOURCE_DESCRIPTION, description,
@@ -854,7 +854,7 @@ gdict_source_chooser_refresh (GdictSourceChooser *chooser)
         }
 
       if (priv->treeview)
-        gtk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview),
+        ctk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview),
                                  GTK_TREE_MODEL (priv->store));
     }
 }
@@ -890,11 +890,11 @@ gdict_source_chooser_add_button (GdictSourceChooser *chooser,
                                      "use-underline", TRUE,
                                      NULL));
 
-  gtk_widget_set_can_default (button, TRUE);
+  ctk_widget_set_can_default (button, TRUE);
 
-  gtk_widget_show (button);
+  ctk_widget_show (button);
 
-  gtk_box_pack_end (GTK_BOX (priv->buttons_box), button, FALSE, TRUE, 0);
+  ctk_box_pack_end (GTK_BOX (priv->buttons_box), button, FALSE, TRUE, 0);
 
   return button;
 }

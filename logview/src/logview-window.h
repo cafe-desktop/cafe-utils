@@ -21,7 +21,7 @@
 #ifndef __LOGVIEW_WINDOW_H__
 #define __LOGVIEW_WINDOW_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #define LOGVIEW_TYPE_WINDOW		  (logview_window_get_type ())
 #define LOGVIEW_WINDOW(obj)		  (G_TYPE_CHECK_INSTANCE_CAST ((obj), LOGVIEW_TYPE_WINDOW, LogviewWindow))

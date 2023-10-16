@@ -30,7 +30,7 @@
 #include <math.h>
 #include <sys/stat.h>
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <glib.h>
 #include <glib/gi18n.h>
 
@@ -61,7 +61,7 @@ gdict_app_finalize (GObject *object)
 
   app->current_window = NULL;
 
-  g_slist_free_full (app->windows, (GDestroyNotify) gtk_widget_destroy);
+  g_slist_free_full (app->windows, (GDestroyNotify) ctk_widget_destroy);
   g_slist_free_full (app->lookup_words, g_free);
   g_slist_free_full (app->match_words, g_free);
 
@@ -101,7 +101,7 @@ gdict_window_destroy_cb (GtkWidget *widget,
     app->current_window = app->windows ? app->windows->data : NULL;
 
   if (app->windows == NULL)
-    gtk_main_quit ();
+    ctk_main_quit ();
 }
 
 static void
@@ -122,8 +122,8 @@ gdict_window_created_cb (GdictWindow *parent,
   g_signal_connect (new_window, "destroy",
                     G_CALLBACK (gdict_window_destroy_cb), app);
 
-  if (gtk_window_get_group (GTK_WINDOW (parent)))
-    gtk_window_group_add_window (gtk_window_get_group (GTK_WINDOW (parent)),
+  if (ctk_window_get_group (GTK_WINDOW (parent)))
+    ctk_window_group_add_window (ctk_window_get_group (GTK_WINDOW (parent)),
                                  GTK_WINDOW (new_window));
 
   app->windows = g_slist_prepend (app->windows, new_window);
@@ -151,7 +151,7 @@ gdict_create_window (GdictApp *app)
       app->windows = g_slist_prepend (app->windows, window);
       app->current_window = GDICT_WINDOW (window);
 
-      gtk_widget_show (window);
+      ctk_widget_show (window);
 
       return;
     }
@@ -174,7 +174,7 @@ gdict_create_window (GdictApp *app)
       app->windows = g_slist_prepend (app->windows, window);
       app->current_window = GDICT_WINDOW (window);
 
-      gtk_widget_show (window);
+      ctk_widget_show (window);
     }
 
   for (l = singleton->match_words; l != NULL; l = l->next)
@@ -195,7 +195,7 @@ gdict_create_window (GdictApp *app)
       app->windows = g_slist_prepend (app->windows, window);
       app->current_window = GDICT_WINDOW (window);
 
-      gtk_widget_show (window);
+      ctk_widget_show (window);
     }
 }
 
@@ -223,7 +223,7 @@ error_cb (GdictContext *context,
 {
   g_print (_("Error: %s\n"), error->message);
 
-  gtk_main_quit ();
+  ctk_main_quit ();
 }
 
 static void
@@ -235,7 +235,7 @@ lookup_end_cb (GdictContext *context,
   app->remaining_words -= 1;
 
   if (app->remaining_words == 0)
-    gtk_main_quit ();
+    ctk_main_quit ();
 }
 
 static void
@@ -300,7 +300,7 @@ gdict_look_up_word_and_quit (GdictApp *app)
         }
     }
 
-  gtk_main ();
+  ctk_main ();
 
   g_object_unref (source);
 
@@ -348,7 +348,7 @@ gdict_init (int *argc, char ***argv)
   g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
   g_option_context_add_main_entries (context, gdict_app_goptions, GETTEXT_PACKAGE);
   g_option_context_add_group (context, gdict_get_option_group ());
-  g_option_context_add_group (context, gtk_get_option_group (TRUE));
+  g_option_context_add_group (context, ctk_get_option_group (TRUE));
 
   g_option_context_parse (context, argc, argv, &err);
   if (err)
@@ -362,7 +362,7 @@ gdict_init (int *argc, char ***argv)
     }
 
   g_set_application_name (_("Dictionary"));
-  gtk_window_set_default_icon_name ("accessories-dictionary");
+  ctk_window_set_default_icon_name ("accessories-dictionary");
 
   if (!gdict_create_data_dir ())
     {
@@ -423,7 +423,7 @@ gdict_main (void)
   else
     gdict_look_up_word_and_quit (singleton);
 
-  gtk_main ();
+  ctk_main ();
 }
 
 void

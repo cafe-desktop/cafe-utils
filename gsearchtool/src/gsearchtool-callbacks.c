@@ -38,7 +38,7 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <gdk/gdkkeysyms.h>
 
 #include "gsearchtool.h"
@@ -91,7 +91,7 @@ quit_application (GSearchWindow * gsearch)
 		wait (NULL);
 	}
 	store_window_state_and_geometry (gsearch);
-	gtk_main_quit ();
+	ctk_main_quit ();
 }
 
 void
@@ -157,7 +157,7 @@ click_stop_cb (GtkWidget * widget,
 #ifdef HAVE_GETPGID
 		pid_t pgid;
 #endif
-		gtk_widget_set_sensitive (gsearch->stop_button, FALSE);
+		ctk_widget_set_sensitive (gsearch->stop_button, FALSE);
 		gsearch->command_details->command_status = MAKE_IT_STOP;
 #ifdef HAVE_GETPGID
 		pgid = getpgid (gsearch->command_details->command_pid);
@@ -182,29 +182,29 @@ click_help_cb (GtkWidget * widget,
 	GtkWidget * window = data;
 	GError * error = NULL;
 
-	gtk_show_uri_on_window (GTK_WINDOW (window), "help:cafe-search-tool",
-	                        gtk_get_current_event_time (), &error);
+	ctk_show_uri_on_window (GTK_WINDOW (window), "help:cafe-search-tool",
+	                        ctk_get_current_event_time (), &error);
 
 	if (error) {
 		GtkWidget * dialog;
 
-		dialog = gtk_message_dialog_new (GTK_WINDOW (window),
+		dialog = ctk_message_dialog_new (GTK_WINDOW (window),
 		                                 GTK_DIALOG_DESTROY_WITH_PARENT,
 		                                 GTK_MESSAGE_ERROR,
 		                                 GTK_BUTTONS_OK,
 		                                 _("Could not open help document."));
-		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+		ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 		                                          error->message, NULL);
 
-		gtk_window_set_title (GTK_WINDOW (dialog), "");
-		gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-		gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
+		ctk_window_set_title (GTK_WINDOW (dialog), "");
+		ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+		ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
 
 		g_signal_connect (G_OBJECT (dialog),
                                   "response",
-                                  G_CALLBACK (gtk_widget_destroy), NULL);
+                                  G_CALLBACK (ctk_widget_destroy), NULL);
 
-                gtk_widget_show (dialog);
+                ctk_widget_show (dialog);
                 g_error_free (error);
         }
 }
@@ -216,9 +216,9 @@ click_expander_cb (GObject * object,
 {
 	GSearchWindow * gsearch = data;
 
-	if (gtk_expander_get_expanded (GTK_EXPANDER (object)) == TRUE) {
-		gtk_widget_show (gsearch->available_options_vbox);
-		gtk_window_set_geometry_hints (GTK_WINDOW (gsearch->window),
+	if (ctk_expander_get_expanded (GTK_EXPANDER (object)) == TRUE) {
+		ctk_widget_show (gsearch->available_options_vbox);
+		ctk_window_set_geometry_hints (GTK_WINDOW (gsearch->window),
 		                               GTK_WIDGET (gsearch->window),
 		                               &gsearch->window_geometry,
 		                               GDK_HINT_MIN_SIZE);
@@ -226,8 +226,8 @@ click_expander_cb (GObject * object,
 	else {
 		GdkGeometry default_geometry = {MINIMUM_WINDOW_WIDTH, MINIMUM_WINDOW_HEIGHT};
 
-		gtk_widget_hide (gsearch->available_options_vbox);
-		gtk_window_set_geometry_hints (GTK_WINDOW (gsearch->window),
+		ctk_widget_hide (gsearch->available_options_vbox);
+		ctk_window_set_geometry_hints (GTK_WINDOW (gsearch->window),
 		                               GTK_WIDGET (gsearch->window),
 		                               &default_geometry,
 		                               GDK_HINT_MIN_SIZE);
@@ -241,7 +241,7 @@ size_allocate_cb (GtkWidget * widget,
 {
 	GtkWidget * button = data;
 
- 	gtk_widget_set_size_request (button, allocation->width, -1);
+ 	ctk_widget_set_size_request (button, allocation->width, -1);
 }
 
 void
@@ -251,7 +251,7 @@ add_constraint_cb (GtkWidget * widget,
 	GSearchWindow * gsearch = data;
 	gint idx;
 
-	idx = gtk_combo_box_get_active (GTK_COMBO_BOX (gsearch->available_options_combo_box));
+	idx = ctk_combo_box_get_active (GTK_COMBO_BOX (gsearch->available_options_combo_box));
 	add_constraint (gsearch, idx, NULL, FALSE);
 }
 
@@ -266,12 +266,12 @@ remove_constraint_cb (GtkWidget * widget,
 
       	gsearch->window_geometry.min_height -= WINDOW_HEIGHT_STEP;
 
-	gtk_window_set_geometry_hints (GTK_WINDOW (gsearch->window),
+	ctk_window_set_geometry_hints (GTK_WINDOW (gsearch->window),
 	                               GTK_WIDGET (gsearch->window),
 	                               &gsearch->window_geometry,
 	                               GDK_HINT_MIN_SIZE);
 
-	gtk_container_remove (GTK_CONTAINER (gsearch->available_options_vbox), gtk_widget_get_parent (widget));
+	ctk_container_remove (GTK_CONTAINER (gsearch->available_options_vbox), ctk_widget_get_parent (widget));
 
 	gsearch->available_options_selected_list =
 	    g_list_remove (gsearch->available_options_selected_list, constraint);
@@ -288,8 +288,8 @@ constraint_activate_cb (GtkWidget * widget,
 {
 	GSearchWindow * gsearch = data;
 
-	if ((gtk_widget_get_visible (gsearch->find_button)) &&
-	    (gtk_widget_get_sensitive (gsearch->find_button))) {
+	if ((ctk_widget_get_visible (gsearch->find_button)) &&
+	    (ctk_widget_get_sensitive (gsearch->find_button))) {
 		click_find_cb (gsearch->find_button, data);
 	}
 }
@@ -301,7 +301,7 @@ constraint_update_info_cb (GtkWidget * widget,
 	static gchar * string;
 	GSearchConstraint * opt = data;
 
-	string = (gchar *) gtk_entry_get_text (GTK_ENTRY (widget));
+	string = (gchar *) ctk_entry_get_text (GTK_ENTRY (widget));
 	update_constraint_info (opt, string);
 }
 
@@ -311,8 +311,8 @@ name_contains_activate_cb (GtkWidget * widget,
 {
 	GSearchWindow * gsearch = data;
 
-	if ((gtk_widget_get_visible (gsearch->find_button)) &&
-	    (gtk_widget_get_sensitive (gsearch->find_button))) {
+	if ((ctk_widget_get_visible (gsearch->find_button)) &&
+	    (ctk_widget_get_sensitive (gsearch->find_button))) {
 		click_find_cb (gsearch->find_button, data);
 	}
 }
@@ -324,7 +324,7 @@ look_in_folder_changed_cb (GtkWidget * widget,
 	GSearchWindow * gsearch = data;
 	gchar * value;
 
-	value = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (gsearch->look_in_folder_button));
+	value = ctk_file_chooser_get_filename (GTK_FILE_CHOOSER (gsearch->look_in_folder_button));
 
 	if (value != NULL) {
 		g_settings_set_string (gsearch->cafe_search_tool_settings, "look-in-folder", value);
@@ -353,32 +353,32 @@ display_dialog_file_open_limit (GtkWidget * window,
 	                                       count),
 	                             count);
 
-	dialog = gtk_message_dialog_new (GTK_WINDOW (window),
+	dialog = ctk_message_dialog_new (GTK_WINDOW (window),
 	                                 GTK_DIALOG_DESTROY_WITH_PARENT,
 	                                 GTK_MESSAGE_QUESTION,
 	                                 GTK_BUTTONS_CANCEL,
 	                                 primary, NULL);
-	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+	ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 	                                          secondary, NULL);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), "");
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
+	ctk_window_set_title (GTK_WINDOW (dialog), "");
+	ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+	ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
 
 	button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
-					   "label", "gtk-open",
+					   "label", "ctk-open",
 					   "use-stock", TRUE,
 					   "use-underline", TRUE,
 					   NULL));
 
-	gtk_widget_set_can_default (button, TRUE);
-	gtk_widget_show (button);
+	ctk_widget_set_can_default (button, TRUE);
+	ctk_widget_show (button);
 
-	gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, GTK_RESPONSE_OK);
-	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
+	ctk_dialog_add_action_widget (GTK_DIALOG (dialog), button, GTK_RESPONSE_OK);
+	ctk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
 
-	response = gtk_dialog_run (GTK_DIALOG (dialog));
-	gtk_widget_destroy (dialog);
+	response = ctk_dialog_run (GTK_DIALOG (dialog));
+	ctk_widget_destroy (dialog);
 	g_free (primary);
 	g_free (secondary);
 
@@ -395,23 +395,23 @@ display_dialog_could_not_open_file (GtkWidget * window,
 
 	primary = g_strdup_printf (_("Could not open document \"%s\"."), file);
 
-	dialog = gtk_message_dialog_new (GTK_WINDOW (window),
+	dialog = ctk_message_dialog_new (GTK_WINDOW (window),
 	                                 GTK_DIALOG_DESTROY_WITH_PARENT,
 	                                 GTK_MESSAGE_ERROR,
 	                                 GTK_BUTTONS_OK,
 	                                 primary, NULL);
-	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+	ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 	                                          message, NULL);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), "");
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
+	ctk_window_set_title (GTK_WINDOW (dialog), "");
+	ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+	ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
 
 	g_signal_connect (G_OBJECT (dialog),
                		  "response",
-               		  G_CALLBACK (gtk_widget_destroy), NULL);
+               		  G_CALLBACK (ctk_widget_destroy), NULL);
 
-	gtk_widget_show (dialog);
+	ctk_widget_show (dialog);
 	g_free (primary);
 }
 
@@ -424,23 +424,23 @@ display_dialog_could_not_open_folder (GtkWidget * window,
 
 	primary = g_strdup_printf (_("Could not open folder \"%s\"."), folder);
 
-	dialog = gtk_message_dialog_new (GTK_WINDOW (window),
+	dialog = ctk_message_dialog_new (GTK_WINDOW (window),
 	                                 GTK_DIALOG_DESTROY_WITH_PARENT,
 	                                 GTK_MESSAGE_ERROR,
 	                                 GTK_BUTTONS_OK,
 	                                 primary, NULL);
-	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+	ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 	                                          _("The caja file manager is not running."));
 
-	gtk_window_set_title (GTK_WINDOW (dialog), "");
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
+	ctk_window_set_title (GTK_WINDOW (dialog), "");
+	ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+	ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
 
 	g_signal_connect (G_OBJECT (dialog),
                		  "response",
-               		  G_CALLBACK (gtk_widget_destroy), NULL);
+               		  G_CALLBACK (ctk_widget_destroy), NULL);
 
-	gtk_widget_show (dialog);
+	ctk_widget_show (dialog);
 	g_free (primary);
 }
 
@@ -461,11 +461,11 @@ open_file_cb (GtkMenuItem * action,
 	GList * list;
 	guint idx;
 
-	if (gtk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
+	if (ctk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
 		return;
 	}
 
-	list = gtk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
+	list = ctk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
 						     &model);
 
 	if (g_list_length (list) > SILENT_WINDOW_OPEN_LIMIT) {
@@ -474,7 +474,7 @@ open_file_cb (GtkMenuItem * action,
 		response = display_dialog_file_open_limit (gsearch->window, g_list_length (list));
 
 		if (response == GTK_RESPONSE_CANCEL) {
-			g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
+			g_list_free_full (list, (GDestroyNotify) ctk_tree_path_free);
 			return;
 		}
 	}
@@ -486,10 +486,10 @@ open_file_cb (GtkMenuItem * action,
 		gchar * locale_file;
 		GtkTreeIter iter;
 
-		gtk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+		ctk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 		                         g_list_nth_data (list, idx));
 
-		gtk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+		ctk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
     		                    COLUMN_NAME, &utf8_name,
 				    COLUMN_LOCALE_FILE, &locale_file,
 		                    COLUMN_NO_FILES_FOUND, &no_files_found,
@@ -503,7 +503,7 @@ open_file_cb (GtkMenuItem * action,
 			}
 
 			if (!g_file_test (locale_file, G_FILE_TEST_EXISTS)) {
-				gtk_tree_selection_unselect_iter (GTK_TREE_SELECTION (gsearch->search_results_selection),
+				ctk_tree_selection_unselect_iter (GTK_TREE_SELECTION (gsearch->search_results_selection),
 				                                  &iter);
 				display_dialog_could_not_open_file (gsearch->window, utf8_name,
 				                                    _("The document does not exist."));
@@ -530,7 +530,7 @@ open_file_cb (GtkMenuItem * action,
 		g_free (utf8_name);
 		g_free (locale_file);
 	}
-	g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
+	g_list_free_full (list, (GDestroyNotify) ctk_tree_path_free);
 }
 
 static gint
@@ -553,32 +553,32 @@ display_dialog_folder_open_limit (GtkWidget * window,
 					       count),
 	                             count);
 
-	dialog = gtk_message_dialog_new (GTK_WINDOW (window),
+	dialog = ctk_message_dialog_new (GTK_WINDOW (window),
 	                                 GTK_DIALOG_DESTROY_WITH_PARENT,
 	                                 GTK_MESSAGE_QUESTION,
 	                                 GTK_BUTTONS_CANCEL,
 	                                 primary, NULL);
-	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+	ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 	                                          secondary, NULL);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), "");
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
+	ctk_window_set_title (GTK_WINDOW (dialog), "");
+	ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+	ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
 
 	button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
-					   "label", "gtk-open",
+					   "label", "ctk-open",
 					   "use-stock", TRUE,
 					   "use-underline", TRUE,
 					   NULL));
 
-	gtk_widget_set_can_default (button, TRUE);
-	gtk_widget_show (button);
+	ctk_widget_set_can_default (button, TRUE);
+	ctk_widget_show (button);
 
-	gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, GTK_RESPONSE_OK);
-	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
+	ctk_dialog_add_action_widget (GTK_DIALOG (dialog), button, GTK_RESPONSE_OK);
+	ctk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
 
-	response = gtk_dialog_run (GTK_DIALOG (dialog));
-	gtk_widget_destroy (dialog);
+	response = ctk_dialog_run (GTK_DIALOG (dialog));
+	ctk_widget_destroy (dialog);
 	g_free (primary);
 	g_free (secondary);
 
@@ -597,11 +597,11 @@ open_folder_cb (GtkAction * action,
 	GList * list;
 	guint idx;
 
-	if (gtk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
+	if (ctk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
 		return;
 	}
 
-	list = gtk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
+	list = ctk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
 						     &model);
 
 	if (g_list_length (list) > SILENT_WINDOW_OPEN_LIMIT) {
@@ -610,7 +610,7 @@ open_folder_cb (GtkAction * action,
 		response = display_dialog_folder_open_limit (gsearch->window, g_list_length (list));
 
 		if (response == GTK_RESPONSE_CANCEL) {
-			g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
+			g_list_free_full (list, (GDestroyNotify) ctk_tree_path_free);
 			return;
 		}
 	}
@@ -622,10 +622,10 @@ open_folder_cb (GtkAction * action,
 		gchar * locale_file;
 		GtkTreeIter iter;
 
-		gtk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+		ctk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 					 g_list_nth_data (list, idx));
 
-		gtk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+		ctk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 				    COLUMN_RELATIVE_PATH, &utf8_folder,
 				    COLUMN_LOCALE_FILE, &locale_file,
 				    -1);
@@ -644,7 +644,7 @@ open_folder_cb (GtkAction * action,
 
 				display_dialog_could_not_open_folder (gsearch->window, utf8_folder);
 
-				g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
+				g_list_free_full (list, (GDestroyNotify) ctk_tree_path_free);
 				g_free (locale_folder);
 				g_free (utf8_folder);
 				g_object_unref (g_file);
@@ -657,7 +657,7 @@ open_folder_cb (GtkAction * action,
 		g_free (locale_file);
 		g_free (utf8_folder);
 	}
-	g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
+	g_list_free_full (list, (GDestroyNotify) ctk_tree_path_free);
 	g_object_unref (g_file);
 	g_object_unref (g_file_info);
 	g_object_unref (g_app_info);
@@ -678,11 +678,11 @@ file_changed_cb (GFileMonitor * handle,
 
 	switch (event_type) {
 	case G_FILE_MONITOR_EVENT_DELETED:
-		path = gtk_tree_row_reference_get_path (monitor->reference);
-		model = gtk_tree_row_reference_get_model (monitor->reference);
-		gtk_tree_model_get_iter (model, &iter, path);
+		path = ctk_tree_row_reference_get_path (monitor->reference);
+		model = ctk_tree_row_reference_get_model (monitor->reference);
+		ctk_tree_model_get_iter (model, &iter, path);
 		tree_model_iter_free_monitor (model, NULL, &iter, NULL);
-		gtk_list_store_remove (GTK_LIST_STORE (model), &iter);
+		ctk_list_store_remove (GTK_LIST_STORE (model), &iter);
 		update_search_counts (gsearch);
 		break;
 	default:
@@ -700,22 +700,22 @@ display_dialog_could_not_move_to_trash (GtkWidget * window,
 
 	primary = g_strdup_printf (_("Could not move \"%s\" to trash."), file);
 
-	dialog = gtk_message_dialog_new (GTK_WINDOW (window),
+	dialog = ctk_message_dialog_new (GTK_WINDOW (window),
 	                                 GTK_DIALOG_DESTROY_WITH_PARENT,
 	                                 GTK_MESSAGE_ERROR,
 	                                 GTK_BUTTONS_OK,
 	                                 primary, NULL);
-	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+	ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 	                                          message, NULL);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), "");
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
+	ctk_window_set_title (GTK_WINDOW (dialog), "");
+	ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+	ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
 
 	g_signal_connect (G_OBJECT (dialog),
                		  "response",
-               		  G_CALLBACK (gtk_widget_destroy), NULL);
-	gtk_widget_show (dialog);
+               		  G_CALLBACK (ctk_widget_destroy), NULL);
+	ctk_widget_show (dialog);
 	g_free (primary);
 }
 
@@ -735,33 +735,33 @@ display_dialog_delete_permanently (GtkWidget * window,
 	secondary = g_strdup_printf (_("Trash is unavailable.  Could not move \"%s\" to the trash."),
 	                             file);
 
-	dialog = gtk_message_dialog_new (GTK_WINDOW (window),
+	dialog = ctk_message_dialog_new (GTK_WINDOW (window),
 	                                 GTK_DIALOG_DESTROY_WITH_PARENT,
 	                                 GTK_MESSAGE_QUESTION,
 	                                 GTK_BUTTONS_CANCEL,
 	                                 primary, NULL);
-	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+	ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 	                                          secondary, NULL);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), "");
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
+	ctk_window_set_title (GTK_WINDOW (dialog), "");
+	ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+	ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
 
 	button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
-					   "label", "gtk-delete",
+					   "label", "ctk-delete",
 					   "use-stock", TRUE,
 					   "use-underline", TRUE,
 					   NULL));
 
-	gtk_widget_set_can_default (button, TRUE);
-	gtk_widget_show (button);
+	ctk_widget_set_can_default (button, TRUE);
+	ctk_widget_show (button);
 
-	gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, GTK_RESPONSE_OK);
-	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
+	ctk_dialog_add_action_widget (GTK_DIALOG (dialog), button, GTK_RESPONSE_OK);
+	ctk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
 
-	response = gtk_dialog_run (GTK_DIALOG (dialog));
+	response = ctk_dialog_run (GTK_DIALOG (dialog));
 
-	gtk_widget_destroy (GTK_WIDGET(dialog));
+	ctk_widget_destroy (GTK_WIDGET(dialog));
 	g_free (primary);
 	g_free (secondary);
 
@@ -778,22 +778,22 @@ display_dialog_could_not_delete (GtkWidget * window,
 
 	primary = g_strdup_printf (_("Could not delete \"%s\"."), file);
 
-	dialog = gtk_message_dialog_new (GTK_WINDOW (window),
+	dialog = ctk_message_dialog_new (GTK_WINDOW (window),
 	                                 GTK_DIALOG_DESTROY_WITH_PARENT,
 	                                 GTK_MESSAGE_ERROR,
 	                                 GTK_BUTTONS_OK,
 	                                 primary, NULL);
-	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+	ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 	                                          message, NULL);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), "");
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
+	ctk_window_set_title (GTK_WINDOW (dialog), "");
+	ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+	ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
 
 	g_signal_connect (G_OBJECT (dialog),
                		  "response",
-               		  G_CALLBACK (gtk_widget_destroy), NULL);
-	gtk_widget_show (dialog);
+               		  G_CALLBACK (ctk_widget_destroy), NULL);
+	ctk_widget_show (dialog);
 	g_free (primary);
 }
 
@@ -806,11 +806,11 @@ move_to_trash_cb (GtkAction * action,
 	gint total;
 	gint idx;
 
-	if (gtk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
+	if (ctk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
 		return;
 	}
 
-	total = gtk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection));
+	total = ctk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection));
 
 	for (idx = 0; idx < total; idx++) {
 		gboolean no_files_found = FALSE;
@@ -824,13 +824,13 @@ move_to_trash_cb (GtkAction * action,
 		gchar * locale_filename;
 		gboolean result;
 
-		list = gtk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
+		list = ctk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
  		                                             &model);
 
-		gtk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+		ctk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 					 g_list_nth_data (list, 0));
 
-		gtk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+		ctk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
     				    COLUMN_NAME, &utf8_basename,
 				    COLUMN_LOCALE_FILE, &locale_filename,
 			   	    COLUMN_NO_FILES_FOUND, &no_files_found,
@@ -845,12 +845,12 @@ move_to_trash_cb (GtkAction * action,
 		utf8_filename = g_filename_display_name (locale_filename);
 
 		if (idx + 1 == total) {
-			last_selected_path = gtk_tree_model_get_path (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter);
+			last_selected_path = ctk_tree_model_get_path (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter);
 		}
 
 		if ((!g_file_test (locale_filename, G_FILE_TEST_EXISTS)) &&
 		    (!g_file_test (locale_filename, G_FILE_TEST_IS_SYMLINK))) {
-			gtk_tree_selection_unselect_iter (GTK_TREE_SELECTION (gsearch->search_results_selection), &iter);
+			ctk_tree_selection_unselect_iter (GTK_TREE_SELECTION (gsearch->search_results_selection), &iter);
 			display_dialog_could_not_move_to_trash (gsearch->window, utf8_basename,
 			                                        _("The document does not exist."));
 		}
@@ -858,18 +858,18 @@ move_to_trash_cb (GtkAction * action,
 		g_file = g_file_new_for_path (locale_filename);
 		result = g_file_trash (g_file, NULL, &error);
 
-		gtk_tree_selection_unselect_iter (GTK_TREE_SELECTION (gsearch->search_results_selection), &iter);
+		ctk_tree_selection_unselect_iter (GTK_TREE_SELECTION (gsearch->search_results_selection), &iter);
 		g_object_unref (g_file);
 
 		if (result == TRUE) {
 			tree_model_iter_free_monitor (GTK_TREE_MODEL (gsearch->search_results_list_store),
 						      NULL, &iter, NULL);
-			gtk_list_store_remove (GTK_LIST_STORE (gsearch->search_results_list_store), &iter);
+			ctk_list_store_remove (GTK_LIST_STORE (gsearch->search_results_list_store), &iter);
 		}
 		else {
 			gint response;
 
-			gtk_tree_selection_unselect_iter (GTK_TREE_SELECTION (gsearch->search_results_selection), &iter);
+			ctk_tree_selection_unselect_iter (GTK_TREE_SELECTION (gsearch->search_results_selection), &iter);
 			response = display_dialog_delete_permanently (gsearch->window, utf8_filename);
 
 			if (response == GTK_RESPONSE_OK) {
@@ -883,7 +883,7 @@ move_to_trash_cb (GtkAction * action,
 				if (result == TRUE) {
 					tree_model_iter_free_monitor (GTK_TREE_MODEL (gsearch->search_results_list_store),
 								      NULL, &iter, NULL);
-					gtk_list_store_remove (GTK_LIST_STORE (gsearch->search_results_list_store), &iter);
+					ctk_list_store_remove (GTK_LIST_STORE (gsearch->search_results_list_store), &iter);
 				}
 				else {
 					gchar * message;
@@ -909,7 +909,7 @@ move_to_trash_cb (GtkAction * action,
 				g_free (message);
 			}
 		}
-		g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
+		g_list_free_full (list, (GDestroyNotify) ctk_tree_path_free);
 		g_free (locale_filename);
 		g_free (utf8_filename);
 		g_free (utf8_basename);
@@ -917,16 +917,16 @@ move_to_trash_cb (GtkAction * action,
 
 	/* Bugzilla #397945: Select next row in the search results list */
 	if (last_selected_path != NULL) {
-		if (gtk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
-			gtk_tree_selection_select_path (GTK_TREE_SELECTION (gsearch->search_results_selection),
+		if (ctk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
+			ctk_tree_selection_select_path (GTK_TREE_SELECTION (gsearch->search_results_selection),
 			                                last_selected_path);
-			if (gtk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
-				gtk_tree_path_prev (last_selected_path);
-				gtk_tree_selection_select_path (GTK_TREE_SELECTION (gsearch->search_results_selection),
+			if (ctk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
+				ctk_tree_path_prev (last_selected_path);
+				ctk_tree_selection_select_path (GTK_TREE_SELECTION (gsearch->search_results_selection),
 				                                last_selected_path);
 			}
 		}
-		gtk_tree_path_free (last_selected_path);
+		ctk_tree_path_free (last_selected_path);
 	}
 
 	if (gsearch->command_details->command_status != RUNNING) {
@@ -944,21 +944,21 @@ file_button_press_event_cb (GtkWidget * widget,
 
 	row_selected_by_button_press_event = TRUE;
 
-	if (event->window != gtk_tree_view_get_bin_window (tree)) {
+	if (event->window != ctk_tree_view_get_bin_window (tree)) {
 		return FALSE;
 	}
 
-	if (gtk_tree_view_get_path_at_pos (tree, event->x, event->y,
+	if (ctk_tree_view_get_path_at_pos (tree, event->x, event->y,
 		&path, NULL, NULL, NULL)) {
 
 		if ((event->button == 1 || event->button == 2 || event->button == 3)
-			&& gtk_tree_selection_path_is_selected (gtk_tree_view_get_selection (tree), path)) {
+			&& ctk_tree_selection_path_is_selected (ctk_tree_view_get_selection (tree), path)) {
 			row_selected_by_button_press_event = FALSE;
 		}
-		gtk_tree_path_free (path);
+		ctk_tree_path_free (path);
 	}
 	else {
-		gtk_tree_selection_unselect_all (gtk_tree_view_get_selection (tree));
+		ctk_tree_selection_unselect_all (ctk_tree_view_get_selection (tree));
 	}
 
 	return !(row_selected_by_button_press_event);
@@ -1023,17 +1023,17 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 		g_object_unref (gsearch->search_results_popup_submenu);
 	}
 
-	gsearch->search_results_popup_menu = gtk_menu_new ();
+	gsearch->search_results_popup_menu = ctk_menu_new ();
 
 	if (file == NULL || g_file_test (file, G_FILE_TEST_IS_DIR) == TRUE) {
 		/* Popup menu item: Open */
-		new1 = gtk_image_menu_item_new_with_mnemonic  (_("_Open"));
-		gtk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new1);
-		gtk_widget_show (new1);
+		new1 = ctk_image_menu_item_new_with_mnemonic  (_("_Open"));
+		ctk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new1);
+		ctk_widget_show (new1);
 
-		image1 = gtk_image_new_from_icon_name ("document-open", GTK_ICON_SIZE_MENU);
-		gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
-		gtk_widget_show (image1);
+		image1 = ctk_image_new_from_icon_name ("document-open", GTK_ICON_SIZE_MENU);
+		ctk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
+		ctk_widget_show (image1);
 
 		g_signal_connect (G_OBJECT (new1),
 		                  "activate",
@@ -1057,13 +1057,13 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 		if (list_length <= 0) {
 
 			/* Popup menu item: Open */
-			new1 = gtk_image_menu_item_new_with_mnemonic  (_("_Open"));
-			gtk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new1);
-			gtk_widget_show (new1);
+			new1 = ctk_image_menu_item_new_with_mnemonic  (_("_Open"));
+			ctk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new1);
+			ctk_widget_show (new1);
 
-			image1 = gtk_image_new_from_icon_name ("document-open", GTK_ICON_SIZE_MENU);
-			gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
-			gtk_widget_show (image1);
+			image1 = ctk_image_new_from_icon_name ("document-open", GTK_ICON_SIZE_MENU);
+			ctk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
+			ctk_widget_show (image1);
 
 			g_signal_connect (G_OBJECT (new1),
 			                  "activate",
@@ -1083,35 +1083,35 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 
 			/* Popup menu item: Open with (default) */
 			str = g_strdup_printf (_("_Open with %s"),  g_app_info_get_name (list->data));
-			new1 = gtk_image_menu_item_new_with_mnemonic (str);
+			new1 = ctk_image_menu_item_new_with_mnemonic (str);
 			g_free (str);
-			gtk_widget_show (new1);
+			ctk_widget_show (new1);
 
 			g_object_set_data_full (G_OBJECT (new1), "app", (GAppInfo *)list->data,
 			                        g_object_unref);
 
-			gtk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new1);
+			ctk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new1);
 			g_signal_connect ((gpointer) new1, "activate", G_CALLBACK (open_file_cb),
 					  (gpointer) gsearch);
 
 			if (g_app_info_get_icon ((GAppInfo *)list->data) != NULL) {
 				file_icon = g_object_ref (g_app_info_get_icon ((GAppInfo *)list->data));
-				gtk_image_menu_item_set_always_show_image (GTK_IMAGE_MENU_ITEM (new1), file_icon != NULL);
+				ctk_image_menu_item_set_always_show_image (GTK_IMAGE_MENU_ITEM (new1), file_icon != NULL);
 
 				if (file_icon == NULL) {
-					file_icon = g_themed_icon_new ("gtk-open");
+					file_icon = g_themed_icon_new ("ctk-open");
 				}
 
-				image1 = gtk_image_new_from_gicon (file_icon, GTK_ICON_SIZE_MENU);
+				image1 = ctk_image_new_from_gicon (file_icon, GTK_ICON_SIZE_MENU);
 				g_object_unref (file_icon);
-				gtk_widget_show (image1);
-				gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
+				ctk_widget_show (image1);
+				ctk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
 			}
 
-			separatormenuitem1 = gtk_separator_menu_item_new ();
-			gtk_widget_show (separatormenuitem1);
-			gtk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), separatormenuitem1);
-			gtk_widget_set_sensitive (separatormenuitem1, FALSE);
+			separatormenuitem1 = ctk_separator_menu_item_new ();
+			ctk_widget_show (separatormenuitem1);
+			ctk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), separatormenuitem1);
+			ctk_widget_set_sensitive (separatormenuitem1, FALSE);
 
 			for (list = g_list_next (list), i = 0; list != NULL; list = g_list_next (list), i++) {
 
@@ -1123,9 +1123,9 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 					str = g_strdup_printf ("%s",  g_app_info_get_name (list->data));
 				}
 
-				new1 = gtk_image_menu_item_new_with_mnemonic (str);
+				new1 = ctk_image_menu_item_new_with_mnemonic (str);
 				g_free (str);
-				gtk_widget_show (new1);
+				ctk_widget_show (new1);
 
 				g_object_set_data_full (G_OBJECT (new1), "app", (GAppInfo *)list->data,
 			                                g_object_unref);
@@ -1134,32 +1134,32 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 
 					if (g_app_info_get_icon ((GAppInfo *)list->data) != NULL) {
 						file_icon = g_object_ref (g_app_info_get_icon ((GAppInfo *)list->data));
-						gtk_image_menu_item_set_always_show_image (GTK_IMAGE_MENU_ITEM (new1), file_icon != NULL);
+						ctk_image_menu_item_set_always_show_image (GTK_IMAGE_MENU_ITEM (new1), file_icon != NULL);
 
 						if (file_icon == NULL) {
-							file_icon = g_themed_icon_new ("gtk-open");
+							file_icon = g_themed_icon_new ("ctk-open");
 						}
 
-						image1 = gtk_image_new_from_gicon (file_icon, GTK_ICON_SIZE_MENU);
+						image1 = ctk_image_new_from_gicon (file_icon, GTK_ICON_SIZE_MENU);
 						g_object_unref (file_icon);
-						gtk_widget_show (image1);
-						gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
+						ctk_widget_show (image1);
+						ctk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
 					}
 
 					if (i == 0) {
-						gsearch->search_results_popup_submenu = gtk_menu_new ();
+						gsearch->search_results_popup_submenu = ctk_menu_new ();
 
 						/* Popup menu item: Open With */
-					  	new2 = gtk_menu_item_new_with_mnemonic  (_("Open Wit_h"));
-				  		gtk_widget_show (new2);
-					 	gtk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new2);
+					  	new2 = ctk_menu_item_new_with_mnemonic  (_("Open Wit_h"));
+				  		ctk_widget_show (new2);
+					 	ctk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new2);
 
-		  			  	gtk_menu_item_set_submenu (GTK_MENU_ITEM (new2), gsearch->search_results_popup_submenu);
+		  			  	ctk_menu_item_set_submenu (GTK_MENU_ITEM (new2), gsearch->search_results_popup_submenu);
 		                       	}
-					gtk_container_add (GTK_CONTAINER (gsearch->search_results_popup_submenu), new1);
+					ctk_container_add (GTK_CONTAINER (gsearch->search_results_popup_submenu), new1);
 
 					/* For submenu items, the "activate" signal is only emitted if the user first clicks
-					   on the parent menu item.  Since submenus in gtk+ are automatically displayed when
+					   on the parent menu item.  Since submenus in ctk+ are automatically displayed when
 					   the user hovers over them, most will never click on the parent menu item.
 					   The work-around is to connect to "button-press-event". */
 					g_signal_connect (G_OBJECT(new1), "button-press-event", G_CALLBACK (open_file_event_cb),
@@ -1169,39 +1169,39 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 					if (g_app_info_get_icon ((GAppInfo *)list->data) != NULL) {
 
 						file_icon = g_object_ref (g_app_info_get_icon ((GAppInfo *)list->data));
-						gtk_image_menu_item_set_always_show_image (GTK_IMAGE_MENU_ITEM (new1), file_icon != NULL);
+						ctk_image_menu_item_set_always_show_image (GTK_IMAGE_MENU_ITEM (new1), file_icon != NULL);
 
 						if (file_icon == NULL) {
-							file_icon = g_themed_icon_new ("gtk-open");
+							file_icon = g_themed_icon_new ("ctk-open");
 						}
 
-						image1 = gtk_image_new_from_gicon (file_icon, GTK_ICON_SIZE_MENU);
+						image1 = ctk_image_new_from_gicon (file_icon, GTK_ICON_SIZE_MENU);
 						g_object_unref (file_icon);
-						gtk_widget_show (image1);
-						gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
+						ctk_widget_show (image1);
+						ctk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
 					}
-					gtk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new1);
+					ctk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new1);
 					g_signal_connect ((gpointer) new1, "activate", G_CALLBACK (open_file_cb),
 					                  (gpointer) gsearch);
 				}
 			}
 
 			if (list_length >= 2) {
-				separatormenuitem1 = gtk_separator_menu_item_new ();
-				gtk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), separatormenuitem1);
-				gtk_widget_show (separatormenuitem1);
+				separatormenuitem1 = ctk_separator_menu_item_new ();
+				ctk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), separatormenuitem1);
+				ctk_widget_show (separatormenuitem1);
 			}
 		}
 	}
 
 	/* Popup menu item: Open Containing Folder */
-	new1 = gtk_image_menu_item_new_with_mnemonic  (_("Open Containing _Folder"));
-	gtk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new1);
-	gtk_widget_show (new1);
+	new1 = ctk_image_menu_item_new_with_mnemonic  (_("Open Containing _Folder"));
+	ctk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new1);
+	ctk_widget_show (new1);
 
-	image1 = gtk_image_new_from_icon_name ("document-open", GTK_ICON_SIZE_MENU);
-	gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
-	gtk_widget_show (image1);
+	image1 = ctk_image_new_from_icon_name ("document-open", GTK_ICON_SIZE_MENU);
+	ctk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
+	ctk_widget_show (image1);
 
 	g_signal_connect (G_OBJECT (new1),
 	                  "activate",
@@ -1209,21 +1209,21 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 	                  (gpointer) gsearch);
 
 	/* Popup menu item: Move to Trash */
-	separatormenuitem1 = gtk_separator_menu_item_new ();
-	gtk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), separatormenuitem1);
-	gtk_widget_show (separatormenuitem1);
+	separatormenuitem1 = ctk_separator_menu_item_new ();
+	ctk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), separatormenuitem1);
+	ctk_widget_show (separatormenuitem1);
 
-	new1 = gtk_image_menu_item_new_with_mnemonic  (_("Mo_ve to Trash"));
-	gtk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new1);
-	gtk_widget_show (new1);
+	new1 = ctk_image_menu_item_new_with_mnemonic  (_("Mo_ve to Trash"));
+	ctk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), new1);
+	ctk_widget_show (new1);
 
 	GtkIconTheme *icon_theme;
 	GdkPixbuf *pixbuf;
-	icon_theme = gtk_icon_theme_get_default ();
-	pixbuf = gtk_icon_theme_load_icon (icon_theme, "user-trash", GTK_ICON_SIZE_MENU, 0, NULL);
-	image1 = gtk_image_new_from_pixbuf (pixbuf);
-	gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
-	gtk_widget_show (image1);
+	icon_theme = ctk_icon_theme_get_default ();
+	pixbuf = ctk_icon_theme_load_icon (icon_theme, "user-trash", GTK_ICON_SIZE_MENU, 0, NULL);
+	image1 = ctk_image_new_from_pixbuf (pixbuf);
+	ctk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (new1), image1);
+	ctk_widget_show (image1);
 
 	g_signal_connect (G_OBJECT (new1),
 	                  "activate",
@@ -1231,21 +1231,21 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 	                  (gpointer) gsearch);
 
 	/* Popup menu item: Save Results As... */
-	separatormenuitem1 = gtk_separator_menu_item_new ();
-	gtk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), separatormenuitem1);
-	gtk_widget_show (separatormenuitem1);
+	separatormenuitem1 = ctk_separator_menu_item_new ();
+	ctk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), separatormenuitem1);
+	ctk_widget_show (separatormenuitem1);
 
-	gsearch->search_results_save_results_as_item = gtk_image_menu_item_new_with_mnemonic  (_("_Save Results As..."));
-	gtk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), gsearch->search_results_save_results_as_item);
-	gtk_widget_show (gsearch->search_results_save_results_as_item);
+	gsearch->search_results_save_results_as_item = ctk_image_menu_item_new_with_mnemonic  (_("_Save Results As..."));
+	ctk_container_add (GTK_CONTAINER (gsearch->search_results_popup_menu), gsearch->search_results_save_results_as_item);
+	ctk_widget_show (gsearch->search_results_save_results_as_item);
 
 	if (gsearch->command_details->command_status == RUNNING) {
-		gtk_widget_set_sensitive (gsearch->search_results_save_results_as_item, FALSE);
+		ctk_widget_set_sensitive (gsearch->search_results_save_results_as_item, FALSE);
 	}
 
-	image1 = gtk_image_new_from_icon_name ("document-save", GTK_ICON_SIZE_MENU);
-	gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (gsearch->search_results_save_results_as_item), image1);
-	gtk_widget_show (image1);
+	image1 = ctk_image_new_from_icon_name ("document-save", GTK_ICON_SIZE_MENU);
+	ctk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (gsearch->search_results_save_results_as_item), image1);
+	ctk_widget_show (image1);
 
 	g_signal_connect (G_OBJECT (gsearch->search_results_save_results_as_item),
 	                  "activate",
@@ -1260,34 +1260,34 @@ file_button_release_event_cb (GtkWidget * widget,
 {
 	GSearchWindow * gsearch = data;
 
-	if (event->window != gtk_tree_view_get_bin_window (GTK_TREE_VIEW (gsearch->search_results_tree_view))) {
+	if (event->window != ctk_tree_view_get_bin_window (GTK_TREE_VIEW (gsearch->search_results_tree_view))) {
 		return FALSE;
 	}
 
 	if (event->button == 1 || event->button == 2) {
 		GtkTreePath *path;
 
-		if (gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (gsearch->search_results_tree_view), event->x, event->y,
+		if (ctk_tree_view_get_path_at_pos (GTK_TREE_VIEW (gsearch->search_results_tree_view), event->x, event->y,
 		                                   &path, NULL, NULL, NULL)) {
 			if ((event->state & GDK_SHIFT_MASK) || (event->state & GDK_CONTROL_MASK)) {
 				if (row_selected_by_button_press_event) {
-					gtk_tree_selection_select_path (gtk_tree_view_get_selection (GTK_TREE_VIEW(gsearch->search_results_tree_view)), path);
+					ctk_tree_selection_select_path (ctk_tree_view_get_selection (GTK_TREE_VIEW(gsearch->search_results_tree_view)), path);
 				}
 				else {
-					gtk_tree_selection_unselect_path (gtk_tree_view_get_selection (GTK_TREE_VIEW(gsearch->search_results_tree_view)), path);
+					ctk_tree_selection_unselect_path (ctk_tree_view_get_selection (GTK_TREE_VIEW(gsearch->search_results_tree_view)), path);
 				}
 			}
 			else {
 				if (gsearch->is_search_results_single_click_to_activate == FALSE) {
-					gtk_tree_selection_unselect_all (gtk_tree_view_get_selection (GTK_TREE_VIEW(gsearch->search_results_tree_view)));
+					ctk_tree_selection_unselect_all (ctk_tree_view_get_selection (GTK_TREE_VIEW(gsearch->search_results_tree_view)));
 				}
-				gtk_tree_selection_select_path (gtk_tree_view_get_selection (GTK_TREE_VIEW(gsearch->search_results_tree_view)), path);
+				ctk_tree_selection_select_path (ctk_tree_view_get_selection (GTK_TREE_VIEW(gsearch->search_results_tree_view)), path);
 			}
 		}
-		gtk_tree_path_free (path);
+		ctk_tree_path_free (path);
 	}
 
-	if (gtk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
+	if (ctk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
 		return FALSE;
 	}
 
@@ -1299,13 +1299,13 @@ file_button_release_event_cb (GtkWidget * widget,
 		gchar * utf8_name_first;
 		gchar * locale_file_first;
 
-		list = gtk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
+		list = ctk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
 		                                             &model);
 
-		gtk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+		ctk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 		                         g_list_first (list)->data);
 
-		gtk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+		ctk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 		                    COLUMN_NAME, &utf8_name_first,
 				    COLUMN_LOCALE_FILE, &locale_file_first,
 			    	    COLUMN_NO_FILES_FOUND, &no_files_found,
@@ -1332,10 +1332,10 @@ file_button_release_event_cb (GtkWidget * widget,
 					GFile * g_file;
 					GAppInfo * app_info;
 
-					gtk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+					ctk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 					                         tmp->data);
 
-					gtk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+					ctk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 							    COLUMN_LOCALE_FILE, &locale_file_tmp,
 					                    -1);
 
@@ -1376,14 +1376,14 @@ file_button_release_event_cb (GtkWidget * widget,
 			file = g_strdup (((show_app_list == TRUE) ? locale_file_first : NULL));
 
 			build_popup_menu_for_file (gsearch, file);
-			gtk_menu_popup_at_pointer (GTK_MENU (gsearch->search_results_popup_menu),
+			ctk_menu_popup_at_pointer (GTK_MENU (gsearch->search_results_popup_menu),
 			                           (const GdkEvent*) event);
 			g_free (file);
 
 		}
 		g_free (locale_file_first);
 		g_free (utf8_name_first);
-		g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
+		g_list_free_full (list, (GDestroyNotify) ctk_tree_path_free);
 	}
 	else if (event->button == 1 || event->button == 2) {
 		if (gsearch->is_search_results_single_click_to_activate == TRUE) {
@@ -1402,11 +1402,11 @@ file_event_after_cb  (GtkWidget * widget,
 {
 	GSearchWindow * gsearch = data;
 
-	if (event->window != gtk_tree_view_get_bin_window (GTK_TREE_VIEW (gsearch->search_results_tree_view))) {
+	if (event->window != ctk_tree_view_get_bin_window (GTK_TREE_VIEW (gsearch->search_results_tree_view))) {
 		return FALSE;
 	}
 
-	if (gtk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
+	if (ctk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
 		return FALSE;
 	}
 
@@ -1432,19 +1432,19 @@ file_motion_notify_cb (GtkWidget *widget,
 	GtkTreePath * last_hover_path;
 	GtkTreeIter iter;
 
-	display = gtk_widget_get_display (GTK_WIDGET (user_data));
+	display = ctk_widget_get_display (GTK_WIDGET (user_data));
 
 	if (gsearch->is_search_results_single_click_to_activate == FALSE) {
 		return FALSE;
 	}
 
-	if (event->window != gtk_tree_view_get_bin_window (GTK_TREE_VIEW (gsearch->search_results_tree_view))) {
+	if (event->window != ctk_tree_view_get_bin_window (GTK_TREE_VIEW (gsearch->search_results_tree_view))) {
                 return FALSE;
 	}
 
 	last_hover_path = gsearch->search_results_hover_path;
 
-	gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (widget),
+	ctk_tree_view_get_path_at_pos (GTK_TREE_VIEW (widget),
 				       event->x, event->y,
 				       &gsearch->search_results_hover_path,
 				       NULL, NULL, NULL);
@@ -1461,23 +1461,23 @@ file_motion_notify_cb (GtkWidget *widget,
 	/* Redraw if the hover row has changed */
 	if (!(last_hover_path == NULL && gsearch->search_results_hover_path == NULL) &&
 	    (!(last_hover_path != NULL && gsearch->search_results_hover_path != NULL) ||
-	     gtk_tree_path_compare (last_hover_path, gsearch->search_results_hover_path))) {
+	     ctk_tree_path_compare (last_hover_path, gsearch->search_results_hover_path))) {
 		if (last_hover_path) {
-			gtk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store),
+			ctk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store),
 			                         &iter, last_hover_path);
-			gtk_tree_model_row_changed (GTK_TREE_MODEL (gsearch->search_results_list_store),
+			ctk_tree_model_row_changed (GTK_TREE_MODEL (gsearch->search_results_list_store),
 			                            last_hover_path, &iter);
 		}
 
 		if (gsearch->search_results_hover_path) {
-			gtk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store),
+			ctk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store),
 			                         &iter, gsearch->search_results_hover_path);
-			gtk_tree_model_row_changed (GTK_TREE_MODEL (gsearch->search_results_list_store),
+			ctk_tree_model_row_changed (GTK_TREE_MODEL (gsearch->search_results_list_store),
 			                            gsearch->search_results_hover_path, &iter);
 		}
 	}
 
-	gtk_tree_path_free (last_hover_path);
+	ctk_tree_path_free (last_hover_path);
 
  	return FALSE;
 }
@@ -1491,14 +1491,14 @@ file_leave_notify_cb (GtkWidget *widget,
 	GtkTreeIter iter;
 
 	if (gsearch->is_search_results_single_click_to_activate && (gsearch->search_results_hover_path != NULL)) {
-		gtk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store),
+		ctk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store),
 		                         &iter,
 		                         gsearch->search_results_hover_path);
-		gtk_tree_model_row_changed (GTK_TREE_MODEL (gsearch->search_results_list_store),
+		ctk_tree_model_row_changed (GTK_TREE_MODEL (gsearch->search_results_list_store),
 		                            gsearch->search_results_hover_path,
 		                            &iter);
 
-		gtk_tree_path_free (gsearch->search_results_hover_path);
+		ctk_tree_path_free (gsearch->search_results_hover_path);
 		gsearch->search_results_hover_path = NULL;
 
 		return TRUE;
@@ -1515,10 +1515,10 @@ drag_begin_file_cb (GtkWidget * widget,
 	GSearchWindow * gsearch = data;
 	gint number_of_selected_rows;
 
-	number_of_selected_rows = gtk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection));
+	number_of_selected_rows = ctk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection));
 
 	if (number_of_selected_rows > 1) {
-		gtk_drag_set_icon_stock (context, "gtk-dnd-multiple", 0, 0);
+		ctk_drag_set_icon_stock (context, "ctk-dnd-multiple", 0, 0);
 	}
 	else if (number_of_selected_rows == 1) {
 		GdkPixbuf * pixbuf;
@@ -1526,22 +1526,22 @@ drag_begin_file_cb (GtkWidget * widget,
 		GtkTreeIter iter;
 		GList * list;
 
-		list = gtk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
+		list = ctk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
 		                                             &model);
 
-		gtk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+		ctk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 		                         g_list_first (list)->data);
 
-		gtk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+		ctk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 		                    COLUMN_ICON, &pixbuf,
 		                    -1);
-		g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
+		g_list_free_full (list, (GDestroyNotify) ctk_tree_path_free);
 
 		if (pixbuf) {
-			gtk_drag_set_icon_pixbuf (context, pixbuf, 0, 0);
+			ctk_drag_set_icon_pixbuf (context, pixbuf, 0, 0);
 		}
 		else {
-			gtk_drag_set_icon_stock (context, "gtk-dnd", 0, 0);
+			ctk_drag_set_icon_stock (context, "ctk-dnd", 0, 0);
 		}
 	}
 }
@@ -1561,11 +1561,11 @@ drag_file_cb  (GtkWidget * widget,
 	GtkTreeIter iter;
 	guint idx;
 
-	if (gtk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
+	if (ctk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
 		return;
 	}
 
-	list = gtk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
+	list = ctk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
                                                      &model);
 
 	for (idx = 0; idx < g_list_length (list); idx++) {
@@ -1574,10 +1574,10 @@ drag_file_cb  (GtkWidget * widget,
 		gchar * utf8_name;
 		gchar * locale_file;
 
-		gtk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+		ctk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 		                         g_list_nth_data (list, idx));
 
-		gtk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+		ctk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 		                    COLUMN_NAME, &utf8_name,
 		                    COLUMN_LOCALE_FILE, &locale_file,
 		                    COLUMN_NO_FILES_FOUND, &no_files_found,
@@ -1592,20 +1592,20 @@ drag_file_cb  (GtkWidget * widget,
 			else {
 				uri_list = g_strconcat (uri_list, "\n", tmp_uri, NULL);
 			}
-			gtk_selection_data_set (selection_data,
-			                        gtk_selection_data_get_target (selection_data),
+			ctk_selection_data_set (selection_data,
+			                        ctk_selection_data_get_target (selection_data),
 			                        8,
 			                        (guchar *) uri_list,
 			                        strlen (uri_list));
 			g_free (tmp_uri);
 		}
 		else {
-			gtk_selection_data_set_text (selection_data, utf8_name, -1);
+			ctk_selection_data_set_text (selection_data, utf8_name, -1);
 		}
 		g_free (utf8_name);
 		g_free (locale_file);
 	}
-	g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
+	g_list_free_full (list, (GDestroyNotify) ctk_tree_path_free);
 	g_free (uri_list);
 }
 
@@ -1617,26 +1617,26 @@ show_file_selector_cb (GtkAction * action,
 	GSearchWindow * gsearch = data;
 	GtkWidget * file_chooser;
 
-	file_chooser = gtk_file_chooser_dialog_new (_("Save Search Results As..."),
+	file_chooser = ctk_file_chooser_dialog_new (_("Save Search Results As..."),
 	                                            GTK_WINDOW (gsearch->window),
 	                                            GTK_FILE_CHOOSER_ACTION_SAVE,
-	                                            "gtk-cancel", GTK_RESPONSE_CANCEL,
-	                                            "gtk-save", GTK_RESPONSE_OK,
+	                                            "ctk-cancel", GTK_RESPONSE_CANCEL,
+	                                            "ctk-save", GTK_RESPONSE_OK,
 	                                            NULL);
 
-	gtk_file_chooser_set_do_overwrite_confirmation (GTK_FILE_CHOOSER (file_chooser), TRUE);
+	ctk_file_chooser_set_do_overwrite_confirmation (GTK_FILE_CHOOSER (file_chooser), TRUE);
 	if (gsearch->save_results_as_default_filename != NULL) {
-		gtk_file_chooser_set_filename (GTK_FILE_CHOOSER (file_chooser),
+		ctk_file_chooser_set_filename (GTK_FILE_CHOOSER (file_chooser),
 		                               gsearch->save_results_as_default_filename);
 	}
 
 	g_signal_connect (G_OBJECT (file_chooser), "response",
 			  G_CALLBACK (save_results_cb), gsearch);
 
-	gtk_window_set_modal (GTK_WINDOW (file_chooser), TRUE);
-	gtk_window_set_position (GTK_WINDOW (file_chooser), GTK_WIN_POS_CENTER_ON_PARENT);
+	ctk_window_set_modal (GTK_WINDOW (file_chooser), TRUE);
+	ctk_window_set_position (GTK_WINDOW (file_chooser), GTK_WIN_POS_CENTER_ON_PARENT);
 
-	gtk_widget_show (GTK_WIDGET (file_chooser));
+	ctk_widget_show (GTK_WIDGET (file_chooser));
 }
 
 static void
@@ -1649,22 +1649,22 @@ display_dialog_could_not_save_no_name (GtkWidget * window)
 	primary = g_strdup (_("Could not save document."));
 	secondary = g_strdup (_("You did not select a document name."));
 
-	dialog = gtk_message_dialog_new (GTK_WINDOW (window),
+	dialog = ctk_message_dialog_new (GTK_WINDOW (window),
 	                                 GTK_DIALOG_DESTROY_WITH_PARENT,
 	                                 GTK_MESSAGE_ERROR,
 	                                 GTK_BUTTONS_OK,
 	                                 primary, NULL);
-	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+	ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 	                                          secondary, NULL);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), "");
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
+	ctk_window_set_title (GTK_WINDOW (dialog), "");
+	ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+	ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
 
 	g_signal_connect (G_OBJECT (dialog),
 	                  "response",
-	                  G_CALLBACK (gtk_widget_destroy), NULL);
-	gtk_widget_show (dialog);
+	                  G_CALLBACK (ctk_widget_destroy), NULL);
+	ctk_widget_show (dialog);
 	g_free (primary);
 	g_free (secondary);
 }
@@ -1681,22 +1681,22 @@ display_dialog_could_not_save_to (GtkWidget * window,
 	                           g_path_get_basename (file),
 	                           g_path_get_dirname (file));
 
-	dialog = gtk_message_dialog_new (GTK_WINDOW (window),
+	dialog = ctk_message_dialog_new (GTK_WINDOW (window),
 	                                 GTK_DIALOG_DESTROY_WITH_PARENT,
 	                                 GTK_MESSAGE_ERROR,
 	                                 GTK_BUTTONS_OK,
 	                                 primary, NULL);
-	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+	ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 	                                          message, NULL);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), "");
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
+	ctk_window_set_title (GTK_WINDOW (dialog), "");
+	ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+	ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
 
 	g_signal_connect (G_OBJECT (dialog),
 	                  "response",
-	                  G_CALLBACK (gtk_widget_destroy), NULL);
-	gtk_widget_show (dialog);
+	                  G_CALLBACK (ctk_widget_destroy), NULL);
+	ctk_widget_show (dialog);
 	g_free (primary);
 }
 
@@ -1717,28 +1717,28 @@ display_dialog_could_not_save_exists (GtkWidget * window,
 	secondary = g_strdup (_("If you replace an existing file, "
 	                        "its contents will be overwritten."));
 
-	dialog = gtk_message_dialog_new (GTK_WINDOW (window),
+	dialog = ctk_message_dialog_new (GTK_WINDOW (window),
 	                                 GTK_DIALOG_DESTROY_WITH_PARENT,
 	                                 GTK_MESSAGE_QUESTION,
 	                                 GTK_BUTTONS_CANCEL,
 	                                 "%s", primary);
-	gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+	ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
 	                                          "%s", secondary);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), "");
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
+	ctk_window_set_title (GTK_WINDOW (dialog), "");
+	ctk_container_set_border_width (GTK_CONTAINER (dialog), 5);
+	ctk_box_set_spacing (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (dialog))), 14);
 
-	button = gsearchtool_button_new_with_icon (_("_Replace"), "gtk-ok");
-	gtk_widget_set_can_default (button, TRUE);
-	gtk_widget_show (button);
+	button = gsearchtool_button_new_with_icon (_("_Replace"), "ctk-ok");
+	ctk_widget_set_can_default (button, TRUE);
+	ctk_widget_show (button);
 
-	gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, GTK_RESPONSE_OK);
-	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
+	ctk_dialog_add_action_widget (GTK_DIALOG (dialog), button, GTK_RESPONSE_OK);
+	ctk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
 
-	response = gtk_dialog_run (GTK_DIALOG (dialog));
+	response = ctk_dialog_run (GTK_DIALOG (dialog));
 
-	gtk_widget_destroy (GTK_WIDGET(dialog));
+	ctk_widget_destroy (GTK_WIDGET(dialog));
 	g_free (primary);
 	g_free (secondary);
 
@@ -1757,15 +1757,15 @@ save_results_cb (GtkWidget * chooser,
 	gchar * utf8 = NULL;
 
 	if (response != GTK_RESPONSE_OK) {
-		gtk_widget_destroy (GTK_WIDGET (chooser));
+		ctk_widget_destroy (GTK_WIDGET (chooser));
 		return;
 	}
 
 	store = gsearch->search_results_list_store;
 	g_free (gsearch->save_results_as_default_filename);
 
-	gsearch->save_results_as_default_filename = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (chooser));
-	gtk_widget_destroy (chooser);
+	gsearch->save_results_as_default_filename = ctk_file_chooser_get_filename (GTK_FILE_CHOOSER (chooser));
+	ctk_widget_destroy (chooser);
 
 	if (gsearch->save_results_as_default_filename != NULL) {
 		utf8 = g_filename_to_utf8 (gsearch->save_results_as_default_filename, -1, NULL, NULL, NULL);
@@ -1799,13 +1799,13 @@ save_results_cb (GtkWidget * chooser,
 
 		gint idx;
 
-		for (idx = 0; idx < gtk_tree_model_iter_n_children (GTK_TREE_MODEL (store), NULL); idx++)
+		for (idx = 0; idx < ctk_tree_model_iter_n_children (GTK_TREE_MODEL (store), NULL); idx++)
 		{
-			if (gtk_tree_model_iter_nth_child (GTK_TREE_MODEL (store), &iter, NULL, idx) == TRUE) {
+			if (ctk_tree_model_iter_nth_child (GTK_TREE_MODEL (store), &iter, NULL, idx) == TRUE) {
 
 				gchar * locale_file;
 
-				gtk_tree_model_get (GTK_TREE_MODEL (store), &iter, COLUMN_LOCALE_FILE, &locale_file, -1);
+				ctk_tree_model_get (GTK_TREE_MODEL (store), &iter, COLUMN_LOCALE_FILE, &locale_file, -1);
 				fprintf (fp, "%s\n", locale_file);
 				g_free (locale_file);
 			}
@@ -1856,23 +1856,23 @@ key_press_cb (GtkWidget * widget,
 			GtkTreeIter iter;
 			GList * list;
 
-			if (gtk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
+			if (ctk_tree_selection_count_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
 				return FALSE;
 			}
 
-			list = gtk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
+			list = ctk_tree_selection_get_selected_rows (GTK_TREE_SELECTION (gsearch->search_results_selection),
 			                                             &model);
 
-			gtk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+			ctk_tree_model_get_iter (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 						 g_list_first (list)->data);
 
-			gtk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
+			ctk_tree_model_get (GTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 					    COLUMN_NO_FILES_FOUND, &no_files_found, -1);
 
-			g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
+			g_list_free_full (list, (GDestroyNotify) ctk_tree_path_free);
 
 			if (!no_files_found) {
-				gtk_menu_popup_at_pointer (GTK_MENU (gsearch->search_results_popup_menu),
+				ctk_menu_popup_at_pointer (GTK_MENU (gsearch->search_results_popup_menu),
 				                           (const GdkEvent*) event);
 				return TRUE;
 			}
@@ -1897,7 +1897,7 @@ disable_quick_search_cb (GtkWidget * dialog,
 {
 	GSearchWindow * gsearch = data;
 
-	gtk_widget_destroy (GTK_WIDGET (dialog));
+	ctk_widget_destroy (GTK_WIDGET (dialog));
 
 	if (response == GTK_RESPONSE_OK) {
 		g_settings_set_boolean (gsearch->cafe_search_tool_settings, "disable-quick-search", TRUE);

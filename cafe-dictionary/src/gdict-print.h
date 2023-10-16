@@ -23,7 +23,7 @@
 #ifndef __GDICT_PRINT_H__
 #define __GDICT_PRINT_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <libgdict/gdict-defbox.h>
 
 G_BEGIN_DECLS

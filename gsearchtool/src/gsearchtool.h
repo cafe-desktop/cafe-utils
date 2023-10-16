@@ -33,7 +33,7 @@ extern "C" {
 #pragma }
 #endif
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #define GSEARCH_TYPE_WINDOW gsearch_window_get_type()
 #define GSEARCH_WINDOW(obj) \
