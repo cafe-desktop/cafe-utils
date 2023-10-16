@@ -57,7 +57,7 @@ on_toplevel_key_press_event (GtkWidget *widget,
 {
   if (key->keyval == GDK_KEY_F1)
     {
-      ctk_dialog_response (GTK_DIALOG (widget), GTK_RESPONSE_HELP);
+      ctk_dialog_response (CTK_DIALOG (widget), CTK_RESPONSE_HELP);
       return TRUE;
     }
 
@@ -200,11 +200,11 @@ screenshot_dialog_new (GdkPixbuf *screenshot,
     {
       GtkWidget *dialog;
       dialog = ctk_message_dialog_new (NULL, 0,
-				       GTK_MESSAGE_ERROR,
-				       GTK_BUTTONS_OK,
+				       CTK_MESSAGE_ERROR,
+				       CTK_BUTTONS_OK,
 				       _("Error loading UI definition file for the screenshot program: \n%s\n\n"
 				         "Please check your installation of cafe-utils."), error->message);
-      ctk_dialog_run (GTK_DIALOG (dialog));
+      ctk_dialog_run (CTK_DIALOG (dialog));
       ctk_widget_destroy (dialog);
 
       g_error_free (error);
@@ -219,22 +219,22 @@ screenshot_dialog_new (GdkPixbuf *screenshot,
   width /= 5;
   height /= 5;
 
-  toplevel = GTK_WIDGET (ctk_builder_get_object (dialog->ui, "toplevel"));
-  aspect_frame = GTK_WIDGET (ctk_builder_get_object (dialog->ui, "aspect_frame"));
-  preview_darea = GTK_WIDGET (ctk_builder_get_object (dialog->ui, "preview_darea"));
-  dialog->filename_entry = GTK_WIDGET (ctk_builder_get_object (dialog->ui, "filename_entry"));
-  file_chooser_box = GTK_WIDGET (ctk_builder_get_object (dialog->ui, "file_chooser_box"));
+  toplevel = CTK_WIDGET (ctk_builder_get_object (dialog->ui, "toplevel"));
+  aspect_frame = CTK_WIDGET (ctk_builder_get_object (dialog->ui, "aspect_frame"));
+  preview_darea = CTK_WIDGET (ctk_builder_get_object (dialog->ui, "preview_darea"));
+  dialog->filename_entry = CTK_WIDGET (ctk_builder_get_object (dialog->ui, "filename_entry"));
+  file_chooser_box = CTK_WIDGET (ctk_builder_get_object (dialog->ui, "file_chooser_box"));
 
-  dialog->save_widget = ctk_file_chooser_button_new (_("Select a folder"), GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);
-  ctk_file_chooser_set_local_only (GTK_FILE_CHOOSER (dialog->save_widget), FALSE);
-  ctk_file_chooser_set_current_folder_uri (GTK_FILE_CHOOSER (dialog->save_widget), current_folder);
-  ctk_entry_set_text (GTK_ENTRY (dialog->filename_entry), current_name);
+  dialog->save_widget = ctk_file_chooser_button_new (_("Select a folder"), CTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);
+  ctk_file_chooser_set_local_only (CTK_FILE_CHOOSER (dialog->save_widget), FALSE);
+  ctk_file_chooser_set_current_folder_uri (CTK_FILE_CHOOSER (dialog->save_widget), current_folder);
+  ctk_entry_set_text (CTK_ENTRY (dialog->filename_entry), current_name);
 
-  ctk_box_pack_start (GTK_BOX (file_chooser_box), dialog->save_widget, TRUE, TRUE, 0);
+  ctk_box_pack_start (CTK_BOX (file_chooser_box), dialog->save_widget, TRUE, TRUE, 0);
   g_free (current_folder);
 
   ctk_widget_set_size_request (preview_darea, width, height);
-  ctk_aspect_frame_set (GTK_ASPECT_FRAME (aspect_frame), 0.0, 0.5,
+  ctk_aspect_frame_set (CTK_ASPECT_FRAME (aspect_frame), 0.0, 0.5,
 			gdk_pixbuf_get_width (screenshot)/
 			(gfloat) gdk_pixbuf_get_height (screenshot),
 			FALSE);
@@ -244,9 +244,9 @@ screenshot_dialog_new (GdkPixbuf *screenshot,
   g_signal_connect (preview_darea, "button_release_event", G_CALLBACK (on_preview_button_release_event), dialog);
 
   if (take_window_shot)
-    ctk_frame_set_shadow_type (GTK_FRAME (aspect_frame), GTK_SHADOW_NONE);
+    ctk_frame_set_shadow_type (CTK_FRAME (aspect_frame), CTK_SHADOW_NONE);
   else
-    ctk_frame_set_shadow_type (GTK_FRAME (aspect_frame), GTK_SHADOW_IN);
+    ctk_frame_set_shadow_type (CTK_FRAME (aspect_frame), CTK_SHADOW_IN);
 
   /* setup dnd */
   g_signal_connect (G_OBJECT (preview_darea), "drag_begin",
@@ -265,7 +265,7 @@ screenshot_dialog_new (GdkPixbuf *screenshot,
   else
     pos = -1;
 
-  ctk_editable_select_region (GTK_EDITABLE (dialog->filename_entry),
+  ctk_editable_select_region (CTK_EDITABLE (dialog->filename_entry),
 			      0,
 			      pos);
 
@@ -287,7 +287,7 @@ screenshot_dialog_enable_dnd (ScreenshotDialog *dialog)
 
   g_return_if_fail (dialog != NULL);
 
-  preview_darea = GTK_WIDGET (ctk_builder_get_object (dialog->ui, "preview_darea"));
+  preview_darea = CTK_WIDGET (ctk_builder_get_object (dialog->ui, "preview_darea"));
   ctk_drag_source_set (preview_darea,
 		       GDK_BUTTON1_MASK | GDK_BUTTON3_MASK,
 		       drag_types, G_N_ELEMENTS (drag_types),
@@ -297,7 +297,7 @@ screenshot_dialog_enable_dnd (ScreenshotDialog *dialog)
 GtkWidget *
 screenshot_dialog_get_toplevel (ScreenshotDialog *dialog)
 {
-  return GTK_WIDGET (ctk_builder_get_object (dialog->ui, "toplevel"));
+  return CTK_WIDGET (ctk_builder_get_object (dialog->ui, "toplevel"));
 }
 
 char *
@@ -308,8 +308,8 @@ screenshot_dialog_get_uri (ScreenshotDialog *dialog)
   gchar *uri, *file, *tmp;
   GError *error;
 
-  folder = ctk_file_chooser_get_uri (GTK_FILE_CHOOSER (dialog->save_widget));
-  file_name = ctk_entry_get_text (GTK_ENTRY (dialog->filename_entry));
+  folder = ctk_file_chooser_get_uri (CTK_FILE_CHOOSER (dialog->save_widget));
+  file_name = ctk_entry_get_text (CTK_ENTRY (dialog->filename_entry));
 
   error = NULL;
   tmp = g_filename_from_utf8 (file_name, -1, NULL, NULL, &error);
@@ -336,7 +336,7 @@ screenshot_dialog_get_uri (ScreenshotDialog *dialog)
 char *
 screenshot_dialog_get_folder (ScreenshotDialog *dialog)
 {
-  return ctk_file_chooser_get_uri (GTK_FILE_CHOOSER (dialog->save_widget));
+  return ctk_file_chooser_get_uri (CTK_FILE_CHOOSER (dialog->save_widget));
 }
 
 GdkPixbuf *

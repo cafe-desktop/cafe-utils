@@ -50,14 +50,14 @@ extra_files =
 
 # CFLAGS and LDFLAGS for compiling scan program. Only needed if your app/lib
 # contains GtkObjects/GObjects and you want to document signals and properties.
-GTKDOC_CFLAGS = \
+CTKDOC_CFLAGS = \
 	$(CFLAGS) \
 	$(CPPFLAGS) \
 	$(LIBGDICT_CFLAGS) \
 	-I$(srcdir)/../../../libgdict \
 	-I$(top_builddir)/cafe-dictionary/libgdict
 
-GTKDOC_LIBS = \
+CTKDOC_LIBS = \
 	$(LDFLAGS) \
 	$(LIBGDICT_LIBS) \
 	../../../libgdict/libcafedict.la

@@ -354,7 +354,7 @@ logview_app_initialize (LogviewApp *app, char **log_files)
     logview_manager_add_logs_from_names (priv->manager, log_files, NULL);
   }
 
-  ctk_widget_show (GTK_WIDGET (priv->window));
+  ctk_widget_show (CTK_WIDGET (priv->window));
 }
 
 void

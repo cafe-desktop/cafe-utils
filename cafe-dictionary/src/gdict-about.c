@@ -73,7 +73,7 @@ gdict_show_about_dialog (GtkWidget *parent)
        "02110-1301, USA.")
   };
 
-  g_return_if_fail (GTK_IS_WIDGET (parent));
+  g_return_if_fail (CTK_IS_WIDGET (parent));
 
   char *license_trans = g_strjoin ("\n\n", _(license[0]), _(license[1]), _(license[2]), NULL);
 
@@ -83,7 +83,7 @@ gdict_show_about_dialog (GtkWidget *parent)
     *p = _(*p);
 #endif
 
-  ctk_show_about_dialog (GTK_IS_WINDOW (parent) ? GTK_WINDOW (parent) : NULL,
+  ctk_show_about_dialog (CTK_IS_WINDOW (parent) ? CTK_WINDOW (parent) : NULL,
 			 "program-name", _("Dictionary"),
   			 "version", VERSION,
 			 "title", _("About Dictionary"),

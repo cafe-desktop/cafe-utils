@@ -76,11 +76,11 @@ filechooser_cb (GtkWidget *chooser,
                 gint response,
                 gpointer data)
 {
-	if (response == GTK_RESPONSE_OK) {
+	if (response == CTK_RESPONSE_OK) {
 		gchar *filename;
 		GFile	*file;
 
-		filename = ctk_file_chooser_get_uri (GTK_FILE_CHOOSER (chooser));
+		filename = ctk_file_chooser_get_uri (CTK_FILE_CHOOSER (chooser));
 		ctk_widget_hide (chooser);
 
 		file = g_file_new_for_uri (filename);
@@ -104,23 +104,23 @@ dir_select (gboolean SEARCH, GtkWidget *parent)
 
 	if (file_chooser == NULL) {
 		file_chooser = ctk_file_chooser_dialog_new (_("Select Folder"),
-					      GTK_WINDOW (parent),
-					      GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
+					      CTK_WINDOW (parent),
+					      CTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
 					      "ctk-cancel",
-					      GTK_RESPONSE_CANCEL,
+					      CTK_RESPONSE_CANCEL,
 					      "ctk-open",
-					      GTK_RESPONSE_OK, NULL);
+					      CTK_RESPONSE_OK, NULL);
 
-		ctk_file_chooser_set_show_hidden (GTK_FILE_CHOOSER (file_chooser), FALSE);
-		ctk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (file_chooser),
+		ctk_file_chooser_set_show_hidden (CTK_FILE_CHOOSER (file_chooser), FALSE);
+		ctk_file_chooser_set_current_folder (CTK_FILE_CHOOSER (file_chooser),
 					     g_get_home_dir ());
 		/* add extra widget */
 		toggle = ctk_check_button_new_with_mnemonic (_("_Show hidden folders"));
 		ctk_widget_show (toggle);
-		ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (toggle), FALSE);
+		ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (toggle), FALSE);
 		g_signal_connect ((gpointer) toggle, "toggled",
 				  G_CALLBACK (on_toggled), file_chooser);
-		ctk_file_chooser_set_extra_widget (GTK_FILE_CHOOSER (file_chooser),
+		ctk_file_chooser_set_extra_widget (CTK_FILE_CHOOSER (file_chooser),
 						   toggle);
 
 		g_signal_connect (file_chooser, "response",
@@ -128,11 +128,11 @@ dir_select (gboolean SEARCH, GtkWidget *parent)
 		g_signal_connect (file_chooser, "destroy",
 				  G_CALLBACK (ctk_widget_destroyed), &file_chooser);
 
-		ctk_window_set_modal (GTK_WINDOW (file_chooser), TRUE);
-		ctk_window_set_position (GTK_WINDOW (file_chooser), GTK_WIN_POS_CENTER_ON_PARENT);
+		ctk_window_set_modal (CTK_WINDOW (file_chooser), TRUE);
+		ctk_window_set_position (CTK_WINDOW (file_chooser), CTK_WIN_POS_CENTER_ON_PARENT);
 	}
 
-	ctk_widget_show (GTK_WIDGET (file_chooser));
+	ctk_widget_show (CTK_WIDGET (file_chooser));
 
 	return NULL;
 }
@@ -140,9 +140,9 @@ dir_select (gboolean SEARCH, GtkWidget *parent)
 void
 on_toggled (GtkToggleButton *togglebutton, gpointer dialog)
 {
-	ctk_file_chooser_set_show_hidden (GTK_FILE_CHOOSER (dialog),
+	ctk_file_chooser_set_show_hidden (CTK_FILE_CHOOSER (dialog),
 					  !ctk_file_chooser_get_show_hidden
-					  (GTK_FILE_CHOOSER (dialog)));
+					  (CTK_FILE_CHOOSER (dialog)));
 }
 
 void
@@ -150,7 +150,7 @@ set_ui_action_sens (const gchar *name, gboolean sens)
 {
 	GtkAction *a;
 
-	a = GTK_ACTION (ctk_builder_get_object (baobab.main_ui, name));
+	a = CTK_ACTION (ctk_builder_get_object (baobab.main_ui, name));
 	ctk_action_set_sensitive (a, sens);
 }
 
@@ -159,7 +159,7 @@ set_ui_widget_sens (const gchar *name, gboolean sens)
 {
 	GtkWidget *w;
 
-	w = GTK_WIDGET (ctk_builder_get_object (baobab.main_ui, name));
+	w = CTK_WIDGET (ctk_builder_get_object (baobab.main_ui, name));
 	ctk_widget_set_sensitive (w, sens);
 }
 
@@ -185,7 +185,7 @@ show_bars (GtkTreeModel *mdl,
 				    &readelements, -1);
 
 		if (readelements == -1) {
-			ctk_tree_store_set (GTK_TREE_STORE (mdl), iter,
+			ctk_tree_store_set (CTK_TREE_STORE (mdl), iter,
 					    COL_DIR_SIZE, "--",
 					    COL_ELEMENTS, "--", -1);
 			return FALSE;
@@ -199,7 +199,7 @@ show_bars (GtkTreeModel *mdl,
 			sizecstr = g_format_size (size);
 
  		if (readelements == -1) {
-			ctk_tree_store_set (GTK_TREE_STORE (mdl), iter,
+			ctk_tree_store_set (CTK_TREE_STORE (mdl), iter,
 				            COL_DIR_SIZE, sizecstr, -1);
 
 			g_free (sizecstr);
@@ -209,7 +209,7 @@ show_bars (GtkTreeModel *mdl,
 		ctk_tree_model_get (mdl, &parent, size_col, &refsize, -1);
 		perc = (refsize != 0) ? ((gdouble) size * 100) / (gdouble) refsize : 0.0;
 
-		ctk_tree_store_set (GTK_TREE_STORE (mdl), iter,
+		ctk_tree_store_set (CTK_TREE_STORE (mdl), iter,
 				    COL_DIR_SIZE, sizecstr,
 				    COL_H_PERC, perc, -1);
 
@@ -224,14 +224,14 @@ show_bars (GtkTreeModel *mdl,
 
 				sizecstr = g_format_size (size);
 
-			ctk_tree_store_set (GTK_TREE_STORE (mdl), iter,
+			ctk_tree_store_set (CTK_TREE_STORE (mdl), iter,
 					    COL_H_PERC, 100.0,
 					    COL_DIR_SIZE, sizecstr, -1);
 
 			g_free (sizecstr);
 		}
 		else {
-			ctk_tree_store_set (GTK_TREE_STORE (mdl), iter,
+			ctk_tree_store_set (CTK_TREE_STORE (mdl), iter,
 		  		 	    COL_DIR_SIZE, "--",
 					    COL_ELEMENTS, "--", -1);
 		}
@@ -247,13 +247,13 @@ message (const gchar *primary_msg,
 	 GtkWidget *parent)
 {
 	GtkWidget *dialog;
-	dialog = ctk_message_dialog_new (GTK_WINDOW (parent),
-					 GTK_DIALOG_DESTROY_WITH_PARENT,
+	dialog = ctk_message_dialog_new (CTK_WINDOW (parent),
+					 CTK_DIALOG_DESTROY_WITH_PARENT,
 					 type,
-					 GTK_BUTTONS_OK, "%s", primary_msg);
-	ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+					 CTK_BUTTONS_OK, "%s", primary_msg);
+	ctk_message_dialog_format_secondary_text (CTK_MESSAGE_DIALOG (dialog),
 	                                          "%s", secondary_msg);
-	ctk_dialog_run (GTK_DIALOG (dialog));
+	ctk_dialog_run (CTK_DIALOG (dialog));
 	ctk_widget_destroy (dialog);
 }
 
@@ -268,21 +268,21 @@ messageyesno (const gchar *primary_msg,
 	GtkWidget *button;
 	gint response;
 
-	dialog = ctk_message_dialog_new (GTK_WINDOW (parent),
-					 GTK_DIALOG_DESTROY_WITH_PARENT,
+	dialog = ctk_message_dialog_new (CTK_WINDOW (parent),
+					 CTK_DIALOG_DESTROY_WITH_PARENT,
 					 type,
-					 GTK_BUTTONS_CANCEL,
+					 CTK_BUTTONS_CANCEL,
 					 "%s", primary_msg);
-	ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+	ctk_message_dialog_format_secondary_text (CTK_MESSAGE_DIALOG (dialog),
 	                                          "%s", secondary_msg);
 
 	button = ctk_button_new_with_mnemonic (ok_button);
 	ctk_widget_set_can_default (button, TRUE);
 	ctk_widget_show (button);
 
-	ctk_dialog_add_action_widget (GTK_DIALOG (dialog), button, GTK_RESPONSE_OK);
-	ctk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
-	response = ctk_dialog_run (GTK_DIALOG (dialog));
+	ctk_dialog_add_action_widget (CTK_DIALOG (dialog), button, CTK_RESPONSE_OK);
+	ctk_dialog_set_default_response (CTK_DIALOG (dialog), CTK_RESPONSE_OK);
+	response = ctk_dialog_run (CTK_DIALOG (dialog));
 	ctk_widget_destroy (dialog);
 
 	return response;
@@ -296,7 +296,7 @@ baobab_check_dir (GFile	*file)
 	gboolean ret = TRUE;
 
 	if (baobab_is_excluded_location (file)) {
-		message("", _("Cannot check an excluded folder!"), GTK_MESSAGE_INFO, baobab.window);
+		message("", _("Cannot check an excluded folder!"), CTK_MESSAGE_INFO, baobab.window);
 		return FALSE;
 		}
 
@@ -307,7 +307,7 @@ baobab_check_dir (GFile	*file)
 				  &error);
 
 	if (!info) {
-		message("", error->message, GTK_MESSAGE_INFO, baobab.window);
+		message("", error->message, CTK_MESSAGE_INFO, baobab.window);
 		g_error_free (error);
 
 		return FALSE;
@@ -324,7 +324,7 @@ baobab_check_dir (GFile	*file)
 					     name);
 
 		message (error_msg, _("Could not analyze disk usage."),
-		         GTK_MESSAGE_ERROR, baobab.window);
+		         CTK_MESSAGE_ERROR, baobab.window);
 
 		g_free (error_msg);
 		g_free (name);
@@ -343,12 +343,12 @@ add_popupmenu_item (GtkMenu *pmenu, const gchar *label, const gchar *icon_name, 
 	GtkWidget *image;
 
 	item = ctk_image_menu_item_new_with_mnemonic (label);
-	image = ctk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_MENU);
-	ctk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (item), image);
+	image = ctk_image_new_from_icon_name (icon_name, CTK_ICON_SIZE_MENU);
+	ctk_image_menu_item_set_image (CTK_IMAGE_MENU_ITEM (item), image);
 
 	g_signal_connect (item, "activate", item_cb, NULL);
 
-	ctk_container_add (GTK_CONTAINER (pmenu), item);
+	ctk_container_add (CTK_CONTAINER (pmenu), item);
 }
 
 void
@@ -358,20 +358,20 @@ popupmenu_list (GtkTreePath *path, GdkEventButton *event, gboolean can_trash)
 
 	pmenu = ctk_menu_new ();
 
-	add_popupmenu_item (GTK_MENU (pmenu),
+	add_popupmenu_item (CTK_MENU (pmenu),
 			    _("_Open Folder"),
 			    "document-open",
 			    G_CALLBACK (open_file_cb));
 
 	if (baobab.is_local && can_trash) {
-		add_popupmenu_item (GTK_MENU (pmenu),
+		add_popupmenu_item (CTK_MENU (pmenu),
 				    _("Mo_ve to Trash"),
 				    "edit-delete",
 				    G_CALLBACK (trash_dir_cb));
 	}
 
 	ctk_widget_show_all (pmenu);
-	ctk_menu_popup_at_pointer (GTK_MENU (pmenu),
+	ctk_menu_popup_at_pointer (CTK_MENU (pmenu),
 	                           (const GdkEvent*) event);
 }
 
@@ -399,7 +399,7 @@ open_file_with_application (GFile *file)
 			message (primary,
 			         _("There is no installed viewer capable "
 				   "of displaying the folder."),
-				 GTK_MESSAGE_ERROR,
+				 CTK_MESSAGE_ERROR,
 				 baobab.window);
 			g_free (primary);
 	}
@@ -475,7 +475,7 @@ trash_file (GFile *file)
 			str = g_strdup (_("Could not move file to the Trash"));
 
 		mess = g_strdup_printf (_("Details: %s"), error->message);
-		message (str, mess, GTK_MESSAGE_ERROR, baobab.window);
+		message (str, mess, CTK_MESSAGE_ERROR, baobab.window);
 		g_free (str);
 		g_free (mess);
 		g_error_free (error);
@@ -509,12 +509,12 @@ baobab_help_display (GtkWindow   *parent,
 		GtkWidget *dialog;
 
 		dialog = ctk_message_dialog_new (parent,
-						 GTK_DIALOG_DESTROY_WITH_PARENT,
-						 GTK_MESSAGE_ERROR,
-						 GTK_BUTTONS_CLOSE,
+						 CTK_DIALOG_DESTROY_WITH_PARENT,
+						 CTK_MESSAGE_ERROR,
+						 CTK_BUTTONS_CLOSE,
 						 _("There was an error displaying help."));
 
-		ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+		ctk_message_dialog_format_secondary_text (CTK_MESSAGE_DIALOG (dialog),
 							  "%s", error->message);
 
 		g_signal_connect (G_OBJECT (dialog), "response",

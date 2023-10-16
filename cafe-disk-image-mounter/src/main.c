@@ -50,14 +50,14 @@ show_error (const gchar *format, ...)
     {
       GtkWidget *dialog;
       dialog = ctk_message_dialog_new_with_markup (NULL,
-                                                   GTK_DIALOG_MODAL,
-                                                   GTK_MESSAGE_ERROR,
-                                                   GTK_BUTTONS_CLOSE,
+                                                   CTK_DIALOG_MODAL,
+                                                   CTK_MESSAGE_ERROR,
+                                                   CTK_BUTTONS_CLOSE,
                                                    "<big><b>%s</b></big>",
                                                    _("An error occurred"));
-      ctk_message_dialog_format_secondary_markup (GTK_MESSAGE_DIALOG (dialog), "%s", s);
-      ctk_window_set_title (GTK_WINDOW (dialog), _("CAFE Disk Image Mounter"));
-      ctk_dialog_run (GTK_DIALOG (dialog));
+      ctk_message_dialog_format_secondary_markup (CTK_MESSAGE_DIALOG (dialog), "%s", s);
+      ctk_window_set_title (CTK_WINDOW (dialog), _("CAFE Disk Image Mounter"));
+      ctk_dialog_run (CTK_DIALOG (dialog));
       ctk_widget_destroy (dialog);
     }
   else
@@ -117,26 +117,26 @@ do_filechooser (void)
 
   dialog = ctk_file_chooser_dialog_new (_("Select Disk Image(s) to Mount"),
                                         NULL, /* parent window */
-                                        GTK_FILE_CHOOSER_ACTION_OPEN,
-                                        _("_Cancel"), GTK_RESPONSE_CANCEL,
-                                        _("_Mount"), GTK_RESPONSE_ACCEPT,
+                                        CTK_FILE_CHOOSER_ACTION_OPEN,
+                                        _("_Cancel"), CTK_RESPONSE_CANCEL,
+                                        _("_Mount"), CTK_RESPONSE_ACCEPT,
                                         NULL);
-  _gdu_utils_configure_file_chooser_for_disk_images (GTK_FILE_CHOOSER (dialog));
-  ctk_file_chooser_set_local_only (GTK_FILE_CHOOSER (dialog), FALSE);
+  _gdu_utils_configure_file_chooser_for_disk_images (CTK_FILE_CHOOSER (dialog));
+  ctk_file_chooser_set_local_only (CTK_FILE_CHOOSER (dialog), FALSE);
 
   /* Add a RO check button that defaults to RO */
   ro_checkbutton = ctk_check_button_new_with_mnemonic (_("Set up _read-only mount"));
   ctk_widget_set_tooltip_markup (ro_checkbutton, _("If checked, the mount will be read-only. This is useful if you don't want the underlying disk image to be modified"));
-  ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (ro_checkbutton), !opt_writable);
-  ctk_file_chooser_set_select_multiple (GTK_FILE_CHOOSER (dialog), TRUE);
-  ctk_file_chooser_set_extra_widget (GTK_FILE_CHOOSER (dialog), ro_checkbutton);
+  ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (ro_checkbutton), !opt_writable);
+  ctk_file_chooser_set_select_multiple (CTK_FILE_CHOOSER (dialog), TRUE);
+  ctk_file_chooser_set_extra_widget (CTK_FILE_CHOOSER (dialog), ro_checkbutton);
 
   //ctk_widget_show_all (dialog);
-  if (ctk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_ACCEPT)
+  if (ctk_dialog_run (CTK_DIALOG (dialog)) != CTK_RESPONSE_ACCEPT)
     goto out;
 
-  ret = ctk_file_chooser_get_uris (GTK_FILE_CHOOSER (dialog));
-  opt_writable = ! ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (ro_checkbutton));
+  ret = ctk_file_chooser_get_uris (CTK_FILE_CHOOSER (dialog));
+  opt_writable = ! ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (ro_checkbutton));
 
  out:
   ctk_widget_destroy (dialog);
@@ -199,7 +199,7 @@ main (int argc, char *argv[])
     {
       if (!have_ctk)
         {
-          show_error ("No files given and GTK+ not available");
+          show_error ("No files given and CTK+ not available");
           goto out;
         }
       else

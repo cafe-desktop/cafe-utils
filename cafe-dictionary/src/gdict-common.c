@@ -74,15 +74,15 @@ gdict_create_data_dir (void)
               GtkWidget *error_dialog;
 
 	      error_dialog = ctk_message_dialog_new (NULL,
-                                                     GTK_DIALOG_MODAL,
-						     GTK_MESSAGE_ERROR,
-						     GTK_BUTTONS_CLOSE,
+                                                     CTK_DIALOG_MODAL,
+						     CTK_MESSAGE_ERROR,
+						     CTK_BUTTONS_CLOSE,
 						     _("Unable to rename file '%s' to '%s': %s"),
 						     data_dir_name,
 						     backup,
 						     g_strerror (errno));
 
-	      ctk_dialog_run (GTK_DIALOG (error_dialog));
+	      ctk_dialog_run (CTK_DIALOG (error_dialog));
 
 	      ctk_widget_destroy (error_dialog);
 	      g_free (backup);
@@ -98,14 +98,14 @@ gdict_create_data_dir (void)
               GtkWidget *error_dialog;
 
 	      error_dialog = ctk_message_dialog_new (NULL,
-						     GTK_DIALOG_MODAL,
-						     GTK_MESSAGE_ERROR,
-						     GTK_BUTTONS_CLOSE,
+						     CTK_DIALOG_MODAL,
+						     CTK_MESSAGE_ERROR,
+						     CTK_BUTTONS_CLOSE,
 						     _("Unable to create the data directory '%s': %s"),
 						     data_dir_name,
 						     g_strerror (errno));
 
-	      ctk_dialog_run (GTK_DIALOG (error_dialog));
+	      ctk_dialog_run (CTK_DIALOG (error_dialog));
 
 	      ctk_widget_destroy (error_dialog);
               g_free (data_dir_name);
@@ -121,14 +121,14 @@ gdict_create_data_dir (void)
           GtkWidget *error_dialog;
 
 	  error_dialog = ctk_message_dialog_new (NULL,
-						 GTK_DIALOG_MODAL,
-						 GTK_MESSAGE_ERROR,
-						 GTK_BUTTONS_CLOSE,
+						 CTK_DIALOG_MODAL,
+						 CTK_MESSAGE_ERROR,
+						 CTK_BUTTONS_CLOSE,
 						 _("Unable to create the data directory '%s': %s"),
 						 data_dir_name,
 						 g_strerror (errno));
 
-	  ctk_dialog_run (GTK_DIALOG (error_dialog));
+	  ctk_dialog_run (CTK_DIALOG (error_dialog));
 
 	  ctk_widget_destroy (error_dialog);
 	  g_free (data_dir_name);
@@ -151,24 +151,24 @@ gdict_show_error_dialog (GtkWindow   *parent,
 {
   GtkWidget *dialog;
 
-  g_return_if_fail ((parent == NULL) || (GTK_IS_WINDOW (parent)));
+  g_return_if_fail ((parent == NULL) || (CTK_IS_WINDOW (parent)));
   g_return_if_fail (message != NULL);
 
   dialog = ctk_message_dialog_new (parent,
-  				   GTK_DIALOG_DESTROY_WITH_PARENT,
-  				   GTK_MESSAGE_ERROR,
-  				   GTK_BUTTONS_OK,
+  				   CTK_DIALOG_DESTROY_WITH_PARENT,
+  				   CTK_MESSAGE_ERROR,
+  				   CTK_BUTTONS_OK,
   				   "%s", message);
-  ctk_window_set_title (GTK_WINDOW (dialog), "");
+  ctk_window_set_title (CTK_WINDOW (dialog), "");
 
   if (detail)
-    ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+    ctk_message_dialog_format_secondary_text (CTK_MESSAGE_DIALOG (dialog),
   					      "%s", detail);
 
   if (parent && ctk_window_get_group (parent))
-    ctk_window_group_add_window (ctk_window_get_group (parent), GTK_WINDOW (dialog));
+    ctk_window_group_add_window (ctk_window_get_group (parent), CTK_WINDOW (dialog));
 
-  ctk_dialog_run (GTK_DIALOG (dialog));
+  ctk_dialog_run (CTK_DIALOG (dialog));
 
   ctk_widget_destroy (dialog);
 }
@@ -178,7 +178,7 @@ gdict_show_gerror_dialog (GtkWindow   *parent,
 			  const gchar *message,
 			  GError      *error)
 {
-  g_return_if_fail ((parent == NULL) || (GTK_IS_WINDOW (parent)));
+  g_return_if_fail ((parent == NULL) || (CTK_IS_WINDOW (parent)));
   g_return_if_fail (message != NULL);
   g_return_if_fail (error != NULL);
 

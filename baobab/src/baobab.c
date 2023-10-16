@@ -90,7 +90,7 @@ baobab_set_busy (gboolean busy)
 		cursor = busy_cursor;
 
 		ctk_widget_show (baobab.spinner);
-		ctk_spinner_start (GTK_SPINNER (baobab.spinner));
+		ctk_spinner_start (CTK_SPINNER (baobab.spinner));
 
 		baobab_chart_freeze_updates (baobab.rings_chart);
 		baobab_chart_freeze_updates (baobab.treemap_chart);
@@ -99,7 +99,7 @@ baobab_set_busy (gboolean busy)
 	}
 	else {
 		ctk_widget_hide (baobab.spinner);
-		ctk_spinner_stop (GTK_SPINNER (baobab.spinner));
+		ctk_spinner_stop (CTK_SPINNER (baobab.spinner));
 
 		baobab_chart_thaw_updates (baobab.rings_chart);
 		baobab_chart_thaw_updates (baobab.treemap_chart);
@@ -116,8 +116,8 @@ baobab_set_busy (gboolean busy)
 static void
 set_drop_target (GtkWidget *target, gboolean active) {
 	if (active) {
-		ctk_drag_dest_set (GTK_WIDGET (target),
-				   GTK_DEST_DEFAULT_DROP | GTK_DEST_DEFAULT_MOTION | GTK_DEST_DEFAULT_HIGHLIGHT,
+		ctk_drag_dest_set (CTK_WIDGET (target),
+				   CTK_DEST_DEFAULT_DROP | CTK_DEST_DEFAULT_MOTION | CTK_DEST_DEFAULT_HIGHLIGHT,
 				   dnd_target_list,
 				   G_N_ELEMENTS (dnd_target_list),
 				   GDK_ACTION_COPY);
@@ -190,9 +190,9 @@ update_scan_label (void)
 	g_free (used);
 	g_free (available);
 
-	label = GTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "label1"));
+	label = CTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "label1"));
 
-	ctk_label_set_markup (GTK_LABEL (label), markup);
+	ctk_label_set_markup (CTK_LABEL (label), markup);
 	g_free (markup);
 }
 
@@ -228,21 +228,21 @@ baobab_scan_location (GFile *file)
 
 	/* check if the file system is local or remote */
 	baobab.is_local = scan_is_local (file);
-	ck_allocated = GTK_TOGGLE_ACTION (ctk_builder_get_object (baobab.main_ui, "ck_allocated"));
+	ck_allocated = CTK_TOGGLE_ACTION (ctk_builder_get_object (baobab.main_ui, "ck_allocated"));
 	if (!baobab.is_local) {
 		ctk_toggle_action_set_active (ck_allocated, FALSE);
-		ctk_action_set_sensitive (GTK_ACTION (ck_allocated), FALSE);
+		ctk_action_set_sensitive (CTK_ACTION (ck_allocated), FALSE);
 		baobab.show_allocated = FALSE;
 	}
 	else {
-		ctk_action_set_sensitive (GTK_ACTION (ck_allocated), TRUE);
+		ctk_action_set_sensitive (CTK_ACTION (ck_allocated), TRUE);
 	}
 
 	baobab_scan_execute (file);
 
 	/* set statusbar, percentage and allocated/normal size */
 	baobab_set_statusbar (_("Calculating percentage bars..."));
-	ctk_tree_model_foreach (GTK_TREE_MODEL (baobab.model),
+	ctk_tree_model_foreach (CTK_TREE_MODEL (baobab.model),
 				show_bars,
 				NULL);
 
@@ -254,7 +254,7 @@ baobab_scan_location (GFile *file)
 	check_drop_targets (FALSE);
 	baobab_set_statusbar (_("Ready"));
 
-	ctk_tree_view_columns_autosize (GTK_TREE_VIEW (baobab.tree_view));
+	ctk_tree_view_columns_autosize (CTK_TREE_VIEW (baobab.tree_view));
 	baobab.STOP_SCANNING = TRUE;
 	g_queue_free (iterstack);
 	iterstack = NULL;
@@ -299,9 +299,9 @@ baobab_stop_scan (void)
 	baobab.STOP_SCANNING = TRUE;
 
 	baobab_set_statusbar (_("Calculating percentage bars..."));
-	ctk_tree_model_foreach (GTK_TREE_MODEL (baobab.model),
+	ctk_tree_model_foreach (CTK_TREE_MODEL (baobab.model),
 				show_bars, NULL);
-	ctk_tree_view_columns_autosize (GTK_TREE_VIEW (baobab.tree_view));
+	ctk_tree_view_columns_autosize (CTK_TREE_VIEW (baobab.tree_view));
 }
 
 /*
@@ -322,9 +322,9 @@ prefill_model (struct chan_data *data)
 		GtkTreePath *path;
 
 		ctk_tree_store_append (baobab.model, &iter, &firstiter);
-		path = ctk_tree_model_get_path (GTK_TREE_MODEL (baobab.model),
+		path = ctk_tree_model_get_path (CTK_TREE_MODEL (baobab.model),
 						&firstiter);
-		ctk_tree_view_expand_row (GTK_TREE_VIEW (baobab.tree_view),
+		ctk_tree_view_expand_row (CTK_TREE_VIEW (baobab.tree_view),
 					  path, FALSE);
 		ctk_tree_path_free (path);
 	}
@@ -358,7 +358,7 @@ prefill_model (struct chan_data *data)
 
 	str = g_strdup_printf ("<small><i>%s</i></small>", _("Scanning..."));
 
-	ctk_tree_view_set_headers_visible (GTK_TREE_VIEW (baobab.tree_view), TRUE);
+	ctk_tree_view_set_headers_visible (CTK_TREE_VIEW (baobab.tree_view), TRUE);
 	ctk_tree_store_set (baobab.model, &iter,
 			    COL_DIR_NAME, name,
 			    COL_H_PARSENAME, "",
@@ -402,7 +402,7 @@ first_row (void)
 	g_free (capacity_label);
 	g_free (capacity_size);
 
-	ctk_tree_view_set_headers_visible (GTK_TREE_VIEW (baobab.tree_view), FALSE);
+	ctk_tree_view_set_headers_visible (CTK_TREE_VIEW (baobab.tree_view), FALSE);
 	ctk_tree_store_append (baobab.model, &firstiter, &root_iter);
 
 		size = g_format_size (baobab.fs.used);
@@ -427,7 +427,7 @@ first_row (void)
 	g_free (size);
 	g_free (label);
 
-	ctk_tree_view_expand_all (GTK_TREE_VIEW (baobab.tree_view));
+	ctk_tree_view_expand_all (CTK_TREE_VIEW (baobab.tree_view));
 }
 
 /* fills model during scanning */
@@ -593,7 +593,7 @@ monitor_home (gboolean enable)
 		if (!baobab.monitor_home) {
 			message (_("Could not initialize monitoring"),
 				 _("Changes to your home folder will not be monitored."),
-				 GTK_MESSAGE_WARNING, NULL);
+				 CTK_MESSAGE_WARNING, NULL);
 			g_print ("homedir:%s\n", error->message);
 			g_error_free (error);
 		}
@@ -614,8 +614,8 @@ monitor_home (gboolean enable)
 void
 baobab_set_statusbar (const gchar *text)
 {
-	ctk_statusbar_pop (GTK_STATUSBAR (baobab.statusbar), 1);
-	ctk_statusbar_push (GTK_STATUSBAR (baobab.statusbar), 1, text);
+	ctk_statusbar_pop (CTK_STATUSBAR (baobab.statusbar), 1);
+	ctk_statusbar_push (CTK_STATUSBAR (baobab.statusbar), 1, text);
 
 	while (ctk_events_pending ())
 		ctk_main_iteration ();
@@ -630,13 +630,13 @@ toolbar_reconfigured_cb (GtkToolItem *item,
 
 	style = ctk_tool_item_get_toolbar_style (item);
 
-	if (style == GTK_TOOLBAR_BOTH)
+	if (style == CTK_TOOLBAR_BOTH)
 	{
-		size = GTK_ICON_SIZE_DIALOG;
+		size = CTK_ICON_SIZE_DIALOG;
 	}
 	else
 	{
-		size = GTK_ICON_SIZE_LARGE_TOOLBAR;
+		size = CTK_ICON_SIZE_LARGE_TOOLBAR;
 	}
 
 	ctk_widget_set_size_request (spinner, size, size);
@@ -649,7 +649,7 @@ baobab_create_toolbar (void)
 	GtkToolItem *item;
 	GtkToolItem *separator;
 
-	toolbar = GTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "toolbar1"));
+	toolbar = CTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "toolbar1"));
 	if (toolbar == NULL) {
 		g_printerr ("Could not build toolbar\n");
 		return;
@@ -658,16 +658,16 @@ baobab_create_toolbar (void)
 	baobab.toolbar = toolbar;
 
 	separator = ctk_separator_tool_item_new ();
-	ctk_separator_tool_item_set_draw (GTK_SEPARATOR_TOOL_ITEM (separator), FALSE);
-	ctk_tool_item_set_expand (GTK_TOOL_ITEM (separator), TRUE);
-	ctk_container_add (GTK_CONTAINER (toolbar), GTK_WIDGET (separator));
-	ctk_widget_show (GTK_WIDGET (separator));
+	ctk_separator_tool_item_set_draw (CTK_SEPARATOR_TOOL_ITEM (separator), FALSE);
+	ctk_tool_item_set_expand (CTK_TOOL_ITEM (separator), TRUE);
+	ctk_container_add (CTK_CONTAINER (toolbar), CTK_WIDGET (separator));
+	ctk_widget_show (CTK_WIDGET (separator));
 
 	baobab.spinner = ctk_spinner_new ();
 	item = ctk_tool_item_new ();
-	ctk_container_add (GTK_CONTAINER (item), baobab.spinner);
-	ctk_container_add (GTK_CONTAINER (toolbar), GTK_WIDGET (item));
-	ctk_widget_show (GTK_WIDGET (item));
+	ctk_container_add (CTK_CONTAINER (item), baobab.spinner);
+	ctk_container_add (CTK_CONTAINER (toolbar), CTK_WIDGET (item));
+	ctk_widget_show (CTK_WIDGET (item));
 
 	g_signal_connect (item, "toolbar-reconfigured",
 			  G_CALLBACK (toolbar_reconfigured_cb), baobab.spinner);
@@ -679,7 +679,7 @@ baobab_create_toolbar (void)
 			 G_SETTINGS_BIND_DEFAULT);
 	g_settings_bind (baobab.ui_settings,
 			 BAOBAB_SETTINGS_TOOLBAR_VISIBLE,
-			 GTK_TOGGLE_ACTION (ctk_builder_get_object (baobab.main_ui, "view_tb")), "active",
+			 CTK_TOGGLE_ACTION (ctk_builder_get_object (baobab.main_ui, "view_tb")), "active",
 			 G_SETTINGS_BIND_DEFAULT);
 
 }
@@ -687,7 +687,7 @@ baobab_create_toolbar (void)
 static void
 baobab_create_statusbar (void)
 {
-	baobab.statusbar = GTK_WIDGET (ctk_builder_get_object (baobab.main_ui,
+	baobab.statusbar = CTK_WIDGET (ctk_builder_get_object (baobab.main_ui,
 							       "statusbar1"));
 	if (baobab.statusbar == NULL) {
 		g_printerr ("Could not build statusbar\n");
@@ -700,7 +700,7 @@ baobab_create_statusbar (void)
 			 G_SETTINGS_BIND_DEFAULT);
 	g_settings_bind (baobab.ui_settings,
 			 BAOBAB_SETTINGS_STATUSBAR_VISIBLE,
-			 GTK_TOGGLE_ACTION (ctk_builder_get_object (baobab.main_ui, "view_sb")), "active",
+			 CTK_TOGGLE_ACTION (ctk_builder_get_object (baobab.main_ui, "view_sb")), "active",
 			 G_SETTINGS_BIND_DEFAULT);
 }
 
@@ -914,32 +914,32 @@ create_context_menu (void)
 	menu->widget = ctk_menu_new ();
 
 	menu->up_item = ctk_image_menu_item_new_with_label (_("Move to parent folder"));
-	ctk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (menu->up_item),
-				       ctk_image_new_from_icon_name("go-up", GTK_ICON_SIZE_MENU));
+	ctk_image_menu_item_set_image (CTK_IMAGE_MENU_ITEM (menu->up_item),
+				       ctk_image_new_from_icon_name("go-up", CTK_ICON_SIZE_MENU));
 
 	menu->zoom_in_item = ctk_image_menu_item_new_with_label (_("Zoom in")) ;
-	ctk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (menu->zoom_in_item),
-				       ctk_image_new_from_icon_name("list-add", GTK_ICON_SIZE_MENU));
+	ctk_image_menu_item_set_image (CTK_IMAGE_MENU_ITEM (menu->zoom_in_item),
+				       ctk_image_new_from_icon_name("list-add", CTK_ICON_SIZE_MENU));
 
 	menu->zoom_out_item = ctk_image_menu_item_new_with_label (_("Zoom out"));
-	ctk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (menu->zoom_out_item),
-				       ctk_image_new_from_icon_name("list-remove", GTK_ICON_SIZE_MENU));
+	ctk_image_menu_item_set_image (CTK_IMAGE_MENU_ITEM (menu->zoom_out_item),
+				       ctk_image_new_from_icon_name("list-remove", CTK_ICON_SIZE_MENU));
 
 	menu->snapshot_item = ctk_image_menu_item_new_with_label (_("Save screenshot"));
-	ctk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (menu->snapshot_item),
-				       ctk_image_new_from_icon_name ("applets-screenshooter", GTK_ICON_SIZE_MENU));
+	ctk_image_menu_item_set_image (CTK_IMAGE_MENU_ITEM (menu->snapshot_item),
+				       ctk_image_new_from_icon_name ("applets-screenshooter", CTK_ICON_SIZE_MENU));
 
-	ctk_menu_shell_append (GTK_MENU_SHELL (menu->widget),
+	ctk_menu_shell_append (CTK_MENU_SHELL (menu->widget),
 			       menu->up_item);
-	ctk_menu_shell_append (GTK_MENU_SHELL (menu->widget),
+	ctk_menu_shell_append (CTK_MENU_SHELL (menu->widget),
 			       ctk_separator_menu_item_new ());
-	ctk_menu_shell_append (GTK_MENU_SHELL (menu->widget),
+	ctk_menu_shell_append (CTK_MENU_SHELL (menu->widget),
 			       menu->zoom_in_item);
-	ctk_menu_shell_append (GTK_MENU_SHELL (menu->widget),
+	ctk_menu_shell_append (CTK_MENU_SHELL (menu->widget),
 			       menu->zoom_out_item);
-	ctk_menu_shell_append (GTK_MENU_SHELL (menu->widget),
+	ctk_menu_shell_append (CTK_MENU_SHELL (menu->widget),
 			       ctk_separator_menu_item_new ());
-	ctk_menu_shell_append (GTK_MENU_SHELL (menu->widget),
+	ctk_menu_shell_append (CTK_MENU_SHELL (menu->widget),
 			       menu->snapshot_item);
 
 	/* connect signals */
@@ -962,12 +962,12 @@ on_chart_item_activated (BaobabChart *chart, GtkTreeIter *iter)
 {
 	GtkTreePath *path;
 
-	path = ctk_tree_model_get_path (GTK_TREE_MODEL (baobab.model), iter);
+	path = ctk_tree_model_get_path (CTK_TREE_MODEL (baobab.model), iter);
 
-	if (!ctk_tree_view_row_expanded (GTK_TREE_VIEW (baobab.tree_view), path))
-		ctk_tree_view_expand_to_path (GTK_TREE_VIEW (baobab.tree_view), path);
+	if (!ctk_tree_view_row_expanded (CTK_TREE_VIEW (baobab.tree_view), path))
+		ctk_tree_view_expand_to_path (CTK_TREE_VIEW (baobab.tree_view), path);
 
-	ctk_tree_view_set_cursor (GTK_TREE_VIEW (baobab.tree_view),
+	ctk_tree_view_set_cursor (CTK_TREE_VIEW (baobab.tree_view),
 				  path, NULL, FALSE);
 	ctk_tree_path_free (path);
 }
@@ -997,7 +997,7 @@ on_chart_button_release (BaobabChart *chart,
 					  baobab_chart_can_zoom_out (baobab.current_chart));
 
 		/* show the menu */
-		ctk_menu_popup_at_pointer (GTK_MENU (menu->widget),
+		ctk_menu_popup_at_pointer (CTK_MENU (menu->widget),
 		                           (const GdkEvent*) event);
 
 		ctk_tree_path_free (root_path);
@@ -1051,11 +1051,11 @@ set_active_chart (GtkWidget *chart)
 			baobab_chart_freeze_updates (baobab.current_chart);
 
 			g_object_ref (baobab.current_chart);
-			ctk_container_remove (GTK_CONTAINER (baobab.chart_frame),
+			ctk_container_remove (CTK_CONTAINER (baobab.chart_frame),
 					      baobab.current_chart);
 		}
 
-		ctk_container_add (GTK_CONTAINER (baobab.chart_frame), chart);
+		ctk_container_add (CTK_CONTAINER (baobab.chart_frame), chart);
 		g_object_unref (chart);
 
 		baobab_chart_thaw_updates (chart);
@@ -1076,7 +1076,7 @@ on_chart_type_change (GtkWidget *combo, gpointer user_data)
 	GtkWidget *chart;
 	guint active;
 
-	active = ctk_combo_box_get_active (GTK_COMBO_BOX (combo));
+	active = ctk_combo_box_get_active (CTK_COMBO_BOX (combo));
 
 	switch (active) {
 	case 0:
@@ -1101,39 +1101,39 @@ initialize_charts (void)
 	gboolean visible;
 
 	baobab.chart_frame = ctk_frame_new (NULL);
-	ctk_frame_set_label_align (GTK_FRAME (baobab.chart_frame), 0.0, 0.0);
-	ctk_frame_set_shadow_type (GTK_FRAME (baobab.chart_frame), GTK_SHADOW_IN);
+	ctk_frame_set_label_align (CTK_FRAME (baobab.chart_frame), 0.0, 0.0);
+	ctk_frame_set_shadow_type (CTK_FRAME (baobab.chart_frame), CTK_SHADOW_IN);
 
-	hpaned_main = GTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "hpaned_main"));
-	ctk_paned_pack2 (GTK_PANED (hpaned_main),
+	hpaned_main = CTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "hpaned_main"));
+	ctk_paned_pack2 (CTK_PANED (hpaned_main),
 			 baobab.chart_frame, TRUE, TRUE);
-	ctk_paned_set_position (GTK_PANED (hpaned_main), 480);
+	ctk_paned_set_position (CTK_PANED (hpaned_main), 480);
 
 	baobab.chart_type_combo = ctk_combo_box_text_new ();
-	ctk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (baobab.chart_type_combo),
+	ctk_combo_box_text_append_text (CTK_COMBO_BOX_TEXT (baobab.chart_type_combo),
 				   _("View as Rings Chart"));
-	ctk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (baobab.chart_type_combo),
+	ctk_combo_box_text_append_text (CTK_COMBO_BOX_TEXT (baobab.chart_type_combo),
 				   _("View as Treemap Chart"));
 	ctk_widget_show (baobab.chart_type_combo);
 	g_signal_connect (baobab.chart_type_combo,
 			  "changed",
 			  G_CALLBACK (on_chart_type_change), NULL);
 
-	hbox1 = GTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "hbox1"));
-	ctk_container_add (GTK_CONTAINER (hbox1), baobab.chart_type_combo);
-	ctk_box_set_spacing (GTK_BOX (hbox1), 50);
-	ctk_box_set_child_packing (GTK_BOX (hbox1),
+	hbox1 = CTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "hbox1"));
+	ctk_container_add (CTK_CONTAINER (hbox1), baobab.chart_type_combo);
+	ctk_box_set_spacing (CTK_BOX (hbox1), 50);
+	ctk_box_set_child_packing (CTK_BOX (hbox1),
 				   baobab.chart_type_combo,
 				   FALSE,
 				   TRUE,
-				   0, GTK_PACK_END);
+				   0, CTK_PACK_END);
 
 	baobab.chart_menu = create_context_menu ();
 
 	/* Baobab's Treemap Chart */
 	baobab.treemap_chart = baobab_treemap_new ();
 	baobab_chart_set_model_with_columns (baobab.treemap_chart,
-					     GTK_TREE_MODEL (baobab.model),
+					     CTK_TREE_MODEL (baobab.model),
 					     COL_DIR_NAME,
 					     COL_DIR_SIZE,
 					     COL_H_PARSENAME,
@@ -1154,7 +1154,7 @@ initialize_charts (void)
 	/* Baobab's Rings Chart */
 	baobab.rings_chart = (GtkWidget *) baobab_ringschart_new ();
 	baobab_chart_set_model_with_columns (baobab.rings_chart,
-					     GTK_TREE_MODEL (baobab.model),
+					     CTK_TREE_MODEL (baobab.model),
 					     COL_DIR_NAME,
 					     COL_DIR_SIZE,
 					     COL_H_PARSENAME,
@@ -1182,10 +1182,10 @@ initialize_charts (void)
 
 	if (0 == g_ascii_strcasecmp (saved_chart, "treemap")) {
 		set_active_chart (baobab.treemap_chart);
-		ctk_combo_box_set_active (GTK_COMBO_BOX (baobab.chart_type_combo), 1);
+		ctk_combo_box_set_active (CTK_COMBO_BOX (baobab.chart_type_combo), 1);
 	} else {
 		set_active_chart (baobab.rings_chart);
-		ctk_combo_box_set_active (GTK_COMBO_BOX (baobab.chart_type_combo), 0);
+		ctk_combo_box_set_active (CTK_COMBO_BOX (baobab.chart_type_combo), 0);
 	}
 
 	g_free (saved_chart);
@@ -1269,13 +1269,13 @@ main (int argc, char *argv[])
 		GtkWidget *dialog;
 
 		dialog = ctk_message_dialog_new (NULL,
-				GTK_DIALOG_DESTROY_WITH_PARENT,
-				GTK_MESSAGE_ERROR,
-				GTK_BUTTONS_CLOSE,
+				CTK_DIALOG_DESTROY_WITH_PARENT,
+				CTK_MESSAGE_ERROR,
+				CTK_BUTTONS_CLOSE,
 				_("Could not detect any mount point."));
-		ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG(dialog),
+		ctk_message_dialog_format_secondary_text (CTK_MESSAGE_DIALOG(dialog),
 				_("Without mount points disk usage cannot be analyzed."));
-		ctk_dialog_run (GTK_DIALOG (dialog));
+		ctk_dialog_run (CTK_DIALOG (dialog));
 		ctk_widget_destroy (dialog);
 		goto closing;
 	}
@@ -1283,16 +1283,16 @@ main (int argc, char *argv[])
 	check_menu_sens (FALSE);
 	update_scan_label ();
 
-	baobab.window = GTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "baobab_window"));
-	ctk_window_set_position (GTK_WINDOW (baobab.window),
-				 GTK_WIN_POS_CENTER);
+	baobab.window = CTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "baobab_window"));
+	ctk_window_set_position (CTK_WINDOW (baobab.window),
+				 CTK_WIN_POS_CENTER);
 
 	baobab.tree_view = create_directory_treeview ();
 
 	set_ui_action_sens ("menurescan", FALSE);
 
 	/* set allocated space checkbox */
-	ctk_toggle_action_set_active (GTK_TOGGLE_ACTION (ctk_builder_get_object (baobab.main_ui,
+	ctk_toggle_action_set_active (CTK_TOGGLE_ACTION (ctk_builder_get_object (baobab.main_ui,
 							 "ck_allocated")),
 				      baobab.show_allocated);
 

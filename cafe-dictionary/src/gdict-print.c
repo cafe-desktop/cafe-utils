@@ -195,7 +195,7 @@ gdict_show_print_preview (GtkWindow   *parent,
   gchar *word;
   GError *error;
 
-  g_return_if_fail (parent == NULL || GTK_IS_WINDOW (parent));
+  g_return_if_fail (parent == NULL || CTK_IS_WINDOW (parent));
   g_return_if_fail (GDICT_IS_DEFBOX (defbox));
 
   g_object_get (defbox, "word", &word, NULL);
@@ -225,7 +225,7 @@ gdict_show_print_preview (GtkWindow   *parent,
 
   error = NULL;
   ctk_print_operation_run (operation,
-                           GTK_PRINT_OPERATION_ACTION_PREVIEW,
+                           CTK_PRINT_OPERATION_ACTION_PREVIEW,
                            parent,
                            &error);
   g_object_unref (operation);
@@ -235,9 +235,9 @@ gdict_show_print_preview (GtkWindow   *parent,
       GtkWidget *dialog;
 
       dialog = ctk_message_dialog_new (parent,
-                                       GTK_DIALOG_DESTROY_WITH_PARENT,
-                                       GTK_MESSAGE_ERROR,
-                                       GTK_BUTTONS_CLOSE,
+                                       CTK_DIALOG_DESTROY_WITH_PARENT,
+                                       CTK_MESSAGE_ERROR,
+                                       CTK_BUTTONS_CLOSE,
 				       _("Unable to display the preview: %s"),
                                        error->message);
       g_error_free (error);
@@ -259,7 +259,7 @@ gdict_show_print_dialog (GtkWindow   *parent,
   gchar *word;
   GError *error;
 
-  g_return_if_fail (parent == NULL || GTK_IS_WINDOW (parent));
+  g_return_if_fail (parent == NULL || CTK_IS_WINDOW (parent));
   g_return_if_fail (GDICT_IS_DEFBOX (defbox));
 
   g_object_get (defbox, "word", &word, NULL);
@@ -289,7 +289,7 @@ gdict_show_print_dialog (GtkWindow   *parent,
 
   error = NULL;
   ctk_print_operation_run (operation,
-                           GTK_PRINT_OPERATION_ACTION_PRINT_DIALOG,
+                           CTK_PRINT_OPERATION_ACTION_PRINT_DIALOG,
                            parent,
                            &error);
   g_object_unref (operation);
@@ -299,9 +299,9 @@ gdict_show_print_dialog (GtkWindow   *parent,
       GtkWidget *dialog;
 
       dialog = ctk_message_dialog_new (parent,
-                                       GTK_DIALOG_DESTROY_WITH_PARENT,
-                                       GTK_MESSAGE_ERROR,
-                                       GTK_BUTTONS_CLOSE,
+                                       CTK_DIALOG_DESTROY_WITH_PARENT,
+                                       CTK_MESSAGE_ERROR,
+                                       CTK_BUTTONS_CLOSE,
 				       _("Unable to display the preview: %s"),
                                        error->message);
       g_error_free (error);

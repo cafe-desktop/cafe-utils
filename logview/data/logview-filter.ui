@@ -25,8 +25,8 @@
                 <property name="use_underline">True</property>
               </object>
               <packing>
-                <property name="x_options">GTK_FILL</property>
-                <property name="y_options">GTK_FILL</property>
+                <property name="x_options">CTK_FILL</property>
+                <property name="y_options">CTK_FILL</property>
               </packing>
             </child>
             <child>
@@ -39,8 +39,8 @@
               <packing>
                 <property name="top_attach">1</property>
                 <property name="bottom_attach">2</property>
-                <property name="x_options">GTK_FILL</property>
-                <property name="y_options">GTK_FILL</property>
+                <property name="x_options">CTK_FILL</property>
+                <property name="y_options">CTK_FILL</property>
               </packing>
             </child>
             <child>

@@ -40,7 +40,7 @@ cafe_dictionary_CFLAGS = \
 	-I$(top_srcdir)/cafe-dictionary \
 	$(GLIB_CFLAGS) \
 	$(GIO_CFLAGS) \
-	$(GTK_CFLAGS) \
+	$(CTK_CFLAGS) \
 	$(WARN_CFLAGS) \
 	$(NULL)
 
@@ -49,7 +49,7 @@ cafe_dictionary_LDADD = \
 	$(top_builddir)/cafe-dictionary/libgdict/libcafedict.la \
 	$(GLIB_LIBS) \
 	$(GIO_LIBS) \
-	$(GTK_LIBS) \
+	$(CTK_LIBS) \
 	$(NULL)
 
 if BUILD_GDICT_APPLET
@@ -79,7 +79,7 @@ cafe_dictionary_applet_CFLAGS = \
 	$(APPLET_CFLAGS) \
 	$(GLIB_CFLAGS) \
 	$(GIO_CFLAGS) \
-	$(GTK_CFLAGS) \
+	$(CTK_CFLAGS) \
 	$(WARN_CFLAGS) \
 	$(NULL)
 
@@ -89,7 +89,7 @@ cafe_dictionary_applet_LDADD = \
 	$(APPLET_LIBS) \
 	$(GLIB_LIBS) \
 	$(GIO_LIBS) \
-	$(GTK_LIBS) \
+	$(CTK_LIBS) \
 	$(NULL)
 
 endif # BUILD_GDICT_APPLET

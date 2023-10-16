@@ -122,9 +122,9 @@ gdict_window_created_cb (GdictWindow *parent,
   g_signal_connect (new_window, "destroy",
                     G_CALLBACK (gdict_window_destroy_cb), app);
 
-  if (ctk_window_get_group (GTK_WINDOW (parent)))
-    ctk_window_group_add_window (ctk_window_get_group (GTK_WINDOW (parent)),
-                                 GTK_WINDOW (new_window));
+  if (ctk_window_get_group (CTK_WINDOW (parent)))
+    ctk_window_group_add_window (ctk_window_get_group (CTK_WINDOW (parent)),
+                                 CTK_WINDOW (new_window));
 
   app->windows = g_slist_prepend (app->windows, new_window);
   app->current_window = new_window;

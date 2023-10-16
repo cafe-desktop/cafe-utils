@@ -109,15 +109,15 @@ filechooser_response_cb (GtkDialog *dialog,
                          GtkTreeModel *model)
 {
 	switch (response_id) {
-		case GTK_RESPONSE_HELP:
-			baobab_help_display (GTK_WINDOW (baobab.window),
+		case CTK_RESPONSE_HELP:
+			baobab_help_display (CTK_WINDOW (baobab.window),
 			                     "cafe-disk-usage-analyzer", "baobab-preferences");
 			break;
-		case GTK_RESPONSE_DELETE_EVENT:
-		case GTK_RESPONSE_CLOSE:
+		case CTK_RESPONSE_DELETE_EVENT:
+		case CTK_RESPONSE_CLOSE:
 			save_excluded_uris (model);
 		default:
-			ctk_widget_destroy (GTK_WIDGET (dialog));
+			ctk_widget_destroy (CTK_WIDGET (dialog));
 			break;
 	}
 }
@@ -145,7 +145,7 @@ check_toggled (GtkCellRendererToggle *cell,
 		goto clean_up;
 
 	/* set new value */
-	ctk_list_store_set (GTK_LIST_STORE (model),
+	ctk_list_store_set (CTK_LIST_STORE (model),
 			    &iter,
 			    COL_CHECK, !toggle,
 			    -1);
@@ -162,7 +162,7 @@ create_tree_props (GtkBuilder *builder, GtkTreeModel *model)
 	GtkTreeViewColumn *col;
 	GtkWidget *tvw;
 
-	tvw = GTK_WIDGET (ctk_builder_get_object (builder , "tree_view_props"));
+	tvw = CTK_WIDGET (ctk_builder_get_object (builder , "tree_view_props"));
 
 	/* checkbox column */
 	cell = ctk_cell_renderer_toggle_new ();
@@ -172,7 +172,7 @@ create_tree_props (GtkBuilder *builder, GtkTreeModel *model)
 	col = ctk_tree_view_column_new_with_attributes (_("Scan"), cell,
 							"active", COL_CHECK,
 							NULL);
-	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (CTK_TREE_VIEW (tvw), col);
 
 	/* First text column */
 	cell = ctk_cell_renderer_text_new ();
@@ -180,7 +180,7 @@ create_tree_props (GtkBuilder *builder, GtkTreeModel *model)
 							"markup", COL_DEVICE,
 							"text", COL_DEVICE,
 							NULL);
-	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (CTK_TREE_VIEW (tvw), col);
 
 	/* second text column */
 	cell = ctk_cell_renderer_text_new ();
@@ -188,7 +188,7 @@ create_tree_props (GtkBuilder *builder, GtkTreeModel *model)
 							cell, "markup",
 							COL_MOUNT_D, "text",
 							COL_MOUNT_D, NULL);
-	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (CTK_TREE_VIEW (tvw), col);
 
 	/* third text column */
 	cell = ctk_cell_renderer_text_new ();
@@ -196,7 +196,7 @@ create_tree_props (GtkBuilder *builder, GtkTreeModel *model)
 							cell, "markup",
 							COL_TYPE, "text",
 							COL_TYPE, NULL);
-	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (CTK_TREE_VIEW (tvw), col);
 
 	/* fourth text column */
 	cell = ctk_cell_renderer_text_new ();
@@ -205,7 +205,7 @@ create_tree_props (GtkBuilder *builder, GtkTreeModel *model)
 							COL_FS_SIZE, "text",
 							COL_FS_SIZE, NULL);
 	g_object_set (G_OBJECT (cell), "xalign", (gfloat) 1.0, NULL);
-	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (CTK_TREE_VIEW (tvw), col);
 
 	/* fifth text column */
 	cell = ctk_cell_renderer_text_new ();
@@ -214,9 +214,9 @@ create_tree_props (GtkBuilder *builder, GtkTreeModel *model)
 							COL_FS_AVAIL, "text",
 							COL_FS_AVAIL, NULL);
 	g_object_set (G_OBJECT (cell), "xalign", (gfloat) 1.0, NULL);
-	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (CTK_TREE_VIEW (tvw), col);
 
-	ctk_tree_view_set_model (GTK_TREE_VIEW (tvw), model);
+	ctk_tree_view_set_model (CTK_TREE_VIEW (tvw), model);
 	g_object_unref (model);
 }
 
@@ -294,10 +294,10 @@ baobab_prefs_dialog (void)
 		return;
 	}
 
-	dlg = GTK_WIDGET (ctk_builder_get_object (builder, "dialog_scan_props"));
+	dlg = CTK_WIDGET (ctk_builder_get_object (builder, "dialog_scan_props"));
 
-	ctk_window_set_transient_for (GTK_WINDOW (dlg),
-				      GTK_WINDOW (baobab.window));
+	ctk_window_set_transient_for (CTK_WINDOW (dlg),
+				      CTK_WINDOW (baobab.window));
 
 	model = ctk_list_store_new (TOT_COLUMNS,
 				    G_TYPE_BOOLEAN,	/* checkbox */
@@ -309,10 +309,10 @@ baobab_prefs_dialog (void)
 				    G_TYPE_STRING	/* fs avail */
 				    );
 
-	create_tree_props (builder, GTK_TREE_MODEL (model));
+	create_tree_props (builder, CTK_TREE_MODEL (model));
 	fill_props_model (model);
 
-	check_enablehome = GTK_WIDGET (ctk_builder_get_object (builder, "check_enable_home"));
+	check_enablehome = CTK_WIDGET (ctk_builder_get_object (builder, "check_enable_home"));
 	g_settings_bind (baobab.prefs_settings,
 			 BAOBAB_SETTINGS_MONITOR_HOME,
 			 check_enablehome, "active",

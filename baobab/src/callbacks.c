@@ -103,7 +103,7 @@ on_about_activate (GtkMenuItem *menuitem, gpointer user_data)
 		*p = _(*p);
 #endif
 
-	ctk_show_about_dialog (GTK_WINDOW (baobab.window),
+	ctk_show_about_dialog (CTK_WINDOW (baobab.window),
 		"program-name", _("Disk Usage Analyzer"),
 		"version", VERSION,
 		"title", _("About Disk Usage Analyzer"),
@@ -124,13 +124,13 @@ on_about_activate (GtkMenuItem *menuitem, gpointer user_data)
 void
 on_menu_expand_activate (GtkMenuItem *menuitem, gpointer user_data)
 {
-	ctk_tree_view_expand_all (GTK_TREE_VIEW (baobab.tree_view));
+	ctk_tree_view_expand_all (CTK_TREE_VIEW (baobab.tree_view));
 }
 
 void
 on_menu_collapse_activate (GtkMenuItem *menuitem, gpointer user_data)
 {
-	ctk_tree_view_collapse_all (GTK_TREE_VIEW (baobab.tree_view));
+	ctk_tree_view_collapse_all (CTK_TREE_VIEW (baobab.tree_view));
 }
 
 void
@@ -168,9 +168,9 @@ on_tb_scan_remote_clicked (GtkToolButton *toolbutton, gpointer user_data)
 {
 	GtkWidget *dlg;
 
-	dlg = baobab_remote_connect_dialog_new (GTK_WINDOW (baobab.window),
+	dlg = baobab_remote_connect_dialog_new (CTK_WINDOW (baobab.window),
 						NULL);
-	ctk_dialog_run (GTK_DIALOG (dlg));
+	ctk_dialog_run (CTK_DIALOG (dlg));
 
 	ctk_widget_destroy (dlg);
 }
@@ -213,7 +213,7 @@ open_file_cb (GtkMenuItem *pmenu, gpointer dummy)
 
 	if (!g_file_query_exists (file, NULL)) {
 		message (_("The document does not exist."), "",
-		GTK_MESSAGE_INFO, baobab.window);
+		CTK_MESSAGE_INFO, baobab.window);
 		g_object_unref (file);
 		return;
 	}
@@ -243,7 +243,7 @@ trash_dir_cb (GtkMenuItem *pmenu, gpointer dummy)
 		ctk_tree_selection_get_selected (selection, NULL, &iter);
 		ctk_tree_model_get ((GtkTreeModel *) baobab.model, &iter,
 				    5, &filesize, -1);
-		ctk_tree_store_remove (GTK_TREE_STORE (baobab.model),
+		ctk_tree_store_remove (CTK_TREE_STORE (baobab.model),
 				       &iter);
 	}
 
@@ -270,7 +270,7 @@ on_ck_allocated_activate (GtkToggleAction *action,
 
 	baobab_set_busy (TRUE);
 	baobab_set_statusbar (_("Calculating percentage bars..."));
-	ctk_tree_model_foreach (GTK_TREE_MODEL (baobab.model),
+	ctk_tree_model_foreach (CTK_TREE_MODEL (baobab.model),
 				show_bars, NULL);
 	baobab_set_busy (FALSE);
 	baobab_set_statusbar (_("Ready"));
@@ -279,7 +279,7 @@ on_ck_allocated_activate (GtkToggleAction *action,
 void
 on_helpcontents_activate (GtkAction *a, gpointer user_data)
 {
-	baobab_help_display (GTK_WINDOW (baobab.window), "cafe-disk-usage-analyzer", NULL);
+	baobab_help_display (CTK_WINDOW (baobab.window), "cafe-disk-usage-analyzer", NULL);
 }
 
 void
@@ -293,7 +293,7 @@ scan_folder_cb (GtkMenuItem *pmenu, gpointer dummy)
 	file = g_file_parse_name (baobab.selected_path);
 
 	if (!g_file_query_exists (file, NULL)) {
-		message (_("The folder does not exist."), "", GTK_MESSAGE_INFO, baobab.window);
+		message (_("The folder does not exist."), "", CTK_MESSAGE_INFO, baobab.window);
 	}
 
 	baobab_scan_location (file);
@@ -308,7 +308,7 @@ on_tv_selection_changed (GtkTreeSelection *selection, gpointer user_data)
 	if (ctk_tree_selection_get_selected (selection, NULL, &iter)) {
 		GtkTreePath *path;
 
-		path = ctk_tree_model_get_path (GTK_TREE_MODEL (baobab.model), &iter);
+		path = ctk_tree_model_get_path (CTK_TREE_MODEL (baobab.model), &iter);
 
 		baobab_chart_set_root (baobab.rings_chart, path);
 		baobab_chart_set_root (baobab.treemap_chart, path);

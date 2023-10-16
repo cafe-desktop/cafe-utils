@@ -148,12 +148,12 @@ interactive_dialog_response_cb (GtkDialog *dialog,
 {
   switch (response)
     {
-    case GTK_RESPONSE_HELP:
+    case CTK_RESPONSE_HELP:
       g_signal_stop_emission_by_name (dialog, "response");
-      display_help (GTK_WINDOW (dialog));
+      display_help (CTK_WINDOW (dialog));
       break;
     default:
-      ctk_widget_hide (GTK_WIDGET (dialog));
+      ctk_widget_hide (CTK_WIDGET (dialog));
       break;
     }
 }
@@ -228,7 +228,7 @@ key_press_cb (GtkWidget* widget, GdkEventKey* event, gpointer data)
 {
   if (event->keyval == GDK_KEY_F1)
     {
-      display_help (GTK_WINDOW (widget));
+      display_help (CTK_WINDOW (widget));
       return TRUE;
     }
 
@@ -280,22 +280,22 @@ create_effects_combo (void)
     }
 
   retval = ctk_combo_box_new ();
-  ctk_combo_box_set_model (GTK_COMBO_BOX (retval),
-                           GTK_TREE_MODEL (model));
+  ctk_combo_box_set_model (CTK_COMBO_BOX (retval),
+                           CTK_TREE_MODEL (model));
   g_object_unref (model);
 
   switch (border_effect[0])
     {
     case 's': /* shadow */
-      ctk_combo_box_set_active (GTK_COMBO_BOX (retval),
+      ctk_combo_box_set_active (CTK_COMBO_BOX (retval),
                                 SCREENSHOT_EFFECT_SHADOW);
       break;
     case 'b': /* border */
-      ctk_combo_box_set_active (GTK_COMBO_BOX (retval),
+      ctk_combo_box_set_active (CTK_COMBO_BOX (retval),
                                 SCREENSHOT_EFFECT_BORDER);
       break;
     case 'n': /* none */
-      ctk_combo_box_set_active (GTK_COMBO_BOX (retval),
+      ctk_combo_box_set_active (CTK_COMBO_BOX (retval),
                                 SCREENSHOT_EFFECT_NONE);
       break;
     default:
@@ -303,8 +303,8 @@ create_effects_combo (void)
     }
 
   renderer = ctk_cell_renderer_text_new ();
-  ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (retval), renderer, TRUE);
-  ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (retval), renderer,
+  ctk_cell_layout_pack_start (CTK_CELL_LAYOUT (retval), renderer, TRUE);
+  ctk_cell_layout_set_attributes (CTK_CELL_LAYOUT (retval), renderer,
                                   "text", COLUMN_LABEL,
                                   NULL);
 
@@ -325,67 +325,67 @@ create_effects_frame (GtkWidget   *outer_vbox,
   GtkWidget *combo;
   gchar *title;
 
-  main_vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+  main_vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
   ctk_widget_set_sensitive (main_vbox, !take_area_shot);
-  ctk_box_pack_start (GTK_BOX (outer_vbox), main_vbox, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (outer_vbox), main_vbox, FALSE, FALSE, 0);
   ctk_widget_show (main_vbox);
   effects_vbox = main_vbox;
 
   title = g_strconcat ("<b>", frame_title, "</b>", NULL);
   label = ctk_label_new (title);
-  ctk_label_set_use_markup (GTK_LABEL (label), TRUE);
-  ctk_label_set_xalign (GTK_LABEL (label), 0.0);
-  ctk_label_set_yalign (GTK_LABEL (label), 0.5);
-  ctk_box_pack_start (GTK_BOX (main_vbox), label, FALSE, FALSE, 0);
+  ctk_label_set_use_markup (CTK_LABEL (label), TRUE);
+  ctk_label_set_xalign (CTK_LABEL (label), 0.0);
+  ctk_label_set_yalign (CTK_LABEL (label), 0.5);
+  ctk_box_pack_start (CTK_BOX (main_vbox), label, FALSE, FALSE, 0);
   ctk_widget_show (label);
   g_free (title);
 
-  hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-  ctk_box_pack_start (GTK_BOX (main_vbox), hbox, FALSE, FALSE, 0);
+  hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 12);
+  ctk_box_pack_start (CTK_BOX (main_vbox), hbox, FALSE, FALSE, 0);
   ctk_widget_show (hbox);
 
-  vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-  ctk_box_pack_start (GTK_BOX (hbox), vbox, FALSE, FALSE, 0);
+  vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
+  ctk_box_pack_start (CTK_BOX (hbox), vbox, FALSE, FALSE, 0);
   ctk_widget_set_margin_start (vbox, 12);
   ctk_widget_show (vbox);
 
   /** Include pointer **/
   check = ctk_check_button_new_with_mnemonic (_("Include _pointer"));
-  ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (check), include_pointer);
+  ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (check), include_pointer);
   g_signal_connect (check, "toggled",
                     G_CALLBACK (include_pointer_toggled_cb),
                     NULL);
-  ctk_box_pack_start (GTK_BOX (vbox), check, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (vbox), check, FALSE, FALSE, 0);
   ctk_widget_show (check);
 
   /** Include window border **/
   check = ctk_check_button_new_with_mnemonic (_("Include the window _border"));
   ctk_widget_set_sensitive (check, take_window_shot);
-  ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (check), include_border);
+  ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (check), include_border);
   g_signal_connect (check, "toggled",
                     G_CALLBACK (include_border_toggled_cb),
                     NULL);
-  ctk_box_pack_start (GTK_BOX (vbox), check, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (vbox), check, FALSE, FALSE, 0);
   ctk_widget_show (check);
   border_check = check;
 
   /** Effects **/
-  hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-  ctk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
+  hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 12);
+  ctk_box_pack_start (CTK_BOX (vbox), hbox, FALSE, FALSE, 0);
   ctk_widget_show (hbox);
 
   label = ctk_label_new_with_mnemonic (_("Apply _effect:"));
   ctk_widget_set_sensitive (label, take_window_shot);
-  ctk_label_set_xalign (GTK_LABEL (label), 0.0);
-  ctk_label_set_yalign (GTK_LABEL (label), 0.5);
-  ctk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 0);
+  ctk_label_set_xalign (CTK_LABEL (label), 0.0);
+  ctk_label_set_yalign (CTK_LABEL (label), 0.5);
+  ctk_box_pack_start (CTK_BOX (hbox), label, FALSE, FALSE, 0);
   ctk_widget_show (label);
   effect_label = label;
 
   combo = create_effects_combo ();
   ctk_widget_set_sensitive (combo, take_window_shot);
-  ctk_box_pack_start (GTK_BOX (hbox), combo, FALSE, FALSE, 0);
-  ctk_label_set_mnemonic_widget (GTK_LABEL (label), combo);
+  ctk_box_pack_start (CTK_BOX (hbox), combo, FALSE, FALSE, 0);
+  ctk_label_set_mnemonic_widget (CTK_LABEL (label), combo);
   ctk_widget_show (combo);
   effect_combo = combo;
 }
@@ -403,32 +403,32 @@ create_screenshot_frame (GtkWidget   *outer_vbox,
   GSList *group;
   gchar *title;
 
-  main_vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-  ctk_box_pack_start (GTK_BOX (outer_vbox), main_vbox, FALSE, FALSE, 0);
+  main_vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
+  ctk_box_pack_start (CTK_BOX (outer_vbox), main_vbox, FALSE, FALSE, 0);
   ctk_widget_show (main_vbox);
 
   title = g_strconcat ("<b>", frame_title, "</b>", NULL);
   label = ctk_label_new (title);
-  ctk_label_set_use_markup (GTK_LABEL (label), TRUE);
-  ctk_label_set_xalign (GTK_LABEL (label), 0.0);
-  ctk_label_set_yalign (GTK_LABEL (label), 0.5);
-  ctk_box_pack_start (GTK_BOX (main_vbox), label, FALSE, FALSE, 0);
+  ctk_label_set_use_markup (CTK_LABEL (label), TRUE);
+  ctk_label_set_xalign (CTK_LABEL (label), 0.0);
+  ctk_label_set_yalign (CTK_LABEL (label), 0.5);
+  ctk_box_pack_start (CTK_BOX (main_vbox), label, FALSE, FALSE, 0);
   ctk_widget_show (label);
   g_free (title);
 
-  hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-  ctk_box_pack_start (GTK_BOX (main_vbox), hbox, FALSE, FALSE, 0);
+  hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 12);
+  ctk_box_pack_start (CTK_BOX (main_vbox), hbox, FALSE, FALSE, 0);
   ctk_widget_show (hbox);
 
   image = ctk_image_new_from_icon_name (SCREENSHOOTER_ICON,
-                                    GTK_ICON_SIZE_DIALOG);
+                                    CTK_ICON_SIZE_DIALOG);
 
-  ctk_box_pack_start (GTK_BOX (hbox), image, FALSE, FALSE, 0);
-  ctk_widget_set_valign (image, GTK_ALIGN_START);
+  ctk_box_pack_start (CTK_BOX (hbox), image, FALSE, FALSE, 0);
+  ctk_widget_set_valign (image, CTK_ALIGN_START);
   ctk_widget_show (image);
 
-  vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-  ctk_box_pack_start (GTK_BOX (hbox), vbox, FALSE, FALSE, 0);
+  vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
+  ctk_box_pack_start (CTK_BOX (hbox), vbox, FALSE, FALSE, 0);
   ctk_widget_show (vbox);
 
   /** Grab whole desktop **/
@@ -436,53 +436,53 @@ create_screenshot_frame (GtkWidget   *outer_vbox,
   radio = ctk_radio_button_new_with_mnemonic (group,
                                               _("Grab the whole _desktop"));
   if (take_window_shot || take_area_shot)
-    ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radio), FALSE);
+    ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (radio), FALSE);
   g_signal_connect (radio, "toggled",
                     G_CALLBACK (target_toggled_cb),
                     GINT_TO_POINTER (TARGET_TOGGLE_DESKTOP));
-  ctk_box_pack_start (GTK_BOX (vbox), radio, FALSE, FALSE, 0);
-  group = ctk_radio_button_get_group (GTK_RADIO_BUTTON (radio));
+  ctk_box_pack_start (CTK_BOX (vbox), radio, FALSE, FALSE, 0);
+  group = ctk_radio_button_get_group (CTK_RADIO_BUTTON (radio));
   ctk_widget_show (radio);
 
   /** Grab current window **/
   radio = ctk_radio_button_new_with_mnemonic (group,
                                               _("Grab the current _window"));
   if (take_window_shot)
-    ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radio), TRUE);
+    ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (radio), TRUE);
   g_signal_connect (radio, "toggled",
                     G_CALLBACK (target_toggled_cb),
                     GINT_TO_POINTER (TARGET_TOGGLE_WINDOW));
-  ctk_box_pack_start (GTK_BOX (vbox), radio, FALSE, FALSE, 0);
-  group = ctk_radio_button_get_group (GTK_RADIO_BUTTON (radio));
+  ctk_box_pack_start (CTK_BOX (vbox), radio, FALSE, FALSE, 0);
+  group = ctk_radio_button_get_group (CTK_RADIO_BUTTON (radio));
   ctk_widget_show (radio);
 
   /** Grab area of the desktop **/
   radio = ctk_radio_button_new_with_mnemonic (group,
                                               _("Select _area to grab"));
   if (take_area_shot)
-    ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radio), TRUE);
+    ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (radio), TRUE);
   g_signal_connect (radio, "toggled",
                     G_CALLBACK (target_toggled_cb),
                     GINT_TO_POINTER (TARGET_TOGGLE_AREA));
-  ctk_box_pack_start (GTK_BOX (vbox), radio, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (vbox), radio, FALSE, FALSE, 0);
   ctk_widget_show (radio);
 
   /** Grab after delay **/
-  delay_hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+  delay_hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 6);
   ctk_widget_set_sensitive (delay_hbox, !take_area_shot);
-  ctk_box_pack_start (GTK_BOX (vbox), delay_hbox, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (vbox), delay_hbox, FALSE, FALSE, 0);
   ctk_widget_show (delay_hbox);
 
   /* translators: this is the first part of the "grab after a
    * delay of <spin button> seconds".
    */
   label = ctk_label_new_with_mnemonic (_("Grab _after a delay of"));
-  ctk_label_set_xalign (GTK_LABEL (label), 0.0);
-  ctk_label_set_yalign (GTK_LABEL (label), 0.5);
-  ctk_box_pack_start (GTK_BOX (delay_hbox), label, FALSE, FALSE, 0);
+  ctk_label_set_xalign (CTK_LABEL (label), 0.0);
+  ctk_label_set_yalign (CTK_LABEL (label), 0.5);
+  ctk_box_pack_start (CTK_BOX (delay_hbox), label, FALSE, FALSE, 0);
   ctk_widget_show (label);
 
-  adjust = GTK_ADJUSTMENT (ctk_adjustment_new ((gdouble) delay,
+  adjust = CTK_ADJUSTMENT (ctk_adjustment_new ((gdouble) delay,
                                                0.0, 99.0,
                                                1.0,  1.0,
                                                0.0));
@@ -490,17 +490,17 @@ create_screenshot_frame (GtkWidget   *outer_vbox,
   g_signal_connect (spin, "value-changed",
                     G_CALLBACK (delay_spin_value_changed_cb),
                     NULL);
-  ctk_box_pack_start (GTK_BOX (delay_hbox), spin, FALSE, FALSE, 0);
-  ctk_label_set_mnemonic_widget (GTK_LABEL (label), spin);
+  ctk_box_pack_start (CTK_BOX (delay_hbox), spin, FALSE, FALSE, 0);
+  ctk_label_set_mnemonic_widget (CTK_LABEL (label), spin);
   ctk_widget_show (spin);
 
   /* translators: this is the last part of the "grab after a
    * delay of <spin button> seconds".
    */
   label = ctk_label_new (_("seconds"));
-  ctk_label_set_xalign (GTK_LABEL (label), 0.0);
-  ctk_label_set_yalign (GTK_LABEL (label), 0.5);
-  ctk_box_pack_end (GTK_BOX (delay_hbox), label, FALSE, FALSE, 0);
+  ctk_label_set_xalign (CTK_LABEL (label), 0.0);
+  ctk_label_set_yalign (CTK_LABEL (label), 0.5);
+  ctk_box_pack_end (CTK_BOX (delay_hbox), label, FALSE, FALSE, 0);
   ctk_widget_show (label);
 }
 
@@ -512,26 +512,26 @@ create_interactive_dialog (void)
   GtkWidget *content_area;
 
   retval = ctk_dialog_new ();
-  ctk_window_set_resizable (GTK_WINDOW (retval), FALSE);
-  ctk_container_set_border_width (GTK_CONTAINER (retval), 5);
-  content_area = ctk_dialog_get_content_area (GTK_DIALOG (retval));
-  ctk_box_set_spacing (GTK_BOX (content_area), 2);
-  ctk_window_set_title (GTK_WINDOW (retval), _("Take Screenshot"));
+  ctk_window_set_resizable (CTK_WINDOW (retval), FALSE);
+  ctk_container_set_border_width (CTK_CONTAINER (retval), 5);
+  content_area = ctk_dialog_get_content_area (CTK_DIALOG (retval));
+  ctk_box_set_spacing (CTK_BOX (content_area), 2);
+  ctk_window_set_title (CTK_WINDOW (retval), _("Take Screenshot"));
 
   /* main container */
-  main_vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 18);
-  ctk_container_set_border_width (GTK_CONTAINER (main_vbox), 5);
-  ctk_box_pack_start (GTK_BOX (content_area), main_vbox, TRUE, TRUE, 0);
+  main_vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 18);
+  ctk_container_set_border_width (CTK_CONTAINER (main_vbox), 5);
+  ctk_box_pack_start (CTK_BOX (content_area), main_vbox, TRUE, TRUE, 0);
   ctk_widget_show (main_vbox);
 
   create_screenshot_frame (main_vbox, _("Take Screenshot"));
   create_effects_frame (main_vbox, _("Effects"));
-  ctk_dialog_add_buttons (GTK_DIALOG (retval),
-                          "ctk-help", GTK_RESPONSE_HELP,
-                          "ctk-cancel", GTK_RESPONSE_CANCEL,
-                          _("Take _Screenshot"), GTK_RESPONSE_OK,
+  ctk_dialog_add_buttons (CTK_DIALOG (retval),
+                          "ctk-help", CTK_RESPONSE_HELP,
+                          "ctk-cancel", CTK_RESPONSE_CANCEL,
+                          _("Take _Screenshot"), CTK_RESPONSE_OK,
                           NULL);
-  ctk_dialog_set_default_response (GTK_DIALOG (retval), GTK_RESPONSE_OK);
+  ctk_dialog_set_default_response (CTK_DIALOG (retval), CTK_RESPONSE_OK);
 
   /* we need to block on "response" and keep showing the interactive
    * dialog in case the user did choose "help"
@@ -602,7 +602,7 @@ error_dialog_response_cb (GtkDialog *d,
                           gint response,
                           ScreenshotDialog *dialog)
 {
-  ctk_widget_destroy (GTK_WIDGET (d));
+  ctk_widget_destroy (CTK_WIDGET (d));
 
   screenshot_dialog_focus_entry (dialog);
 }
@@ -644,13 +644,13 @@ save_callback (TransferResult result,
       char *uri;
 
       uri = screenshot_dialog_get_uri (dialog);
-      error_dialog = ctk_message_dialog_new (GTK_WINDOW (toplevel),
-                                       GTK_DIALOG_DESTROY_WITH_PARENT,
-                                       GTK_MESSAGE_ERROR,
-                                       GTK_BUTTONS_OK,
+      error_dialog = ctk_message_dialog_new (CTK_WINDOW (toplevel),
+                                       CTK_DIALOG_DESTROY_WITH_PARENT,
+                                       CTK_MESSAGE_ERROR,
+                                       CTK_BUTTONS_OK,
                                        _("Error while saving screenshot"));
       /* translators: first %s is the file path, second %s is the VFS error */
-      ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (error_dialog),
+      ctk_message_dialog_format_secondary_text (CTK_MESSAGE_DIALOG (error_dialog),
                                                 _("Impossible to save the screenshot "
                                                   "to %s.\n Error was %s.\n Please choose another "
                                                   "location and retry."), uri, error_message);
@@ -701,7 +701,7 @@ save_done_notification (gpointer data)
       GtkWidget *toplevel;
 
       toplevel = screenshot_dialog_get_toplevel (dialog);
-      ctk_dialog_response (GTK_DIALOG (toplevel), GTK_RESPONSE_OK);
+      ctk_dialog_response (CTK_DIALOG (toplevel), CTK_RESPONSE_OK);
     }
 }
 
@@ -720,18 +720,18 @@ screenshot_dialog_response_cb (GtkDialog *d,
 {
   char *uri;
 
-  if (response_id == GTK_RESPONSE_HELP)
+  if (response_id == CTK_RESPONSE_HELP)
     {
-      display_help (GTK_WINDOW (d));
+      display_help (CTK_WINDOW (d));
     }
   else if (response_id == SCREENSHOT_RESPONSE_NEW)
     {
-      ctk_widget_destroy (GTK_WIDGET (d));
+      ctk_widget_destroy (CTK_WIDGET (d));
       ctk_main_quit ();
       interactive_arg = TRUE;
       loop_dialog_screenshot();
     }
-  else if (response_id == GTK_RESPONSE_OK)
+  else if (response_id == CTK_RESPONSE_OK)
     {
       uri = screenshot_dialog_get_uri (dialog);
       if (temporary_file == NULL)
@@ -750,12 +750,12 @@ screenshot_dialog_response_cb (GtkDialog *d,
     }
   else if (response_id == SCREENSHOT_RESPONSE_COPY)
     {
-      save_screenshot_in_clipboard (ctk_widget_get_display (GTK_WIDGET (d)),
+      save_screenshot_in_clipboard (ctk_widget_get_display (CTK_WIDGET (d)),
                                     screenshot_dialog_get_screenshot (dialog));
     }
   else /* dialog was canceled */
     {
-      ctk_widget_destroy (GTK_WIDGET (d));
+      ctk_widget_destroy (CTK_WIDGET (d));
       ctk_main_quit ();
     }
 }
@@ -1257,15 +1257,15 @@ loop_dialog_screenshot ()
       gint response;
 
       dialog = create_interactive_dialog ();
-      response = ctk_dialog_run (GTK_DIALOG (dialog));
+      response = ctk_dialog_run (CTK_DIALOG (dialog));
       ctk_widget_destroy (dialog);
 
       switch (response)
         {
-        case GTK_RESPONSE_DELETE_EVENT:
-        case GTK_RESPONSE_CANCEL:
+        case CTK_RESPONSE_DELETE_EVENT:
+        case CTK_RESPONSE_CANCEL:
           return;
-        case GTK_RESPONSE_OK:
+        case CTK_RESPONSE_OK:
           break;
         default:
           g_assert_not_reached ();

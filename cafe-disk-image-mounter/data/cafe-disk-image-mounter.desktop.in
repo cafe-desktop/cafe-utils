@@ -9,5 +9,5 @@ MimeType=application/x-cd-image;application/x-raw-disk-image;
 Terminal=false
 StartupNotify=false
 Type=Application
-Categories=GTK;System;
+Categories=CTK;System;
 OnlyShowIn=CAFE;

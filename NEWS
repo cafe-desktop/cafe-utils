@@ -116,7 +116,7 @@
 ### cafe-utils 1.20.0
 
   * Translations update
-  * require GTK+ 3.22 and GLib 2.50
+  * require CTK+ 3.22 and GLib 2.50
   * Add screenshot support for HiDPI displays
   * cafe-screenshot: added New button
   * update copyright year to 2018
@@ -160,7 +160,7 @@
   * NEWS: use consistent, project wide, markdown-like formatting
     to make generating release announcements easier
   * Build: require cafe-panel >= 1.17
-  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and
+  * Move to CTK+3 (require CTK+ >= 3.14), drop CTK+2 code and
     --with-ctk build option
   * Fix occasional distcheck breakage
   * Some code cleanups
@@ -169,16 +169,16 @@
 ### cafe-utils 1.16.0
 
   * Add --version command line option to cafe-screenshot
-  * GTK+3: fix cafe-dictionary segfault with 3.21
-  * GTK+3: fix lots of deprecations in all apps
+  * CTK+3: fix cafe-dictionary segfault with 3.21
+  * CTK+3: fix lots of deprecations in all apps
   * Translations update
 
 ### cafe-utils 1.14.1
 
-  * Require proper GTK+ version in cafe-dict.pc file
+  * Require proper CTK+ version in cafe-dict.pc file
   * Some assorted fixes
   * Translations update
-  * Make distcheck use currently selected GTK+ version
+  * Make distcheck use currently selected CTK+ version
 
 ### cafe-utils 1.14.0
 
@@ -187,7 +187,7 @@
     when launched with -ai command line argument
   * Use hyphens instead of colons in screenshot filenames
     by default
-  * GTK+3: fix a lot of deprecations and some UI issues
+  * CTK+3: fix a lot of deprecations and some UI issues
   * Don't use -Werror flag in build
   * Some more fixes and cleanups
   * Translations update
@@ -225,7 +225,7 @@
 
 ### cafe-utils 1.10.0
 
-  * Add GTK3 support
+  * Add CTK3 support
 
 ### cafe-utils 1.8.0
 

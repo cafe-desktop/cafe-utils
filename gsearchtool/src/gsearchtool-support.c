@@ -889,7 +889,7 @@ get_themed_icon_pixbuf (GThemedIcon * icon,
 
 	icon_info = ctk_icon_theme_choose_icon (icon_theme, (const char **)icon_names, size, 0);
 	if (icon_info == NULL) {
-		icon_info = ctk_icon_theme_lookup_icon (icon_theme, "text-x-generic", size, GTK_ICON_LOOKUP_USE_BUILTIN);
+		icon_info = ctk_icon_theme_lookup_icon (icon_theme, "text-x-generic", size, CTK_ICON_LOOKUP_USE_BUILTIN);
 	}
 	pixbuf = ctk_icon_info_load_icon (icon_info, &error);
 	if (pixbuf == NULL) {
@@ -989,7 +989,7 @@ open_file_with_filemanager (GtkWidget * window,
 	d_app_info = g_desktop_app_info_new_from_keyfile (key_file);
 
 	if (d_app_info != NULL) {
-		screen = ctk_widget_get_screen (GTK_WIDGET (window));
+		screen = ctk_widget_get_screen (CTK_WIDGET (window));
 		display = gdk_screen_get_display (screen);
 		ctx = gdk_display_get_app_launch_context (display);
 		gdk_app_launch_context_set_screen (ctx, ctk_widget_get_screen (window));
@@ -1127,12 +1127,12 @@ gsearchtool_button_new_with_icon (const gchar * string,
 
 	button = ctk_button_new ();
 	label = ctk_label_new_with_mnemonic (string);
-	ctk_label_set_mnemonic_widget (GTK_LABEL (label), GTK_WIDGET (button));
-	image = ctk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_BUTTON);
-	hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 2);
-	ctk_box_pack_start (GTK_BOX (hbox), image, FALSE, FALSE, 0);
-	ctk_box_pack_end (GTK_BOX (hbox), label, FALSE, FALSE, 0);
-	ctk_container_add (GTK_CONTAINER (button), hbox);
+	ctk_label_set_mnemonic_widget (CTK_LABEL (label), CTK_WIDGET (button));
+	image = ctk_image_new_from_icon_name (icon_name, CTK_ICON_SIZE_BUTTON);
+	hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 2);
+	ctk_box_pack_start (CTK_BOX (hbox), image, FALSE, FALSE, 0);
+	ctk_box_pack_end (CTK_BOX (hbox), label, FALSE, FALSE, 0);
+	ctk_container_add (CTK_CONTAINER (button), hbox);
 	ctk_widget_show_all (hbox);
 
 	return button;

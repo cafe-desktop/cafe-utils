@@ -81,7 +81,7 @@ enum
   LAST_SIGNAL
 };
 
-G_DEFINE_ABSTRACT_TYPE_WITH_PRIVATE (BaobabChart, baobab_chart, GTK_TYPE_WIDGET);
+G_DEFINE_ABSTRACT_TYPE_WITH_PRIVATE (BaobabChart, baobab_chart, CTK_TYPE_WIDGET);
 
 static guint baobab_chart_signals [LAST_SIGNAL] = { 0 };
 
@@ -174,7 +174,7 @@ baobab_chart_class_init (BaobabChartClass *class)
   GtkWidgetClass *widget_class;
 
   obj_class = G_OBJECT_CLASS (class);
-  widget_class = GTK_WIDGET_CLASS (class);
+  widget_class = CTK_WIDGET_CLASS (class);
 
   /* GtkObject signals */
   obj_class->set_property = baobab_chart_set_property;
@@ -212,7 +212,7 @@ baobab_chart_class_init (BaobabChartClass *class)
                                    g_param_spec_object ("model",
                                    _("Chart model"),
                                    _("Set the model of the chart"),
-                                   GTK_TYPE_TREE_MODEL,
+                                   CTK_TYPE_TREE_MODEL,
                                    G_PARAM_READWRITE));
 
   g_object_class_install_property (obj_class,
@@ -220,7 +220,7 @@ baobab_chart_class_init (BaobabChartClass *class)
                                    g_param_spec_boxed ("root",
                                    _("Chart root node"),
                                    _("Set the root node from the model"),
-                                   GTK_TYPE_TREE_ITER,
+                                   CTK_TYPE_TREE_ITER,
                                    G_PARAM_READWRITE));
 
   baobab_chart_signals[ITEM_ACTIVATED] =
@@ -231,7 +231,7 @@ baobab_chart_class_init (BaobabChartClass *class)
           NULL, NULL,
           g_cclosure_marshal_VOID__BOXED,
           G_TYPE_NONE, 1,
-          GTK_TYPE_TREE_ITER);
+          CTK_TYPE_TREE_ITER);
 }
 
 static void
@@ -264,13 +264,13 @@ baobab_chart_dispose (GObject *object)
 {
   BaobabChartPrivate *priv;
 
-  baobab_chart_free_items (GTK_WIDGET (object));
+  baobab_chart_free_items (CTK_WIDGET (object));
 
   priv = BAOBAB_CHART (object)->priv;
 
   if (priv->model)
     {
-      baobab_chart_disconnect_signals (GTK_WIDGET (object),
+      baobab_chart_disconnect_signals (CTK_WIDGET (object),
                                        priv->model);
 
       g_object_unref (priv->model);
@@ -377,13 +377,13 @@ baobab_chart_set_property (GObject         *object,
   switch (prop_id)
     {
     case PROP_MAX_DEPTH:
-      baobab_chart_set_max_depth (GTK_WIDGET (chart), g_value_get_int (value));
+      baobab_chart_set_max_depth (CTK_WIDGET (chart), g_value_get_int (value));
       break;
     case PROP_MODEL:
-      baobab_chart_set_model (GTK_WIDGET (chart), g_value_get_object (value));
+      baobab_chart_set_model (CTK_WIDGET (chart), g_value_get_object (value));
       break;
     case PROP_ROOT:
-      baobab_chart_set_root (GTK_WIDGET (chart), g_value_get_object (value));
+      baobab_chart_set_root (CTK_WIDGET (chart), g_value_get_object (value));
       break;
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -637,7 +637,7 @@ baobab_chart_update_draw (BaobabChart* chart,
   GtkTreePath *root_path = NULL;
   gint root_depth, node_depth;
 
-  if (!ctk_widget_get_realized ( GTK_WIDGET (chart)))
+  if (!ctk_widget_get_realized ( CTK_WIDGET (chart)))
     return;
 
   priv = BAOBAB_CHART (chart)->priv;
@@ -664,7 +664,7 @@ baobab_chart_update_draw (BaobabChart* chart,
       ((ctk_tree_path_is_ancestor (root_path, path))||
        (ctk_tree_path_compare (root_path, path) == 0)))
     {
-      ctk_widget_queue_draw (GTK_WIDGET (chart));
+      ctk_widget_queue_draw (CTK_WIDGET (chart));
     }
 
   ctk_tree_path_free (root_path);
@@ -783,7 +783,7 @@ baobab_chart_expose (GtkWidget *chart, cairo_t *cr)
 
           cairo_clip (cr);
 
-          ctk_widget_get_allocation (GTK_WIDGET (chart), &allocation);
+          ctk_widget_get_allocation (CTK_WIDGET (chart), &allocation);
           if (w > 0 && h > 0 &&
           !(allocation.width == w && allocation.height == h))
             {
@@ -988,7 +988,7 @@ baobab_chart_set_item_highlight (GtkWidget *chart,
   else
     priv->highlighted_item = NULL;
 
-  gdk_window_invalidate_rect (ctk_widget_get_window ( GTK_WIDGET (chart)),
+  gdk_window_invalidate_rect (ctk_widget_get_window ( CTK_WIDGET (chart)),
                               &item->rect, TRUE);
 }
 
@@ -1246,7 +1246,7 @@ baobab_chart_set_model_with_columns (GtkWidget *chart,
   BaobabChartPrivate *priv;
 
   g_return_if_fail (BAOBAB_IS_CHART (chart));
-  g_return_if_fail (GTK_IS_TREE_MODEL (model));
+  g_return_if_fail (CTK_IS_TREE_MODEL (model));
 
   priv = BAOBAB_CHART (chart)->priv;
 
@@ -1288,7 +1288,7 @@ baobab_chart_set_model (GtkWidget *chart,
   BaobabChartPrivate *priv;
 
   g_return_if_fail (BAOBAB_IS_CHART (chart));
-  g_return_if_fail (GTK_IS_TREE_MODEL (model));
+  g_return_if_fail (CTK_IS_TREE_MODEL (model));
 
   priv = BAOBAB_CHART (chart)->priv;
 
@@ -1484,7 +1484,7 @@ baobab_chart_freeze_updates (GtkWidget *chart)
     baobab_chart_disconnect_signals (chart,
                                      priv->model);
 
-  ctk_widget_get_allocation (GTK_WIDGET (chart), &allocation);
+  ctk_widget_get_allocation (CTK_WIDGET (chart), &allocation);
   surface = cairo_image_surface_create (CAIRO_FORMAT_ARGB32,
                                         allocation.width,
                                         allocation.height);
@@ -1698,11 +1698,11 @@ baobab_chart_save_snapshot (GtkWidget *chart)
     {
       GtkWidget *dialog;
       dialog = ctk_message_dialog_new (NULL,
-                                       GTK_DIALOG_DESTROY_WITH_PARENT,
-                                       GTK_MESSAGE_ERROR,
-                                       GTK_BUTTONS_OK,
+                                       CTK_DIALOG_DESTROY_WITH_PARENT,
+                                       CTK_MESSAGE_ERROR,
+                                       CTK_BUTTONS_OK,
                                        _("Cannot create pixbuf image!"));
-      ctk_dialog_run (GTK_DIALOG (dialog));
+      ctk_dialog_run (CTK_DIALOG (dialog));
       ctk_widget_destroy (dialog);
 
       return;
@@ -1713,50 +1713,50 @@ baobab_chart_save_snapshot (GtkWidget *chart)
   /* Popup the File chooser dialog */
   fs_dlg = ctk_file_chooser_dialog_new (_("Save Snapshot"),
                                         NULL,
-                                        GTK_FILE_CHOOSER_ACTION_SAVE,
+                                        CTK_FILE_CHOOSER_ACTION_SAVE,
                                         "ctk-cancel",
-                                        GTK_RESPONSE_CANCEL,
+                                        CTK_RESPONSE_CANCEL,
                                         "ctk-save",
-                                        GTK_RESPONSE_ACCEPT, NULL);
+                                        CTK_RESPONSE_ACCEPT, NULL);
 
   item = (BaobabChartItem *) priv->first_item->data;
   def_filename = g_strdup_printf (SNAPSHOT_DEF_FILENAME_FORMAT, item->name);
 
-  ctk_file_chooser_set_current_name (GTK_FILE_CHOOSER (fs_dlg), def_filename);
+  ctk_file_chooser_set_current_name (CTK_FILE_CHOOSER (fs_dlg), def_filename);
   g_free (def_filename);
 
-  ctk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (fs_dlg),
+  ctk_file_chooser_set_current_folder (CTK_FILE_CHOOSER (fs_dlg),
                                        g_get_home_dir ());
 
-  ctk_file_chooser_set_do_overwrite_confirmation (GTK_FILE_CHOOSER (fs_dlg), TRUE);
+  ctk_file_chooser_set_do_overwrite_confirmation (CTK_FILE_CHOOSER (fs_dlg), TRUE);
 
   /* extra widget */
-  vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-  ctk_container_set_border_width (GTK_CONTAINER (vbox), 0);
-  ctk_file_chooser_set_extra_widget (GTK_FILE_CHOOSER (fs_dlg), vbox);
+  vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 0);
+  ctk_container_set_border_width (CTK_CONTAINER (vbox), 0);
+  ctk_file_chooser_set_extra_widget (CTK_FILE_CHOOSER (fs_dlg), vbox);
 
-  hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-  ctk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, 6);
+  hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 12);
+  ctk_box_pack_start (CTK_BOX (vbox), hbox, TRUE, TRUE, 6);
 
   label = ctk_label_new_with_mnemonic (_("_Image type:"));
-  ctk_box_pack_start (GTK_BOX (hbox),
+  ctk_box_pack_start (CTK_BOX (hbox),
                       label,
                       FALSE, FALSE, 0);
 
   opt_menu = ctk_combo_box_text_new ();
-  ctk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (opt_menu), "png");
-  ctk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (opt_menu), "jpeg");
-  ctk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (opt_menu), "bmp");
-  ctk_combo_box_set_active (GTK_COMBO_BOX (opt_menu), 0);
-  ctk_box_pack_start (GTK_BOX (hbox), opt_menu, TRUE, TRUE, 0);
+  ctk_combo_box_text_append_text (CTK_COMBO_BOX_TEXT (opt_menu), "png");
+  ctk_combo_box_text_append_text (CTK_COMBO_BOX_TEXT (opt_menu), "jpeg");
+  ctk_combo_box_text_append_text (CTK_COMBO_BOX_TEXT (opt_menu), "bmp");
+  ctk_combo_box_set_active (CTK_COMBO_BOX (opt_menu), 0);
+  ctk_box_pack_start (CTK_BOX (hbox), opt_menu, TRUE, TRUE, 0);
 
-  ctk_label_set_mnemonic_widget (GTK_LABEL (label), opt_menu);
+  ctk_label_set_mnemonic_widget (CTK_LABEL (label), opt_menu);
   ctk_widget_show_all (vbox);
 
-  if (ctk_dialog_run (GTK_DIALOG (fs_dlg)) == GTK_RESPONSE_ACCEPT)
+  if (ctk_dialog_run (CTK_DIALOG (fs_dlg)) == CTK_RESPONSE_ACCEPT)
     {
-      filename = ctk_file_chooser_get_filename (GTK_FILE_CHOOSER (fs_dlg));
-      sel_type = ctk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (opt_menu));
+      filename = ctk_file_chooser_get_filename (CTK_FILE_CHOOSER (fs_dlg));
+      sel_type = ctk_combo_box_text_get_active_text (CTK_COMBO_BOX_TEXT (opt_menu));
       if (! g_str_has_suffix (filename, sel_type))
         {
           gchar *tmp;
