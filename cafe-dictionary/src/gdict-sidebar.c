@@ -71,7 +71,7 @@ enum
 static guint sidebar_signals[LAST_SIGNAL] = { 0 };
 static GQuark sidebar_page_id_quark = 0;
 
-G_DEFINE_TYPE_WITH_PRIVATE (GdictSidebar, gdict_sidebar, GTK_TYPE_BOX);
+G_DEFINE_TYPE_WITH_PRIVATE (GdictSidebar, gdict_sidebar, CTK_TYPE_BOX);
 
 SidebarPage *
 sidebar_page_new (const gchar *id,
@@ -127,7 +127,7 @@ gdict_sidebar_dispose (GObject *object)
 
   if (sidebar->priv->menu)
     {
-      ctk_menu_detach (GTK_MENU (sidebar->priv->menu));
+      ctk_menu_detach (CTK_MENU (sidebar->priv->menu));
       sidebar->priv->menu = NULL;
     }
 
@@ -155,8 +155,8 @@ gdict_sidebar_select_button_press_cb (GtkWidget      *widget,
 		      		   MAX (width, req.width), -1);
       ctk_widget_grab_focus (widget);
 
-      ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), TRUE);
-      ctk_menu_popup_at_widget (GTK_MENU (sidebar->priv->menu),
+      ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (widget), TRUE);
+      ctk_menu_popup_at_widget (CTK_MENU (sidebar->priv->menu),
                                 widget,
                                 GDK_GRAVITY_SOUTH_WEST,
                                 GDK_GRAVITY_NORTH_WEST,
@@ -180,8 +180,8 @@ gdict_sidebar_select_key_press_cb (GtkWidget   *widget,
       event->keyval == GDK_KEY_Return ||
       event->keyval == GDK_KEY_KP_Enter)
     {
-      ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), TRUE);
-      ctk_menu_popup_at_widget (GTK_MENU (sidebar->priv->menu),
+      ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (widget), TRUE);
+      ctk_menu_popup_at_widget (CTK_MENU (sidebar->priv->menu),
                                 widget,
                                 GDK_GRAVITY_SOUTH_WEST,
                                 GDK_GRAVITY_NORTH_WEST,
@@ -208,7 +208,7 @@ gdict_sidebar_menu_deactivate_cb (GtkWidget *widget,
 {
   GdictSidebar *sidebar = GDICT_SIDEBAR (user_data);
   GdictSidebarPrivate *priv = sidebar->priv;
-  GtkToggleButton *select_button = GTK_TOGGLE_BUTTON (priv->select_button);
+  GtkToggleButton *select_button = CTK_TOGGLE_BUTTON (priv->select_button);
 
   ctk_toggle_button_set_active (select_button, FALSE);
 }
@@ -233,20 +233,20 @@ gdict_sidebar_menu_item_activate (GtkWidget *widget,
   SidebarPage *page;
   gint current_index;
 
-  menu_item = ctk_menu_get_active (GTK_MENU (priv->menu));
+  menu_item = ctk_menu_get_active (CTK_MENU (priv->menu));
   id = g_object_get_qdata (G_OBJECT (menu_item), sidebar_page_id_quark);
   g_assert (id != NULL);
 
   page = g_hash_table_lookup (priv->pages_by_id, id);
   g_assert (page != NULL);
 
-  current_index = ctk_notebook_get_current_page (GTK_NOTEBOOK (priv->notebook));
+  current_index = ctk_notebook_get_current_page (CTK_NOTEBOOK (priv->notebook));
   if (current_index == page->index)
     return;
 
-  ctk_notebook_set_current_page (GTK_NOTEBOOK (priv->notebook),
+  ctk_notebook_set_current_page (CTK_NOTEBOOK (priv->notebook),
 		  		 page->index);
-  ctk_label_set_text (GTK_LABEL (priv->label), page->name);
+  ctk_label_set_text (CTK_LABEL (priv->label), page->name);
 
   g_signal_emit (sidebar, sidebar_signals[PAGE_CHANGED], 0);
 }
@@ -289,7 +289,7 @@ gdict_sidebar_init (GdictSidebar *sidebar)
   GtkWidget *close_button;
   GtkWidget *arrow;
 
-  ctk_orientable_set_orientation (GTK_ORIENTABLE (sidebar), GTK_ORIENTATION_VERTICAL);
+  ctk_orientable_set_orientation (CTK_ORIENTABLE (sidebar), CTK_ORIENTATION_VERTICAL);
   sidebar->priv = priv = gdict_sidebar_get_instance_private (sidebar);
 
   /* we store all the pages inside the list, but we keep
@@ -302,13 +302,13 @@ gdict_sidebar_init (GdictSidebar *sidebar)
   priv->pages_by_id = g_hash_table_new (g_str_hash, g_str_equal);
 
   /* top option menu */
-  hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-  ctk_box_pack_start (GTK_BOX (sidebar), hbox, FALSE, FALSE, 0);
+  hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 0);
+  ctk_box_pack_start (CTK_BOX (sidebar), hbox, FALSE, FALSE, 0);
   ctk_widget_show (hbox);
   priv->hbox = hbox;
 
   select_button = ctk_toggle_button_new ();
-  ctk_button_set_relief (GTK_BUTTON (select_button), GTK_RELIEF_NONE);
+  ctk_button_set_relief (CTK_BUTTON (select_button), CTK_RELIEF_NONE);
   g_signal_connect (select_button, "button-press-event",
 		    G_CALLBACK (gdict_sidebar_select_button_press_cb),
 		    sidebar);
@@ -317,33 +317,33 @@ gdict_sidebar_init (GdictSidebar *sidebar)
 		    sidebar);
   priv->select_button = select_button;
 
-  select_hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+  select_hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 0);
 
   priv->label = ctk_label_new (NULL);
-  ctk_label_set_xalign (GTK_LABEL (priv->label), 0.0);
-  ctk_label_set_yalign (GTK_LABEL (priv->label), 0.5);
-  ctk_box_pack_start (GTK_BOX (select_hbox), priv->label, FALSE, FALSE, 0);
+  ctk_label_set_xalign (CTK_LABEL (priv->label), 0.0);
+  ctk_label_set_yalign (CTK_LABEL (priv->label), 0.5);
+  ctk_box_pack_start (CTK_BOX (select_hbox), priv->label, FALSE, FALSE, 0);
   ctk_widget_show (priv->label);
 
-  arrow = ctk_image_new_from_icon_name ("go-down-symbolic", GTK_ICON_SIZE_BUTTON);
-  ctk_box_pack_end (GTK_BOX (select_hbox), arrow, FALSE, FALSE, 0);
+  arrow = ctk_image_new_from_icon_name ("go-down-symbolic", CTK_ICON_SIZE_BUTTON);
+  ctk_box_pack_end (CTK_BOX (select_hbox), arrow, FALSE, FALSE, 0);
   ctk_widget_show (arrow);
 
-  ctk_container_add (GTK_CONTAINER (select_button), select_hbox);
+  ctk_container_add (CTK_CONTAINER (select_button), select_hbox);
   ctk_widget_show (select_hbox);
 
-  ctk_box_pack_start (GTK_BOX (hbox), select_button, TRUE, TRUE, 0);
+  ctk_box_pack_start (CTK_BOX (hbox), select_button, TRUE, TRUE, 0);
   ctk_widget_show (select_button);
 
   close_button = ctk_button_new ();
-  ctk_button_set_relief (GTK_BUTTON (close_button), GTK_RELIEF_NONE);
-  ctk_button_set_image (GTK_BUTTON (close_button),
+  ctk_button_set_relief (CTK_BUTTON (close_button), CTK_RELIEF_NONE);
+  ctk_button_set_image (CTK_BUTTON (close_button),
                         ctk_image_new_from_icon_name ("window-close",
-                                                      GTK_ICON_SIZE_SMALL_TOOLBAR));
+                                                      CTK_ICON_SIZE_SMALL_TOOLBAR));
   g_signal_connect (close_button, "clicked",
 		    G_CALLBACK (gdict_sidebar_close_clicked_cb),
 		    sidebar);
-  ctk_box_pack_end (GTK_BOX (hbox), close_button, FALSE, FALSE, 0);
+  ctk_box_pack_end (CTK_BOX (hbox), close_button, FALSE, FALSE, 0);
   ctk_widget_show (close_button);
   priv->close_button = close_button;
 
@@ -351,15 +351,15 @@ gdict_sidebar_init (GdictSidebar *sidebar)
   g_signal_connect (sidebar->priv->menu, "deactivate",
 		    G_CALLBACK (gdict_sidebar_menu_deactivate_cb),
 		    sidebar);
-  ctk_menu_attach_to_widget (GTK_MENU (sidebar->priv->menu),
-		  	     GTK_WIDGET (sidebar),
+  ctk_menu_attach_to_widget (CTK_MENU (sidebar->priv->menu),
+		  	     CTK_WIDGET (sidebar),
 			     gdict_sidebar_menu_detach_cb);
   ctk_widget_show (sidebar->priv->menu);
 
   sidebar->priv->notebook = ctk_notebook_new ();
-  ctk_notebook_set_show_border (GTK_NOTEBOOK (sidebar->priv->notebook), FALSE);
-  ctk_notebook_set_show_tabs (GTK_NOTEBOOK (sidebar->priv->notebook), FALSE);
-  ctk_box_pack_start (GTK_BOX (sidebar), sidebar->priv->notebook, TRUE, TRUE, 6);
+  ctk_notebook_set_show_border (CTK_NOTEBOOK (sidebar->priv->notebook), FALSE);
+  ctk_notebook_set_show_tabs (CTK_NOTEBOOK (sidebar->priv->notebook), FALSE);
+  ctk_box_pack_start (CTK_BOX (sidebar), sidebar->priv->notebook, TRUE, TRUE, 6);
   ctk_widget_show (sidebar->priv->notebook);
 }
 
@@ -386,7 +386,7 @@ gdict_sidebar_add_page (GdictSidebar *sidebar,
   g_return_if_fail (GDICT_IS_SIDEBAR (sidebar));
   g_return_if_fail (page_id != NULL);
   g_return_if_fail (page_name != NULL);
-  g_return_if_fail (GTK_IS_WIDGET (page_widget));
+  g_return_if_fail (CTK_IS_WIDGET (page_widget));
 
   priv = sidebar->priv;
 
@@ -405,7 +405,7 @@ gdict_sidebar_add_page (GdictSidebar *sidebar,
   priv->pages = g_slist_append (priv->pages, page);
   g_hash_table_insert (priv->pages_by_id, page->id, page);
 
-  page->index = ctk_notebook_append_page (GTK_NOTEBOOK (priv->notebook),
+  page->index = ctk_notebook_append_page (CTK_NOTEBOOK (priv->notebook),
 		  			  page_widget,
 					  NULL);
 
@@ -418,14 +418,14 @@ gdict_sidebar_add_page (GdictSidebar *sidebar,
   g_signal_connect (menu_item, "activate",
 		    G_CALLBACK (gdict_sidebar_menu_item_activate),
 		    sidebar);
-  ctk_menu_shell_append (GTK_MENU_SHELL (priv->menu), menu_item);
+  ctk_menu_shell_append (CTK_MENU_SHELL (priv->menu), menu_item);
   ctk_widget_show (menu_item);
   page->menu_item = menu_item;
 
   if (ctk_widget_get_realized (priv->menu))
-    ctk_menu_shell_select_item (GTK_MENU_SHELL (priv->menu), menu_item);
-  ctk_label_set_text (GTK_LABEL (priv->label), page_name);
-  ctk_notebook_set_current_page (GTK_NOTEBOOK (priv->notebook), page->index);
+    ctk_menu_shell_select_item (CTK_MENU_SHELL (priv->menu), menu_item);
+  ctk_label_set_text (CTK_LABEL (priv->label), page_name);
+  ctk_notebook_set_current_page (CTK_NOTEBOOK (priv->notebook), page->index);
 }
 
 void
@@ -449,20 +449,20 @@ gdict_sidebar_remove_page (GdictSidebar *sidebar,
       return;
     }
 
-  children = ctk_container_get_children (GTK_CONTAINER (priv->menu));
+  children = ctk_container_get_children (CTK_CONTAINER (priv->menu));
   for (l = children; l != NULL; l = l->next)
     {
       GtkWidget *menu_item = l->data;
 
       if (menu_item == page->menu_item)
         {
-          ctk_container_remove (GTK_CONTAINER (priv->menu), menu_item);
+          ctk_container_remove (CTK_CONTAINER (priv->menu), menu_item);
 	  break;
 	}
     }
   g_list_free (children);
 
-  ctk_notebook_remove_page (GTK_NOTEBOOK (priv->notebook), page->index);
+  ctk_notebook_remove_page (CTK_NOTEBOOK (priv->notebook), page->index);
 
   g_hash_table_remove (priv->pages_by_id, page->id);
   priv->pages = g_slist_remove (priv->pages, page);
@@ -474,12 +474,12 @@ gdict_sidebar_remove_page (GdictSidebar *sidebar,
   if (page)
     {
       if (ctk_widget_get_realized (priv->menu))
-        ctk_menu_shell_select_item (GTK_MENU_SHELL (priv->menu), page->menu_item);
-      ctk_label_set_text (GTK_LABEL (priv->label), page->name);
-      ctk_notebook_set_current_page (GTK_NOTEBOOK (priv->notebook), page->index);
+        ctk_menu_shell_select_item (CTK_MENU_SHELL (priv->menu), page->menu_item);
+      ctk_label_set_text (CTK_LABEL (priv->label), page->name);
+      ctk_notebook_set_current_page (CTK_NOTEBOOK (priv->notebook), page->index);
     }
   else
-    ctk_widget_hide (GTK_WIDGET (sidebar));
+    ctk_widget_hide (CTK_WIDGET (sidebar));
 }
 
 void
@@ -497,10 +497,10 @@ gdict_sidebar_view_page (GdictSidebar *sidebar,
   if (!page)
     return;
 
-  ctk_notebook_set_current_page (GTK_NOTEBOOK (priv->notebook), page->index);
-  ctk_label_set_text (GTK_LABEL (priv->label), page->name);
+  ctk_notebook_set_current_page (CTK_NOTEBOOK (priv->notebook), page->index);
+  ctk_label_set_text (CTK_LABEL (priv->label), page->name);
   if (ctk_widget_get_realized (priv->menu))
-    ctk_menu_shell_select_item (GTK_MENU_SHELL (priv->menu), page->menu_item);
+    ctk_menu_shell_select_item (CTK_MENU_SHELL (priv->menu), page->menu_item);
 }
 
 const gchar *
@@ -514,7 +514,7 @@ gdict_sidebar_current_page (GdictSidebar *sidebar)
 
   priv = sidebar->priv;
 
-  index = ctk_notebook_get_current_page (GTK_NOTEBOOK (priv->notebook));
+  index = ctk_notebook_get_current_page (CTK_NOTEBOOK (priv->notebook));
   page = g_slist_nth_data (priv->pages, index);
   if (page == NULL)
     return NULL;

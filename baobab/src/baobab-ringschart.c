@@ -375,7 +375,7 @@ baobab_ringschart_subfolder_tips_timeout (gpointer data)
 
   priv->drawing_subtips = TRUE;
 
-  ctk_widget_queue_draw (GTK_WIDGET (data));
+  ctk_widget_queue_draw (CTK_WIDGET (data));
 
   return FALSE;
 }

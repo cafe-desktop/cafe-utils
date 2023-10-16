@@ -25,7 +25,7 @@ cafe_search_tool_CFLAGS = \
 	$(GLIB_CFLAGS) \
 	$(GIO_CFLAGS) \
 	$(GIO_UNIX_CFLAGS) \
-	$(GTK_CFLAGS) \
+	$(CTK_CFLAGS) \
 	$(WARN_CFLAGS) \
 	$(NULL)
 
@@ -33,7 +33,7 @@ cafe_search_tool_LDADD = \
 	$(GLIB_LIBS) \
 	$(GIO_LIBS) \
 	$(GIO_UNIX_LIBS) \
-	$(GTK_LIBS) \
+	$(CTK_LIBS) \
 	$(libeggsmclient_LIB) \
 	$(libcafeui_deprecated_LIB)
 

@@ -46,7 +46,7 @@ cafe_system_log_CFLAGS =	\
 	$(GLIB_CFLAGS)		\
 	$(GTHREAD_CFLAGS)	\
 	$(GIO_CFLAGS)		\
-	$(GTK_CFLAGS)		\
+	$(CTK_CFLAGS)		\
 	$(WARN_CFLAGS)		\
 	$(NULL)
 
@@ -54,7 +54,7 @@ cafe_system_log_LDADD =		\
 	$(GLIB_LIBS)		\
 	$(GIO_LIBS)		\
 	$(GTHREAD_LIBS)		\
-	$(GTK_LIBS)		\
+	$(CTK_LIBS)		\
 	$(Z_LIBS)		\
 	-lm
 

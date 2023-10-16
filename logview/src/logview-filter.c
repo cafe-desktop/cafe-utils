@@ -149,7 +149,7 @@ logview_filter_class_init (LogviewFilterClass *klass)
                                    g_param_spec_object ("texttag",
                                                         "texttag",
                                                         "The text tag to be set on matching lines",
-                                                        GTK_TYPE_TEXT_TAG,
+                                                        CTK_TYPE_TEXT_TAG,
                                                         G_PARAM_READABLE | G_PARAM_WRITABLE));
 }
 

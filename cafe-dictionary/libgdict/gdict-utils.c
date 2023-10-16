@@ -254,20 +254,20 @@ show_error_dialog (GtkWindow   *parent,
   GtkWidget *dialog;
 
   dialog = ctk_message_dialog_new (parent,
-  				   GTK_DIALOG_DESTROY_WITH_PARENT,
-  				   GTK_MESSAGE_ERROR,
-  				   GTK_BUTTONS_OK,
+  				   CTK_DIALOG_DESTROY_WITH_PARENT,
+  				   CTK_MESSAGE_ERROR,
+  				   CTK_BUTTONS_OK,
   				   "%s", message);
-  ctk_window_set_title (GTK_WINDOW (dialog), "");
+  ctk_window_set_title (CTK_WINDOW (dialog), "");
 
   if (detail)
-    ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+    ctk_message_dialog_format_secondary_text (CTK_MESSAGE_DIALOG (dialog),
   					      "%s", detail);
 
   if (parent && ctk_window_get_group (parent))
-    ctk_window_group_add_window (ctk_window_get_group (parent), GTK_WINDOW (dialog));
+    ctk_window_group_add_window (ctk_window_get_group (parent), CTK_WINDOW (dialog));
 
-  ctk_dialog_run (GTK_DIALOG (dialog));
+  ctk_dialog_run (CTK_DIALOG (dialog));
 
   ctk_widget_destroy (dialog);
 }
@@ -282,7 +282,7 @@ get_toplevel_window (GtkWidget *widget)
   if (!ctk_widget_is_toplevel (toplevel))
     return NULL;
   else
-    return GTK_WINDOW (toplevel);
+    return CTK_WINDOW (toplevel);
 }
 
 /**
@@ -300,7 +300,7 @@ _gdict_show_error_dialog (GtkWidget   *widget,
 			  const gchar *title,
 			  const gchar *detail)
 {
-  g_return_if_fail (GTK_IS_WIDGET (widget));
+  g_return_if_fail (CTK_IS_WIDGET (widget));
   g_return_if_fail (title != NULL);
 
   show_error_dialog (get_toplevel_window (widget), title, detail);
@@ -323,7 +323,7 @@ _gdict_show_gerror_dialog (GtkWidget   *widget,
 			   const gchar *title,
 			   GError      *error)
 {
-  g_return_if_fail (GTK_IS_WIDGET (widget));
+  g_return_if_fail (CTK_IS_WIDGET (widget));
   g_return_if_fail (title != NULL);
   g_return_if_fail (error != NULL);
 

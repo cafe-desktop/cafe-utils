@@ -39,7 +39,7 @@ struct _LogviewLoglistPrivate {
   gboolean has_day_selection;
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (LogviewLoglist, logview_loglist, GTK_TYPE_TREE_VIEW);
+G_DEFINE_TYPE_WITH_PRIVATE (LogviewLoglist, logview_loglist, CTK_TYPE_TREE_VIEW);
 
 enum {
   LOG_OBJECT = 0,
@@ -65,7 +65,7 @@ save_day_selection (LogviewLoglist *loglist, GtkTreeIter *iter)
   }
 
   loglist->priv->selection = ctk_tree_model_get_path
-    (GTK_TREE_MODEL (loglist->priv->model), iter);
+    (CTK_TREE_MODEL (loglist->priv->model), iter);
 }
 
 static void
@@ -84,7 +84,7 @@ update_days_and_lines_for_log (LogviewLoglist *loglist,
    * so we create a dummy entry, remove all the others and then remove the
    * dummy one.
    */
-  res = ctk_tree_model_iter_children (GTK_TREE_MODEL (loglist->priv->model),
+  res = ctk_tree_model_iter_children (CTK_TREE_MODEL (loglist->priv->model),
                                       &iter, log);
   if (res) {
     ctk_tree_store_insert_before (loglist->priv->model, &dummy, log, &iter);
@@ -102,9 +102,9 @@ update_days_and_lines_for_log (LogviewLoglist *loglist,
     /* TRANSLATORS: "strftime format options, see the man page for strftime(3) for further information." */
     g_date_strftime (date, 200, _("%A, %e %b"), day->date);
 
-    ctk_tree_store_insert (GTK_TREE_STORE (loglist->priv->model),
+    ctk_tree_store_insert (CTK_TREE_STORE (loglist->priv->model),
                            &iter, log, i);
-    ctk_tree_store_set (GTK_TREE_STORE (loglist->priv->model),
+    ctk_tree_store_set (CTK_TREE_STORE (loglist->priv->model),
                         &iter, LOG_NAME, date, LOG_DAY, day, -1);
     i++;
   }
@@ -122,7 +122,7 @@ logview_loglist_find_log (LogviewLoglist *list, LogviewLog *log)
   GtkTreeIter *retval = NULL;
   LogviewLog *current;
 
-  model = GTK_TREE_MODEL (list->priv->model);
+  model = CTK_TREE_MODEL (list->priv->model);
 
   if (!ctk_tree_model_get_iter_first (model, &iter)) {
     return NULL;
@@ -211,7 +211,7 @@ tree_selection_changed_cb (GtkTreeSelection *selection,
   }
 
   if (is_bold) {
-    ctk_tree_store_set (GTK_TREE_STORE (model), &iter,
+    ctk_tree_store_set (CTK_TREE_STORE (model), &iter,
                         LOG_WEIGHT_SET, FALSE, -1);
   }
 
@@ -231,14 +231,14 @@ manager_active_changed_cb (LogviewManager *manager,
   GtkTreeSelection * selection;
 
   if (list->priv->selection &&
-      ctk_tree_model_get_iter (GTK_TREE_MODEL (list->priv->model),
+      ctk_tree_model_get_iter (CTK_TREE_MODEL (list->priv->model),
                                &sel_iter, list->priv->selection))
   {
     Day *day;
 
     iter = ctk_tree_iter_copy (&sel_iter);
 
-    ctk_tree_model_get (GTK_TREE_MODEL (list->priv->model), iter,
+    ctk_tree_model_get (CTK_TREE_MODEL (list->priv->model), iter,
                         LOG_DAY, &day, -1);
 
     if (day) {
@@ -255,7 +255,7 @@ manager_active_changed_cb (LogviewManager *manager,
     return;
   }
 
-  selection = ctk_tree_view_get_selection (GTK_TREE_VIEW (list));
+  selection = ctk_tree_view_get_selection (CTK_TREE_VIEW (list));
   g_signal_handlers_block_by_func (selection, tree_selection_changed_cb, list);
 
   ctk_tree_selection_select_iter (selection, iter);
@@ -286,7 +286,7 @@ manager_log_closed_cb (LogviewManager *manager,
     GtkTreeSelection *selection;
 
     /* iter now points to the next valid row */
-    selection = ctk_tree_view_get_selection (GTK_TREE_VIEW (list));
+    selection = ctk_tree_view_get_selection (CTK_TREE_VIEW (list));
     ctk_tree_selection_select_iter (selection, iter);
   } else {
     /* FIXME: what shall we do here? */
@@ -327,7 +327,7 @@ row_expanded_cb (GtkTreeView *view,
   LogviewLoglist *list = user_data;
   LogviewLog *log;
 
-  ctk_tree_model_get (GTK_TREE_MODEL (list->priv->model), iter,
+  ctk_tree_model_get (CTK_TREE_MODEL (list->priv->model), iter,
                       LOG_OBJECT, &log, -1);
   if (!logview_manager_log_is_active (list->priv->manager, log)) {
     logview_manager_set_active_log (list->priv->manager, log);
@@ -346,7 +346,7 @@ loglist_sort_func (GtkTreeModel *model,
   Day *day_a, *day_b;
   int retval = 0;
 
-  switch (ctk_tree_store_iter_depth (GTK_TREE_STORE (model), a)) {
+  switch (ctk_tree_store_iter_depth (CTK_TREE_STORE (model), a)) {
     case 0:
       ctk_tree_model_get (model, a, LOG_NAME, &name_a, -1);
       ctk_tree_model_get (model, b, LOG_NAME, &name_b, -1);
@@ -404,12 +404,12 @@ logview_loglist_init (LogviewLoglist *list)
 
   model = ctk_tree_store_new (5, LOGVIEW_TYPE_LOG, G_TYPE_STRING, G_TYPE_INT,
                               G_TYPE_BOOLEAN, G_TYPE_POINTER);
-  ctk_tree_view_set_model (GTK_TREE_VIEW (list), GTK_TREE_MODEL (model));
+  ctk_tree_view_set_model (CTK_TREE_VIEW (list), CTK_TREE_MODEL (model));
   list->priv->model = model;
-  ctk_tree_view_set_headers_visible (GTK_TREE_VIEW (list), FALSE);
+  ctk_tree_view_set_headers_visible (CTK_TREE_VIEW (list), FALSE);
 
-  selection = ctk_tree_view_get_selection (GTK_TREE_VIEW (list));
-  ctk_tree_selection_set_mode (selection, GTK_SELECTION_BROWSE);
+  selection = ctk_tree_view_get_selection (CTK_TREE_VIEW (list));
+  ctk_tree_selection_set_mode (selection, CTK_SELECTION_BROWSE);
   g_signal_connect (selection, "changed",
                     G_CALLBACK (tree_selection_changed_cb), list);
 
@@ -422,13 +422,13 @@ logview_loglist_init (LogviewLoglist *list)
                                        "weight", LOG_WEIGHT,
                                        NULL);
 
-  ctk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (list->priv->model), LOG_NAME, GTK_SORT_ASCENDING);
-  ctk_tree_sortable_set_sort_func (GTK_TREE_SORTABLE (list->priv->model),
+  ctk_tree_sortable_set_sort_column_id (CTK_TREE_SORTABLE (list->priv->model), LOG_NAME, CTK_SORT_ASCENDING);
+  ctk_tree_sortable_set_sort_func (CTK_TREE_SORTABLE (list->priv->model),
                                    LOG_NAME,
                                    (GtkTreeIterCompareFunc) loglist_sort_func,
                                    list, NULL);
-  ctk_tree_view_append_column (GTK_TREE_VIEW (list), column);
-  ctk_tree_view_set_search_column (GTK_TREE_VIEW (list), -1);
+  ctk_tree_view_append_column (CTK_TREE_VIEW (list), column);
+  ctk_tree_view_set_search_column (CTK_TREE_VIEW (list), -1);
 
   list->priv->manager = logview_manager_get ();
 

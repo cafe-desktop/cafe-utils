@@ -123,7 +123,7 @@ enum
 
 static guint gdict_defbox_signals[LAST_SIGNAL] = { 0 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (GdictDefbox, gdict_defbox, GTK_TYPE_BOX)
+G_DEFINE_TYPE_WITH_PRIVATE (GdictDefbox, gdict_defbox, CTK_TYPE_BOX)
 
 static Definition *
 definition_new (void)
@@ -341,7 +341,7 @@ gdict_defbox_get_property (GObject    *object,
  * not the case on a set of definitions.
  */
 
-#define GTK_TEXT_UNKNOWN_CHAR 0xFFFC
+#define CTK_TEXT_UNKNOWN_CHAR 0xFFFC
 
 /* this function acts like g_utf8_offset_to_pointer() except that if it finds a
  * decomposable character it consumes the decomposition length from the given
@@ -580,7 +580,7 @@ forward_chars_with_skipping (GtkTextIter *iter,
 		if (ctk_text_iter_is_end (iter))
 			return;
 
-		if (skip_nontext && ctk_text_iter_get_char (iter) == GTK_TEXT_UNKNOWN_CHAR)
+		if (skip_nontext && ctk_text_iter_get_char (iter) == CTK_TEXT_UNKNOWN_CHAR)
 			ignored = TRUE;
 
 		/* FIXME: char_is_invisible() gets list of tags for each char there,
@@ -1053,7 +1053,7 @@ gdict_defbox_find_backward (GdictDefbox *defbox,
   GtkTextMark *last_search;
   gboolean res;
 
-  g_assert (GTK_IS_TEXT_BUFFER (priv->buffer));
+  g_assert (CTK_IS_TEXT_BUFFER (priv->buffer));
 
   ctk_text_buffer_get_bounds (priv->buffer, &start_iter, &end_iter);
 
@@ -1069,7 +1069,7 @@ gdict_defbox_find_backward (GdictDefbox *defbox,
                                            NULL);
   if (res)
     {
-      ctk_text_view_scroll_to_iter (GTK_TEXT_VIEW (priv->text_view),
+      ctk_text_view_scroll_to_iter (CTK_TEXT_VIEW (priv->text_view),
       				    &match_start,
       				    0.0,
       				    TRUE,
@@ -1113,7 +1113,7 @@ find_prev_clicked_cb (GtkWidget *widget,
 
   ctk_widget_hide (priv->find_label);
 
-  text = ctk_entry_get_text (GTK_ENTRY (priv->find_entry));
+  text = ctk_entry_get_text (CTK_ENTRY (priv->find_entry));
   if (!text)
     return;
 
@@ -1123,7 +1123,7 @@ find_prev_clicked_cb (GtkWidget *widget,
       gchar *str;
 
       str = g_strconcat ("  <i>", _("Not found"), "</i>", NULL);
-      ctk_label_set_markup (GTK_LABEL (priv->find_label), str);
+      ctk_label_set_markup (CTK_LABEL (priv->find_label), str);
       ctk_widget_show (priv->find_label);
 
       g_free (str);
@@ -1148,7 +1148,7 @@ gdict_defbox_find_forward (GdictDefbox *defbox,
   GtkTextMark *last_search;
   gboolean res;
 
-  g_assert (GTK_IS_TEXT_BUFFER (priv->buffer));
+  g_assert (CTK_IS_TEXT_BUFFER (priv->buffer));
 
   ctk_text_buffer_get_bounds (priv->buffer, &start_iter, &end_iter);
 
@@ -1178,7 +1178,7 @@ gdict_defbox_find_forward (GdictDefbox *defbox,
                                           NULL);
   if (res)
     {
-      ctk_text_view_scroll_to_iter (GTK_TEXT_VIEW (priv->text_view),
+      ctk_text_view_scroll_to_iter (CTK_TEXT_VIEW (priv->text_view),
       				    &match_start,
       				    0.0,
       				    TRUE,
@@ -1207,7 +1207,7 @@ find_next_clicked_cb (GtkWidget *widget,
 
   ctk_widget_hide (priv->find_label);
 
-  text = ctk_entry_get_text (GTK_ENTRY (priv->find_entry));
+  text = ctk_entry_get_text (CTK_ENTRY (priv->find_entry));
   if (!text)
     return;
 
@@ -1217,7 +1217,7 @@ find_next_clicked_cb (GtkWidget *widget,
       gchar *str;
 
       str = g_strconcat ("  <i>", _("Not found"), "</i>", NULL);
-      ctk_label_set_markup (GTK_LABEL (priv->find_label), str);
+      ctk_label_set_markup (CTK_LABEL (priv->find_label), str);
       ctk_widget_show (priv->find_label);
 
       g_free (str);
@@ -1241,7 +1241,7 @@ find_entry_changed_cb (GtkWidget *widget,
 
   ctk_widget_hide (priv->find_label);
 
-  text = ctk_editable_get_chars (GTK_EDITABLE (widget), 0, -1);
+  text = ctk_editable_get_chars (CTK_EDITABLE (widget), 0, -1);
   if (!text)
     return;
 
@@ -1251,7 +1251,7 @@ find_entry_changed_cb (GtkWidget *widget,
       gchar *str;
 
       str = g_strconcat ("  <i>", _("Not found"), "</i>", NULL);
-      ctk_label_set_markup (GTK_LABEL (priv->find_label), str);
+      ctk_label_set_markup (CTK_LABEL (priv->find_label), str);
       ctk_widget_show (priv->find_label);
 
       g_free (str);
@@ -1290,59 +1290,59 @@ create_find_pane (GdictDefbox *defbox)
 
   priv = defbox->priv;
 
-  find_pane = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-  ctk_container_set_border_width (GTK_CONTAINER (find_pane), 0);
+  find_pane = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 0);
+  ctk_container_set_border_width (CTK_CONTAINER (find_pane), 0);
 
-  hbox1 = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
-  ctk_box_pack_start (GTK_BOX (find_pane), hbox1, TRUE, TRUE, 0);
+  hbox1 = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 6);
+  ctk_box_pack_start (CTK_BOX (find_pane), hbox1, TRUE, TRUE, 0);
   ctk_widget_show (hbox1);
 
   button = ctk_button_new ();
-  ctk_button_set_relief (GTK_BUTTON (button), GTK_RELIEF_NONE);
-  ctk_button_set_image (GTK_BUTTON (button),
+  ctk_button_set_relief (CTK_BUTTON (button), CTK_RELIEF_NONE);
+  ctk_button_set_image (CTK_BUTTON (button),
                         ctk_image_new_from_icon_name ("window-close",
-                                                      GTK_ICON_SIZE_BUTTON));
+                                                      CTK_ICON_SIZE_BUTTON));
   g_signal_connect (button, "clicked",
                     G_CALLBACK (close_button_clicked), defbox);
-  ctk_box_pack_start (GTK_BOX (hbox1), button, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (hbox1), button, FALSE, FALSE, 0);
   ctk_widget_show (button);
 
-  hbox2 = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-  ctk_box_pack_start (GTK_BOX (hbox1), hbox2, TRUE, TRUE, 0);
+  hbox2 = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 12);
+  ctk_box_pack_start (CTK_BOX (hbox1), hbox2, TRUE, TRUE, 0);
   ctk_widget_show (hbox2);
 
   label = ctk_label_new_with_mnemonic (_("F_ind:"));
-  ctk_box_pack_start (GTK_BOX (hbox2), label, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (hbox2), label, FALSE, FALSE, 0);
 
   priv->find_entry = ctk_entry_new ();
   g_signal_connect (priv->find_entry, "changed",
   		    G_CALLBACK (find_entry_changed_cb), defbox);
-  ctk_box_pack_start (GTK_BOX (hbox2), priv->find_entry, TRUE, TRUE, 0);
-  ctk_label_set_mnemonic_widget (GTK_LABEL (label), priv->find_entry);
+  ctk_box_pack_start (CTK_BOX (hbox2), priv->find_entry, TRUE, TRUE, 0);
+  ctk_label_set_mnemonic_widget (CTK_LABEL (label), priv->find_entry);
 
-  sep = ctk_separator_new (GTK_ORIENTATION_VERTICAL);
-  ctk_box_pack_start (GTK_BOX (hbox1), sep, FALSE, FALSE, 0);
+  sep = ctk_separator_new (CTK_ORIENTATION_VERTICAL);
+  ctk_box_pack_start (CTK_BOX (hbox1), sep, FALSE, FALSE, 0);
   ctk_widget_show (sep);
 
   priv->find_prev = ctk_button_new_with_mnemonic (_("_Previous"));
-  ctk_button_set_image (GTK_BUTTON (priv->find_prev),
+  ctk_button_set_image (CTK_BUTTON (priv->find_prev),
                         ctk_image_new_from_icon_name ("go-previous",
-                                                      GTK_ICON_SIZE_MENU));
+                                                      CTK_ICON_SIZE_MENU));
   g_signal_connect (priv->find_prev, "clicked",
   		    G_CALLBACK (find_prev_clicked_cb), defbox);
-  ctk_box_pack_start (GTK_BOX (hbox1), priv->find_prev, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (hbox1), priv->find_prev, FALSE, FALSE, 0);
 
   priv->find_next = ctk_button_new_with_mnemonic (_("_Next"));
-  ctk_button_set_image (GTK_BUTTON (priv->find_next),
+  ctk_button_set_image (CTK_BUTTON (priv->find_next),
                         ctk_image_new_from_icon_name ("go-next",
-                                                      GTK_ICON_SIZE_MENU));
+                                                      CTK_ICON_SIZE_MENU));
   g_signal_connect (priv->find_next, "clicked",
   		    G_CALLBACK (find_next_clicked_cb), defbox);
-  ctk_box_pack_start (GTK_BOX (hbox1), priv->find_next, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (hbox1), priv->find_next, FALSE, FALSE, 0);
 
   priv->find_label = ctk_label_new (NULL);
-  ctk_label_set_use_markup (GTK_LABEL (priv->find_label), TRUE);
-  ctk_box_pack_end (GTK_BOX (find_pane), priv->find_label, FALSE, FALSE, 0);
+  ctk_label_set_use_markup (CTK_LABEL (priv->find_label), TRUE);
+  ctk_box_pack_end (CTK_BOX (find_pane), priv->find_label, FALSE, FALSE, 0);
   ctk_widget_hide (priv->find_label);
 
   return find_pane;
@@ -1353,7 +1353,7 @@ gdict_defbox_init_tags (GdictDefbox *defbox)
 {
   GdictDefboxPrivate *priv = defbox->priv;
 
-  g_assert (GTK_IS_TEXT_BUFFER (priv->buffer));
+  g_assert (CTK_IS_TEXT_BUFFER (priv->buffer));
 
   ctk_text_buffer_create_tag (priv->buffer, "italic",
   			      "style", PANGO_STYLE_ITALIC,
@@ -1373,7 +1373,7 @@ gdict_defbox_init_tags (GdictDefbox *defbox)
 			      NULL);
 
   {
-    GtkSettings *settings = ctk_widget_get_settings (GTK_WIDGET (defbox));
+    GtkSettings *settings = ctk_widget_get_settings (CTK_WIDGET (defbox));
     gboolean prefer_dark = FALSE;
     GdkRGBA rgba;
 
@@ -1494,20 +1494,20 @@ defbox_event_after_cb (GtkWidget   *text_view,
   if (button_event->button != 1)
     return FALSE;
 
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (text_view));
   if (ctk_text_buffer_get_has_selection (buffer))
     return FALSE;
 
-  ctk_text_view_window_to_buffer_coords (GTK_TEXT_VIEW (text_view),
-                                         GTK_TEXT_WINDOW_WIDGET,
+  ctk_text_view_window_to_buffer_coords (CTK_TEXT_VIEW (text_view),
+                                         CTK_TEXT_WINDOW_WIDGET,
                                          button_event->x, button_event->y,
                                          &bx, &by);
 
-  ctk_text_view_get_iter_at_location (GTK_TEXT_VIEW (text_view),
+  ctk_text_view_get_iter_at_location (CTK_TEXT_VIEW (text_view),
                                       &iter,
                                       bx, by);
 
-  follow_if_is_link (defbox, GTK_TEXT_VIEW (text_view), &iter);
+  follow_if_is_link (defbox, CTK_TEXT_VIEW (text_view), &iter);
 
   return FALSE;
 }
@@ -1527,13 +1527,13 @@ set_cursor_if_appropriate (GdictDefbox *defbox,
 
   if (!priv->hand_cursor)
     {
-      GdkDisplay *display = ctk_widget_get_display (GTK_WIDGET (defbox));
+      GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
       priv->hand_cursor = gdk_cursor_new_for_display (display, GDK_HAND2);
     }
 
   if (!priv->regular_cursor)
     {
-      GdkDisplay *display = ctk_widget_get_display (GTK_WIDGET (defbox));
+      GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
       priv->regular_cursor = gdk_cursor_new_for_display (display, GDK_XTERM);
     }
 
@@ -1565,11 +1565,11 @@ set_cursor_if_appropriate (GdictDefbox *defbox,
 
       if (defbox->priv->is_hovering)
         gdk_window_set_cursor (ctk_text_view_get_window (text_view,
-                                                         GTK_TEXT_WINDOW_TEXT),
+                                                         CTK_TEXT_WINDOW_TEXT),
                                defbox->priv->hand_cursor);
       else
         gdk_window_set_cursor (ctk_text_view_get_window (text_view,
-                                                         GTK_TEXT_WINDOW_TEXT),
+                                                         CTK_TEXT_WINDOW_TEXT),
                                defbox->priv->regular_cursor);
     }
 
@@ -1584,12 +1584,12 @@ defbox_motion_notify_cb (GtkWidget      *text_view,
 {
   gint bx, by;
 
-  ctk_text_view_window_to_buffer_coords (GTK_TEXT_VIEW (text_view),
-                                         GTK_TEXT_WINDOW_WIDGET,
+  ctk_text_view_window_to_buffer_coords (CTK_TEXT_VIEW (text_view),
+                                         CTK_TEXT_WINDOW_WIDGET,
                                          event->x, event->y,
                                          &bx, &by);
 
-  set_cursor_if_appropriate (defbox, GTK_TEXT_VIEW (text_view), bx, by);
+  set_cursor_if_appropriate (defbox, CTK_TEXT_VIEW (text_view), bx, by);
 
   return FALSE;
 }
@@ -1610,12 +1610,12 @@ defbox_visibility_notify_cb (GtkWidget          *text_view,
   pointer = gdk_seat_get_pointer (seat);
   gdk_window_get_device_position (ctk_widget_get_window (text_view), pointer, &wx, &wy, NULL);
 
-  ctk_text_view_window_to_buffer_coords (GTK_TEXT_VIEW (text_view),
-                                         GTK_TEXT_WINDOW_WIDGET,
+  ctk_text_view_window_to_buffer_coords (CTK_TEXT_VIEW (text_view),
+                                         CTK_TEXT_WINDOW_WIDGET,
                                          wx, wy,
                                          &bx, &by);
 
-  set_cursor_if_appropriate (defbox, GTK_TEXT_VIEW (text_view), bx, by);
+  set_cursor_if_appropriate (defbox, CTK_TEXT_VIEW (text_view), bx, by);
 
   return FALSE;
 }
@@ -1638,25 +1638,25 @@ gdict_defbox_constructor (GType                  type,
 
   sw = ctk_scrolled_window_new (NULL, NULL);
   ctk_widget_set_vexpand (sw, TRUE);
-  ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (sw),
-  				  GTK_POLICY_AUTOMATIC,
-  				  GTK_POLICY_AUTOMATIC);
-  ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (sw),
-  				       GTK_SHADOW_IN);
-  ctk_box_pack_start (GTK_BOX (defbox), sw, TRUE, TRUE, 0);
+  ctk_scrolled_window_set_policy (CTK_SCROLLED_WINDOW (sw),
+  				  CTK_POLICY_AUTOMATIC,
+  				  CTK_POLICY_AUTOMATIC);
+  ctk_scrolled_window_set_shadow_type (CTK_SCROLLED_WINDOW (sw),
+  				       CTK_SHADOW_IN);
+  ctk_box_pack_start (CTK_BOX (defbox), sw, TRUE, TRUE, 0);
   ctk_widget_show (sw);
 
   priv->buffer = ctk_text_buffer_new (NULL);
   gdict_defbox_init_tags (defbox);
 
   priv->text_view = ctk_text_view_new_with_buffer (priv->buffer);
-  ctk_text_view_set_editable (GTK_TEXT_VIEW (priv->text_view), FALSE);
-  ctk_text_view_set_left_margin (GTK_TEXT_VIEW (priv->text_view), 4);
-  ctk_container_add (GTK_CONTAINER (sw), priv->text_view);
+  ctk_text_view_set_editable (CTK_TEXT_VIEW (priv->text_view), FALSE);
+  ctk_text_view_set_left_margin (CTK_TEXT_VIEW (priv->text_view), 4);
+  ctk_container_add (CTK_CONTAINER (sw), priv->text_view);
   ctk_widget_show (priv->text_view);
 
   priv->find_pane = create_find_pane (defbox);
-  ctk_box_pack_end (GTK_BOX (defbox), priv->find_pane, FALSE, FALSE, 0);
+  ctk_box_pack_end (CTK_BOX (defbox), priv->find_pane, FALSE, FALSE, 0);
 
   /* stuff to make the link machinery work */
   g_signal_connect (priv->text_view, "event-after",
@@ -1702,14 +1702,14 @@ static void
 gdict_defbox_real_find_next (GdictDefbox *defbox)
 {
   /* synthetize a "clicked" signal to the "next" button */
-  ctk_button_clicked (GTK_BUTTON (defbox->priv->find_next));
+  ctk_button_clicked (CTK_BUTTON (defbox->priv->find_next));
 }
 
 static void
 gdict_defbox_real_find_previous (GdictDefbox *defbox)
 {
   /* synthetize a "clicked" signal to the "prev" button */
-  ctk_button_clicked (GTK_BUTTON (defbox->priv->find_prev));
+  ctk_button_clicked (CTK_BUTTON (defbox->priv->find_prev));
 }
 
 static void
@@ -1731,7 +1731,7 @@ static void
 gdict_defbox_class_init (GdictDefboxClass *klass)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-  GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
+  GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
   GtkBindingSet *binding_set;
 
   gobject_class->constructor = gdict_defbox_constructor;
@@ -1872,8 +1872,8 @@ gdict_defbox_init (GdictDefbox *defbox)
 {
   GdictDefboxPrivate *priv;
 
-  ctk_orientable_set_orientation (GTK_ORIENTABLE (defbox), GTK_ORIENTATION_VERTICAL);
-  ctk_box_set_spacing (GTK_BOX (defbox), 6);
+  ctk_orientable_set_orientation (CTK_ORIENTABLE (defbox), CTK_ORIENTATION_VERTICAL);
+  ctk_box_set_spacing (CTK_BOX (defbox), 6);
 
   priv = gdict_defbox_get_instance_private (defbox);
   defbox->priv = priv;
@@ -2109,12 +2109,12 @@ lookup_start_cb (GdictContext *context,
 
   if (!priv->busy_cursor)
     {
-      GdkDisplay *display = ctk_widget_get_display (GTK_WIDGET (defbox));
+      GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
       priv->busy_cursor = gdk_cursor_new_for_display (display, GDK_WATCH);
     }
 
-  window = ctk_text_view_get_window (GTK_TEXT_VIEW (priv->text_view),
-  				     GTK_TEXT_WINDOW_WIDGET);
+  window = ctk_text_view_get_window (CTK_TEXT_VIEW (priv->text_view),
+  				     CTK_TEXT_WINDOW_WIDGET);
 
   gdk_window_set_cursor (window, priv->busy_cursor);
 }
@@ -2130,12 +2130,12 @@ lookup_end_cb (GdictContext *context,
   GdkWindow *window;
 
   /* explicitely move the cursor to the beginning */
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (priv->text_view));
   ctk_text_buffer_get_start_iter (buffer, &start);
   ctk_text_buffer_place_cursor (buffer, &start);
 
-  window = ctk_text_view_get_window (GTK_TEXT_VIEW (priv->text_view),
-  				     GTK_TEXT_WINDOW_WIDGET);
+  window = ctk_text_view_get_window (CTK_TEXT_VIEW (priv->text_view),
+  				     CTK_TEXT_WINDOW_WIDGET);
 
   gdk_window_set_cursor (window, NULL);
 
@@ -2156,7 +2156,7 @@ gdict_defbox_insert_word (GdictDefbox *defbox,
   g_assert (GDICT_IS_DEFBOX (defbox));
   priv = defbox->priv;
 
-  g_assert (GTK_IS_TEXT_BUFFER (priv->buffer));
+  g_assert (CTK_IS_TEXT_BUFFER (priv->buffer));
 
   text = g_strdup_printf ("%s\n", word);
   ctk_text_buffer_insert_with_tags_by_name (priv->buffer,
@@ -2236,7 +2236,7 @@ gdict_defbox_insert_body (GdictDefbox *defbox,
   g_assert (GDICT_IS_DEFBOX (defbox));
   priv = defbox->priv;
 
-  g_assert (GTK_IS_TEXT_BUFFER (priv->buffer));
+  g_assert (CTK_IS_TEXT_BUFFER (priv->buffer));
 
   words = g_strsplit (body, " ", -1);
   len = g_strv_length (words);
@@ -2383,7 +2383,7 @@ gdict_defbox_insert_from (GdictDefbox *defbox,
   g_assert (GDICT_IS_DEFBOX (defbox));
   priv = defbox->priv;
 
-  g_assert (GTK_IS_TEXT_BUFFER (priv->buffer));
+  g_assert (CTK_IS_TEXT_BUFFER (priv->buffer));
 
   text = g_strdup_printf ("\t-- From %s\n\n", database);
   ctk_text_buffer_insert_with_tags_by_name (priv->buffer,
@@ -2410,7 +2410,7 @@ gdict_defbox_insert_error (GdictDefbox *defbox,
   g_assert (GDICT_IS_DEFBOX (defbox));
   priv = defbox->priv;
 
-  g_assert (GTK_IS_TEXT_BUFFER (priv->buffer));
+  g_assert (CTK_IS_TEXT_BUFFER (priv->buffer));
 
   mark = ctk_text_buffer_create_mark (priv->buffer, "block-cursor", iter, FALSE);
   ctk_text_buffer_get_iter_at_mark (priv->buffer, &cur_iter, mark);
@@ -2521,7 +2521,7 @@ gdict_defbox_lookup (GdictDefbox *defbox,
 
   if (priv->is_searching)
     {
-      _gdict_show_error_dialog (GTK_WIDGET (defbox),
+      _gdict_show_error_dialog (CTK_WIDGET (defbox),
       			        _("Another search is in progress"),
       			        _("Please wait until the current search ends."));
 
@@ -2648,7 +2648,7 @@ gdict_defbox_select_all (GdictDefbox *defbox)
   g_return_if_fail (GDICT_IS_DEFBOX (defbox));
 
   priv = defbox->priv;
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (priv->text_view));
 
   ctk_text_buffer_get_bounds (buffer, &start, &end);
   ctk_text_buffer_select_range (buffer, &start, &end);
@@ -2671,10 +2671,10 @@ gdict_defbox_copy_to_clipboard (GdictDefbox  *defbox,
   GtkTextBuffer *buffer;
 
   g_return_if_fail (GDICT_IS_DEFBOX (defbox));
-  g_return_if_fail (GTK_IS_CLIPBOARD (clipboard));
+  g_return_if_fail (CTK_IS_CLIPBOARD (clipboard));
 
   priv = defbox->priv;
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (priv->text_view));
 
   ctk_text_buffer_copy_clipboard (buffer, clipboard);
 }
@@ -2737,9 +2737,9 @@ gdict_defbox_jump_to_definition (GdictDefbox *defbox,
   if (!def)
     return;
 
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (priv->text_view));
   ctk_text_buffer_get_iter_at_offset (buffer, &def_start, def->begin);
-  ctk_text_view_scroll_to_iter (GTK_TEXT_VIEW (priv->text_view),
+  ctk_text_view_scroll_to_iter (CTK_TEXT_VIEW (priv->text_view),
       				&def_start,
       				0.0,
       				TRUE,
@@ -2770,7 +2770,7 @@ gdict_defbox_get_text (GdictDefbox *defbox,
   g_return_val_if_fail (GDICT_IS_DEFBOX (defbox), NULL);
 
   priv = defbox->priv;
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (priv->text_view));
 
   ctk_text_buffer_get_bounds (buffer, &start, &end);
 
@@ -2861,7 +2861,7 @@ gdict_defbox_get_selected_word (GdictDefbox *defbox)
   g_return_val_if_fail (GDICT_IS_DEFBOX (defbox), NULL);
 
   priv = defbox->priv;
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (priv->text_view));
 
   if (!ctk_text_buffer_get_has_selection (buffer))
     return NULL;

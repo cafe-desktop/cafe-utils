@@ -71,7 +71,7 @@ on_tv_cur_changed (GtkTreeView *treeview, gpointer data)
 	ctk_tree_selection_get_selected (ctk_tree_view_get_selection (treeview), NULL, &iter);
 
 	if (ctk_tree_store_iter_is_valid (baobab.model, &iter)) {
-		ctk_tree_model_get (GTK_TREE_MODEL (baobab.model), &iter,
+		ctk_tree_model_get (CTK_TREE_MODEL (baobab.model), &iter,
 				    COL_H_PARSENAME, &parsename, -1);
 	}
 }
@@ -81,7 +81,7 @@ contents_changed (void)
 {
 	if (messageyesno (_("Rescan your home folder?"),
 			  _("The content of your home folder has changed. Select rescan to update the disk usage details."),
-			  GTK_MESSAGE_QUESTION, _("_Rescan"), baobab.window) == GTK_RESPONSE_OK) {
+			  CTK_MESSAGE_QUESTION, _("_Rescan"), baobab.window) == CTK_RESPONSE_OK) {
 		baobab_rescan_current_dir ();
 	}
 	else {
@@ -99,7 +99,7 @@ on_tv_button_press (GtkWidget *widget,
 	GtkTreeIter iter;
 	GFile *file;
 
-	ctk_tree_view_get_path_at_pos (GTK_TREE_VIEW (widget),
+	ctk_tree_view_get_path_at_pos (CTK_TREE_VIEW (widget),
 				       event->x, event->y,
 				       &path, NULL, NULL, NULL);
 	if (!path)
@@ -107,9 +107,9 @@ on_tv_button_press (GtkWidget *widget,
 
 	/* get the selected path */
 	g_free (baobab.selected_path);
-	ctk_tree_model_get_iter (GTK_TREE_MODEL (baobab.model), &iter,
+	ctk_tree_model_get_iter (CTK_TREE_MODEL (baobab.model), &iter,
 				 path);
-	ctk_tree_model_get (GTK_TREE_MODEL (baobab.model), &iter,
+	ctk_tree_model_get (CTK_TREE_MODEL (baobab.model), &iter,
 			    COL_H_PARSENAME, &baobab.selected_path, -1);
 
 	file = g_file_parse_name (baobab.selected_path);
@@ -201,7 +201,7 @@ create_directory_treeview (void)
 	GtkTreeViewColumn *col;
 	GtkWidget *scrolled;
 
-	GtkWidget *tvw = GTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "treeview1"));
+	GtkWidget *tvw = CTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "treeview1"));
 
 	g_signal_connect (tvw, "row-expanded",
 			  G_CALLBACK (on_tv_row_expanded), NULL);
@@ -211,7 +211,7 @@ create_directory_treeview (void)
 			  G_CALLBACK (on_tv_button_press), NULL);
 
 	/* dir name column */
-	g_signal_connect (ctk_tree_view_get_selection (GTK_TREE_VIEW (tvw)), "changed",
+	g_signal_connect (ctk_tree_view_get_selection (CTK_TREE_VIEW (tvw)), "changed",
 			  G_CALLBACK (on_tv_selection_changed), NULL);
 	cell = ctk_cell_renderer_text_new ();
 	col = ctk_tree_view_column_new_with_attributes (NULL, cell, "markup",
@@ -220,9 +220,9 @@ create_directory_treeview (void)
 	ctk_tree_view_column_set_sort_column_id (col, COL_DIR_NAME);
 	ctk_tree_view_column_set_reorderable (col, TRUE);
 	ctk_tree_view_column_set_title (col, _("Folder"));
-	ctk_tree_view_column_set_sizing (col, GTK_TREE_VIEW_COLUMN_AUTOSIZE);
+	ctk_tree_view_column_set_sizing (col, CTK_TREE_VIEW_COLUMN_AUTOSIZE);
 	ctk_tree_view_column_set_resizable (col, TRUE);
-	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (CTK_TREE_VIEW (tvw), col);
 
 	/* percentage bar & text column */
 	col = ctk_tree_view_column_new ();
@@ -242,9 +242,9 @@ create_directory_treeview (void)
 	ctk_tree_view_column_set_sort_column_id (col, COL_H_PERC);
 	ctk_tree_view_column_set_reorderable (col, TRUE);
 	ctk_tree_view_column_set_title (col, _("Usage"));
-	ctk_tree_view_column_set_sizing (col, GTK_TREE_VIEW_COLUMN_AUTOSIZE);
+	ctk_tree_view_column_set_sizing (col, CTK_TREE_VIEW_COLUMN_AUTOSIZE);
 	ctk_tree_view_column_set_resizable (col, FALSE);
-	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (CTK_TREE_VIEW (tvw), col);
 
 	/* directory size column */
 	cell = ctk_cell_renderer_text_new ();
@@ -256,9 +256,9 @@ create_directory_treeview (void)
 						 baobab.show_allocated ? COL_H_ALLOCSIZE : COL_H_SIZE);
 	ctk_tree_view_column_set_reorderable (col, TRUE);
 	ctk_tree_view_column_set_title (col, _("Size"));
-	ctk_tree_view_column_set_sizing (col, GTK_TREE_VIEW_COLUMN_AUTOSIZE);
+	ctk_tree_view_column_set_sizing (col, CTK_TREE_VIEW_COLUMN_AUTOSIZE);
 	ctk_tree_view_column_set_resizable (col, TRUE);
-	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (CTK_TREE_VIEW (tvw), col);
 
 	/* store this column, we need it when toggling 'allocated' */
 	g_object_set_data (G_OBJECT (tvw), "baobab_size_col", col);
@@ -272,37 +272,37 @@ create_directory_treeview (void)
 	ctk_tree_view_column_set_sort_column_id (col, COL_H_ELEMENTS);
 	ctk_tree_view_column_set_reorderable (col, TRUE);
 	ctk_tree_view_column_set_title (col, _("Contents"));
-	ctk_tree_view_column_set_sizing (col, GTK_TREE_VIEW_COLUMN_AUTOSIZE);
+	ctk_tree_view_column_set_sizing (col, CTK_TREE_VIEW_COLUMN_AUTOSIZE);
 	ctk_tree_view_column_set_resizable (col, TRUE);
-	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (CTK_TREE_VIEW (tvw), col);
 
 	/* hardlink column */
 	cell = ctk_cell_renderer_text_new ();
 	col = ctk_tree_view_column_new_with_attributes (NULL, cell, "markup",
 							COL_HARDLINK, "text",
 						 	COL_HARDLINK, NULL);
-	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (CTK_TREE_VIEW (tvw), col);
 
-	ctk_tree_view_collapse_all (GTK_TREE_VIEW (tvw));
-	ctk_tree_view_set_headers_visible (GTK_TREE_VIEW (tvw), FALSE);
-	scrolled = GTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "scrolledwindow1"));
-	ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled),
-					GTK_POLICY_AUTOMATIC,
-					GTK_POLICY_AUTOMATIC);
+	ctk_tree_view_collapse_all (CTK_TREE_VIEW (tvw));
+	ctk_tree_view_set_headers_visible (CTK_TREE_VIEW (tvw), FALSE);
+	scrolled = CTK_WIDGET (ctk_builder_get_object (baobab.main_ui, "scrolledwindow1"));
+	ctk_scrolled_window_set_policy (CTK_SCROLLED_WINDOW (scrolled),
+					CTK_POLICY_AUTOMATIC,
+					CTK_POLICY_AUTOMATIC);
 
-	ctk_tree_view_set_search_equal_func (GTK_TREE_VIEW (tvw),
+	ctk_tree_view_set_search_equal_func (CTK_TREE_VIEW (tvw),
 	                                     baobab_treeview_equal_func,
 	                                     NULL, NULL);
 
 	baobab.model = create_model ();
 
 	/* By default, sort by size */
-	ctk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (baobab.model),
+	ctk_tree_sortable_set_sort_column_id (CTK_TREE_SORTABLE (baobab.model),
 					      baobab.show_allocated ? COL_H_ALLOCSIZE : COL_H_SIZE,
-					      GTK_SORT_DESCENDING);
+					      CTK_SORT_DESCENDING);
 
-	ctk_tree_view_set_model (GTK_TREE_VIEW (tvw),
-				 GTK_TREE_MODEL (baobab.model));
+	ctk_tree_view_set_model (CTK_TREE_VIEW (tvw),
+				 CTK_TREE_MODEL (baobab.model));
 	g_object_unref (baobab.model);
 
 	return tvw;
@@ -317,9 +317,9 @@ baobab_treeview_show_allocated_size (GtkWidget *tv,
 	GtkSortType order;
 	GtkTreeViewColumn *size_col;
 
-	g_return_if_fail (GTK_IS_TREE_VIEW (tv));
+	g_return_if_fail (CTK_IS_TREE_VIEW (tv));
 
-	ctk_tree_sortable_get_sort_column_id (GTK_TREE_SORTABLE (baobab.model),
+	ctk_tree_sortable_get_sort_column_id (CTK_TREE_SORTABLE (baobab.model),
 					      &sort_id, &order);
 
 	/* set the sort id for the size column */
@@ -330,7 +330,7 @@ baobab_treeview_show_allocated_size (GtkWidget *tv,
 	/* if we are currently sorted on size or allocated size,
 	 * then trigger a resort (with the same order) */
 	if (sort_id == COL_H_SIZE || sort_id == COL_H_ALLOCSIZE) {
-		ctk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (baobab.model),
+		ctk_tree_sortable_set_sort_column_id (CTK_TREE_SORTABLE (baobab.model),
 						      new_sort_id, order);
 	}
 }

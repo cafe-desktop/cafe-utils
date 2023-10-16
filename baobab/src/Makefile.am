@@ -45,7 +45,7 @@ cafe_disk_usage_analyzer_SOURCES = \
 cafe_disk_usage_analyzer_CFLAGS = \
 	$(GLIB_CFLAGS) \
 	$(GIO_CFLAGS) \
-	$(GTK_CFLAGS) \
+	$(CTK_CFLAGS) \
 	$(LIBGTOP_CFLAGS) \
 	$(WARN_CFLAGS) \
 	$(NULL)
@@ -55,7 +55,7 @@ cafe_disk_usage_analyzer_LDADD = \
 	-lm \
 	$(GLIB_LIBS) \
 	$(GIO_LIBS) \
-	$(GTK_LIBS) \
+	$(CTK_LIBS) \
 	$(LIBGTOP_LIBS) \
 	$(NULL)
 

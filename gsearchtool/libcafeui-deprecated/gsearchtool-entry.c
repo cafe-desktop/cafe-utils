@@ -56,7 +56,7 @@ struct _GsearchHistoryEntryPrivate
 	GSettings          *settings;
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (GsearchHistoryEntry, gsearch_history_entry, GTK_TYPE_COMBO_BOX)
+G_DEFINE_TYPE_WITH_PRIVATE (GsearchHistoryEntry, gsearch_history_entry, CTK_TYPE_COMBO_BOX)
 
 static void
 gsearch_history_entry_set_property (GObject      *object,
@@ -113,7 +113,7 @@ gsearch_history_entry_destroy (GtkWidget *object)
 	gsearch_history_entry_set_enable_completion (GSEARCH_HISTORY_ENTRY (object),
 						   FALSE);
 
-	GTK_WIDGET_CLASS (gsearch_history_entry_parent_class)->destroy (object);
+	CTK_WIDGET_CLASS (gsearch_history_entry_parent_class)->destroy (object);
 }
 
 static void
@@ -138,7 +138,7 @@ static void
 gsearch_history_entry_class_init (GsearchHistoryEntryClass *klass)
 {
 	GObjectClass   *object_class = G_OBJECT_CLASS (klass);
-	GtkWidgetClass *ctkwidget_class = GTK_WIDGET_CLASS (klass);
+	GtkWidgetClass *ctkwidget_class = CTK_WIDGET_CLASS (klass);
 
 	object_class->set_property = gsearch_history_entry_set_property;
 	object_class->get_property = gsearch_history_entry_get_property;
@@ -173,8 +173,8 @@ get_history_store (GsearchHistoryEntry *entry)
 {
 	GtkTreeModel *store;
 
-	store = ctk_combo_box_get_model (GTK_COMBO_BOX (entry));
-	g_return_val_if_fail (GTK_IS_LIST_STORE (store), NULL);
+	store = ctk_combo_box_get_model (CTK_COMBO_BOX (entry));
+	g_return_val_if_fail (CTK_IS_LIST_STORE (store), NULL);
 
 	return (GtkListStore *) store;
 }
@@ -195,21 +195,21 @@ get_history_list (GsearchHistoryEntry *entry)
 
 	store = get_history_store (entry);
 
-	valid = ctk_tree_model_get_iter_first (GTK_TREE_MODEL (store),
+	valid = ctk_tree_model_get_iter_first (CTK_TREE_MODEL (store),
 					       &iter);
 
 	while (valid)
 	{
 		gchar *str;
 
-		ctk_tree_model_get (GTK_TREE_MODEL (store),
+		ctk_tree_model_get (CTK_TREE_MODEL (store),
 				    &iter,
 				    0, &str,
 				    -1);
 
 		list = g_slist_prepend (list, str);
 
-		valid = ctk_tree_model_iter_next (GTK_TREE_MODEL (store),
+		valid = ctk_tree_model_iter_next (CTK_TREE_MODEL (store),
 						  &iter);
 	}
 
@@ -275,14 +275,14 @@ remove_item (GtkListStore *store,
 
 	g_return_val_if_fail (text != NULL, FALSE);
 
-	if (!ctk_tree_model_get_iter_first (GTK_TREE_MODEL (store), &iter))
+	if (!ctk_tree_model_get_iter_first (CTK_TREE_MODEL (store), &iter))
 		return FALSE;
 
 	do
 	{
 		gchar *item_text;
 
-		ctk_tree_model_get (GTK_TREE_MODEL (store),
+		ctk_tree_model_get (CTK_TREE_MODEL (store),
 				    &iter,
 				    0,
 				    &item_text,
@@ -298,7 +298,7 @@ remove_item (GtkListStore *store,
 
 		g_free (item_text);
 
-	} while (ctk_tree_model_iter_next (GTK_TREE_MODEL (store), &iter));
+	} while (ctk_tree_model_iter_next (CTK_TREE_MODEL (store), &iter));
 
 	return FALSE;
 }
@@ -313,7 +313,7 @@ clamp_list_store (GtkListStore *store,
 	/* -1 because TreePath counts from 0 */
 	path = ctk_tree_path_new_from_indices (max - 1, -1);
 
-	if (ctk_tree_model_get_iter (GTK_TREE_MODEL (store), &iter, path))
+	if (ctk_tree_model_get_iter (CTK_TREE_MODEL (store), &iter, path))
 	{
 		while (1)
 		{
@@ -507,7 +507,7 @@ gsearch_history_entry_set_enable_completion (GsearchHistoryEntry *entry,
 
 		entry->priv->completion = ctk_entry_completion_new ();
 		ctk_entry_completion_set_model (entry->priv->completion,
-						GTK_TREE_MODEL (get_history_store (entry)));
+						CTK_TREE_MODEL (get_history_store (entry)));
 
 		/* Use model column 0 as the text column */
 		ctk_entry_completion_set_text_column (entry->priv->completion, 0);
@@ -519,7 +519,7 @@ gsearch_history_entry_set_enable_completion (GsearchHistoryEntry *entry,
 		ctk_entry_completion_set_inline_completion (entry->priv->completion, TRUE);
 
 		/* Assign the completion to the entry */
-		ctk_entry_set_completion (GTK_ENTRY (gsearch_history_entry_get_entry(entry)),
+		ctk_entry_set_completion (CTK_ENTRY (gsearch_history_entry_get_entry(entry)),
 					  entry->priv->completion);
 	}
 	else
@@ -527,7 +527,7 @@ gsearch_history_entry_set_enable_completion (GsearchHistoryEntry *entry,
 		if (entry->priv->completion == NULL)
 			return;
 
-		ctk_entry_set_completion (GTK_ENTRY (gsearch_history_entry_get_entry (entry)),
+		ctk_entry_set_completion (CTK_ENTRY (gsearch_history_entry_get_entry (entry)),
 					  NULL);
 
 		g_object_unref (entry->priv->completion);
@@ -602,7 +602,7 @@ gsearch_history_entry_get_entry (GsearchHistoryEntry *entry)
 {
 	g_return_val_if_fail (GSEARCH_IS_HISTORY_ENTRY (entry), NULL);
 
-	return ctk_bin_get_child (GTK_BIN (entry));
+	return ctk_bin_get_child (CTK_BIN (entry));
 }
 
 static void
@@ -631,20 +631,20 @@ gsearch_history_entry_set_escape_func (GsearchHistoryEntry           *entry,
 
 	g_return_if_fail (GSEARCH_IS_HISTORY_ENTRY (entry));
 
-	cells = ctk_cell_layout_get_cells (GTK_CELL_LAYOUT (entry));
+	cells = ctk_cell_layout_get_cells (CTK_CELL_LAYOUT (entry));
 
 	/* We only have one cell renderer */
 	g_return_if_fail (cells->data != NULL && cells->next == NULL);
 
 	if (escape_func != NULL)
-		ctk_cell_layout_set_cell_data_func (GTK_CELL_LAYOUT (entry),
-						    GTK_CELL_RENDERER (cells->data),
+		ctk_cell_layout_set_cell_data_func (CTK_CELL_LAYOUT (entry),
+						    CTK_CELL_RENDERER (cells->data),
 						    (GtkCellLayoutDataFunc) escape_cell_data_func,
 						    escape_func,
 						    NULL);
 	else
-		ctk_cell_layout_set_cell_data_func (GTK_CELL_LAYOUT (entry),
-						    GTK_CELL_RENDERER (cells->data),
+		ctk_cell_layout_set_cell_data_func (CTK_CELL_LAYOUT (entry),
+						    CTK_CELL_RENDERER (cells->data),
 						    NULL,
 						    NULL,
 						    NULL);

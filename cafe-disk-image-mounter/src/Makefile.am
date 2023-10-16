@@ -16,12 +16,12 @@ cafe_disk_image_mounter_CPPFLAGS = 			\
 cafe_disk_image_mounter_CFLAGS = 			\
 	$(GLIB_CFLAGS)					\
 	$(UDISKS2_CFLAGS)				\
-	$(GTK_CFLAGS)					\
+	$(CTK_CFLAGS)					\
 	$(WARN_CFLAGS)					\
 	$(NULL)
 
 cafe_disk_image_mounter_LDADD = 			\
 	$(GLIB_LIBS)					\
 	$(UDISKS2_LIBS)					\
-	$(GTK_LIBS)					\
+	$(CTK_LIBS)					\
 	$(NULL)

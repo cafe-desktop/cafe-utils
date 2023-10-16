@@ -74,7 +74,7 @@ struct _LogviewWindowPrivate {
   gboolean matches_only;
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (LogviewWindow, logview_window, GTK_TYPE_WINDOW);
+G_DEFINE_TYPE_WITH_PRIVATE (LogviewWindow, logview_window, CTK_TYPE_WINDOW);
 
 static void findbar_close_cb  (LogviewFindbar *findbar,
                                gpointer user_data);
@@ -161,7 +161,7 @@ populate_style_tag_table (LogviewWindow *logview)
   context = ctk_widget_get_style_context (logview->priv->text_view);
   ctk_style_context_save (context);
   ctk_style_context_add_class (context, "dim-label");
-  ctk_style_context_get_color (context, GTK_STATE_FLAG_NORMAL, &rgba);
+  ctk_style_context_get_color (context, CTK_STATE_FLAG_NORMAL, &rgba);
   ctk_style_context_restore (context);
 
   g_object_set (tag, "foreground-rgba", &rgba, "foreground-set", TRUE, NULL);
@@ -203,7 +203,7 @@ logview_update_statusbar (LogviewWindow *logview, LogviewLog *active)
   time_t timestamp;
 
   if (active == NULL) {
-    ctk_statusbar_pop (GTK_STATUSBAR (logview->priv->statusbar), 0);
+    ctk_statusbar_pop (CTK_STATUSBAR (logview->priv->statusbar), 0);
     return;
   }
 
@@ -218,8 +218,8 @@ logview_update_statusbar (LogviewWindow *logview, LogviewLog *active)
                                     logview_log_get_cached_lines_number (active),
                                     size, modified);
 
-  ctk_statusbar_pop (GTK_STATUSBAR (logview->priv->statusbar), 0);
-  ctk_statusbar_push (GTK_STATUSBAR (logview->priv->statusbar), 0, statusbar_text);
+  ctk_statusbar_pop (CTK_STATUSBAR (logview->priv->statusbar), 0);
+  ctk_statusbar_push (CTK_STATUSBAR (logview->priv->statusbar), 0, statusbar_text);
 
   g_free (size);
   g_free (timestring);
@@ -274,7 +274,7 @@ logview_set_window_title (LogviewWindow *logview, const char * log_name)
     window_title = g_strdup_printf (APP_NAME);
   }
 
-  ctk_window_set_title (GTK_WINDOW (logview), window_title);
+  ctk_window_set_title (CTK_WINDOW (logview), window_title);
 
   g_free (window_title);
 }
@@ -288,12 +288,12 @@ open_file_selected_cb (GtkWidget *chooser, gint response, LogviewWindow *logview
   char *file_uri;
   LogviewLog *log;
 
-  ctk_widget_hide (GTK_WIDGET (chooser));
-  if (response != GTK_RESPONSE_OK) {
+  ctk_widget_hide (CTK_WIDGET (chooser));
+  if (response != CTK_RESPONSE_OK) {
 	  return;
   }
 
-  f = ctk_file_chooser_get_file (GTK_FILE_CHOOSER (chooser));
+  f = ctk_file_chooser_get_file (CTK_FILE_CHOOSER (chooser));
   file_uri = g_file_get_uri (f);
 
   log = logview_manager_get_if_loaded (logview->priv->manager, file_uri);
@@ -320,25 +320,25 @@ logview_open_log (GtkAction *action, LogviewWindow *logview)
 
   if (chooser == NULL) {
     chooser = ctk_file_chooser_dialog_new (_("Open Log"),
-                                           GTK_WINDOW (logview),
-                                           GTK_FILE_CHOOSER_ACTION_OPEN,
-                                           "ctk-cancel", GTK_RESPONSE_CANCEL,
-                                           "ctk-open", GTK_RESPONSE_OK,
+                                           CTK_WINDOW (logview),
+                                           CTK_FILE_CHOOSER_ACTION_OPEN,
+                                           "ctk-cancel", CTK_RESPONSE_CANCEL,
+                                           "ctk-open", CTK_RESPONSE_OK,
                                            NULL);
-    ctk_dialog_set_default_response (GTK_DIALOG (chooser), GTK_RESPONSE_OK);
-    ctk_window_set_modal (GTK_WINDOW (chooser), TRUE);
+    ctk_dialog_set_default_response (CTK_DIALOG (chooser), CTK_RESPONSE_OK);
+    ctk_window_set_modal (CTK_WINDOW (chooser), TRUE);
     g_signal_connect (chooser, "response",
                       G_CALLBACK (open_file_selected_cb), logview);
     g_signal_connect (chooser, "destroy",
                       G_CALLBACK (ctk_widget_destroyed), &chooser);
     active = logview_prefs_get_active_logfile (logview->priv->prefs);
     if (active != NULL) {
-      ctk_file_chooser_set_filename (GTK_FILE_CHOOSER (chooser), active);
+      ctk_file_chooser_set_filename (CTK_FILE_CHOOSER (chooser), active);
       g_free (active);
     }
   }
 
-  ctk_window_present (GTK_WINDOW (chooser));
+  ctk_window_present (CTK_WINDOW (chooser));
 }
 
 static void
@@ -353,7 +353,7 @@ logview_help (GtkAction *action, GtkWidget *parent_window)
 {
   GError *error = NULL;
 
-  ctk_show_uri_on_window (GTK_WINDOW (parent_window),
+  ctk_show_uri_on_window (CTK_WINDOW (parent_window),
                 "help:cafe-system-log", ctk_get_current_event_time (),
                 &error);
 
@@ -390,12 +390,12 @@ logview_select_all (GtkAction *action, LogviewWindow *logview)
   GtkTextIter start, end;
   GtkTextBuffer *buffer;
 
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
 
   ctk_text_buffer_get_bounds (buffer, &start, &end);
   ctk_text_buffer_select_range (buffer, &start, &end);
 
-  ctk_widget_grab_focus (GTK_WIDGET (logview->priv->text_view));
+  ctk_widget_grab_focus (CTK_WIDGET (logview->priv->text_view));
 }
 
 static void
@@ -404,19 +404,19 @@ logview_copy (GtkAction *action, LogviewWindow *logview)
   GtkTextBuffer *buffer;
   GtkClipboard *clipboard;
 
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
   clipboard = ctk_clipboard_get (GDK_SELECTION_CLIPBOARD);
 
   ctk_text_buffer_copy_clipboard (buffer, clipboard);
 
-  ctk_widget_grab_focus (GTK_WIDGET (logview->priv->text_view));
+  ctk_widget_grab_focus (CTK_WIDGET (logview->priv->text_view));
 }
 
 static void
 findbar_close_cb (LogviewFindbar *findbar,
                   gpointer user_data)
 {
-  ctk_widget_hide (GTK_WIDGET (findbar));
+  ctk_widget_hide (CTK_WIDGET (findbar));
   logview_findbar_set_message (findbar, NULL);
 }
 
@@ -437,7 +437,7 @@ logview_search_text (LogviewWindow *logview, gboolean forward)
     return;
   }
 
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
   search_start = ctk_text_buffer_get_mark (buffer, SEARCH_START_MARK);
   search_end = ctk_text_buffer_get_mark (buffer, SEARCH_END_MARK);
 
@@ -459,9 +459,9 @@ logview_search_text (LogviewWindow *logview, gboolean forward)
 wrap:
 
   if (forward) {
-    res = ctk_text_iter_forward_search (&search, text, GTK_TEXT_SEARCH_VISIBLE_ONLY, &start_m, &end_m, NULL);
+    res = ctk_text_iter_forward_search (&search, text, CTK_TEXT_SEARCH_VISIBLE_ONLY, &start_m, &end_m, NULL);
   } else {
-    res = ctk_text_iter_backward_search (&search, text, GTK_TEXT_SEARCH_VISIBLE_ONLY, &start_m, &end_m, NULL);
+    res = ctk_text_iter_backward_search (&search, text, CTK_TEXT_SEARCH_VISIBLE_ONLY, &start_m, &end_m, NULL);
   }
 
   if (res) {
@@ -469,7 +469,7 @@ wrap:
     ctk_text_buffer_move_mark (buffer, search_start, &start_m);
     ctk_text_buffer_move_mark (buffer, search_end, &end_m);
 
-    ctk_text_view_scroll_mark_onscreen (GTK_TEXT_VIEW (logview->priv->text_view), search_end);
+    ctk_text_view_scroll_mark_onscreen (CTK_TEXT_VIEW (logview->priv->text_view), search_end);
 
     if (wrapped) {
       logview_findbar_set_message (LOGVIEW_FINDBAR (logview->priv->find_bar), _("Wrapped"));
@@ -529,7 +529,7 @@ text_changed_timeout_cb (gpointer user_data)
 
   logview->priv->search_timeout_id = 0;
 
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
   search_start = ctk_text_buffer_get_mark (buffer, SEARCH_START_MARK);
   search_end = ctk_text_buffer_get_mark (buffer, SEARCH_END_MARK);
 
@@ -576,7 +576,7 @@ filter_buffer (LogviewWindow *logview, gint start_line)
   gboolean matched;
   int lines, i;
 
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
   lines = ctk_text_buffer_get_line_count (buffer);
 
   for (i = start_line; i < lines; i++) {
@@ -621,7 +621,7 @@ filter_remove (LogviewWindow *logview, LogviewFilter *filter)
   GtkTextIter start, end;
   GtkTextBuffer *buffer;
 
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
   ctk_text_buffer_get_bounds (buffer, &start, &end);
 
   ctk_text_buffer_remove_tag (buffer, logview_filter_get_tag (filter),
@@ -635,7 +635,7 @@ on_filter_toggled (GtkToggleAction *action, LogviewWindow *logview)
   const gchar* name;
   LogviewFilter *filter;
 
-  name = ctk_action_get_name (GTK_ACTION (action));
+  name = ctk_action_get_name (CTK_ACTION (action));
 
   if (ctk_toggle_action_get_active (action)) {
     priv->active_filters = g_list_append (priv->active_filters,
@@ -680,14 +680,14 @@ update_filter_menu (LogviewWindow *window)
   actions = ctk_action_group_list_actions (priv->filter_action_group);
 
   for (l = actions; l != NULL; l = g_list_next (l)) {
-    tag = ctk_text_tag_table_lookup (table, ctk_action_get_name (GTK_ACTION (l->data)));
+    tag = ctk_text_tag_table_lookup (table, ctk_action_get_name (CTK_ACTION (l->data)));
     ctk_text_tag_table_remove (table, tag);
 
-    g_signal_handlers_disconnect_by_func (GTK_ACTION (l->data),
+    g_signal_handlers_disconnect_by_func (CTK_ACTION (l->data),
                                           G_CALLBACK (on_filter_toggled),
                                           window);
     ctk_action_group_remove_action (priv->filter_action_group,
-                                    GTK_ACTION (l->data));
+                                    CTK_ACTION (l->data));
   }
 
   g_list_free (actions);
@@ -701,7 +701,7 @@ update_filter_menu (LogviewWindow *window)
 
     action = ctk_toggle_action_new (name, name, NULL, NULL);
     ctk_action_group_add_action (priv->filter_action_group,
-                                 GTK_ACTION (action));
+                                 CTK_ACTION (action));
 
     g_signal_connect (action,
                       "toggled",
@@ -709,7 +709,7 @@ update_filter_menu (LogviewWindow *window)
                       window);
 
     ctk_ui_manager_add_ui (ui, id, FILTER_PLACEHOLDER,
-                           name, name, GTK_UI_MANAGER_MENUITEM, FALSE);
+                           name, name, CTK_UI_MANAGER_MENUITEM, FALSE);
     ctk_text_tag_table_add (table,
                             logview_filter_get_tag (LOGVIEW_FILTER (l->data)));
 
@@ -744,15 +744,15 @@ logview_manage_filters (GtkAction *action, LogviewWindow *logview)
                     G_CALLBACK (on_logview_filter_manager_response),
                     logview);
 
-  ctk_window_set_transient_for (GTK_WINDOW (manager),
-                                GTK_WINDOW (logview));
-  ctk_widget_show (GTK_WIDGET (manager));
+  ctk_window_set_transient_for (CTK_WINDOW (manager),
+                                CTK_WINDOW (logview));
+  ctk_widget_show (CTK_WIDGET (manager));
 }
 
 static void
 logview_about (GtkWidget *widget, GtkWidget *window)
 {
-  g_return_if_fail (GTK_IS_WINDOW (window));
+  g_return_if_fail (CTK_IS_WINDOW (window));
 
   char *license_trans = g_strjoin ("\n\n", _(logview_about_license[0]),
                                    _(logview_about_license[1]),
@@ -764,7 +764,7 @@ logview_about (GtkWidget *widget, GtkWidget *window)
     *p = _(*p);
 #endif
 
-  ctk_show_about_dialog (GTK_WINDOW (window),
+  ctk_show_about_dialog (CTK_WINDOW (window),
                          "program-name", _("System Log Viewer"),
                          "version", VERSION,
                          "title", _("About System Log Viewer"),
@@ -880,7 +880,7 @@ real_select_day (LogviewWindow *logview,
   GtkTextIter start_iter, end_iter, start_vis, end_vis;
   GdkRectangle visible_rect;
 
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
 
   ctk_text_buffer_get_bounds (buffer, &start_iter, &end_iter);
   ctk_text_buffer_get_iter_at_line (buffer, &start_vis, first_line);
@@ -896,7 +896,7 @@ real_select_day (LogviewWindow *logview,
                                      &end_vis, &end_iter);
 
   /* FIXME: why is this needed to update the view when selecting a day back? */
-  ctk_text_view_get_visible_rect (GTK_TEXT_VIEW (logview->priv->text_view),
+  ctk_text_view_get_visible_rect (CTK_TEXT_VIEW (logview->priv->text_view),
                                   &visible_rect);
   gdk_window_invalidate_rect (ctk_widget_get_window (logview->priv->text_view),
                               &visible_rect, TRUE);
@@ -920,7 +920,7 @@ loglist_day_cleared_cb (LogviewLoglist *loglist,
   GtkTextBuffer *buffer;
   GtkTextIter start, end;
 
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
   ctk_text_buffer_get_bounds (buffer, &start, &end);
 
   /* clear all previous invisible tags */
@@ -1002,7 +1002,7 @@ read_new_lines_cb (LogviewLog *log,
     return;
   }
 
-  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (window->priv->text_view));
+  buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (window->priv->text_view));
   old_line_count = ctk_text_buffer_get_line_count (buffer);
   filter_start_line = old_line_count > 0 ? (old_line_count - 1) : 0;
 
@@ -1039,7 +1039,7 @@ read_new_lines_cb (LogviewLog *log,
   }
   filter_buffer (window, filter_start_line);
 
-  ctk_text_view_scroll_to_iter (GTK_TEXT_VIEW (window->priv->text_view),
+  ctk_text_view_scroll_to_iter (CTK_TEXT_VIEW (window->priv->text_view),
                                 &iter, 0.0, FALSE, 0.0, 0.0);
 
   paint_timestamps (buffer, old_line_count, new_days);
@@ -1107,7 +1107,7 @@ active_log_changed_cb (LogviewManager *manager,
    * and will help us to distinguish the two cases of the following if
    * cause in the callback.
    */
-  ctk_text_view_set_buffer (GTK_TEXT_VIEW (window->priv->text_view), buffer);
+  ctk_text_view_set_buffer (CTK_TEXT_VIEW (window->priv->text_view), buffer);
   g_object_unref (buffer);
 }
 
@@ -1179,47 +1179,47 @@ message_area_create_error_box (LogviewWindow *window,
   GtkWidget *primary_label;
   GtkWidget *secondary_label;
 
-  hbox_content = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
+  hbox_content = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 8);
   ctk_widget_show (hbox_content);
 
   image = ctk_image_new_from_icon_name ("dialog-error",
-                                        GTK_ICON_SIZE_DIALOG);
+                                        CTK_ICON_SIZE_DIALOG);
   ctk_widget_show (image);
-  ctk_box_pack_start (GTK_BOX (hbox_content), image, FALSE, FALSE, 0);
-  ctk_widget_set_halign (image, GTK_ALIGN_CENTER);
-  ctk_widget_set_valign (image, GTK_ALIGN_START);
+  ctk_box_pack_start (CTK_BOX (hbox_content), image, FALSE, FALSE, 0);
+  ctk_widget_set_halign (image, CTK_ALIGN_CENTER);
+  ctk_widget_set_valign (image, CTK_ALIGN_START);
 
-  vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+  vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
   ctk_widget_show (vbox);
-  ctk_box_pack_start (GTK_BOX (hbox_content), vbox, TRUE, TRUE, 0);
+  ctk_box_pack_start (CTK_BOX (hbox_content), vbox, TRUE, TRUE, 0);
 
   primary_label = ctk_label_new (NULL);
   ctk_widget_show (primary_label);
-  ctk_box_pack_start (GTK_BOX (vbox), primary_label, TRUE, TRUE, 0);
-  ctk_label_set_use_markup (GTK_LABEL (primary_label), TRUE);
-  ctk_label_set_line_wrap (GTK_LABEL (primary_label), TRUE);
-  ctk_label_set_xalign (GTK_LABEL (primary_label), 0.0);
-  ctk_label_set_yalign (GTK_LABEL (primary_label), 0.5);
+  ctk_box_pack_start (CTK_BOX (vbox), primary_label, TRUE, TRUE, 0);
+  ctk_label_set_use_markup (CTK_LABEL (primary_label), TRUE);
+  ctk_label_set_line_wrap (CTK_LABEL (primary_label), TRUE);
+  ctk_label_set_xalign (CTK_LABEL (primary_label), 0.0);
+  ctk_label_set_yalign (CTK_LABEL (primary_label), 0.5);
   ctk_widget_set_can_focus (primary_label, TRUE);
-  ctk_label_set_selectable (GTK_LABEL (primary_label), TRUE);
+  ctk_label_set_selectable (CTK_LABEL (primary_label), TRUE);
 
   window->priv->message_primary = primary_label;
 
   secondary_label = ctk_label_new (NULL);
   ctk_widget_show (secondary_label);
-  ctk_box_pack_start (GTK_BOX (vbox), secondary_label, TRUE, TRUE, 0);
+  ctk_box_pack_start (CTK_BOX (vbox), secondary_label, TRUE, TRUE, 0);
   ctk_widget_set_can_focus (secondary_label, TRUE);
-  ctk_label_set_use_markup (GTK_LABEL (secondary_label), TRUE);
-  ctk_label_set_line_wrap (GTK_LABEL (secondary_label), TRUE);
-  ctk_label_set_selectable (GTK_LABEL (secondary_label), TRUE);
-  ctk_label_set_xalign (GTK_LABEL (secondary_label), 0.0);
-  ctk_label_set_yalign (GTK_LABEL (secondary_label), 0.5);
+  ctk_label_set_use_markup (CTK_LABEL (secondary_label), TRUE);
+  ctk_label_set_line_wrap (CTK_LABEL (secondary_label), TRUE);
+  ctk_label_set_selectable (CTK_LABEL (secondary_label), TRUE);
+  ctk_label_set_xalign (CTK_LABEL (secondary_label), 0.0);
+  ctk_label_set_yalign (CTK_LABEL (secondary_label), 0.5);
 
   window->priv->message_secondary = secondary_label;
 
   ctk_container_add
-      (GTK_CONTAINER (ctk_info_bar_get_content_area
-                      (GTK_INFO_BAR (message_area))),
+      (CTK_CONTAINER (ctk_info_bar_get_content_area
+                      (CTK_INFO_BAR (message_area))),
        hbox_content);
 }
 
@@ -1234,9 +1234,9 @@ message_area_set_labels (LogviewWindow *window,
   secondary_markup = g_markup_printf_escaped ("<small>%s</small>",
                                               secondary);
 
-  ctk_label_set_markup (GTK_LABEL (window->priv->message_primary),
+  ctk_label_set_markup (CTK_LABEL (window->priv->message_primary),
                         primary_markup);
-  ctk_label_set_markup (GTK_LABEL (window->priv->message_secondary),
+  ctk_label_set_markup (CTK_LABEL (window->priv->message_secondary),
                         secondary_markup);
 
   g_free (primary_markup);
@@ -1247,7 +1247,7 @@ static void
 message_area_response_cb (GtkInfoBar *message_area,
                           int response_id, gpointer user_data)
 {
-  ctk_widget_hide (GTK_WIDGET (message_area));
+  ctk_widget_hide (CTK_WIDGET (message_area));
 
   g_signal_handlers_disconnect_by_func (message_area,
                                         message_area_response_cb,
@@ -1284,7 +1284,7 @@ logview_window_init (LogviewWindow *logview)
 
   GtkStyleContext *s_context;
 
-  s_context = ctk_widget_get_style_context (GTK_WIDGET (logview));
+  s_context = ctk_widget_get_style_context (CTK_WIDGET (logview));
   ctk_style_context_add_class (s_context, "logview-window");
 
   priv = logview->priv = logview_window_get_instance_private (logview);
@@ -1293,10 +1293,10 @@ logview_window_init (LogviewWindow *logview)
   priv->monitor_id = 0;
 
   logview_prefs_get_stored_window_size (priv->prefs, &width, &height);
-  ctk_window_set_default_size (GTK_WINDOW (logview), width, height);
+  ctk_window_set_default_size (CTK_WINDOW (logview), width, height);
 
-  vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-  ctk_container_add (GTK_CONTAINER (logview), vbox);
+  vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 0);
+  ctk_container_add (CTK_CONTAINER (logview), vbox);
 
   /* create menus */
   action_group = ctk_action_group_new ("LogviewMenuActions");
@@ -1309,7 +1309,7 @@ logview_window_init (LogviewWindow *logview)
 
   ctk_ui_manager_insert_action_group (priv->ui_manager, action_group, 0);
   accel_group = ctk_ui_manager_get_accel_group (priv->ui_manager);
-  ctk_window_add_accel_group (GTK_WINDOW (logview), accel_group);
+  ctk_window_add_accel_group (CTK_WINDOW (logview), accel_group);
 
   res = ctk_ui_manager_add_ui_from_resource (priv->ui_manager,
                                              "/org/cafe/system-log/logview-toolbar.xml",
@@ -1326,30 +1326,30 @@ logview_window_init (LogviewWindow *logview)
                                    logview_prefs_get_have_tearoff (priv->prefs));
 
   w = ctk_ui_manager_get_widget (priv->ui_manager, "/LogviewMenu");
-  ctk_box_pack_start (GTK_BOX (vbox), w, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (vbox), w, FALSE, FALSE, 0);
   ctk_widget_show (w);
 
   /* panes */
-  hpaned = ctk_paned_new (GTK_ORIENTATION_HORIZONTAL);
-  ctk_box_pack_start (GTK_BOX (vbox), hpaned, TRUE, TRUE, 0);
+  hpaned = ctk_paned_new (CTK_ORIENTATION_HORIZONTAL);
+  ctk_box_pack_start (CTK_BOX (vbox), hpaned, TRUE, TRUE, 0);
   priv->hpaned = hpaned;
   ctk_widget_show (hpaned);
 
   /* first pane : sidebar (list of logs) */
-  priv->sidebar = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+  priv->sidebar = ctk_box_new (CTK_ORIENTATION_VERTICAL, 0);
   ctk_widget_show (priv->sidebar);
 
   /* first pane: log list */
   w = ctk_scrolled_window_new (NULL, NULL);
-  ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (w),
-                                  GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
-  ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (w),
-                                       GTK_SHADOW_ETCHED_IN);
+  ctk_scrolled_window_set_policy (CTK_SCROLLED_WINDOW (w),
+                                  CTK_POLICY_NEVER, CTK_POLICY_AUTOMATIC);
+  ctk_scrolled_window_set_shadow_type (CTK_SCROLLED_WINDOW (w),
+                                       CTK_SHADOW_ETCHED_IN);
 
   priv->loglist = logview_loglist_new ();
-  ctk_container_add (GTK_CONTAINER (w), priv->loglist);
-  ctk_box_pack_start (GTK_BOX (priv->sidebar), w, TRUE, TRUE, 0);
-  ctk_paned_pack1 (GTK_PANED (hpaned), priv->sidebar, FALSE, FALSE);
+  ctk_container_add (CTK_CONTAINER (w), priv->loglist);
+  ctk_box_pack_start (CTK_BOX (priv->sidebar), w, TRUE, TRUE, 0);
+  ctk_paned_pack1 (CTK_PANED (hpaned), priv->sidebar, FALSE, FALSE);
   ctk_widget_show (w);
   ctk_widget_show (priv->loglist);
 
@@ -1359,22 +1359,22 @@ logview_window_init (LogviewWindow *logview)
                     G_CALLBACK (loglist_day_cleared_cb), logview);
 
   /* second pane: log */
-  main_view = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-  ctk_paned_pack2 (GTK_PANED (hpaned), main_view, TRUE, TRUE);
+  main_view = ctk_box_new (CTK_ORIENTATION_VERTICAL, 0);
+  ctk_paned_pack2 (CTK_PANED (hpaned), main_view, TRUE, TRUE);
 
   /* second pane: error message area */
   priv->message_area = ctk_info_bar_new ();
   message_area_create_error_box (logview, priv->message_area);
-  ctk_info_bar_add_button (GTK_INFO_BAR (priv->message_area),
-                           "ctk-close", GTK_RESPONSE_CLOSE);
-  ctk_box_pack_start (GTK_BOX (main_view), priv->message_area, FALSE, FALSE, 0);
+  ctk_info_bar_add_button (CTK_INFO_BAR (priv->message_area),
+                           "ctk-close", CTK_RESPONSE_CLOSE);
+  ctk_box_pack_start (CTK_BOX (main_view), priv->message_area, FALSE, FALSE, 0);
 
   /* second pane: text view */
   w = ctk_scrolled_window_new (NULL, NULL);
-  ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (w),
-                                  GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
-  ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (w), GTK_SHADOW_IN);
-  ctk_box_pack_start (GTK_BOX (main_view), w, TRUE, TRUE, 0);
+  ctk_scrolled_window_set_policy (CTK_SCROLLED_WINDOW (w),
+                                  CTK_POLICY_AUTOMATIC, CTK_POLICY_AUTOMATIC);
+  ctk_scrolled_window_set_shadow_type (CTK_SCROLLED_WINDOW (w), CTK_SHADOW_IN);
+  ctk_box_pack_start (CTK_BOX (main_view), w, TRUE, TRUE, 0);
   ctk_widget_show (w);
 
   priv->tag_table = ctk_text_tag_table_new ();
@@ -1384,7 +1384,7 @@ logview_window_init (LogviewWindow *logview)
   g_object_set (priv->text_view, "editable", FALSE, NULL);
   populate_style_tag_table (logview);
 
-  ctk_container_add (GTK_CONTAINER (w), priv->text_view);
+  ctk_container_add (CTK_CONTAINER (w), priv->text_view);
   ctk_widget_show (priv->text_view);
 
   /* use the desktop monospace font */
@@ -1408,19 +1408,19 @@ logview_window_init (LogviewWindow *logview)
   }
 
   /* version selector */
-  priv->version_bar = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-  ctk_container_set_border_width (GTK_CONTAINER (priv->version_bar), 3);
+  priv->version_bar = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 0);
+  ctk_container_set_border_width (CTK_CONTAINER (priv->version_bar), 3);
   priv->version_selector = ctk_combo_box_text_new ();
   g_signal_connect (priv->version_selector, "changed",
                     G_CALLBACK (logview_version_selector_changed), logview);
   w = ctk_label_new (_("Version: "));
 
-  ctk_box_pack_end (GTK_BOX (priv->version_bar), priv->version_selector, FALSE, FALSE, 0);
-  ctk_box_pack_end (GTK_BOX (priv->version_bar), w, FALSE, FALSE, 0);
-  ctk_box_pack_end (GTK_BOX (main_view), priv->version_bar, FALSE, FALSE, 0);
+  ctk_box_pack_end (CTK_BOX (priv->version_bar), priv->version_selector, FALSE, FALSE, 0);
+  ctk_box_pack_end (CTK_BOX (priv->version_bar), w, FALSE, FALSE, 0);
+  ctk_box_pack_end (CTK_BOX (main_view), priv->version_bar, FALSE, FALSE, 0);
 
   priv->find_bar = logview_findbar_new ();
-  ctk_box_pack_end (GTK_BOX (main_view), priv->find_bar, FALSE, FALSE, 0);
+  ctk_box_pack_end (CTK_BOX (main_view), priv->find_bar, FALSE, FALSE, 0);
 
   g_signal_connect (priv->find_bar, "previous",
                     G_CALLBACK (findbar_previous_cb), logview);
@@ -1447,10 +1447,10 @@ logview_window_init (LogviewWindow *logview)
 
   /* status area at bottom */
   priv->statusbar = ctk_statusbar_new ();
-	ctk_widget_set_margin_top (GTK_WIDGET (logview->priv->statusbar), 0);
-	ctk_widget_set_margin_bottom (GTK_WIDGET (logview->priv->statusbar), 0);
+	ctk_widget_set_margin_top (CTK_WIDGET (logview->priv->statusbar), 0);
+	ctk_widget_set_margin_bottom (CTK_WIDGET (logview->priv->statusbar), 0);
 
-  ctk_box_pack_start (GTK_BOX (vbox), priv->statusbar, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (vbox), priv->statusbar, FALSE, FALSE, 0);
   ctk_widget_show (priv->statusbar);
 
   /* Filter menu */
@@ -1485,7 +1485,7 @@ logview_window_new ()
     return NULL;
   }
 
-  return GTK_WIDGET (logview);
+  return CTK_WIDGET (logview);
 }
 
 void

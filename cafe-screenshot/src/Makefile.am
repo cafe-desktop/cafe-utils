@@ -33,9 +33,9 @@ cafe_screenshot_SOURCES =		\
 cafe_screenshot_CFLAGS =		\
 	$(GLIB_CFLAGS)			\
 	$(GIO_CFLAGS)			\
-	$(LIBCANBERRA_GTK_CFLAGS)	\
+	$(LIBCANBERRA_CTK_CFLAGS)	\
 	$(GTHREAD_CFLAGS)		\
-	$(GTK_CFLAGS)			\
+	$(CTK_CFLAGS)			\
 	$(WARN_CFLAGS)			\
 	$(NULL)
 
@@ -45,9 +45,9 @@ cafe_screenshot_LDADD =			\
 	$(XSHAPE_LIBS)			\
 	$(GLIB_LIBS)			\
 	$(GIO_LIBS)			\
-	$(LIBCANBERRA_GTK_LIBS)		\
+	$(LIBCANBERRA_CTK_LIBS)		\
 	$(GTHREAD_LIBS)			\
-	$(GTK_LIBS)			\
+	$(CTK_LIBS)			\
 	-lm
 
 screenshot-resources.h screenshot-resources.c: $(srcdir)/../data/org.cafe.screenshot.gresource.xml Makefile $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir $(srcdir)/../data $(srcdir)/../data/org.cafe.screenshot.gresource.xml)

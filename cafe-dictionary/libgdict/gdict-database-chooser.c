@@ -108,7 +108,7 @@ static guint db_chooser_signals[LAST_SIGNAL] = { 0 };
 
 G_DEFINE_TYPE_WITH_PRIVATE (GdictDatabaseChooser,
                             gdict_database_chooser,
-                            GTK_TYPE_BOX);
+                            CTK_TYPE_BOX);
 
 
 static void
@@ -253,7 +253,7 @@ row_activated_cb (GtkTreeView       *treeview,
   gchar *db_name, *db_desc;
   gboolean valid;
 
-  valid = ctk_tree_model_get_iter (GTK_TREE_MODEL (priv->store),
+  valid = ctk_tree_model_get_iter (CTK_TREE_MODEL (priv->store),
 		  		   &iter,
 				   path);
   if (!valid)
@@ -262,7 +262,7 @@ row_activated_cb (GtkTreeView       *treeview,
       return;
     }
 
-  ctk_tree_model_get (GTK_TREE_MODEL (priv->store), &iter,
+  ctk_tree_model_get (CTK_TREE_MODEL (priv->store), &iter,
 		      DB_COLUMN_NAME, &db_name,
 		      DB_COLUMN_DESCRIPTION, &db_desc,
 		      -1);
@@ -333,12 +333,12 @@ gdict_database_chooser_constructor (GType                  type,
 
   sw = ctk_scrolled_window_new (NULL, NULL);
   ctk_widget_set_vexpand (sw, TRUE);
-  ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (sw),
-		  		  GTK_POLICY_AUTOMATIC,
-				  GTK_POLICY_AUTOMATIC);
-  ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (sw),
-		  		       GTK_SHADOW_IN);
-  ctk_box_pack_start (GTK_BOX (chooser), sw, TRUE, TRUE, 0);
+  ctk_scrolled_window_set_policy (CTK_SCROLLED_WINDOW (sw),
+		  		  CTK_POLICY_AUTOMATIC,
+				  CTK_POLICY_AUTOMATIC);
+  ctk_scrolled_window_set_shadow_type (CTK_SCROLLED_WINDOW (sw),
+		  		       CTK_SHADOW_IN);
+  ctk_box_pack_start (CTK_BOX (chooser), sw, TRUE, TRUE, 0);
   ctk_widget_show (sw);
 
   renderer = ctk_cell_renderer_text_new ();
@@ -348,46 +348,46 @@ gdict_database_chooser_constructor (GType                  type,
                                                      "weight", DB_COLUMN_CURRENT,
 						     NULL);
   priv->treeview = ctk_tree_view_new ();
-  ctk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview),
-		  	   GTK_TREE_MODEL (priv->store));
-  ctk_tree_view_set_headers_visible (GTK_TREE_VIEW (priv->treeview), FALSE);
-  ctk_tree_view_append_column (GTK_TREE_VIEW (priv->treeview), column);
-  g_signal_connect (ctk_tree_view_get_selection (GTK_TREE_VIEW (priv->treeview)),
+  ctk_tree_view_set_model (CTK_TREE_VIEW (priv->treeview),
+		  	   CTK_TREE_MODEL (priv->store));
+  ctk_tree_view_set_headers_visible (CTK_TREE_VIEW (priv->treeview), FALSE);
+  ctk_tree_view_append_column (CTK_TREE_VIEW (priv->treeview), column);
+  g_signal_connect (ctk_tree_view_get_selection (CTK_TREE_VIEW (priv->treeview)),
                     "changed", G_CALLBACK (selection_changed_cb),
                     chooser);
   g_signal_connect (priv->treeview, "row-activated",
 		    G_CALLBACK (row_activated_cb), chooser);
-  ctk_container_add (GTK_CONTAINER (sw), priv->treeview);
+  ctk_container_add (CTK_CONTAINER (sw), priv->treeview);
   ctk_widget_show (priv->treeview);
 
-  hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+  hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 0);
   priv->buttons_box = hbox;
 
   priv->refresh_button = ctk_button_new ();
-  ctk_button_set_image (GTK_BUTTON (priv->refresh_button),
+  ctk_button_set_image (CTK_BUTTON (priv->refresh_button),
                         ctk_image_new_from_icon_name ("view-refresh",
-                                                      GTK_ICON_SIZE_SMALL_TOOLBAR));
+                                                      CTK_ICON_SIZE_SMALL_TOOLBAR));
   g_signal_connect (priv->refresh_button, "clicked",
 		    G_CALLBACK (refresh_button_clicked_cb),
 		    chooser);
-  ctk_box_pack_start (GTK_BOX (hbox), priv->refresh_button, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (hbox), priv->refresh_button, FALSE, FALSE, 0);
   ctk_widget_show (priv->refresh_button);
   ctk_widget_set_tooltip_text (priv->refresh_button,
                                _("Reload the list of available databases"));
 
   priv->clear_button = ctk_button_new ();
-  ctk_button_set_image (GTK_BUTTON (priv->clear_button),
+  ctk_button_set_image (CTK_BUTTON (priv->clear_button),
                         ctk_image_new_from_icon_name ("edit-clear",
-                                                      GTK_ICON_SIZE_SMALL_TOOLBAR));
+                                                      CTK_ICON_SIZE_SMALL_TOOLBAR));
   g_signal_connect (priv->clear_button, "clicked",
 		    G_CALLBACK (clear_button_clicked_cb),
 		    chooser);
-  ctk_box_pack_start (GTK_BOX (hbox), priv->clear_button, FALSE, FALSE, 0);
+  ctk_box_pack_start (CTK_BOX (hbox), priv->clear_button, FALSE, FALSE, 0);
   ctk_widget_show (priv->clear_button);
   ctk_widget_set_tooltip_text (priv->clear_button,
                                _("Clear the list of available databases"));
 
-  ctk_box_pack_end (GTK_BOX (chooser), hbox, FALSE, FALSE, 0);
+  ctk_box_pack_end (CTK_BOX (chooser), hbox, FALSE, FALSE, 0);
   ctk_widget_show (hbox);
 
   return object;
@@ -479,7 +479,7 @@ gdict_database_chooser_init (GdictDatabaseChooser *chooser)
 {
   GdictDatabaseChooserPrivate *priv;
 
-  ctk_orientable_set_orientation (GTK_ORIENTABLE (chooser), GTK_ORIENTATION_VERTICAL);
+  ctk_orientable_set_orientation (CTK_ORIENTABLE (chooser), CTK_ORIENTATION_VERTICAL);
   chooser->priv = priv = gdict_database_chooser_get_instance_private (chooser);
 
   priv->results = -1;
@@ -601,7 +601,7 @@ gdict_database_chooser_get_databases (GdictDatabaseChooser  *chooser,
 
   priv = chooser->priv;
 
-  if (!ctk_tree_model_get_iter_first (GTK_TREE_MODEL (priv->store), &iter))
+  if (!ctk_tree_model_get_iter_first (CTK_TREE_MODEL (priv->store), &iter))
     return NULL;
 
   i = 0;
@@ -611,13 +611,13 @@ gdict_database_chooser_get_databases (GdictDatabaseChooser  *chooser,
     {
       gchar *db_name;
 
-      ctk_tree_model_get (GTK_TREE_MODEL (priv->store), &iter,
+      ctk_tree_model_get (CTK_TREE_MODEL (priv->store), &iter,
                           DB_COLUMN_NAME, &db_name,
                           -1);
 
       retval[i++] = db_name;
     }
-  while (ctk_tree_model_iter_next (GTK_TREE_MODEL (priv->store), &iter));
+  while (ctk_tree_model_iter_next (CTK_TREE_MODEL (priv->store), &iter));
 
   retval[i] = NULL;
 
@@ -651,7 +651,7 @@ gdict_database_chooser_has_database (GdictDatabaseChooser *chooser,
 
   priv = chooser->priv;
 
-  if (!ctk_tree_model_get_iter_first (GTK_TREE_MODEL (priv->store), &iter))
+  if (!ctk_tree_model_get_iter_first (CTK_TREE_MODEL (priv->store), &iter))
     return FALSE;
 
   retval = FALSE;
@@ -660,7 +660,7 @@ gdict_database_chooser_has_database (GdictDatabaseChooser *chooser,
     {
       gchar *db_name;
 
-      ctk_tree_model_get (GTK_TREE_MODEL (priv->store), &iter,
+      ctk_tree_model_get (CTK_TREE_MODEL (priv->store), &iter,
                           DB_COLUMN_NAME, &db_name,
                           -1);
 
@@ -673,7 +673,7 @@ gdict_database_chooser_has_database (GdictDatabaseChooser *chooser,
 
       g_free (db_name);
     }
-  while (ctk_tree_model_iter_next (GTK_TREE_MODEL (priv->store), &iter));
+  while (ctk_tree_model_iter_next (CTK_TREE_MODEL (priv->store), &iter));
 
   return retval;
 }
@@ -705,13 +705,13 @@ lookup_start_cb (GdictContext *context,
 
   if (!priv->busy_cursor)
     {
-      GdkDisplay *display = ctk_widget_get_display (GTK_WIDGET (chooser));
+      GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (chooser));
 
       priv->busy_cursor = gdk_cursor_new_for_display (display, GDK_WATCH);
     }
 
-  if (ctk_widget_get_window (GTK_WIDGET (chooser)))
-    gdk_window_set_cursor (ctk_widget_get_window (GTK_WIDGET (chooser)), priv->busy_cursor);
+  if (ctk_widget_get_window (CTK_WIDGET (chooser)))
+    gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), priv->busy_cursor);
 
   priv->is_searching = TRUE;
 }
@@ -723,8 +723,8 @@ lookup_end_cb (GdictContext *context,
   GdictDatabaseChooser *chooser = GDICT_DATABASE_CHOOSER (user_data);
   GdictDatabaseChooserPrivate *priv = chooser->priv;
 
-  if (ctk_widget_get_window (GTK_WIDGET (chooser)))
-    gdk_window_set_cursor (ctk_widget_get_window (GTK_WIDGET (chooser)), NULL);
+  if (ctk_widget_get_window (CTK_WIDGET (chooser)))
+    gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), NULL);
 
   priv->is_searching = FALSE;
 }
@@ -768,8 +768,8 @@ error_cb (GdictContext *context,
 {
   GdictDatabaseChooser *chooser = GDICT_DATABASE_CHOOSER (user_data);
 
-  if (ctk_widget_get_window (GTK_WIDGET (chooser)))
-    gdk_window_set_cursor (ctk_widget_get_window (GTK_WIDGET (chooser)), NULL);
+  if (ctk_widget_get_window (CTK_WIDGET (chooser)))
+    gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), NULL);
 
   chooser->priv->is_searching = FALSE;
   chooser->priv->results = 0;
@@ -861,13 +861,13 @@ gdict_database_chooser_clear (GdictDatabaseChooser *chooser)
 
   priv = chooser->priv;
 
-  ctk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview), NULL);
+  ctk_tree_view_set_model (CTK_TREE_VIEW (priv->treeview), NULL);
 
   ctk_list_store_clear (priv->store);
   priv->results = 0;
 
-  ctk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview),
-		  	   GTK_TREE_MODEL (priv->store));
+  ctk_tree_view_set_model (CTK_TREE_VIEW (priv->treeview),
+		  	   CTK_TREE_MODEL (priv->store));
 }
 
 typedef struct
@@ -903,12 +903,12 @@ scan_for_db_name (GtkTreeModel *model,
 
       select_data->found = TRUE;
 
-      tree_view = GTK_TREE_VIEW (select_data->chooser->priv->treeview);
+      tree_view = CTK_TREE_VIEW (select_data->chooser->priv->treeview);
       if (select_data->do_activate)
         {
           GtkTreeViewColumn *column;
 
-          ctk_list_store_set (GTK_LIST_STORE (model), iter,
+          ctk_list_store_set (CTK_LIST_STORE (model), iter,
                               DB_COLUMN_CURRENT, PANGO_WEIGHT_BOLD,
                               -1);
 
@@ -924,7 +924,7 @@ scan_for_db_name (GtkTreeModel *model,
     }
   else
     {
-      ctk_list_store_set (GTK_LIST_STORE (model), iter,
+      ctk_list_store_set (CTK_LIST_STORE (model), iter,
                           DB_COLUMN_CURRENT, PANGO_WEIGHT_NORMAL,
                           -1);
     }
@@ -964,7 +964,7 @@ gdict_database_chooser_select_database (GdictDatabaseChooser *chooser,
   data.do_select = TRUE;
   data.do_activate = FALSE;
 
-  ctk_tree_model_foreach (GTK_TREE_MODEL (priv->store),
+  ctk_tree_model_foreach (CTK_TREE_MODEL (priv->store),
                           scan_for_db_name,
                           &data);
 
@@ -1005,7 +1005,7 @@ gdict_database_chooser_unselect_database (GdictDatabaseChooser *chooser,
   data.do_select = FALSE;
   data.do_activate = FALSE;
 
-  ctk_tree_model_foreach (GTK_TREE_MODEL (priv->store),
+  ctk_tree_model_foreach (CTK_TREE_MODEL (priv->store),
                           scan_for_db_name,
                           &data);
 
@@ -1047,7 +1047,7 @@ gdict_database_chooser_set_current_database (GdictDatabaseChooser *chooser,
   data.do_select = TRUE;
   data.do_activate = TRUE;
 
-  ctk_tree_model_foreach (GTK_TREE_MODEL (priv->store),
+  ctk_tree_model_foreach (CTK_TREE_MODEL (priv->store),
                           scan_for_db_name,
                           &data);
 
@@ -1088,7 +1088,7 @@ gdict_database_chooser_get_current_database (GdictDatabaseChooser *chooser)
 
   priv = chooser->priv;
 
-  selection = ctk_tree_view_get_selection (GTK_TREE_VIEW (priv->treeview));
+  selection = ctk_tree_view_get_selection (CTK_TREE_VIEW (priv->treeview));
   if (!ctk_tree_selection_get_selected (selection, &model, &iter))
     return NULL;
 
@@ -1125,7 +1125,7 @@ gdict_database_chooser_add_button (GdictDatabaseChooser *chooser,
 
   priv = chooser->priv;
 
-  button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
+  button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
                                      "label", button_text,
                                      "use-stock", TRUE,
                                      "use-underline", TRUE,
@@ -1135,7 +1135,7 @@ gdict_database_chooser_add_button (GdictDatabaseChooser *chooser,
 
   ctk_widget_show (button);
 
-  ctk_box_pack_end (GTK_BOX (priv->buttons_box), button, FALSE, TRUE, 0);
+  ctk_box_pack_end (CTK_BOX (priv->buttons_box), button, FALSE, TRUE, 0);
 
   return button;
 }

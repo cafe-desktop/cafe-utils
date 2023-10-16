@@ -48,7 +48,7 @@ enum {
   N_COLUMNS
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (LogviewFilterManager, logview_filter_manager, GTK_TYPE_DIALOG);
+G_DEFINE_TYPE_WITH_PRIVATE (LogviewFilterManager, logview_filter_manager, CTK_TYPE_DIALOG);
 
 static void
 logview_filter_manager_update_model (LogviewFilterManager *manager)
@@ -58,15 +58,15 @@ logview_filter_manager_update_model (LogviewFilterManager *manager)
   gchar *name;
   GtkTreeIter iter;
 
-  ctk_list_store_clear (GTK_LIST_STORE (manager->priv->model));
+  ctk_list_store_clear (CTK_LIST_STORE (manager->priv->model));
 
   filters = logview_prefs_get_filters (manager->priv->prefs);
 
   for (filter = filters; filter != NULL; filter = g_list_next (filter)) {
     g_object_get (filter->data, "name", &name, NULL);
 
-    ctk_list_store_append (GTK_LIST_STORE(manager->priv->model), &iter);
-    ctk_list_store_set (GTK_LIST_STORE (manager->priv->model),
+    ctk_list_store_append (CTK_LIST_STORE(manager->priv->model), &iter);
+    ctk_list_store_set (CTK_LIST_STORE (manager->priv->model),
                         &iter,
                         COLUMN_NAME, name,
                         COLUMN_FILTER, filter->data,
@@ -84,12 +84,12 @@ check_name (LogviewFilterManager *manager, const gchar *name)
   GtkWidget *dialog;
 
   if (!strlen (name)) {
-    dialog = ctk_message_dialog_new (GTK_WINDOW (manager),
-                                     GTK_DIALOG_MODAL,
-                                     GTK_MESSAGE_ERROR,
-                                     GTK_BUTTONS_CLOSE,
+    dialog = ctk_message_dialog_new (CTK_WINDOW (manager),
+                                     CTK_DIALOG_MODAL,
+                                     CTK_MESSAGE_ERROR,
+                                     CTK_BUTTONS_CLOSE,
                                      "%s", _("Filter name is empty!"));
-    ctk_dialog_run (GTK_DIALOG (dialog));
+    ctk_dialog_run (CTK_DIALOG (dialog));
 
     ctk_widget_destroy (dialog);
 
@@ -97,12 +97,12 @@ check_name (LogviewFilterManager *manager, const gchar *name)
   }
 
   if (strstr (name, ":") != NULL) {
-    dialog = ctk_message_dialog_new (GTK_WINDOW(manager),
-                                     GTK_DIALOG_MODAL,
-                                     GTK_MESSAGE_ERROR,
-                                     GTK_BUTTONS_CLOSE,
+    dialog = ctk_message_dialog_new (CTK_WINDOW(manager),
+                                     CTK_DIALOG_MODAL,
+                                     CTK_MESSAGE_ERROR,
+                                     CTK_BUTTONS_CLOSE,
                                      "%s", _("Filter name may not contain the ':' character"));
-    ctk_dialog_run (GTK_DIALOG (dialog));
+    ctk_dialog_run (CTK_DIALOG (dialog));
 
     ctk_widget_destroy (dialog);
 
@@ -120,13 +120,13 @@ check_regex (LogviewFilterManager *manager, const gchar *regex)
   GRegex *reg;
 
   if (!strlen (regex)) {
-    dialog = ctk_message_dialog_new (GTK_WINDOW(manager),
-                                     GTK_DIALOG_MODAL,
-                                     GTK_MESSAGE_ERROR,
-                                     GTK_BUTTONS_CLOSE,
+    dialog = ctk_message_dialog_new (CTK_WINDOW(manager),
+                                     CTK_DIALOG_MODAL,
+                                     CTK_MESSAGE_ERROR,
+                                     CTK_BUTTONS_CLOSE,
                                      "%s", _("Regular expression is empty!"));
 
-    ctk_dialog_run (GTK_DIALOG (dialog));
+    ctk_dialog_run (CTK_DIALOG (dialog));
 
     ctk_widget_destroy (dialog);
 
@@ -136,13 +136,13 @@ check_regex (LogviewFilterManager *manager, const gchar *regex)
   reg = g_regex_new (regex,
                      0, 0, &error);
   if (error) {
-    dialog = ctk_message_dialog_new (GTK_WINDOW (manager),
-                                     GTK_DIALOG_MODAL,
-                                     GTK_MESSAGE_ERROR,
-                                     GTK_BUTTONS_CLOSE,
+    dialog = ctk_message_dialog_new (CTK_WINDOW (manager),
+                                     CTK_DIALOG_MODAL,
+                                     CTK_MESSAGE_ERROR,
+                                     CTK_BUTTONS_CLOSE,
                                      _("Regular expression is invalid: %s"),
                                      error->message);
-    ctk_dialog_run (GTK_DIALOG (dialog));
+    ctk_dialog_run (CTK_DIALOG (dialog));
 
     ctk_widget_destroy (dialog);
     g_error_free (error);
@@ -180,24 +180,24 @@ on_dialog_add_edit_reponse (GtkWidget *dialog, int response_id,
   old_name = g_object_get_data (G_OBJECT (manager), "old_name");
   builder = manager->priv->builder;
 
-  entry_name = GTK_WIDGET (ctk_builder_get_object (builder,
+  entry_name = CTK_WIDGET (ctk_builder_get_object (builder,
                                                    "entry_name"));
-  entry_regex = GTK_WIDGET (ctk_builder_get_object (builder,
+  entry_regex = CTK_WIDGET (ctk_builder_get_object (builder,
                                                     "entry_regex"));
-  radio_color = GTK_WIDGET (ctk_builder_get_object (builder,
+  radio_color = CTK_WIDGET (ctk_builder_get_object (builder,
                                                     "radio_color"));
-  check_foreground = GTK_WIDGET (ctk_builder_get_object (builder,
+  check_foreground = CTK_WIDGET (ctk_builder_get_object (builder,
                                                          "check_foreground"));
-  check_background = GTK_WIDGET (ctk_builder_get_object (builder,
+  check_background = CTK_WIDGET (ctk_builder_get_object (builder,
                                                          "check_background"));
-  color_foreground = GTK_WIDGET (ctk_builder_get_object (builder,
+  color_foreground = CTK_WIDGET (ctk_builder_get_object (builder,
                                                          "color_foreground"));
-  color_background = GTK_WIDGET (ctk_builder_get_object (builder,
+  color_background = CTK_WIDGET (ctk_builder_get_object (builder,
                                                          "color_background"));
 
-  if (response_id == GTK_RESPONSE_APPLY) {
-    name = ctk_entry_get_text (GTK_ENTRY (entry_name));
-    regex = ctk_entry_get_text (GTK_ENTRY (entry_regex));
+  if (response_id == CTK_RESPONSE_APPLY) {
+    name = ctk_entry_get_text (CTK_ENTRY (entry_name));
+    regex = ctk_entry_get_text (CTK_ENTRY (entry_regex));
 
     if (!check_name (manager, name) || !check_regex (manager, regex)) {
       return;
@@ -206,43 +206,43 @@ on_dialog_add_edit_reponse (GtkWidget *dialog, int response_id,
     filter = logview_filter_new (name, regex);
     tag = ctk_text_tag_new (name);
 
-    if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (radio_color))) {
-      if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (check_foreground))) {
+    if (ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (radio_color))) {
+      if (ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (check_foreground))) {
         GdkRGBA foreground_color;
-        ctk_color_chooser_get_rgba (GTK_COLOR_CHOOSER (color_foreground),
+        ctk_color_chooser_get_rgba (CTK_COLOR_CHOOSER (color_foreground),
                                     &foreground_color);
         g_object_set (G_OBJECT (tag),
                       "foreground-rgba", &foreground_color,
                       "foreground-set", TRUE, NULL);
       }
 
-      if (ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (check_background))) {
+      if (ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (check_background))) {
         GdkRGBA background_color;
-        ctk_color_chooser_get_rgba (GTK_COLOR_CHOOSER (color_background),
+        ctk_color_chooser_get_rgba (CTK_COLOR_CHOOSER (color_background),
                                     &background_color);
         g_object_set (tag,
                       "paragraph-background-rgba", &background_color,
                       "paragraph-background-set", TRUE, NULL);
       }
 
-      if (!ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (check_foreground))
-          && !ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (check_background))) {
+      if (!ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (check_foreground))
+          && !ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (check_background))) {
           GtkWidget *error_dialog;
 
-          error_dialog = ctk_message_dialog_new (GTK_WINDOW (manager),
-                                                 GTK_DIALOG_MODAL,
-                                                 GTK_MESSAGE_ERROR,
-                                                 GTK_BUTTONS_CLOSE,
+          error_dialog = ctk_message_dialog_new (CTK_WINDOW (manager),
+                                                 CTK_DIALOG_MODAL,
+                                                 CTK_MESSAGE_ERROR,
+                                                 CTK_BUTTONS_CLOSE,
                                                  "%s",
                                                  _("Please specify either foreground or background color!"));
-          ctk_dialog_run (GTK_DIALOG (error_dialog));
+          ctk_dialog_run (CTK_DIALOG (error_dialog));
           ctk_widget_destroy (error_dialog);
           g_object_unref (tag);
           g_object_unref (filter);
 
           return;
       }
-    } else { /* !ctk_toggle_button_get_active (GTK_TOGGLE_BUTTON (radio_color)) */
+    } else { /* !ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (radio_color)) */
       g_object_set (tag, "invisible", TRUE, NULL);
     }
 
@@ -288,45 +288,45 @@ run_add_edit_dialog (LogviewFilterManager *manager, LogviewFilter *filter)
 
   title = (filter != NULL ? _("Edit filter") : _("Add new filter"));
 
-  dialog = GTK_WIDGET (ctk_builder_get_object (builder,
+  dialog = CTK_WIDGET (ctk_builder_get_object (builder,
                                                "dialog_filter"));
 
-  ctk_window_set_title (GTK_WINDOW (dialog), title);
+  ctk_window_set_title (CTK_WINDOW (dialog), title);
 
-  entry_name = GTK_WIDGET (ctk_builder_get_object (builder,
+  entry_name = CTK_WIDGET (ctk_builder_get_object (builder,
                                                    "entry_name"));
-  entry_regex = GTK_WIDGET (ctk_builder_get_object (builder,
+  entry_regex = CTK_WIDGET (ctk_builder_get_object (builder,
                                                     "entry_regex"));
-  radio_color = GTK_WIDGET (ctk_builder_get_object (builder,
+  radio_color = CTK_WIDGET (ctk_builder_get_object (builder,
                                                     "radio_color"));
-  radio_visible = GTK_WIDGET (ctk_builder_get_object (builder,
+  radio_visible = CTK_WIDGET (ctk_builder_get_object (builder,
                                                       "radio_visible"));
 
-  ctk_radio_button_set_group (GTK_RADIO_BUTTON (radio_color),
-                              ctk_radio_button_get_group (GTK_RADIO_BUTTON (radio_visible)));
+  ctk_radio_button_set_group (CTK_RADIO_BUTTON (radio_color),
+                              ctk_radio_button_get_group (CTK_RADIO_BUTTON (radio_visible)));
 
-  check_foreground = GTK_WIDGET (ctk_builder_get_object (builder,
+  check_foreground = CTK_WIDGET (ctk_builder_get_object (builder,
                                                          "check_foreground"));
-  check_background = GTK_WIDGET (ctk_builder_get_object (builder,
+  check_background = CTK_WIDGET (ctk_builder_get_object (builder,
                                                          "check_background"));
-  color_foreground = GTK_WIDGET (ctk_builder_get_object (builder,
+  color_foreground = CTK_WIDGET (ctk_builder_get_object (builder,
                                                          "color_foreground"));
-  color_background = GTK_WIDGET (ctk_builder_get_object (builder,
+  color_background = CTK_WIDGET (ctk_builder_get_object (builder,
                                                          "color_background"));
   g_signal_connect (check_foreground, "toggled", G_CALLBACK (on_check_toggled),
                     color_foreground);
   g_signal_connect (check_background, "toggled", G_CALLBACK (on_check_toggled),
                     color_background);
 
-  on_check_toggled (GTK_TOGGLE_BUTTON (check_foreground),
+  on_check_toggled (CTK_TOGGLE_BUTTON (check_foreground),
                     color_foreground);
-  on_check_toggled (GTK_TOGGLE_BUTTON (check_background),
+  on_check_toggled (CTK_TOGGLE_BUTTON (check_background),
                     color_background);
 
-  vbox_color = GTK_WIDGET (ctk_builder_get_object (builder, "vbox_color"));
+  vbox_color = CTK_WIDGET (ctk_builder_get_object (builder, "vbox_color"));
   g_signal_connect (radio_color, "toggled", G_CALLBACK (on_check_toggled),
                     vbox_color);
-  on_check_toggled (GTK_TOGGLE_BUTTON (radio_color),
+  on_check_toggled (CTK_TOGGLE_BUTTON (radio_color),
                     vbox_color);
 
   if (filter) {
@@ -339,16 +339,16 @@ run_add_edit_dialog (LogviewFilterManager *manager, LogviewFilter *filter)
                   "foreground-set", &foreground_set,
                   "paragraph-background-set", &background_set,
                   "invisible", &invisible, NULL);
-    ctk_entry_set_text (GTK_ENTRY(entry_name), name);
-    ctk_entry_set_text (GTK_ENTRY(entry_regex), regex);
+    ctk_entry_set_text (CTK_ENTRY(entry_name), name);
+    ctk_entry_set_text (CTK_ENTRY(entry_regex), regex);
 
     if (foreground_set) {
       GdkRGBA *foreground;
 
       g_object_get (tag, "foreground-rgba", &foreground, NULL);
-      ctk_color_chooser_set_rgba (GTK_COLOR_CHOOSER (color_foreground),
+      ctk_color_chooser_set_rgba (CTK_COLOR_CHOOSER (color_foreground),
                                   foreground);
-      ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (check_foreground),
+      ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (check_foreground),
                                     TRUE);
 
       gdk_rgba_free (foreground);
@@ -358,18 +358,18 @@ run_add_edit_dialog (LogviewFilterManager *manager, LogviewFilter *filter)
       GdkRGBA *background;
 
       g_object_get (tag, "paragraph-background-rgba", &background, NULL);
-      ctk_color_chooser_set_rgba (GTK_COLOR_CHOOSER (color_background),
+      ctk_color_chooser_set_rgba (CTK_COLOR_CHOOSER (color_background),
                                   background);
-      ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (check_background),
+      ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (check_background),
                                     TRUE);
 
       gdk_rgba_free (background);
     }
 
     if (background_set || foreground_set) {
-      ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radio_color), TRUE);
+      ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (radio_color), TRUE);
     } else if (invisible) {
-      ctk_toggle_button_set_active (GTK_TOGGLE_BUTTON (radio_visible), TRUE);
+      ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (radio_visible), TRUE);
     }
 
     g_free (regex);
@@ -380,12 +380,12 @@ run_add_edit_dialog (LogviewFilterManager *manager, LogviewFilter *filter)
 
   g_signal_connect (G_OBJECT (dialog), "response",
                     G_CALLBACK (on_dialog_add_edit_reponse), manager);
-  ctk_window_set_transient_for (GTK_WINDOW (dialog),
-                                GTK_WINDOW (manager));
-  ctk_window_set_modal (GTK_WINDOW (dialog),
+  ctk_window_set_transient_for (CTK_WINDOW (dialog),
+                                CTK_WINDOW (manager));
+  ctk_window_set_modal (CTK_WINDOW (dialog),
                         TRUE);
 
-  ctk_widget_show (GTK_WIDGET (dialog));
+  ctk_widget_show (CTK_WIDGET (dialog));
 }
 
 static void
@@ -403,7 +403,7 @@ on_edit_clicked (GtkWidget *button, LogviewFilterManager *manager)
   GtkTreeSelection *selection;
 
   selection =
-    ctk_tree_view_get_selection (GTK_TREE_VIEW (manager->priv->tree));
+    ctk_tree_view_get_selection (CTK_TREE_VIEW (manager->priv->tree));
 
   ctk_tree_selection_get_selected (selection, &model, &iter);
   ctk_tree_model_get (model, &iter, COLUMN_FILTER, &filter, -1);
@@ -422,7 +422,7 @@ on_remove_clicked (GtkWidget *button, LogviewFilterManager *manager)
   gchar *name;
 
   selection  =
-    ctk_tree_view_get_selection (GTK_TREE_VIEW (manager->priv->tree));
+    ctk_tree_view_get_selection (CTK_TREE_VIEW (manager->priv->tree));
 
   ctk_tree_selection_get_selected (selection, &model, &iter);
   ctk_tree_model_get (model, &iter, COLUMN_NAME, &name, -1);
@@ -460,29 +460,29 @@ logview_filter_manager_init (LogviewFilterManager *manager)
   g_object_ref (priv->builder);
   priv->prefs = logview_prefs_get ();
 
-  ctk_dialog_add_button (GTK_DIALOG(manager),
+  ctk_dialog_add_button (CTK_DIALOG(manager),
                          "ctk-close",
-                         GTK_RESPONSE_CLOSE);
-  ctk_window_set_modal (GTK_WINDOW (manager),
+                         CTK_RESPONSE_CLOSE);
+  ctk_window_set_modal (CTK_WINDOW (manager),
                         TRUE);
 
-  priv->model = GTK_TREE_MODEL (ctk_list_store_new (N_COLUMNS,
+  priv->model = CTK_TREE_MODEL (ctk_list_store_new (N_COLUMNS,
                                                     G_TYPE_STRING,
                                                     G_TYPE_OBJECT));
   logview_filter_manager_update_model (manager);
 
   grid = ctk_grid_new ();
-  ctk_grid_set_row_spacing (GTK_GRID (grid), 6);
-  ctk_grid_set_column_spacing (GTK_GRID (grid), 6);
+  ctk_grid_set_row_spacing (CTK_GRID (grid), 6);
+  ctk_grid_set_column_spacing (CTK_GRID (grid), 6);
   scrolled_window = ctk_scrolled_window_new (NULL, NULL);
-  ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled_window),
-                                  GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
-  ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled_window),
-                                       GTK_SHADOW_ETCHED_IN);
+  ctk_scrolled_window_set_policy (CTK_SCROLLED_WINDOW (scrolled_window),
+                                  CTK_POLICY_AUTOMATIC, CTK_POLICY_AUTOMATIC);
+  ctk_scrolled_window_set_shadow_type (CTK_SCROLLED_WINDOW (scrolled_window),
+                                       CTK_SHADOW_ETCHED_IN);
   priv->tree = ctk_tree_view_new_with_model (priv->model);
   ctk_widget_set_size_request (priv->tree, 150, 200);
-  ctk_tree_view_set_headers_visible (GTK_TREE_VIEW (priv->tree), FALSE);
-  ctk_container_add (GTK_CONTAINER (scrolled_window), priv->tree);
+  ctk_tree_view_set_headers_visible (CTK_TREE_VIEW (priv->tree), FALSE);
+  ctk_container_add (CTK_CONTAINER (scrolled_window), priv->tree);
 
   text_renderer = ctk_cell_renderer_text_new ();
 
@@ -492,28 +492,28 @@ logview_filter_manager_init (LogviewFilterManager *manager)
                                        text_renderer,
                                        "text", COLUMN_NAME,
                                        NULL);
-  ctk_tree_view_append_column (GTK_TREE_VIEW (priv->tree),
+  ctk_tree_view_append_column (CTK_TREE_VIEW (priv->tree),
                                column);
 
-  priv->add_button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
+  priv->add_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
 					       "label", "ctk-add",
 					       "use-stock", TRUE,
 					       "use-underline", TRUE,
 					       NULL));
 
-  priv->edit_button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
+  priv->edit_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
 						"label", "ctk-properties",
 						"use-stock", TRUE,
 						"use-underline", TRUE,
 						NULL));
 
-  priv->remove_button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
+  priv->remove_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
 						  "label", "ctk-remove",
 						  "use-stock", TRUE,
 						  "use-underline", TRUE,
 						  NULL));
 
-  ctk_window_set_title (GTK_WINDOW (manager),
+  ctk_window_set_title (CTK_WINDOW (manager),
                         _("Filters"));
 
   g_signal_connect (priv->add_button, "clicked",
@@ -526,22 +526,22 @@ logview_filter_manager_init (LogviewFilterManager *manager)
   ctk_widget_set_sensitive (priv->edit_button, FALSE);
   ctk_widget_set_sensitive (priv->remove_button, FALSE);
 
-  g_signal_connect (ctk_tree_view_get_selection (GTK_TREE_VIEW (priv->tree)),
+  g_signal_connect (ctk_tree_view_get_selection (CTK_TREE_VIEW (priv->tree)),
                     "changed", G_CALLBACK (on_tree_selection_changed),
                     manager);
 
   ctk_widget_set_hexpand (scrolled_window, TRUE);
   ctk_widget_set_vexpand (scrolled_window, TRUE);
-  ctk_grid_attach (GTK_GRID (grid), scrolled_window, 0, 0, 1, 3);
-  ctk_widget_set_valign (priv->add_button, GTK_ALIGN_CENTER);
-  ctk_grid_attach (GTK_GRID (grid), priv->add_button, 1, 0, 1, 1);
-  ctk_widget_set_valign (priv->edit_button, GTK_ALIGN_CENTER);
-  ctk_grid_attach (GTK_GRID (grid), priv->edit_button, 1, 1, 1, 1);
-  ctk_widget_set_valign (priv->remove_button, GTK_ALIGN_CENTER);
-  ctk_grid_attach (GTK_GRID (grid), priv->remove_button, 1, 2, 1, 1);
-  ctk_box_pack_start (GTK_BOX (ctk_dialog_get_content_area (GTK_DIALOG (manager))),
+  ctk_grid_attach (CTK_GRID (grid), scrolled_window, 0, 0, 1, 3);
+  ctk_widget_set_valign (priv->add_button, CTK_ALIGN_CENTER);
+  ctk_grid_attach (CTK_GRID (grid), priv->add_button, 1, 0, 1, 1);
+  ctk_widget_set_valign (priv->edit_button, CTK_ALIGN_CENTER);
+  ctk_grid_attach (CTK_GRID (grid), priv->edit_button, 1, 1, 1, 1);
+  ctk_widget_set_valign (priv->remove_button, CTK_ALIGN_CENTER);
+  ctk_grid_attach (CTK_GRID (grid), priv->remove_button, 1, 2, 1, 1);
+  ctk_box_pack_start (CTK_BOX (ctk_dialog_get_content_area (CTK_DIALOG (manager))),
                       grid, TRUE, TRUE, 5);
-  ctk_widget_show_all (GTK_WIDGET (manager));
+  ctk_widget_show_all (CTK_WIDGET (manager));
 }
 
 static void
@@ -559,14 +559,14 @@ logview_filter_manager_dispose (GObject *object)
 static void
 logview_filter_manager_response (GtkDialog* dialog, gint response_id)
 {
-  ctk_widget_destroy (GTK_WIDGET (dialog));
+  ctk_widget_destroy (CTK_WIDGET (dialog));
 }
 
 static void
 logview_filter_manager_class_init (LogviewFilterManagerClass *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
-  GtkDialogClass *parent_class = GTK_DIALOG_CLASS (klass);
+  GtkDialogClass *parent_class = CTK_DIALOG_CLASS (klass);
 
   object_class->dispose = logview_filter_manager_dispose;
   parent_class->response = logview_filter_manager_response;

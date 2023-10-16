@@ -65,7 +65,7 @@ static gboolean gdict_aligned_window_motion_notify_cb (GtkWidget        *widget,
 						       GdictAlignedWindow *aligned_window);
 
 
-G_DEFINE_TYPE_WITH_PRIVATE (GdictAlignedWindow, gdict_aligned_window, GTK_TYPE_WINDOW);
+G_DEFINE_TYPE_WITH_PRIVATE (GdictAlignedWindow, gdict_aligned_window, CTK_TYPE_WINDOW);
 
 
 
@@ -73,7 +73,7 @@ static void
 gdict_aligned_window_class_init (GdictAlignedWindowClass *klass)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-  GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
+  GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
 
   gobject_class->set_property = gdict_aligned_window_set_property;
   gobject_class->get_property = gdict_aligned_window_get_property;
@@ -86,7 +86,7 @@ gdict_aligned_window_class_init (GdictAlignedWindowClass *klass)
   				   g_param_spec_object ("align-widget",
   				   			"Align Widget",
   				   			"The widget the window should align to",
-  				   			GTK_TYPE_WIDGET,
+  				   			CTK_TYPE_WIDGET,
   				   			G_PARAM_READWRITE));
 }
 
@@ -94,7 +94,7 @@ static void
 gdict_aligned_window_init (GdictAlignedWindow *aligned_window)
 {
   GdictAlignedWindowPrivate *priv = gdict_aligned_window_get_instance_private (aligned_window);
-  GtkWindow *window = GTK_WINDOW (aligned_window);
+  GtkWindow *window = CTK_WINDOW (aligned_window);
 
   aligned_window->priv = priv;
 
@@ -172,12 +172,12 @@ gdict_aligned_window_position (GdictAlignedWindow *window)
   display = gdk_display_get_default ();
   gdk_display_flush (display);
 
-  gdk_window_get_geometry (ctk_widget_get_window (GTK_WIDGET (window)), NULL, NULL, &our_width, &our_height);
+  gdk_window_get_geometry (ctk_widget_get_window (CTK_WIDGET (window)), NULL, NULL, &our_width, &our_height);
 
   /* stick, skip taskbar and pager */
-  ctk_window_stick (GTK_WINDOW (window));
-  ctk_window_set_skip_taskbar_hint (GTK_WINDOW (window), TRUE);
-  ctk_window_set_skip_pager_hint (GTK_WINDOW (window), TRUE);
+  ctk_window_stick (CTK_WINDOW (window));
+  ctk_window_set_skip_taskbar_hint (CTK_WINDOW (window), TRUE);
+  ctk_window_set_skip_pager_hint (CTK_WINDOW (window), TRUE);
 
   /* make sure the align_widget is realized before we do anything */
   ctk_widget_realize (align_widget);
@@ -209,14 +209,14 @@ gdict_aligned_window_position (GdictAlignedWindow *window)
 	gravity = GDK_GRAVITY_SOUTH_WEST;
     }
 
-  ctk_window_set_gravity (GTK_WINDOW (window), gravity);
-  ctk_window_move (GTK_WINDOW (window), x, y);
+  ctk_window_set_gravity (CTK_WINDOW (window), gravity);
+  ctk_window_move (CTK_WINDOW (window), x, y);
 }
 
 static void
 gdict_aligned_window_realize (GtkWidget *widget)
 {
-  GTK_WIDGET_CLASS (gdict_aligned_window_parent_class)->realize (widget);
+  CTK_WIDGET_CLASS (gdict_aligned_window_parent_class)->realize (widget);
 
   gdict_aligned_window_position (GDICT_ALIGNED_WINDOW (widget));
 }
@@ -226,7 +226,7 @@ gdict_aligned_window_show (GtkWidget *widget)
 {
   gdict_aligned_window_position (GDICT_ALIGNED_WINDOW (widget));
 
-  GTK_WIDGET_CLASS (gdict_aligned_window_parent_class)->show (widget);
+  CTK_WIDGET_CLASS (gdict_aligned_window_parent_class)->show (widget);
 }
 
 static void
@@ -243,14 +243,14 @@ gdict_aligned_window_motion_notify_cb (GtkWidget        *widget,
   GtkAllocation alloc;
   GdkRectangle rect;
 
-  ctk_widget_get_allocation (GTK_WIDGET (aligned_window), &alloc);
+  ctk_widget_get_allocation (CTK_WIDGET (aligned_window), &alloc);
 
   rect.x = 0;
   rect.y = 0;
   rect.width = alloc.width;
   rect.height = alloc.height;
 
-  gdk_window_invalidate_rect (ctk_widget_get_window (GTK_WIDGET (aligned_window)),
+  gdk_window_invalidate_rect (ctk_widget_get_window (CTK_WIDGET (aligned_window)),
 		  	      &rect,
 			      FALSE);
 
@@ -292,10 +292,10 @@ gdict_aligned_window_set_widget (GdictAlignedWindow *aligned_window,
   GdictAlignedWindowPrivate *priv;
 
   g_return_if_fail (GDICT_IS_ALIGNED_WINDOW (aligned_window));
-  g_return_if_fail (GTK_IS_WIDGET (align_widget));
+  g_return_if_fail (CTK_IS_WIDGET (align_widget));
 
 #if 0
-  if (GTK_WIDGET_NO_WINDOW (align_widget))
+  if (CTK_WIDGET_NO_WINDOW (align_widget))
     {
       g_warning ("Attempting to set a widget of class '%s' as the "
                  "align widget, but widgets of this class does not "
