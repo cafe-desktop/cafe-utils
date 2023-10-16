@@ -31,7 +31,7 @@
 #include <stdarg.h>
 
 #include <ctk/ctk.h>
-#include <gdk/gdkkeysyms.h>
+#include <cdk/cdkkeysyms.h>
 #include <glib/gi18n.h>
 
 #include "gdict-sidebar.h"

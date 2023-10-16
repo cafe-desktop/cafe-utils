@@ -39,7 +39,7 @@
 #include <gio/gio.h>
 
 #include <ctk/ctk.h>
-#include <gdk/gdkkeysyms.h>
+#include <cdk/cdkkeysyms.h>
 
 #include "gsearchtool.h"
 #include "gsearchtool-callbacks.h"
@@ -1450,13 +1450,13 @@ file_motion_notify_cb (CtkWidget *widget,
 				       NULL, NULL, NULL);
 
 	if (gsearch->search_results_hover_path != NULL) {
-		cursor = gdk_cursor_new_for_display (display, GDK_HAND2);
+		cursor = cdk_cursor_new_for_display (display, GDK_HAND2);
 	}
 	else {
 		cursor = NULL;
 	}
 
-	gdk_window_set_cursor (event->window, cursor);
+	cdk_window_set_cursor (event->window, cursor);
 
 	/* Redraw if the hover row has changed */
 	if (!(last_hover_path == NULL && gsearch->search_results_hover_path == NULL) &&

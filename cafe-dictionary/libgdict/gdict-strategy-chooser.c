@@ -654,11 +654,11 @@ lookup_start_cb (GdictContext *context,
   if (!priv->busy_cursor)
     {
       GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (chooser));
-      priv->busy_cursor = gdk_cursor_new_for_display (display, GDK_WATCH);
+      priv->busy_cursor = cdk_cursor_new_for_display (display, GDK_WATCH);
     }
 
   if (ctk_widget_get_window (CTK_WIDGET (chooser)))
-    gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), priv->busy_cursor);
+    cdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), priv->busy_cursor);
 
   priv->is_searching = TRUE;
 }
@@ -671,7 +671,7 @@ lookup_end_cb (GdictContext *context,
   GdictStrategyChooserPrivate *priv = chooser->priv;
 
   if (ctk_widget_get_window (CTK_WIDGET (chooser)))
-    gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), NULL);
+    cdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), NULL);
 
   priv->is_searching = FALSE;
 }
@@ -716,7 +716,7 @@ error_cb (GdictContext *context,
   GdictStrategyChooser *chooser = GDICT_STRATEGY_CHOOSER (user_data);
 
   if (ctk_widget_get_window (CTK_WIDGET (chooser)))
-    gdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), NULL);
+    cdk_window_set_cursor (ctk_widget_get_window (CTK_WIDGET (chooser)), NULL);
 
   chooser->priv->is_searching = FALSE;
   chooser->priv->results = 0;

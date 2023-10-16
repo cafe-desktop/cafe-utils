@@ -524,7 +524,7 @@ baobab_ringschart_draw_subfolder_tips (CtkWidget *chart, cairo_t *cr)
       _rect.height = tooltip_rect.height + 2;
 
       /* Check if tooltip overlaps */
-      if (! gdk_rectangle_intersect (&_rect, &last_rect, NULL))
+      if (! cdk_rectangle_intersect (&_rect, &last_rect, NULL))
         {
           g_memmove (&last_rect, &_rect, sizeof (GdkRectangle));
 

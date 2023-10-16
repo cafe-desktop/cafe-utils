@@ -315,11 +315,11 @@ baobab_chart_realize (CtkWidget *widget)
 
   attributes_mask = GDK_WA_X | GDK_WA_Y | GDK_WA_VISUAL;
 
-  window = gdk_window_new (ctk_widget_get_parent_window (widget),
+  window = cdk_window_new (ctk_widget_get_parent_window (widget),
                            &attributes,
                            attributes_mask);
   ctk_widget_set_window (widget, window);
-  gdk_window_set_user_data (window, chart);
+  cdk_window_set_user_data (window, chart);
 
   ctk_widget_add_events (widget,
                          GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK |
@@ -347,7 +347,7 @@ baobab_chart_size_allocate (CtkWidget *widget,
 
   if (ctk_widget_get_realized (widget))
     {
-      gdk_window_move_resize (ctk_widget_get_window (widget),
+      cdk_window_move_resize (ctk_widget_get_window (widget),
                   allocation->x, allocation->y,
                   allocation->width, allocation->height);
 
@@ -611,7 +611,7 @@ baobab_chart_draw (CtkWidget *chart,
     {
       item = (BaobabChartItem *) node->data;
 
-      if ((item->visible) && (gdk_rectangle_intersect (&area, &item->rect, NULL))
+      if ((item->visible) && (cdk_rectangle_intersect (&area, &item->rect, NULL))
           && (item->depth <= priv->max_depth))
         {
           highlighted = (node == priv->highlighted_item);
@@ -767,7 +767,7 @@ baobab_chart_expose (CtkWidget *chart, cairo_t *cr)
     return FALSE;
 
   /* get a cairo_t */
-  cr = gdk_cairo_create (ctk_widget_get_window (chart));
+  cr = cdk_cairo_create (ctk_widget_get_window (chart));
 
   cairo_rectangle (cr,
                    area.x, area.y,
@@ -988,7 +988,7 @@ baobab_chart_set_item_highlight (CtkWidget *chart,
   else
     priv->highlighted_item = NULL;
 
-  gdk_window_invalidate_rect (ctk_widget_get_window ( CTK_WIDGET (chart)),
+  cdk_window_invalidate_rect (ctk_widget_get_window ( CTK_WIDGET (chart)),
                               &item->rect, TRUE);
 }
 
@@ -1036,7 +1036,7 @@ baobab_chart_motion_notify (CtkWidget *widget,
     }
 
   /* Continue receiving motion notifies */
-  gdk_event_request_motions (event);
+  cdk_event_request_motions (event);
 
   return FALSE;
 }
@@ -1170,11 +1170,11 @@ baobab_chart_get_pixbuf (CtkWidget *widget)
 
   g_return_val_if_fail (BAOBAB_IS_CHART (widget), NULL);
 
-		w = gdk_window_get_width(ctk_widget_get_window(widget));
-		h = gdk_window_get_height(ctk_widget_get_window(widget));
+		w = cdk_window_get_width(ctk_widget_get_window(widget));
+		h = cdk_window_get_height(ctk_widget_get_window(widget));
 
 
-  pixbuf = gdk_pixbuf_get_from_window (
+  pixbuf = cdk_pixbuf_get_from_window (
                                          ctk_widget_get_window (widget),
                                          0, 0,
                                          w, h);
@@ -1764,7 +1764,7 @@ baobab_chart_save_snapshot (CtkWidget *chart)
           filename = g_strjoin (".", filename, sel_type, NULL);
           g_free (tmp);
         }
-      gdk_pixbuf_save (pixbuf, filename, sel_type, NULL, NULL);
+      cdk_pixbuf_save (pixbuf, filename, sel_type, NULL, NULL);
 
       g_free (filename);
       g_free (sel_type);

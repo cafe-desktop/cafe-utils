@@ -39,7 +39,7 @@
 #include <stdarg.h>
 
 #include <ctk/ctk.h>
-#include <gdk/gdkkeysyms.h>
+#include <cdk/cdkkeysyms.h>
 #include <glib/gi18n-lib.h>
 
 #include "gdict-defbox.h"
@@ -1383,9 +1383,9 @@ gdict_defbox_init_tags (GdictDefbox *defbox)
     g_object_get (settings, "ctk-application-prefer-dark-theme", &prefer_dark, NULL);
 
     if (!prefer_dark)
-      gdk_rgba_parse (&rgba, "#2a76c6");
+      cdk_rgba_parse (&rgba, "#2a76c6");
     else
-      gdk_rgba_parse (&rgba, "#4a90d9");
+      cdk_rgba_parse (&rgba, "#4a90d9");
 
     priv->link_tag =
       ctk_text_buffer_create_tag (priv->buffer, "link",
@@ -1394,9 +1394,9 @@ gdict_defbox_init_tags (GdictDefbox *defbox)
                                   NULL);
 
     if (!prefer_dark)
-      gdk_rgba_parse (&rgba, "#215d9c");
+      cdk_rgba_parse (&rgba, "#215d9c");
     else
-      gdk_rgba_parse (&rgba, "#2a76c6");
+      cdk_rgba_parse (&rgba, "#2a76c6");
 
     priv->visited_link_tag =
       ctk_text_buffer_create_tag (priv->buffer, "visited-link",
@@ -1528,13 +1528,13 @@ set_cursor_if_appropriate (GdictDefbox *defbox,
   if (!priv->hand_cursor)
     {
       GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
-      priv->hand_cursor = gdk_cursor_new_for_display (display, GDK_HAND2);
+      priv->hand_cursor = cdk_cursor_new_for_display (display, GDK_HAND2);
     }
 
   if (!priv->regular_cursor)
     {
       GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
-      priv->regular_cursor = gdk_cursor_new_for_display (display, GDK_XTERM);
+      priv->regular_cursor = cdk_cursor_new_for_display (display, GDK_XTERM);
     }
 
   ctk_text_view_get_iter_at_location (text_view, &iter, x, y);
@@ -1564,11 +1564,11 @@ set_cursor_if_appropriate (GdictDefbox *defbox,
       defbox->priv->is_hovering = hovering;
 
       if (defbox->priv->is_hovering)
-        gdk_window_set_cursor (ctk_text_view_get_window (text_view,
+        cdk_window_set_cursor (ctk_text_view_get_window (text_view,
                                                          CTK_TEXT_WINDOW_TEXT),
                                defbox->priv->hand_cursor);
       else
-        gdk_window_set_cursor (ctk_text_view_get_window (text_view,
+        cdk_window_set_cursor (ctk_text_view_get_window (text_view,
                                                          CTK_TEXT_WINDOW_TEXT),
                                defbox->priv->regular_cursor);
     }
@@ -1605,10 +1605,10 @@ defbox_visibility_notify_cb (CtkWidget          *text_view,
   gint wx, wy;
   gint bx, by;
 
-  display = gdk_window_get_display (event->window);
-  seat = gdk_display_get_default_seat (display);
-  pointer = gdk_seat_get_pointer (seat);
-  gdk_window_get_device_position (ctk_widget_get_window (text_view), pointer, &wx, &wy, NULL);
+  display = cdk_window_get_display (event->window);
+  seat = cdk_display_get_default_seat (display);
+  pointer = cdk_seat_get_pointer (seat);
+  cdk_window_get_device_position (ctk_widget_get_window (text_view), pointer, &wx, &wy, NULL);
 
   ctk_text_view_window_to_buffer_coords (CTK_TEXT_VIEW (text_view),
                                          CTK_TEXT_WINDOW_WIDGET,
@@ -2110,13 +2110,13 @@ lookup_start_cb (GdictContext *context,
   if (!priv->busy_cursor)
     {
       GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
-      priv->busy_cursor = gdk_cursor_new_for_display (display, GDK_WATCH);
+      priv->busy_cursor = cdk_cursor_new_for_display (display, GDK_WATCH);
     }
 
   window = ctk_text_view_get_window (CTK_TEXT_VIEW (priv->text_view),
   				     CTK_TEXT_WINDOW_WIDGET);
 
-  gdk_window_set_cursor (window, priv->busy_cursor);
+  cdk_window_set_cursor (window, priv->busy_cursor);
 }
 
 static void
@@ -2137,7 +2137,7 @@ lookup_end_cb (GdictContext *context,
   window = ctk_text_view_get_window (CTK_TEXT_VIEW (priv->text_view),
   				     CTK_TEXT_WINDOW_WIDGET);
 
-  gdk_window_set_cursor (window, NULL);
+  cdk_window_set_cursor (window, NULL);
 
   priv->is_searching = FALSE;
 }

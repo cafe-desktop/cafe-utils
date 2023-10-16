@@ -23,7 +23,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctk/ctk.h>
-#include <gdk/gdkkeysyms.h>
+#include <cdk/cdkkeysyms.h>
 #include <glib/gi18n.h>
 
 #include "logview-window.h"
@@ -898,7 +898,7 @@ real_select_day (LogviewWindow *logview,
   /* FIXME: why is this needed to update the view when selecting a day back? */
   ctk_text_view_get_visible_rect (CTK_TEXT_VIEW (logview->priv->text_view),
                                   &visible_rect);
-  gdk_window_invalidate_rect (ctk_widget_get_window (logview->priv->text_view),
+  cdk_window_invalidate_rect (ctk_widget_get_window (logview->priv->text_view),
                               &visible_rect, TRUE);
 }
 

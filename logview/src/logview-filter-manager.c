@@ -351,7 +351,7 @@ run_add_edit_dialog (LogviewFilterManager *manager, LogviewFilter *filter)
       ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (check_foreground),
                                     TRUE);
 
-      gdk_rgba_free (foreground);
+      cdk_rgba_free (foreground);
     }
 
     if (background_set) {
@@ -363,7 +363,7 @@ run_add_edit_dialog (LogviewFilterManager *manager, LogviewFilter *filter)
       ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (check_background),
                                     TRUE);
 
-      gdk_rgba_free (background);
+      cdk_rgba_free (background);
     }
 
     if (background_set || foreground_set) {

@@ -22,8 +22,8 @@
 #include "screenshot-utils.h"
 
 #include <X11/Xatom.h>
-#include <gdk/gdkx.h>
-#include <gdk/gdkkeysyms.h>
+#include <cdk/cdkx.h>
+#include <cdk/cdkkeysyms.h>
 #include <ctk/ctk.h>
 #include <glib.h>
 #include <glib/gi18n.h>
@@ -47,17 +47,17 @@ screenshot_grab_lock (void)
   gboolean result = FALSE;
   GdkDisplay *display;
 
-  selection_atom = gdk_atom_intern (SELECTION_NAME, FALSE);
-  gdk_x11_grab_server ();
+  selection_atom = cdk_atom_intern (SELECTION_NAME, FALSE);
+  cdk_x11_grab_server ();
 
-  if (gdk_selection_owner_get (selection_atom) != NULL)
+  if (cdk_selection_owner_get (selection_atom) != NULL)
     goto out;
 
   selection_window = ctk_invisible_new ();
   ctk_widget_show (selection_window);
 
   if (!ctk_selection_owner_set (selection_window,
-				gdk_atom_intern (SELECTION_NAME, FALSE),
+				cdk_atom_intern (SELECTION_NAME, FALSE),
 				GDK_CURRENT_TIME))
     {
       ctk_widget_destroy (selection_window);
@@ -68,10 +68,10 @@ screenshot_grab_lock (void)
   result = TRUE;
 
  out:
-  gdk_x11_ungrab_server ();
+  cdk_x11_ungrab_server ();
 
-  display = gdk_display_get_default ();
-  gdk_display_flush (display);
+  display = cdk_display_get_default ();
+  cdk_display_flush (display);
 
   return result;
 }
@@ -87,8 +87,8 @@ screenshot_release_lock (void)
       selection_window = NULL;
     }
 
-  display = gdk_display_get_default ();
-  gdk_display_flush (display);
+  display = cdk_display_get_default ();
+  cdk_display_flush (display);
 }
 
 static GdkWindow *
@@ -101,14 +101,14 @@ screen_get_active_window (GdkScreen *screen)
   gulong bytes_after_return;
   guchar *data = NULL;
 
-  if (!gdk_x11_screen_supports_net_wm_hint (screen,
-                                            gdk_atom_intern_static_string ("_NET_ACTIVE_WINDOW")))
+  if (!cdk_x11_screen_supports_net_wm_hint (screen,
+                                            cdk_atom_intern_static_string ("_NET_ACTIVE_WINDOW")))
     return NULL;
 
-  if (XGetWindowProperty (GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen)),
-                          RootWindow (GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen)),
+  if (XGetWindowProperty (GDK_DISPLAY_XDISPLAY (cdk_screen_get_display (screen)),
+                          RootWindow (GDK_DISPLAY_XDISPLAY (cdk_screen_get_display (screen)),
                                       GDK_SCREEN_XNUMBER (screen)),
-                          gdk_x11_get_xatom_by_name_for_display (gdk_screen_get_display (screen),
+                          cdk_x11_get_xatom_by_name_for_display (cdk_screen_get_display (screen),
                                                                  "_NET_ACTIVE_WINDOW"),
                           0, 1, False, XA_WINDOW, &type_return,
                           &format_return, &nitems_return,
@@ -121,7 +121,7 @@ screen_get_active_window (GdkScreen *screen)
 
           if (window != None)
             {
-              ret = gdk_x11_window_foreign_new_for_display (gdk_screen_get_display (screen),
+              ret = cdk_x11_window_foreign_new_for_display (cdk_screen_get_display (screen),
                                                             window);
             }
         }
@@ -139,7 +139,7 @@ screenshot_find_active_window (void)
   GdkWindow *window;
   GdkScreen *default_screen;
 
-  default_screen = gdk_screen_get_default ();
+  default_screen = cdk_screen_get_default ();
   window = screen_get_active_window (default_screen);
 
   return window;
@@ -148,13 +148,13 @@ screenshot_find_active_window (void)
 static gboolean
 screenshot_window_is_desktop (GdkWindow *window)
 {
-  GdkWindow *root_window = gdk_get_default_root_window ();
+  GdkWindow *root_window = cdk_get_default_root_window ();
   GdkWindowTypeHint window_type_hint;
 
   if (window == root_window)
     return TRUE;
 
-  window_type_hint = gdk_window_get_type_hint (window);
+  window_type_hint = cdk_window_get_type_hint (window);
   if (window_type_hint == GDK_WINDOW_TYPE_HINT_DESKTOP)
     return TRUE;
 
@@ -171,15 +171,15 @@ screenshot_find_current_window ()
   GdkDevice *device;
 
   current_window = screenshot_find_active_window ();
-  display = gdk_window_get_display (current_window);
-  seat = gdk_display_get_default_seat (display);
-  device = gdk_seat_get_pointer (seat);
+  display = cdk_window_get_display (current_window);
+  seat = cdk_display_get_default_seat (display);
+  device = cdk_seat_get_pointer (seat);
 
   /* If there's no active window, we fall back to returning the
    * window that the cursor is in.
    */
   if (!current_window)
-    current_window = gdk_device_get_window_at_position (device, NULL, NULL);
+    current_window = cdk_device_get_window_at_position (device, NULL, NULL);
 
   if (current_window)
     {
@@ -190,7 +190,7 @@ screenshot_find_current_window ()
         return NULL;
 
       /* Once we have a window, we take the toplevel ancestor. */
-      current_window = gdk_window_get_toplevel (current_window);
+      current_window = cdk_window_get_toplevel (current_window);
     }
 
   return current_window;
@@ -245,7 +245,7 @@ select_area_motion_notify (CtkWidget               *window,
   /* We (ab)use app-paintable to indicate if we have an RGBA window */
   if (!ctk_widget_get_app_paintable (window))
     {
-      GdkWindow *gdkwindow = ctk_widget_get_window (window);
+      GdkWindow *cdkwindow = ctk_widget_get_window (window);
 
       /* Shape the window to make only the outline visible */
       if (draw_rect.width > 2 && draw_rect.height > 2)
@@ -264,13 +264,13 @@ select_area_motion_notify (CtkWidget               *window,
           region2 = cairo_region_create_rectangle (&region_rect);
           cairo_region_subtract (region, region2);
 
-          gdk_window_shape_combine_region (gdkwindow, region, 0, 0);
+          cdk_window_shape_combine_region (cdkwindow, region, 0, 0);
 
           cairo_region_destroy (region);
           cairo_region_destroy (region2);
         }
       else
-        gdk_window_shape_combine_region (gdkwindow, NULL, 0, 0);
+        cdk_window_shape_combine_region (cdkwindow, NULL, 0, 0);
     }
 
   return TRUE;
@@ -346,11 +346,11 @@ draw (CtkWidget *window, cairo_t *cr, gpointer unused)
 static CtkWidget *
 create_select_window (void)
 {
-  GdkScreen *screen = gdk_screen_get_default ();
+  GdkScreen *screen = cdk_screen_get_default ();
   CtkWidget *window = ctk_window_new (CTK_WINDOW_POPUP);
 
-  GdkVisual *visual = gdk_screen_get_rgba_visual (screen);
-  if (gdk_screen_is_composited (screen) && visual)
+  GdkVisual *visual = cdk_screen_get_rgba_visual (screen);
+  if (cdk_screen_is_composited (screen) && visual)
     {
       ctk_widget_set_visual (window, visual);
       ctk_widget_set_app_paintable (window, TRUE);
@@ -406,12 +406,12 @@ screenshot_select_area_async (SelectAreaCallback callback)
   g_signal_connect (data.window, "button-release-event", G_CALLBACK (select_area_button_release), &data);
   g_signal_connect (data.window, "motion-notify-event", G_CALLBACK (select_area_motion_notify), &data);
 
-  display = gdk_display_get_default ();
-  cursor = gdk_cursor_new_for_display (display, GDK_CROSSHAIR);
+  display = cdk_display_get_default ();
+  cursor = cdk_cursor_new_for_display (display, GDK_CROSSHAIR);
 
-  seat = gdk_display_get_default_seat (display);
+  seat = cdk_display_get_default_seat (display);
 
-  res = gdk_seat_grab (seat,
+  res = cdk_seat_grab (seat,
                        ctk_widget_get_window (data.window),
                        GDK_SEAT_CAPABILITY_ALL,
                        FALSE,
@@ -428,11 +428,11 @@ screenshot_select_area_async (SelectAreaCallback callback)
 
   ctk_main ();
 
-  gdk_seat_ungrab (seat);
+  cdk_seat_ungrab (seat);
 
   ctk_widget_destroy (data.window);
   g_object_unref (cursor);
-  gdk_display_flush (display);
+  cdk_display_flush (display);
 
 out:
   cb_data->rectangle = data.rect;
@@ -452,7 +452,7 @@ find_wm_window (Window xid)
 
   do
     {
-      if (XQueryTree (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), xid, &root,
+      if (XQueryTree (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()), xid, &root,
 		      &parent, &children, &nchildren) == 0)
 	{
 	  g_warning ("Couldn't find window manager window");
@@ -475,8 +475,8 @@ make_region_with_monitors (GdkScreen *screen)
   int num_monitors;
   int i;
 
-  display = gdk_screen_get_display (screen);
-  num_monitors = gdk_display_get_n_monitors (display);
+  display = cdk_screen_get_display (screen);
+  num_monitors = cdk_display_get_n_monitors (display);
 
   region = cairo_region_create ();
 
@@ -484,7 +484,7 @@ make_region_with_monitors (GdkScreen *screen)
     {
       GdkRectangle rect;
 
-      gdk_monitor_get_geometry (gdk_display_get_monitor (display, i), &rect);
+      cdk_monitor_get_geometry (cdk_display_get_monitor (display, i), &rect);
       cairo_region_union_rectangle (region, &rect);
     }
 
@@ -502,15 +502,15 @@ blank_rectangle_in_pixbuf (GdkPixbuf *pixbuf, GdkRectangle *rect)
   guchar *row;
   gboolean has_alpha;
 
-  g_assert (gdk_pixbuf_get_colorspace (pixbuf) == GDK_COLORSPACE_RGB);
+  g_assert (cdk_pixbuf_get_colorspace (pixbuf) == GDK_COLORSPACE_RGB);
 
   x2 = rect->x + rect->width;
   y2 = rect->y + rect->height;
 
-  pixels = gdk_pixbuf_get_pixels (pixbuf);
-  rowstride = gdk_pixbuf_get_rowstride (pixbuf);
-  has_alpha = gdk_pixbuf_get_has_alpha (pixbuf);
-  n_channels = gdk_pixbuf_get_n_channels (pixbuf);
+  pixels = cdk_pixbuf_get_pixels (pixbuf);
+  rowstride = cdk_pixbuf_get_rowstride (pixbuf);
+  has_alpha = cdk_pixbuf_get_has_alpha (pixbuf);
+  n_channels = cdk_pixbuf_get_n_channels (pixbuf);
 
   for (y = rect->y; y < y2; y++)
     {
@@ -541,8 +541,8 @@ blank_region_in_pixbuf (GdkPixbuf *pixbuf, cairo_region_t *region)
 
   n_rects = cairo_region_num_rectangles (region);
 
-  width = gdk_pixbuf_get_width (pixbuf);
-  height = gdk_pixbuf_get_height (pixbuf);
+  width = cdk_pixbuf_get_width (pixbuf);
+  height = cdk_pixbuf_get_height (pixbuf);
 
   pixbuf_rect.x	     = 0;
   pixbuf_rect.y	     = 0;
@@ -554,7 +554,7 @@ blank_region_in_pixbuf (GdkPixbuf *pixbuf, cairo_region_t *region)
       cairo_rectangle_int_t rect, dest;
 
       cairo_region_get_rectangle (region, i, &rect);
-      if (gdk_rectangle_intersect (&rect, &pixbuf_rect, &dest))
+      if (cdk_rectangle_intersect (&rect, &pixbuf_rect, &dest))
 	blank_rectangle_in_pixbuf (pixbuf, &dest);
 
     }
@@ -575,15 +575,15 @@ mask_monitors (GdkPixbuf *pixbuf, GdkWindow *root_window)
   cairo_rectangle_int_t rect;
   gint scale;
 
-  screen = gdk_window_get_screen (root_window);
-  scale = gdk_window_get_scale_factor (root_window);
+  screen = cdk_window_get_screen (root_window);
+  scale = cdk_window_get_scale_factor (root_window);
 
   region_with_monitors = make_region_with_monitors (screen);
 
   rect.x = 0;
   rect.y = 0;
-  rect.width = WidthOfScreen (gdk_x11_screen_get_xscreen (screen)) / scale;
-  rect.height = HeightOfScreen (gdk_x11_screen_get_xscreen (screen)) / scale;
+  rect.width = WidthOfScreen (cdk_x11_screen_get_xscreen (screen)) / scale;
+  rect.height = HeightOfScreen (cdk_x11_screen_get_xscreen (screen)) / scale;
 
   invisible_region = cairo_region_create_rectangle (&rect);
   cairo_region_subtract (invisible_region, region_with_monitors);
@@ -617,21 +617,21 @@ screenshot_get_pixbuf (GdkWindow    *window,
       wm = find_wm_window (xid);
 
       if (wm != None)
-        window = gdk_x11_window_foreign_new_for_display (gdk_display_get_default (), wm);
+        window = cdk_x11_window_foreign_new_for_display (cdk_display_get_default (), wm);
 
       /* fallback to no border if we can't find the WM window. */
     }
 
-  root = gdk_get_default_root_window ();
-  scale = gdk_window_get_scale_factor (root);
+  root = cdk_get_default_root_window ();
+  scale = cdk_window_get_scale_factor (root);
 
-  real_width = gdk_window_get_width (window);
-  real_height = gdk_window_get_height (window);
+  real_width = cdk_window_get_width (window);
+  real_height = cdk_window_get_height (window);
 
-  screen_width = WidthOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ())) / scale;
-  screen_height = HeightOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ())) / scale;
+  screen_width = WidthOfScreen (cdk_x11_screen_get_xscreen (cdk_screen_get_default ())) / scale;
+  screen_height = HeightOfScreen (cdk_x11_screen_get_xscreen (cdk_screen_get_default ())) / scale;
 
-  gdk_window_get_origin (window, &x_real_orig, &y_real_orig);
+  cdk_window_get_origin (window, &x_real_orig, &y_real_orig);
 
   x_orig = x_real_orig;
   y_orig = y_real_orig;
@@ -664,7 +664,7 @@ screenshot_get_pixbuf (GdkWindow    *window,
       height = rectangle->height;
     }
 
-  screenshot = gdk_pixbuf_get_from_window (root,
+  screenshot = cdk_pixbuf_get_from_window (root,
                                            x_orig, y_orig,
                                            width, height);
 
@@ -685,14 +685,14 @@ screenshot_get_pixbuf (GdkWindow    *window,
        * of the WM decoration.
        */
 
-      rectangles = XShapeGetRectangles (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
+      rectangles = XShapeGetRectangles (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()),
                                         GDK_WINDOW_XID (window),
                                         ShapeBounding,
                                         &rectangle_count,
                                         &rectangle_order);
       if (rectangles && rectangle_count > 0 && window != root)
         {
-          gboolean has_alpha = gdk_pixbuf_get_has_alpha (screenshot);
+          gboolean has_alpha = cdk_pixbuf_get_has_alpha (screenshot);
 
           if (scale)
             {
@@ -700,8 +700,8 @@ screenshot_get_pixbuf (GdkWindow    *window,
               height *= scale;
             }
 
-          tmp = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, width, height);
-          gdk_pixbuf_fill (tmp, 0);
+          tmp = cdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, width, height);
+          cdk_pixbuf_fill (tmp, 0);
 
           for (i = 0; i < rectangle_count; i++)
             {
@@ -745,11 +745,11 @@ screenshot_get_pixbuf (GdkWindow    *window,
                   guchar *src_pixels, *dest_pixels;
                   gint x;
 
-                  src_pixels = gdk_pixbuf_get_pixels (screenshot)
-                             + y * gdk_pixbuf_get_rowstride (screenshot)
+                  src_pixels = cdk_pixbuf_get_pixels (screenshot)
+                             + y * cdk_pixbuf_get_rowstride (screenshot)
                              + rec_x * (has_alpha ? 4 : 3);
-                  dest_pixels = gdk_pixbuf_get_pixels (tmp)
-                              + y * gdk_pixbuf_get_rowstride (tmp)
+                  dest_pixels = cdk_pixbuf_get_pixels (tmp)
+                              + y * cdk_pixbuf_get_rowstride (tmp)
                               + rec_x * 4;
 
                   for (x = 0; x < rec_width; x++)
@@ -779,8 +779,8 @@ screenshot_get_pixbuf (GdkWindow    *window,
       GdkCursor *cursor;
       GdkPixbuf *cursor_pixbuf;
 
-      cursor = gdk_cursor_new_for_display (gdk_display_get_default (), GDK_LEFT_PTR);
-      cursor_pixbuf = gdk_cursor_get_image (cursor);
+      cursor = cdk_cursor_new_for_display (cdk_display_get_default (), GDK_LEFT_PTR);
+      cursor_pixbuf = cdk_cursor_get_image (cursor);
 
       if (cursor_pixbuf != NULL)
         {
@@ -790,13 +790,13 @@ screenshot_get_pixbuf (GdkWindow    *window,
           GdkRectangle r1, r2;
           gint cx, cy, xhot, yhot;
 
-          display = gdk_window_get_display (window);
-          seat = gdk_display_get_default_seat (display);
-          device = gdk_seat_get_pointer (seat);
+          display = cdk_window_get_display (window);
+          seat = cdk_display_get_default_seat (display);
+          device = cdk_seat_get_pointer (seat);
 
-          gdk_window_get_device_position (window, device, &cx, &cy, NULL);
-          sscanf (gdk_pixbuf_get_option (cursor_pixbuf, "x_hot"), "%d", &xhot);
-          sscanf (gdk_pixbuf_get_option (cursor_pixbuf, "y_hot"), "%d", &yhot);
+          cdk_window_get_device_position (window, device, &cx, &cy, NULL);
+          sscanf (cdk_pixbuf_get_option (cursor_pixbuf, "x_hot"), "%d", &xhot);
+          sscanf (cdk_pixbuf_get_option (cursor_pixbuf, "y_hot"), "%d", &yhot);
 
           if (scale)
             {
@@ -813,13 +813,13 @@ screenshot_get_pixbuf (GdkWindow    *window,
           /* in r2 we have the cursor window coordinates */
           r2.x = cx + x_real_orig;
           r2.y = cy + y_real_orig;
-          r2.width = gdk_pixbuf_get_width (cursor_pixbuf);
-          r2.height = gdk_pixbuf_get_height (cursor_pixbuf);
+          r2.width = cdk_pixbuf_get_width (cursor_pixbuf);
+          r2.height = cdk_pixbuf_get_height (cursor_pixbuf);
 
           /* see if the pointer is inside the window */
-          if (gdk_rectangle_intersect (&r1, &r2, &r2))
+          if (cdk_rectangle_intersect (&r1, &r2, &r2))
             {
-              gdk_pixbuf_composite (cursor_pixbuf, screenshot,
+              cdk_pixbuf_composite (cursor_pixbuf, screenshot,
                                     cx - xhot, cy - yhot,
                                     r2.width, r2.height,
                                     cx - xhot, cy - yhot,

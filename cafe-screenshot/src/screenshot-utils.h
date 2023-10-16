@@ -21,7 +21,7 @@
 #define __SCREENSHOT_UTILS_H__
 
 #include <ctk/ctk.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdkx.h>
 
 G_BEGIN_DECLS
 

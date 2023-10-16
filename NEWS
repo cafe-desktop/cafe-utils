@@ -92,8 +92,8 @@
   * cafe-dictionary: Fix memory leak
   * Fix spelling and grammar mistakes
   * search-tool: replace deprecated ctk_menu_popup
-  * screenshot: replace deprecated gdk_flush
-  * dictionary: replace deprecated gdk_flush
+  * screenshot: replace deprecated cdk_flush
+  * dictionary: replace deprecated cdk_flush
   * dictionary: replace deprecated ctk_menu_popup
   * dictionary: Replace deprecated CtkFontButton accessors
   * disk-usage-analyzer: replace deprecated ctk_menu_popup
@@ -134,21 +134,21 @@
   * baobab: set transient parent for remote connect dialog
   * baobab: don't make prefs dialog visible in .ui file
   * baobab: set parent window for About dialog
-  * avoid deprecated gdk_screen_get_active_window
+  * avoid deprecated cdk_screen_get_active_window
 
 ### cafe-utils 1.19.0
 
   * Translations update
-  * ctk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
-  * avoid deprecated gdk_screen_width/height
-  * avoid deprecated gdk_screen_get_width/height
+  * ctk 3.22: avoid deprecated cdk_screen_get_monitor... functions:
+  * avoid deprecated cdk_screen_width/height
+  * avoid deprecated cdk_screen_get_width/height
   * screenshot: avoid deprecated GdkDevice objects
   * dictionary: avoid deprecated GdkDevice objects
-  * avoid deprecated gdk_screen_get_n_monitors
-  * avoid deprecated gdk_screen_make_display_name
+  * avoid deprecated cdk_screen_get_n_monitors
+  * avoid deprecated cdk_screen_make_display_name
   * gdict-applet: don't use deprecated ctk_show_uri
   * don't use deprecated ctk_show_uri
-  * avoid deprecated gdk_screen_get_number
+  * avoid deprecated cdk_screen_get_number
   * Restore Polish translation credits from GNOME
   * searchtool & logview: avoid deprecated CtkAlignment
   * cafe-screenshot: fix showing busy cursor when saving area screenshot
