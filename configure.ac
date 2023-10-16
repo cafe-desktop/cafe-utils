@@ -410,7 +410,7 @@ cafe-utils $VERSION configuration summary:
                          data dir : $datadir
 
      Debug messages (libcafedict) : $enable_debug
-      API Reference (libcafedict) : $enable_ctk_doc
+      API Reference (libcafedict) : $enable_gtk_doc
   Logview built with ZLib support : $msg_zlib
      Dictionary cafe-panel applet : $enable_gdict_applet
 "
