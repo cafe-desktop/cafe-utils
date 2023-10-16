@@ -70,7 +70,7 @@
   * GEN png icons from svg files
   * Update documenters in about dialog
   * cafe-dictionary: Use g_strjoin to build license text
-  * Use program-name and title in gtk_show_about_dialog call
+  * Use program-name and title in ctk_show_about_dialog call
   * help: update copyright
 
 ### cafe-utils 1.22.0
@@ -91,12 +91,12 @@
   * Replace -Dokumentationsprojekt with Documentation Project
   * cafe-dictionary: Fix memory leak
   * Fix spelling and grammar mistakes
-  * search-tool: replace deprecated gtk_menu_popup
+  * search-tool: replace deprecated ctk_menu_popup
   * screenshot: replace deprecated gdk_flush
   * dictionary: replace deprecated gdk_flush
-  * dictionary: replace deprecated gtk_menu_popup
+  * dictionary: replace deprecated ctk_menu_popup
   * dictionary: Replace deprecated GtkFontButton accessors
-  * disk-usage-analyzer: replace deprecated gtk_menu_popup
+  * disk-usage-analyzer: replace deprecated ctk_menu_popup
   * Update Catalan sceenshots of cafe-dictionary
   * Add Catalan screenshots
   * add cafe-dictionary help to transifex
@@ -104,8 +104,8 @@
   * add cafe-search-tool to transifex
   * add cafe-disk-usage-analyzer to transifex
   * Baobab help: Terminal command updated to 'cafe-disk-usage-analyzer'
-  * baobab-chart: avoid deprecated 'gtk_style_context_set_background'
-  * gsearchtool: avoid deprecated 'gtk_window_set_wmclass'
+  * baobab-chart: avoid deprecated 'ctk_style_context_set_background'
+  * gsearchtool: avoid deprecated 'ctk_window_set_wmclass'
 
 ### cafe-utils 1.21.0
 
@@ -139,15 +139,15 @@
 ### cafe-utils 1.19.0
 
   * Translations update
-  * gtk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
+  * ctk 3.22: avoid deprecated gdk_screen_get_monitor... functions:
   * avoid deprecated gdk_screen_width/height
   * avoid deprecated gdk_screen_get_width/height
   * screenshot: avoid deprecated GdkDevice objects
   * dictionary: avoid deprecated GdkDevice objects
   * avoid deprecated gdk_screen_get_n_monitors
   * avoid deprecated gdk_screen_make_display_name
-  * gdict-applet: don't use deprecated gtk_show_uri
-  * don't use deprecated gtk_show_uri
+  * gdict-applet: don't use deprecated ctk_show_uri
+  * don't use deprecated ctk_show_uri
   * avoid deprecated gdk_screen_get_number
   * Restore Polish translation credits from GNOME
   * searchtool & logview: avoid deprecated GtkAlignment
@@ -161,7 +161,7 @@
     to make generating release announcements easier
   * Build: require cafe-panel >= 1.17
   * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and
-    --with-gtk build option
+    --with-ctk build option
   * Fix occasional distcheck breakage
   * Some code cleanups
   * Translations update

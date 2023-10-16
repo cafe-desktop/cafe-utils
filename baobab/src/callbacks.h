@@ -23,7 +23,7 @@
 #ifndef __BAOBAB_CALLBACKS_H__
 #define __BAOBAB_CALLBACKS_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include "baobab-chart.h"
 
 void on_quit_activate (GtkMenuItem *menuitem, gpointer user_data);

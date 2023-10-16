@@ -31,7 +31,7 @@
 
 #include <math.h>
 #include <string.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "baobab-chart.h"
 #include "baobab-treemap.h"
@@ -125,7 +125,7 @@ baobab_treemap_draw_rectangle (GtkWidget *chart,
 
   if ((show_text) && (ITEM_SHOW_LABEL))
     {
-      layout = gtk_widget_create_pango_layout (chart, NULL);
+      layout = ctk_widget_create_pango_layout (chart, NULL);
       pango_layout_set_markup (layout, text, -1);
       pango_layout_get_pixel_extents (layout, NULL, &rect);
 
@@ -154,7 +154,7 @@ baobab_treemap_draw_item (GtkWidget *chart,
 
   rect = (cairo_rectangle_t *) item->data;
 
-  gtk_widget_get_allocation (chart, &allocation);
+  ctk_widget_get_allocation (chart, &allocation);
 
   if (item->depth % 2 != 0)
     {
@@ -205,7 +205,7 @@ baobab_treemap_calculate_item_geometry (GtkWidget *chart,
 
   if (item->parent == NULL)
     {
-      gtk_widget_get_allocation (chart, &allocation);
+      ctk_widget_get_allocation (chart, &allocation);
       p_area.x = 0 - ITEM_PADDING/2;
       p_area.y = 0 - ITEM_PADDING/2;
       p_area.width = allocation.width + ITEM_PADDING * 2;

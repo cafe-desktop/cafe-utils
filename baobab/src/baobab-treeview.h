@@ -23,7 +23,7 @@
 #ifndef __BAOBAB_TV_H__
 #define __BAOBAB_TV_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 /* tree model columns (_H_ are hidden) */
 enum

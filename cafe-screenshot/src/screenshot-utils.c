@@ -24,7 +24,7 @@
 #include <X11/Xatom.h>
 #include <gdk/gdkx.h>
 #include <gdk/gdkkeysyms.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <glib.h>
 #include <glib/gi18n.h>
 
@@ -53,14 +53,14 @@ screenshot_grab_lock (void)
   if (gdk_selection_owner_get (selection_atom) != NULL)
     goto out;
 
-  selection_window = gtk_invisible_new ();
-  gtk_widget_show (selection_window);
+  selection_window = ctk_invisible_new ();
+  ctk_widget_show (selection_window);
 
-  if (!gtk_selection_owner_set (selection_window,
+  if (!ctk_selection_owner_set (selection_window,
 				gdk_atom_intern (SELECTION_NAME, FALSE),
 				GDK_CURRENT_TIME))
     {
-      gtk_widget_destroy (selection_window);
+      ctk_widget_destroy (selection_window);
       selection_window = NULL;
       goto out;
     }
@@ -83,7 +83,7 @@ screenshot_release_lock (void)
 
   if (selection_window)
     {
-      gtk_widget_destroy (selection_window);
+      ctk_widget_destroy (selection_window);
       selection_window = NULL;
     }
 
@@ -234,18 +234,18 @@ select_area_motion_notify (GtkWidget               *window,
 
   if (draw_rect.width <= 0 || draw_rect.height <= 0)
     {
-      gtk_window_move (GTK_WINDOW (window), -100, -100);
-      gtk_window_resize (GTK_WINDOW (window), 10, 10);
+      ctk_window_move (GTK_WINDOW (window), -100, -100);
+      ctk_window_resize (GTK_WINDOW (window), 10, 10);
       return TRUE;
     }
 
-  gtk_window_move (GTK_WINDOW (window), draw_rect.x, draw_rect.y);
-  gtk_window_resize (GTK_WINDOW (window), draw_rect.width, draw_rect.height);
+  ctk_window_move (GTK_WINDOW (window), draw_rect.x, draw_rect.y);
+  ctk_window_resize (GTK_WINDOW (window), draw_rect.width, draw_rect.height);
 
   /* We (ab)use app-paintable to indicate if we have an RGBA window */
-  if (!gtk_widget_get_app_paintable (window))
+  if (!ctk_widget_get_app_paintable (window))
     {
-      GdkWindow *gdkwindow = gtk_widget_get_window (window);
+      GdkWindow *gdkwindow = ctk_widget_get_window (window);
 
       /* Shape the window to make only the outline visible */
       if (draw_rect.width > 2 && draw_rect.height > 2)
@@ -289,7 +289,7 @@ select_area_button_release (GtkWidget *window,
   data->rect.x = MIN (data->rect.x, event->x_root);
   data->rect.y = MIN (data->rect.y, event->y_root);
 
-  gtk_main_quit ();
+  ctk_main_quit ();
 
   return TRUE;
 }
@@ -305,7 +305,7 @@ select_area_key_press (GtkWidget *window,
       data->rect.y = 0;
       data->rect.width  = 0;
       data->rect.height = 0;
-      gtk_main_quit ();
+      ctk_main_quit ();
     }
 
   return TRUE;
@@ -317,27 +317,27 @@ draw (GtkWidget *window, cairo_t *cr, gpointer unused)
 {
   GtkStyleContext *style;
 
-  style = gtk_widget_get_style_context (window);
+  style = ctk_widget_get_style_context (window);
 
-  if (gtk_widget_get_app_paintable (window))
+  if (ctk_widget_get_app_paintable (window))
     {
       cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
       cairo_set_source_rgba (cr, 0, 0, 0, 0);
       cairo_paint (cr);
 
-      gtk_style_context_save (style);
-      gtk_style_context_add_class (style, GTK_STYLE_CLASS_RUBBERBAND);
+      ctk_style_context_save (style);
+      ctk_style_context_add_class (style, GTK_STYLE_CLASS_RUBBERBAND);
 
-      gtk_render_background (style, cr,
+      ctk_render_background (style, cr,
                              0, 0,
-                             gtk_widget_get_allocated_width (window),
-                             gtk_widget_get_allocated_height (window));
-      gtk_render_frame (style, cr,
+                             ctk_widget_get_allocated_width (window),
+                             ctk_widget_get_allocated_height (window));
+      ctk_render_frame (style, cr,
                         0, 0,
-                        gtk_widget_get_allocated_width (window),
-                        gtk_widget_get_allocated_height (window));
+                        ctk_widget_get_allocated_width (window),
+                        ctk_widget_get_allocated_height (window));
 
-      gtk_style_context_restore (style);
+      ctk_style_context_restore (style);
     }
 
   return TRUE;
@@ -347,20 +347,20 @@ static GtkWidget *
 create_select_window (void)
 {
   GdkScreen *screen = gdk_screen_get_default ();
-  GtkWidget *window = gtk_window_new (GTK_WINDOW_POPUP);
+  GtkWidget *window = ctk_window_new (GTK_WINDOW_POPUP);
 
   GdkVisual *visual = gdk_screen_get_rgba_visual (screen);
   if (gdk_screen_is_composited (screen) && visual)
     {
-      gtk_widget_set_visual (window, visual);
-      gtk_widget_set_app_paintable (window, TRUE);
+      ctk_widget_set_visual (window, visual);
+      ctk_widget_set_app_paintable (window, TRUE);
     }
 
   g_signal_connect (window, "draw", G_CALLBACK (draw), NULL);
 
-  gtk_window_move (GTK_WINDOW (window), -100, -100);
-  gtk_window_resize (GTK_WINDOW (window), 10, 10);
-  gtk_widget_show (window);
+  ctk_window_move (GTK_WINDOW (window), -100, -100);
+  ctk_window_resize (GTK_WINDOW (window), 10, 10);
+  ctk_widget_show (window);
   return window;
 }
 
@@ -412,7 +412,7 @@ screenshot_select_area_async (SelectAreaCallback callback)
   seat = gdk_display_get_default_seat (display);
 
   res = gdk_seat_grab (seat,
-                       gtk_widget_get_window (data.window),
+                       ctk_widget_get_window (data.window),
                        GDK_SEAT_CAPABILITY_ALL,
                        FALSE,
                        cursor,
@@ -426,11 +426,11 @@ screenshot_select_area_async (SelectAreaCallback callback)
       goto out;
     }
 
-  gtk_main ();
+  ctk_main ();
 
   gdk_seat_ungrab (seat);
 
-  gtk_widget_destroy (data.window);
+  ctk_widget_destroy (data.window);
   g_object_unref (cursor);
   gdk_display_flush (display);
 
@@ -846,23 +846,23 @@ screenshot_show_error_dialog (GtkWindow   *parent,
   g_return_if_fail ((parent == NULL) || (GTK_IS_WINDOW (parent)));
   g_return_if_fail (message != NULL);
 
-  dialog = gtk_message_dialog_new (parent,
+  dialog = ctk_message_dialog_new (parent,
   				   GTK_DIALOG_DESTROY_WITH_PARENT,
   				   GTK_MESSAGE_ERROR,
   				   GTK_BUTTONS_OK,
   				   "%s", message);
-  gtk_window_set_title (GTK_WINDOW (dialog), "");
+  ctk_window_set_title (GTK_WINDOW (dialog), "");
 
   if (detail)
-    gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+    ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
   					      "%s", detail);
 
-  if (parent && gtk_window_get_group (parent))
-    gtk_window_group_add_window (gtk_window_get_group (parent), GTK_WINDOW (dialog));
+  if (parent && ctk_window_get_group (parent))
+    ctk_window_group_add_window (ctk_window_get_group (parent), GTK_WINDOW (dialog));
 
-  gtk_dialog_run (GTK_DIALOG (dialog));
+  ctk_dialog_run (GTK_DIALOG (dialog));
 
-  gtk_widget_destroy (dialog);
+  ctk_widget_destroy (dialog);
 }
 
 void

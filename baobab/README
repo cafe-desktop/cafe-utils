@@ -38,7 +38,7 @@ System Requirements
 ===================
 
 Baobab should build on  most unices. It needs the X11R6 (or xorg)
-libraries, glib, and gtk 2.x.
+libraries, glib, and ctk 2.x.
 
 
 Author

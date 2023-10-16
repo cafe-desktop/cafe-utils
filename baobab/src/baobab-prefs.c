@@ -25,7 +25,7 @@
 
 #include <string.h>
 #include <sys/stat.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <glib/gi18n.h>
 #include <glib/gstdio.h>
 #include <glibtop/mountlist.h>
@@ -57,7 +57,7 @@ add_excluded_item (GtkTreeModel  *model,
 	gchar *mount;
 	gboolean check;
 
-	gtk_tree_model_get (model,
+	ctk_tree_model_get (model,
 			    iter,
 			    COL_MOUNT, &mount,
 			    COL_CHECK, &check,
@@ -80,7 +80,7 @@ get_excluded_locations (GtkTreeModel *model)
 
 	uris = g_ptr_array_new ();
 
-	gtk_tree_model_foreach (model,
+	ctk_tree_model_foreach (model,
 				(GtkTreeModelForeachFunc) add_excluded_item,
 				uris);
 
@@ -117,7 +117,7 @@ filechooser_response_cb (GtkDialog *dialog,
 		case GTK_RESPONSE_CLOSE:
 			save_excluded_uris (model);
 		default:
-			gtk_widget_destroy (GTK_WIDGET (dialog));
+			ctk_widget_destroy (GTK_WIDGET (dialog));
 			break;
 	}
 }
@@ -128,13 +128,13 @@ check_toggled (GtkCellRendererToggle *cell,
 	       GtkTreeModel *model)
 {
 	GtkTreeIter iter;
-	GtkTreePath *path = gtk_tree_path_new_from_string (path_str);
+	GtkTreePath *path = ctk_tree_path_new_from_string (path_str);
 	gboolean toggle;
 	gchar *mountpoint;
 
 	/* get toggled iter */
-	gtk_tree_model_get_iter (model, &iter, path);
-	gtk_tree_model_get (model,
+	ctk_tree_model_get_iter (model, &iter, path);
+	ctk_tree_model_get (model,
 			    &iter,
 			    COL_CHECK, &toggle,
 			    COL_MOUNT_D, &mountpoint,
@@ -145,14 +145,14 @@ check_toggled (GtkCellRendererToggle *cell,
 		goto clean_up;
 
 	/* set new value */
-	gtk_list_store_set (GTK_LIST_STORE (model),
+	ctk_list_store_set (GTK_LIST_STORE (model),
 			    &iter,
 			    COL_CHECK, !toggle,
 			    -1);
 
  clean_up:
 	g_free (mountpoint);
-	gtk_tree_path_free (path);
+	ctk_tree_path_free (path);
 }
 
 static void
@@ -162,61 +162,61 @@ create_tree_props (GtkBuilder *builder, GtkTreeModel *model)
 	GtkTreeViewColumn *col;
 	GtkWidget *tvw;
 
-	tvw = GTK_WIDGET (gtk_builder_get_object (builder , "tree_view_props"));
+	tvw = GTK_WIDGET (ctk_builder_get_object (builder , "tree_view_props"));
 
 	/* checkbox column */
-	cell = gtk_cell_renderer_toggle_new ();
+	cell = ctk_cell_renderer_toggle_new ();
 	g_signal_connect (cell, "toggled",
 			  G_CALLBACK (check_toggled), model);
 
-	col = gtk_tree_view_column_new_with_attributes (_("Scan"), cell,
+	col = ctk_tree_view_column_new_with_attributes (_("Scan"), cell,
 							"active", COL_CHECK,
 							NULL);
-	gtk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
 
 	/* First text column */
-	cell = gtk_cell_renderer_text_new ();
-	col = gtk_tree_view_column_new_with_attributes (_("Device"), cell,
+	cell = ctk_cell_renderer_text_new ();
+	col = ctk_tree_view_column_new_with_attributes (_("Device"), cell,
 							"markup", COL_DEVICE,
 							"text", COL_DEVICE,
 							NULL);
-	gtk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
 
 	/* second text column */
-	cell = gtk_cell_renderer_text_new ();
-	col = gtk_tree_view_column_new_with_attributes (_("Mount Point"),
+	cell = ctk_cell_renderer_text_new ();
+	col = ctk_tree_view_column_new_with_attributes (_("Mount Point"),
 							cell, "markup",
 							COL_MOUNT_D, "text",
 							COL_MOUNT_D, NULL);
-	gtk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
 
 	/* third text column */
-	cell = gtk_cell_renderer_text_new ();
-	col = gtk_tree_view_column_new_with_attributes (_("Filesystem Type"),
+	cell = ctk_cell_renderer_text_new ();
+	col = ctk_tree_view_column_new_with_attributes (_("Filesystem Type"),
 							cell, "markup",
 							COL_TYPE, "text",
 							COL_TYPE, NULL);
-	gtk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
 
 	/* fourth text column */
-	cell = gtk_cell_renderer_text_new ();
-	col = gtk_tree_view_column_new_with_attributes (_("Total Size"),
+	cell = ctk_cell_renderer_text_new ();
+	col = ctk_tree_view_column_new_with_attributes (_("Total Size"),
 							cell, "markup",
 							COL_FS_SIZE, "text",
 							COL_FS_SIZE, NULL);
 	g_object_set (G_OBJECT (cell), "xalign", (gfloat) 1.0, NULL);
-	gtk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
 
 	/* fifth text column */
-	cell = gtk_cell_renderer_text_new ();
-	col = gtk_tree_view_column_new_with_attributes (_("Available"),
+	cell = ctk_cell_renderer_text_new ();
+	col = ctk_tree_view_column_new_with_attributes (_("Available"),
 							cell, "markup",
 							COL_FS_AVAIL, "text",
 							COL_FS_AVAIL, NULL);
 	g_object_set (G_OBJECT (cell), "xalign", (gfloat) 1.0, NULL);
-	gtk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
+	ctk_tree_view_append_column (GTK_TREE_VIEW (tvw), col);
 
-	gtk_tree_view_set_model (GTK_TREE_VIEW (tvw), model);
+	ctk_tree_view_set_model (GTK_TREE_VIEW (tvw), model);
 	g_object_unref (model);
 }
 
@@ -255,8 +255,8 @@ fill_props_model (GtkListStore *store)
 		uri = g_file_get_uri (file);
 		excluded = baobab_is_excluded_location (file);
 
-		gtk_list_store_append (store, &iter);
-		gtk_list_store_set (store, &iter,
+		ctk_list_store_append (store, &iter);
+		ctk_list_store_set (store, &iter,
 				    COL_CHECK, !excluded,
 				    COL_DEVICE, mountentry->devname,
 				    COL_MOUNT_D, mountentry->mountdir,
@@ -283,9 +283,9 @@ baobab_prefs_dialog (void)
 	GtkListStore *model;
 	GError *error = NULL;
 
-	builder = gtk_builder_new ();
+	builder = ctk_builder_new ();
 
-	if (gtk_builder_add_from_resource (builder, BAOBAB_PREFERENCES_UI_RESOURCE, &error) == 0) {
+	if (ctk_builder_add_from_resource (builder, BAOBAB_PREFERENCES_UI_RESOURCE, &error) == 0) {
 		g_critical ("Can't load user interface resource for the scan properties dialog: %s",
 			    error->message);
 		g_object_unref (builder);
@@ -294,12 +294,12 @@ baobab_prefs_dialog (void)
 		return;
 	}
 
-	dlg = GTK_WIDGET (gtk_builder_get_object (builder, "dialog_scan_props"));
+	dlg = GTK_WIDGET (ctk_builder_get_object (builder, "dialog_scan_props"));
 
-	gtk_window_set_transient_for (GTK_WINDOW (dlg),
+	ctk_window_set_transient_for (GTK_WINDOW (dlg),
 				      GTK_WINDOW (baobab.window));
 
-	model = gtk_list_store_new (TOT_COLUMNS,
+	model = ctk_list_store_new (TOT_COLUMNS,
 				    G_TYPE_BOOLEAN,	/* checkbox */
 				    G_TYPE_STRING,	/* device */
 				    G_TYPE_STRING,	/*mount point display */
@@ -312,7 +312,7 @@ baobab_prefs_dialog (void)
 	create_tree_props (builder, GTK_TREE_MODEL (model));
 	fill_props_model (model);
 
-	check_enablehome = GTK_WIDGET (gtk_builder_get_object (builder, "check_enable_home"));
+	check_enablehome = GTK_WIDGET (ctk_builder_get_object (builder, "check_enable_home"));
 	g_settings_bind (baobab.prefs_settings,
 			 BAOBAB_SETTINGS_MONITOR_HOME,
 			 check_enablehome, "active",
@@ -321,6 +321,6 @@ baobab_prefs_dialog (void)
 	g_signal_connect (dlg, "response",
 			  G_CALLBACK (filechooser_response_cb), model);
 
-	gtk_widget_show_all (dlg);
+	ctk_widget_show_all (dlg);
 }
 

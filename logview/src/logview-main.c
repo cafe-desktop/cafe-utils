@@ -26,7 +26,7 @@
 #include <glib/gi18n.h>
 #include <glib.h>
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "logview-app.h"
 
@@ -37,7 +37,7 @@ static void
 app_quit_cb (LogviewApp *app,
              gpointer user_data)
 {
-  gtk_main_quit ();
+  ctk_main_quit ();
 }
 
 static void
@@ -68,7 +68,7 @@ create_option_context (void)
   g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
   g_option_context_add_main_entries (context, entries, GETTEXT_PACKAGE);
   g_option_context_set_ignore_unknown_options (context, TRUE);
-  g_option_context_add_group (context, gtk_get_option_group (TRUE));
+  g_option_context_add_group (context, ctk_get_option_group (TRUE));
 
   return context;
 }
@@ -112,7 +112,7 @@ main (int argc, char *argv[])
 
   logview_app_initialize (app, log_files);
 
-  gtk_main ();
+  ctk_main ();
 
   g_object_unref (app);
 

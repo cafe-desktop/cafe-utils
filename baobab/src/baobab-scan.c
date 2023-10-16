@@ -26,7 +26,7 @@
 #include <string.h>
 
 #include <glib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <gio/gio.h>
 
 #include "baobab.h"

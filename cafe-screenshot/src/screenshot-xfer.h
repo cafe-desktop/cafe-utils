@@ -21,7 +21,7 @@
 #ifndef __SCREENSHOT_XFER_H__
 #define __SCREENSHOT_XFER_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <gio/gio.h>
 
 typedef enum

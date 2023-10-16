@@ -106,7 +106,7 @@ PKG_CHECK_MODULES(GIO_UNIX, gio-unix-2.0 >= $GIO_UNIX_REQUIRED)
 AC_SUBST(GIO_UNIX_CFLAGS)
 AC_SUBST(GIO_UNIX_LIBS)
 
-PKG_CHECK_MODULES(GTK, gtk+-3.0 >= $GTK_REQUIRED)
+PKG_CHECK_MODULES(GTK, ctk+-3.0 >= $GTK_REQUIRED)
 AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)
 
@@ -132,13 +132,13 @@ AS_CASE([$enable_disk_image_mounter],
 AM_CONDITIONAL([BUILD_DISK_IMAGE_MOUNTER], [test "x$enable_disk_image_mounter" = "xyes"])
 
 # libeggsmclient
-PKG_CHECK_MODULES(LIBEGGSMCLIENT, gtk+-3.0 >= $GTK_REQUIRED)
+PKG_CHECK_MODULES(LIBEGGSMCLIENT, ctk+-3.0 >= $GTK_REQUIRED)
 AC_SUBST(LIBEGGSMCLIENT_CFLAGS)
 AC_SUBST(LIBEGGSMCLIENT_LIBS)
 
-# libgdict requires just gtk+
+# libgdict requires just ctk+
 PKG_CHECK_MODULES(LIBGDICT, glib-2.0 >= $GLIB_REQUIRED
-                            gtk+-3.0 >= $GTK_REQUIRED)
+                            ctk+-3.0 >= $GTK_REQUIRED)
 AC_SUBST(LIBGDICT_CFLAGS)
 AC_SUBST(LIBGDICT_LIBS)
 
@@ -197,7 +197,7 @@ PKG_CHECK_MODULES(LIBGTOP, libgtop-2.0 >= $LIBGTOP_REQUIRED)
 AC_SUBST(LIBGTOP_CFLAGS)
 AC_SUBST(LIBGTOP_LIBS)
 
-PKG_CHECK_MODULES(LIBCANBERRA_GTK, libcanberra-gtk3 >= $LIBCANBERRA_GTK_REQUIRED)
+PKG_CHECK_MODULES(LIBCANBERRA_GTK, libcanberra-ctk3 >= $LIBCANBERRA_GTK_REQUIRED)
 AC_SUBST(LIBCANBERRA_GTK_CFLAGS)
 AC_SUBST(LIBCANBERRA_GTK_LIBS)
 
@@ -332,7 +332,7 @@ AC_SUBST(GETTEXT_PACKAGE)
 
 GLIB_GSETTINGS
 
-dnl gtk-doc stuff
+dnl ctk-doc stuff
 GTK_DOC_CHECK([1.10])
 
 dnl yelp-tools stuff
@@ -410,7 +410,7 @@ cafe-utils $VERSION configuration summary:
                          data dir : $datadir
 
      Debug messages (libcafedict) : $enable_debug
-      API Reference (libcafedict) : $enable_gtk_doc
+      API Reference (libcafedict) : $enable_ctk_doc
   Logview built with ZLib support : $msg_zlib
      Dictionary cafe-panel applet : $enable_gdict_applet
 "

@@ -27,7 +27,7 @@
 
 #include <sys/stat.h>
 #include <string.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "logview-prefs.h"
 
@@ -163,7 +163,7 @@ load_filters (LogviewPrefs *prefs)
     str = filters[idx];
     tokens = g_strsplit (str, DELIMITER, MAX_TOKENS);
     filter = logview_filter_new (tokens[FILTER_NAME], tokens[FILTER_REGEX]);
-    tag = gtk_text_tag_new (tokens[FILTER_NAME]);
+    tag = ctk_text_tag_new (tokens[FILTER_NAME]);
 
     g_object_set (tag, "invisible",
                   g_str_equal (tokens[FILTER_INVISIBLE], "1"), NULL);

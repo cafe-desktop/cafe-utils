@@ -21,7 +21,7 @@
 #ifndef __BAOBAB_CELL_RENDERER_PROGRESS_H__
 #define __BAOBAB_CELL_RENDERER_PROGRESS_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 G_BEGIN_DECLS
 

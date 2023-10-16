@@ -85,7 +85,7 @@
                     <property name="visible">True</property>
                     <property name="can_default">True</property>
                     <property name="can_focus">True</property>
-                    <property name="label">gtk-add</property>
+                    <property name="label">ctk-add</property>
                     <property name="use_stock">True</property>
                     <property name="relief">GTK_RELIEF_NORMAL</property>
                     <property name="focus_on_click">True</property>
@@ -96,7 +96,7 @@
                     <property name="visible">True</property>
                     <property name="can_default">True</property>
                     <property name="can_focus">True</property>
-                    <property name="label">gtk-remove</property>
+                    <property name="label">ctk-remove</property>
                     <property name="use_stock">True</property>
                     <property name="relief">GTK_RELIEF_NORMAL</property>
                     <property name="focus_on_click">True</property>
@@ -107,7 +107,7 @@
                     <property name="visible">True</property>
                     <property name="can_default">True</property>
                     <property name="can_focus">True</property>
-                    <property name="label">gtk-edit</property>
+                    <property name="label">ctk-edit</property>
                     <property name="use_stock">True</property>
                     <property name="relief">GTK_RELIEF_NORMAL</property>
                     <property name="focus_on_click">True</property>

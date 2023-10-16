@@ -20,7 +20,7 @@
 #ifndef __SCREENSHOT_DIALOG_H__
 #define __SCREENSHOT_DIALOG_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 typedef struct ScreenshotDialog ScreenshotDialog;
 

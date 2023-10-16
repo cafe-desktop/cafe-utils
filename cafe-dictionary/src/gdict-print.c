@@ -30,7 +30,7 @@
 
 #include <glib/gi18n.h>
 #include <gio/gio.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include <libgdict/gdict.h>
 
@@ -64,7 +64,7 @@ begin_print (GtkPrintOperation *operation,
   gchar *contents;
   gdouble height;
 
-  height = gtk_print_context_get_height (context)
+  height = ctk_print_context_get_height (context)
            - HEADER_HEIGHT (10)
            - HEADER_GAP (3);
 
@@ -76,7 +76,7 @@ begin_print (GtkPrintOperation *operation,
 
   data->n_pages = (data->n_lines - 1) / data->lines_per_page + 1;
 
-  gtk_print_operation_set_n_pages (operation, data->n_pages);
+  ctk_print_operation_set_n_pages (operation, data->n_pages);
 
   g_free (contents);
 }
@@ -96,8 +96,8 @@ draw_page (GtkPrintOperation *operation,
   PangoFontDescription *desc;
   gchar *page_str;
 
-  cr = gtk_print_context_get_cairo_context (context);
-  width = gtk_print_context_get_width (context);
+  cr = ctk_print_context_get_cairo_context (context);
+  width = ctk_print_context_get_width (context);
 
   cairo_rectangle (cr, 0, 0, width, HEADER_HEIGHT (10));
 
@@ -109,7 +109,7 @@ draw_page (GtkPrintOperation *operation,
   cairo_stroke (cr);
 
   /* header */
-  layout = gtk_print_context_create_pango_layout (context);
+  layout = ctk_print_context_create_pango_layout (context);
 
   desc = pango_font_description_from_string ("sans 14");
   pango_layout_set_font_description (layout, desc);
@@ -142,7 +142,7 @@ draw_page (GtkPrintOperation *operation,
   g_object_unref (layout);
 
   /* text */
-  layout = gtk_print_context_create_pango_layout (context);
+  layout = ctk_print_context_create_pango_layout (context);
   pango_font_description_set_size (data->font_desc,
                                    data->font_size * PANGO_SCALE);
   pango_layout_set_font_description (layout, data->font_desc);
@@ -209,7 +209,7 @@ gdict_show_print_preview (GtkWindow   *parent,
   data->defbox = defbox;
   data->word = word;
 
-  operation = gtk_print_operation_new ();
+  operation = ctk_print_operation_new ();
   print_font = get_print_font ();
   data->font_desc = pango_font_description_from_string (print_font);
   data->font_size = pango_font_description_get_size (data->font_desc)
@@ -224,7 +224,7 @@ gdict_show_print_preview (GtkWindow   *parent,
 		    G_CALLBACK (end_print), data);
 
   error = NULL;
-  gtk_print_operation_run (operation,
+  ctk_print_operation_run (operation,
                            GTK_PRINT_OPERATION_ACTION_PREVIEW,
                            parent,
                            &error);
@@ -234,7 +234,7 @@ gdict_show_print_preview (GtkWindow   *parent,
     {
       GtkWidget *dialog;
 
-      dialog = gtk_message_dialog_new (parent,
+      dialog = ctk_message_dialog_new (parent,
                                        GTK_DIALOG_DESTROY_WITH_PARENT,
                                        GTK_MESSAGE_ERROR,
                                        GTK_BUTTONS_CLOSE,
@@ -243,9 +243,9 @@ gdict_show_print_preview (GtkWindow   *parent,
       g_error_free (error);
 
       g_signal_connect (dialog, "response",
-			G_CALLBACK (gtk_widget_destroy), NULL);
+			G_CALLBACK (ctk_widget_destroy), NULL);
 
-      gtk_widget_show (dialog);
+      ctk_widget_show (dialog);
     }
 }
 
@@ -273,7 +273,7 @@ gdict_show_print_dialog (GtkWindow   *parent,
   data->defbox = defbox;
   data->word = word;
 
-  operation = gtk_print_operation_new ();
+  operation = ctk_print_operation_new ();
   print_font = get_print_font ();
   data->font_desc = pango_font_description_from_string (print_font);
   data->font_size = pango_font_description_get_size (data->font_desc)
@@ -288,7 +288,7 @@ gdict_show_print_dialog (GtkWindow   *parent,
 		    G_CALLBACK (end_print), data);
 
   error = NULL;
-  gtk_print_operation_run (operation,
+  ctk_print_operation_run (operation,
                            GTK_PRINT_OPERATION_ACTION_PRINT_DIALOG,
                            parent,
                            &error);
@@ -298,7 +298,7 @@ gdict_show_print_dialog (GtkWindow   *parent,
     {
       GtkWidget *dialog;
 
-      dialog = gtk_message_dialog_new (parent,
+      dialog = ctk_message_dialog_new (parent,
                                        GTK_DIALOG_DESTROY_WITH_PARENT,
                                        GTK_MESSAGE_ERROR,
                                        GTK_BUTTONS_CLOSE,
@@ -307,8 +307,8 @@ gdict_show_print_dialog (GtkWindow   *parent,
       g_error_free (error);
 
       g_signal_connect (dialog, "response",
-			G_CALLBACK (gtk_widget_destroy), NULL);
+			G_CALLBACK (ctk_widget_destroy), NULL);
 
-      gtk_widget_show (dialog);
+      ctk_widget_show (dialog);
     }
 }

@@ -28,7 +28,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <gdk/gdkx.h>
 
 #include "gdict-aligned-window.h"
@@ -103,10 +103,10 @@ gdict_aligned_window_init (GdictAlignedWindow *aligned_window)
 
   /* set window properties */
 #if 0
-  gtk_window_set_modal (window, TRUE);
+  ctk_window_set_modal (window, TRUE);
 #endif
-  gtk_window_set_decorated (window, FALSE);
-  gtk_window_set_type_hint (window, GDK_WINDOW_TYPE_HINT_DOCK);
+  ctk_window_set_decorated (window, FALSE);
+  ctk_window_set_type_hint (window, GDK_WINDOW_TYPE_HINT_DOCK);
 }
 
 static void
@@ -167,20 +167,20 @@ gdict_aligned_window_position (GdictAlignedWindow *window)
     return;
 
   align_widget = priv->align_widget;
-  gdk_window = gtk_widget_get_window (align_widget);
+  gdk_window = ctk_widget_get_window (align_widget);
 
   display = gdk_display_get_default ();
   gdk_display_flush (display);
 
-  gdk_window_get_geometry (gtk_widget_get_window (GTK_WIDGET (window)), NULL, NULL, &our_width, &our_height);
+  gdk_window_get_geometry (ctk_widget_get_window (GTK_WIDGET (window)), NULL, NULL, &our_width, &our_height);
 
   /* stick, skip taskbar and pager */
-  gtk_window_stick (GTK_WINDOW (window));
-  gtk_window_set_skip_taskbar_hint (GTK_WINDOW (window), TRUE);
-  gtk_window_set_skip_pager_hint (GTK_WINDOW (window), TRUE);
+  ctk_window_stick (GTK_WINDOW (window));
+  ctk_window_set_skip_taskbar_hint (GTK_WINDOW (window), TRUE);
+  ctk_window_set_skip_pager_hint (GTK_WINDOW (window), TRUE);
 
   /* make sure the align_widget is realized before we do anything */
-  gtk_widget_realize (align_widget);
+  ctk_widget_realize (align_widget);
 
   /* get the positional and dimensional attributes of the align widget */
   gdk_window_get_origin (gdk_window,
@@ -209,8 +209,8 @@ gdict_aligned_window_position (GdictAlignedWindow *window)
 	gravity = GDK_GRAVITY_SOUTH_WEST;
     }
 
-  gtk_window_set_gravity (GTK_WINDOW (window), gravity);
-  gtk_window_move (GTK_WINDOW (window), x, y);
+  ctk_window_set_gravity (GTK_WINDOW (window), gravity);
+  ctk_window_move (GTK_WINDOW (window), x, y);
 }
 
 static void
@@ -243,14 +243,14 @@ gdict_aligned_window_motion_notify_cb (GtkWidget        *widget,
   GtkAllocation alloc;
   GdkRectangle rect;
 
-  gtk_widget_get_allocation (GTK_WIDGET (aligned_window), &alloc);
+  ctk_widget_get_allocation (GTK_WIDGET (aligned_window), &alloc);
 
   rect.x = 0;
   rect.y = 0;
   rect.width = alloc.width;
   rect.height = alloc.height;
 
-  gdk_window_invalidate_rect (gtk_widget_get_window (GTK_WIDGET (aligned_window)),
+  gdk_window_invalidate_rect (ctk_widget_get_window (GTK_WIDGET (aligned_window)),
 		  	      &rect,
 			      FALSE);
 

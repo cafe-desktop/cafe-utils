@@ -42,7 +42,7 @@ baobab_cell_renderer_progress_init (BaobabCellRendererProgress *cellprogress)
   cellprogress->priv = baobab_cell_renderer_progress_get_instance_private (cellprogress);
   cellprogress->priv->perc = 0;
 
-  gtk_cell_renderer_set_padding (GTK_CELL_RENDERER (cellprogress), 4, 4);
+  ctk_cell_renderer_set_padding (GTK_CELL_RENDERER (cellprogress), 4, 4);
 }
 
 GtkCellRenderer*
@@ -108,7 +108,7 @@ baobab_cell_renderer_progress_get_size (GtkCellRenderer *cell,
   gfloat xalign;
   gfloat yalign;
 
-  gtk_cell_renderer_get_padding (cell, &xpad, &ypad);
+  ctk_cell_renderer_get_padding (cell, &xpad, &ypad);
   calc_width  = (gint) xpad * 2 + FIXED_WIDTH;
   calc_height = (gint) ypad * 2 + FIXED_HEIGHT;
 
@@ -120,7 +120,7 @@ baobab_cell_renderer_progress_get_size (GtkCellRenderer *cell,
 
   if (cell_area)
   {
-    gtk_cell_renderer_get_alignment (cell, &xalign, &yalign);
+    ctk_cell_renderer_get_alignment (cell, &xalign, &yalign);
     if (x_offset)
     {
       *x_offset = xalign * (cell_area->width - calc_width);
@@ -192,9 +192,9 @@ baobab_cell_renderer_progress_render (GtkCellRenderer *cell,
   gint ypad;
   GtkStyle *style;
 
-  is_rtl = gtk_widget_get_direction (widget) == GTK_TEXT_DIR_RTL;
+  is_rtl = ctk_widget_get_direction (widget) == GTK_TEXT_DIR_RTL;
 
-  gtk_cell_renderer_get_padding (cell, &xpad, &ypad);
+  ctk_cell_renderer_get_padding (cell, &xpad, &ypad);
 
   x = cell_area->x + xpad;
   y = cell_area->y + ypad;
@@ -213,7 +213,7 @@ baobab_cell_renderer_progress_render (GtkCellRenderer *cell,
   cairo_set_source_rgb (cr, 0, 0, 0);
   cairo_fill (cr);
 
-  style = gtk_widget_get_style (widget);
+  style = ctk_widget_get_style (widget);
   x += style->xthickness;
   y += style->ythickness;
   w -= style->xthickness * 2;

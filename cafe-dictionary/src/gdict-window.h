@@ -25,7 +25,7 @@
 
 #include <gio/gio.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <libgdict/gdict.h>
 
 G_BEGIN_DECLS

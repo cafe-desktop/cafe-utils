@@ -60,12 +60,12 @@ clean_up_temporary_dir (gboolean gui_on_error)
 	{
 	  GtkWidget *dialog;
 
-	  dialog = gtk_message_dialog_new (NULL, 0,
+	  dialog = ctk_message_dialog_new (NULL, 0,
 					   GTK_MESSAGE_ERROR,
 					   GTK_BUTTONS_OK,
 					   "%s", message);
-	  gtk_dialog_run (GTK_DIALOG (dialog));
-	  gtk_widget_destroy (dialog);
+	  ctk_dialog_run (GTK_DIALOG (dialog));
+	  ctk_widget_destroy (dialog);
 	}
       else
 	{
@@ -89,12 +89,12 @@ child_done_notification (GPid     pid,
    * case, we can't reasonably continue.  */
   GtkWidget *dialog;
 
-  dialog = gtk_message_dialog_new (NULL, 0,
+  dialog = ctk_message_dialog_new (NULL, 0,
 				   GTK_MESSAGE_ERROR,
 				   GTK_BUTTONS_OK,
 				   _("The child save process unexpectedly exited.  We are unable to write the screenshot to disk."));
-  gtk_dialog_run (GTK_DIALOG (dialog));
-  gtk_widget_destroy (dialog);
+  ctk_dialog_run (GTK_DIALOG (dialog));
+  ctk_widget_destroy (dialog);
 
   clean_up_temporary_dir (TRUE);
 
@@ -118,12 +118,12 @@ read_pipe_from_child (GIOChannel   *source,
       if (status == G_IO_STATUS_NORMAL)
 	{
 	  message = g_strdup_printf ("Unable to save the screenshot to disk:\n\n%s", error_message);
-	  dialog = gtk_message_dialog_new (NULL, 0,
+	  dialog = ctk_message_dialog_new (NULL, 0,
 					   GTK_MESSAGE_ERROR,
 					   GTK_BUTTONS_OK,
 					   "%s", message);
-	  gtk_dialog_run (GTK_DIALOG (dialog));
-	  gtk_widget_destroy (dialog);
+	  ctk_dialog_run (GTK_DIALOG (dialog));
+	  ctk_widget_destroy (dialog);
 	  exit (1);
 	}
     }

@@ -23,7 +23,7 @@
 #ifndef __GDICT_COMMON_H__
 #define __GDICT_COMMON_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 G_BEGIN_DECLS
 

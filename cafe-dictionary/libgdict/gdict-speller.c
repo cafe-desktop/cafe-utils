@@ -35,7 +35,7 @@
 #include <stdarg.h>
 
 #include <gdk/gdkkeysyms.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <glib/gi18n-lib.h>
 
 #include "gdict-speller.h"
@@ -249,7 +249,7 @@ row_activated_cb (GtkTreeView       *treeview,
   gchar *word, *db_name;
   gboolean valid;
 
-  valid = gtk_tree_model_get_iter (GTK_TREE_MODEL (priv->store),
+  valid = ctk_tree_model_get_iter (GTK_TREE_MODEL (priv->store),
 			           &iter,
 				   path);
   if (!valid)
@@ -259,7 +259,7 @@ row_activated_cb (GtkTreeView       *treeview,
       return;
     }
 
-  gtk_tree_model_get (GTK_TREE_MODEL (priv->store), &iter,
+  ctk_tree_model_get (GTK_TREE_MODEL (priv->store), &iter,
 		      MATCH_COLUMN_WORD, &word,
 		      MATCH_COLUMN_DB_NAME, &db_name,
 		      -1);
@@ -268,7 +268,7 @@ row_activated_cb (GtkTreeView       *treeview,
 		   word, db_name);
   else
     {
-      gchar *row = gtk_tree_path_to_string (path);
+      gchar *row = ctk_tree_path_to_string (path);
 
       g_warning ("Row %s activated, but no word attached", row);
       g_free (row);
@@ -306,48 +306,48 @@ gdict_speller_constructor (GType                  type,
   speller = GDICT_SPELLER (object);
   priv = speller->priv;
 
-  sw = gtk_scrolled_window_new (NULL, NULL);
-  gtk_widget_set_vexpand (sw, TRUE);
-  gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (sw),
+  sw = ctk_scrolled_window_new (NULL, NULL);
+  ctk_widget_set_vexpand (sw, TRUE);
+  ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (sw),
   				  GTK_POLICY_AUTOMATIC,
   				  GTK_POLICY_AUTOMATIC);
-  gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (sw),
+  ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (sw),
   				       GTK_SHADOW_IN);
-  gtk_box_pack_start (GTK_BOX (speller), sw, TRUE, TRUE, 0);
-  gtk_widget_show (sw);
+  ctk_box_pack_start (GTK_BOX (speller), sw, TRUE, TRUE, 0);
+  ctk_widget_show (sw);
 
-  renderer = gtk_cell_renderer_text_new ();
-  column = gtk_tree_view_column_new_with_attributes ("matches",
+  renderer = ctk_cell_renderer_text_new ();
+  column = ctk_tree_view_column_new_with_attributes ("matches",
 		  				     renderer,
 						     "text", MATCH_COLUMN_WORD,
 						     NULL);
 
-  priv->treeview = gtk_tree_view_new ();
-  gtk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview),
+  priv->treeview = ctk_tree_view_new ();
+  ctk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview),
 		           GTK_TREE_MODEL (priv->store));
-  gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (priv->treeview), FALSE);
-  gtk_tree_view_append_column (GTK_TREE_VIEW (priv->treeview), column);
+  ctk_tree_view_set_headers_visible (GTK_TREE_VIEW (priv->treeview), FALSE);
+  ctk_tree_view_append_column (GTK_TREE_VIEW (priv->treeview), column);
   g_signal_connect (priv->treeview, "row-activated",
 		    G_CALLBACK (row_activated_cb), speller);
-  gtk_container_add (GTK_CONTAINER (sw), priv->treeview);
-  gtk_widget_show (priv->treeview);
+  ctk_container_add (GTK_CONTAINER (sw), priv->treeview);
+  ctk_widget_show (priv->treeview);
 
-  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+  hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 
-  priv->clear_button = gtk_button_new ();
-  gtk_button_set_image (GTK_BUTTON (priv->clear_button),
-                        gtk_image_new_from_icon_name ("edit-clear",
+  priv->clear_button = ctk_button_new ();
+  ctk_button_set_image (GTK_BUTTON (priv->clear_button),
+                        ctk_image_new_from_icon_name ("edit-clear",
                                                       GTK_ICON_SIZE_SMALL_TOOLBAR));
   g_signal_connect (priv->clear_button, "clicked",
 		    G_CALLBACK (clear_button_clicked_cb),
 		    speller);
-  gtk_box_pack_start (GTK_BOX (hbox), priv->clear_button, FALSE, FALSE, 0);
-  gtk_widget_show (priv->clear_button);
-  gtk_widget_set_tooltip_text (priv->clear_button,
+  ctk_box_pack_start (GTK_BOX (hbox), priv->clear_button, FALSE, FALSE, 0);
+  ctk_widget_show (priv->clear_button);
+  ctk_widget_set_tooltip_text (priv->clear_button,
                                _("Clear the list of similar words"));
 
-  gtk_box_pack_end (GTK_BOX (speller), hbox, FALSE, FALSE, 0);
-  gtk_widget_show (hbox);
+  ctk_box_pack_end (GTK_BOX (speller), hbox, FALSE, FALSE, 0);
+  ctk_widget_show (hbox);
 
   return object;
 }
@@ -403,7 +403,7 @@ gdict_speller_init (GdictSpeller *speller)
 
   speller->priv = priv = gdict_speller_get_instance_private (speller);
 
-  gtk_orientable_set_orientation (GTK_ORIENTABLE (speller), GTK_ORIENTATION_VERTICAL);
+  ctk_orientable_set_orientation (GTK_ORIENTABLE (speller), GTK_ORIENTATION_VERTICAL);
 
   priv->database = NULL;
   priv->strategy = NULL;
@@ -412,7 +412,7 @@ gdict_speller_init (GdictSpeller *speller)
   priv->results = -1;
   priv->context = NULL;
 
-  priv->store = gtk_list_store_new (MATCH_N_COLUMNS,
+  priv->store = ctk_list_store_new (MATCH_N_COLUMNS,
 		                    G_TYPE_INT,    /* MatchType */
 		                    G_TYPE_STRING, /* db_name */
 				    G_TYPE_STRING  /* word */);
@@ -605,12 +605,12 @@ gdict_speller_clear (GdictSpeller *speller)
   g_return_if_fail (GDICT_IS_SPELLER (speller));
   priv = speller->priv;
 
-  gtk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview), NULL);
+  ctk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview), NULL);
 
-  gtk_list_store_clear (priv->store);
+  ctk_list_store_clear (priv->store);
   priv->results = -1;
 
-  gtk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview),
+  ctk_tree_view_set_model (GTK_TREE_VIEW (priv->treeview),
 		           GTK_TREE_MODEL (priv->store));
 }
 
@@ -623,12 +623,12 @@ lookup_start_cb (GdictContext *context,
 
   if (!priv->busy_cursor)
     {
-      GdkDisplay *display = gtk_widget_get_display (GTK_WIDGET (speller));
+      GdkDisplay *display = ctk_widget_get_display (GTK_WIDGET (speller));
       priv->busy_cursor = gdk_cursor_new_for_display (display, GDK_WATCH);
     }
 
-  if (gtk_widget_get_window (GTK_WIDGET (speller)))
-    gdk_window_set_cursor (gtk_widget_get_window (GTK_WIDGET (speller)), priv->busy_cursor);
+  if (ctk_widget_get_window (GTK_WIDGET (speller)))
+    gdk_window_set_cursor (ctk_widget_get_window (GTK_WIDGET (speller)), priv->busy_cursor);
 
   priv->is_searching = TRUE;
 }
@@ -640,8 +640,8 @@ lookup_end_cb (GdictContext *context,
   GdictSpeller *speller = GDICT_SPELLER (user_data);
   GdictSpellerPrivate *priv = speller->priv;
 
-  if (gtk_widget_get_window (GTK_WIDGET (speller)))
-    gdk_window_set_cursor (gtk_widget_get_window (GTK_WIDGET (speller)), NULL);
+  if (ctk_widget_get_window (GTK_WIDGET (speller)))
+    gdk_window_set_cursor (ctk_widget_get_window (GTK_WIDGET (speller)), NULL);
 
   g_free (priv->word);
   priv->word = NULL;
@@ -662,8 +662,8 @@ match_found_cb (GdictContext *context,
               gdict_match_get_word (match),
               gdict_match_get_database (match));
 
-  gtk_list_store_append (priv->store, &iter);
-  gtk_list_store_set (priv->store, &iter,
+  ctk_list_store_append (priv->store, &iter);
+  ctk_list_store_set (priv->store, &iter,
 		      MATCH_COLUMN_TYPE, MATCH_WORD,
 		      MATCH_COLUMN_DB_NAME, gdict_match_get_database (match),
 		      MATCH_COLUMN_WORD, gdict_match_get_word (match),
@@ -685,8 +685,8 @@ error_cb (GdictContext *context,
 
   gdict_speller_clear (speller);
 
-  if (gtk_widget_get_window (GTK_WIDGET (speller)))
-    gdk_window_set_cursor (gtk_widget_get_window (GTK_WIDGET (speller)), NULL);
+  if (ctk_widget_get_window (GTK_WIDGET (speller)))
+    gdk_window_set_cursor (ctk_widget_get_window (GTK_WIDGET (speller)), NULL);
 
   g_free (priv->word);
   priv->word = NULL;
@@ -767,8 +767,8 @@ gdict_speller_match (GdictSpeller *speller,
     {
       GtkTreeIter iter;
 
-      gtk_list_store_append (priv->store, &iter);
-      gtk_list_store_set (priv->store, &iter,
+      ctk_list_store_append (priv->store, &iter);
+      ctk_list_store_set (priv->store, &iter,
 		          MATCH_COLUMN_TYPE, MATCH_ERROR,
 			  MATCH_COLUMN_DB_NAME, _("Error while matching"),
 			  MATCH_COLUMN_WORD, NULL,

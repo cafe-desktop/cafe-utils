@@ -22,7 +22,7 @@
 #include <config.h>
 #include <stdlib.h>
 #include <string.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <gdk/gdkkeysyms.h>
 #include <glib/gi18n.h>
 
@@ -98,7 +98,7 @@ logview_version_selector_changed (GtkComboBox *version_selector, gpointer user_d
 
     g_assert (LOGVIEW_IS_WINDOW (logview));
 
-	selected = gtk_combo_box_get_active (version_selector);
+	selected = ctk_combo_box_get_active (version_selector);
 
 	if (selected == log->current_version)
 		return;
@@ -127,19 +127,19 @@ populate_tag_table (GtkTextTagTable *tag_table)
 {
   GtkTextTag *tag;
 
-  tag = gtk_text_tag_new ("bold");
+  tag = ctk_text_tag_new ("bold");
   g_object_set (tag, "weight", PANGO_WEIGHT_BOLD,
                 "weight-set", TRUE, NULL);
 
-  gtk_text_tag_table_add (tag_table, tag);
+  ctk_text_tag_table_add (tag_table, tag);
 
-  tag = gtk_text_tag_new ("invisible");
+  tag = ctk_text_tag_new ("invisible");
   g_object_set (tag, "invisible", TRUE, "invisible-set", TRUE, NULL);
-  gtk_text_tag_table_add (tag_table, tag);
+  ctk_text_tag_table_add (tag_table, tag);
 
-  tag = gtk_text_tag_new ("invisible-filter");
+  tag = ctk_text_tag_new ("invisible-filter");
   g_object_set (tag, "invisible", TRUE, "invisible-set", TRUE, NULL);
-  gtk_text_tag_table_add (tag_table, tag);
+  ctk_text_tag_table_add (tag_table, tag);
 }
 
 static void
@@ -150,47 +150,47 @@ populate_style_tag_table (LogviewWindow *logview)
   GtkStyleContext *context;
   GdkRGBA rgba;
 
-  tag = gtk_text_tag_table_lookup (tag_table, "gray");
+  tag = ctk_text_tag_table_lookup (tag_table, "gray");
 
   if (tag) {
-    gtk_text_tag_table_remove (tag_table, tag);
+    ctk_text_tag_table_remove (tag_table, tag);
   }
 
-  tag = gtk_text_tag_new ("gray");
+  tag = ctk_text_tag_new ("gray");
 
-  context = gtk_widget_get_style_context (logview->priv->text_view);
-  gtk_style_context_save (context);
-  gtk_style_context_add_class (context, "dim-label");
-  gtk_style_context_get_color (context, GTK_STATE_FLAG_NORMAL, &rgba);
-  gtk_style_context_restore (context);
+  context = ctk_widget_get_style_context (logview->priv->text_view);
+  ctk_style_context_save (context);
+  ctk_style_context_add_class (context, "dim-label");
+  ctk_style_context_get_color (context, GTK_STATE_FLAG_NORMAL, &rgba);
+  ctk_style_context_restore (context);
 
   g_object_set (tag, "foreground-rgba", &rgba, "foreground-set", TRUE, NULL);
 
-  gtk_text_tag_table_add (tag_table, tag);
+  ctk_text_tag_table_add (tag_table, tag);
 }
 
 static void
-_gtk_text_buffer_apply_tag_to_rectangle (GtkTextBuffer *buffer, int line_start, int line_end,
+_ctk_text_buffer_apply_tag_to_rectangle (GtkTextBuffer *buffer, int line_start, int line_end,
                                         int offset_start, int offset_end, char *tag_name)
 {
   GtkTextIter start, end;
   int line_cur;
 
-  gtk_text_buffer_get_iter_at_line (buffer, &start, line_start);
-  gtk_text_buffer_get_iter_at_line (buffer, &end, line_start);
+  ctk_text_buffer_get_iter_at_line (buffer, &start, line_start);
+  ctk_text_buffer_get_iter_at_line (buffer, &end, line_start);
 
   for (line_cur = line_start; line_cur < line_end + 1; line_cur++) {
 
     if (offset_start > 0) {
-      gtk_text_iter_forward_chars (&start, offset_start);
+      ctk_text_iter_forward_chars (&start, offset_start);
     }
 
-    gtk_text_iter_forward_chars (&end, offset_end);
+    ctk_text_iter_forward_chars (&end, offset_end);
 
-    gtk_text_buffer_apply_tag_by_name (buffer, tag_name, &start, &end);
+    ctk_text_buffer_apply_tag_by_name (buffer, tag_name, &start, &end);
 
-    gtk_text_iter_forward_line (&start);
-    gtk_text_iter_forward_line (&end);
+    ctk_text_iter_forward_line (&start);
+    ctk_text_iter_forward_line (&end);
   }
 }
 
@@ -203,7 +203,7 @@ logview_update_statusbar (LogviewWindow *logview, LogviewLog *active)
   time_t timestamp;
 
   if (active == NULL) {
-    gtk_statusbar_pop (GTK_STATUSBAR (logview->priv->statusbar), 0);
+    ctk_statusbar_pop (GTK_STATUSBAR (logview->priv->statusbar), 0);
     return;
   }
 
@@ -218,8 +218,8 @@ logview_update_statusbar (LogviewWindow *logview, LogviewLog *active)
                                     logview_log_get_cached_lines_number (active),
                                     size, modified);
 
-  gtk_statusbar_pop (GTK_STATUSBAR (logview->priv->statusbar), 0);
-  gtk_statusbar_push (GTK_STATUSBAR (logview->priv->statusbar), 0, statusbar_text);
+  ctk_statusbar_pop (GTK_STATUSBAR (logview->priv->statusbar), 0);
+  ctk_statusbar_push (GTK_STATUSBAR (logview->priv->statusbar), 0, statusbar_text);
 
   g_free (size);
   g_free (timestring);
@@ -241,7 +241,7 @@ logview_set_font (LogviewWindow *logview,
 
   font_desc = pango_font_description_from_string (fontname);
   if (font_desc) {
-    gtk_widget_override_font (logview->priv->text_view, font_desc);
+    ctk_widget_override_font (logview->priv->text_view, font_desc);
     pango_font_description_free (font_desc);
   }
 }
@@ -253,10 +253,10 @@ logview_set_fontsize (LogviewWindow *logview, gboolean store)
   PangoContext *context;
   LogviewWindowPrivate *priv = logview->priv;
 
-  context = gtk_widget_get_pango_context (priv->text_view);
+  context = ctk_widget_get_pango_context (priv->text_view);
   fontdesc = pango_context_get_font_description (context);
   pango_font_description_set_size (fontdesc, (priv->fontsize) * PANGO_SCALE);
-  gtk_widget_override_font (priv->text_view, fontdesc);
+  ctk_widget_override_font (priv->text_view, fontdesc);
 
   if (store) {
     logview_prefs_store_fontsize (logview->priv->prefs, priv->fontsize);
@@ -274,7 +274,7 @@ logview_set_window_title (LogviewWindow *logview, const char * log_name)
     window_title = g_strdup_printf (APP_NAME);
   }
 
-  gtk_window_set_title (GTK_WINDOW (logview), window_title);
+  ctk_window_set_title (GTK_WINDOW (logview), window_title);
 
   g_free (window_title);
 }
@@ -288,12 +288,12 @@ open_file_selected_cb (GtkWidget *chooser, gint response, LogviewWindow *logview
   char *file_uri;
   LogviewLog *log;
 
-  gtk_widget_hide (GTK_WIDGET (chooser));
+  ctk_widget_hide (GTK_WIDGET (chooser));
   if (response != GTK_RESPONSE_OK) {
 	  return;
   }
 
-  f = gtk_file_chooser_get_file (GTK_FILE_CHOOSER (chooser));
+  f = ctk_file_chooser_get_file (GTK_FILE_CHOOSER (chooser));
   file_uri = g_file_get_uri (f);
 
   log = logview_manager_get_if_loaded (logview->priv->manager, file_uri);
@@ -319,26 +319,26 @@ logview_open_log (GtkAction *action, LogviewWindow *logview)
   char *active;
 
   if (chooser == NULL) {
-    chooser = gtk_file_chooser_dialog_new (_("Open Log"),
+    chooser = ctk_file_chooser_dialog_new (_("Open Log"),
                                            GTK_WINDOW (logview),
                                            GTK_FILE_CHOOSER_ACTION_OPEN,
-                                           "gtk-cancel", GTK_RESPONSE_CANCEL,
-                                           "gtk-open", GTK_RESPONSE_OK,
+                                           "ctk-cancel", GTK_RESPONSE_CANCEL,
+                                           "ctk-open", GTK_RESPONSE_OK,
                                            NULL);
-    gtk_dialog_set_default_response (GTK_DIALOG (chooser), GTK_RESPONSE_OK);
-    gtk_window_set_modal (GTK_WINDOW (chooser), TRUE);
+    ctk_dialog_set_default_response (GTK_DIALOG (chooser), GTK_RESPONSE_OK);
+    ctk_window_set_modal (GTK_WINDOW (chooser), TRUE);
     g_signal_connect (chooser, "response",
                       G_CALLBACK (open_file_selected_cb), logview);
     g_signal_connect (chooser, "destroy",
-                      G_CALLBACK (gtk_widget_destroyed), &chooser);
+                      G_CALLBACK (ctk_widget_destroyed), &chooser);
     active = logview_prefs_get_active_logfile (logview->priv->prefs);
     if (active != NULL) {
-      gtk_file_chooser_set_filename (GTK_FILE_CHOOSER (chooser), active);
+      ctk_file_chooser_set_filename (GTK_FILE_CHOOSER (chooser), active);
       g_free (active);
     }
   }
 
-  gtk_window_present (GTK_WINDOW (chooser));
+  ctk_window_present (GTK_WINDOW (chooser));
 }
 
 static void
@@ -353,8 +353,8 @@ logview_help (GtkAction *action, GtkWidget *parent_window)
 {
   GError *error = NULL;
 
-  gtk_show_uri_on_window (GTK_WINDOW (parent_window),
-                "help:cafe-system-log", gtk_get_current_event_time (),
+  ctk_show_uri_on_window (GTK_WINDOW (parent_window),
+                "help:cafe-system-log", ctk_get_current_event_time (),
                 &error);
 
   if (error) {
@@ -390,12 +390,12 @@ logview_select_all (GtkAction *action, LogviewWindow *logview)
   GtkTextIter start, end;
   GtkTextBuffer *buffer;
 
-  buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
 
-  gtk_text_buffer_get_bounds (buffer, &start, &end);
-  gtk_text_buffer_select_range (buffer, &start, &end);
+  ctk_text_buffer_get_bounds (buffer, &start, &end);
+  ctk_text_buffer_select_range (buffer, &start, &end);
 
-  gtk_widget_grab_focus (GTK_WIDGET (logview->priv->text_view));
+  ctk_widget_grab_focus (GTK_WIDGET (logview->priv->text_view));
 }
 
 static void
@@ -404,19 +404,19 @@ logview_copy (GtkAction *action, LogviewWindow *logview)
   GtkTextBuffer *buffer;
   GtkClipboard *clipboard;
 
-  buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
-  clipboard = gtk_clipboard_get (GDK_SELECTION_CLIPBOARD);
+  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  clipboard = ctk_clipboard_get (GDK_SELECTION_CLIPBOARD);
 
-  gtk_text_buffer_copy_clipboard (buffer, clipboard);
+  ctk_text_buffer_copy_clipboard (buffer, clipboard);
 
-  gtk_widget_grab_focus (GTK_WIDGET (logview->priv->text_view));
+  ctk_widget_grab_focus (GTK_WIDGET (logview->priv->text_view));
 }
 
 static void
 findbar_close_cb (LogviewFindbar *findbar,
                   gpointer user_data)
 {
-  gtk_widget_hide (GTK_WIDGET (findbar));
+  ctk_widget_hide (GTK_WIDGET (findbar));
   logview_findbar_set_message (findbar, NULL);
 }
 
@@ -437,39 +437,39 @@ logview_search_text (LogviewWindow *logview, gboolean forward)
     return;
   }
 
-  buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
-  search_start = gtk_text_buffer_get_mark (buffer, SEARCH_START_MARK);
-  search_end = gtk_text_buffer_get_mark (buffer, SEARCH_END_MARK);
+  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  search_start = ctk_text_buffer_get_mark (buffer, SEARCH_START_MARK);
+  search_end = ctk_text_buffer_get_mark (buffer, SEARCH_END_MARK);
 
   if (!search_start) {
     /* this is our first search on the buffer, create a new search mark */
-    gtk_text_buffer_get_start_iter (buffer, &search);
-    search_start = gtk_text_buffer_create_mark (buffer, SEARCH_START_MARK,
+    ctk_text_buffer_get_start_iter (buffer, &search);
+    search_start = ctk_text_buffer_create_mark (buffer, SEARCH_START_MARK,
                                                 &search, TRUE);
-    search_end = gtk_text_buffer_create_mark (buffer, SEARCH_END_MARK,
+    search_end = ctk_text_buffer_create_mark (buffer, SEARCH_END_MARK,
                                               &search, TRUE);
   } else {
     if (forward) {
-      gtk_text_buffer_get_iter_at_mark (buffer, &search, search_end);
+      ctk_text_buffer_get_iter_at_mark (buffer, &search, search_end);
     } else {
-      gtk_text_buffer_get_iter_at_mark (buffer, &search, search_start);
+      ctk_text_buffer_get_iter_at_mark (buffer, &search, search_start);
     }
   }
 
 wrap:
 
   if (forward) {
-    res = gtk_text_iter_forward_search (&search, text, GTK_TEXT_SEARCH_VISIBLE_ONLY, &start_m, &end_m, NULL);
+    res = ctk_text_iter_forward_search (&search, text, GTK_TEXT_SEARCH_VISIBLE_ONLY, &start_m, &end_m, NULL);
   } else {
-    res = gtk_text_iter_backward_search (&search, text, GTK_TEXT_SEARCH_VISIBLE_ONLY, &start_m, &end_m, NULL);
+    res = ctk_text_iter_backward_search (&search, text, GTK_TEXT_SEARCH_VISIBLE_ONLY, &start_m, &end_m, NULL);
   }
 
   if (res) {
-    gtk_text_buffer_select_range (buffer, &start_m, &end_m);
-    gtk_text_buffer_move_mark (buffer, search_start, &start_m);
-    gtk_text_buffer_move_mark (buffer, search_end, &end_m);
+    ctk_text_buffer_select_range (buffer, &start_m, &end_m);
+    ctk_text_buffer_move_mark (buffer, search_start, &start_m);
+    ctk_text_buffer_move_mark (buffer, search_end, &end_m);
 
-    gtk_text_view_scroll_mark_onscreen (GTK_TEXT_VIEW (logview->priv->text_view), search_end);
+    ctk_text_view_scroll_mark_onscreen (GTK_TEXT_VIEW (logview->priv->text_view), search_end);
 
     if (wrapped) {
       logview_findbar_set_message (LOGVIEW_FINDBAR (logview->priv->find_bar), _("Wrapped"));
@@ -480,19 +480,19 @@ wrap:
       GtkTextMark *mark;
       GtkTextIter iter;
 
-      if (gtk_text_buffer_get_has_selection (buffer)) {
+      if (ctk_text_buffer_get_has_selection (buffer)) {
         /* unselect */
-        mark = gtk_text_buffer_get_mark (buffer, "insert");
-        gtk_text_buffer_get_iter_at_mark (buffer, &iter, mark);
-        gtk_text_buffer_move_mark_by_name (buffer, "selection_bound", &iter);
+        mark = ctk_text_buffer_get_mark (buffer, "insert");
+        ctk_text_buffer_get_iter_at_mark (buffer, &iter, mark);
+        ctk_text_buffer_move_mark_by_name (buffer, "selection_bound", &iter);
       }
 
       logview_findbar_set_message (LOGVIEW_FINDBAR (logview->priv->find_bar), _("Not found"));
     } else {
       if (forward) {
-        gtk_text_buffer_get_start_iter (buffer, &search);
+        ctk_text_buffer_get_start_iter (buffer, &search);
       } else {
-        gtk_text_buffer_get_end_iter (buffer, &search);
+        ctk_text_buffer_get_end_iter (buffer, &search);
       }
 
       wrapped = TRUE;
@@ -529,15 +529,15 @@ text_changed_timeout_cb (gpointer user_data)
 
   logview->priv->search_timeout_id = 0;
 
-  buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
-  search_start = gtk_text_buffer_get_mark (buffer, SEARCH_START_MARK);
-  search_end = gtk_text_buffer_get_mark (buffer, SEARCH_END_MARK);
+  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  search_start = ctk_text_buffer_get_mark (buffer, SEARCH_START_MARK);
+  search_end = ctk_text_buffer_get_mark (buffer, SEARCH_END_MARK);
 
   if (search_start) {
     /* reset the search mark to the start */
-    gtk_text_buffer_get_start_iter (buffer, &start);
-    gtk_text_buffer_move_mark (buffer, search_start, &start);
-    gtk_text_buffer_move_mark (buffer, search_end, &start);
+    ctk_text_buffer_get_start_iter (buffer, &start);
+    ctk_text_buffer_move_mark (buffer, search_start, &start);
+    ctk_text_buffer_move_mark (buffer, search_end, &start);
   }
 
   logview_findbar_set_message (LOGVIEW_FINDBAR (logview->priv->find_bar), NULL);
@@ -576,23 +576,23 @@ filter_buffer (LogviewWindow *logview, gint start_line)
   gboolean matched;
   int lines, i;
 
-  buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
-  lines = gtk_text_buffer_get_line_count (buffer);
+  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  lines = ctk_text_buffer_get_line_count (buffer);
 
   for (i = start_line; i < lines; i++) {
     matched = FALSE;
 
-    gtk_text_buffer_get_iter_at_line (buffer, &start, i);
-    end = gtk_text_iter_copy (&start);
-    gtk_text_iter_forward_line (end);
+    ctk_text_buffer_get_iter_at_line (buffer, &start, i);
+    end = ctk_text_iter_copy (&start);
+    ctk_text_iter_forward_line (end);
 
-    text = gtk_text_buffer_get_text (buffer, &start, end, TRUE);
+    text = ctk_text_buffer_get_text (buffer, &start, end, TRUE);
 
     for (cur_filter = logview->priv->active_filters; cur_filter != NULL;
          cur_filter = g_list_next (cur_filter))
     {
       if (logview_filter_filter (LOGVIEW_FILTER (cur_filter->data), text)) {
-        gtk_text_buffer_apply_tag (buffer,
+        ctk_text_buffer_apply_tag (buffer,
                                    logview_filter_get_tag (LOGVIEW_FILTER (cur_filter->data)),
                                    &start, end);
         matched = TRUE;
@@ -602,16 +602,16 @@ filter_buffer (LogviewWindow *logview, gint start_line)
     g_free (text);
 
     if (!matched && logview->priv->matches_only) {
-      gtk_text_buffer_apply_tag_by_name (buffer,
+      ctk_text_buffer_apply_tag_by_name (buffer,
                                          "invisible-filter",
                                          &start, end);
     } else {
-      gtk_text_buffer_remove_tag_by_name (buffer,
+      ctk_text_buffer_remove_tag_by_name (buffer,
                                           "invisible-filter",
                                           &start, end);
     }
 
-    gtk_text_iter_free (end);
+    ctk_text_iter_free (end);
   }
 }
 
@@ -621,10 +621,10 @@ filter_remove (LogviewWindow *logview, LogviewFilter *filter)
   GtkTextIter start, end;
   GtkTextBuffer *buffer;
 
-  buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
-  gtk_text_buffer_get_bounds (buffer, &start, &end);
+  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  ctk_text_buffer_get_bounds (buffer, &start, &end);
 
-  gtk_text_buffer_remove_tag (buffer, logview_filter_get_tag (filter),
+  ctk_text_buffer_remove_tag (buffer, logview_filter_get_tag (filter),
                               &start, &end);
 }
 
@@ -635,9 +635,9 @@ on_filter_toggled (GtkToggleAction *action, LogviewWindow *logview)
   const gchar* name;
   LogviewFilter *filter;
 
-  name = gtk_action_get_name (GTK_ACTION (action));
+  name = ctk_action_get_name (GTK_ACTION (action));
 
-  if (gtk_toggle_action_get_active (action)) {
+  if (ctk_toggle_action_get_active (action)) {
     priv->active_filters = g_list_append (priv->active_filters,
                                           logview_prefs_get_filter (priv->prefs,
                                                                     name));
@@ -673,20 +673,20 @@ update_filter_menu (LogviewWindow *window)
   table = priv->tag_table;
 
   if (priv->filter_merge_id != 0) {
-    gtk_ui_manager_remove_ui (ui,
+    ctk_ui_manager_remove_ui (ui,
                               priv->filter_merge_id);
   }
 
-  actions = gtk_action_group_list_actions (priv->filter_action_group);
+  actions = ctk_action_group_list_actions (priv->filter_action_group);
 
   for (l = actions; l != NULL; l = g_list_next (l)) {
-    tag = gtk_text_tag_table_lookup (table, gtk_action_get_name (GTK_ACTION (l->data)));
-    gtk_text_tag_table_remove (table, tag);
+    tag = ctk_text_tag_table_lookup (table, ctk_action_get_name (GTK_ACTION (l->data)));
+    ctk_text_tag_table_remove (table, tag);
 
     g_signal_handlers_disconnect_by_func (GTK_ACTION (l->data),
                                           G_CALLBACK (on_filter_toggled),
                                           window);
-    gtk_action_group_remove_action (priv->filter_action_group,
+    ctk_action_group_remove_action (priv->filter_action_group,
                                     GTK_ACTION (l->data));
   }
 
@@ -694,13 +694,13 @@ update_filter_menu (LogviewWindow *window)
 
   filters = logview_prefs_get_filters (logview_prefs_get ());
 
-  id = (g_list_length (filters) > 0) ? gtk_ui_manager_new_merge_id (ui) : 0;
+  id = (g_list_length (filters) > 0) ? ctk_ui_manager_new_merge_id (ui) : 0;
 
   for (l = filters; l != NULL; l = g_list_next (l)) {
     g_object_get (l->data, "name", &name, NULL);
 
-    action = gtk_toggle_action_new (name, name, NULL, NULL);
-    gtk_action_group_add_action (priv->filter_action_group,
+    action = ctk_toggle_action_new (name, name, NULL, NULL);
+    ctk_action_group_add_action (priv->filter_action_group,
                                  GTK_ACTION (action));
 
     g_signal_connect (action,
@@ -708,9 +708,9 @@ update_filter_menu (LogviewWindow *window)
                       G_CALLBACK (on_filter_toggled),
                       window);
 
-    gtk_ui_manager_add_ui (ui, id, FILTER_PLACEHOLDER,
+    ctk_ui_manager_add_ui (ui, id, FILTER_PLACEHOLDER,
                            name, name, GTK_UI_MANAGER_MENUITEM, FALSE);
-    gtk_text_tag_table_add (table,
+    ctk_text_tag_table_add (table,
                             logview_filter_get_tag (LOGVIEW_FILTER (l->data)));
 
     g_object_unref (action);
@@ -744,9 +744,9 @@ logview_manage_filters (GtkAction *action, LogviewWindow *logview)
                     G_CALLBACK (on_logview_filter_manager_response),
                     logview);
 
-  gtk_window_set_transient_for (GTK_WINDOW (manager),
+  ctk_window_set_transient_for (GTK_WINDOW (manager),
                                 GTK_WINDOW (logview));
-  gtk_widget_show (GTK_WIDGET (manager));
+  ctk_widget_show (GTK_WIDGET (manager));
 }
 
 static void
@@ -764,7 +764,7 @@ logview_about (GtkWidget *widget, GtkWidget *window)
     *p = _(*p);
 #endif
 
-  gtk_show_about_dialog (GTK_WINDOW (window),
+  ctk_show_about_dialog (GTK_WINDOW (window),
                          "program-name", _("System Log Viewer"),
                          "version", VERSION,
                          "title", _("About System Log Viewer"),
@@ -788,25 +788,25 @@ logview_about (GtkWidget *widget, GtkWidget *window)
 static void
 logview_toggle_statusbar (GtkAction *action, LogviewWindow *logview)
 {
-  if (gtk_widget_get_visible (logview->priv->statusbar))
-    gtk_widget_hide (logview->priv->statusbar);
+  if (ctk_widget_get_visible (logview->priv->statusbar))
+    ctk_widget_hide (logview->priv->statusbar);
   else
-    gtk_widget_show (logview->priv->statusbar);
+    ctk_widget_show (logview->priv->statusbar);
 }
 
 static void
 logview_toggle_sidebar (GtkAction *action, LogviewWindow *logview)
 {
-  if (gtk_widget_get_visible (logview->priv->sidebar))
-    gtk_widget_hide (logview->priv->sidebar);
+  if (ctk_widget_get_visible (logview->priv->sidebar))
+    ctk_widget_hide (logview->priv->sidebar);
   else
-    gtk_widget_show (logview->priv->sidebar);
+    ctk_widget_show (logview->priv->sidebar);
 }
 
 static void
 logview_toggle_match_filters (GtkToggleAction *action, LogviewWindow *logview)
 {
-  logview->priv->matches_only = gtk_toggle_action_get_active (action);
+  logview->priv->matches_only = ctk_toggle_action_get_active (action);
   filter_buffer (logview, 0);
 }
 
@@ -826,7 +826,7 @@ static GtkActionEntry entries[] = {
     { "CloseLog", "window-close", N_("_Close"), "<control>W", N_("Close this log"),
       G_CALLBACK (logview_close_log) },
     { "Quit", "application-exit", N_("_Quit"), "<control>Q", N_("Quit the log viewer"),
-      G_CALLBACK (gtk_main_quit) },
+      G_CALLBACK (ctk_main_quit) },
 
     { "Copy", "edit-copy", N_("_Copy"), "<control>C", N_("Copy the selection"),
       G_CALLBACK (logview_copy) },
@@ -880,25 +880,25 @@ real_select_day (LogviewWindow *logview,
   GtkTextIter start_iter, end_iter, start_vis, end_vis;
   GdkRectangle visible_rect;
 
-  buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
 
-  gtk_text_buffer_get_bounds (buffer, &start_iter, &end_iter);
-  gtk_text_buffer_get_iter_at_line (buffer, &start_vis, first_line);
-  gtk_text_buffer_get_iter_at_line (buffer, &end_vis, last_line + 1);
+  ctk_text_buffer_get_bounds (buffer, &start_iter, &end_iter);
+  ctk_text_buffer_get_iter_at_line (buffer, &start_vis, first_line);
+  ctk_text_buffer_get_iter_at_line (buffer, &end_vis, last_line + 1);
 
   /* clear all previous invisible tags */
-  gtk_text_buffer_remove_tag_by_name (buffer, "invisible",
+  ctk_text_buffer_remove_tag_by_name (buffer, "invisible",
                                       &start_iter, &end_iter);
 
-  gtk_text_buffer_apply_tag_by_name (buffer, "invisible",
+  ctk_text_buffer_apply_tag_by_name (buffer, "invisible",
                                      &start_iter, &start_vis);
-  gtk_text_buffer_apply_tag_by_name (buffer, "invisible",
+  ctk_text_buffer_apply_tag_by_name (buffer, "invisible",
                                      &end_vis, &end_iter);
 
   /* FIXME: why is this needed to update the view when selecting a day back? */
-  gtk_text_view_get_visible_rect (GTK_TEXT_VIEW (logview->priv->text_view),
+  ctk_text_view_get_visible_rect (GTK_TEXT_VIEW (logview->priv->text_view),
                                   &visible_rect);
-  gdk_window_invalidate_rect (gtk_widget_get_window (logview->priv->text_view),
+  gdk_window_invalidate_rect (ctk_widget_get_window (logview->priv->text_view),
                               &visible_rect, TRUE);
 }
 
@@ -920,11 +920,11 @@ loglist_day_cleared_cb (LogviewLoglist *loglist,
   GtkTextBuffer *buffer;
   GtkTextIter start, end;
 
-  buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
-  gtk_text_buffer_get_bounds (buffer, &start, &end);
+  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (logview->priv->text_view));
+  ctk_text_buffer_get_bounds (buffer, &start, &end);
 
   /* clear all previous invisible tags */
-  gtk_text_buffer_remove_tag_by_name (buffer, "invisible",
+  ctk_text_buffer_remove_tag_by_name (buffer, "invisible",
                                       &start, &end);
 }
 
@@ -963,7 +963,7 @@ paint_timestamps (GtkTextBuffer *buffer, int old_line_count,
   for (l = days; l; l = l->next) {
     Day *day = l->data;
 
-    _gtk_text_buffer_apply_tag_to_rectangle (buffer,
+    _ctk_text_buffer_apply_tag_to_rectangle (buffer,
                                              old_line_count + day->first_line - 1,
                                              old_line_count + day->last_line,
                                              0, day->timestamp_len, "gray");
@@ -1002,18 +1002,18 @@ read_new_lines_cb (LogviewLog *log,
     return;
   }
 
-  buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (window->priv->text_view));
-  old_line_count = gtk_text_buffer_get_line_count (buffer);
+  buffer = ctk_text_view_get_buffer (GTK_TEXT_VIEW (window->priv->text_view));
+  old_line_count = ctk_text_buffer_get_line_count (buffer);
   filter_start_line = old_line_count > 0 ? (old_line_count - 1) : 0;
 
-  if (gtk_text_buffer_get_char_count (buffer) != 0) {
+  if (ctk_text_buffer_get_char_count (buffer) != 0) {
     boldify = TRUE;
   }
 
-  gtk_text_buffer_get_end_iter (buffer, &iter);
+  ctk_text_buffer_get_end_iter (buffer, &iter);
 
   if (boldify) {
-    mark = gtk_text_buffer_create_mark (buffer, NULL, &iter, TRUE);
+    mark = ctk_text_buffer_create_mark (buffer, NULL, &iter, TRUE);
   }
 
   for (i = 0; lines[i]; i++) {
@@ -1021,25 +1021,25 @@ read_new_lines_cb (LogviewLog *log,
 
     if (!g_utf8_validate (lines[i], len, NULL)) {
       converted = g_locale_to_utf8 (lines[i], (gssize) len, NULL, &len, NULL);
-      gtk_text_buffer_insert (buffer, &iter, converted, len);
+      ctk_text_buffer_insert (buffer, &iter, converted, len);
       g_free (converted);
     } else {
-      gtk_text_buffer_insert (buffer, &iter, lines[i], strlen (lines[i]));
+      ctk_text_buffer_insert (buffer, &iter, lines[i], strlen (lines[i]));
     }
 
-    gtk_text_iter_forward_to_end (&iter);
-    gtk_text_buffer_insert (buffer, &iter, "\n", 1);
-    gtk_text_iter_forward_char (&iter);
+    ctk_text_iter_forward_to_end (&iter);
+    ctk_text_buffer_insert (buffer, &iter, "\n", 1);
+    ctk_text_iter_forward_char (&iter);
   }
 
   if (boldify) {
-    gtk_text_buffer_get_iter_at_mark (buffer, &start, mark);
-    gtk_text_buffer_apply_tag_by_name (buffer, "bold", &start, &iter);
-    gtk_text_buffer_delete_mark (buffer, mark);
+    ctk_text_buffer_get_iter_at_mark (buffer, &start, mark);
+    ctk_text_buffer_apply_tag_by_name (buffer, "bold", &start, &iter);
+    ctk_text_buffer_delete_mark (buffer, mark);
   }
   filter_buffer (window, filter_start_line);
 
-  gtk_text_view_scroll_to_iter (GTK_TEXT_VIEW (window->priv->text_view),
+  ctk_text_view_scroll_to_iter (GTK_TEXT_VIEW (window->priv->text_view),
                                 &iter, 0.0, FALSE, 0.0, 0.0);
 
   paint_timestamps (buffer, old_line_count, new_days);
@@ -1074,20 +1074,20 @@ active_log_changed_cb (LogviewManager *manager,
   }
 
   lines = logview_log_get_cached_lines (log);
-  buffer = gtk_text_buffer_new (window->priv->tag_table);
+  buffer = ctk_text_buffer_new (window->priv->tag_table);
 
   if (lines != NULL) {
     int i;
     GtkTextIter iter;
 
     /* update the text view to show the current lines */
-    gtk_text_buffer_get_end_iter (buffer, &iter);
+    ctk_text_buffer_get_end_iter (buffer, &iter);
 
     for (i = 0; lines[i]; i++) {
-      gtk_text_buffer_insert (buffer, &iter, lines[i], strlen (lines[i]));
-      gtk_text_iter_forward_to_end (&iter);
-      gtk_text_buffer_insert (buffer, &iter, "\n", 1);
-      gtk_text_iter_forward_char (&iter);
+      ctk_text_buffer_insert (buffer, &iter, lines[i], strlen (lines[i]));
+      ctk_text_iter_forward_to_end (&iter);
+      ctk_text_buffer_insert (buffer, &iter, "\n", 1);
+      ctk_text_iter_forward_char (&iter);
     }
 
     paint_timestamps (buffer, 1, logview_log_get_days_for_cached_lines (log));
@@ -1107,7 +1107,7 @@ active_log_changed_cb (LogviewManager *manager,
    * and will help us to distinguish the two cases of the following if
    * cause in the callback.
    */
-  gtk_text_view_set_buffer (GTK_TEXT_VIEW (window->priv->text_view), buffer);
+  ctk_text_view_set_buffer (GTK_TEXT_VIEW (window->priv->text_view), buffer);
   g_object_unref (buffer);
 }
 
@@ -1128,7 +1128,7 @@ tearoff_changed_cb (LogviewPrefs *prefs,
 {
   LogviewWindow *window = user_data;
 
-  gtk_ui_manager_set_add_tearoffs (window->priv->ui_manager, have_tearoffs);
+  ctk_ui_manager_set_add_tearoffs (window->priv->ui_manager, have_tearoffs);
 }
 
 static const struct {
@@ -1147,7 +1147,7 @@ key_press_event_cb (GtkWidget *widget,
                     gpointer user_data)
 {
   LogviewWindow *window = user_data;
-  guint modifier = event->state & gtk_accelerator_get_default_mod_mask ();
+  guint modifier = event->state & ctk_accelerator_get_default_mod_mask ();
   GtkAction *action;
   int i;
 
@@ -1157,9 +1157,9 @@ key_press_event_cb (GtkWidget *widget,
     if (event->keyval == extra_keybindings[i].keyval &&
         modifier == extra_keybindings[i].modifier) {
 
-      action = gtk_action_group_get_action (window->priv->action_group,
+      action = ctk_action_group_get_action (window->priv->action_group,
                                             extra_keybindings[i].action);
-      gtk_action_activate (action);
+      ctk_action_activate (action);
       return TRUE;
     }
   }
@@ -1179,46 +1179,46 @@ message_area_create_error_box (LogviewWindow *window,
   GtkWidget *primary_label;
   GtkWidget *secondary_label;
 
-  hbox_content = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
-  gtk_widget_show (hbox_content);
+  hbox_content = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
+  ctk_widget_show (hbox_content);
 
-  image = gtk_image_new_from_icon_name ("dialog-error",
+  image = ctk_image_new_from_icon_name ("dialog-error",
                                         GTK_ICON_SIZE_DIALOG);
-  gtk_widget_show (image);
-  gtk_box_pack_start (GTK_BOX (hbox_content), image, FALSE, FALSE, 0);
-  gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
-  gtk_widget_set_valign (image, GTK_ALIGN_START);
+  ctk_widget_show (image);
+  ctk_box_pack_start (GTK_BOX (hbox_content), image, FALSE, FALSE, 0);
+  ctk_widget_set_halign (image, GTK_ALIGN_CENTER);
+  ctk_widget_set_valign (image, GTK_ALIGN_START);
 
-  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-  gtk_widget_show (vbox);
-  gtk_box_pack_start (GTK_BOX (hbox_content), vbox, TRUE, TRUE, 0);
+  vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+  ctk_widget_show (vbox);
+  ctk_box_pack_start (GTK_BOX (hbox_content), vbox, TRUE, TRUE, 0);
 
-  primary_label = gtk_label_new (NULL);
-  gtk_widget_show (primary_label);
-  gtk_box_pack_start (GTK_BOX (vbox), primary_label, TRUE, TRUE, 0);
-  gtk_label_set_use_markup (GTK_LABEL (primary_label), TRUE);
-  gtk_label_set_line_wrap (GTK_LABEL (primary_label), TRUE);
-  gtk_label_set_xalign (GTK_LABEL (primary_label), 0.0);
-  gtk_label_set_yalign (GTK_LABEL (primary_label), 0.5);
-  gtk_widget_set_can_focus (primary_label, TRUE);
-  gtk_label_set_selectable (GTK_LABEL (primary_label), TRUE);
+  primary_label = ctk_label_new (NULL);
+  ctk_widget_show (primary_label);
+  ctk_box_pack_start (GTK_BOX (vbox), primary_label, TRUE, TRUE, 0);
+  ctk_label_set_use_markup (GTK_LABEL (primary_label), TRUE);
+  ctk_label_set_line_wrap (GTK_LABEL (primary_label), TRUE);
+  ctk_label_set_xalign (GTK_LABEL (primary_label), 0.0);
+  ctk_label_set_yalign (GTK_LABEL (primary_label), 0.5);
+  ctk_widget_set_can_focus (primary_label, TRUE);
+  ctk_label_set_selectable (GTK_LABEL (primary_label), TRUE);
 
   window->priv->message_primary = primary_label;
 
-  secondary_label = gtk_label_new (NULL);
-  gtk_widget_show (secondary_label);
-  gtk_box_pack_start (GTK_BOX (vbox), secondary_label, TRUE, TRUE, 0);
-  gtk_widget_set_can_focus (secondary_label, TRUE);
-  gtk_label_set_use_markup (GTK_LABEL (secondary_label), TRUE);
-  gtk_label_set_line_wrap (GTK_LABEL (secondary_label), TRUE);
-  gtk_label_set_selectable (GTK_LABEL (secondary_label), TRUE);
-  gtk_label_set_xalign (GTK_LABEL (secondary_label), 0.0);
-  gtk_label_set_yalign (GTK_LABEL (secondary_label), 0.5);
+  secondary_label = ctk_label_new (NULL);
+  ctk_widget_show (secondary_label);
+  ctk_box_pack_start (GTK_BOX (vbox), secondary_label, TRUE, TRUE, 0);
+  ctk_widget_set_can_focus (secondary_label, TRUE);
+  ctk_label_set_use_markup (GTK_LABEL (secondary_label), TRUE);
+  ctk_label_set_line_wrap (GTK_LABEL (secondary_label), TRUE);
+  ctk_label_set_selectable (GTK_LABEL (secondary_label), TRUE);
+  ctk_label_set_xalign (GTK_LABEL (secondary_label), 0.0);
+  ctk_label_set_yalign (GTK_LABEL (secondary_label), 0.5);
 
   window->priv->message_secondary = secondary_label;
 
-  gtk_container_add
-      (GTK_CONTAINER (gtk_info_bar_get_content_area
+  ctk_container_add
+      (GTK_CONTAINER (ctk_info_bar_get_content_area
                       (GTK_INFO_BAR (message_area))),
        hbox_content);
 }
@@ -1234,9 +1234,9 @@ message_area_set_labels (LogviewWindow *window,
   secondary_markup = g_markup_printf_escaped ("<small>%s</small>",
                                               secondary);
 
-  gtk_label_set_markup (GTK_LABEL (window->priv->message_primary),
+  ctk_label_set_markup (GTK_LABEL (window->priv->message_primary),
                         primary_markup);
-  gtk_label_set_markup (GTK_LABEL (window->priv->message_secondary),
+  ctk_label_set_markup (GTK_LABEL (window->priv->message_secondary),
                         secondary_markup);
 
   g_free (primary_markup);
@@ -1247,7 +1247,7 @@ static void
 message_area_response_cb (GtkInfoBar *message_area,
                           int response_id, gpointer user_data)
 {
-  gtk_widget_hide (GTK_WIDGET (message_area));
+  ctk_widget_hide (GTK_WIDGET (message_area));
 
   g_signal_handlers_disconnect_by_func (message_area,
                                         message_area_response_cb,
@@ -1284,8 +1284,8 @@ logview_window_init (LogviewWindow *logview)
 
   GtkStyleContext *s_context;
 
-  s_context = gtk_widget_get_style_context (GTK_WIDGET (logview));
-  gtk_style_context_add_class (s_context, "logview-window");
+  s_context = ctk_widget_get_style_context (GTK_WIDGET (logview));
+  ctk_style_context_add_class (s_context, "logview-window");
 
   priv = logview->priv = logview_window_get_instance_private (logview);
   priv->prefs = logview_prefs_get ();
@@ -1293,25 +1293,25 @@ logview_window_init (LogviewWindow *logview)
   priv->monitor_id = 0;
 
   logview_prefs_get_stored_window_size (priv->prefs, &width, &height);
-  gtk_window_set_default_size (GTK_WINDOW (logview), width, height);
+  ctk_window_set_default_size (GTK_WINDOW (logview), width, height);
 
-  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-  gtk_container_add (GTK_CONTAINER (logview), vbox);
+  vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+  ctk_container_add (GTK_CONTAINER (logview), vbox);
 
   /* create menus */
-  action_group = gtk_action_group_new ("LogviewMenuActions");
-  gtk_action_group_set_translation_domain (action_group, NULL);
-  gtk_action_group_add_actions (action_group, entries, G_N_ELEMENTS (entries), logview);
-  gtk_action_group_add_toggle_actions (action_group, toggle_entries, G_N_ELEMENTS (toggle_entries), logview);
+  action_group = ctk_action_group_new ("LogviewMenuActions");
+  ctk_action_group_set_translation_domain (action_group, NULL);
+  ctk_action_group_add_actions (action_group, entries, G_N_ELEMENTS (entries), logview);
+  ctk_action_group_add_toggle_actions (action_group, toggle_entries, G_N_ELEMENTS (toggle_entries), logview);
   priv->action_group = action_group;
 
-  priv->ui_manager = gtk_ui_manager_new ();
+  priv->ui_manager = ctk_ui_manager_new ();
 
-  gtk_ui_manager_insert_action_group (priv->ui_manager, action_group, 0);
-  accel_group = gtk_ui_manager_get_accel_group (priv->ui_manager);
-  gtk_window_add_accel_group (GTK_WINDOW (logview), accel_group);
+  ctk_ui_manager_insert_action_group (priv->ui_manager, action_group, 0);
+  accel_group = ctk_ui_manager_get_accel_group (priv->ui_manager);
+  ctk_window_add_accel_group (GTK_WINDOW (logview), accel_group);
 
-  res = gtk_ui_manager_add_ui_from_resource (priv->ui_manager,
+  res = ctk_ui_manager_add_ui_from_resource (priv->ui_manager,
                                              "/org/cafe/system-log/logview-toolbar.xml",
                                              &error);
 
@@ -1322,36 +1322,36 @@ logview_window_init (LogviewWindow *logview)
     return;
   }
 
-  gtk_ui_manager_set_add_tearoffs (priv->ui_manager,
+  ctk_ui_manager_set_add_tearoffs (priv->ui_manager,
                                    logview_prefs_get_have_tearoff (priv->prefs));
 
-  w = gtk_ui_manager_get_widget (priv->ui_manager, "/LogviewMenu");
-  gtk_box_pack_start (GTK_BOX (vbox), w, FALSE, FALSE, 0);
-  gtk_widget_show (w);
+  w = ctk_ui_manager_get_widget (priv->ui_manager, "/LogviewMenu");
+  ctk_box_pack_start (GTK_BOX (vbox), w, FALSE, FALSE, 0);
+  ctk_widget_show (w);
 
   /* panes */
-  hpaned = gtk_paned_new (GTK_ORIENTATION_HORIZONTAL);
-  gtk_box_pack_start (GTK_BOX (vbox), hpaned, TRUE, TRUE, 0);
+  hpaned = ctk_paned_new (GTK_ORIENTATION_HORIZONTAL);
+  ctk_box_pack_start (GTK_BOX (vbox), hpaned, TRUE, TRUE, 0);
   priv->hpaned = hpaned;
-  gtk_widget_show (hpaned);
+  ctk_widget_show (hpaned);
 
   /* first pane : sidebar (list of logs) */
-  priv->sidebar = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-  gtk_widget_show (priv->sidebar);
+  priv->sidebar = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+  ctk_widget_show (priv->sidebar);
 
   /* first pane: log list */
-  w = gtk_scrolled_window_new (NULL, NULL);
-  gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (w),
+  w = ctk_scrolled_window_new (NULL, NULL);
+  ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (w),
                                   GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
-  gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (w),
+  ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (w),
                                        GTK_SHADOW_ETCHED_IN);
 
   priv->loglist = logview_loglist_new ();
-  gtk_container_add (GTK_CONTAINER (w), priv->loglist);
-  gtk_box_pack_start (GTK_BOX (priv->sidebar), w, TRUE, TRUE, 0);
-  gtk_paned_pack1 (GTK_PANED (hpaned), priv->sidebar, FALSE, FALSE);
-  gtk_widget_show (w);
-  gtk_widget_show (priv->loglist);
+  ctk_container_add (GTK_CONTAINER (w), priv->loglist);
+  ctk_box_pack_start (GTK_BOX (priv->sidebar), w, TRUE, TRUE, 0);
+  ctk_paned_pack1 (GTK_PANED (hpaned), priv->sidebar, FALSE, FALSE);
+  ctk_widget_show (w);
+  ctk_widget_show (priv->loglist);
 
   g_signal_connect (priv->loglist, "day_selected",
                     G_CALLBACK (loglist_day_selected_cb), logview);
@@ -1359,33 +1359,33 @@ logview_window_init (LogviewWindow *logview)
                     G_CALLBACK (loglist_day_cleared_cb), logview);
 
   /* second pane: log */
-  main_view = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-  gtk_paned_pack2 (GTK_PANED (hpaned), main_view, TRUE, TRUE);
+  main_view = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+  ctk_paned_pack2 (GTK_PANED (hpaned), main_view, TRUE, TRUE);
 
   /* second pane: error message area */
-  priv->message_area = gtk_info_bar_new ();
+  priv->message_area = ctk_info_bar_new ();
   message_area_create_error_box (logview, priv->message_area);
-  gtk_info_bar_add_button (GTK_INFO_BAR (priv->message_area),
-                           "gtk-close", GTK_RESPONSE_CLOSE);
-  gtk_box_pack_start (GTK_BOX (main_view), priv->message_area, FALSE, FALSE, 0);
+  ctk_info_bar_add_button (GTK_INFO_BAR (priv->message_area),
+                           "ctk-close", GTK_RESPONSE_CLOSE);
+  ctk_box_pack_start (GTK_BOX (main_view), priv->message_area, FALSE, FALSE, 0);
 
   /* second pane: text view */
-  w = gtk_scrolled_window_new (NULL, NULL);
-  gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (w),
+  w = ctk_scrolled_window_new (NULL, NULL);
+  ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (w),
                                   GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
-  gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (w), GTK_SHADOW_IN);
-  gtk_box_pack_start (GTK_BOX (main_view), w, TRUE, TRUE, 0);
-  gtk_widget_show (w);
+  ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (w), GTK_SHADOW_IN);
+  ctk_box_pack_start (GTK_BOX (main_view), w, TRUE, TRUE, 0);
+  ctk_widget_show (w);
 
-  priv->tag_table = gtk_text_tag_table_new ();
+  priv->tag_table = ctk_text_tag_table_new ();
   populate_tag_table (priv->tag_table);
 
-  priv->text_view = gtk_text_view_new ();
+  priv->text_view = ctk_text_view_new ();
   g_object_set (priv->text_view, "editable", FALSE, NULL);
   populate_style_tag_table (logview);
 
-  gtk_container_add (GTK_CONTAINER (w), priv->text_view);
-  gtk_widget_show (priv->text_view);
+  ctk_container_add (GTK_CONTAINER (w), priv->text_view);
+  ctk_widget_show (priv->text_view);
 
   /* use the desktop monospace font */
   monospace_font_name = logview_prefs_get_monospace_font_name (priv->prefs);
@@ -1393,7 +1393,7 @@ logview_window_init (LogviewWindow *logview)
   g_free (monospace_font_name);
 
   /* remember the original font size */
-  context = gtk_widget_get_pango_context (priv->text_view);
+  context = ctk_widget_get_pango_context (priv->text_view);
   fontdesc = pango_context_get_font_description (context);
   priv->original_fontsize = pango_font_description_get_size (fontdesc) / PANGO_SCALE;
 
@@ -1408,19 +1408,19 @@ logview_window_init (LogviewWindow *logview)
   }
 
   /* version selector */
-  priv->version_bar = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-  gtk_container_set_border_width (GTK_CONTAINER (priv->version_bar), 3);
-  priv->version_selector = gtk_combo_box_text_new ();
+  priv->version_bar = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+  ctk_container_set_border_width (GTK_CONTAINER (priv->version_bar), 3);
+  priv->version_selector = ctk_combo_box_text_new ();
   g_signal_connect (priv->version_selector, "changed",
                     G_CALLBACK (logview_version_selector_changed), logview);
-  w = gtk_label_new (_("Version: "));
+  w = ctk_label_new (_("Version: "));
 
-  gtk_box_pack_end (GTK_BOX (priv->version_bar), priv->version_selector, FALSE, FALSE, 0);
-  gtk_box_pack_end (GTK_BOX (priv->version_bar), w, FALSE, FALSE, 0);
-  gtk_box_pack_end (GTK_BOX (main_view), priv->version_bar, FALSE, FALSE, 0);
+  ctk_box_pack_end (GTK_BOX (priv->version_bar), priv->version_selector, FALSE, FALSE, 0);
+  ctk_box_pack_end (GTK_BOX (priv->version_bar), w, FALSE, FALSE, 0);
+  ctk_box_pack_end (GTK_BOX (main_view), priv->version_bar, FALSE, FALSE, 0);
 
   priv->find_bar = logview_findbar_new ();
-  gtk_box_pack_end (GTK_BOX (main_view), priv->find_bar, FALSE, FALSE, 0);
+  ctk_box_pack_end (GTK_BOX (main_view), priv->find_bar, FALSE, FALSE, 0);
 
   g_signal_connect (priv->find_bar, "previous",
                     G_CALLBACK (findbar_previous_cb), logview);
@@ -1446,22 +1446,22 @@ logview_window_init (LogviewWindow *logview)
                     G_CALLBACK (key_press_event_cb), logview);
 
   /* status area at bottom */
-  priv->statusbar = gtk_statusbar_new ();
-	gtk_widget_set_margin_top (GTK_WIDGET (logview->priv->statusbar), 0);
-	gtk_widget_set_margin_bottom (GTK_WIDGET (logview->priv->statusbar), 0);
+  priv->statusbar = ctk_statusbar_new ();
+	ctk_widget_set_margin_top (GTK_WIDGET (logview->priv->statusbar), 0);
+	ctk_widget_set_margin_bottom (GTK_WIDGET (logview->priv->statusbar), 0);
 
-  gtk_box_pack_start (GTK_BOX (vbox), priv->statusbar, FALSE, FALSE, 0);
-  gtk_widget_show (priv->statusbar);
+  ctk_box_pack_start (GTK_BOX (vbox), priv->statusbar, FALSE, FALSE, 0);
+  ctk_widget_show (priv->statusbar);
 
   /* Filter menu */
-  priv->filter_action_group = gtk_action_group_new ("ActionGroupFilter");
-  gtk_ui_manager_insert_action_group (priv->ui_manager, priv->filter_action_group,
+  priv->filter_action_group = ctk_action_group_new ("ActionGroupFilter");
+  ctk_ui_manager_insert_action_group (priv->ui_manager, priv->filter_action_group,
                                       1);
   priv->active_filters = NULL;
   update_filter_menu (logview);
 
-  gtk_widget_show (vbox);
-  gtk_widget_show (main_view);
+  ctk_widget_show (vbox);
+  ctk_widget_show (main_view);
 }
 
 static void
@@ -1501,7 +1501,7 @@ logview_window_add_error (LogviewWindow *window,
   message_area_set_labels (window,
                            primary, secondary);
 
-  gtk_widget_show (priv->message_area);
+  ctk_widget_show (priv->message_area);
 
   g_signal_connect (priv->message_area, "response",
                     G_CALLBACK (message_area_response_cb), window);
@@ -1534,7 +1534,7 @@ logview_window_add_errors (LogviewWindow *window,
 
   message_area_set_labels (window, primary, secondary);
 
-  gtk_widget_show (window->priv->message_area);
+  ctk_widget_show (window->priv->message_area);
 
   g_signal_connect (window->priv->message_area, "response",
                     G_CALLBACK (message_area_response_cb), window);

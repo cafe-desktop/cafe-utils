@@ -34,7 +34,7 @@
 #ifndef __BAOBAB_RINGSCHART_H__
 #define __BAOBAB_RINGSCHART_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include "baobab-chart.h"
 
 G_BEGIN_DECLS

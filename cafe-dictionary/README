@@ -10,7 +10,7 @@ data/
 
 docs/
   reference/
-	gtk-doc magic needed for the Gdict reference guide.
+	ctk-doc magic needed for the Gdict reference guide.
 
 help/
 	the help for the application and the applet.

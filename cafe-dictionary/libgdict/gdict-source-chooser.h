@@ -20,7 +20,7 @@
 #ifndef __GDICT_SOURCE_CHOOSER_H__
 #define __GDICT_SOURCE_CHOOSER_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include "gdict-source-loader.h"
 
 G_BEGIN_DECLS

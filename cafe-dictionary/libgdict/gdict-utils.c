@@ -36,7 +36,7 @@
 
 #include <glib.h>
 #include <glib/gi18n-lib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "gdict-context-private.h"
 #include "gdict-debug.h"
@@ -253,23 +253,23 @@ show_error_dialog (GtkWindow   *parent,
 {
   GtkWidget *dialog;
 
-  dialog = gtk_message_dialog_new (parent,
+  dialog = ctk_message_dialog_new (parent,
   				   GTK_DIALOG_DESTROY_WITH_PARENT,
   				   GTK_MESSAGE_ERROR,
   				   GTK_BUTTONS_OK,
   				   "%s", message);
-  gtk_window_set_title (GTK_WINDOW (dialog), "");
+  ctk_window_set_title (GTK_WINDOW (dialog), "");
 
   if (detail)
-    gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
+    ctk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
   					      "%s", detail);
 
-  if (parent && gtk_window_get_group (parent))
-    gtk_window_group_add_window (gtk_window_get_group (parent), GTK_WINDOW (dialog));
+  if (parent && ctk_window_get_group (parent))
+    ctk_window_group_add_window (ctk_window_get_group (parent), GTK_WINDOW (dialog));
 
-  gtk_dialog_run (GTK_DIALOG (dialog));
+  ctk_dialog_run (GTK_DIALOG (dialog));
 
-  gtk_widget_destroy (dialog);
+  ctk_widget_destroy (dialog);
 }
 
 /* find the toplevel widget for @widget */
@@ -278,8 +278,8 @@ get_toplevel_window (GtkWidget *widget)
 {
   GtkWidget *toplevel;
 
-  toplevel = gtk_widget_get_toplevel (widget);
-  if (!gtk_widget_is_toplevel (toplevel))
+  toplevel = ctk_widget_get_toplevel (widget);
+  if (!ctk_widget_is_toplevel (toplevel))
     return NULL;
   else
     return GTK_WINDOW (toplevel);
