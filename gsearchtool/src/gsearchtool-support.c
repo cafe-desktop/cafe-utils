@@ -672,7 +672,7 @@ gsearchtool_load_thumbnail_frame (void)
 	image_path = gsearchtool_pixmap_file("thumbnail_frame.png");
 
 	if (image_path != NULL){
-		pixbuf = cdk_pixbuf_new_from_file(image_path, NULL);
+		pixbuf = gdk_pixbuf_new_from_file(image_path, NULL);
 	}
 	g_free(image_path);
 	return pixbuf;
@@ -696,7 +696,7 @@ gsearchtool_draw_frame_row (GdkPixbuf * frame_image,
 	h_offset = 0;
 	while (remaining_width > 0) {
 		slab_width = remaining_width > source_width ? source_width : remaining_width;
-		cdk_pixbuf_copy_area (frame_image, left_offset, source_v_position, slab_width,
+		gdk_pixbuf_copy_area (frame_image, left_offset, source_v_position, slab_width,
 		                      height, result_pixbuf, left_offset + h_offset, dest_v_position);
 		remaining_width -= slab_width;
 		h_offset += slab_width;
@@ -721,7 +721,7 @@ gsearchtool_draw_frame_column (GdkPixbuf * frame_image,
 	v_offset = 0;
 	while (remaining_height > 0) {
 		slab_height = remaining_height > source_height ? source_height : remaining_height;
-		cdk_pixbuf_copy_area (frame_image, source_h_position, top_offset, width, slab_height,
+		gdk_pixbuf_copy_area (frame_image, source_h_position, top_offset, width, slab_height,
 		                      result_pixbuf, dest_h_position, top_offset + v_offset);
 		remaining_height -= slab_height;
 		v_offset += slab_height;
@@ -743,18 +743,18 @@ gsearchtool_stretch_frame_image (GdkPixbuf *frame_image,
 	gint target_width, target_frame_width;
 	gint target_height, target_frame_height;
 
-	frame_width = cdk_pixbuf_get_width (frame_image);
-	frame_height = cdk_pixbuf_get_height (frame_image);
+	frame_width = gdk_pixbuf_get_width (frame_image);
+	frame_height = gdk_pixbuf_get_height (frame_image);
 
 	if (fill_flag) {
-		result_pixbuf = cdk_pixbuf_scale_simple (frame_image, dest_width, dest_height, CDK_INTERP_NEAREST);
+		result_pixbuf = gdk_pixbuf_scale_simple (frame_image, dest_width, dest_height, CDK_INTERP_NEAREST);
 	} else {
-		result_pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB, TRUE, 8, dest_width, dest_height);
+		result_pixbuf = gdk_pixbuf_new (CDK_COLORSPACE_RGB, TRUE, 8, dest_width, dest_height);
 	}
 
 	/* clear the new pixbuf */
 	if (fill_flag == FALSE) {
-		cdk_pixbuf_fill (result_pixbuf, 0xffffffff);
+		gdk_pixbuf_fill (result_pixbuf, 0xffffffff);
 	}
 
 	target_width  = dest_width - left_offset - right_offset;
@@ -764,18 +764,18 @@ gsearchtool_stretch_frame_image (GdkPixbuf *frame_image,
 	target_frame_height = frame_height - top_offset - bottom_offset;
 
 	/* Draw the left top corner  and top row */
-	cdk_pixbuf_copy_area (frame_image, 0, 0, left_offset, top_offset, result_pixbuf, 0,  0);
+	gdk_pixbuf_copy_area (frame_image, 0, 0, left_offset, top_offset, result_pixbuf, 0,  0);
 	gsearchtool_draw_frame_row (frame_image, target_width, target_frame_width, 0, 0,
 	                            result_pixbuf, left_offset, top_offset);
 
 	/* Draw the right top corner and left column */
-	cdk_pixbuf_copy_area (frame_image, frame_width - right_offset, 0, right_offset, top_offset,
+	gdk_pixbuf_copy_area (frame_image, frame_width - right_offset, 0, right_offset, top_offset,
 	                      result_pixbuf, dest_width - right_offset,  0);
 	gsearchtool_draw_frame_column (frame_image, target_height, target_frame_height, 0, 0,
 	                               result_pixbuf, top_offset, left_offset);
 
 	/* Draw the bottom right corner and bottom row */
-	cdk_pixbuf_copy_area (frame_image, frame_width - right_offset, frame_height - bottom_offset,
+	gdk_pixbuf_copy_area (frame_image, frame_width - right_offset, frame_height - bottom_offset,
 	                      right_offset, bottom_offset, result_pixbuf, dest_width - right_offset,
 			      dest_height - bottom_offset);
 	gsearchtool_draw_frame_row (frame_image, target_width, target_frame_width,
@@ -783,7 +783,7 @@ gsearchtool_stretch_frame_image (GdkPixbuf *frame_image,
 				    result_pixbuf, left_offset, bottom_offset);
 
 	/* Draw the bottom left corner and the right column */
-	cdk_pixbuf_copy_area (frame_image, 0, frame_height - bottom_offset, left_offset, bottom_offset,
+	gdk_pixbuf_copy_area (frame_image, 0, frame_height - bottom_offset, left_offset, bottom_offset,
 	                      result_pixbuf, 0,  dest_height - bottom_offset);
 	gsearchtool_draw_frame_column (frame_image, target_height, target_frame_height,
 	                               frame_width - right_offset, dest_width - right_offset,
@@ -803,8 +803,8 @@ gsearchtool_embed_image_in_frame (GdkPixbuf * source_image,
 	gint source_width, source_height;
 	gint dest_width, dest_height;
 
-	source_width = cdk_pixbuf_get_width (source_image);
-	source_height = cdk_pixbuf_get_height (source_image);
+	source_width = gdk_pixbuf_get_width (source_image);
+	source_height = gdk_pixbuf_get_height (source_image);
 
 	dest_width = source_width + left_offset + right_offset;
 	dest_height = source_height + top_offset + bottom_offset;
@@ -812,7 +812,7 @@ gsearchtool_embed_image_in_frame (GdkPixbuf * source_image,
 	result_pixbuf = gsearchtool_stretch_frame_image (frame_image, left_offset, top_offset, right_offset, bottom_offset,
 						         dest_width, dest_height, FALSE);
 
-	cdk_pixbuf_copy_area (source_image, 0, 0, source_width, source_height, result_pixbuf, left_offset, top_offset);
+	gdk_pixbuf_copy_area (source_image, 0, 0, source_width, source_height, result_pixbuf, left_offset, top_offset);
 
 	return result_pixbuf;
 }
@@ -849,26 +849,26 @@ gsearchtool_get_thumbnail_image (const gchar * thumbnail)
 			gint scale_x;
 			gint scale_y;
 
-			thumbnail_pixbuf = cdk_pixbuf_new_from_file (thumbnail, NULL);
+			thumbnail_pixbuf = gdk_pixbuf_new_from_file (thumbnail, NULL);
 			gsearchtool_thumbnail_frame_image (&thumbnail_pixbuf);
 
-			if (cdk_pixbuf_get_width (thumbnail_pixbuf) > ICON_SIZE) {
-				scale_factor_x = (gfloat) ICON_SIZE / (gfloat) cdk_pixbuf_get_width (thumbnail_pixbuf);
+			if (gdk_pixbuf_get_width (thumbnail_pixbuf) > ICON_SIZE) {
+				scale_factor_x = (gfloat) ICON_SIZE / (gfloat) gdk_pixbuf_get_width (thumbnail_pixbuf);
 			}
-			if (cdk_pixbuf_get_height (thumbnail_pixbuf) > ICON_SIZE) {
-				scale_factor_y = (gfloat) ICON_SIZE / (gfloat) cdk_pixbuf_get_height (thumbnail_pixbuf);
+			if (gdk_pixbuf_get_height (thumbnail_pixbuf) > ICON_SIZE) {
+				scale_factor_y = (gfloat) ICON_SIZE / (gfloat) gdk_pixbuf_get_height (thumbnail_pixbuf);
 			}
 
-			if (cdk_pixbuf_get_width (thumbnail_pixbuf) > cdk_pixbuf_get_height (thumbnail_pixbuf)) {
+			if (gdk_pixbuf_get_width (thumbnail_pixbuf) > gdk_pixbuf_get_height (thumbnail_pixbuf)) {
 				scale_x = ICON_SIZE;
-				scale_y = (gint) (cdk_pixbuf_get_height (thumbnail_pixbuf) * scale_factor_x);
+				scale_y = (gint) (gdk_pixbuf_get_height (thumbnail_pixbuf) * scale_factor_x);
 			}
 			else {
-				scale_x = (gint) (cdk_pixbuf_get_width (thumbnail_pixbuf) * scale_factor_y);
+				scale_x = (gint) (gdk_pixbuf_get_width (thumbnail_pixbuf) * scale_factor_y);
 				scale_y = ICON_SIZE;
 			}
 
-			pixbuf = cdk_pixbuf_scale_simple (thumbnail_pixbuf, scale_x, scale_y, CDK_INTERP_BILINEAR);
+			pixbuf = gdk_pixbuf_scale_simple (thumbnail_pixbuf, scale_x, scale_y, CDK_INTERP_BILINEAR);
 			g_object_unref (thumbnail_pixbuf);
 		}
 	}

@@ -77,11 +77,11 @@ on_preview_draw (CtkWidget      *drawing_area,
   height = ctk_widget_get_allocated_height (drawing_area);
 
   if (!dialog->preview_image ||
-      cdk_pixbuf_get_width (dialog->preview_image) != width ||
-      cdk_pixbuf_get_height (dialog->preview_image) != height)
+      gdk_pixbuf_get_width (dialog->preview_image) != width ||
+      gdk_pixbuf_get_height (dialog->preview_image) != height)
     {
       g_clear_object (&dialog->preview_image);
-      dialog->preview_image = cdk_pixbuf_scale_simple (dialog->screenshot,
+      dialog->preview_image = gdk_pixbuf_scale_simple (dialog->screenshot,
                                                        width,
                                                        height,
                                                        CDK_INTERP_BILINEAR);
@@ -213,8 +213,8 @@ screenshot_dialog_new (GdkPixbuf *screenshot,
 
   ctk_builder_set_translation_domain (dialog->ui, GETTEXT_PACKAGE);
 
-  width = cdk_pixbuf_get_width (screenshot);
-  height = cdk_pixbuf_get_height (screenshot);
+  width = gdk_pixbuf_get_width (screenshot);
+  height = gdk_pixbuf_get_height (screenshot);
 
   width /= 5;
   height /= 5;
@@ -235,8 +235,8 @@ screenshot_dialog_new (GdkPixbuf *screenshot,
 
   ctk_widget_set_size_request (preview_darea, width, height);
   ctk_aspect_frame_set (CTK_ASPECT_FRAME (aspect_frame), 0.0, 0.5,
-			cdk_pixbuf_get_width (screenshot)/
-			(gfloat) cdk_pixbuf_get_height (screenshot),
+			gdk_pixbuf_get_width (screenshot)/
+			(gfloat) gdk_pixbuf_get_height (screenshot),
 			FALSE);
   g_signal_connect (toplevel, "key_press_event", G_CALLBACK (on_toplevel_key_press_event), dialog);
   g_signal_connect (preview_darea, "draw", G_CALLBACK (on_preview_draw), dialog);

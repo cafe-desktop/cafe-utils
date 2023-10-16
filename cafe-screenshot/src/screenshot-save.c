@@ -213,7 +213,7 @@ screenshot_save_start (GdkPixbuf    *pixbuf,
       close (parent_exit_notification [1]);
       close (pipe_from_child [0]);
 
-      if (! cdk_pixbuf_save (pixbuf, tmp_filename,
+      if (! gdk_pixbuf_save (pixbuf, tmp_filename,
 			     "png", &error,
 			     "tEXt::Software", "cafe-screenshot",
 			     NULL))

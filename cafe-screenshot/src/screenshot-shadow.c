@@ -121,25 +121,25 @@ create_effect (GdkPixbuf *src,
 
   guchar *src_pixels, *dest_pixels;
 
-  src_has_alpha =  cdk_pixbuf_get_has_alpha (src);
+  src_has_alpha =  gdk_pixbuf_get_has_alpha (src);
 
-  src_width = cdk_pixbuf_get_width (src);
-  src_height = cdk_pixbuf_get_height (src);
+  src_width = gdk_pixbuf_get_width (src);
+  src_height = gdk_pixbuf_get_height (src);
   dest_width = src_width + 2 * radius + offset;
   dest_height = src_height + 2 * radius + offset;
 
-  dest = cdk_pixbuf_new (cdk_pixbuf_get_colorspace (src),
+  dest = gdk_pixbuf_new (gdk_pixbuf_get_colorspace (src),
 			 TRUE,
-			 cdk_pixbuf_get_bits_per_sample (src),
+			 gdk_pixbuf_get_bits_per_sample (src),
 			 dest_width, dest_height);
 
-  cdk_pixbuf_fill (dest, 0);
+  gdk_pixbuf_fill (dest, 0);
 
-  src_pixels = cdk_pixbuf_get_pixels (src);
-  src_rowstride = cdk_pixbuf_get_rowstride (src);
+  src_pixels = gdk_pixbuf_get_pixels (src);
+  src_rowstride = gdk_pixbuf_get_rowstride (src);
 
-  dest_pixels = cdk_pixbuf_get_pixels (dest);
-  dest_rowstride = cdk_pixbuf_get_rowstride (dest);
+  dest_pixels = gdk_pixbuf_get_pixels (dest);
+  dest_rowstride = gdk_pixbuf_get_rowstride (dest);
 
   for (y = 0; y < dest_height; y++)
     {
@@ -198,10 +198,10 @@ screenshot_add_shadow (GdkPixbuf **src)
   if (dest == NULL)
 	  return;
 
-  cdk_pixbuf_composite (*src, dest,
+  gdk_pixbuf_composite (*src, dest,
 			BLUR_RADIUS, BLUR_RADIUS,
-			cdk_pixbuf_get_width (*src),
-			cdk_pixbuf_get_height (*src),
+			gdk_pixbuf_get_width (*src),
+			gdk_pixbuf_get_height (*src),
 			BLUR_RADIUS, BLUR_RADIUS, 1.0, 1.0,
 			CDK_INTERP_BILINEAR, 255);
   g_object_unref (*src);
@@ -224,10 +224,10 @@ screenshot_add_border (GdkPixbuf **src)
   if (dest == NULL)
 	  return;
 
-  cdk_pixbuf_composite (*src, dest,
+  gdk_pixbuf_composite (*src, dest,
 			OUTLINE_RADIUS, OUTLINE_RADIUS,
-			cdk_pixbuf_get_width (*src),
-			cdk_pixbuf_get_height (*src),
+			gdk_pixbuf_get_width (*src),
+			gdk_pixbuf_get_height (*src),
 			OUTLINE_RADIUS, OUTLINE_RADIUS, 1.0, 1.0,
 			CDK_INTERP_BILINEAR, 255);
   g_object_unref (*src);
