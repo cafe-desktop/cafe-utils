@@ -502,15 +502,15 @@ blank_rectangle_in_pixbuf (GdkPixbuf *pixbuf, CdkRectangle *rect)
   guchar *row;
   gboolean has_alpha;
 
-  g_assert (cdk_pixbuf_get_colorspace (pixbuf) == CDK_COLORSPACE_RGB);
+  g_assert (gdk_pixbuf_get_colorspace (pixbuf) == CDK_COLORSPACE_RGB);
 
   x2 = rect->x + rect->width;
   y2 = rect->y + rect->height;
 
-  pixels = cdk_pixbuf_get_pixels (pixbuf);
-  rowstride = cdk_pixbuf_get_rowstride (pixbuf);
-  has_alpha = cdk_pixbuf_get_has_alpha (pixbuf);
-  n_channels = cdk_pixbuf_get_n_channels (pixbuf);
+  pixels = gdk_pixbuf_get_pixels (pixbuf);
+  rowstride = gdk_pixbuf_get_rowstride (pixbuf);
+  has_alpha = gdk_pixbuf_get_has_alpha (pixbuf);
+  n_channels = gdk_pixbuf_get_n_channels (pixbuf);
 
   for (y = rect->y; y < y2; y++)
     {
@@ -541,8 +541,8 @@ blank_region_in_pixbuf (GdkPixbuf *pixbuf, cairo_region_t *region)
 
   n_rects = cairo_region_num_rectangles (region);
 
-  width = cdk_pixbuf_get_width (pixbuf);
-  height = cdk_pixbuf_get_height (pixbuf);
+  width = gdk_pixbuf_get_width (pixbuf);
+  height = gdk_pixbuf_get_height (pixbuf);
 
   pixbuf_rect.x	     = 0;
   pixbuf_rect.y	     = 0;
@@ -664,7 +664,7 @@ screenshot_get_pixbuf (CdkWindow    *window,
       height = rectangle->height;
     }
 
-  screenshot = cdk_pixbuf_get_from_window (root,
+  screenshot = gdk_pixbuf_get_from_window (root,
                                            x_orig, y_orig,
                                            width, height);
 
@@ -692,7 +692,7 @@ screenshot_get_pixbuf (CdkWindow    *window,
                                         &rectangle_order);
       if (rectangles && rectangle_count > 0 && window != root)
         {
-          gboolean has_alpha = cdk_pixbuf_get_has_alpha (screenshot);
+          gboolean has_alpha = gdk_pixbuf_get_has_alpha (screenshot);
 
           if (scale)
             {
@@ -700,8 +700,8 @@ screenshot_get_pixbuf (CdkWindow    *window,
               height *= scale;
             }
 
-          tmp = cdk_pixbuf_new (CDK_COLORSPACE_RGB, TRUE, 8, width, height);
-          cdk_pixbuf_fill (tmp, 0);
+          tmp = gdk_pixbuf_new (CDK_COLORSPACE_RGB, TRUE, 8, width, height);
+          gdk_pixbuf_fill (tmp, 0);
 
           for (i = 0; i < rectangle_count; i++)
             {
@@ -745,11 +745,11 @@ screenshot_get_pixbuf (CdkWindow    *window,
                   guchar *src_pixels, *dest_pixels;
                   gint x;
 
-                  src_pixels = cdk_pixbuf_get_pixels (screenshot)
-                             + y * cdk_pixbuf_get_rowstride (screenshot)
+                  src_pixels = gdk_pixbuf_get_pixels (screenshot)
+                             + y * gdk_pixbuf_get_rowstride (screenshot)
                              + rec_x * (has_alpha ? 4 : 3);
-                  dest_pixels = cdk_pixbuf_get_pixels (tmp)
-                              + y * cdk_pixbuf_get_rowstride (tmp)
+                  dest_pixels = gdk_pixbuf_get_pixels (tmp)
+                              + y * gdk_pixbuf_get_rowstride (tmp)
                               + rec_x * 4;
 
                   for (x = 0; x < rec_width; x++)
@@ -795,8 +795,8 @@ screenshot_get_pixbuf (CdkWindow    *window,
           device = cdk_seat_get_pointer (seat);
 
           cdk_window_get_device_position (window, device, &cx, &cy, NULL);
-          sscanf (cdk_pixbuf_get_option (cursor_pixbuf, "x_hot"), "%d", &xhot);
-          sscanf (cdk_pixbuf_get_option (cursor_pixbuf, "y_hot"), "%d", &yhot);
+          sscanf (gdk_pixbuf_get_option (cursor_pixbuf, "x_hot"), "%d", &xhot);
+          sscanf (gdk_pixbuf_get_option (cursor_pixbuf, "y_hot"), "%d", &yhot);
 
           if (scale)
             {
@@ -813,13 +813,13 @@ screenshot_get_pixbuf (CdkWindow    *window,
           /* in r2 we have the cursor window coordinates */
           r2.x = cx + x_real_orig;
           r2.y = cy + y_real_orig;
-          r2.width = cdk_pixbuf_get_width (cursor_pixbuf);
-          r2.height = cdk_pixbuf_get_height (cursor_pixbuf);
+          r2.width = gdk_pixbuf_get_width (cursor_pixbuf);
+          r2.height = gdk_pixbuf_get_height (cursor_pixbuf);
 
           /* see if the pointer is inside the window */
           if (cdk_rectangle_intersect (&r1, &r2, &r2))
             {
-              cdk_pixbuf_composite (cursor_pixbuf, screenshot,
+              gdk_pixbuf_composite (cursor_pixbuf, screenshot,
                                     cx - xhot, cy - yhot,
                                     r2.width, r2.height,
                                     cx - xhot, cy - yhot,

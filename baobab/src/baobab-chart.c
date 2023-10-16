@@ -1174,7 +1174,7 @@ baobab_chart_get_pixbuf (CtkWidget *widget)
 		h = cdk_window_get_height(ctk_widget_get_window(widget));
 
 
-  pixbuf = cdk_pixbuf_get_from_window (
+  pixbuf = gdk_pixbuf_get_from_window (
                                          ctk_widget_get_window (widget),
                                          0, 0,
                                          w, h);
@@ -1764,7 +1764,7 @@ baobab_chart_save_snapshot (CtkWidget *chart)
           filename = g_strjoin (".", filename, sel_type, NULL);
           g_free (tmp);
         }
-      cdk_pixbuf_save (pixbuf, filename, sel_type, NULL, NULL);
+      gdk_pixbuf_save (pixbuf, filename, sel_type, NULL, NULL);
 
       g_free (filename);
       g_free (sel_type);
