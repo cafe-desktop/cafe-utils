@@ -352,7 +352,7 @@ add_popupmenu_item (CtkMenu *pmenu, const gchar *label, const gchar *icon_name, 
 }
 
 void
-popupmenu_list (CtkTreePath *path, GdkEventButton *event, gboolean can_trash)
+popupmenu_list (CtkTreePath *path, CdkEventButton *event, gboolean can_trash)
 {
 	CtkWidget *pmenu;
 
@@ -372,7 +372,7 @@ popupmenu_list (CtkTreePath *path, GdkEventButton *event, gboolean can_trash)
 
 	ctk_widget_show_all (pmenu);
 	ctk_menu_popup_at_pointer (CTK_MENU (pmenu),
-	                           (const GdkEvent*) event);
+	                           (const CdkEvent*) event);
 }
 
 void

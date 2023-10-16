@@ -40,7 +40,7 @@ void on_tbstop_clicked (CtkToolButton *toolbutton, gpointer user_data);
 void on_tbrescan_clicked (CtkToolButton *toolbutton, gpointer user_data);
 void on_radio_allfs_clicked (CtkButton *button, gpointer user_data);
 void on_radio_dir_clicked (CtkButton *button, gpointer user_data);
-gboolean on_delete_activate (CtkWidget *widget, GdkEvent *event, gpointer user_data);
+gboolean on_delete_activate (CtkWidget *widget, CdkEvent *event, gpointer user_data);
 void open_file_cb (CtkMenuItem *pmenu, gpointer dummy);
 void scan_folder_cb (CtkMenuItem *pmenu, gpointer dummy);
 void trash_dir_cb (CtkMenuItem *pmenu, gpointer dummy);

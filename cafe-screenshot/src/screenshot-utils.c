@@ -43,9 +43,9 @@ static CtkWidget *selection_window;
 gboolean
 screenshot_grab_lock (void)
 {
-  GdkAtom selection_atom;
+  CdkAtom selection_atom;
   gboolean result = FALSE;
-  GdkDisplay *display;
+  CdkDisplay *display;
 
   selection_atom = cdk_atom_intern (SELECTION_NAME, FALSE);
   cdk_x11_grab_server ();
@@ -79,7 +79,7 @@ screenshot_grab_lock (void)
 void
 screenshot_release_lock (void)
 {
-  GdkDisplay *display;
+  CdkDisplay *display;
 
   if (selection_window)
     {
@@ -91,10 +91,10 @@ screenshot_release_lock (void)
   cdk_display_flush (display);
 }
 
-static GdkWindow *
-screen_get_active_window (GdkScreen *screen)
+static CdkWindow *
+screen_get_active_window (CdkScreen *screen)
 {
-  GdkWindow *ret = NULL;
+  CdkWindow *ret = NULL;
   Atom type_return;
   gint format_return;
   gulong nitems_return;
@@ -133,11 +133,11 @@ screen_get_active_window (GdkScreen *screen)
   return ret;
 }
 
-static GdkWindow *
+static CdkWindow *
 screenshot_find_active_window (void)
 {
-  GdkWindow *window;
-  GdkScreen *default_screen;
+  CdkWindow *window;
+  CdkScreen *default_screen;
 
   default_screen = cdk_screen_get_default ();
   window = screen_get_active_window (default_screen);
@@ -146,10 +146,10 @@ screenshot_find_active_window (void)
 }
 
 static gboolean
-screenshot_window_is_desktop (GdkWindow *window)
+screenshot_window_is_desktop (CdkWindow *window)
 {
-  GdkWindow *root_window = cdk_get_default_root_window ();
-  GdkWindowTypeHint window_type_hint;
+  CdkWindow *root_window = cdk_get_default_root_window ();
+  CdkWindowTypeHint window_type_hint;
 
   if (window == root_window)
     return TRUE;
@@ -162,13 +162,13 @@ screenshot_window_is_desktop (GdkWindow *window)
 
 }
 
-GdkWindow *
+CdkWindow *
 screenshot_find_current_window ()
 {
-  GdkWindow *current_window;
-  GdkDisplay *display;
-  GdkSeat *seat;
-  GdkDevice *device;
+  CdkWindow *current_window;
+  CdkDisplay *display;
+  CdkSeat *seat;
+  CdkDevice *device;
 
   current_window = screenshot_find_active_window ();
   display = cdk_window_get_display (current_window);
@@ -197,14 +197,14 @@ screenshot_find_current_window ()
 }
 
 typedef struct {
-  GdkRectangle rect;
+  CdkRectangle rect;
   gboolean button_pressed;
   CtkWidget *window;
 } select_area_filter_data;
 
 static gboolean
 select_area_button_press (CtkWidget               *window,
-                          GdkEventButton          *event,
+                          CdkEventButton          *event,
 			  select_area_filter_data *data)
 {
   if (data->button_pressed)
@@ -219,10 +219,10 @@ select_area_button_press (CtkWidget               *window,
 
 static gboolean
 select_area_motion_notify (CtkWidget               *window,
-                           GdkEventMotion          *event,
+                           CdkEventMotion          *event,
                            select_area_filter_data *data)
 {
-  GdkRectangle draw_rect;
+  CdkRectangle draw_rect;
 
   if (!data->button_pressed)
     return TRUE;
@@ -245,7 +245,7 @@ select_area_motion_notify (CtkWidget               *window,
   /* We (ab)use app-paintable to indicate if we have an RGBA window */
   if (!ctk_widget_get_app_paintable (window))
     {
-      GdkWindow *cdkwindow = ctk_widget_get_window (window);
+      CdkWindow *cdkwindow = ctk_widget_get_window (window);
 
       /* Shape the window to make only the outline visible */
       if (draw_rect.width > 2 && draw_rect.height > 2)
@@ -278,7 +278,7 @@ select_area_motion_notify (CtkWidget               *window,
 
 static gboolean
 select_area_button_release (CtkWidget *window,
-                            GdkEventButton *event,
+                            CdkEventButton *event,
                             select_area_filter_data *data)
 {
   if (!data->button_pressed)
@@ -296,7 +296,7 @@ select_area_button_release (CtkWidget *window,
 
 static gboolean
 select_area_key_press (CtkWidget *window,
-                       GdkEventKey *event,
+                       CdkEventKey *event,
                        select_area_filter_data *data)
 {
   if (event->keyval == CDK_KEY_Escape)
@@ -346,10 +346,10 @@ draw (CtkWidget *window, cairo_t *cr, gpointer unused)
 static CtkWidget *
 create_select_window (void)
 {
-  GdkScreen *screen = cdk_screen_get_default ();
+  CdkScreen *screen = cdk_screen_get_default ();
   CtkWidget *window = ctk_window_new (CTK_WINDOW_POPUP);
 
-  GdkVisual *visual = cdk_screen_get_rgba_visual (screen);
+  CdkVisual *visual = cdk_screen_get_rgba_visual (screen);
   if (cdk_screen_is_composited (screen) && visual)
     {
       ctk_widget_set_visual (window, visual);
@@ -365,7 +365,7 @@ create_select_window (void)
 }
 
 typedef struct {
-  GdkRectangle rectangle;
+  CdkRectangle rectangle;
   SelectAreaCallback callback;
 } CallbackData;
 
@@ -384,10 +384,10 @@ emit_select_callback_in_idle (gpointer user_data)
 void
 screenshot_select_area_async (SelectAreaCallback callback)
 {
-  GdkDisplay *display;
-  GdkCursor               *cursor;
-  GdkSeat *seat;
-  GdkGrabStatus res;
+  CdkDisplay *display;
+  CdkCursor               *cursor;
+  CdkSeat *seat;
+  CdkGrabStatus res;
   select_area_filter_data  data;
   CallbackData *cb_data;
 
@@ -468,9 +468,9 @@ find_wm_window (Window xid)
 }
 
 static cairo_region_t *
-make_region_with_monitors (GdkScreen *screen)
+make_region_with_monitors (CdkScreen *screen)
 {
-  GdkDisplay     *display;
+  CdkDisplay     *display;
   cairo_region_t *region;
   int num_monitors;
   int i;
@@ -482,7 +482,7 @@ make_region_with_monitors (GdkScreen *screen)
 
   for (i = 0; i < num_monitors; i++)
     {
-      GdkRectangle rect;
+      CdkRectangle rect;
 
       cdk_monitor_get_geometry (cdk_display_get_monitor (display, i), &rect);
       cairo_region_union_rectangle (region, &rect);
@@ -492,7 +492,7 @@ make_region_with_monitors (GdkScreen *screen)
 }
 
 static void
-blank_rectangle_in_pixbuf (GdkPixbuf *pixbuf, GdkRectangle *rect)
+blank_rectangle_in_pixbuf (CdkPixbuf *pixbuf, CdkRectangle *rect)
 {
   int x, y;
   int x2, y2;
@@ -532,7 +532,7 @@ blank_rectangle_in_pixbuf (GdkPixbuf *pixbuf, GdkRectangle *rect)
 }
 
 static void
-blank_region_in_pixbuf (GdkPixbuf *pixbuf, cairo_region_t *region)
+blank_region_in_pixbuf (CdkPixbuf *pixbuf, cairo_region_t *region)
 {
   int n_rects;
   int i;
@@ -567,9 +567,9 @@ blank_region_in_pixbuf (GdkPixbuf *pixbuf, cairo_region_t *region)
  * that the user won't ever see.
  */
 static void
-mask_monitors (GdkPixbuf *pixbuf, GdkWindow *root_window)
+mask_monitors (CdkPixbuf *pixbuf, CdkWindow *root_window)
 {
-  GdkScreen *screen;
+  CdkScreen *screen;
   cairo_region_t *region_with_monitors;
   cairo_region_t *invisible_region;
   cairo_rectangle_int_t rect;
@@ -594,15 +594,15 @@ mask_monitors (GdkPixbuf *pixbuf, GdkWindow *root_window)
   cairo_region_destroy (invisible_region);
 }
 
-GdkPixbuf *
-screenshot_get_pixbuf (GdkWindow    *window,
-                       GdkRectangle *rectangle,
+CdkPixbuf *
+screenshot_get_pixbuf (CdkWindow    *window,
+                       CdkRectangle *rectangle,
                        gboolean      include_pointer,
                        gboolean      include_border,
                        gboolean      include_mask)
 {
-  GdkWindow *root;
-  GdkPixbuf *screenshot;
+  CdkWindow *root;
+  CdkPixbuf *screenshot;
   gint x_real_orig, y_real_orig, x_orig, y_orig;
   gint width, real_width, height, real_height;
   gint screen_width, screen_height, scale;
@@ -678,7 +678,7 @@ screenshot_get_pixbuf (GdkWindow    *window,
   if (include_border)
     {
       XRectangle *rectangles;
-      GdkPixbuf *tmp;
+      CdkPixbuf *tmp;
       int rectangle_count, rectangle_order, i;
 
       /* we must use XShape to avoid showing what's under the rounder corners
@@ -776,18 +776,18 @@ screenshot_get_pixbuf (GdkWindow    *window,
    * screenshot */
   if (include_pointer && !rectangle)
     {
-      GdkCursor *cursor;
-      GdkPixbuf *cursor_pixbuf;
+      CdkCursor *cursor;
+      CdkPixbuf *cursor_pixbuf;
 
       cursor = cdk_cursor_new_for_display (cdk_display_get_default (), CDK_LEFT_PTR);
       cursor_pixbuf = cdk_cursor_get_image (cursor);
 
       if (cursor_pixbuf != NULL)
         {
-          GdkDisplay *display;
-          GdkSeat *seat;
-          GdkDevice *device;
-          GdkRectangle r1, r2;
+          CdkDisplay *display;
+          CdkSeat *seat;
+          CdkDevice *device;
+          CdkRectangle r1, r2;
           gint cx, cy, xhot, yhot;
 
           display = cdk_window_get_display (window);

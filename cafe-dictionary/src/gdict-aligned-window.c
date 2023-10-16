@@ -61,7 +61,7 @@ static void     gdict_aligned_window_realize          (CtkWidget        *widget)
 static void     gdict_aligned_window_show             (CtkWidget        *widget);
 
 static gboolean gdict_aligned_window_motion_notify_cb (CtkWidget        *widget,
-						       GdkEventMotion   *event,
+						       CdkEventMotion   *event,
 						       GdictAlignedWindow *aligned_window);
 
 
@@ -156,9 +156,9 @@ gdict_aligned_window_position (GdictAlignedWindow *window)
   gint our_width, our_height;
   gint entry_x, entry_y, entry_width, entry_height;
   gint x, y;
-  GdkGravity gravity = CDK_GRAVITY_NORTH_WEST;
-  GdkWindow *cdk_window;
-  GdkDisplay *display;
+  CdkGravity gravity = CDK_GRAVITY_NORTH_WEST;
+  CdkWindow *cdk_window;
+  CdkDisplay *display;
 
   g_assert (GDICT_IS_ALIGNED_WINDOW (window));
   priv = window->priv;
@@ -237,11 +237,11 @@ gdict_aligned_window_finalize (GObject *object)
 
 static gboolean
 gdict_aligned_window_motion_notify_cb (CtkWidget        *widget,
-				       GdkEventMotion   *event,
+				       CdkEventMotion   *event,
 				       GdictAlignedWindow *aligned_window)
 {
   CtkAllocation alloc;
-  GdkRectangle rect;
+  CdkRectangle rect;
 
   ctk_widget_get_allocation (CTK_WIDGET (aligned_window), &alloc);
 
@@ -282,7 +282,7 @@ gdict_aligned_window_new (CtkWidget *align_widget)
  * Sets @align_widget as the #CtkWidget to which @aligned_window should
  * align.
  *
- * Note that @align_widget must have a #GdkWindow in order to
+ * Note that @align_widget must have a #CdkWindow in order to
  * #GdictAlignedWindow to work.
  */
 void
@@ -299,7 +299,7 @@ gdict_aligned_window_set_widget (GdictAlignedWindow *aligned_window,
     {
       g_warning ("Attempting to set a widget of class '%s' as the "
                  "align widget, but widgets of this class does not "
-                 "have a GdkWindow.",
+                 "have a CdkWindow.",
                  g_type_name (G_OBJECT_TYPE (align_widget)));
 
       return;

@@ -195,7 +195,7 @@ on_tbrescan_clicked (CtkToolButton *toolbutton, gpointer user_data)
 
 gboolean
 on_delete_activate (CtkWidget *widget,
-		    GdkEvent *event, gpointer user_data)
+		    CdkEvent *event, gpointer user_data)
 {
 	baobab_quit ();
 	return TRUE;

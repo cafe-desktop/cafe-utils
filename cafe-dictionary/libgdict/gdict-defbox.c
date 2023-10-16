@@ -85,9 +85,9 @@ struct _GdictDefboxPrivate
   guint is_searching : 1;
   guint is_hovering : 1;
 
-  GdkCursor *busy_cursor;
-  GdkCursor *hand_cursor;
-  GdkCursor *regular_cursor;
+  CdkCursor *busy_cursor;
+  CdkCursor *hand_cursor;
+  CdkCursor *regular_cursor;
 
   guint start_id;
   guint end_id;
@@ -1375,7 +1375,7 @@ gdict_defbox_init_tags (GdictDefbox *defbox)
   {
     CtkSettings *settings = ctk_widget_get_settings (CTK_WIDGET (defbox));
     gboolean prefer_dark = FALSE;
-    GdkRGBA rgba;
+    CdkRGBA rgba;
 
     /* HACK: we're hardcoding the Adwaita values because CtkTextTag
      * cannot be styled via CSS
@@ -1478,18 +1478,18 @@ follow_if_is_link (GdictDefbox *defbox,
 
 static gboolean
 defbox_event_after_cb (CtkWidget   *text_view,
-                       GdkEvent    *event,
+                       CdkEvent    *event,
                        GdictDefbox *defbox)
 {
   CtkTextIter iter;
   CtkTextBuffer *buffer;
-  GdkEventButton *button_event;
+  CdkEventButton *button_event;
   gint bx, by;
 
   if (event->type != CDK_BUTTON_RELEASE)
     return FALSE;
 
-  button_event = (GdkEventButton *) event;
+  button_event = (CdkEventButton *) event;
 
   if (button_event->button != 1)
     return FALSE;
@@ -1527,13 +1527,13 @@ set_cursor_if_appropriate (GdictDefbox *defbox,
 
   if (!priv->hand_cursor)
     {
-      GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
+      CdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
       priv->hand_cursor = cdk_cursor_new_for_display (display, CDK_HAND2);
     }
 
   if (!priv->regular_cursor)
     {
-      GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
+      CdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
       priv->regular_cursor = cdk_cursor_new_for_display (display, CDK_XTERM);
     }
 
@@ -1579,7 +1579,7 @@ set_cursor_if_appropriate (GdictDefbox *defbox,
 
 static gboolean
 defbox_motion_notify_cb (CtkWidget      *text_view,
-                         GdkEventMotion *event,
+                         CdkEventMotion *event,
                          GdictDefbox    *defbox)
 {
   gint bx, by;
@@ -1596,12 +1596,12 @@ defbox_motion_notify_cb (CtkWidget      *text_view,
 
 static gboolean
 defbox_visibility_notify_cb (CtkWidget          *text_view,
-                             GdkEventVisibility *event,
+                             CdkEventVisibility *event,
                              GdictDefbox        *defbox)
 {
-  GdkDisplay *display;
-  GdkSeat *seat;
-  GdkDevice *pointer;
+  CdkDisplay *display;
+  CdkSeat *seat;
+  CdkDevice *pointer;
   gint wx, wy;
   gint bx, by;
 
@@ -2103,13 +2103,13 @@ lookup_start_cb (GdictContext *context,
 {
   GdictDefbox *defbox = GDICT_DEFBOX (user_data);
   GdictDefboxPrivate *priv = defbox->priv;
-  GdkWindow *window;
+  CdkWindow *window;
 
   priv->is_searching = TRUE;
 
   if (!priv->busy_cursor)
     {
-      GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
+      CdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
       priv->busy_cursor = cdk_cursor_new_for_display (display, CDK_WATCH);
     }
 
@@ -2127,7 +2127,7 @@ lookup_end_cb (GdictContext *context,
   GdictDefboxPrivate *priv = defbox->priv;
   CtkTextBuffer *buffer;
   CtkTextIter start;
-  GdkWindow *window;
+  CdkWindow *window;
 
   /* explicitely move the cursor to the beginning */
   buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (priv->text_view));

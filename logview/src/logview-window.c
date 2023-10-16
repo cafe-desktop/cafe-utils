@@ -148,7 +148,7 @@ populate_style_tag_table (LogviewWindow *logview)
   CtkTextTagTable *tag_table = logview->priv->tag_table;
   CtkTextTag *tag;
   CtkStyleContext *context;
-  GdkRGBA rgba;
+  CdkRGBA rgba;
 
   tag = ctk_text_tag_table_lookup (tag_table, "gray");
 
@@ -861,7 +861,7 @@ static CtkToggleActionEntry toggle_entries[] = {
 };
 
 static gboolean
-window_size_changed_cb (CtkWidget *widget, GdkEventConfigure *event,
+window_size_changed_cb (CtkWidget *widget, CdkEventConfigure *event,
                         gpointer data)
 {
   LogviewWindow *window = data;
@@ -878,7 +878,7 @@ real_select_day (LogviewWindow *logview,
 {
   CtkTextBuffer *buffer;
   CtkTextIter start_iter, end_iter, start_vis, end_vis;
-  GdkRectangle visible_rect;
+  CdkRectangle visible_rect;
 
   buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
 
@@ -1133,7 +1133,7 @@ tearoff_changed_cb (LogviewPrefs *prefs,
 
 static const struct {
   guint keyval;
-  GdkModifierType modifier;
+  CdkModifierType modifier;
   const gchar *action;
 } extra_keybindings [] = {
   { CDK_KEY_KP_Add,      CDK_CONTROL_MASK, "ViewZoomIn" },
@@ -1143,7 +1143,7 @@ static const struct {
 
 static gboolean
 key_press_event_cb (CtkWidget *widget,
-                    GdkEventKey *event,
+                    CdkEventKey *event,
                     gpointer user_data)
 {
   LogviewWindow *window = user_data;

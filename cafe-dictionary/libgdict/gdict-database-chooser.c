@@ -65,7 +65,7 @@ struct _GdictDatabaseChooserPrivate
   guint end_id;
   guint error_id;
 
-  GdkCursor *busy_cursor;
+  CdkCursor *busy_cursor;
 
   gchar *current_db;
 
@@ -705,7 +705,7 @@ lookup_start_cb (GdictContext *context,
 
   if (!priv->busy_cursor)
     {
-      GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (chooser));
+      CdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (chooser));
 
       priv->busy_cursor = cdk_cursor_new_for_display (display, CDK_WATCH);
     }

@@ -117,7 +117,7 @@ static void baobab_chart_get_property (GObject *object,
 static void baobab_chart_free_items (CtkWidget *chart);
 static void baobab_chart_draw (CtkWidget *chart,
                                cairo_t *cr,
-                               GdkRectangle area);
+                               CdkRectangle area);
 static void baobab_chart_update_draw (BaobabChart *chart,
                                       CtkTreePath *path);
 static void baobab_chart_row_changed (CtkTreeModel *model,
@@ -147,13 +147,13 @@ static void baobab_chart_interpolate_colors (BaobabChartColor *color,
                                              BaobabChartColor colorb,
                                              gdouble percentage);
 static gint baobab_chart_button_release (CtkWidget *widget,
-                                         GdkEventButton *event);
+                                         CdkEventButton *event);
 static gint baobab_chart_scroll (CtkWidget *widget,
-                                 GdkEventScroll *event);
+                                 CdkEventScroll *event);
 static gint baobab_chart_motion_notify (CtkWidget *widget,
-                                        GdkEventMotion *event);
+                                        CdkEventMotion *event);
 static gint baobab_chart_leave_notify (CtkWidget *widget,
-                                       GdkEventCrossing *event);
+                                       CdkEventCrossing *event);
 static inline void baobab_chart_disconnect_signals (CtkWidget *chart,
                                                     CtkTreeModel *model);
 static inline void baobab_chart_connect_signals (CtkWidget *chart,
@@ -292,10 +292,10 @@ static void
 baobab_chart_realize (CtkWidget *widget)
 {
   BaobabChart *chart;
-  GdkWindowAttr attributes;
+  CdkWindowAttr attributes;
   gint attributes_mask;
   CtkAllocation allocation;
-  GdkWindow *window;
+  CdkWindow *window;
 
   g_return_if_fail (BAOBAB_IS_CHART (widget));
 
@@ -588,7 +588,7 @@ baobab_chart_get_items (CtkWidget *chart, CtkTreePath *root)
 static void
 baobab_chart_draw (CtkWidget *chart,
                    cairo_t *cr,
-                   GdkRectangle area)
+                   CdkRectangle area)
 {
   BaobabChartPrivate *priv;
   BaobabChartClass *class;
@@ -752,7 +752,7 @@ baobab_chart_expose (CtkWidget *chart, cairo_t *cr)
   CtkTreePath *current_path = NULL;
   CtkAllocation allocation;
 
-  GdkRectangle area;
+  CdkRectangle area;
   gdouble x1, y1, x2, y2;
   cairo_clip_extents (cr, &x1, &y1, &x2, &y2);
   area.x = floor (x1);
@@ -910,7 +910,7 @@ baobab_chart_get_item_color (BaobabChartColor *color,
 
 static gint
 baobab_chart_button_release (CtkWidget *widget,
-                             GdkEventButton *event)
+                             CdkEventButton *event)
 {
   BaobabChartPrivate *priv;
 
@@ -941,7 +941,7 @@ baobab_chart_button_release (CtkWidget *widget,
 
 static gint
 baobab_chart_scroll (CtkWidget *widget,
-                     GdkEventScroll *event)
+                     CdkEventScroll *event)
 {
   switch (event->direction)
     {
@@ -950,7 +950,7 @@ baobab_chart_scroll (CtkWidget *widget,
       if (baobab_chart_can_zoom_out (widget))
         baobab_chart_zoom_out (widget);
       /* change the selected item when zooming */
-      baobab_chart_motion_notify (widget, (GdkEventMotion *)event);
+      baobab_chart_motion_notify (widget, (CdkEventMotion *)event);
       break;
 
     case CDK_SCROLL_RIGHT :
@@ -994,7 +994,7 @@ baobab_chart_set_item_highlight (CtkWidget *chart,
 
 static gint
 baobab_chart_motion_notify (CtkWidget *widget,
-                            GdkEventMotion *event)
+                            CdkEventMotion *event)
 {
   BaobabChartPrivate *priv;
   BaobabChartClass *class;
@@ -1043,7 +1043,7 @@ baobab_chart_motion_notify (CtkWidget *widget,
 
 static gint
 baobab_chart_leave_notify (CtkWidget *widget,
-                           GdkEventCrossing *event)
+                           CdkEventCrossing *event)
 {
   BaobabChartPrivate *priv;
 
@@ -1162,11 +1162,11 @@ baobab_chart_query_tooltip (CtkWidget  *widget,
   return TRUE;
 }
 
-GdkPixbuf*
+CdkPixbuf*
 baobab_chart_get_pixbuf (CtkWidget *widget)
 {
   gint w, h;
-  GdkPixbuf *pixbuf;
+  CdkPixbuf *pixbuf;
 
   g_return_val_if_fail (BAOBAB_IS_CHART (widget), NULL);
 
@@ -1470,7 +1470,7 @@ baobab_chart_freeze_updates (CtkWidget *chart)
   BaobabChartPrivate *priv;
   cairo_surface_t *surface = NULL;
   cairo_t *cr = NULL;
-  GdkRectangle area;
+  CdkRectangle area;
   CtkAllocation allocation;
 
   g_return_if_fail (BAOBAB_IS_CHART (chart));
@@ -1674,7 +1674,7 @@ baobab_chart_save_snapshot (CtkWidget *chart)
 {
   BaobabChartPrivate *priv;
 
-  GdkPixbuf *pixbuf;
+  CdkPixbuf *pixbuf;
 
   CtkWidget *fs_dlg;
   CtkWidget *vbox;

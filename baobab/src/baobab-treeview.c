@@ -92,7 +92,7 @@ contents_changed (void)
 
 static gboolean
 on_tv_button_press (CtkWidget *widget,
-		    GdkEventButton *event,
+		    CdkEventButton *event,
 		    gpointer data)
 {
 	CtkTreePath *path;

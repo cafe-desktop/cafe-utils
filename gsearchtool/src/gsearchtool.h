@@ -102,7 +102,7 @@ struct _GSearchWindow {
 
 	CtkWidget             * window;
 	CtkUIManager          * window_ui_manager;
-	GdkGeometry             window_geometry;
+	CdkGeometry             window_geometry;
 	gint                    window_width;
 	gint                    window_height;
 	gboolean                is_window_maximized;

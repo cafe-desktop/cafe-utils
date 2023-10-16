@@ -92,7 +92,7 @@ static gboolean baobab_ringschart_is_point_over_item (CtkWidget *chart,
                                                       gdouble y);
 static void baobab_ringschart_get_point_min_rect (gdouble cx, gdouble cy,
                                                   gdouble radius, gdouble angle,
-                                                  GdkRectangle *rect);
+                                                  CdkRectangle *rect);
 static void baobab_ringschart_get_item_rectangle (CtkWidget *chart,
                                                   BaobabChartItem *item);
 static void baobab_ringschart_pre_draw (CtkWidget *chart, cairo_t *cr);
@@ -306,7 +306,7 @@ baobab_ringschart_get_point_min_rect (gdouble cx,
                                       gdouble cy,
                                       gdouble radius,
                                       gdouble angle,
-                                      GdkRectangle *rect)
+                                      CdkRectangle *rect)
 {
   gdouble x, y;
 
@@ -324,7 +324,7 @@ baobab_ringschart_get_item_rectangle (CtkWidget *chart,
                                        BaobabChartItem *item)
 {
   BaobabRingschartItem *data;
-  GdkRectangle rect;
+  CdkRectangle rect;
   gdouble cx, cy, r1, r2, a1, a2;
   CtkAllocation allocation;
 
@@ -438,7 +438,7 @@ baobab_ringschart_draw_subfolder_tips (CtkWidget *chart, cairo_t *cr)
   gchar *markup = NULL;
 
   cairo_rectangle_t tooltip_rect;
-  GdkRectangle _rect, last_rect;
+  CdkRectangle _rect, last_rect;
 
   priv = baobab_ringschart_get_instance_private (BAOBAB_RINGSCHART (chart));
 
@@ -447,7 +447,7 @@ baobab_ringschart_draw_subfolder_tips (CtkWidget *chart, cairo_t *cr)
   q_height = allocation.height / 2;
   q_angle = atan2 (q_height, q_width);
 
-  memset (&last_rect, 0, sizeof (GdkRectangle));
+  memset (&last_rect, 0, sizeof (CdkRectangle));
 
   cairo_save (cr);
 
@@ -517,7 +517,7 @@ baobab_ringschart_draw_subfolder_tips (CtkWidget *chart, cairo_t *cr)
           a -= M_PI/2;
         }
 
-      /* get the GdkRectangle of the tooltip (with a little padding) */
+      /* get the CdkRectangle of the tooltip (with a little padding) */
       _rect.x = tooltip_rect.x - 1;
       _rect.y = tooltip_rect.y - 1;
       _rect.width = tooltip_rect.width + 2;
@@ -526,7 +526,7 @@ baobab_ringschart_draw_subfolder_tips (CtkWidget *chart, cairo_t *cr)
       /* Check if tooltip overlaps */
       if (! cdk_rectangle_intersect (&_rect, &last_rect, NULL))
         {
-          g_memmove (&last_rect, &_rect, sizeof (GdkRectangle));
+          g_memmove (&last_rect, &_rect, sizeof (CdkRectangle));
 
           /* Finally draw the tooltip to cairo! */
 

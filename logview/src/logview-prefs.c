@@ -149,7 +149,7 @@ load_filters (LogviewPrefs *prefs)
   const gchar *str;
   LogviewFilter *filter;
   CtkTextTag *tag;
-  GdkRGBA color;
+  CdkRGBA color;
   gint idx;
 
   filters = g_settings_get_strv (prefs->priv->logview_prefs,
@@ -199,9 +199,9 @@ save_filter_foreach_func (gpointer key, gpointer value, gpointer user_data)
   GPtrArray *filters;
   const gchar *name;
   LogviewFilter *filter;
-  GdkRGBA  *foreground;
+  CdkRGBA  *foreground;
   gboolean foreground_set;
-  GdkRGBA  *background;
+  CdkRGBA  *background;
   gboolean background_set;
   gchar *regex, *color;
   gboolean invisible;

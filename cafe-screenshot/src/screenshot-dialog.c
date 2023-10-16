@@ -43,8 +43,8 @@ static CtkTargetEntry drag_types[] =
 struct ScreenshotDialog
 {
   CtkBuilder *ui;
-  GdkPixbuf *screenshot;
-  GdkPixbuf *preview_image;
+  CdkPixbuf *screenshot;
+  CdkPixbuf *preview_image;
   CtkWidget *save_widget;
   CtkWidget *filename_entry;
   gint drag_x;
@@ -53,7 +53,7 @@ struct ScreenshotDialog
 
 static gboolean
 on_toplevel_key_press_event (CtkWidget *widget,
-			     GdkEventKey *key)
+			     CdkEventKey *key)
 {
   if (key->keyval == CDK_KEY_F1)
     {
@@ -98,7 +98,7 @@ on_preview_draw (CtkWidget      *drawing_area,
 
 static gboolean
 on_preview_button_press_event (CtkWidget      *drawing_area,
-			       GdkEventButton *event,
+			       CdkEventButton *event,
 			       gpointer        data)
 {
   ScreenshotDialog *dialog = data;
@@ -111,7 +111,7 @@ on_preview_button_press_event (CtkWidget      *drawing_area,
 
 static gboolean
 on_preview_button_release_event (CtkWidget      *drawing_area,
-				 GdkEventButton *event,
+				 CdkEventButton *event,
 				 gpointer        data)
 {
   ScreenshotDialog *dialog = data;
@@ -124,7 +124,7 @@ on_preview_button_release_event (CtkWidget      *drawing_area,
 
 static void
 drag_data_get (CtkWidget          *widget,
-	       GdkDragContext     *context,
+	       CdkDragContext     *context,
 	       CtkSelectionData   *selection_data,
 	       guint               info,
 	       guint               time,
@@ -155,7 +155,7 @@ drag_data_get (CtkWidget          *widget,
 
 static void
 drag_begin (CtkWidget        *widget,
-	    GdkDragContext   *context,
+	    CdkDragContext   *context,
 	    ScreenshotDialog *dialog)
 {
   ctk_drag_set_icon_pixbuf (context, dialog->preview_image,
@@ -164,7 +164,7 @@ drag_begin (CtkWidget        *widget,
 
 
 ScreenshotDialog *
-screenshot_dialog_new (GdkPixbuf *screenshot,
+screenshot_dialog_new (CdkPixbuf *screenshot,
 		       char      *initial_uri,
 		       gboolean   take_window_shot)
 {
@@ -339,7 +339,7 @@ screenshot_dialog_get_folder (ScreenshotDialog *dialog)
   return ctk_file_chooser_get_uri (CTK_FILE_CHOOSER (dialog->save_widget));
 }
 
-GdkPixbuf *
+CdkPixbuf *
 screenshot_dialog_get_screenshot (ScreenshotDialog *dialog)
 {
   return dialog->screenshot;
@@ -350,14 +350,14 @@ screenshot_dialog_set_busy (ScreenshotDialog *dialog,
 			    gboolean          busy)
 {
   CtkWidget *toplevel;
-  GdkDisplay *display;
+  CdkDisplay *display;
 
   toplevel = screenshot_dialog_get_toplevel (dialog);
   display = ctk_widget_get_display (toplevel);
 
   if (busy)
     {
-      GdkCursor *cursor;
+      CdkCursor *cursor;
       /* Change cursor to busy */
       cursor = cdk_cursor_new_for_display (display, CDK_WATCH);
       cdk_window_set_cursor (ctk_widget_get_window (toplevel), cursor);

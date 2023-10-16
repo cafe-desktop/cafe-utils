@@ -98,7 +98,7 @@ struct _GdictWindow
   GSettings *settings;
   GSettings *desktop_settings;
 
-  GdkCursor *busy_cursor;
+  CdkCursor *busy_cursor;
 
   gint default_width;
   gint default_height;

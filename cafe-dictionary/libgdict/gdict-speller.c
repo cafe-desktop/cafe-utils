@@ -56,7 +56,7 @@ struct _GdictSpellerPrivate
   CtkWidget *treeview;
   CtkWidget *clear_button;
 
-  GdkCursor *busy_cursor;
+  CdkCursor *busy_cursor;
 
   CtkListStore *store;
   gint results;
@@ -623,7 +623,7 @@ lookup_start_cb (GdictContext *context,
 
   if (!priv->busy_cursor)
     {
-      GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (speller));
+      CdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (speller));
       priv->busy_cursor = cdk_cursor_new_for_display (display, CDK_WATCH);
     }
 

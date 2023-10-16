@@ -208,7 +208,7 @@ on_dialog_add_edit_reponse (CtkWidget *dialog, int response_id,
 
     if (ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (radio_color))) {
       if (ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (check_foreground))) {
-        GdkRGBA foreground_color;
+        CdkRGBA foreground_color;
         ctk_color_chooser_get_rgba (CTK_COLOR_CHOOSER (color_foreground),
                                     &foreground_color);
         g_object_set (G_OBJECT (tag),
@@ -217,7 +217,7 @@ on_dialog_add_edit_reponse (CtkWidget *dialog, int response_id,
       }
 
       if (ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (check_background))) {
-        GdkRGBA background_color;
+        CdkRGBA background_color;
         ctk_color_chooser_get_rgba (CTK_COLOR_CHOOSER (color_background),
                                     &background_color);
         g_object_set (tag,
@@ -343,7 +343,7 @@ run_add_edit_dialog (LogviewFilterManager *manager, LogviewFilter *filter)
     ctk_entry_set_text (CTK_ENTRY(entry_regex), regex);
 
     if (foreground_set) {
-      GdkRGBA *foreground;
+      CdkRGBA *foreground;
 
       g_object_get (tag, "foreground-rgba", &foreground, NULL);
       ctk_color_chooser_set_rgba (CTK_COLOR_CHOOSER (color_foreground),
@@ -355,7 +355,7 @@ run_add_edit_dialog (LogviewFilterManager *manager, LogviewFilter *filter)
     }
 
     if (background_set) {
-      GdkRGBA *background;
+      CdkRGBA *background;
 
       g_object_get (tag, "paragraph-background-rgba", &background, NULL);
       ctk_color_chooser_set_rgba (CTK_COLOR_CHOOSER (color_background),

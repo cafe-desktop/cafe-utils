@@ -77,7 +77,7 @@ struct _BaobabChartItem
   gboolean visible;
   gboolean has_any_child;
   gboolean has_visible_children;
-  GdkRectangle rect;
+  CdkRectangle rect;
 
   GList *parent;
 

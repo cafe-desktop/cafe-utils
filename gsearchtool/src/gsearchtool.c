@@ -834,7 +834,7 @@ add_file_to_search_results (const gchar * file,
 			    CtkTreeIter * iter,
 			    GSearchWindow * gsearch)
 {
-	GdkPixbuf * pixbuf;
+	CdkPixbuf * pixbuf;
 	GSearchMonitor * monitor;
 	GFileMonitor * handle;
 	GFileInfo * file_info;
@@ -1458,8 +1458,8 @@ handle_search_command_stdout_io (GIOChannel * ioc,
 		GError * error = NULL;
 		GTimer * timer;
 		GString * string;
-		GdkRectangle prior_rect;
-		GdkRectangle after_rect;
+		CdkRectangle prior_rect;
+		CdkRectangle after_rect;
 		gulong duration;
 		gint look_in_folder_string_length;
 
