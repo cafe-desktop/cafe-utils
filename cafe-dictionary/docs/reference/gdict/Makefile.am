@@ -13,16 +13,16 @@ DOC_MAIN_SGML_FILE=gdict-docs.sgml
 # documenting functions and macros.
 DOC_SOURCE_DIR=../../../libgdict
 
-# Extra options to supply to ctkdoc-scan.
+# Extra options to supply to gtkdoc-scan.
 SCAN_OPTIONS=
 
-# Extra options to pass to ctkdoc-scangobj
+# Extra options to pass to gtkdoc-scangobj
 SCANGOBJ_OPTIONS=--type-init-func="g_type_init()"
 
-# Extra options to supply to ctkdoc-mkdb.
+# Extra options to supply to gtkdoc-mkdb.
 MKDB_OPTIONS=--sgml-mode --output-format=xml
 
-# Extra options to supply to ctkdoc-fixref.
+# Extra options to supply to gtkdoc-fixref.
 FIXXREF_OPTIONS=
 
 # Used for dependencies.
