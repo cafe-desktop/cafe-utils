@@ -69,7 +69,7 @@ requires:
     - gcc
     - git
     - itstool
-    - libcanberra
+    - libkanberra
     - libgtop
     - make
     - cafe-common
@@ -91,7 +91,7 @@ requires:
     - g++
     - git
     - gtk-doc-tools
-    - libcanberra-ctk3-dev
+    - libkanberra-ctk3-dev
     - libglib2.0-dev
     - libctk-3-dev
     - libgtop2-dev
@@ -121,7 +121,7 @@ requires:
     - hardlink
     - libX11-devel
     - libXmu-devel
-    - libcanberra-devel
+    - libkanberra-devel
     - libgtop2-devel
     - libudisks2-devel
     - make
@@ -141,7 +141,7 @@ requires:
     - g++
     - git
     - gtk-doc-tools
-    - libcanberra-ctk3-dev
+    - libkanberra-ctk3-dev
     - libglib2.0-dev
     - libctk-3-dev
     - libgtop2-dev
