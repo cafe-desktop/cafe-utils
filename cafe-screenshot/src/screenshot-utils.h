@@ -31,7 +31,7 @@ gboolean   screenshot_grab_lock           (void);
 void       screenshot_release_lock        (void);
 CdkWindow *screenshot_find_current_window (void);
 void       screenshot_select_area_async   (SelectAreaCallback callback);
-CdkPixbuf *screenshot_get_pixbuf          (CdkWindow *win,
+GdkPixbuf *screenshot_get_pixbuf          (CdkWindow *win,
                                            CdkRectangle *rectangle,
                                            gboolean include_pointer,
                                            gboolean include_border,

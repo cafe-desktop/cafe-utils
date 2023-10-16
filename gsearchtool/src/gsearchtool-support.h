@@ -76,7 +76,7 @@ gsearchtool_strdup_strftime (const gchar * format,
 gchar *
 get_file_type_description (const gchar * file,
                            GFileInfo * file_info);
-CdkPixbuf *
+GdkPixbuf *
 get_file_pixbuf (GSearchWindow * gsearch,
                  GFileInfo * file_info);
 gboolean

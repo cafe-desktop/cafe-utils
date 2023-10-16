@@ -103,14 +103,14 @@ create_outline_filter (int radius)
   return filter;
 }
 
-static CdkPixbuf *
-create_effect (CdkPixbuf *src,
+static GdkPixbuf *
+create_effect (GdkPixbuf *src,
                ConvFilter const *filter,
                int radius,
                int offset,
                double opacity)
 {
-  CdkPixbuf *dest;
+  GdkPixbuf *dest;
   int x, y, i, j;
   int src_x, src_y;
   int suma;
@@ -183,9 +183,9 @@ create_effect (CdkPixbuf *src,
 }
 
 void
-screenshot_add_shadow (CdkPixbuf **src)
+screenshot_add_shadow (GdkPixbuf **src)
 {
-  CdkPixbuf *dest;
+  GdkPixbuf *dest;
   static ConvFilter *filter = NULL;
 
   if (!filter)
@@ -209,9 +209,9 @@ screenshot_add_shadow (CdkPixbuf **src)
 }
 
 void
-screenshot_add_border (CdkPixbuf **src)
+screenshot_add_border (GdkPixbuf **src)
 {
-  CdkPixbuf *dest;
+  GdkPixbuf *dest;
   static ConvFilter *filter = NULL;
 
   if (!filter)

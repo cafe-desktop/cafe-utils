@@ -43,8 +43,8 @@ static CtkTargetEntry drag_types[] =
 struct ScreenshotDialog
 {
   CtkBuilder *ui;
-  CdkPixbuf *screenshot;
-  CdkPixbuf *preview_image;
+  GdkPixbuf *screenshot;
+  GdkPixbuf *preview_image;
   CtkWidget *save_widget;
   CtkWidget *filename_entry;
   gint drag_x;
@@ -164,7 +164,7 @@ drag_begin (CtkWidget        *widget,
 
 
 ScreenshotDialog *
-screenshot_dialog_new (CdkPixbuf *screenshot,
+screenshot_dialog_new (GdkPixbuf *screenshot,
 		       char      *initial_uri,
 		       gboolean   take_window_shot)
 {
@@ -339,7 +339,7 @@ screenshot_dialog_get_folder (ScreenshotDialog *dialog)
   return ctk_file_chooser_get_uri (CTK_FILE_CHOOSER (dialog->save_widget));
 }
 
-CdkPixbuf *
+GdkPixbuf *
 screenshot_dialog_get_screenshot (ScreenshotDialog *dialog)
 {
   return dialog->screenshot;

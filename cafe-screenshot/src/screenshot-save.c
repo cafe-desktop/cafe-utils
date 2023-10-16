@@ -177,7 +177,7 @@ signal_handler (int sig)
 }
 
 void
-screenshot_save_start (CdkPixbuf    *pixbuf,
+screenshot_save_start (GdkPixbuf    *pixbuf,
 		       SaveFunction  callback,
 		       gpointer      user_data)
 {

@@ -89,7 +89,7 @@ typedef struct
   CdkRectangle *rectangle;
 } AsyncExistenceJob;
 
-static CdkPixbuf *screenshot = NULL;
+static GdkPixbuf *screenshot = NULL;
 
 /* Global variables*/
 static char *last_save_dir = NULL;
@@ -706,7 +706,7 @@ save_done_notification (gpointer data)
 }
 
 static void
-save_screenshot_in_clipboard (CdkDisplay *display, CdkPixbuf *screenshot)
+save_screenshot_in_clipboard (CdkDisplay *display, GdkPixbuf *screenshot)
 {
   CtkClipboard *clipboard =
     ctk_clipboard_get_for_display (display, CDK_SELECTION_CLIPBOARD);
