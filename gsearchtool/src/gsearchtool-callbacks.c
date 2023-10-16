@@ -221,7 +221,7 @@ click_expander_cb (GObject * object,
 		ctk_window_set_geometry_hints (CTK_WINDOW (gsearch->window),
 		                               CTK_WIDGET (gsearch->window),
 		                               &gsearch->window_geometry,
-		                               GDK_HINT_MIN_SIZE);
+		                               CDK_HINT_MIN_SIZE);
 	}
 	else {
 		GdkGeometry default_geometry = {MINIMUM_WINDOW_WIDTH, MINIMUM_WINDOW_HEIGHT};
@@ -230,7 +230,7 @@ click_expander_cb (GObject * object,
 		ctk_window_set_geometry_hints (CTK_WINDOW (gsearch->window),
 		                               CTK_WIDGET (gsearch->window),
 		                               &default_geometry,
-		                               GDK_HINT_MIN_SIZE);
+		                               CDK_HINT_MIN_SIZE);
 	}
 }
 
@@ -269,7 +269,7 @@ remove_constraint_cb (CtkWidget * widget,
 	ctk_window_set_geometry_hints (CTK_WINDOW (gsearch->window),
 	                               CTK_WIDGET (gsearch->window),
 	                               &gsearch->window_geometry,
-	                               GDK_HINT_MIN_SIZE);
+	                               CDK_HINT_MIN_SIZE);
 
 	ctk_container_remove (CTK_CONTAINER (gsearch->available_options_vbox), ctk_widget_get_parent (widget));
 
@@ -969,15 +969,15 @@ file_key_press_event_cb (CtkWidget * widget,
                          GdkEventKey * event,
                          gpointer data)
 {
-	if (event->keyval == GDK_KEY_space  ||
-	    event->keyval == GDK_KEY_Return ||
-	    event->keyval == GDK_KEY_KP_Enter) {
-		if (event->state != GDK_CONTROL_MASK) {
+	if (event->keyval == CDK_KEY_space  ||
+	    event->keyval == CDK_KEY_Return ||
+	    event->keyval == CDK_KEY_KP_Enter) {
+		if (event->state != CDK_CONTROL_MASK) {
 			open_file_cb ((CtkMenuItem *) NULL, data);
 			return TRUE;
 		}
 	}
-	else if (event->keyval == GDK_KEY_Delete) {
+	else if (event->keyval == CDK_KEY_Delete) {
 		move_to_trash_cb ((CtkAction *) NULL, data);
 		return TRUE;
 	}
@@ -1269,7 +1269,7 @@ file_button_release_event_cb (CtkWidget * widget,
 
 		if (ctk_tree_view_get_path_at_pos (CTK_TREE_VIEW (gsearch->search_results_tree_view), event->x, event->y,
 		                                   &path, NULL, NULL, NULL)) {
-			if ((event->state & GDK_SHIFT_MASK) || (event->state & GDK_CONTROL_MASK)) {
+			if ((event->state & CDK_SHIFT_MASK) || (event->state & CDK_CONTROL_MASK)) {
 				if (row_selected_by_button_press_event) {
 					ctk_tree_selection_select_path (ctk_tree_view_get_selection (CTK_TREE_VIEW(gsearch->search_results_tree_view)), path);
 				}
@@ -1387,7 +1387,7 @@ file_button_release_event_cb (CtkWidget * widget,
 	}
 	else if (event->button == 1 || event->button == 2) {
 		if (gsearch->is_search_results_single_click_to_activate == TRUE) {
-			if (!(event->state & GDK_CONTROL_MASK) && !(event->state & GDK_SHIFT_MASK)) {
+			if (!(event->state & CDK_CONTROL_MASK) && !(event->state & CDK_SHIFT_MASK)) {
 			     	open_file_cb ((CtkMenuItem *) NULL, data);
 			}
 		}
@@ -1410,9 +1410,9 @@ file_event_after_cb  (CtkWidget * widget,
 		return FALSE;
 	}
 
-	if (!(event->state & GDK_CONTROL_MASK) && !(event->state & GDK_SHIFT_MASK)) {
+	if (!(event->state & CDK_CONTROL_MASK) && !(event->state & CDK_SHIFT_MASK)) {
 		if (gsearch->is_search_results_single_click_to_activate == FALSE) {
-			if (event->type == GDK_2BUTTON_PRESS) {
+			if (event->type == CDK_2BUTTON_PRESS) {
 				open_file_cb ((CtkMenuItem *) NULL, data);
 				return TRUE;
 			}
@@ -1450,7 +1450,7 @@ file_motion_notify_cb (CtkWidget *widget,
 				       NULL, NULL, NULL);
 
 	if (gsearch->search_results_hover_path != NULL) {
-		cursor = cdk_cursor_new_for_display (display, GDK_HAND2);
+		cursor = cdk_cursor_new_for_display (display, CDK_HAND2);
 	}
 	else {
 		cursor = NULL;
@@ -1841,7 +1841,7 @@ key_press_cb (CtkWidget * widget,
 
 	g_return_val_if_fail (CTK_IS_WIDGET (widget), FALSE);
 
-	if (event->keyval == GDK_KEY_Escape) {
+	if (event->keyval == CDK_KEY_Escape) {
 		if (gsearch->command_details->command_status == RUNNING) {
 			click_stop_cb (widget, data);
 		}
@@ -1849,8 +1849,8 @@ key_press_cb (CtkWidget * widget,
 			quit_cb (widget, (GdkEvent *) NULL, data);
 		}
 	}
-	else if (event->keyval == GDK_KEY_F10) {
-		if (event->state & GDK_SHIFT_MASK) {
+	else if (event->keyval == CDK_KEY_F10) {
+		if (event->state & CDK_SHIFT_MASK) {
 			gboolean no_files_found = FALSE;
 			CtkTreeModel * model;
 			CtkTreeIter iter;
@@ -1948,7 +1948,7 @@ window_state_event_cb (CtkWidget * widget,
 {
 	GSearchWindow * gsearch = data;
 
-	if (event->new_window_state & GDK_WINDOW_STATE_MAXIMIZED) {
+	if (event->new_window_state & CDK_WINDOW_STATE_MAXIMIZED) {
 		gsearch->is_window_maximized = TRUE;
 	}
 	else {

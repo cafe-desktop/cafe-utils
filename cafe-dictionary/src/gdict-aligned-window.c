@@ -106,7 +106,7 @@ gdict_aligned_window_init (GdictAlignedWindow *aligned_window)
   ctk_window_set_modal (window, TRUE);
 #endif
   ctk_window_set_decorated (window, FALSE);
-  ctk_window_set_type_hint (window, GDK_WINDOW_TYPE_HINT_DOCK);
+  ctk_window_set_type_hint (window, CDK_WINDOW_TYPE_HINT_DOCK);
 }
 
 static void
@@ -156,7 +156,7 @@ gdict_aligned_window_position (GdictAlignedWindow *window)
   gint our_width, our_height;
   gint entry_x, entry_y, entry_width, entry_height;
   gint x, y;
-  GdkGravity gravity = GDK_GRAVITY_NORTH_WEST;
+  GdkGravity gravity = CDK_GRAVITY_NORTH_WEST;
   GdkWindow *cdk_window;
   GdkDisplay *display;
 
@@ -194,7 +194,7 @@ gdict_aligned_window_position (GdictAlignedWindow *window)
     {
       x = entry_x + entry_width - our_width - 1;
 
-      gravity = GDK_GRAVITY_NORTH_EAST;
+      gravity = CDK_GRAVITY_NORTH_EAST;
     }
 
   if (entry_y + entry_height + our_height < HeightOfScreen (cdk_x11_screen_get_xscreen (cdk_screen_get_default ())))
@@ -203,10 +203,10 @@ gdict_aligned_window_position (GdictAlignedWindow *window)
     {
       y = entry_y - our_height + 1;
 
-      if (gravity == GDK_GRAVITY_NORTH_EAST)
-	gravity = GDK_GRAVITY_SOUTH_EAST;
+      if (gravity == CDK_GRAVITY_NORTH_EAST)
+	gravity = CDK_GRAVITY_SOUTH_EAST;
       else
-	gravity = GDK_GRAVITY_SOUTH_WEST;
+	gravity = CDK_GRAVITY_SOUTH_WEST;
     }
 
   ctk_window_set_gravity (CTK_WINDOW (window), gravity);

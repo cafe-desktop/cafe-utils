@@ -55,7 +55,7 @@
                 <property name="can_default">True</property>
                 <property name="receives_default">False</property>
                 <property name="use_underline">True</property>
-                <accelerator key="C" signal="activate" modifiers="GDK_CONTROL_MASK"/>
+                <accelerator key="C" signal="activate" modifiers="CDK_CONTROL_MASK"/>
               </object>
               <packing>
                 <property name="expand">False</property>

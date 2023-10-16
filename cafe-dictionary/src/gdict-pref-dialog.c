@@ -606,15 +606,15 @@ gdict_dialog_page_scroll_event_cb (CtkWidget *widget, GdkEventScroll *event, Ctk
       return FALSE;
 
   switch (event->direction) {
-  case GDK_SCROLL_RIGHT:
-  case GDK_SCROLL_DOWN:
+  case CDK_SCROLL_RIGHT:
+  case CDK_SCROLL_DOWN:
     ctk_notebook_next_page (notebook);
     break;
-  case GDK_SCROLL_LEFT:
-  case GDK_SCROLL_UP:
+  case CDK_SCROLL_LEFT:
+  case CDK_SCROLL_UP:
     ctk_notebook_prev_page (notebook);
     break;
-  case GDK_SCROLL_SMOOTH:
+  case CDK_SCROLL_SMOOTH:
     switch (ctk_notebook_get_tab_pos (notebook)) {
     case CTK_POS_LEFT:
     case CTK_POS_RIGHT:
@@ -695,7 +695,7 @@ gdict_pref_dialog_init (GdictPrefDialog *dialog)
   /* keep all the interesting widgets around */
   dialog->notebook = CTK_WIDGET (ctk_builder_get_object (dialog->builder, "preferences_notebook"));
 
-  ctk_widget_add_events (dialog->notebook, GDK_SCROLL_MASK);
+  ctk_widget_add_events (dialog->notebook, CDK_SCROLL_MASK);
   g_signal_connect (dialog->notebook, "scroll-event",
                     G_CALLBACK (gdict_dialog_page_scroll_event_cb), CTK_WINDOW (dialog));
 

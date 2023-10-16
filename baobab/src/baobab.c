@@ -85,7 +85,7 @@ baobab_set_busy (gboolean busy)
 	if (busy == TRUE) {
 		if (!busy_cursor && window) {
 			display = ctk_widget_get_display (baobab.window);
-			busy_cursor = cdk_cursor_new_for_display (display, GDK_WATCH);
+			busy_cursor = cdk_cursor_new_for_display (display, CDK_WATCH);
 		}
 		cursor = busy_cursor;
 
@@ -120,7 +120,7 @@ set_drop_target (CtkWidget *target, gboolean active) {
 				   CTK_DEST_DEFAULT_DROP | CTK_DEST_DEFAULT_MOTION | CTK_DEST_DEFAULT_HIGHLIGHT,
 				   dnd_target_list,
 				   G_N_ELEMENTS (dnd_target_list),
-				   GDK_ACTION_COPY);
+				   CDK_ACTION_COPY);
 	} else {
 		ctk_drag_dest_unset (target);
 	}

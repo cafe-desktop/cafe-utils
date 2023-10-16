@@ -2107,7 +2107,7 @@ add_constraint (GSearchWindow * gsearch,
 		ctk_window_set_geometry_hints (CTK_WINDOW (gsearch->window),
 		                               CTK_WIDGET (gsearch->window),
 		                               &gsearch->window_geometry,
-		                               GDK_HINT_MIN_SIZE);
+		                               CDK_HINT_MIN_SIZE);
 	}
 
 	constraint->constraint_id = constraint_id;
@@ -2329,7 +2329,7 @@ create_search_results_section (GSearchWindow * gsearch)
                                         CTK_POLICY_AUTOMATIC);
 
 	gsearch->search_results_list_store = ctk_list_store_new (NUM_COLUMNS,
-					      GDK_TYPE_PIXBUF,
+					      CDK_TYPE_PIXBUF,
 					      G_TYPE_STRING,
 					      G_TYPE_STRING,
 					      G_TYPE_STRING,
@@ -2358,9 +2358,9 @@ create_search_results_section (GSearchWindow * gsearch)
 				     CTK_SELECTION_MULTIPLE);
 
 	ctk_drag_source_set (CTK_WIDGET (gsearch->search_results_tree_view),
-			     GDK_BUTTON1_MASK | GDK_BUTTON2_MASK,
+			     CDK_BUTTON1_MASK | CDK_BUTTON2_MASK,
 			     GSearchDndTable, GSearchTotalDnds,
-			     GDK_ACTION_COPY | GDK_ACTION_MOVE | GDK_ACTION_ASK);
+			     CDK_ACTION_COPY | CDK_ACTION_MOVE | CDK_ACTION_ASK);
 
 	g_signal_connect (G_OBJECT (gsearch->search_results_tree_view),
 			  "drag_data_get",
@@ -2776,7 +2776,7 @@ gsearch_app_create (GSearchWindow * gsearch)
 
 	ctk_window_set_position (CTK_WINDOW (gsearch->window), CTK_WIN_POS_CENTER);
 	ctk_window_set_geometry_hints (CTK_WINDOW (gsearch->window), CTK_WIDGET (gsearch->window),
-				       &gsearch->window_geometry, GDK_HINT_MIN_SIZE);
+				       &gsearch->window_geometry, CDK_HINT_MIN_SIZE);
 
 	gsearchtool_get_stored_window_geometry (&gsearch->window_width,
 	                                        &gsearch->window_height);

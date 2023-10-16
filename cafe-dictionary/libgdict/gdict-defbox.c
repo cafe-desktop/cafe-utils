@@ -1486,7 +1486,7 @@ defbox_event_after_cb (CtkWidget   *text_view,
   GdkEventButton *button_event;
   gint bx, by;
 
-  if (event->type != GDK_BUTTON_RELEASE)
+  if (event->type != CDK_BUTTON_RELEASE)
     return FALSE;
 
   button_event = (GdkEventButton *) event;
@@ -1528,13 +1528,13 @@ set_cursor_if_appropriate (GdictDefbox *defbox,
   if (!priv->hand_cursor)
     {
       GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
-      priv->hand_cursor = cdk_cursor_new_for_display (display, GDK_HAND2);
+      priv->hand_cursor = cdk_cursor_new_for_display (display, CDK_HAND2);
     }
 
   if (!priv->regular_cursor)
     {
       GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
-      priv->regular_cursor = cdk_cursor_new_for_display (display, GDK_XTERM);
+      priv->regular_cursor = cdk_cursor_new_for_display (display, CDK_XTERM);
     }
 
   ctk_text_view_get_iter_at_location (text_view, &iter, x, y);
@@ -1850,19 +1850,19 @@ gdict_defbox_class_init (GdictDefboxClass *klass)
 
   binding_set = ctk_binding_set_by_class (klass);
   ctk_binding_entry_add_signal (binding_set,
-  			        GDK_KEY_f, GDK_CONTROL_MASK,
+  			        CDK_KEY_f, CDK_CONTROL_MASK,
   			        "show-find",
   			        0);
   ctk_binding_entry_add_signal (binding_set,
-  			        GDK_KEY_g, GDK_CONTROL_MASK,
+  			        CDK_KEY_g, CDK_CONTROL_MASK,
   			        "find-next",
   			        0);
   ctk_binding_entry_add_signal (binding_set,
-  				GDK_KEY_g, GDK_SHIFT_MASK | GDK_CONTROL_MASK,
+  				CDK_KEY_g, CDK_SHIFT_MASK | CDK_CONTROL_MASK,
   				"find-previous",
   				0);
   ctk_binding_entry_add_signal (binding_set,
-  			        GDK_KEY_Escape, 0,
+  			        CDK_KEY_Escape, 0,
   			        "hide-find",
   			        0);
 }
@@ -2110,7 +2110,7 @@ lookup_start_cb (GdictContext *context,
   if (!priv->busy_cursor)
     {
       GdkDisplay *display = ctk_widget_get_display (CTK_WIDGET (defbox));
-      priv->busy_cursor = cdk_cursor_new_for_display (display, GDK_WATCH);
+      priv->busy_cursor = cdk_cursor_new_for_display (display, CDK_WATCH);
     }
 
   window = ctk_text_view_get_window (CTK_TEXT_VIEW (priv->text_view),

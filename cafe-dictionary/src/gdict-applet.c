@@ -275,15 +275,15 @@ window_key_press_event_cb (CtkWidget   *widget,
 {
   GdictApplet *applet = GDICT_APPLET (user_data);
 
-  if (event->keyval == GDK_KEY_Escape)
+  if (event->keyval == CDK_KEY_Escape)
     {
       ctk_toggle_button_set_active (CTK_TOGGLE_BUTTON (applet->priv->toggle), FALSE);
       ctk_toggle_button_toggled (CTK_TOGGLE_BUTTON (applet->priv->toggle));
 
       return TRUE;
     }
-  else if ((event->keyval == GDK_KEY_l) &&
-	   (event->state & GDK_CONTROL_MASK))
+  else if ((event->keyval == CDK_KEY_l) &&
+	   (event->state & CDK_CONTROL_MASK))
     {
       ctk_widget_grab_focus (applet->priv->entry);
 
@@ -461,7 +461,7 @@ gdict_applet_entry_key_press_cb (CtkWidget   *widget,
 {
   GdictAppletPrivate *priv = GDICT_APPLET (user_data)->priv;
 
-  if (event->keyval == GDK_KEY_Escape)
+  if (event->keyval == CDK_KEY_Escape)
     {
       if (priv->is_window_showing)
 	{
@@ -471,7 +471,7 @@ gdict_applet_entry_key_press_cb (CtkWidget   *widget,
 	  return TRUE;
 	}
     }
-  else if (event->keyval == GDK_KEY_Tab)
+  else if (event->keyval == CDK_KEY_Tab)
     {
       if (priv->is_window_showing)
 	ctk_widget_grab_focus (priv->defbox);
@@ -558,7 +558,7 @@ gdict_applet_draw (GdictApplet *applet)
       scaled = cdk_pixbuf_scale_simple (priv->icon,
 		      			priv->size - 5,
 					priv->size - 5,
-					GDK_INTERP_BILINEAR);
+					CDK_INTERP_BILINEAR);
 
       ctk_image_set_from_pixbuf (CTK_IMAGE (priv->image), scaled);
       g_object_unref (scaled);
@@ -802,7 +802,7 @@ gdict_applet_size_allocate (CtkWidget    *widget,
 	  scaled = cdk_pixbuf_scale_simple (priv->icon,
 			  		    priv->size - 5,
 					    priv->size - 5,
-					    GDK_INTERP_BILINEAR);
+					    CDK_INTERP_BILINEAR);
 
 	  ctk_image_set_from_pixbuf (CTK_IMAGE (priv->image), scaled);
 	  g_object_unref (scaled);

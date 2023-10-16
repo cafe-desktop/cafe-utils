@@ -747,9 +747,9 @@ gsearchtool_stretch_frame_image (GdkPixbuf *frame_image,
 	frame_height = cdk_pixbuf_get_height (frame_image);
 
 	if (fill_flag) {
-		result_pixbuf = cdk_pixbuf_scale_simple (frame_image, dest_width, dest_height, GDK_INTERP_NEAREST);
+		result_pixbuf = cdk_pixbuf_scale_simple (frame_image, dest_width, dest_height, CDK_INTERP_NEAREST);
 	} else {
-		result_pixbuf = cdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, dest_width, dest_height);
+		result_pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB, TRUE, 8, dest_width, dest_height);
 	}
 
 	/* clear the new pixbuf */
@@ -868,7 +868,7 @@ gsearchtool_get_thumbnail_image (const gchar * thumbnail)
 				scale_y = ICON_SIZE;
 			}
 
-			pixbuf = cdk_pixbuf_scale_simple (thumbnail_pixbuf, scale_x, scale_y, GDK_INTERP_BILINEAR);
+			pixbuf = cdk_pixbuf_scale_simple (thumbnail_pixbuf, scale_x, scale_y, CDK_INTERP_BILINEAR);
 			g_object_unref (thumbnail_pixbuf);
 		}
 	}
