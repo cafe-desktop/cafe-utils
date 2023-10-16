@@ -779,27 +779,27 @@ run_dialog (ScreenshotDialog *dialog)
 static void
 play_sound_effect (CdkWindow *window)
 {
-  ca_context *c;
-  ca_proplist *p = NULL;
+  ka_context *c;
+  ka_proplist *p = NULL;
   int res;
 
-  c = ca_ctk_context_get ();
+  c = ka_ctk_context_get ();
 
-  res = ca_proplist_create (&p);
+  res = ka_proplist_create (&p);
   if (res < 0)
     goto done;
 
-  res = ca_proplist_sets (p, CA_PROP_EVENT_ID, "screen-capture");
+  res = ka_proplist_sets (p, CA_PROP_EVENT_ID, "screen-capture");
   if (res < 0)
     goto done;
 
-  res = ca_proplist_sets (p, CA_PROP_EVENT_DESCRIPTION, _("Screenshot taken"));
+  res = ka_proplist_sets (p, CA_PROP_EVENT_DESCRIPTION, _("Screenshot taken"));
   if (res < 0)
     goto done;
 
   if (window != NULL)
     {
-      res = ca_proplist_setf (p,
+      res = ka_proplist_setf (p,
                               CA_PROP_WINDOW_X11_XID,
                               "%lu",
                               (unsigned long) CDK_WINDOW_XID (window));
@@ -807,11 +807,11 @@ play_sound_effect (CdkWindow *window)
         goto done;
     }
 
-  ca_context_play_full (c, 0, p, NULL, NULL);
+  ka_context_play_full (c, 0, p, NULL, NULL);
 
  done:
   if (p != NULL)
-    ca_proplist_destroy (p);
+    ka_proplist_destroy (p);
 
 }
 

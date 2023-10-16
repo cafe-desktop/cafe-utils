@@ -2245,7 +2245,7 @@ msgstr "Erro ao corresponder"
 
 #: cafe-dictionary/libgdict/gdict-defbox.c:1314
 msgid "F_ind:"
-msgstr "Loca_lizar:"
+msgstr "Loka_lizar:"
 
 #: cafe-dictionary/libgdict/gdict-defbox.c:1327
 msgid "_Previous"
