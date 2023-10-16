@@ -20,7 +20,7 @@ Requirements:
         ctk+                     >= 3.14.0
         libcafe-panel-applet     >= 1.17.0
         libgtop                  >= 2.12.0
-        libcanberra-ctk          >= 0.4
+        libkanberra-ctk          >= 0.4
 
 The following configure flags can be used:
 

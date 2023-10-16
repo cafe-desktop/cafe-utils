@@ -39,7 +39,7 @@
 #include <gio/gio.h>
 #include <pwd.h>
 #include <X11/Xutil.h>
-#include <canberra-ctk.h>
+#include <kanberra-ctk.h>
 
 #include "screenshot-shadow.h"
 #include "screenshot-utils.h"
