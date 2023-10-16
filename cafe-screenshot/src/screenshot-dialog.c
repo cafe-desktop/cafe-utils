@@ -55,7 +55,7 @@ static gboolean
 on_toplevel_key_press_event (CtkWidget *widget,
 			     GdkEventKey *key)
 {
-  if (key->keyval == GDK_KEY_F1)
+  if (key->keyval == CDK_KEY_F1)
     {
       ctk_dialog_response (CTK_DIALOG (widget), CTK_RESPONSE_HELP);
       return TRUE;
@@ -84,7 +84,7 @@ on_preview_draw (CtkWidget      *drawing_area,
       dialog->preview_image = cdk_pixbuf_scale_simple (dialog->screenshot,
                                                        width,
                                                        height,
-                                                       GDK_INTERP_BILINEAR);
+                                                       CDK_INTERP_BILINEAR);
     }
 
   context = ctk_widget_get_style_context (drawing_area);
@@ -289,9 +289,9 @@ screenshot_dialog_enable_dnd (ScreenshotDialog *dialog)
 
   preview_darea = CTK_WIDGET (ctk_builder_get_object (dialog->ui, "preview_darea"));
   ctk_drag_source_set (preview_darea,
-		       GDK_BUTTON1_MASK | GDK_BUTTON3_MASK,
+		       CDK_BUTTON1_MASK | CDK_BUTTON3_MASK,
 		       drag_types, G_N_ELEMENTS (drag_types),
-		       GDK_ACTION_COPY);
+		       CDK_ACTION_COPY);
 }
 
 CtkWidget *
@@ -359,7 +359,7 @@ screenshot_dialog_set_busy (ScreenshotDialog *dialog,
     {
       GdkCursor *cursor;
       /* Change cursor to busy */
-      cursor = cdk_cursor_new_for_display (display, GDK_WATCH);
+      cursor = cdk_cursor_new_for_display (display, CDK_WATCH);
       cdk_window_set_cursor (ctk_widget_get_window (toplevel), cursor);
       g_object_unref (cursor);
     }

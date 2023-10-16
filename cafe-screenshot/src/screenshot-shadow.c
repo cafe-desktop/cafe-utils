@@ -203,7 +203,7 @@ screenshot_add_shadow (GdkPixbuf **src)
 			cdk_pixbuf_get_width (*src),
 			cdk_pixbuf_get_height (*src),
 			BLUR_RADIUS, BLUR_RADIUS, 1.0, 1.0,
-			GDK_INTERP_BILINEAR, 255);
+			CDK_INTERP_BILINEAR, 255);
   g_object_unref (*src);
   *src = dest;
 }
@@ -229,7 +229,7 @@ screenshot_add_border (GdkPixbuf **src)
 			cdk_pixbuf_get_width (*src),
 			cdk_pixbuf_get_height (*src),
 			OUTLINE_RADIUS, OUTLINE_RADIUS, 1.0, 1.0,
-			GDK_INTERP_BILINEAR, 255);
+			CDK_INTERP_BILINEAR, 255);
   g_object_unref (*src);
   *src = dest;
 }

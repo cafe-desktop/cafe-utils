@@ -312,7 +312,7 @@ gdict_window_lookup_start_cb (GdictContext *context,
     return;
 
   if (!window->busy_cursor)
-    window->busy_cursor = cdk_cursor_new_for_display (display, GDK_WATCH);
+    window->busy_cursor = cdk_cursor_new_for_display (display, CDK_WATCH);
 
   message = g_strdup_printf (_("Searching for '%s'..."), window->word);
 
@@ -1052,7 +1052,7 @@ gdict_window_cmd_edit_copy (CtkAction   *action,
     ctk_editable_copy_clipboard (CTK_EDITABLE (window->entry));
   else
     gdict_defbox_copy_to_clipboard (GDICT_DEFBOX (window->defbox),
-                                    ctk_clipboard_get (GDK_SELECTION_CLIPBOARD));
+                                    ctk_clipboard_get (CDK_SELECTION_CLIPBOARD));
 }
 
 static void
@@ -1372,7 +1372,7 @@ gdict_window_state_event_cb (CtkWidget           *widget,
 {
   GdictWindow *window = GDICT_WINDOW (widget);
 
-  if (event->new_window_state & GDK_WINDOW_STATE_MAXIMIZED)
+  if (event->new_window_state & CDK_WINDOW_STATE_MAXIMIZED)
     window->is_maximized = TRUE;
   else
     window->is_maximized = FALSE;
@@ -1742,7 +1742,7 @@ gdict_window_constructor (GType                  type,
   ctk_drag_dest_set (window->defbox,
   		     CTK_DEST_DEFAULT_ALL,
   		     drop_types, n_drop_types,
-  		     GDK_ACTION_COPY);
+  		     CDK_ACTION_COPY);
   g_signal_connect (window->defbox, "drag-data-received",
   		    G_CALLBACK (gdict_window_drag_data_received_cb),
   		    window);

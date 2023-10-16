@@ -121,7 +121,7 @@ entry_key_press_event_cb (CtkWidget *entry,
 {
   LogviewFindbar *findbar = user_data;
 
-  if (event->keyval == GDK_KEY_Escape) {
+  if (event->keyval == CDK_KEY_Escape) {
     g_signal_emit (findbar, signals[CLOSE], 0);
     return TRUE;
   }

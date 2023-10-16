@@ -226,7 +226,7 @@ effect_combo_changed_cb (CtkComboBox *combo,
 static gint
 key_press_cb (CtkWidget* widget, GdkEventKey* event, gpointer data)
 {
-  if (event->keyval == GDK_KEY_F1)
+  if (event->keyval == CDK_KEY_F1)
     {
       display_help (CTK_WINDOW (widget));
       return TRUE;
@@ -709,7 +709,7 @@ static void
 save_screenshot_in_clipboard (GdkDisplay *display, GdkPixbuf *screenshot)
 {
   CtkClipboard *clipboard =
-    ctk_clipboard_get_for_display (display, GDK_SELECTION_CLIPBOARD);
+    ctk_clipboard_get_for_display (display, CDK_SELECTION_CLIPBOARD);
   ctk_clipboard_set_image (clipboard, screenshot);
 }
 
@@ -802,7 +802,7 @@ play_sound_effect (GdkWindow *window)
       res = ca_proplist_setf (p,
                               CA_PROP_WINDOW_X11_XID,
                               "%lu",
-                              (unsigned long) GDK_WINDOW_XID (window));
+                              (unsigned long) CDK_WINDOW_XID (window));
       if (res < 0)
         goto done;
     }

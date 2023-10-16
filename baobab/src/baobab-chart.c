@@ -304,16 +304,16 @@ baobab_chart_realize (CtkWidget *widget)
 
   ctk_widget_get_allocation (widget, &allocation);
 
-  attributes.window_type = GDK_WINDOW_CHILD;
+  attributes.window_type = CDK_WINDOW_CHILD;
   attributes.x = allocation.x;
   attributes.y = allocation.y;
   attributes.width = allocation.width;
   attributes.height = allocation.height;
-  attributes.wclass = GDK_INPUT_OUTPUT;
+  attributes.wclass = CDK_INPUT_OUTPUT;
   attributes.visual = ctk_widget_get_visual (widget);
   attributes.event_mask = ctk_widget_get_events (widget);
 
-  attributes_mask = GDK_WA_X | GDK_WA_Y | GDK_WA_VISUAL;
+  attributes_mask = CDK_WA_X | CDK_WA_Y | CDK_WA_VISUAL;
 
   window = cdk_window_new (ctk_widget_get_parent_window (widget),
                            &attributes,
@@ -322,10 +322,10 @@ baobab_chart_realize (CtkWidget *widget)
   cdk_window_set_user_data (window, chart);
 
   ctk_widget_add_events (widget,
-                         GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK |
-                         GDK_BUTTON_RELEASE_MASK | GDK_POINTER_MOTION_MASK |
-                         GDK_POINTER_MOTION_HINT_MASK | GDK_LEAVE_NOTIFY_MASK |
-                         GDK_SCROLL_MASK);
+                         CDK_EXPOSURE_MASK | CDK_BUTTON_PRESS_MASK |
+                         CDK_BUTTON_RELEASE_MASK | CDK_POINTER_MOTION_MASK |
+                         CDK_POINTER_MOTION_HINT_MASK | CDK_LEAVE_NOTIFY_MASK |
+                         CDK_SCROLL_MASK);
 }
 
 static void
@@ -945,22 +945,22 @@ baobab_chart_scroll (CtkWidget *widget,
 {
   switch (event->direction)
     {
-    case GDK_SCROLL_LEFT :
-    case GDK_SCROLL_UP :
+    case CDK_SCROLL_LEFT :
+    case CDK_SCROLL_UP :
       if (baobab_chart_can_zoom_out (widget))
         baobab_chart_zoom_out (widget);
       /* change the selected item when zooming */
       baobab_chart_motion_notify (widget, (GdkEventMotion *)event);
       break;
 
-    case GDK_SCROLL_RIGHT :
-    case GDK_SCROLL_DOWN :
+    case CDK_SCROLL_RIGHT :
+    case CDK_SCROLL_DOWN :
       if (baobab_chart_can_zoom_in (widget))
         baobab_chart_zoom_in (widget);
       break;
 
-    case GDK_SCROLL_SMOOTH :
-      /* since we don't add GDK_SMOOTH_SCROLL_MASK to received
+    case CDK_SCROLL_SMOOTH :
+      /* since we don't add CDK_SMOOTH_SCROLL_MASK to received
          events, this is actually never reached and it's here
          just to silence compiler warnings */
       break;

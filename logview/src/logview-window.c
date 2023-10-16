@@ -405,7 +405,7 @@ logview_copy (CtkAction *action, LogviewWindow *logview)
   CtkClipboard *clipboard;
 
   buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
-  clipboard = ctk_clipboard_get (GDK_SELECTION_CLIPBOARD);
+  clipboard = ctk_clipboard_get (CDK_SELECTION_CLIPBOARD);
 
   ctk_text_buffer_copy_clipboard (buffer, clipboard);
 
@@ -1136,9 +1136,9 @@ static const struct {
   GdkModifierType modifier;
   const gchar *action;
 } extra_keybindings [] = {
-  { GDK_KEY_KP_Add,      GDK_CONTROL_MASK, "ViewZoomIn" },
-  { GDK_KEY_KP_Subtract, GDK_CONTROL_MASK, "ViewZoomOut" },
-  { GDK_KEY_KP_0,        GDK_CONTROL_MASK, "ViewZoom100" }
+  { CDK_KEY_KP_Add,      CDK_CONTROL_MASK, "ViewZoomIn" },
+  { CDK_KEY_KP_Subtract, CDK_CONTROL_MASK, "ViewZoomOut" },
+  { CDK_KEY_KP_0,        CDK_CONTROL_MASK, "ViewZoom100" }
 };
 
 static gboolean

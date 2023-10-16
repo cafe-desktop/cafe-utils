@@ -58,7 +58,7 @@ screenshot_grab_lock (void)
 
   if (!ctk_selection_owner_set (selection_window,
 				cdk_atom_intern (SELECTION_NAME, FALSE),
-				GDK_CURRENT_TIME))
+				CDK_CURRENT_TIME))
     {
       ctk_widget_destroy (selection_window);
       selection_window = NULL;
@@ -105,9 +105,9 @@ screen_get_active_window (GdkScreen *screen)
                                             cdk_atom_intern_static_string ("_NET_ACTIVE_WINDOW")))
     return NULL;
 
-  if (XGetWindowProperty (GDK_DISPLAY_XDISPLAY (cdk_screen_get_display (screen)),
-                          RootWindow (GDK_DISPLAY_XDISPLAY (cdk_screen_get_display (screen)),
-                                      GDK_SCREEN_XNUMBER (screen)),
+  if (XGetWindowProperty (CDK_DISPLAY_XDISPLAY (cdk_screen_get_display (screen)),
+                          RootWindow (CDK_DISPLAY_XDISPLAY (cdk_screen_get_display (screen)),
+                                      CDK_SCREEN_XNUMBER (screen)),
                           cdk_x11_get_xatom_by_name_for_display (cdk_screen_get_display (screen),
                                                                  "_NET_ACTIVE_WINDOW"),
                           0, 1, False, XA_WINDOW, &type_return,
@@ -155,7 +155,7 @@ screenshot_window_is_desktop (GdkWindow *window)
     return TRUE;
 
   window_type_hint = cdk_window_get_type_hint (window);
-  if (window_type_hint == GDK_WINDOW_TYPE_HINT_DESKTOP)
+  if (window_type_hint == CDK_WINDOW_TYPE_HINT_DESKTOP)
     return TRUE;
 
   return FALSE;
@@ -299,7 +299,7 @@ select_area_key_press (CtkWidget *window,
                        GdkEventKey *event,
                        select_area_filter_data *data)
 {
-  if (event->keyval == GDK_KEY_Escape)
+  if (event->keyval == CDK_KEY_Escape)
     {
       data->rect.x = 0;
       data->rect.y = 0;
@@ -407,20 +407,20 @@ screenshot_select_area_async (SelectAreaCallback callback)
   g_signal_connect (data.window, "motion-notify-event", G_CALLBACK (select_area_motion_notify), &data);
 
   display = cdk_display_get_default ();
-  cursor = cdk_cursor_new_for_display (display, GDK_CROSSHAIR);
+  cursor = cdk_cursor_new_for_display (display, CDK_CROSSHAIR);
 
   seat = cdk_display_get_default_seat (display);
 
   res = cdk_seat_grab (seat,
                        ctk_widget_get_window (data.window),
-                       GDK_SEAT_CAPABILITY_ALL,
+                       CDK_SEAT_CAPABILITY_ALL,
                        FALSE,
                        cursor,
                        NULL,
                        NULL,
                        NULL);
 
-  if (res != GDK_GRAB_SUCCESS)
+  if (res != CDK_GRAB_SUCCESS)
     {
       g_object_unref (cursor);
       goto out;
@@ -452,7 +452,7 @@ find_wm_window (Window xid)
 
   do
     {
-      if (XQueryTree (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()), xid, &root,
+      if (XQueryTree (CDK_DISPLAY_XDISPLAY (cdk_display_get_default ()), xid, &root,
 		      &parent, &children, &nchildren) == 0)
 	{
 	  g_warning ("Couldn't find window manager window");
@@ -502,7 +502,7 @@ blank_rectangle_in_pixbuf (GdkPixbuf *pixbuf, GdkRectangle *rect)
   guchar *row;
   gboolean has_alpha;
 
-  g_assert (cdk_pixbuf_get_colorspace (pixbuf) == GDK_COLORSPACE_RGB);
+  g_assert (cdk_pixbuf_get_colorspace (pixbuf) == CDK_COLORSPACE_RGB);
 
   x2 = rect->x + rect->width;
   y2 = rect->y + rect->height;
@@ -613,7 +613,7 @@ screenshot_get_pixbuf (GdkWindow    *window,
     {
       Window xid, wm;
 
-      xid = GDK_WINDOW_XID (window);
+      xid = CDK_WINDOW_XID (window);
       wm = find_wm_window (xid);
 
       if (wm != None)
@@ -685,8 +685,8 @@ screenshot_get_pixbuf (GdkWindow    *window,
        * of the WM decoration.
        */
 
-      rectangles = XShapeGetRectangles (GDK_DISPLAY_XDISPLAY (cdk_display_get_default ()),
-                                        GDK_WINDOW_XID (window),
+      rectangles = XShapeGetRectangles (CDK_DISPLAY_XDISPLAY (cdk_display_get_default ()),
+                                        CDK_WINDOW_XID (window),
                                         ShapeBounding,
                                         &rectangle_count,
                                         &rectangle_order);
@@ -700,7 +700,7 @@ screenshot_get_pixbuf (GdkWindow    *window,
               height *= scale;
             }
 
-          tmp = cdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, width, height);
+          tmp = cdk_pixbuf_new (CDK_COLORSPACE_RGB, TRUE, 8, width, height);
           cdk_pixbuf_fill (tmp, 0);
 
           for (i = 0; i < rectangle_count; i++)
@@ -779,7 +779,7 @@ screenshot_get_pixbuf (GdkWindow    *window,
       GdkCursor *cursor;
       GdkPixbuf *cursor_pixbuf;
 
-      cursor = cdk_cursor_new_for_display (cdk_display_get_default (), GDK_LEFT_PTR);
+      cursor = cdk_cursor_new_for_display (cdk_display_get_default (), CDK_LEFT_PTR);
       cursor_pixbuf = cdk_cursor_get_image (cursor);
 
       if (cursor_pixbuf != NULL)
@@ -824,7 +824,7 @@ screenshot_get_pixbuf (GdkWindow    *window,
                                     r2.width, r2.height,
                                     cx - xhot, cy - yhot,
                                     1.0, 1.0,
-                                    GDK_INTERP_BILINEAR,
+                                    CDK_INTERP_BILINEAR,
                                     255);
             }
 
