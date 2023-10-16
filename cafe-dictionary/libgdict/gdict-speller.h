@@ -38,7 +38,7 @@ typedef struct _GdictSpellerClass	GdictSpellerClass;
 
 struct _GdictSpeller
 {
-  GtkBox parent_instance;
+  CtkBox parent_instance;
 
   /*< private >*/
   GdictSpellerPrivate *priv;
@@ -46,7 +46,7 @@ struct _GdictSpeller
 
 struct _GdictSpellerClass
 {
-  GtkBoxClass parent_class;
+  CtkBoxClass parent_class;
 
   void (*word_activated) (GdictSpeller *speller,
 		          const gchar  *word,
@@ -61,8 +61,8 @@ struct _GdictSpellerClass
 
 GType                 gdict_speller_get_type         (void) G_GNUC_CONST;
 
-GtkWidget *           gdict_speller_new              (void);
-GtkWidget *           gdict_speller_new_with_context (GdictContext *context);
+CtkWidget *           gdict_speller_new              (void);
+CtkWidget *           gdict_speller_new_with_context (GdictContext *context);
 
 void                  gdict_speller_set_context      (GdictSpeller *speller,
 						      GdictContext *context);

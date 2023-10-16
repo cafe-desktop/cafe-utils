@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <!--*- mode: xml -*-->
 <interface>
-  <object class="GtkUIManager" id="uimanager1">
+  <object class="CtkUIManager" id="uimanager1">
     <child>
-      <object class="GtkActionGroup" id="actiongroup1">
+      <object class="CtkActionGroup" id="actiongroup1">
         <child>
-          <object class="GtkAction" id="menuitem1">
+          <object class="CtkAction" id="menuitem1">
             <property name="name">menuitem1</property>
             <property name="label" translatable="yes">_Analyzer</property>
           </object>
         </child>
         <child>
-          <object class="GtkAction" id="menuscanhome">
+          <object class="CtkAction" id="menuscanhome">
             <property name="stock_id">ctk-home</property>
             <property name="name">menuscanhome</property>
             <property name="label" translatable="yes">Scan _Home Folder</property>
@@ -20,7 +20,7 @@
           <accelerator key="S" modifiers="GDK_CONTROL_MASK"/>
         </child>
         <child>
-          <object class="GtkAction" id="menuallfs">
+          <object class="CtkAction" id="menuallfs">
             <property name="stock_id">ctk-harddisk</property>
             <property name="name">menuallfs</property>
             <property name="label" translatable="yes">Scan _Filesystem</property>
@@ -29,7 +29,7 @@
           <accelerator key="F" modifiers="GDK_CONTROL_MASK"/>
         </child>
         <child>
-          <object class="GtkAction" id="menuscandir">
+          <object class="CtkAction" id="menuscandir">
             <property name="stock_id">ctk-directory</property>
             <property name="name">menuscandir</property>
             <property name="label" translatable="yes">Scan F_older...</property>
@@ -38,7 +38,7 @@
           <accelerator key="O" modifiers="GDK_CONTROL_MASK"/>
         </child>
         <child>
-          <object class="GtkAction" id="menu_scan_rem">
+          <object class="CtkAction" id="menu_scan_rem">
             <property name="stock_id">ctk-network</property>
             <property name="name">menu_scan_rem</property>
             <property name="label" translatable="yes">S_can Remote Folder...</property>
@@ -46,7 +46,7 @@
           </object>
         </child>
         <child>
-          <object class="GtkAction" id="menustop">
+          <object class="CtkAction" id="menustop">
             <property name="stock_id">ctk-stop</property>
             <property name="name">menustop</property>
             <signal handler="on_menu_stop_activate" last_modification_time="Tue, 29 Aug 2006 04:04:57 GMT" name="activate"/>
@@ -54,7 +54,7 @@
           <accelerator key="Escape" modifiers="0"/>
         </child>
         <child>
-          <object class="GtkAction" id="menurescan">
+          <object class="CtkAction" id="menurescan">
             <property name="stock_id">ctk-refresh</property>
             <property name="name">menurescan</property>
             <signal handler="on_menu_rescan_activate" last_modification_time="Sat, 28 Oct 2006 14:27:31 GMT" name="activate"/>
@@ -62,61 +62,61 @@
           <accelerator key="R" modifiers="GDK_CONTROL_MASK"/>
         </child>
         <child>
-          <object class="GtkAction" id="menuquit">
+          <object class="CtkAction" id="menuquit">
             <property name="stock_id">ctk-quit</property>
             <property name="name">menuquit</property>
             <signal handler="on_quit_activate" last_modification_time="Tue, 05 Jul 2005 08:47:26 GMT" name="activate"/>
           </object>
         </child>
         <child>
-          <object class="GtkAction" id="edit1">
+          <object class="CtkAction" id="edit1">
             <property name="name">edit1</property>
             <property name="label" translatable="yes">_Edit</property>
           </object>
         </child>
         <child>
-          <object class="GtkAction" id="expand_all">
+          <object class="CtkAction" id="expand_all">
             <property name="name">expand_all</property>
             <property name="label" translatable="yes">_Expand All</property>
             <signal handler="on_menu_expand_activate" last_modification_time="Wed, 23 Aug 2006 17:10:33 GMT" name="activate"/>
           </object>
         </child>
         <child>
-          <object class="GtkAction" id="collapse_all">
+          <object class="CtkAction" id="collapse_all">
             <property name="name">collapse_all</property>
             <property name="label" translatable="yes">_Collapse All</property>
             <signal handler="on_menu_collapse_activate" last_modification_time="Wed, 23 Aug 2006 17:13:24 GMT" name="activate"/>
           </object>
         </child>
         <child>
-          <object class="GtkAction" id="preferenze1">
+          <object class="CtkAction" id="preferenze1">
             <property name="stock_id">ctk-preferences</property>
             <property name="name">preferenze1</property>
             <signal handler="on_pref_menu" last_modification_time="Fri, 04 Nov 2005 11:19:35 GMT" name="activate"/>
           </object>
         </child>
         <child>
-          <object class="GtkAction" id="view1">
+          <object class="CtkAction" id="view1">
             <property name="name">view1</property>
             <property name="label" translatable="yes">_View</property>
           </object>
         </child>
         <child>
-          <object class="GtkToggleAction" id="view_tb">
+          <object class="CtkToggleAction" id="view_tb">
             <property name="active">True</property>
             <property name="name">view_tb</property>
             <property name="label" translatable="yes">_Toolbar</property>
           </object>
         </child>
         <child>
-          <object class="GtkToggleAction" id="view_sb">
+          <object class="CtkToggleAction" id="view_sb">
             <property name="active">True</property>
             <property name="name">view_sb</property>
             <property name="label" translatable="yes">St_atusbar</property>
           </object>
         </child>
         <child>
-          <object class="GtkToggleAction" id="ck_allocated">
+          <object class="CtkToggleAction" id="ck_allocated">
             <property name="active">True</property>
             <property name="name">ck_allocated</property>
             <property name="label" translatable="yes">All_ocated Space</property>
@@ -124,13 +124,13 @@
           </object>
         </child>
         <child>
-          <object class="GtkAction" id="help1">
+          <object class="CtkAction" id="help1">
             <property name="name">help1</property>
             <property name="label" translatable="yes">_Help</property>
           </object>
         </child>
         <child>
-          <object class="GtkAction" id="helpcontents">
+          <object class="CtkAction" id="helpcontents">
             <property name="stock_id">ctk-help</property>
             <property name="name">helpcontents</property>
             <property name="label" translatable="yes">_Contents</property>
@@ -139,7 +139,7 @@
           <accelerator key="F1" modifiers="0"/>
         </child>
         <child>
-          <object class="GtkAction" id="about">
+          <object class="CtkAction" id="about">
             <property name="stock_id">ctk-about</property>
             <property name="name">about</property>
             <signal handler="on_about_activate" last_modification_time="Tue, 05 Jul 2005 08:58:33 GMT" name="activate"/>
@@ -178,7 +178,7 @@
       </menubar>
     </ui>
   </object>
-  <object class="GtkWindow" id="baobab_window">
+  <object class="CtkWindow" id="baobab_window">
     <property name="visible">True</property>
     <property name="title" translatable="yes">Disk Usage Analyzer</property>
     <property name="type">CTK_WINDOW_TOPLEVEL</property>
@@ -197,12 +197,12 @@
     <property name="urgency_hint">False</property>
     <signal handler="on_delete_activate" last_modification_time="Sun, 31 Jul 2005 16:53:49 GMT" name="delete_event"/>
     <child>
-      <object class="GtkVBox" id="vbox1">
+      <object class="CtkVBox" id="vbox1">
         <property name="visible">True</property>
         <property name="homogeneous">False</property>
         <property name="spacing">0</property>
         <child>
-          <object class="GtkMenuBar" constructor="uimanager1" id="menubar1">
+          <object class="CtkMenuBar" constructor="uimanager1" id="menubar1">
             <property name="visible">True</property>
             <property name="pack_direction">CTK_PACK_DIRECTION_LTR</property>
             <property name="child_pack_direction">CTK_PACK_DIRECTION_LTR</property>
@@ -214,12 +214,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkToolbar" id="toolbar1">
+          <object class="CtkToolbar" id="toolbar1">
             <property name="visible">True</property>
             <property name="orientation">CTK_ORIENTATION_HORIZONTAL</property>
             <property name="show_arrow">False</property>
             <child>
-              <object class="GtkToolButton" id="tbscanhome">
+              <object class="CtkToolButton" id="tbscanhome">
                 <property name="visible">True</property>
                 <property name="tooltip-text" translatable="yes">Scan home folder</property>
                 <property name="label" translatable="yes">Scan Home</property>
@@ -243,7 +243,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton" id="tbscanall">
+              <object class="CtkToolButton" id="tbscanall">
                 <property name="visible">True</property>
                 <property name="tooltip-text" translatable="yes">Scan filesystem</property>
                 <property name="label" translatable="yes">Scan Filesystem</property>
@@ -260,7 +260,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton" id="tbscandir">
+              <object class="CtkToolButton" id="tbscandir">
                 <property name="visible">True</property>
                 <property name="tooltip-text" translatable="yes">Scan a folder</property>
                 <property name="label" translatable="yes">Scan Folder</property>
@@ -277,7 +277,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton" id="tb_scan_remote">
+              <object class="CtkToolButton" id="tb_scan_remote">
                 <property name="visible">True</property>
                 <property name="tooltip-text" translatable="yes">Scan a remote folder</property>
                 <property name="label" translatable="yes">Scan Remote Folder</property>
@@ -294,7 +294,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkSeparatorToolItem" id="separatortoolitem4">
+              <object class="CtkSeparatorToolItem" id="separatortoolitem4">
                 <property name="visible">True</property>
                 <property name="draw">True</property>
                 <property name="visible_horizontal">True</property>
@@ -306,7 +306,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton" id="tbstop">
+              <object class="CtkToolButton" id="tbstop">
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
                 <property name="tooltip-text" translatable="yes">Stop scanning</property>
@@ -323,7 +323,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton" id="tbrescan">
+              <object class="CtkToolButton" id="tbrescan">
                 <property name="visible">True</property>
                 <property name="tooltip-text" translatable="yes">Refresh</property>
                 <property name="sensitive">False</property>
@@ -346,18 +346,18 @@
           </packing>
         </child>
         <child>
-          <object class="GtkVBox" id="vbox2">
+          <object class="CtkVBox" id="vbox2">
             <property name="visible">True</property>
             <property name="homogeneous">False</property>
             <property name="spacing">0</property>
             <child>
-              <object class="GtkHBox" id="hbox1">
+              <object class="CtkHBox" id="hbox1">
                 <property name="border_width">2</property>
                 <property name="visible">True</property>
                 <property name="homogeneous">False</property>
                 <property name="spacing">0</property>
                 <child>
-                  <object class="GtkLabel" id="label1">
+                  <object class="CtkLabel" id="label1">
                     <property name="visible">True</property>
                     <property name="label" translatable="yes"/>
                     <property name="use_underline">False</property>
@@ -391,11 +391,11 @@
               </packing>
             </child>
             <child>
-              <object class="GtkHPaned" id="hpaned_main">
+              <object class="CtkHPaned" id="hpaned_main">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <child>
-                  <object class="GtkScrolledWindow" id="scrolledwindow1">
+                  <object class="CtkScrolledWindow" id="scrolledwindow1">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="hscrollbar_policy">CTK_POLICY_AUTOMATIC</property>
@@ -403,7 +403,7 @@
                     <property name="shadow_type">CTK_SHADOW_IN</property>
                     <property name="window_placement">CTK_CORNER_TOP_LEFT</property>
                     <child>
-                      <object class="GtkTreeView" id="treeview1">
+                      <object class="CtkTreeView" id="treeview1">
                         <property name="width_request">500</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
@@ -440,7 +440,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkStatusbar" id="statusbar1">
+          <object class="CtkStatusbar" id="statusbar1">
             <property name="visible">True</property>
           </object>
           <packing>

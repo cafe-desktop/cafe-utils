@@ -49,11 +49,11 @@
 
 struct _GdictSourceChooserPrivate
 {
-  GtkListStore *store;
+  CtkListStore *store;
 
-  GtkWidget *treeview;
-  GtkWidget *refresh_button;
-  GtkWidget *buttons_box;
+  CtkWidget *treeview;
+  CtkWidget *refresh_button;
+  CtkWidget *buttons_box;
 
   GdictSourceLoader *loader;
   gint n_sources;
@@ -166,14 +166,14 @@ gdict_source_chooser_get_property (GObject    *gobject,
 }
 
 static void
-row_activated_cb (GtkTreeView       *treeview,
-                  GtkTreePath       *path,
-                  GtkTreeViewColumn *column,
+row_activated_cb (CtkTreeView       *treeview,
+                  CtkTreePath       *path,
+                  CtkTreeViewColumn *column,
                   gpointer           data)
 {
   GdictSourceChooser *chooser = GDICT_SOURCE_CHOOSER (data);
   GdictSourceChooserPrivate *priv = chooser->priv;
-  GtkTreeIter iter;
+  CtkTreeIter iter;
   gchar *name;
   GdictSource *source;
 
@@ -204,14 +204,14 @@ row_activated_cb (GtkTreeView       *treeview,
 }
 
 static void
-refresh_button_clicked_cb (GtkButton *button,
+refresh_button_clicked_cb (CtkButton *button,
                            gpointer   data)
 {
   gdict_source_chooser_refresh (GDICT_SOURCE_CHOOSER (data));
 }
 
 static void
-selection_changed_cb (GtkTreeSelection *selection,
+selection_changed_cb (CtkTreeSelection *selection,
                       gpointer          data)
 {
   g_signal_emit (data, source_chooser_signals[SELECTION_CHANGED], 0);
@@ -226,10 +226,10 @@ gdict_source_chooser_constructor (GType                  gtype,
   GdictSourceChooserPrivate *priv;
   GObjectClass *parent_class;
   GObject *retval;
-  GtkWidget *sw;
-  GtkCellRenderer *renderer;
-  GtkTreeViewColumn *column;
-  GtkWidget *hbox;
+  CtkWidget *sw;
+  CtkCellRenderer *renderer;
+  CtkTreeViewColumn *column;
+  CtkWidget *hbox;
 
   parent_class = G_OBJECT_CLASS (gdict_source_chooser_parent_class);
   retval = parent_class->constructor (gtype, n_params, params);
@@ -400,7 +400,7 @@ gdict_source_chooser_init (GdictSourceChooser *chooser)
  *
  * Since: 0.12
  */
-GtkWidget *
+CtkWidget *
 gdict_source_chooser_new (void)
 {
   return g_object_new (GDICT_TYPE_SOURCE_CHOOSER, NULL);
@@ -418,7 +418,7 @@ gdict_source_chooser_new (void)
  *
  * Since: 0.12
  */
-GtkWidget *
+CtkWidget *
 gdict_source_chooser_new_with_loader (GdictSourceLoader *loader)
 {
   g_return_val_if_fail (GDICT_IS_SOURCE_LOADER (loader), NULL);
@@ -491,9 +491,9 @@ typedef struct
 } SelectData;
 
 static gboolean
-scan_for_source_name (GtkTreeModel *model,
-                      GtkTreePath  *path,
-                      GtkTreeIter  *iter,
+scan_for_source_name (CtkTreeModel *model,
+                      CtkTreePath  *path,
+                      CtkTreeIter  *iter,
                       gpointer      user_data)
 {
   SelectData *select_data = user_data;
@@ -508,8 +508,8 @@ scan_for_source_name (GtkTreeModel *model,
 
   if (strcmp (source_name, select_data->source_name) == 0)
     {
-      GtkTreeView *tree_view;
-      GtkTreeSelection *selection;
+      CtkTreeView *tree_view;
+      CtkTreeSelection *selection;
 
       select_data->found = TRUE;
 
@@ -517,7 +517,7 @@ scan_for_source_name (GtkTreeModel *model,
 
       if (select_data->do_activate)
         {
-          GtkTreeViewColumn *column;
+          CtkTreeViewColumn *column;
 
           column = ctk_tree_view_get_column (tree_view, 2);
 
@@ -700,9 +700,9 @@ gchar *
 gdict_source_chooser_get_current_source (GdictSourceChooser *chooser)
 {
   GdictSourceChooserPrivate *priv;
-  GtkTreeSelection *selection;
-  GtkTreeModel *model;
-  GtkTreeIter iter;
+  CtkTreeSelection *selection;
+  CtkTreeModel *model;
+  CtkTreeIter iter;
   gchar *retval = NULL;
 
   g_return_val_if_fail (GDICT_IS_SOURCE_CHOOSER (chooser), NULL);
@@ -864,7 +864,7 @@ gdict_source_chooser_refresh (GdictSourceChooser *chooser)
  * @chooser: a #GdictSourceChooser
  * @button_text: text of the button
  *
- * Adds a #GtkButton with @button_text to the button area on
+ * Adds a #CtkButton with @button_text to the button area on
  * the bottom of @chooser. The @button_text can also be a
  * stock ID.
  *
@@ -872,12 +872,12 @@ gdict_source_chooser_refresh (GdictSourceChooser *chooser)
  *
  * Since: 0.12
  */
-GtkWidget *
+CtkWidget *
 gdict_source_chooser_add_button (GdictSourceChooser *chooser,
                                  const gchar        *button_text)
 {
   GdictSourceChooserPrivate *priv;
-  GtkWidget *button;
+  CtkWidget *button;
 
   g_return_val_if_fail (GDICT_IS_SOURCE_CHOOSER (chooser), NULL);
   g_return_val_if_fail (button_text != NULL, NULL);

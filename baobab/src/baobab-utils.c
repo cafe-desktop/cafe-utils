@@ -72,7 +72,7 @@ baobab_get_filesystem (BaobabFS *fs)
 }
 
 void
-filechooser_cb (GtkWidget *chooser,
+filechooser_cb (CtkWidget *chooser,
                 gint response,
                 gpointer data)
 {
@@ -94,13 +94,13 @@ filechooser_cb (GtkWidget *chooser,
 }
 
 /*
- * GtkFileChooser to select a directory to scan
+ * CtkFileChooser to select a directory to scan
  */
 gchar *
-dir_select (gboolean SEARCH, GtkWidget *parent)
+dir_select (gboolean SEARCH, CtkWidget *parent)
 {
-	static GtkWidget *file_chooser = NULL;
-	GtkWidget *toggle;
+	static CtkWidget *file_chooser = NULL;
+	CtkWidget *toggle;
 
 	if (file_chooser == NULL) {
 		file_chooser = ctk_file_chooser_dialog_new (_("Select Folder"),
@@ -138,7 +138,7 @@ dir_select (gboolean SEARCH, GtkWidget *parent)
 }
 
 void
-on_toggled (GtkToggleButton *togglebutton, gpointer dialog)
+on_toggled (CtkToggleButton *togglebutton, gpointer dialog)
 {
 	ctk_file_chooser_set_show_hidden (CTK_FILE_CHOOSER (dialog),
 					  !ctk_file_chooser_get_show_hidden
@@ -148,7 +148,7 @@ on_toggled (GtkToggleButton *togglebutton, gpointer dialog)
 void
 set_ui_action_sens (const gchar *name, gboolean sens)
 {
-	GtkAction *a;
+	CtkAction *a;
 
 	a = CTK_ACTION (ctk_builder_get_object (baobab.main_ui, name));
 	ctk_action_set_sensitive (a, sens);
@@ -157,19 +157,19 @@ set_ui_action_sens (const gchar *name, gboolean sens)
 void
 set_ui_widget_sens (const gchar *name, gboolean sens)
 {
-	GtkWidget *w;
+	CtkWidget *w;
 
 	w = CTK_WIDGET (ctk_builder_get_object (baobab.main_ui, name));
 	ctk_widget_set_sensitive (w, sens);
 }
 
 gboolean
-show_bars (GtkTreeModel *mdl,
-	   GtkTreePath *path,
-	   GtkTreeIter *iter,
+show_bars (CtkTreeModel *mdl,
+	   CtkTreePath *path,
+	   CtkTreeIter *iter,
 	   gpointer data)
 {
-	GtkTreeIter parent;
+	CtkTreeIter parent;
 	gdouble perc;
 	gint readelements, size_col;
 	guint64 refsize, size;
@@ -243,10 +243,10 @@ show_bars (GtkTreeModel *mdl,
 void
 message (const gchar *primary_msg,
 	 const gchar *secondary_msg,
-	 GtkMessageType type,
-	 GtkWidget *parent)
+	 CtkMessageType type,
+	 CtkWidget *parent)
 {
-	GtkWidget *dialog;
+	CtkWidget *dialog;
 	dialog = ctk_message_dialog_new (CTK_WINDOW (parent),
 					 CTK_DIALOG_DESTROY_WITH_PARENT,
 					 type,
@@ -260,12 +260,12 @@ message (const gchar *primary_msg,
 gint
 messageyesno (const gchar *primary_msg,
 	      const gchar *secondary_msg,
-	      GtkMessageType type,
+	      CtkMessageType type,
 	      gchar *ok_button,
-	      GtkWidget *parent)
+	      CtkWidget *parent)
 {
-	GtkWidget *dialog;
-	GtkWidget *button;
+	CtkWidget *dialog;
+	CtkWidget *button;
 	gint response;
 
 	dialog = ctk_message_dialog_new (CTK_WINDOW (parent),
@@ -337,10 +337,10 @@ baobab_check_dir (GFile	*file)
 }
 
 static void
-add_popupmenu_item (GtkMenu *pmenu, const gchar *label, const gchar *icon_name, GCallback item_cb)
+add_popupmenu_item (CtkMenu *pmenu, const gchar *label, const gchar *icon_name, GCallback item_cb)
 {
-	GtkWidget *item;
-	GtkWidget *image;
+	CtkWidget *item;
+	CtkWidget *image;
 
 	item = ctk_image_menu_item_new_with_mnemonic (label);
 	image = ctk_image_new_from_icon_name (icon_name, CTK_ICON_SIZE_MENU);
@@ -352,9 +352,9 @@ add_popupmenu_item (GtkMenu *pmenu, const gchar *label, const gchar *icon_name, 
 }
 
 void
-popupmenu_list (GtkTreePath *path, GdkEventButton *event, gboolean can_trash)
+popupmenu_list (CtkTreePath *path, GdkEventButton *event, gboolean can_trash)
 {
-	GtkWidget *pmenu;
+	CtkWidget *pmenu;
 
 	pmenu = ctk_menu_new ();
 
@@ -487,7 +487,7 @@ trash_file (GFile *file)
 }
 
 gboolean
-baobab_help_display (GtkWindow   *parent,
+baobab_help_display (CtkWindow   *parent,
 		     const gchar *file_name,
 		     const gchar *link_id)
 {
@@ -506,7 +506,7 @@ baobab_help_display (GtkWindow   *parent,
 	g_free (uri);
 
 	if (error != NULL) {
-		GtkWidget *dialog;
+		CtkWidget *dialog;
 
 		dialog = ctk_message_dialog_new (parent,
 						 CTK_DIALOG_DESTROY_WITH_PARENT,

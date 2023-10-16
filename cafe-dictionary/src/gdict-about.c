@@ -1,4 +1,4 @@
-/* gdict-about.c - GtkAboutDialog wrapper
+/* gdict-about.c - CtkAboutDialog wrapper
  *
  * This file is part of CAFE Dictionary
  *
@@ -34,7 +34,7 @@
 #include "gdict-about.h"
 
 void
-gdict_show_about_dialog (GtkWidget *parent)
+gdict_show_about_dialog (CtkWidget *parent)
 {
   const gchar *authors[] = {
     "Mike Hughes <mfh@psilord.com>",

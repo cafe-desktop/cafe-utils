@@ -148,7 +148,7 @@ load_filters (LogviewPrefs *prefs)
   gchar **tokens;
   const gchar *str;
   LogviewFilter *filter;
-  GtkTextTag *tag;
+  CtkTextTag *tag;
   GdkRGBA color;
   gint idx;
 
@@ -205,7 +205,7 @@ save_filter_foreach_func (gpointer key, gpointer value, gpointer user_data)
   gboolean background_set;
   gchar *regex, *color;
   gboolean invisible;
-  GtkTextTag *tag;
+  CtkTextTag *tag;
   GString *prefs_string;
 
   filters = user_data;

@@ -37,10 +37,10 @@ GdkPixbuf *screenshot_get_pixbuf          (GdkWindow *win,
                                            gboolean include_border,
                                            gboolean include_mask);
 
-void       screenshot_show_error_dialog   (GtkWindow   *parent,
+void       screenshot_show_error_dialog   (CtkWindow   *parent,
                                            const gchar *message,
                                            const gchar *detail);
-void       screenshot_show_gerror_dialog  (GtkWindow   *parent,
+void       screenshot_show_gerror_dialog  (CtkWindow   *parent,
                                            const gchar *message,
                                            GError      *error);
 

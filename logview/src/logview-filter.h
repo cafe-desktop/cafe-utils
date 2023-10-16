@@ -52,7 +52,7 @@ LogviewFilter * logview_filter_new (const gchar *name,
                                     const gchar *regex);
 gboolean        logview_filter_filter (LogviewFilter *filter,
                                        const gchar *line);
-GtkTextTag *    logview_filter_get_tag (LogviewFilter *filter);
+CtkTextTag *    logview_filter_get_tag (LogviewFilter *filter);
 
 G_END_DECLS
 

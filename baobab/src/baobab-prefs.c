@@ -49,9 +49,9 @@ enum
 };
 
 static gboolean
-add_excluded_item (GtkTreeModel  *model,
-		   GtkTreePath   *path,
-		   GtkTreeIter   *iter,
+add_excluded_item (CtkTreeModel  *model,
+		   CtkTreePath   *path,
+		   CtkTreeIter   *iter,
 		   GPtrArray     *uris)
 {
 	gchar *mount;
@@ -74,14 +74,14 @@ add_excluded_item (GtkTreeModel  *model,
 }
 
 static gchar **
-get_excluded_locations (GtkTreeModel *model)
+get_excluded_locations (CtkTreeModel *model)
 {
 	GPtrArray *uris;
 
 	uris = g_ptr_array_new ();
 
 	ctk_tree_model_foreach (model,
-				(GtkTreeModelForeachFunc) add_excluded_item,
+				(CtkTreeModelForeachFunc) add_excluded_item,
 				uris);
 
 	g_ptr_array_add (uris, NULL);
@@ -90,7 +90,7 @@ get_excluded_locations (GtkTreeModel *model)
 }
 
 static void
-save_excluded_uris (GtkTreeModel *model)
+save_excluded_uris (CtkTreeModel *model)
 {
 	gchar **uris;
 
@@ -104,9 +104,9 @@ save_excluded_uris (GtkTreeModel *model)
 }
 
 static void
-filechooser_response_cb (GtkDialog *dialog,
+filechooser_response_cb (CtkDialog *dialog,
                          gint response_id,
-                         GtkTreeModel *model)
+                         CtkTreeModel *model)
 {
 	switch (response_id) {
 		case CTK_RESPONSE_HELP:
@@ -123,12 +123,12 @@ filechooser_response_cb (GtkDialog *dialog,
 }
 
 static void
-check_toggled (GtkCellRendererToggle *cell,
+check_toggled (CtkCellRendererToggle *cell,
 	       gchar *path_str,
-	       GtkTreeModel *model)
+	       CtkTreeModel *model)
 {
-	GtkTreeIter iter;
-	GtkTreePath *path = ctk_tree_path_new_from_string (path_str);
+	CtkTreeIter iter;
+	CtkTreePath *path = ctk_tree_path_new_from_string (path_str);
 	gboolean toggle;
 	gchar *mountpoint;
 
@@ -156,11 +156,11 @@ check_toggled (GtkCellRendererToggle *cell,
 }
 
 static void
-create_tree_props (GtkBuilder *builder, GtkTreeModel *model)
+create_tree_props (CtkBuilder *builder, CtkTreeModel *model)
 {
-	GtkCellRenderer *cell;
-	GtkTreeViewColumn *col;
-	GtkWidget *tvw;
+	CtkCellRenderer *cell;
+	CtkTreeViewColumn *col;
+	CtkWidget *tvw;
 
 	tvw = CTK_WIDGET (ctk_builder_get_object (builder , "tree_view_props"));
 
@@ -221,9 +221,9 @@ create_tree_props (GtkBuilder *builder, GtkTreeModel *model)
 }
 
 static void
-fill_props_model (GtkListStore *store)
+fill_props_model (CtkListStore *store)
 {
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 	guint lo;
 	glibtop_mountlist mountlist;
 	glibtop_mountentry *mountentry, *mountentry_tofree;
@@ -277,10 +277,10 @@ fill_props_model (GtkListStore *store)
 void
 baobab_prefs_dialog (void)
 {
-	GtkBuilder *builder;
-	GtkWidget *dlg;
-	GtkWidget *check_enablehome;
-	GtkListStore *model;
+	CtkBuilder *builder;
+	CtkWidget *dlg;
+	CtkWidget *check_enablehome;
+	CtkListStore *model;
 	GError *error = NULL;
 
 	builder = ctk_builder_new ();

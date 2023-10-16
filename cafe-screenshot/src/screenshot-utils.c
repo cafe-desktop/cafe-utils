@@ -32,7 +32,7 @@
 #include <X11/extensions/shape.h>
 #endif
 
-static GtkWidget *selection_window;
+static CtkWidget *selection_window;
 
 #define SELECTION_NAME "_CAFE_PANEL_SCREENSHOT"
 
@@ -199,11 +199,11 @@ screenshot_find_current_window ()
 typedef struct {
   GdkRectangle rect;
   gboolean button_pressed;
-  GtkWidget *window;
+  CtkWidget *window;
 } select_area_filter_data;
 
 static gboolean
-select_area_button_press (GtkWidget               *window,
+select_area_button_press (CtkWidget               *window,
                           GdkEventButton          *event,
 			  select_area_filter_data *data)
 {
@@ -218,7 +218,7 @@ select_area_button_press (GtkWidget               *window,
 }
 
 static gboolean
-select_area_motion_notify (GtkWidget               *window,
+select_area_motion_notify (CtkWidget               *window,
                            GdkEventMotion          *event,
                            select_area_filter_data *data)
 {
@@ -277,7 +277,7 @@ select_area_motion_notify (GtkWidget               *window,
 }
 
 static gboolean
-select_area_button_release (GtkWidget *window,
+select_area_button_release (CtkWidget *window,
                             GdkEventButton *event,
                             select_area_filter_data *data)
 {
@@ -295,7 +295,7 @@ select_area_button_release (GtkWidget *window,
 }
 
 static gboolean
-select_area_key_press (GtkWidget *window,
+select_area_key_press (CtkWidget *window,
                        GdkEventKey *event,
                        select_area_filter_data *data)
 {
@@ -313,9 +313,9 @@ select_area_key_press (GtkWidget *window,
 
 
 static gboolean
-draw (GtkWidget *window, cairo_t *cr, gpointer unused)
+draw (CtkWidget *window, cairo_t *cr, gpointer unused)
 {
-  GtkStyleContext *style;
+  CtkStyleContext *style;
 
   style = ctk_widget_get_style_context (window);
 
@@ -343,11 +343,11 @@ draw (GtkWidget *window, cairo_t *cr, gpointer unused)
   return TRUE;
 }
 
-static GtkWidget *
+static CtkWidget *
 create_select_window (void)
 {
   GdkScreen *screen = gdk_screen_get_default ();
-  GtkWidget *window = ctk_window_new (CTK_WINDOW_POPUP);
+  CtkWidget *window = ctk_window_new (CTK_WINDOW_POPUP);
 
   GdkVisual *visual = gdk_screen_get_rgba_visual (screen);
   if (gdk_screen_is_composited (screen) && visual)
@@ -837,11 +837,11 @@ screenshot_get_pixbuf (GdkWindow    *window,
 }
 
 void
-screenshot_show_error_dialog (GtkWindow   *parent,
+screenshot_show_error_dialog (CtkWindow   *parent,
                               const gchar *message,
                               const gchar *detail)
 {
-  GtkWidget *dialog;
+  CtkWidget *dialog;
 
   g_return_if_fail ((parent == NULL) || (CTK_IS_WINDOW (parent)));
   g_return_if_fail (message != NULL);
@@ -866,7 +866,7 @@ screenshot_show_error_dialog (GtkWindow   *parent,
 }
 
 void
-screenshot_show_gerror_dialog (GtkWindow   *parent,
+screenshot_show_gerror_dialog (CtkWindow   *parent,
                                const gchar *message,
                                GError      *error)
 {

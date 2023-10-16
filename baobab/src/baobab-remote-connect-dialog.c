@@ -43,15 +43,15 @@
 */
 
 struct _BaobabRemoteConnectDialogDetails {
-	GtkWidget *grid;
-	GtkWidget *type_combo;
-	GtkWidget *uri_entry;
-	GtkWidget *server_entry;
-	GtkWidget *share_entry;
-	GtkWidget *port_entry;
-	GtkWidget *folder_entry;
-	GtkWidget *domain_entry;
-	GtkWidget *user_entry;
+	CtkWidget *grid;
+	CtkWidget *type_combo;
+	CtkWidget *uri_entry;
+	CtkWidget *server_entry;
+	CtkWidget *share_entry;
+	CtkWidget *port_entry;
+	CtkWidget *folder_entry;
+	CtkWidget *domain_entry;
+	CtkWidget *user_entry;
 };
 
 G_DEFINE_TYPE(BaobabRemoteConnectDialog, baobab_remote_connect_dialog, CTK_TYPE_DIALOG)
@@ -62,9 +62,9 @@ G_DEFINE_TYPE(BaobabRemoteConnectDialog, baobab_remote_connect_dialog, CTK_TYPE_
 static void
 display_error_dialog (GError *error,
 		      GFile *location,
-		      GtkWindow *parent)
+		      CtkWindow *parent)
 {
-	GtkWidget *dlg;
+	CtkWidget *dlg;
 	char *parse_name;
 	char *error_message;
 
@@ -91,7 +91,7 @@ display_error_dialog (GError *error,
 static void
 mount_enclosing_ready_cb (GFile *location,
 			  GAsyncResult *res,
-			  GtkWindow *app)
+			  CtkWindow *app)
 {
 	gboolean success;
 	GError *error = NULL;
@@ -115,9 +115,9 @@ mount_enclosing_ready_cb (GFile *location,
 }
 
 static void
-connect_server_dialog_present_uri (GtkWindow *app,
+connect_server_dialog_present_uri (CtkWindow *app,
 				   GFile *location,
-				   GtkWidget *widget)
+				   CtkWidget *widget)
 {
 	GMountOperation *op;
 
@@ -210,13 +210,13 @@ baobab_remote_connect_dialog_finalize (GObject *object)
 }
 
 static void
-connect_to_server (BaobabRemoteConnectDialog *dialog, GtkWindow *app)
+connect_to_server (BaobabRemoteConnectDialog *dialog, CtkWindow *app)
 {
 	struct MethodInfo *meth;
 	char *uri;
 	GFile *location;
 	int index;
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 
 	/* Get our method info */
 	ctk_combo_box_get_active_iter (CTK_COMBO_BOX (dialog->details->type_combo), &iter);
@@ -235,7 +235,7 @@ connect_to_server (BaobabRemoteConnectDialog *dialog, GtkWindow *app)
 
 		server = ctk_editable_get_chars (CTK_EDITABLE (dialog->details->server_entry), 0, -1);
 		if (strlen (server) == 0) {
-			GtkWidget *dlg;
+			CtkWidget *dlg;
 
 			dlg = ctk_message_dialog_new (CTK_WINDOW (dialog),
 						      CTK_DIALOG_DESTROY_WITH_PARENT,
@@ -357,7 +357,7 @@ connect_to_server (BaobabRemoteConnectDialog *dialog, GtkWindow *app)
 static void
 response_callback (BaobabRemoteConnectDialog *dialog,
 		   int response_id,
-		   GtkWindow *app)
+		   CtkWindow *app)
 {
 	switch (response_id) {
 	case RESPONSE_CONNECT:
@@ -381,7 +381,7 @@ baobab_remote_connect_dialog_class_init (BaobabRemoteConnectDialogClass *class)
 	gobject_class->finalize = baobab_remote_connect_dialog_finalize;
 }
 static void
-destroy_label (GtkWidget *widget,
+destroy_label (CtkWidget *widget,
                gpointer   user_data)
 {
   ctk_widget_destroy (widget);
@@ -392,8 +392,8 @@ setup_for_type (BaobabRemoteConnectDialog *dialog)
 {
 	struct MethodInfo *meth;
 	int index, i;
-	GtkWidget *label, *grid;
-	GtkTreeIter iter;
+	CtkWidget *label, *grid;
+	CtkTreeIter iter;
 
 	/* Get our method info */
 	ctk_combo_box_get_active_iter (CTK_COMBO_BOX (dialog->details->type_combo), &iter);
@@ -550,14 +550,14 @@ setup_for_type (BaobabRemoteConnectDialog *dialog)
 }
 
 static void
-combo_changed_callback (GtkComboBox *combo_box,
+combo_changed_callback (CtkComboBox *combo_box,
 			BaobabRemoteConnectDialog *dialog)
 {
 	setup_for_type (dialog);
 }
 
 static void
-port_insert_text (GtkEditable *editable,
+port_insert_text (CtkEditable *editable,
 		  const gchar *new_text,
 		  gint         new_text_length,
 		  gint        *position)
@@ -571,7 +571,7 @@ port_insert_text (GtkEditable *editable,
 	/* Only allow digits to be inserted as port number */
 	for (pos = 0; pos < new_text_length; pos++) {
 		if (!g_ascii_isdigit (new_text[pos])) {
-			GtkWidget *toplevel = ctk_widget_get_toplevel (CTK_WIDGET (editable));
+			CtkWidget *toplevel = ctk_widget_get_toplevel (CTK_WIDGET (editable));
 			if (toplevel != NULL) {
 				gdk_window_beep (ctk_widget_get_window (toplevel));
 			}
@@ -584,13 +584,13 @@ port_insert_text (GtkEditable *editable,
 static void
 baobab_remote_connect_dialog_init (BaobabRemoteConnectDialog *dialog)
 {
-	GtkWidget *label;
-	GtkWidget *grid;
-	GtkWidget *combo;
-	GtkWidget *hbox;
-	GtkWidget *vbox;
-	GtkListStore *store;
-	GtkCellRenderer *renderer;
+	CtkWidget *label;
+	CtkWidget *grid;
+	CtkWidget *combo;
+	CtkWidget *hbox;
+	CtkWidget *vbox;
+	CtkListStore *store;
+	CtkCellRenderer *renderer;
 	int i;
 
 	dialog->details = g_new0 (BaobabRemoteConnectDialogDetails, 1);
@@ -630,7 +630,7 @@ baobab_remote_connect_dialog_init (BaobabRemoteConnectDialog *dialog)
 	ctk_cell_layout_add_attribute (CTK_CELL_LAYOUT (combo), renderer, "text", 1);
 
 	for (i = 0; i < G_N_ELEMENTS (methods); i++) {
-		GtkTreeIter iter;
+		CtkTreeIter iter;
 		const gchar * const *supported;
 		int j;
 
@@ -735,10 +735,10 @@ baobab_remote_connect_dialog_init (BaobabRemoteConnectDialog *dialog)
 					 RESPONSE_CONNECT);
 }
 
-GtkWidget *
-baobab_remote_connect_dialog_new (GtkWindow *window, GFile *location)
+CtkWidget *
+baobab_remote_connect_dialog_new (CtkWindow *window, GFile *location)
 {
-	GtkWidget *dialog;
+	CtkWidget *dialog;
 
 	dialog = ctk_widget_new (BAOBAB_TYPE_REMOTE_CONNECT_DIALOG, NULL);
 

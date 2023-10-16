@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!--*- mode: xml -*-->
 <interface>
-  <object class="GtkVBox" id="preferences_root">
+  <object class="CtkVBox" id="preferences_root">
     <property name="visible">True</property>
     <property name="homogeneous">False</property>
     <property name="spacing">18</property>
     <child>
-      <object class="GtkNotebook" id="preferences_notebook">
+      <object class="CtkNotebook" id="preferences_notebook">
         <property name="border_width">5</property>
         <property name="visible">True</property>
         <property name="can_focus">True</property>
@@ -16,13 +16,13 @@
         <property name="scrollable">False</property>
         <property name="enable_popup">False</property>
         <child>
-          <object class="GtkVBox" id="vbox2">
+          <object class="CtkVBox" id="vbox2">
             <property name="border_width">12</property>
             <property name="visible">True</property>
             <property name="homogeneous">False</property>
             <property name="spacing">6</property>
             <child>
-              <object class="GtkLabel" id="label1">
+              <object class="CtkLabel" id="label1">
                 <property name="visible">True</property>
                 <property name="label" translatable="yes">_Select a dictionary source for looking up words:</property>
                 <property name="use_underline">True</property>
@@ -47,7 +47,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkScrolledWindow" id="scrolledwindow1">
+              <object class="CtkScrolledWindow" id="scrolledwindow1">
                 <property name="height_request">100</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -56,7 +56,7 @@
                 <property name="shadow_type">CTK_SHADOW_IN</property>
                 <property name="window_placement">CTK_CORNER_TOP_LEFT</property>
                 <child>
-                  <object class="GtkTreeView" id="sources_treeview">
+                  <object class="CtkTreeView" id="sources_treeview">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="headers_visible">True</property>
@@ -76,12 +76,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkHButtonBox" id="hbuttonbox6">
+              <object class="CtkHButtonBox" id="hbuttonbox6">
                 <property name="visible">True</property>
                 <property name="layout_style">CTK_BUTTONBOX_END</property>
                 <property name="spacing">6</property>
                 <child>
-                  <object class="GtkButton" id="add_button">
+                  <object class="CtkButton" id="add_button">
                     <property name="visible">True</property>
                     <property name="can_default">True</property>
                     <property name="can_focus">True</property>
@@ -92,7 +92,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkButton" id="remove_button">
+                  <object class="CtkButton" id="remove_button">
                     <property name="visible">True</property>
                     <property name="can_default">True</property>
                     <property name="can_focus">True</property>
@@ -103,7 +103,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkButton" id="edit_button">
+                  <object class="CtkButton" id="edit_button">
                     <property name="visible">True</property>
                     <property name="can_default">True</property>
                     <property name="can_focus">True</property>
@@ -127,7 +127,7 @@
           </packing>
         </child>
         <child type="tab">
-          <object class="GtkLabel" id="label15">
+          <object class="CtkLabel" id="label15">
             <property name="visible">True</property>
             <property name="label" translatable="yes">Source</property>
             <property name="use_underline">False</property>
@@ -146,18 +146,18 @@
           </object>
         </child>
         <child>
-          <object class="GtkVBox" id="vbox3">
+          <object class="CtkVBox" id="vbox3">
             <property name="border_width">12</property>
             <property name="visible">True</property>
             <property name="homogeneous">False</property>
             <property name="spacing">6</property>
             <child>
-              <object class="GtkHBox" id="hbox1">
+              <object class="CtkHBox" id="hbox1">
                 <property name="visible">True</property>
                 <property name="homogeneous">False</property>
                 <property name="spacing">12</property>
                 <child>
-                  <object class="GtkLabel" id="label17">
+                  <object class="CtkLabel" id="label17">
                     <property name="visible">True</property>
                     <property name="label" translatable="yes">_Print font:</property>
                     <property name="use_underline">True</property>
@@ -182,7 +182,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkFontButton" id="print_font_button">
+                  <object class="CtkFontButton" id="print_font_button">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="show_style">True</property>
@@ -211,7 +211,7 @@
           </packing>
         </child>
         <child type="tab">
-          <object class="GtkLabel" id="label16">
+          <object class="CtkLabel" id="label16">
             <property name="visible">True</property>
             <property name="label" translatable="yes">Print</property>
             <property name="use_underline">False</property>

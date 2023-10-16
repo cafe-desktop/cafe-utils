@@ -112,7 +112,7 @@ quit_session_cb (EggSMClient * client,
 }
 
 void
-quit_cb (GtkWidget * widget,
+quit_cb (CtkWidget * widget,
          GdkEvent * event,
 	 gpointer data)
 {
@@ -120,14 +120,14 @@ quit_cb (GtkWidget * widget,
 }
 
 void
-click_close_cb (GtkWidget * widget,
+click_close_cb (CtkWidget * widget,
                 gpointer data)
 {
 	quit_application ((GSearchWindow *) data);
 }
 
 void
-click_find_cb (GtkWidget * widget,
+click_find_cb (CtkWidget * widget,
                gpointer data)
 {
 	GSearchWindow * gsearch = data;
@@ -148,7 +148,7 @@ click_find_cb (GtkWidget * widget,
 }
 
 void
-click_stop_cb (GtkWidget * widget,
+click_stop_cb (CtkWidget * widget,
                gpointer data)
 {
 	GSearchWindow * gsearch = data;
@@ -176,17 +176,17 @@ click_stop_cb (GtkWidget * widget,
 }
 
 void
-click_help_cb (GtkWidget * widget,
+click_help_cb (CtkWidget * widget,
                gpointer data)
 {
-	GtkWidget * window = data;
+	CtkWidget * window = data;
 	GError * error = NULL;
 
 	ctk_show_uri_on_window (CTK_WINDOW (window), "help:cafe-search-tool",
 	                        ctk_get_current_event_time (), &error);
 
 	if (error) {
-		GtkWidget * dialog;
+		CtkWidget * dialog;
 
 		dialog = ctk_message_dialog_new (CTK_WINDOW (window),
 		                                 CTK_DIALOG_DESTROY_WITH_PARENT,
@@ -235,17 +235,17 @@ click_expander_cb (GObject * object,
 }
 
 void
-size_allocate_cb (GtkWidget * widget,
-                  GtkAllocation * allocation,
+size_allocate_cb (CtkWidget * widget,
+                  CtkAllocation * allocation,
                   gpointer data)
 {
-	GtkWidget * button = data;
+	CtkWidget * button = data;
 
  	ctk_widget_set_size_request (button, allocation->width, -1);
 }
 
 void
-add_constraint_cb (GtkWidget * widget,
+add_constraint_cb (CtkWidget * widget,
                    gpointer data)
 {
 	GSearchWindow * gsearch = data;
@@ -256,7 +256,7 @@ add_constraint_cb (GtkWidget * widget,
 }
 
 void
-remove_constraint_cb (GtkWidget * widget,
+remove_constraint_cb (CtkWidget * widget,
                       gpointer data)
 {
 	GList * list = data;
@@ -283,7 +283,7 @@ remove_constraint_cb (GtkWidget * widget,
 }
 
 void
-constraint_activate_cb (GtkWidget * widget,
+constraint_activate_cb (CtkWidget * widget,
                         gpointer data)
 {
 	GSearchWindow * gsearch = data;
@@ -295,7 +295,7 @@ constraint_activate_cb (GtkWidget * widget,
 }
 
 void
-constraint_update_info_cb (GtkWidget * widget,
+constraint_update_info_cb (CtkWidget * widget,
                            gpointer data)
 {
 	static gchar * string;
@@ -306,7 +306,7 @@ constraint_update_info_cb (GtkWidget * widget,
 }
 
 void
-name_contains_activate_cb (GtkWidget * widget,
+name_contains_activate_cb (CtkWidget * widget,
                            gpointer data)
 {
 	GSearchWindow * gsearch = data;
@@ -318,7 +318,7 @@ name_contains_activate_cb (GtkWidget * widget,
 }
 
 void
-look_in_folder_changed_cb (GtkWidget * widget,
+look_in_folder_changed_cb (CtkWidget * widget,
                            gpointer data)
 {
 	GSearchWindow * gsearch = data;
@@ -334,11 +334,11 @@ look_in_folder_changed_cb (GtkWidget * widget,
 
 
 static gint
-display_dialog_file_open_limit (GtkWidget * window,
+display_dialog_file_open_limit (CtkWidget * window,
                                   gint count)
 {
-	GtkWidget * dialog;
-	GtkWidget * button;
+	CtkWidget * dialog;
+	CtkWidget * button;
 	gchar * primary;
 	gchar * secondary;
 	gint response;
@@ -386,11 +386,11 @@ display_dialog_file_open_limit (GtkWidget * window,
 }
 
 static void
-display_dialog_could_not_open_file (GtkWidget * window,
+display_dialog_could_not_open_file (CtkWidget * window,
                                     const gchar * file,
                                     const gchar * message)
 {
-	GtkWidget * dialog;
+	CtkWidget * dialog;
 	gchar * primary;
 
 	primary = g_strdup_printf (_("Could not open document \"%s\"."), file);
@@ -416,10 +416,10 @@ display_dialog_could_not_open_file (GtkWidget * window,
 }
 
 static void
-display_dialog_could_not_open_folder (GtkWidget * window,
+display_dialog_could_not_open_folder (CtkWidget * window,
                                       const gchar * folder)
 {
-	GtkWidget * dialog;
+	CtkWidget * dialog;
 	gchar * primary;
 
 	primary = g_strdup_printf (_("Could not open folder \"%s\"."), folder);
@@ -445,19 +445,19 @@ display_dialog_could_not_open_folder (GtkWidget * window,
 }
 
 void
-open_file_event_cb (GtkWidget * widget,
+open_file_event_cb (CtkWidget * widget,
                     GdkEventButton * event,
                     gpointer data)
 {
-	open_file_cb ((GtkMenuItem *) widget, data);
+	open_file_cb ((CtkMenuItem *) widget, data);
 }
 
 void
-open_file_cb (GtkMenuItem * action,
+open_file_cb (CtkMenuItem * action,
               gpointer data)
 {
 	GSearchWindow * gsearch = data;
-	GtkTreeModel * model;
+	CtkTreeModel * model;
 	GList * list;
 	guint idx;
 
@@ -484,7 +484,7 @@ open_file_cb (GtkMenuItem * action,
 		gboolean no_files_found = FALSE;
 		gchar * utf8_name;
 		gchar * locale_file;
-		GtkTreeIter iter;
+		CtkTreeIter iter;
 
 		ctk_tree_model_get_iter (CTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 		                         g_list_nth_data (list, idx));
@@ -534,11 +534,11 @@ open_file_cb (GtkMenuItem * action,
 }
 
 static gint
-display_dialog_folder_open_limit (GtkWidget * window,
+display_dialog_folder_open_limit (CtkWidget * window,
                                   gint count)
 {
-	GtkWidget * dialog;
-	GtkWidget * button;
+	CtkWidget * dialog;
+	CtkWidget * button;
 	gchar * primary;
 	gchar * secondary;
 	gint response;
@@ -586,11 +586,11 @@ display_dialog_folder_open_limit (GtkWidget * window,
 }
 
 void
-open_folder_cb (GtkAction * action,
+open_folder_cb (CtkAction * action,
                 gpointer data)
 {
 	GSearchWindow * gsearch = data;
-	GtkTreeModel * model;
+	CtkTreeModel * model;
 	GFile * g_file = NULL;
 	GFileInfo * g_file_info = NULL;
 	GAppInfo * g_app_info = NULL;
@@ -620,7 +620,7 @@ open_folder_cb (GtkAction * action,
 		gchar * locale_folder;
 		gchar * utf8_folder;
 		gchar * locale_file;
-		GtkTreeIter iter;
+		CtkTreeIter iter;
 
 		ctk_tree_model_get_iter (CTK_TREE_MODEL (gsearch->search_results_list_store), &iter,
 					 g_list_nth_data (list, idx));
@@ -672,9 +672,9 @@ file_changed_cb (GFileMonitor * handle,
 {
 	GSearchMonitor * monitor = data;
 	GSearchWindow * gsearch = monitor->gsearch;
-	GtkTreeModel * model;
-	GtkTreePath * path;
-	GtkTreeIter iter;
+	CtkTreeModel * model;
+	CtkTreePath * path;
+	CtkTreeIter iter;
 
 	switch (event_type) {
 	case G_FILE_MONITOR_EVENT_DELETED:
@@ -691,11 +691,11 @@ file_changed_cb (GFileMonitor * handle,
 }
 
 static void
-display_dialog_could_not_move_to_trash (GtkWidget * window,
+display_dialog_could_not_move_to_trash (CtkWidget * window,
                                         const gchar * file,
                                         const gchar * message)
 {
-	GtkWidget * dialog;
+	CtkWidget * dialog;
 	gchar * primary;
 
 	primary = g_strdup_printf (_("Could not move \"%s\" to trash."), file);
@@ -720,11 +720,11 @@ display_dialog_could_not_move_to_trash (GtkWidget * window,
 }
 
 static gint
-display_dialog_delete_permanently (GtkWidget * window,
+display_dialog_delete_permanently (CtkWidget * window,
                                    const gchar * file)
 {
-	GtkWidget * dialog;
-	GtkWidget * button;
+	CtkWidget * dialog;
+	CtkWidget * button;
 	gchar * primary;
 	gchar * secondary;
 	gint response;
@@ -769,11 +769,11 @@ display_dialog_delete_permanently (GtkWidget * window,
 }
 
 static void
-display_dialog_could_not_delete (GtkWidget * window,
+display_dialog_could_not_delete (CtkWidget * window,
                                  const gchar * file,
                                  const gchar * message)
 {
-	GtkWidget * dialog;
+	CtkWidget * dialog;
 	gchar * primary;
 
 	primary = g_strdup_printf (_("Could not delete \"%s\"."), file);
@@ -798,11 +798,11 @@ display_dialog_could_not_delete (GtkWidget * window,
 }
 
 void
-move_to_trash_cb (GtkAction * action,
+move_to_trash_cb (CtkAction * action,
                   gpointer data)
 {
 	GSearchWindow * gsearch = data;
-	GtkTreePath * last_selected_path = NULL;
+	CtkTreePath * last_selected_path = NULL;
 	gint total;
 	gint idx;
 
@@ -814,8 +814,8 @@ move_to_trash_cb (GtkAction * action,
 
 	for (idx = 0; idx < total; idx++) {
 		gboolean no_files_found = FALSE;
-		GtkTreeModel * model;
-		GtkTreeIter iter;
+		CtkTreeModel * model;
+		CtkTreeIter iter;
 		GList * list;
 		GFile * g_file;
 		GError * error = NULL;
@@ -935,12 +935,12 @@ move_to_trash_cb (GtkAction * action,
 }
 
 gboolean
-file_button_press_event_cb (GtkWidget * widget,
+file_button_press_event_cb (CtkWidget * widget,
                             GdkEventButton * event,
                             gpointer data)
 {
-	GtkTreeView * tree = data;
-	GtkTreePath * path;
+	CtkTreeView * tree = data;
+	CtkTreePath * path;
 
 	row_selected_by_button_press_event = TRUE;
 
@@ -965,7 +965,7 @@ file_button_press_event_cb (GtkWidget * widget,
 }
 
 gboolean
-file_key_press_event_cb (GtkWidget * widget,
+file_key_press_event_cb (CtkWidget * widget,
                          GdkEventKey * event,
                          gpointer data)
 {
@@ -973,12 +973,12 @@ file_key_press_event_cb (GtkWidget * widget,
 	    event->keyval == GDK_KEY_Return ||
 	    event->keyval == GDK_KEY_KP_Enter) {
 		if (event->state != GDK_CONTROL_MASK) {
-			open_file_cb ((GtkMenuItem *) NULL, data);
+			open_file_cb ((CtkMenuItem *) NULL, data);
 			return TRUE;
 		}
 	}
 	else if (event->keyval == GDK_KEY_Delete) {
-		move_to_trash_cb ((GtkAction *) NULL, data);
+		move_to_trash_cb ((CtkAction *) NULL, data);
 		return TRUE;
 	}
 	return FALSE;
@@ -1009,8 +1009,8 @@ static void
 build_popup_menu_for_file (GSearchWindow * gsearch,
                            gchar * file)
 {
-	GtkWidget * new1, * image1, * separatormenuitem1;
-	GtkWidget * new2;
+	CtkWidget * new1, * image1, * separatormenuitem1;
+	CtkWidget * new2;
 	gint i;
 
 	if (CTK_IS_MENU (gsearch->search_results_popup_menu) == TRUE) {
@@ -1217,7 +1217,7 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 	ctk_container_add (CTK_CONTAINER (gsearch->search_results_popup_menu), new1);
 	ctk_widget_show (new1);
 
-	GtkIconTheme *icon_theme;
+	CtkIconTheme *icon_theme;
 	GdkPixbuf *pixbuf;
 	icon_theme = ctk_icon_theme_get_default ();
 	pixbuf = ctk_icon_theme_load_icon (icon_theme, "user-trash", CTK_ICON_SIZE_MENU, 0, NULL);
@@ -1254,7 +1254,7 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 }
 
 gboolean
-file_button_release_event_cb (GtkWidget * widget,
+file_button_release_event_cb (CtkWidget * widget,
                               GdkEventButton * event,
                               gpointer data)
 {
@@ -1265,7 +1265,7 @@ file_button_release_event_cb (GtkWidget * widget,
 	}
 
 	if (event->button == 1 || event->button == 2) {
-		GtkTreePath *path;
+		CtkTreePath *path;
 
 		if (ctk_tree_view_get_path_at_pos (CTK_TREE_VIEW (gsearch->search_results_tree_view), event->x, event->y,
 		                                   &path, NULL, NULL, NULL)) {
@@ -1293,8 +1293,8 @@ file_button_release_event_cb (GtkWidget * widget,
 
 	if (event->button == 3) {
 		gboolean no_files_found = FALSE;
-		GtkTreeModel * model;
-		GtkTreeIter iter;
+		CtkTreeModel * model;
+		CtkTreeIter iter;
 		GList * list;
 		gchar * utf8_name_first;
 		gchar * locale_file_first;
@@ -1388,7 +1388,7 @@ file_button_release_event_cb (GtkWidget * widget,
 	else if (event->button == 1 || event->button == 2) {
 		if (gsearch->is_search_results_single_click_to_activate == TRUE) {
 			if (!(event->state & GDK_CONTROL_MASK) && !(event->state & GDK_SHIFT_MASK)) {
-			     	open_file_cb ((GtkMenuItem *) NULL, data);
+			     	open_file_cb ((CtkMenuItem *) NULL, data);
 			}
 		}
 	}
@@ -1396,7 +1396,7 @@ file_button_release_event_cb (GtkWidget * widget,
 }
 
 gboolean
-file_event_after_cb  (GtkWidget * widget,
+file_event_after_cb  (CtkWidget * widget,
                       GdkEventButton * event,
                       gpointer data)
 {
@@ -1413,7 +1413,7 @@ file_event_after_cb  (GtkWidget * widget,
 	if (!(event->state & GDK_CONTROL_MASK) && !(event->state & GDK_SHIFT_MASK)) {
 		if (gsearch->is_search_results_single_click_to_activate == FALSE) {
 			if (event->type == GDK_2BUTTON_PRESS) {
-				open_file_cb ((GtkMenuItem *) NULL, data);
+				open_file_cb ((CtkMenuItem *) NULL, data);
 				return TRUE;
 			}
 		}
@@ -1422,15 +1422,15 @@ file_event_after_cb  (GtkWidget * widget,
 }
 
 gboolean
-file_motion_notify_cb (GtkWidget *widget,
+file_motion_notify_cb (CtkWidget *widget,
                        GdkEventMotion *event,
                        gpointer user_data)
 {
 	GSearchWindow * gsearch = user_data;
 	GdkDisplay *display;
 	GdkCursor * cursor;
-	GtkTreePath * last_hover_path;
-	GtkTreeIter iter;
+	CtkTreePath * last_hover_path;
+	CtkTreeIter iter;
 
 	display = ctk_widget_get_display (CTK_WIDGET (user_data));
 
@@ -1483,12 +1483,12 @@ file_motion_notify_cb (GtkWidget *widget,
 }
 
 gboolean
-file_leave_notify_cb (GtkWidget *widget,
+file_leave_notify_cb (CtkWidget *widget,
                       GdkEventCrossing *event,
                       gpointer user_data)
 {
         GSearchWindow * gsearch = user_data;
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 
 	if (gsearch->is_search_results_single_click_to_activate && (gsearch->search_results_hover_path != NULL)) {
 		ctk_tree_model_get_iter (CTK_TREE_MODEL (gsearch->search_results_list_store),
@@ -1508,7 +1508,7 @@ file_leave_notify_cb (GtkWidget *widget,
 }
 
 void
-drag_begin_file_cb (GtkWidget * widget,
+drag_begin_file_cb (CtkWidget * widget,
                     GdkDragContext * context,
                     gpointer data)
 {
@@ -1522,8 +1522,8 @@ drag_begin_file_cb (GtkWidget * widget,
 	}
 	else if (number_of_selected_rows == 1) {
 		GdkPixbuf * pixbuf;
-		GtkTreeModel * model;
-		GtkTreeIter iter;
+		CtkTreeModel * model;
+		CtkTreeIter iter;
 		GList * list;
 
 		list = ctk_tree_selection_get_selected_rows (CTK_TREE_SELECTION (gsearch->search_results_selection),
@@ -1547,9 +1547,9 @@ drag_begin_file_cb (GtkWidget * widget,
 }
 
 void
-drag_file_cb  (GtkWidget * widget,
+drag_file_cb  (CtkWidget * widget,
                GdkDragContext * context,
-               GtkSelectionData * selection_data,
+               CtkSelectionData * selection_data,
                guint info,
                guint drag_time,
                gpointer data)
@@ -1557,8 +1557,8 @@ drag_file_cb  (GtkWidget * widget,
 	GSearchWindow * gsearch = data;
 	gchar * uri_list = NULL;
 	GList * list;
-	GtkTreeModel * model;
-	GtkTreeIter iter;
+	CtkTreeModel * model;
+	CtkTreeIter iter;
 	guint idx;
 
 	if (ctk_tree_selection_count_selected_rows (CTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
@@ -1611,11 +1611,11 @@ drag_file_cb  (GtkWidget * widget,
 
 
 void
-show_file_selector_cb (GtkAction * action,
+show_file_selector_cb (CtkAction * action,
                        gpointer data)
 {
 	GSearchWindow * gsearch = data;
-	GtkWidget * file_chooser;
+	CtkWidget * file_chooser;
 
 	file_chooser = ctk_file_chooser_dialog_new (_("Save Search Results As..."),
 	                                            CTK_WINDOW (gsearch->window),
@@ -1640,9 +1640,9 @@ show_file_selector_cb (GtkAction * action,
 }
 
 static void
-display_dialog_could_not_save_no_name (GtkWidget * window)
+display_dialog_could_not_save_no_name (CtkWidget * window)
 {
-	GtkWidget * dialog;
+	CtkWidget * dialog;
 	gchar * primary;
 	gchar * secondary;
 
@@ -1670,11 +1670,11 @@ display_dialog_could_not_save_no_name (GtkWidget * window)
 }
 
 static void
-display_dialog_could_not_save_to (GtkWidget * window,
+display_dialog_could_not_save_to (CtkWidget * window,
                                   const gchar * file,
                                   const gchar * message)
 {
-	GtkWidget * dialog;
+	CtkWidget * dialog;
 	gchar * primary;
 
 	primary = g_strdup_printf (_("Could not save \"%s\" document to \"%s\"."),
@@ -1701,11 +1701,11 @@ display_dialog_could_not_save_to (GtkWidget * window,
 }
 
 static gint
-display_dialog_could_not_save_exists (GtkWidget * window,
+display_dialog_could_not_save_exists (CtkWidget * window,
                                       const gchar * file)
 {
-	GtkWidget * dialog;
-	GtkWidget * button;
+	CtkWidget * dialog;
+	CtkWidget * button;
 	gchar * primary;
 	gchar * secondary;
 	gint response;
@@ -1746,13 +1746,13 @@ display_dialog_could_not_save_exists (GtkWidget * window,
 }
 
 void
-save_results_cb (GtkWidget * chooser,
+save_results_cb (CtkWidget * chooser,
                  gint response,
                  gpointer data)
 {
 	GSearchWindow * gsearch = data;
-	GtkListStore * store;
-	GtkTreeIter iter;
+	CtkListStore * store;
+	CtkTreeIter iter;
 	FILE * fp;
 	gchar * utf8 = NULL;
 
@@ -1833,7 +1833,7 @@ save_session_cb (EggSMClient * client,
 }
 
 gboolean
-key_press_cb (GtkWidget * widget,
+key_press_cb (CtkWidget * widget,
               GdkEventKey * event,
               gpointer data)
 {
@@ -1852,8 +1852,8 @@ key_press_cb (GtkWidget * widget,
 	else if (event->keyval == GDK_KEY_F10) {
 		if (event->state & GDK_SHIFT_MASK) {
 			gboolean no_files_found = FALSE;
-			GtkTreeModel * model;
-			GtkTreeIter iter;
+			CtkTreeModel * model;
+			CtkTreeIter iter;
 			GList * list;
 
 			if (ctk_tree_selection_count_selected_rows (CTK_TREE_SELECTION (gsearch->search_results_selection)) == 0) {
@@ -1891,7 +1891,7 @@ not_running_timeout_cb (gpointer data)
 }
 
 void
-disable_quick_search_cb (GtkWidget * dialog,
+disable_quick_search_cb (CtkWidget * dialog,
                          gint response,
                          gpointer data)
 {
@@ -1921,7 +1921,7 @@ single_click_to_activate_key_changed_cb (GSettings * settings,
 }
 
 void
-columns_changed_cb (GtkTreeView * treeview,
+columns_changed_cb (CtkTreeView * treeview,
                     gpointer user_data)
 {
 	GVariantBuilder array_builder;
@@ -1942,7 +1942,7 @@ columns_changed_cb (GtkTreeView * treeview,
 }
 
 gboolean
-window_state_event_cb (GtkWidget * widget,
+window_state_event_cb (CtkWidget * widget,
                        GdkEventWindowState * event,
                        gpointer data)
 {

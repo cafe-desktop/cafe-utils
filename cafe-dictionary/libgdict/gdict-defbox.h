@@ -39,14 +39,14 @@ typedef struct _GdictDefboxPrivate GdictDefboxPrivate;
 struct _GdictDefbox
 {
   /*< private >*/
-  GtkBox parent_instance;
+  CtkBox parent_instance;
 
   GdictDefboxPrivate *priv;
 };
 
 struct _GdictDefboxClass
 {
-  GtkBoxClass parent_class;
+  CtkBoxClass parent_class;
 
   /* these are all RUN_ACTION signals for key bindings */
   void (*show_find)     (GdictDefbox *defbox);
@@ -67,8 +67,8 @@ struct _GdictDefboxClass
 
 GType                 gdict_defbox_get_type           (void) G_GNUC_CONST;
 
-GtkWidget *           gdict_defbox_new                (void);
-GtkWidget *           gdict_defbox_new_with_context   (GdictContext *context);
+CtkWidget *           gdict_defbox_new                (void);
+CtkWidget *           gdict_defbox_new_with_context   (GdictContext *context);
 void                  gdict_defbox_set_context        (GdictDefbox  *defbox,
 						       GdictContext *context);
 GdictContext *        gdict_defbox_get_context        (GdictDefbox  *defbox);
@@ -80,7 +80,7 @@ gchar *               gdict_defbox_get_text           (GdictDefbox  *defbox,
 						       gsize        *length) G_GNUC_MALLOC;
 void                  gdict_defbox_select_all         (GdictDefbox  *defbox);
 void                  gdict_defbox_copy_to_clipboard  (GdictDefbox  *defbox,
-						       GtkClipboard *clipboard);
+						       CtkClipboard *clipboard);
 void                  gdict_defbox_clear              (GdictDefbox  *defbox);
 void                  gdict_defbox_lookup             (GdictDefbox  *defbox,
 						       const gchar  *word);

@@ -95,7 +95,7 @@
   * screenshot: replace deprecated gdk_flush
   * dictionary: replace deprecated gdk_flush
   * dictionary: replace deprecated ctk_menu_popup
-  * dictionary: Replace deprecated GtkFontButton accessors
+  * dictionary: Replace deprecated CtkFontButton accessors
   * disk-usage-analyzer: replace deprecated ctk_menu_popup
   * Update Catalan sceenshots of cafe-dictionary
   * Add Catalan screenshots
@@ -111,7 +111,7 @@
 
   * Translations update
   * Add support for non-interactive screenshot directly to clipboard
-  * avoid deprecated GtkStock
+  * avoid deprecated CtkStock
 
 ### cafe-utils 1.20.0
 
@@ -150,7 +150,7 @@
   * don't use deprecated ctk_show_uri
   * avoid deprecated gdk_screen_get_number
   * Restore Polish translation credits from GNOME
-  * searchtool & logview: avoid deprecated GtkAlignment
+  * searchtool & logview: avoid deprecated CtkAlignment
   * cafe-screenshot: fix showing busy cursor when saving area screenshot
   * screenshot: don't translate the timestamp in the filename
   * cafe-dictionary: include correct header to fix occasional FTBFS

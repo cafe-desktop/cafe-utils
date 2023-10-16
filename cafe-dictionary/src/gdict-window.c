@@ -90,7 +90,7 @@ enum
 static GParamSpec *gdict_window_properties[LAST_PROP] = { NULL, };
 static guint gdict_window_signals[LAST_SIGNAL] = { 0 };
 
-static const GtkTargetEntry drop_types[] =
+static const CtkTargetEntry drop_types[] =
 {
   { "text/plain",    0, 0 },
   { "TEXT",          0, 0 },
@@ -218,7 +218,7 @@ gdict_window_ensure_menu_state (GdictWindow *window)
   is_sensitive = !!(window->word != NULL);
   for (i = 0; i < n_toggle_state; i++)
     {
-      GtkWidget *item;
+      CtkWidget *item;
 
       item = ctk_ui_manager_get_widget (window->ui_manager, toggle_state[i]);
       if (!item)
@@ -238,7 +238,7 @@ gdict_window_set_sidebar_visible (GdictWindow *window,
 
   if (is_visible != window->sidebar_visible)
     {
-      GtkAction *action;
+      CtkAction *action;
 
       window->sidebar_visible = is_visible;
 
@@ -262,7 +262,7 @@ gdict_window_set_statusbar_visible (GdictWindow *window,
 
   if (is_visible != window->statusbar_visible)
     {
-      GtkAction *action;
+      CtkAction *action;
 
       window->statusbar_visible = is_visible;
 
@@ -337,7 +337,7 @@ gdict_window_lookup_end_cb (GdictContext *context,
 {
   gchar *message;
   gint count;
-  GtkTreeIter iter;
+  CtkTreeIter iter;
   GdictSource *source;
   GdictContext *speller_context;
 
@@ -925,10 +925,10 @@ gdict_window_load_state (GdictWindow *window)
 }
 
 static void
-gdict_window_cmd_file_new (GtkAction   *action,
+gdict_window_cmd_file_new (CtkAction   *action,
 			   GdictWindow *window)
 {
-  GtkWidget *new_window;
+  CtkWidget *new_window;
   gchar *word = NULL;
 
   gdict_window_store_state (window);
@@ -952,10 +952,10 @@ gdict_window_cmd_file_new (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_save_as (GtkAction   *action,
+gdict_window_cmd_save_as (CtkAction   *action,
 			  GdictWindow *window)
 {
-  GtkWidget *dialog;
+  CtkWidget *dialog;
 
   g_assert (GDICT_IS_WINDOW (window));
 
@@ -1007,7 +1007,7 @@ gdict_window_cmd_save_as (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_file_preview (GtkAction   *action,
+gdict_window_cmd_file_preview (CtkAction   *action,
                                GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1017,7 +1017,7 @@ gdict_window_cmd_file_preview (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_file_print (GtkAction   *action,
+gdict_window_cmd_file_print (CtkAction   *action,
 			     GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1027,7 +1027,7 @@ gdict_window_cmd_file_print (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_file_close_window (GtkAction   *action,
+gdict_window_cmd_file_close_window (CtkAction   *action,
 				    GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1043,7 +1043,7 @@ gdict_window_cmd_file_close_window (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_edit_copy (GtkAction   *action,
+gdict_window_cmd_edit_copy (CtkAction   *action,
 			    GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1056,7 +1056,7 @@ gdict_window_cmd_edit_copy (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_edit_select_all (GtkAction   *action,
+gdict_window_cmd_edit_select_all (CtkAction   *action,
 				  GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1068,7 +1068,7 @@ gdict_window_cmd_edit_select_all (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_edit_find (GtkAction   *action,
+gdict_window_cmd_edit_find (CtkAction   *action,
 			    GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1077,7 +1077,7 @@ gdict_window_cmd_edit_find (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_edit_find_next (GtkAction   *action,
+gdict_window_cmd_edit_find_next (CtkAction   *action,
 				 GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1086,7 +1086,7 @@ gdict_window_cmd_edit_find_next (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_edit_find_previous (GtkAction   *action,
+gdict_window_cmd_edit_find_previous (CtkAction   *action,
 				     GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1095,7 +1095,7 @@ gdict_window_cmd_edit_find_previous (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_edit_preferences (GtkAction   *action,
+gdict_window_cmd_edit_preferences (CtkAction   *action,
 				   GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1106,7 +1106,7 @@ gdict_window_cmd_edit_preferences (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_view_sidebar (GtkToggleAction *action,
+gdict_window_cmd_view_sidebar (CtkToggleAction *action,
 			       GdictWindow     *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1120,7 +1120,7 @@ gdict_window_cmd_view_sidebar (GtkToggleAction *action,
 }
 
 static void
-gdict_window_cmd_view_statusbar (GtkToggleAction *action,
+gdict_window_cmd_view_statusbar (CtkToggleAction *action,
 				 GdictWindow     *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1135,7 +1135,7 @@ gdict_window_cmd_view_statusbar (GtkToggleAction *action,
 }
 
 static void
-gdict_window_cmd_view_speller (GtkAction   *action,
+gdict_window_cmd_view_speller (CtkAction   *action,
 			       GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1146,7 +1146,7 @@ gdict_window_cmd_view_speller (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_view_databases (GtkAction   *action,
+gdict_window_cmd_view_databases (CtkAction   *action,
 				 GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1157,7 +1157,7 @@ gdict_window_cmd_view_databases (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_view_strategies (GtkAction   *action,
+gdict_window_cmd_view_strategies (CtkAction   *action,
                                   GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1168,7 +1168,7 @@ gdict_window_cmd_view_strategies (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_view_sources (GtkAction   *action,
+gdict_window_cmd_view_sources (CtkAction   *action,
                                GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1179,7 +1179,7 @@ gdict_window_cmd_view_sources (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_go_first_def (GtkAction   *action,
+gdict_window_cmd_go_first_def (CtkAction   *action,
 			       GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1190,7 +1190,7 @@ gdict_window_cmd_go_first_def (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_go_previous_def (GtkAction   *action,
+gdict_window_cmd_go_previous_def (CtkAction   *action,
 				  GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1204,7 +1204,7 @@ gdict_window_cmd_go_previous_def (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_go_next_def (GtkAction   *action,
+gdict_window_cmd_go_next_def (CtkAction   *action,
 			      GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1221,7 +1221,7 @@ gdict_window_cmd_go_next_def (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_go_last_def (GtkAction   *action,
+gdict_window_cmd_go_last_def (CtkAction   *action,
 			      GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1235,7 +1235,7 @@ gdict_window_cmd_go_last_def (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_help_contents (GtkAction   *action,
+gdict_window_cmd_help_contents (CtkAction   *action,
 				GdictWindow *window)
 {
   GError *err = NULL;
@@ -1254,7 +1254,7 @@ gdict_window_cmd_help_contents (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_help_about (GtkAction   *action,
+gdict_window_cmd_help_about (CtkAction   *action,
 			     GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1263,7 +1263,7 @@ gdict_window_cmd_help_about (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_lookup (GtkAction   *action,
+gdict_window_cmd_lookup (CtkAction   *action,
 			 GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1272,7 +1272,7 @@ gdict_window_cmd_lookup (GtkAction   *action,
 }
 
 static void
-gdict_window_cmd_escape (GtkAction   *action,
+gdict_window_cmd_escape (CtkAction   *action,
 			 GdictWindow *window)
 {
   g_assert (GDICT_IS_WINDOW (window));
@@ -1280,7 +1280,7 @@ gdict_window_cmd_escape (GtkAction   *action,
   gdict_defbox_set_show_find (GDICT_DEFBOX (window->defbox), FALSE);
 }
 
-static const GtkActionEntry entries[] =
+static const CtkActionEntry entries[] =
 {
   { "File", NULL, N_("_File") },
   { "Edit", NULL, N_("_Edit") },
@@ -1347,7 +1347,7 @@ static const GtkActionEntry entries[] =
   { "Slash", "edit-find", NULL, "slash", NULL, G_CALLBACK (gdict_window_cmd_edit_find) },
 };
 
-static const GtkToggleActionEntry toggle_entries[] = {
+static const CtkToggleActionEntry toggle_entries[] = {
   /* View menu */
   { "ViewSidebar", NULL, N_("_Sidebar"), "F9", NULL,
     G_CALLBACK (gdict_window_cmd_view_sidebar), FALSE },
@@ -1356,7 +1356,7 @@ static const GtkToggleActionEntry toggle_entries[] = {
 };
 
 static gboolean
-gdict_window_delete_event_cb (GtkWidget *widget,
+gdict_window_delete_event_cb (CtkWidget *widget,
 			      GdkEvent  *event,
 			      gpointer   user_data)
 {
@@ -1366,7 +1366,7 @@ gdict_window_delete_event_cb (GtkWidget *widget,
 }
 
 static gboolean
-gdict_window_state_event_cb (GtkWidget           *widget,
+gdict_window_state_event_cb (CtkWidget           *widget,
 			     GdkEventWindowState *event,
 			     gpointer             user_data)
 {
@@ -1547,7 +1547,7 @@ gdict_window_link_clicked (GdictDefbox *defbox,
                            const gchar *link_text,
                            GdictWindow *window)
 {
-  GtkWidget *new_window;
+  CtkWidget *new_window;
 
   gdict_window_store_state (window);
 
@@ -1560,11 +1560,11 @@ gdict_window_link_clicked (GdictDefbox *defbox,
 }
 
 static void
-gdict_window_drag_data_received_cb (GtkWidget        *widget,
+gdict_window_drag_data_received_cb (CtkWidget        *widget,
 				    GdkDragContext   *context,
 				    gint              x,
 				    gint              y,
-				    GtkSelectionData *data,
+				    CtkSelectionData *data,
 				    guint             info,
 				    guint             time_,
 				    gpointer          user_data)
@@ -1587,8 +1587,8 @@ gdict_window_drag_data_received_cb (GtkWidget        *widget,
 }
 
 static void
-gdict_window_size_allocate (GtkWidget     *widget,
-			    GtkAllocation *allocation)
+gdict_window_size_allocate (CtkWidget     *widget,
+			    CtkAllocation *allocation)
 {
   GdictWindow *window = GDICT_WINDOW (widget);
 
@@ -1604,13 +1604,13 @@ gdict_window_size_allocate (GtkWidget     *widget,
 }
 
 static void
-gdict_window_handle_notify_position_cb (GtkWidget  *widget,
+gdict_window_handle_notify_position_cb (CtkWidget  *widget,
 					GParamSpec *pspec,
 					gpointer    user_data)
 {
   GdictWindow *window = GDICT_WINDOW (user_data);
   gint window_width, pos;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   pos = ctk_paned_get_position (CTK_PANED (widget));
   ctk_widget_get_allocation (CTK_WIDGET (window), &allocation);
@@ -1626,17 +1626,17 @@ gdict_window_constructor (GType                  type,
 {
   GObject *object;
   GdictWindow *window;
-  GtkWidget *hbox;
-  GtkWidget *handle;
-  GtkWidget *frame1, *frame2;
-  GtkWidget *vbox;
-  GtkWidget *button;
-  GtkActionGroup *action_group;
-  GtkAccelGroup *accel_group;
+  CtkWidget *hbox;
+  CtkWidget *handle;
+  CtkWidget *frame1, *frame2;
+  CtkWidget *vbox;
+  CtkWidget *button;
+  CtkActionGroup *action_group;
+  CtkAccelGroup *accel_group;
   PangoFontDescription *font_desc;
   gchar *font_name;
   GError *error;
-  GtkAllocation allocation;
+  CtkAllocation allocation;
 
   object = G_OBJECT_CLASS (gdict_window_parent_class)->constructor (type, n_construct_properties, construct_params);
   window = GDICT_WINDOW (object);
@@ -1837,7 +1837,7 @@ gdict_window_constructor (GType                  type,
 
   if (window->sidebar_visible)
     {
-      GtkAction *action;
+      CtkAction *action;
 
       action = ctk_action_group_get_action (window->action_group, "ViewSidebar");
       ctk_toggle_action_set_active (CTK_TOGGLE_ACTION (action), TRUE);
@@ -1848,7 +1848,7 @@ gdict_window_constructor (GType                  type,
   ctk_box_pack_end (CTK_BOX (window->main_box), window->status, FALSE, FALSE, 0);
   if (window->statusbar_visible)
     {
-      GtkAction *action;
+      CtkAction *action;
 
       action = ctk_action_group_get_action (window->action_group, "ViewStatusbar");
       ctk_toggle_action_set_active (CTK_TOGGLE_ACTION (action), TRUE);
@@ -1923,7 +1923,7 @@ static void
 gdict_window_class_init (GdictWindowClass *klass)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-  GtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
+  CtkWidgetClass *widget_class = CTK_WIDGET_CLASS (klass);
 
   gdict_window_properties[PROP_ACTION] =
     g_param_spec_enum ("action",
@@ -2052,13 +2052,13 @@ gdict_window_init (GdictWindow *window)
   window->strat_chooser = gdict_strategy_chooser_new ();
 }
 
-GtkWidget *
+CtkWidget *
 gdict_window_new (GdictWindowAction  action,
 		  GdictSourceLoader *loader,
 		  const gchar       *source_name,
 		  const gchar       *word)
 {
-  GtkWidget *retval;
+  CtkWidget *retval;
   GdictWindow *window;
 
   g_return_val_if_fail (GDICT_IS_SOURCE_LOADER (loader), NULL);

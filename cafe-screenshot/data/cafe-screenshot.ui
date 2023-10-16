@@ -3,7 +3,7 @@
 <!--*- mode: xml -*-->
 <interface>
   <requires lib="ctk+" version="3.10"/>
-  <object class="GtkDialog" id="toplevel">
+  <object class="CtkDialog" id="toplevel">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Save Screenshot</property>
@@ -11,18 +11,18 @@
     <property name="type_hint">dialog</property>
     <signal name="key-press-event" handler="on_toplevel_key_press_event" swapped="no"/>
     <child internal-child="vbox">
-      <object class="GtkBox" id="dialog-vbox1">
+      <object class="CtkBox" id="dialog-vbox1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkButtonBox" id="dialog-action_area1">
+          <object class="CtkButtonBox" id="dialog-action_area1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
-              <object class="GtkButton" id="help_button">
+              <object class="CtkButton" id="help_button">
                 <property name="label">ctk-help</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -37,7 +37,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="new_button">
+              <object class="CtkButton" id="new_button">
                 <property name="visible">False</property>
                 <property name="can_default">True</property>
                 <property name="can_focus">True</property>
@@ -48,7 +48,7 @@
               </object>
             </child>
             <child>
-              <object class="GtkButton" id="copy_button">
+              <object class="CtkButton" id="copy_button">
                 <property name="label" translatable="yes">C_opy to Clipboard</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -64,7 +64,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="cancel_button">
+              <object class="CtkButton" id="cancel_button">
                 <property name="label">ctk-cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -79,7 +79,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="ok_button">
+              <object class="CtkButton" id="ok_button">
                 <property name="label">ctk-save</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -103,19 +103,19 @@
           </packing>
         </child>
         <child>
-          <object class="GtkBox" id="vbox3">
+          <object class="CtkBox" id="vbox3">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="border_width">5</property>
             <property name="orientation">vertical</property>
             <property name="spacing">18</property>
             <child>
-              <object class="GtkBox" id="hbox6">
+              <object class="CtkBox" id="hbox6">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="spacing">12</property>
                 <child>
-                  <object class="GtkAspectFrame" id="aspect_frame">
+                  <object class="CtkAspectFrame" id="aspect_frame">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="label_xalign">0</property>
@@ -124,7 +124,7 @@
                     <property name="xalign">0</property>
                     <property name="yalign">0</property>
                     <child>
-                      <object class="GtkDrawingArea" id="preview_darea">
+                      <object class="CtkDrawingArea" id="preview_darea">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                       </object>
@@ -137,13 +137,13 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkGrid" id="table1">
+                  <object class="CtkGrid" id="table1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="row_spacing">6</property>
                     <property name="column_spacing">12</property>
                     <child>
-                      <object class="GtkLabel" id="label1">
+                      <object class="CtkLabel" id="label1">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
@@ -159,7 +159,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkLabel" id="label3">
+                      <object class="CtkLabel" id="label3">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="xalign">0</property>
@@ -174,7 +174,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkEntry" id="filename_entry">
+                      <object class="CtkEntry" id="filename_entry">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="invisible_char">*</property>
@@ -189,7 +189,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkBox" id="file_chooser_box">
+                      <object class="CtkBox" id="file_chooser_box">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <child>

@@ -44,13 +44,13 @@ struct BaobabSearchOpt;
 typedef struct _BaobabChartMenu BaobabChartMenu;
 
 struct _BaobabChartMenu {
-	GtkWidget *widget;
-	GtkWidget *up_item;
-	GtkWidget *zoom_in_item;
-	GtkWidget *zoom_out_item;
-	GtkWidget *subfolders_item;
-	GtkWidget *snapshot_item;
-	GtkWidget *set_root_item;
+	CtkWidget *widget;
+	CtkWidget *up_item;
+	CtkWidget *zoom_in_item;
+	CtkWidget *zoom_out_item;
+	CtkWidget *subfolders_item;
+	CtkWidget *snapshot_item;
+	CtkWidget *set_root_item;
 };
 
 typedef struct _BaobabFS BaobabFS;
@@ -66,19 +66,19 @@ typedef struct _BaobabApplication BaobabApplication;
 struct _BaobabApplication {
 	BaobabFS fs;
 
-	GtkBuilder *main_ui;
-	GtkWidget *window;
-	GtkWidget *tree_view;
-	GtkWidget *chart_frame;
-	GtkWidget *rings_chart;
-	GtkWidget *treemap_chart;
-	GtkWidget *current_chart;
-	GtkWidget *chart_type_combo;
+	CtkBuilder *main_ui;
+	CtkWidget *window;
+	CtkWidget *tree_view;
+	CtkWidget *chart_frame;
+	CtkWidget *rings_chart;
+	CtkWidget *treemap_chart;
+	CtkWidget *current_chart;
+	CtkWidget *chart_type_combo;
 	BaobabChartMenu *chart_menu;
-	GtkWidget *toolbar;
-	GtkWidget *spinner;
-	GtkWidget *statusbar;
-	GtkTreeStore *model;
+	CtkWidget *toolbar;
+	CtkWidget *spinner;
+	CtkWidget *statusbar;
+	CtkTreeStore *model;
 	gboolean STOP_SCANNING;
 	gboolean CONTENTS_CHANGED_DELAYED;
 	GSList *excluded_locations;

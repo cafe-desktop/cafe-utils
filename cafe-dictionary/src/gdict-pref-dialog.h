@@ -50,7 +50,7 @@ typedef struct _GdictPrefDialogClass   GdictPrefDialogClass;
 
 GType gdict_pref_dialog_get_type (void) G_GNUC_CONST;
 
-void gdict_show_pref_dialog (GtkWidget         *parent,
+void gdict_show_pref_dialog (CtkWidget         *parent,
 			     const gchar       *title,
 			     GdictSourceLoader *loader);
 

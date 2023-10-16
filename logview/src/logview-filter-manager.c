@@ -30,14 +30,14 @@
 #define UI_RESOURCE "/org/cafe/system-log/logview-filter.ui"
 
 struct _LogviewFilterManagerPrivate {
-  GtkWidget *tree;
+  CtkWidget *tree;
 
-  GtkWidget *add_button;
-  GtkWidget *remove_button;
-  GtkWidget *edit_button;
+  CtkWidget *add_button;
+  CtkWidget *remove_button;
+  CtkWidget *edit_button;
 
-  GtkTreeModel *model;
-  GtkBuilder* builder;
+  CtkTreeModel *model;
+  CtkBuilder* builder;
 
   LogviewPrefs* prefs;
 };
@@ -56,7 +56,7 @@ logview_filter_manager_update_model (LogviewFilterManager *manager)
   GList *filters;
   GList *filter;
   gchar *name;
-  GtkTreeIter iter;
+  CtkTreeIter iter;
 
   ctk_list_store_clear (CTK_LIST_STORE (manager->priv->model));
 
@@ -81,7 +81,7 @@ logview_filter_manager_update_model (LogviewFilterManager *manager)
 static gboolean
 check_name (LogviewFilterManager *manager, const gchar *name)
 {
-  GtkWidget *dialog;
+  CtkWidget *dialog;
 
   if (!strlen (name)) {
     dialog = ctk_message_dialog_new (CTK_WINDOW (manager),
@@ -115,7 +115,7 @@ check_name (LogviewFilterManager *manager, const gchar *name)
 static gboolean
 check_regex (LogviewFilterManager *manager, const gchar *regex)
 {
-  GtkWidget *dialog;
+  CtkWidget *dialog;
   GError *error = NULL;
   GRegex *reg;
 
@@ -156,26 +156,26 @@ check_regex (LogviewFilterManager *manager, const gchar *regex)
 }
 
 static void
-on_check_toggled (GtkToggleButton *button, GtkWidget *widget)
+on_check_toggled (CtkToggleButton *button, CtkWidget *widget)
 {
   ctk_widget_set_sensitive (widget,
                             ctk_toggle_button_get_active (button));
 }
 
 static void
-on_dialog_add_edit_reponse (GtkWidget *dialog, int response_id,
+on_dialog_add_edit_reponse (CtkWidget *dialog, int response_id,
                             LogviewFilterManager *manager)
 {
-  GtkWidget *entry_name, *entry_regex;
-  GtkWidget *radio_color;
-  GtkWidget *check_foreground, *check_background;
-  GtkWidget *color_foreground, *color_background;
+  CtkWidget *entry_name, *entry_regex;
+  CtkWidget *radio_color;
+  CtkWidget *check_foreground, *check_background;
+  CtkWidget *color_foreground, *color_background;
   gchar *old_name;
   const gchar *name;
   const gchar *regex;
   LogviewFilter *filter;
-  GtkTextTag *tag;
-  GtkBuilder *builder;
+  CtkTextTag *tag;
+  CtkBuilder *builder;
 
   old_name = g_object_get_data (G_OBJECT (manager), "old_name");
   builder = manager->priv->builder;
@@ -227,7 +227,7 @@ on_dialog_add_edit_reponse (GtkWidget *dialog, int response_id,
 
       if (!ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (check_foreground))
           && !ctk_toggle_button_get_active (CTK_TOGGLE_BUTTON (check_background))) {
-          GtkWidget *error_dialog;
+          CtkWidget *error_dialog;
 
           error_dialog = ctk_message_dialog_new (CTK_WINDOW (manager),
                                                  CTK_DIALOG_MODAL,
@@ -268,12 +268,12 @@ run_add_edit_dialog (LogviewFilterManager *manager, LogviewFilter *filter)
   GError *error;
   gchar *name, *regex;
   const gchar *title;
-  GtkWidget *dialog, *entry_name, *entry_regex, *radio_color;
-  GtkWidget *radio_visible, *check_foreground, *check_background;
-  GtkWidget *color_foreground, *color_background, *vbox_color;
+  CtkWidget *dialog, *entry_name, *entry_regex, *radio_color;
+  CtkWidget *radio_visible, *check_foreground, *check_background;
+  CtkWidget *color_foreground, *color_background, *vbox_color;
   gboolean foreground_set, background_set, invisible;
-  GtkTextTag *tag;
-  GtkBuilder* builder;
+  CtkTextTag *tag;
+  CtkBuilder* builder;
 
   builder = manager->priv->builder;
 
@@ -389,18 +389,18 @@ run_add_edit_dialog (LogviewFilterManager *manager, LogviewFilter *filter)
 }
 
 static void
-on_add_clicked (GtkWidget *button, LogviewFilterManager *manager)
+on_add_clicked (CtkWidget *button, LogviewFilterManager *manager)
 {
   run_add_edit_dialog (manager, NULL);
 }
 
 static void
-on_edit_clicked (GtkWidget *button, LogviewFilterManager *manager)
+on_edit_clicked (CtkWidget *button, LogviewFilterManager *manager)
 {
-  GtkTreeIter iter;
-  GtkTreeModel *model;
+  CtkTreeIter iter;
+  CtkTreeModel *model;
   LogviewFilter *filter;
-  GtkTreeSelection *selection;
+  CtkTreeSelection *selection;
 
   selection =
     ctk_tree_view_get_selection (CTK_TREE_VIEW (manager->priv->tree));
@@ -414,11 +414,11 @@ on_edit_clicked (GtkWidget *button, LogviewFilterManager *manager)
 }
 
 static void
-on_remove_clicked (GtkWidget *button, LogviewFilterManager *manager)
+on_remove_clicked (CtkWidget *button, LogviewFilterManager *manager)
 {
-  GtkTreeSelection *selection;
-  GtkTreeIter iter;
-  GtkTreeModel *model;
+  CtkTreeSelection *selection;
+  CtkTreeIter iter;
+  CtkTreeModel *model;
   gchar *name;
 
   selection  =
@@ -434,7 +434,7 @@ on_remove_clicked (GtkWidget *button, LogviewFilterManager *manager)
 }
 
 static void
-on_tree_selection_changed (GtkTreeSelection *selection, LogviewFilterManager *manager)
+on_tree_selection_changed (CtkTreeSelection *selection, LogviewFilterManager *manager)
 {
   gboolean status;
 
@@ -447,10 +447,10 @@ on_tree_selection_changed (GtkTreeSelection *selection, LogviewFilterManager *ma
 static void
 logview_filter_manager_init (LogviewFilterManager *manager)
 {
-  GtkWidget *grid;
-  GtkWidget *scrolled_window;
-  GtkTreeViewColumn *column;
-  GtkCellRenderer *text_renderer;
+  CtkWidget *grid;
+  CtkWidget *scrolled_window;
+  CtkTreeViewColumn *column;
+  CtkCellRenderer *text_renderer;
   LogviewFilterManagerPrivate *priv;
 
   manager->priv = logview_filter_manager_get_instance_private (manager);
@@ -557,7 +557,7 @@ logview_filter_manager_dispose (GObject *object)
 }
 
 static void
-logview_filter_manager_response (GtkDialog* dialog, gint response_id)
+logview_filter_manager_response (CtkDialog* dialog, gint response_id)
 {
   ctk_widget_destroy (CTK_WIDGET (dialog));
 }
@@ -566,13 +566,13 @@ static void
 logview_filter_manager_class_init (LogviewFilterManagerClass *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
-  GtkDialogClass *parent_class = CTK_DIALOG_CLASS (klass);
+  CtkDialogClass *parent_class = CTK_DIALOG_CLASS (klass);
 
   object_class->dispose = logview_filter_manager_dispose;
   parent_class->response = logview_filter_manager_response;
 }
 
-GtkWidget *
+CtkWidget *
 logview_filter_manager_new (void)
 {
   return g_object_new (LOGVIEW_TYPE_FILTER_MANAGER, NULL);

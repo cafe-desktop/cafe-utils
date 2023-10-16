@@ -39,14 +39,14 @@ typedef struct _GdictSidebarClass	GdictSidebarClass;
 
 struct _GdictSidebar
 {
-  GtkBox parent_instance;
+  CtkBox parent_instance;
 
   GdictSidebarPrivate *priv;
 };
 
 struct _GdictSidebarClass
 {
-  GtkBoxClass parent_class;
+  CtkBoxClass parent_class;
 
   void (*page_changed) (GdictSidebar *sidebar);
   void (*closed)       (GdictSidebar *sidebar);
@@ -59,11 +59,11 @@ struct _GdictSidebarClass
 
 GType                 gdict_sidebar_get_type     (void) G_GNUC_CONST;
 
-GtkWidget *           gdict_sidebar_new          (void);
+CtkWidget *           gdict_sidebar_new          (void);
 void                  gdict_sidebar_add_page     (GdictSidebar *sidebar,
 						  const gchar  *page_id,
 						  const gchar  *page_name,
-						  GtkWidget    *page_widget);
+						  CtkWidget    *page_widget);
 void                  gdict_sidebar_remove_page  (GdictSidebar *sidebar,
 						  const gchar  *page_id);
 void                  gdict_sidebar_view_page    (GdictSidebar *sidebar,

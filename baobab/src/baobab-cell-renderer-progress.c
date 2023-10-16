@@ -45,7 +45,7 @@ baobab_cell_renderer_progress_init (BaobabCellRendererProgress *cellprogress)
   ctk_cell_renderer_set_padding (CTK_CELL_RENDERER (cellprogress), 4, 4);
 }
 
-GtkCellRenderer*
+CtkCellRenderer*
 baobab_cell_renderer_progress_new (void)
 {
   return g_object_new (BAOBAB_TYPE_CELL_RENDERER_PROGRESS, NULL);
@@ -93,8 +93,8 @@ baobab_cell_renderer_progress_set_property (GObject *object,
 #define FIXED_HEIGHT  8
 
 static void
-baobab_cell_renderer_progress_get_size (GtkCellRenderer *cell,
-					GtkWidget       *widget,
+baobab_cell_renderer_progress_get_size (CtkCellRenderer *cell,
+					CtkWidget       *widget,
 					const GdkRectangle *cell_area,
 					gint            *x_offset,
 					gint            *y_offset,
@@ -178,9 +178,9 @@ set_color_according_to_perc (cairo_t *cr, double value)
 }
 
 static void
-baobab_cell_renderer_progress_render (GtkCellRenderer *cell,
+baobab_cell_renderer_progress_render (CtkCellRenderer *cell,
 				      cairo_t         *cr,
-				      GtkWidget       *widget,
+				      CtkWidget       *widget,
 				      const GdkRectangle *background_area,
 				      const GdkRectangle  *cell_area,
 				      guint            flags)
@@ -190,7 +190,7 @@ baobab_cell_renderer_progress_render (GtkCellRenderer *cell,
   gboolean is_rtl;
   gint xpad;
   gint ypad;
-  GtkStyle *style;
+  CtkStyle *style;
 
   is_rtl = ctk_widget_get_direction (widget) == CTK_TEXT_DIR_RTL;
 
@@ -234,7 +234,7 @@ static void
 baobab_cell_renderer_progress_class_init (BaobabCellRendererProgressClass *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
-  GtkCellRendererClass *cell_class = CTK_CELL_RENDERER_CLASS (klass);
+  CtkCellRendererClass *cell_class = CTK_CELL_RENDERER_CLASS (klass);
 
   object_class->get_property = baobab_cell_renderer_progress_get_property;
   object_class->set_property = baobab_cell_renderer_progress_set_property;

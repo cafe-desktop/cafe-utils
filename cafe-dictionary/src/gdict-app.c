@@ -87,7 +87,7 @@ gdict_app_init (GdictApp *app)
 }
 
 static void
-gdict_window_destroy_cb (GtkWidget *widget,
+gdict_window_destroy_cb (CtkWidget *widget,
                          gpointer   user_data)
 {
   GdictWindow *window = GDICT_WINDOW (widget);
@@ -137,7 +137,7 @@ gdict_create_window (GdictApp *app)
 
   if (!singleton->lookup_words && !singleton->match_words)
     {
-      GtkWidget *window;
+      CtkWidget *window;
 
       window = gdict_window_new (GDICT_WINDOW_ACTION_CLEAR,
                                  singleton->loader,
@@ -159,7 +159,7 @@ gdict_create_window (GdictApp *app)
   for (l = singleton->lookup_words; l != NULL; l = l->next)
     {
       gchar *word = l->data;
-      GtkWidget *window;
+      CtkWidget *window;
 
       window = gdict_window_new (GDICT_WINDOW_ACTION_LOOKUP,
                                  singleton->loader,
@@ -180,7 +180,7 @@ gdict_create_window (GdictApp *app)
   for (l = singleton->match_words; l != NULL; l = l->next)
     {
       gchar *word = l->data;
-      GtkWidget *window;
+      CtkWidget *window;
 
       window = gdict_window_new (GDICT_WINDOW_ACTION_MATCH,
                                  singleton->loader,

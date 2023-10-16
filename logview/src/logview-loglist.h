@@ -44,12 +44,12 @@ typedef struct _LogviewLoglistClass LogviewLoglistClass;
 typedef struct _LogviewLoglistPrivate LogviewLoglistPrivate;
 
 struct _LogviewLoglist {
-  GtkTreeView parent_instance;
+  CtkTreeView parent_instance;
   LogviewLoglistPrivate *priv;
 };
 
 struct _LogviewLoglistClass {
-	GtkTreeViewClass parent_class;
+	CtkTreeViewClass parent_class;
 
   void (* day_selected) (LogviewLoglist *loglist,
                          Day *day);
@@ -59,7 +59,7 @@ struct _LogviewLoglistClass {
 GType logview_loglist_get_type (void);
 
 /* public methods */
-GtkWidget * logview_loglist_new                (void);
+CtkWidget * logview_loglist_new                (void);
 void        logview_loglist_update_lines       (LogviewLoglist *loglist,
                                                 LogviewLog *log);
 GDate *     logview_loglist_get_date_selection (LogviewLoglist *loglist);

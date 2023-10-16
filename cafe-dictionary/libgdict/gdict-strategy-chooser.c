@@ -47,12 +47,12 @@
 
 struct _GdictStrategyChooserPrivate
 {
-  GtkListStore *store;
+  CtkListStore *store;
 
-  GtkWidget *treeview;
-  GtkWidget *clear_button;
-  GtkWidget *refresh_button;
-  GtkWidget *buttons_box;
+  CtkWidget *treeview;
+  CtkWidget *clear_button;
+  CtkWidget *refresh_button;
+  CtkWidget *buttons_box;
 
   GdictContext *context;
   gint results;
@@ -238,14 +238,14 @@ gdict_strategy_chooser_get_property (GObject    *gobject,
 }
 
 static void
-row_activated_cb (GtkTreeView       *treeview,
-		  GtkTreePath       *path,
-		  GtkTreeViewColumn *column,
+row_activated_cb (CtkTreeView       *treeview,
+		  CtkTreePath       *path,
+		  CtkTreeViewColumn *column,
 		  gpointer           user_data)
 {
   GdictStrategyChooser *chooser = GDICT_STRATEGY_CHOOSER (user_data);
   GdictStrategyChooserPrivate *priv = chooser->priv;
-  GtkTreeIter iter;
+  CtkTreeIter iter;
   gchar *db_name, *db_desc;
   gboolean valid;
 
@@ -280,7 +280,7 @@ row_activated_cb (GtkTreeView       *treeview,
 }
 
 static void
-refresh_button_clicked_cb (GtkWidget *widget,
+refresh_button_clicked_cb (CtkWidget *widget,
 			   gpointer   user_data)
 {
   GdictStrategyChooser *chooser = GDICT_STRATEGY_CHOOSER (user_data);
@@ -289,7 +289,7 @@ refresh_button_clicked_cb (GtkWidget *widget,
 }
 
 static void
-clear_button_clicked_cb (GtkWidget *widget,
+clear_button_clicked_cb (CtkWidget *widget,
 			 gpointer   user_data)
 {
   GdictStrategyChooser *chooser = GDICT_STRATEGY_CHOOSER (user_data);
@@ -305,10 +305,10 @@ gdict_strategy_chooser_constructor (GType                  type,
   GObject *object;
   GdictStrategyChooser *chooser;
   GdictStrategyChooserPrivate *priv;
-  GtkWidget *sw;
-  GtkCellRenderer *renderer;
-  GtkTreeViewColumn *column;
-  GtkWidget *hbox;
+  CtkWidget *sw;
+  CtkCellRenderer *renderer;
+  CtkTreeViewColumn *column;
+  CtkWidget *hbox;
 
   object = G_OBJECT_CLASS (gdict_strategy_chooser_parent_class)->constructor (type,
 		  							      n_params,
@@ -456,7 +456,7 @@ gdict_strategy_chooser_init (GdictStrategyChooser *chooser)
  *
  * Since: 0.9
  */
-GtkWidget *
+CtkWidget *
 gdict_strategy_chooser_new (void)
 {
   return g_object_new (GDICT_TYPE_STRATEGY_CHOOSER, NULL);
@@ -473,7 +473,7 @@ gdict_strategy_chooser_new (void)
  *
  * Since: 0.9
  */
-GtkWidget *
+CtkWidget *
 gdict_strategy_chooser_new_with_context (GdictContext *context)
 {
   g_return_val_if_fail (GDICT_IS_CONTEXT (context), NULL);
@@ -540,7 +540,7 @@ gdict_strategy_chooser_get_strategies (GdictStrategyChooser  *chooser,
                                        gsize                 *length)
 {
   GdictStrategyChooserPrivate *priv;
-  GtkTreeIter iter;
+  CtkTreeIter iter;
   gchar **retval;
   gsize i;
 
@@ -591,7 +591,7 @@ gdict_strategy_chooser_has_strategy (GdictStrategyChooser *chooser,
 				     const gchar          *strategy)
 {
   GdictStrategyChooserPrivate *priv;
-  GtkTreeIter iter;
+  CtkTreeIter iter;
   gboolean retval;
 
   g_return_val_if_fail (GDICT_IS_STRATEGY_CHOOSER (chooser), FALSE);
@@ -684,7 +684,7 @@ strategy_found_cb (GdictContext  *context,
   GdictStrategyChooser *chooser = GDICT_STRATEGY_CHOOSER (user_data);
   GdictStrategyChooserPrivate *priv = chooser->priv;
   const gchar *name, *description;
-  GtkTreeIter iter;
+  CtkTreeIter iter;
   gint weight = PANGO_WEIGHT_NORMAL;
 
   name = gdict_strategy_get_name (strategy);
@@ -775,7 +775,7 @@ gdict_strategy_chooser_refresh (GdictStrategyChooser *chooser)
   gdict_context_lookup_strategies (priv->context, &db_error);
   if (db_error)
     {
-      GtkTreeIter iter;
+      CtkTreeIter iter;
 
       ctk_list_store_append (priv->store, &iter);
       ctk_list_store_set (priv->store, &iter,
@@ -828,9 +828,9 @@ typedef struct
 } SelectData;
 
 static gboolean
-scan_for_strat_name (GtkTreeModel *model,
-                  GtkTreePath  *path,
-                  GtkTreeIter  *iter,
+scan_for_strat_name (CtkTreeModel *model,
+                  CtkTreePath  *path,
+                  CtkTreeIter  *iter,
                   gpointer      user_data)
 {
   SelectData *select_data = user_data;
@@ -845,15 +845,15 @@ scan_for_strat_name (GtkTreeModel *model,
 
   if (strcmp (strat_name, select_data->strat_name) == 0)
     {
-      GtkTreeView *tree_view;
-      GtkTreeSelection *selection;
+      CtkTreeView *tree_view;
+      CtkTreeSelection *selection;
 
       select_data->found = TRUE;
 
       tree_view = CTK_TREE_VIEW (select_data->chooser->priv->treeview);
       if (select_data->do_activate)
         {
-          GtkTreeViewColumn *column;
+          CtkTreeViewColumn *column;
 
           ctk_list_store_set (CTK_LIST_STORE (model), iter,
                               STRAT_COLUMN_CURRENT, PANGO_WEIGHT_BOLD,
@@ -1029,9 +1029,9 @@ gchar *
 gdict_strategy_chooser_get_current_strategy (GdictStrategyChooser *chooser)
 {
   GdictStrategyChooserPrivate *priv;
-  GtkTreeSelection *selection;
-  GtkTreeModel *model;
-  GtkTreeIter iter;
+  CtkTreeSelection *selection;
+  CtkTreeModel *model;
+  CtkTreeIter iter;
   gchar *retval = NULL;
 
   g_return_val_if_fail (GDICT_IS_STRATEGY_CHOOSER (chooser), NULL);
@@ -1058,16 +1058,16 @@ gdict_strategy_chooser_get_current_strategy (GdictStrategyChooser *chooser)
  * Creates a new button and packs it into the #GdictStrategyChooser
  * "action area".
  *
- * Return value: the packed #GtkButton
+ * Return value: the packed #CtkButton
  *
  * Since: 0.10
  */
-GtkWidget *
+CtkWidget *
 gdict_strategy_chooser_add_button (GdictStrategyChooser *chooser,
                                    const gchar          *button_text)
 {
   GdictStrategyChooserPrivate *priv;
-  GtkWidget *button;
+  CtkWidget *button;
 
   g_return_val_if_fail (GDICT_IS_STRATEGY_CHOOSER (chooser), NULL);
   g_return_val_if_fail (button_text != NULL, NULL);

@@ -63,8 +63,8 @@ struct _BaobabRingschartClass
 };
 
 GType baobab_ringschart_get_type (void) G_GNUC_CONST;
-GtkWidget *baobab_ringschart_new (void);
-void baobab_ringschart_set_subfoldertips_enabled (GtkWidget *chart,
+CtkWidget *baobab_ringschart_new (void);
+void baobab_ringschart_set_subfoldertips_enabled (CtkWidget *chart,
                                                   gboolean enabled);
 
 G_END_DECLS

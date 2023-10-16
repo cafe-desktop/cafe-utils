@@ -124,7 +124,7 @@ enum {
 	SEARCH_CONSTRAINT_MAXIMUM_POSSIBLE
 };
 
-static GtkTargetEntry GSearchDndTable[] = {
+static CtkTargetEntry GSearchDndTable[] = {
 	{ "text/uri-list", 0, 1 },
 	{ "text/plain",    0, 0 },
 	{ "STRING",        0, 0 }
@@ -474,11 +474,11 @@ has_additional_constraints (GSearchWindow * gsearch)
 }
 
 static void
-display_dialog_character_set_conversion_error (GtkWidget * window,
+display_dialog_character_set_conversion_error (CtkWidget * window,
                                                gchar * string,
                                                GError * error)
 {
-	GtkWidget * dialog;
+	CtkWidget * dialog;
 
 	dialog = ctk_message_dialog_new (CTK_WINDOW (window),
  	                                 CTK_DIALOG_DESTROY_WITH_PARENT,
@@ -830,8 +830,8 @@ build_search_command (GSearchWindow * gsearch,
 
 static void
 add_file_to_search_results (const gchar * file,
-			    GtkListStore * store,
-			    GtkTreeIter * iter,
+			    CtkListStore * store,
+			    CtkTreeIter * iter,
 			    GSearchWindow * gsearch)
 {
 	GdkPixbuf * pixbuf;
@@ -841,8 +841,8 @@ add_file_to_search_results (const gchar * file,
 	GFile * g_file;
 	GError * error = NULL;
 	GTimeVal time_val;
-	GtkTreePath * path;
-	GtkTreeRowReference * reference;
+	CtkTreePath * path;
+	CtkTreeRowReference * reference;
 	gchar * description;
 	gchar * readable_size;
 	gchar * readable_date;
@@ -1060,9 +1060,9 @@ intermediate_file_count_update (GSearchWindow * gsearch)
 }
 
 gboolean
-tree_model_iter_free_monitor (GtkTreeModel * model,
-                              GtkTreePath * path,
-                              GtkTreeIter * iter,
+tree_model_iter_free_monitor (CtkTreeModel * model,
+                              CtkTreePath * path,
+                              CtkTreeIter * iter,
                               gpointer data)
 {
 	GSearchMonitor * monitor;
@@ -1078,11 +1078,11 @@ tree_model_iter_free_monitor (GtkTreeModel * model,
 	return FALSE;
 }
 
-static GtkTreeModel *
+static CtkTreeModel *
 gsearch_create_list_of_templates (void)
 {
-	GtkListStore * store;
-	GtkTreeIter iter;
+	CtkListStore * store;
+	CtkTreeIter iter;
 	gint idx;
 
 	store = ctk_list_store_new (1, G_TYPE_STRING);
@@ -1243,15 +1243,15 @@ set_constraint_gsettings_boolean (gint constraint_id,
 
 /*
  * add_atk_namedesc
- * @widget    : The Gtk Widget for which @name and @desc are added.
+ * @widget    : The Ctk Widget for which @name and @desc are added.
  * @name      : Accessible Name
  * @desc      : Accessible Description
  * Description: This function adds accessible name and description to a
- *              Gtk widget.
+ *              Ctk widget.
  */
 
 static void
-add_atk_namedesc (GtkWidget * widget,
+add_atk_namedesc (CtkWidget * widget,
 		  const gchar * name,
 		  const gchar * desc)
 {
@@ -1277,8 +1277,8 @@ add_atk_namedesc (GtkWidget * widget,
  */
 
 static void
-add_atk_relation (GtkWidget * obj1,
-		  GtkWidget * obj2,
+add_atk_relation (CtkWidget * obj1,
+		  CtkWidget * obj2,
 		  AtkRelationType rel_type)
 {
 	AtkObject * atk_obj1, * atk_obj2;
@@ -1713,7 +1713,7 @@ handle_search_command_stderr_io (GIOChannel * ioc,
 
 			if (error_msgs->len > 0) {
 
-				GtkWidget * dialog;
+				CtkWidget * dialog;
 
 				if (truncate_error_msgs) {
 					error_msgs = g_string_append (error_msgs,
@@ -1722,10 +1722,10 @@ handle_search_command_stderr_io (GIOChannel * ioc,
 
 				if (gsearch->command_details->is_command_using_quick_mode != TRUE) {
 
-					GtkWidget * hbox;
-					GtkWidget * spacer;
-					GtkWidget * expander;
-					GtkWidget * label;
+					CtkWidget * hbox;
+					CtkWidget * spacer;
+					CtkWidget * expander;
+					CtkWidget * label;
 
 					dialog = ctk_message_dialog_new (CTK_WINDOW (gsearch->window),
 					                                 CTK_DIALOG_DESTROY_WITH_PARENT,
@@ -1763,11 +1763,11 @@ handle_search_command_stderr_io (GIOChannel * ioc,
 				else if ((gsearch->command_details->is_command_second_pass_enabled == FALSE) ||
 					 (is_second_scan_excluded_path (gsearch->command_details->look_in_folder_string) == TRUE)) {
 
-					GtkWidget * button;
-					GtkWidget * hbox;
-					GtkWidget * spacer;
-					GtkWidget * expander;
-					GtkWidget * label;
+					CtkWidget * button;
+					CtkWidget * hbox;
+					CtkWidget * spacer;
+					CtkWidget * expander;
+					CtkWidget * label;
 
 					dialog = ctk_message_dialog_new (CTK_WINDOW (gsearch->window),
 					                                 CTK_DIALOG_DESTROY_WITH_PARENT,
@@ -1842,7 +1842,7 @@ spawn_search_command (GSearchWindow * gsearch,
 	gint child_stderr;
 
 	if (!g_shell_parse_argv (command, NULL, &argv, &error)) {
-		GtkWidget * dialog;
+		CtkWidget * dialog;
 
 		stop_animation (gsearch);
 
@@ -1874,7 +1874,7 @@ spawn_search_command (GSearchWindow * gsearch,
 				       G_SPAWN_SEARCH_PATH,
 				       child_command_set_pgid_cb, NULL, &gsearch->command_details->command_pid, NULL, &child_stdout,
 				       &child_stderr, &error)) {
-		GtkWidget * dialog;
+		CtkWidget * dialog;
 
 		stop_animation (gsearch);
 
@@ -1917,7 +1917,7 @@ spawn_search_command (GSearchWindow * gsearch,
 
 		ctk_tree_view_scroll_to_point (CTK_TREE_VIEW (gsearch->search_results_tree_view), 0, 0);
 		ctk_tree_model_foreach (CTK_TREE_MODEL (gsearch->search_results_list_store),
-					(GtkTreeModelForeachFunc) tree_model_iter_free_monitor, gsearch);
+					(CtkTreeModelForeachFunc) tree_model_iter_free_monitor, gsearch);
 		ctk_list_store_clear (CTK_LIST_STORE (gsearch->search_results_list_store));
 
 		ctk_tree_view_column_set_visible (gsearch->search_results_folder_column, TRUE);
@@ -1945,16 +1945,16 @@ spawn_search_command (GSearchWindow * gsearch,
 	g_strfreev (argv);
 }
 
-static GtkWidget *
+static CtkWidget *
 create_constraint_box (GSearchWindow * gsearch,
                        GSearchConstraint * opt,
                        gchar * value)
 {
-	GtkWidget * hbox;
-	GtkWidget * label;
-	GtkWidget * entry;
-	GtkWidget * entry_hbox;
-	GtkWidget * button;
+	CtkWidget * hbox;
+	CtkWidget * label;
+	CtkWidget * entry;
+	CtkWidget * entry_hbox;
+	CtkWidget * button;
 
 	hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 12);
 
@@ -2092,7 +2092,7 @@ add_constraint (GSearchWindow * gsearch,
                 gboolean show_constraint)
 {
 	GSearchConstraint * constraint = g_slice_new (GSearchConstraint);
-	GtkWidget * widget;
+	CtkWidget * widget;
 
 	if (show_constraint) {
 		if (ctk_widget_get_visible (gsearch->available_options_vbox) == FALSE) {
@@ -2125,13 +2125,13 @@ add_constraint (GSearchWindow * gsearch,
 }
 
 static void
-set_sensitive (GtkCellLayout * cell_layout,
-               GtkCellRenderer * cell,
-               GtkTreeModel * tree_model,
-               GtkTreeIter * iter,
+set_sensitive (CtkCellLayout * cell_layout,
+               CtkCellRenderer * cell,
+               CtkTreeModel * tree_model,
+               CtkTreeIter * iter,
                gpointer data)
 {
-	GtkTreePath * path;
+	CtkTreePath * path;
 	gint idx;
 
 	path = ctk_tree_model_get_path (tree_model, iter);
@@ -2142,11 +2142,11 @@ set_sensitive (GtkCellLayout * cell_layout,
 }
 
 static gboolean
-is_separator (GtkTreeModel * model,
-              GtkTreeIter * iter,
+is_separator (CtkTreeModel * model,
+              CtkTreeIter * iter,
               gpointer data)
 {
-	GtkTreePath * path;
+	CtkTreePath * path;
 	gint idx;
 
 	path = ctk_tree_model_get_path (model, iter);
@@ -2159,9 +2159,9 @@ is_separator (GtkTreeModel * model,
 static void
 create_additional_constraint_section (GSearchWindow * gsearch)
 {
-	GtkCellRenderer * renderer;
-	GtkTreeModel * model;
-	GtkWidget * hbox;
+	CtkCellRenderer * renderer;
+	CtkTreeModel * model;
+	CtkWidget * hbox;
 	gchar * desc;
 
 	gsearch->available_options_vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
@@ -2224,13 +2224,13 @@ create_additional_constraint_section (GSearchWindow * gsearch)
 }
 
 static void
-filename_cell_data_func (GtkTreeViewColumn * column,
-                         GtkCellRenderer * renderer,
-                         GtkTreeModel * model,
-                         GtkTreeIter * iter,
+filename_cell_data_func (CtkTreeViewColumn * column,
+                         CtkCellRenderer * renderer,
+                         CtkTreeModel * model,
+                         CtkTreeIter * iter,
                          GSearchWindow * gsearch)
 {
-	GtkTreePath * path;
+	CtkTreePath * path;
 	PangoUnderline underline;
 	gboolean underline_set;
 
@@ -2261,10 +2261,10 @@ filename_cell_data_func (GtkTreeViewColumn * column,
 }
 
 static gboolean
-gsearch_equal_func (GtkTreeModel * model,
+gsearch_equal_func (CtkTreeModel * model,
                     gint column,
                     const gchar * key,
-                    GtkTreeIter * iter,
+                    CtkTreeIter * iter,
                     gpointer search_data)
 {
 	gboolean results = TRUE;
@@ -2291,15 +2291,15 @@ gsearch_equal_func (GtkTreeModel * model,
 	return results;
 }
 
-static GtkWidget *
+static CtkWidget *
 create_search_results_section (GSearchWindow * gsearch)
 {
-	GtkWidget * label;
-	GtkWidget * vbox;
-	GtkWidget * hbox;
-	GtkWidget * window;
-	GtkTreeViewColumn * column;
-	GtkCellRenderer * renderer;
+	CtkWidget * label;
+	CtkWidget * vbox;
+	CtkWidget * hbox;
+	CtkWidget * window;
+	CtkTreeViewColumn * column;
+	CtkCellRenderer * renderer;
 
 	vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
 	hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 6);
@@ -2427,7 +2427,7 @@ create_search_results_section (GSearchWindow * gsearch)
 	ctk_tree_view_column_set_sort_column_id (column, COLUMN_NAME);
 	ctk_tree_view_column_set_reorderable (column, TRUE);
 	ctk_tree_view_column_set_cell_data_func (column, renderer,
-	                                         (GtkTreeCellDataFunc) filename_cell_data_func,
+	                                         (CtkTreeCellDataFunc) filename_cell_data_func,
 						 gsearch, NULL);
 	ctk_tree_view_append_column (CTK_TREE_VIEW (gsearch->search_results_tree_view), column);
 
@@ -2490,10 +2490,10 @@ create_search_results_section (GSearchWindow * gsearch)
 }
 
 static void
-register_gsearchtool_icon (GtkIconFactory * factory)
+register_gsearchtool_icon (CtkIconFactory * factory)
 {
-	GtkIconSource * source;
-	GtkIconSet * icon_set;
+	CtkIconSource * source;
+	CtkIconSet * icon_set;
 
 	source = ctk_icon_source_new ();
 
@@ -2512,7 +2512,7 @@ register_gsearchtool_icon (GtkIconFactory * factory)
 static void
 gsearchtool_init_stock_icons (void)
 {
-	GtkIconFactory * factory;
+	CtkIconFactory * factory;
 
 	factory = ctk_icon_factory_new ();
 	ctk_icon_factory_add_default (factory);
@@ -2722,8 +2722,8 @@ handle_gsettings_settings (GSearchWindow * gsearch)
 }
 
 static void
-gsearch_window_size_allocate (GtkWidget * widget,
-                              GtkAllocation * allocation,
+gsearch_window_size_allocate (CtkWidget * widget,
+                              CtkAllocation * allocation,
                               GSearchWindow * gsearch)
 {
 	if (gsearch->is_window_maximized == FALSE) {
@@ -2732,17 +2732,17 @@ gsearch_window_size_allocate (GtkWidget * widget,
 	}
 }
 
-static GtkWidget *
+static CtkWidget *
 gsearch_app_create (GSearchWindow * gsearch)
 {
 	gchar * locale_string;
 	gchar * utf8_string;
-	GtkWidget * hbox;
-	GtkWidget * vbox;
-	GtkWidget * entry;
-	GtkWidget * label;
-	GtkWidget * button;
-	GtkWidget * container;
+	CtkWidget * hbox;
+	CtkWidget * vbox;
+	CtkWidget * entry;
+	CtkWidget * label;
+	CtkWidget * button;
+	CtkWidget * container;
 
 	gsearch->cafe_search_tool_settings = g_settings_new ("org.cafe.search-tool");
 	gsearch->cafe_search_tool_select_settings = g_settings_new ("org.cafe.search-tool.select");
@@ -3030,7 +3030,7 @@ main (int argc,
 {
 	GSearchWindow * gsearch;
 	GOptionContext * context;
-	GtkWidget * window;
+	CtkWidget * window;
 	GError * error = NULL;
 	EggSMClient * client;
 

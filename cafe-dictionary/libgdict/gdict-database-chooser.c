@@ -50,12 +50,12 @@
 
 struct _GdictDatabaseChooserPrivate
 {
-  GtkListStore *store;
+  CtkListStore *store;
 
-  GtkWidget *treeview;
-  GtkWidget *clear_button;
-  GtkWidget *refresh_button;
-  GtkWidget *buttons_box;
+  CtkWidget *treeview;
+  CtkWidget *clear_button;
+  CtkWidget *refresh_button;
+  CtkWidget *buttons_box;
 
   GdictContext *context;
   gint results;
@@ -242,14 +242,14 @@ gdict_database_chooser_get_property (GObject    *gobject,
 }
 
 static void
-row_activated_cb (GtkTreeView       *treeview,
-		  GtkTreePath       *path,
-		  GtkTreeViewColumn *column,
+row_activated_cb (CtkTreeView       *treeview,
+		  CtkTreePath       *path,
+		  CtkTreeViewColumn *column,
 		  gpointer           user_data)
 {
   GdictDatabaseChooser *chooser = GDICT_DATABASE_CHOOSER (user_data);
   GdictDatabaseChooserPrivate *priv = chooser->priv;
-  GtkTreeIter iter;
+  CtkTreeIter iter;
   gchar *db_name, *db_desc;
   gboolean valid;
 
@@ -287,7 +287,7 @@ row_activated_cb (GtkTreeView       *treeview,
 }
 
 static void
-refresh_button_clicked_cb (GtkWidget *widget,
+refresh_button_clicked_cb (CtkWidget *widget,
 			   gpointer   user_data)
 {
   GdictDatabaseChooser *chooser = GDICT_DATABASE_CHOOSER (user_data);
@@ -296,7 +296,7 @@ refresh_button_clicked_cb (GtkWidget *widget,
 }
 
 static void
-clear_button_clicked_cb (GtkWidget *widget,
+clear_button_clicked_cb (CtkWidget *widget,
 			 gpointer   user_data)
 {
   GdictDatabaseChooser *chooser = GDICT_DATABASE_CHOOSER (user_data);
@@ -305,7 +305,7 @@ clear_button_clicked_cb (GtkWidget *widget,
 }
 
 static void
-selection_changed_cb (GtkTreeSelection *selection,
+selection_changed_cb (CtkTreeSelection *selection,
                       gpointer          user_data)
 {
   g_signal_emit (user_data, db_chooser_signals[SELECTION_CHANGED], 0);
@@ -320,10 +320,10 @@ gdict_database_chooser_constructor (GType                  type,
   GObject *object;
   GdictDatabaseChooser *chooser;
   GdictDatabaseChooserPrivate *priv;
-  GtkWidget *sw;
-  GtkCellRenderer *renderer;
-  GtkTreeViewColumn *column;
-  GtkWidget *hbox;
+  CtkWidget *sw;
+  CtkCellRenderer *renderer;
+  CtkTreeViewColumn *column;
+  CtkWidget *hbox;
 
   parent_class = G_OBJECT_CLASS (gdict_database_chooser_parent_class);
   object = parent_class->constructor (type, n_params, params);
@@ -509,7 +509,7 @@ gdict_database_chooser_init (GdictDatabaseChooser *chooser)
  *
  * Since: 0.10
  */
-GtkWidget *
+CtkWidget *
 gdict_database_chooser_new (void)
 {
   return g_object_new (GDICT_TYPE_DATABASE_CHOOSER, NULL);
@@ -526,7 +526,7 @@ gdict_database_chooser_new (void)
  *
  * Since: 0.10
  */
-GtkWidget *
+CtkWidget *
 gdict_database_chooser_new_with_context (GdictContext *context)
 {
   g_return_val_if_fail (GDICT_IS_CONTEXT (context), NULL);
@@ -593,7 +593,7 @@ gdict_database_chooser_get_databases (GdictDatabaseChooser  *chooser,
 				      gsize                 *length)
 {
   GdictDatabaseChooserPrivate *priv;
-  GtkTreeIter iter;
+  CtkTreeIter iter;
   gchar **retval;
   gsize i;
 
@@ -643,7 +643,7 @@ gdict_database_chooser_has_database (GdictDatabaseChooser *chooser,
 				     const gchar          *database)
 {
   GdictDatabaseChooserPrivate *priv;
-  GtkTreeIter iter;
+  CtkTreeIter iter;
   gboolean retval;
 
   g_return_val_if_fail (GDICT_IS_DATABASE_CHOOSER (chooser), FALSE);
@@ -736,7 +736,7 @@ database_found_cb (GdictContext  *context,
 {
   GdictDatabaseChooser *chooser = GDICT_DATABASE_CHOOSER (user_data);
   GdictDatabaseChooserPrivate *priv = chooser->priv;
-  GtkTreeIter iter;
+  CtkTreeIter iter;
   const gchar *name, *full_name;
   gint weight = PANGO_WEIGHT_NORMAL;
 
@@ -828,7 +828,7 @@ gdict_database_chooser_refresh (GdictDatabaseChooser *chooser)
   gdict_context_lookup_databases (priv->context, &db_error);
   if (db_error)
     {
-      GtkTreeIter iter;
+      CtkTreeIter iter;
 
       ctk_list_store_append (priv->store, &iter);
       ctk_list_store_set (priv->store, &iter,
@@ -881,9 +881,9 @@ typedef struct
 } SelectData;
 
 static gboolean
-scan_for_db_name (GtkTreeModel *model,
-                  GtkTreePath  *path,
-                  GtkTreeIter  *iter,
+scan_for_db_name (CtkTreeModel *model,
+                  CtkTreePath  *path,
+                  CtkTreeIter  *iter,
                   gpointer      user_data)
 {
   SelectData *select_data = user_data;
@@ -898,15 +898,15 @@ scan_for_db_name (GtkTreeModel *model,
 
   if (strcmp (db_name, select_data->db_name) == 0)
     {
-      GtkTreeView *tree_view;
-      GtkTreeSelection *selection;
+      CtkTreeView *tree_view;
+      CtkTreeSelection *selection;
 
       select_data->found = TRUE;
 
       tree_view = CTK_TREE_VIEW (select_data->chooser->priv->treeview);
       if (select_data->do_activate)
         {
-          GtkTreeViewColumn *column;
+          CtkTreeViewColumn *column;
 
           ctk_list_store_set (CTK_LIST_STORE (model), iter,
                               DB_COLUMN_CURRENT, PANGO_WEIGHT_BOLD,
@@ -1079,9 +1079,9 @@ gchar *
 gdict_database_chooser_get_current_database (GdictDatabaseChooser *chooser)
 {
   GdictDatabaseChooserPrivate *priv;
-  GtkTreeSelection *selection;
-  GtkTreeModel *model;
-  GtkTreeIter iter;
+  CtkTreeSelection *selection;
+  CtkTreeModel *model;
+  CtkTreeIter iter;
   gchar *retval = NULL;
 
   g_return_val_if_fail (GDICT_IS_DATABASE_CHOOSER (chooser), NULL);
@@ -1105,7 +1105,7 @@ gdict_database_chooser_get_current_database (GdictDatabaseChooser *chooser)
  * @chooser: a #GdictDatabase
  * @button_text: text of the button
  *
- * Adds a #GtkButton with @button_text to the button area on
+ * Adds a #CtkButton with @button_text to the button area on
  * the bottom of @chooser. The @button_text can also be a
  * stock ID.
  *
@@ -1113,12 +1113,12 @@ gdict_database_chooser_get_current_database (GdictDatabaseChooser *chooser)
  *
  * Since: 0.10
  */
-GtkWidget *
+CtkWidget *
 gdict_database_chooser_add_button (GdictDatabaseChooser *chooser,
                                    const gchar          *button_text)
 {
   GdictDatabaseChooserPrivate *priv;
-  GtkWidget *button;
+  CtkWidget *button;
 
   g_return_val_if_fail (GDICT_IS_DATABASE_CHOOSER (chooser), NULL);
   g_return_val_if_fail (button_text != NULL, NULL);

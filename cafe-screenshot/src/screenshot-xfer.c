@@ -27,8 +27,8 @@
 
 typedef struct
 {
-  GtkWidget *dialog;
-  GtkWidget *progress_bar;
+  CtkWidget *dialog;
+  CtkWidget *progress_bar;
   GCancellable *cancellable;
 } TransferDialog;
 
@@ -40,7 +40,7 @@ typedef struct
   TransferCallback callback;
   gpointer callback_data;
   GCancellable *cancellable;
-  GtkWidget *parent;
+  CtkWidget *parent;
   TransferDialog *dialog;
   TransferResult result;
   GIOSchedulerJob *io_job;
@@ -53,7 +53,7 @@ typedef struct
 typedef struct
 {
   int resp;
-  GtkWidget *parent;
+  CtkWidget *parent;
   char *basename;
 } ErrorDialogData;
 
@@ -61,7 +61,7 @@ static gboolean
 do_run_overwrite_confirm_dialog (gpointer _data)
 {
   ErrorDialogData *data = _data;
-  GtkWidget *dialog;
+  CtkWidget *dialog;
   gint response;
 
   /* we need to ask the user if they want to overwrite this file */
@@ -91,7 +91,7 @@ do_run_overwrite_confirm_dialog (gpointer _data)
 }
 
 static void
-transfer_dialog_response_cb (GtkDialog *d,
+transfer_dialog_response_cb (CtkDialog *d,
                              gint response,
                              GCancellable *cancellable)
 {
@@ -108,8 +108,8 @@ static gboolean
 transfer_progress_dialog_new (TransferJob *job)
 {
   TransferDialog *dialog;
-  GtkWidget *gdialog;
-  GtkWidget *widget;
+  CtkWidget *gdialog;
+  CtkWidget *widget;
 
   dialog = g_new0 (TransferDialog, 1);
 
@@ -365,7 +365,7 @@ out:
 void
 screenshot_xfer_uri (GFile *source_file,
                      GFile *target_file,
-                     GtkWidget *parent,
+                     CtkWidget *parent,
                      TransferCallback done_callback,
                      gpointer done_callback_data)
 {

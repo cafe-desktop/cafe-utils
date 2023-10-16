@@ -40,24 +40,24 @@
 #define SEARCH_END_MARK "lw-search-end-mark"
 
 struct _LogviewWindowPrivate {
-  GtkUIManager *ui_manager;
-  GtkActionGroup *action_group;
-  GtkActionGroup *filter_action_group;
+  CtkUIManager *ui_manager;
+  CtkActionGroup *action_group;
+  CtkActionGroup *filter_action_group;
 
-  GtkWidget *find_bar;
-  GtkWidget *loglist;
-  GtkWidget *sidebar;
-  GtkWidget *version_bar;
-  GtkWidget *version_selector;
-  GtkWidget *hpaned;
-  GtkWidget *text_view;
-  GtkWidget *statusbar;
+  CtkWidget *find_bar;
+  CtkWidget *loglist;
+  CtkWidget *sidebar;
+  CtkWidget *version_bar;
+  CtkWidget *version_selector;
+  CtkWidget *hpaned;
+  CtkWidget *text_view;
+  CtkWidget *statusbar;
 
-  GtkWidget *message_area;
-  GtkWidget *message_primary;
-  GtkWidget *message_secondary;
+  CtkWidget *message_area;
+  CtkWidget *message_primary;
+  CtkWidget *message_secondary;
 
-  GtkTextTagTable *tag_table;
+  CtkTextTagTable *tag_table;
 
   int original_fontsize, fontsize;
 
@@ -87,7 +87,7 @@ static void read_new_lines_cb (LogviewLog *log,
 /* private functions */
 
 static void
-logview_version_selector_changed (GtkComboBox *version_selector, gpointer user_data)
+logview_version_selector_changed (CtkComboBox *version_selector, gpointer user_data)
 {
 
 }
@@ -123,9 +123,9 @@ logview_version_selector_changed (GtkComboBox *version_selector, gpointer user_d
 /* private helpers */
 
 static void
-populate_tag_table (GtkTextTagTable *tag_table)
+populate_tag_table (CtkTextTagTable *tag_table)
 {
-  GtkTextTag *tag;
+  CtkTextTag *tag;
 
   tag = ctk_text_tag_new ("bold");
   g_object_set (tag, "weight", PANGO_WEIGHT_BOLD,
@@ -145,9 +145,9 @@ populate_tag_table (GtkTextTagTable *tag_table)
 static void
 populate_style_tag_table (LogviewWindow *logview)
 {
-  GtkTextTagTable *tag_table = logview->priv->tag_table;
-  GtkTextTag *tag;
-  GtkStyleContext *context;
+  CtkTextTagTable *tag_table = logview->priv->tag_table;
+  CtkTextTag *tag;
+  CtkStyleContext *context;
   GdkRGBA rgba;
 
   tag = ctk_text_tag_table_lookup (tag_table, "gray");
@@ -170,10 +170,10 @@ populate_style_tag_table (LogviewWindow *logview)
 }
 
 static void
-_ctk_text_buffer_apply_tag_to_rectangle (GtkTextBuffer *buffer, int line_start, int line_end,
+_ctk_text_buffer_apply_tag_to_rectangle (CtkTextBuffer *buffer, int line_start, int line_end,
                                         int offset_start, int offset_end, char *tag_name)
 {
-  GtkTextIter start, end;
+  CtkTextIter start, end;
   int line_cur;
 
   ctk_text_buffer_get_iter_at_line (buffer, &start, line_start);
@@ -282,7 +282,7 @@ logview_set_window_title (LogviewWindow *logview, const char * log_name)
 /* actions callbacks */
 
 static void
-open_file_selected_cb (GtkWidget *chooser, gint response, LogviewWindow *logview)
+open_file_selected_cb (CtkWidget *chooser, gint response, LogviewWindow *logview)
 {
   GFile *f;
   char *file_uri;
@@ -313,9 +313,9 @@ out:
 }
 
 static void
-logview_open_log (GtkAction *action, LogviewWindow *logview)
+logview_open_log (CtkAction *action, LogviewWindow *logview)
 {
-  static GtkWidget *chooser = NULL;
+  static CtkWidget *chooser = NULL;
   char *active;
 
   if (chooser == NULL) {
@@ -342,14 +342,14 @@ logview_open_log (GtkAction *action, LogviewWindow *logview)
 }
 
 static void
-logview_close_log (GtkAction *action, LogviewWindow *logview)
+logview_close_log (CtkAction *action, LogviewWindow *logview)
 {
   findbar_close_cb (LOGVIEW_FINDBAR (logview->priv->find_bar), logview);
   logview_manager_close_active_log (logview->priv->manager);
 }
 
 static void
-logview_help (GtkAction *action, GtkWidget *parent_window)
+logview_help (CtkAction *action, CtkWidget *parent_window)
 {
   GError *error = NULL;
 
@@ -364,31 +364,31 @@ logview_help (GtkAction *action, GtkWidget *parent_window)
 }
 
 static void
-logview_bigger_text (GtkAction *action, LogviewWindow *logview)
+logview_bigger_text (CtkAction *action, LogviewWindow *logview)
 {
   logview->priv->fontsize = MIN (logview->priv->fontsize + 1, 24);
   logview_set_fontsize (logview, TRUE);
 }
 
 static void
-logview_smaller_text (GtkAction *action, LogviewWindow *logview)
+logview_smaller_text (CtkAction *action, LogviewWindow *logview)
 {
   logview->priv->fontsize = MAX (logview->priv->fontsize-1, 6);
   logview_set_fontsize (logview, TRUE);
 }
 
 static void
-logview_normal_text (GtkAction *action, LogviewWindow *logview)
+logview_normal_text (CtkAction *action, LogviewWindow *logview)
 {
   logview->priv->fontsize = logview->priv->original_fontsize;
   logview_set_fontsize (logview, TRUE);
 }
 
 static void
-logview_select_all (GtkAction *action, LogviewWindow *logview)
+logview_select_all (CtkAction *action, LogviewWindow *logview)
 {
-  GtkTextIter start, end;
-  GtkTextBuffer *buffer;
+  CtkTextIter start, end;
+  CtkTextBuffer *buffer;
 
   buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
 
@@ -399,10 +399,10 @@ logview_select_all (GtkAction *action, LogviewWindow *logview)
 }
 
 static void
-logview_copy (GtkAction *action, LogviewWindow *logview)
+logview_copy (CtkAction *action, LogviewWindow *logview)
 {
-  GtkTextBuffer *buffer;
-  GtkClipboard *clipboard;
+  CtkTextBuffer *buffer;
+  CtkClipboard *clipboard;
 
   buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
   clipboard = ctk_clipboard_get (GDK_SELECTION_CLIPBOARD);
@@ -423,9 +423,9 @@ findbar_close_cb (LogviewFindbar *findbar,
 static void
 logview_search_text (LogviewWindow *logview, gboolean forward)
 {
-  GtkTextBuffer *buffer;
-  GtkTextMark *search_start, *search_end;
-  GtkTextIter search, start_m, end_m;
+  CtkTextBuffer *buffer;
+  CtkTextMark *search_start, *search_end;
+  CtkTextIter search, start_m, end_m;
   const char *text;
   gboolean res, wrapped;
 
@@ -477,8 +477,8 @@ wrap:
   } else {
     if (wrapped) {
 
-      GtkTextMark *mark;
-      GtkTextIter iter;
+      CtkTextMark *mark;
+      CtkTextIter iter;
 
       if (ctk_text_buffer_get_has_selection (buffer)) {
         /* unselect */
@@ -523,9 +523,9 @@ static gboolean
 text_changed_timeout_cb (gpointer user_data)
 {
   LogviewWindow *logview = user_data;
-  GtkTextMark *search_start, *search_end;
-  GtkTextIter start;
-  GtkTextBuffer *buffer;
+  CtkTextMark *search_start, *search_end;
+  CtkTextIter start;
+  CtkTextBuffer *buffer;
 
   logview->priv->search_timeout_id = 0;
 
@@ -561,7 +561,7 @@ findbar_text_changed_cb (LogviewFindbar *findbar,
 }
 
 static void
-logview_search (GtkAction *action, LogviewWindow *logview)
+logview_search (CtkAction *action, LogviewWindow *logview)
 {
   logview_findbar_open (LOGVIEW_FINDBAR (logview->priv->find_bar));
 }
@@ -569,8 +569,8 @@ logview_search (GtkAction *action, LogviewWindow *logview)
 static void
 filter_buffer (LogviewWindow *logview, gint start_line)
 {
-  GtkTextBuffer *buffer;
-  GtkTextIter start, *end;
+  CtkTextBuffer *buffer;
+  CtkTextIter start, *end;
   gchar* text;
   GList* cur_filter;
   gboolean matched;
@@ -618,8 +618,8 @@ filter_buffer (LogviewWindow *logview, gint start_line)
 static void
 filter_remove (LogviewWindow *logview, LogviewFilter *filter)
 {
-  GtkTextIter start, end;
-  GtkTextBuffer *buffer;
+  CtkTextIter start, end;
+  CtkTextBuffer *buffer;
 
   buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
   ctk_text_buffer_get_bounds (buffer, &start, &end);
@@ -629,7 +629,7 @@ filter_remove (LogviewWindow *logview, LogviewFilter *filter)
 }
 
 static void
-on_filter_toggled (GtkToggleAction *action, LogviewWindow *logview)
+on_filter_toggled (CtkToggleAction *action, LogviewWindow *logview)
 {
   LogviewWindowPrivate *priv = logview_window_get_instance_private (logview);
   const gchar* name;
@@ -656,13 +656,13 @@ static void
 update_filter_menu (LogviewWindow *window)
 {
   LogviewWindowPrivate *priv;
-  GtkUIManager* ui;
+  CtkUIManager* ui;
   GList *actions, *l;
   guint id;
   GList *filters;
-  GtkTextTagTable *table;
-  GtkTextTag *tag;
-  GtkToggleAction *action;
+  CtkTextTagTable *table;
+  CtkTextTag *tag;
+  CtkToggleAction *action;
   gchar* name;
 
   priv = logview_window_get_instance_private (window);
@@ -723,7 +723,7 @@ update_filter_menu (LogviewWindow *window)
 }
 
 static void
-on_logview_filter_manager_response (GtkDialog *dialog,
+on_logview_filter_manager_response (CtkDialog *dialog,
                                     gint response,
                                     LogviewWindow *logview)
 {
@@ -734,9 +734,9 @@ on_logview_filter_manager_response (GtkDialog *dialog,
 }
 
 static void
-logview_manage_filters (GtkAction *action, LogviewWindow *logview)
+logview_manage_filters (CtkAction *action, LogviewWindow *logview)
 {
-  GtkWidget *manager;
+  CtkWidget *manager;
 
   manager = logview_filter_manager_new ();
 
@@ -750,7 +750,7 @@ logview_manage_filters (GtkAction *action, LogviewWindow *logview)
 }
 
 static void
-logview_about (GtkWidget *widget, GtkWidget *window)
+logview_about (CtkWidget *widget, CtkWidget *window)
 {
   g_return_if_fail (CTK_IS_WINDOW (window));
 
@@ -786,7 +786,7 @@ logview_about (GtkWidget *widget, GtkWidget *window)
 }
 
 static void
-logview_toggle_statusbar (GtkAction *action, LogviewWindow *logview)
+logview_toggle_statusbar (CtkAction *action, LogviewWindow *logview)
 {
   if (ctk_widget_get_visible (logview->priv->statusbar))
     ctk_widget_hide (logview->priv->statusbar);
@@ -795,7 +795,7 @@ logview_toggle_statusbar (GtkAction *action, LogviewWindow *logview)
 }
 
 static void
-logview_toggle_sidebar (GtkAction *action, LogviewWindow *logview)
+logview_toggle_sidebar (CtkAction *action, LogviewWindow *logview)
 {
   if (ctk_widget_get_visible (logview->priv->sidebar))
     ctk_widget_hide (logview->priv->sidebar);
@@ -804,7 +804,7 @@ logview_toggle_sidebar (GtkAction *action, LogviewWindow *logview)
 }
 
 static void
-logview_toggle_match_filters (GtkToggleAction *action, LogviewWindow *logview)
+logview_toggle_match_filters (CtkToggleAction *action, LogviewWindow *logview)
 {
   logview->priv->matches_only = ctk_toggle_action_get_active (action);
   filter_buffer (logview, 0);
@@ -814,7 +814,7 @@ logview_toggle_match_filters (GtkToggleAction *action, LogviewWindow *logview)
 
 /* Menus */
 
-static GtkActionEntry entries[] = {
+static CtkActionEntry entries[] = {
     { "FileMenu", NULL, N_("_File"), NULL, NULL, NULL },
     { "EditMenu", NULL, N_("_Edit"), NULL, NULL, NULL },
     { "ViewMenu", NULL, N_("_View"), NULL, NULL, NULL },
@@ -851,7 +851,7 @@ static GtkActionEntry entries[] = {
       G_CALLBACK (logview_about) },
 };
 
-static GtkToggleActionEntry toggle_entries[] = {
+static CtkToggleActionEntry toggle_entries[] = {
     { "ShowStatusBar", NULL, N_("_Statusbar"), NULL, N_("Show Status Bar"),
       G_CALLBACK (logview_toggle_statusbar), TRUE },
     { "ShowSidebar", NULL, N_("Side _Pane"), "F9", N_("Show Side Pane"),
@@ -861,7 +861,7 @@ static GtkToggleActionEntry toggle_entries[] = {
 };
 
 static gboolean
-window_size_changed_cb (GtkWidget *widget, GdkEventConfigure *event,
+window_size_changed_cb (CtkWidget *widget, GdkEventConfigure *event,
                         gpointer data)
 {
   LogviewWindow *window = data;
@@ -876,8 +876,8 @@ static void
 real_select_day (LogviewWindow *logview,
                  GDate *date, int first_line, int last_line)
 {
-  GtkTextBuffer *buffer;
-  GtkTextIter start_iter, end_iter, start_vis, end_vis;
+  CtkTextBuffer *buffer;
+  CtkTextIter start_iter, end_iter, start_vis, end_vis;
   GdkRectangle visible_rect;
 
   buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
@@ -917,8 +917,8 @@ loglist_day_cleared_cb (LogviewLoglist *loglist,
                         gpointer user_data)
 {
   LogviewWindow *logview = user_data;
-  GtkTextBuffer *buffer;
-  GtkTextIter start, end;
+  CtkTextBuffer *buffer;
+  CtkTextIter start, end;
 
   buffer = ctk_text_view_get_buffer (CTK_TEXT_VIEW (logview->priv->text_view));
   ctk_text_buffer_get_bounds (buffer, &start, &end);
@@ -955,7 +955,7 @@ log_monitor_changed_cb (LogviewLog *log,
 }
 
 static void
-paint_timestamps (GtkTextBuffer *buffer, int old_line_count,
+paint_timestamps (CtkTextBuffer *buffer, int old_line_count,
                   GSList *days)
 {
   GSList *l;
@@ -978,11 +978,11 @@ read_new_lines_cb (LogviewLog *log,
                    gpointer user_data)
 {
   LogviewWindow *window = user_data;
-  GtkTextBuffer *buffer;
+  CtkTextBuffer *buffer;
   gboolean boldify = FALSE;
   int i, old_line_count, filter_start_line;
-  GtkTextIter iter, start;
-  GtkTextMark *mark;
+  CtkTextIter iter, start;
+  CtkTextMark *mark;
   char *converted, *primary;
   gsize len;
 
@@ -1061,7 +1061,7 @@ active_log_changed_cb (LogviewManager *manager,
 {
   LogviewWindow *window = data;
   const char **lines;
-  GtkTextBuffer *buffer;
+  CtkTextBuffer *buffer;
 
   findbar_close_cb (LOGVIEW_FINDBAR (window->priv->find_bar),
                     window);
@@ -1078,7 +1078,7 @@ active_log_changed_cb (LogviewManager *manager,
 
   if (lines != NULL) {
     int i;
-    GtkTextIter iter;
+    CtkTextIter iter;
 
     /* update the text view to show the current lines */
     ctk_text_buffer_get_end_iter (buffer, &iter);
@@ -1142,13 +1142,13 @@ static const struct {
 };
 
 static gboolean
-key_press_event_cb (GtkWidget *widget,
+key_press_event_cb (CtkWidget *widget,
                     GdkEventKey *event,
                     gpointer user_data)
 {
   LogviewWindow *window = user_data;
   guint modifier = event->state & ctk_accelerator_get_default_mod_mask ();
-  GtkAction *action;
+  CtkAction *action;
   int i;
 
   /* handle accelerators that we want bound, but aren't associated with
@@ -1171,13 +1171,13 @@ key_press_event_cb (GtkWidget *widget,
 
 static void
 message_area_create_error_box (LogviewWindow *window,
-                               GtkWidget *message_area)
+                               CtkWidget *message_area)
 {
-  GtkWidget *hbox_content;
-  GtkWidget *image;
-  GtkWidget *vbox;
-  GtkWidget *primary_label;
-  GtkWidget *secondary_label;
+  CtkWidget *hbox_content;
+  CtkWidget *image;
+  CtkWidget *vbox;
+  CtkWidget *primary_label;
+  CtkWidget *secondary_label;
 
   hbox_content = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 8);
   ctk_widget_show (hbox_content);
@@ -1244,7 +1244,7 @@ message_area_set_labels (LogviewWindow *window,
 }
 
 static void
-message_area_response_cb (GtkInfoBar *message_area,
+message_area_response_cb (CtkInfoBar *message_area,
                           int response_id, gpointer user_data)
 {
   ctk_widget_hide (CTK_WIDGET (message_area));
@@ -1271,10 +1271,10 @@ logview_window_finalize (GObject *object)
 static void
 logview_window_init (LogviewWindow *logview)
 {
-  GtkActionGroup *action_group;
-  GtkAccelGroup *accel_group;
+  CtkActionGroup *action_group;
+  CtkAccelGroup *accel_group;
   GError *error = NULL;
-  GtkWidget *hpaned, *main_view, *vbox, *w;
+  CtkWidget *hpaned, *main_view, *vbox, *w;
   PangoContext *context;
   PangoFontDescription *fontdesc;
   gchar *monospace_font_name;
@@ -1282,7 +1282,7 @@ logview_window_init (LogviewWindow *logview)
   int width, height;
   gboolean res;
 
-  GtkStyleContext *s_context;
+  CtkStyleContext *s_context;
 
   s_context = ctk_widget_get_style_context (CTK_WIDGET (logview));
   ctk_style_context_add_class (s_context, "logview-window");
@@ -1474,7 +1474,7 @@ logview_window_class_init (LogviewWindowClass *klass)
 
 /* public methods */
 
-GtkWidget *
+CtkWidget *
 logview_window_new ()
 {
   LogviewWindow *logview;

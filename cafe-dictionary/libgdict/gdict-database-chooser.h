@@ -44,7 +44,7 @@ typedef struct _GdictDatabaseChooserClass	GdictDatabaseChooserClass;
 struct _GdictDatabaseChooser
 {
   /*< private >*/
-  GtkBox parent_instance;
+  CtkBox parent_instance;
 
   GdictDatabaseChooserPrivate *priv;
 };
@@ -52,7 +52,7 @@ struct _GdictDatabaseChooser
 struct _GdictDatabaseChooserClass
 {
   /*< private >*/
-  GtkBoxClass parent_class;
+  CtkBoxClass parent_class;
 
   /*< public >*/
   void (*database_activated) (GdictDatabaseChooser *chooser,
@@ -71,8 +71,8 @@ struct _GdictDatabaseChooserClass
 
 GType         gdict_database_chooser_get_type             (void) G_GNUC_CONST;
 
-GtkWidget *   gdict_database_chooser_new                  (void);
-GtkWidget *   gdict_database_chooser_new_with_context     (GdictContext         *context);
+CtkWidget *   gdict_database_chooser_new                  (void);
+CtkWidget *   gdict_database_chooser_new_with_context     (GdictContext         *context);
 
 GdictContext *gdict_database_chooser_get_context          (GdictDatabaseChooser *chooser);
 void          gdict_database_chooser_set_context          (GdictDatabaseChooser *chooser,
@@ -91,7 +91,7 @@ gboolean      gdict_database_chooser_has_database         (GdictDatabaseChooser 
 						           const gchar          *database);
 void          gdict_database_chooser_refresh              (GdictDatabaseChooser *chooser);
 void          gdict_database_chooser_clear                (GdictDatabaseChooser *chooser);
-GtkWidget *   gdict_database_chooser_add_button           (GdictDatabaseChooser *chooser,
+CtkWidget *   gdict_database_chooser_add_button           (GdictDatabaseChooser *chooser,
                                                            const gchar          *button_text);
 
 G_END_DECLS

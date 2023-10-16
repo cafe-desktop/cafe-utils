@@ -47,8 +47,8 @@
 #define SUS_EXTENDED_STRFTIME_MODIFIERS "EO"
 #define BINARY_EXEC_MIME_TYPE      "application/x-executable"
 
-GtkTreeViewColumn *
-gsearchtool_ctk_tree_view_get_column_with_sort_column_id (GtkTreeView * treeview,
+CtkTreeViewColumn *
+gsearchtool_ctk_tree_view_get_column_with_sort_column_id (CtkTreeView * treeview,
                                                           gint id);
 
 /* START OF GENERIC CAFE-SEARCH-TOOL FUNCTIONS */
@@ -878,10 +878,10 @@ gsearchtool_get_thumbnail_image (const gchar * thumbnail)
 static GdkPixbuf *
 get_themed_icon_pixbuf (GThemedIcon * icon,
                         int size,
-                        GtkIconTheme * icon_theme)
+                        CtkIconTheme * icon_theme)
 {
 	char ** icon_names;
-	GtkIconInfo * icon_info;
+	CtkIconInfo * icon_info;
 	GdkPixbuf * pixbuf;
 	GError * error = NULL;
 
@@ -942,7 +942,7 @@ get_file_pixbuf (GSearchWindow * gsearch,
 }
 
 gboolean
-open_file_with_filemanager (GtkWidget * window,
+open_file_with_filemanager (CtkWidget * window,
                             const gchar * file)
 {
 	GDesktopAppInfo * d_app_info;
@@ -1014,7 +1014,7 @@ open_file_with_filemanager (GtkWidget * window,
 }
 
 gboolean
-open_file_with_application (GtkWidget * window,
+open_file_with_application (CtkWidget * window,
                             const gchar * file,
                             GAppInfo * app)
 {
@@ -1116,14 +1116,14 @@ gsearchtool_get_unique_filename (const gchar * path,
 	return retval;
 }
 
-GtkWidget *
+CtkWidget *
 gsearchtool_button_new_with_icon (const gchar * string,
                                   const gchar * icon_name)
 {
-	GtkWidget * button;
-	GtkWidget * hbox;
-	GtkWidget * image;
-	GtkWidget * label;
+	CtkWidget * button;
+	CtkWidget * hbox;
+	CtkWidget * image;
+	CtkWidget * label;
 
 	button = ctk_button_new ();
 	label = ctk_label_new_with_mnemonic (string);
@@ -1139,7 +1139,7 @@ gsearchtool_button_new_with_icon (const gchar * string,
 }
 
 GSList *
-gsearchtool_get_columns_order (GtkTreeView * treeview)
+gsearchtool_get_columns_order (CtkTreeView * treeview)
 {
 	GSList *order = NULL;
 	GList * columns;
@@ -1159,11 +1159,11 @@ gsearchtool_get_columns_order (GtkTreeView * treeview)
 	return order;
 }
 
-GtkTreeViewColumn *
-gsearchtool_ctk_tree_view_get_column_with_sort_column_id (GtkTreeView * treeview,
+CtkTreeViewColumn *
+gsearchtool_ctk_tree_view_get_column_with_sort_column_id (CtkTreeView * treeview,
                                                           gint id)
 {
-	GtkTreeViewColumn * col = NULL;
+	CtkTreeViewColumn * col = NULL;
 	GList * columns;
 	GList * it;
 
@@ -1180,9 +1180,9 @@ gsearchtool_ctk_tree_view_get_column_with_sort_column_id (GtkTreeView * treeview
 }
 
 void
-gsearchtool_set_columns_order (GtkTreeView * treeview)
+gsearchtool_set_columns_order (CtkTreeView * treeview)
 {
-	GtkTreeViewColumn * last = NULL;
+	CtkTreeViewColumn * last = NULL;
 	GSettings * settings;
 	GVariant * value;
 
@@ -1197,7 +1197,7 @@ gsearchtool_set_columns_order (GtkTreeView * treeview)
 		g_variant_get (value, "ai", &iter);
 
 		while ((item = g_variant_iter_next_value (iter))) {
-			GtkTreeViewColumn * cur;
+			CtkTreeViewColumn * cur;
 			gint id;
 
 			g_variant_get (item, "i", &id);

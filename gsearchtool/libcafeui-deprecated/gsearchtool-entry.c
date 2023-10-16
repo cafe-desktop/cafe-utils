@@ -51,7 +51,7 @@ struct _GsearchHistoryEntryPrivate
 	gchar              *history_id;
 	guint               history_length;
 
-	GtkEntryCompletion *completion;
+	CtkEntryCompletion *completion;
 
 	GSettings          *settings;
 };
@@ -108,7 +108,7 @@ gsearch_history_entry_get_property (GObject    *object,
 }
 
 static void
-gsearch_history_entry_destroy (GtkWidget *object)
+gsearch_history_entry_destroy (CtkWidget *object)
 {
 	gsearch_history_entry_set_enable_completion (GSEARCH_HISTORY_ENTRY (object),
 						   FALSE);
@@ -138,7 +138,7 @@ static void
 gsearch_history_entry_class_init (GsearchHistoryEntryClass *klass)
 {
 	GObjectClass   *object_class = G_OBJECT_CLASS (klass);
-	GtkWidgetClass *ctkwidget_class = CTK_WIDGET_CLASS (klass);
+	CtkWidgetClass *ctkwidget_class = CTK_WIDGET_CLASS (klass);
 
 	object_class->set_property = gsearch_history_entry_set_property;
 	object_class->get_property = gsearch_history_entry_get_property;
@@ -168,15 +168,15 @@ gsearch_history_entry_class_init (GsearchHistoryEntryClass *klass)
 	/* TODO: Add enable-completion property */
 }
 
-static GtkListStore *
+static CtkListStore *
 get_history_store (GsearchHistoryEntry *entry)
 {
-	GtkTreeModel *store;
+	CtkTreeModel *store;
 
 	store = ctk_combo_box_get_model (CTK_COMBO_BOX (entry));
 	g_return_val_if_fail (CTK_IS_LIST_STORE (store), NULL);
 
-	return (GtkListStore *) store;
+	return (CtkListStore *) store;
 }
 
 static char *
@@ -188,8 +188,8 @@ get_history_key (GsearchHistoryEntry *entry)
 static GSList *
 get_history_list (GsearchHistoryEntry *entry)
 {
-	GtkListStore *store;
-	GtkTreeIter iter;
+	CtkListStore *store;
+	CtkTreeIter iter;
 	gboolean valid;
 	GSList *list = NULL;
 
@@ -268,10 +268,10 @@ gsearch_history_entry_save_history (GsearchHistoryEntry *entry)
 }
 
 static gboolean
-remove_item (GtkListStore *store,
+remove_item (CtkListStore *store,
 	     const gchar  *text)
 {
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 
 	g_return_val_if_fail (text != NULL, FALSE);
 
@@ -304,11 +304,11 @@ remove_item (GtkListStore *store,
 }
 
 static void
-clamp_list_store (GtkListStore *store,
+clamp_list_store (CtkListStore *store,
 		  guint         max)
 {
-	GtkTreePath *path;
-	GtkTreeIter iter;
+	CtkTreePath *path;
+	CtkTreeIter iter;
 
 	/* -1 because TreePath counts from 0 */
 	path = ctk_tree_path_new_from_indices (max - 1, -1);
@@ -330,8 +330,8 @@ insert_history_item (GsearchHistoryEntry *entry,
 		     const gchar       *text,
 		     gboolean           prepend)
 {
-	GtkListStore *store;
-	GtkTreeIter iter;
+	CtkListStore *store;
+	CtkTreeIter iter;
 
 	if (g_utf8_strlen (text, -1) <= MIN_ITEM_LEN)
 		return;
@@ -384,8 +384,8 @@ gsearch_history_entry_append_text (GsearchHistoryEntry *entry,
 static void
 gsearch_history_entry_load_history (GsearchHistoryEntry *entry)
 {
-	GtkListStore *store;
-	GtkTreeIter iter;
+	CtkListStore *store;
+	CtkTreeIter iter;
 	GVariant *history;
 	gchar *key;
 	gint i;
@@ -440,7 +440,7 @@ gsearch_history_entry_load_history (GsearchHistoryEntry *entry)
 void
 gsearch_history_entry_clear (GsearchHistoryEntry *entry)
 {
-	GtkListStore *store;
+	CtkListStore *store;
 
 	g_return_if_fail (GSEARCH_IS_HISTORY_ENTRY (entry));
 
@@ -544,12 +544,12 @@ gsearch_history_entry_get_enable_completion (GsearchHistoryEntry *entry)
 	return entry->priv->completion != NULL;
 }
 
-GtkWidget *
+CtkWidget *
 gsearch_history_entry_new (const gchar *history_id,
 			   gboolean     enable_completion)
 {
-	GtkWidget *ret;
-	GtkListStore *store;
+	CtkWidget *ret;
+	CtkListStore *store;
 
 	g_return_val_if_fail(history_id != NULL, NULL);
 
@@ -572,7 +572,7 @@ gsearch_history_entry_new (const gchar *history_id,
 
 	/* loading has to happen after the model
 	 * has been set. However the model is not a
-	 * G_PARAM_CONSTRUCT property of GtkComboBox
+	 * G_PARAM_CONSTRUCT property of CtkComboBox
 	 * so we cannot do this in the constructor.
 	 * For now we simply do here since this widget is
 	 * not bound to other programming languages.
@@ -593,11 +593,11 @@ gsearch_history_entry_new (const gchar *history_id,
  * Utility function to get the editable text entry internal widget.
  * I would prefer to not expose this implementation detail and
  * simply make the GsearchHistoryEntry widget implement the
- * GtkEditable interface. Unfortunately both GtkEditable and
- * GtkComboBox have a "changed" signal and I am not sure how to
+ * CtkEditable interface. Unfortunately both CtkEditable and
+ * CtkComboBox have a "changed" signal and I am not sure how to
  * handle the conflict.
  */
-GtkWidget *
+CtkWidget *
 gsearch_history_entry_get_entry (GsearchHistoryEntry *entry)
 {
 	g_return_val_if_fail (GSEARCH_IS_HISTORY_ENTRY (entry), NULL);
@@ -606,10 +606,10 @@ gsearch_history_entry_get_entry (GsearchHistoryEntry *entry)
 }
 
 static void
-escape_cell_data_func (GtkTreeViewColumn             *col,
-		       GtkCellRenderer               *renderer,
-		       GtkTreeModel                  *model,
-		       GtkTreeIter                   *iter,
+escape_cell_data_func (CtkTreeViewColumn             *col,
+		       CtkCellRenderer               *renderer,
+		       CtkTreeModel                  *model,
+		       CtkTreeIter                   *iter,
 		       GsearchHistoryEntryEscapeFunc  escape_func)
 {
 	gchar *str;
@@ -639,7 +639,7 @@ gsearch_history_entry_set_escape_func (GsearchHistoryEntry           *entry,
 	if (escape_func != NULL)
 		ctk_cell_layout_set_cell_data_func (CTK_CELL_LAYOUT (entry),
 						    CTK_CELL_RENDERER (cells->data),
-						    (GtkCellLayoutDataFunc) escape_cell_data_func,
+						    (CtkCellLayoutDataFunc) escape_cell_data_func,
 						    escape_func,
 						    NULL);
 	else

@@ -26,34 +26,34 @@
 #include <ctk/ctk.h>
 #include "baobab-chart.h"
 
-void on_quit_activate (GtkMenuItem *menuitem, gpointer user_data);
-void on_about_activate (GtkMenuItem *menuitem, gpointer user_data);
-void on_menuscanhome_activate (GtkMenuItem *menuitem, gpointer user_data);
-void on_menuallfs_activate (GtkMenuItem *menuitem, gpointer user_data);
-void on_menuscandir_activate (GtkMenuItem *menuitem, gpointer user_data);
-void on_menu_stop_activate (GtkMenuItem *menuitem, gpointer user_data);
-void on_menu_rescan_activate (GtkMenuItem *menuitem, gpointer user_data);
-void on_tbscandir_clicked (GtkToolButton *toolbutton, gpointer user_data);
-void on_tbscanhome_clicked (GtkToolButton *toolbutton, gpointer user_data);
-void on_tbscanall_clicked (GtkToolButton *toolbutton, gpointer user_data);
-void on_tbstop_clicked (GtkToolButton *toolbutton, gpointer user_data);
-void on_tbrescan_clicked (GtkToolButton *toolbutton, gpointer user_data);
-void on_radio_allfs_clicked (GtkButton *button, gpointer user_data);
-void on_radio_dir_clicked (GtkButton *button, gpointer user_data);
-gboolean on_delete_activate (GtkWidget *widget, GdkEvent *event, gpointer user_data);
-void open_file_cb (GtkMenuItem *pmenu, gpointer dummy);
-void scan_folder_cb (GtkMenuItem *pmenu, gpointer dummy);
-void trash_dir_cb (GtkMenuItem *pmenu, gpointer dummy);
-void list_all_cb (GtkMenuItem *pmenu, gpointer dummy);
-void on_pref_menu (GtkAction *a, gpointer user_data);
-void on_tb_scan_remote_clicked (GtkToolButton *toolbutton, gpointer user_data);
-void on_menu_scan_rem_activate (GtkMenuItem *menuitem, gpointer user_data);
-void on_ck_allocated_activate (GtkToggleAction *action, gpointer user_data);
-void on_helpcontents_activate (GtkAction *a, gpointer user_data);
-void on_tv_selection_changed (GtkTreeSelection *selection, gpointer user_data);
-void on_move_upwards_cb (GtkCheckMenuItem *checkmenuitem, gpointer user_data);
-void on_zoom_in_cb (GtkCheckMenuItem *checkmenuitem, gpointer user_data);
-void on_zoom_out_cb (GtkCheckMenuItem *checkmenuitem, gpointer user_data);
-void on_chart_snapshot_cb (GtkCheckMenuItem *checkmenuitem, gpointer user_data);
+void on_quit_activate (CtkMenuItem *menuitem, gpointer user_data);
+void on_about_activate (CtkMenuItem *menuitem, gpointer user_data);
+void on_menuscanhome_activate (CtkMenuItem *menuitem, gpointer user_data);
+void on_menuallfs_activate (CtkMenuItem *menuitem, gpointer user_data);
+void on_menuscandir_activate (CtkMenuItem *menuitem, gpointer user_data);
+void on_menu_stop_activate (CtkMenuItem *menuitem, gpointer user_data);
+void on_menu_rescan_activate (CtkMenuItem *menuitem, gpointer user_data);
+void on_tbscandir_clicked (CtkToolButton *toolbutton, gpointer user_data);
+void on_tbscanhome_clicked (CtkToolButton *toolbutton, gpointer user_data);
+void on_tbscanall_clicked (CtkToolButton *toolbutton, gpointer user_data);
+void on_tbstop_clicked (CtkToolButton *toolbutton, gpointer user_data);
+void on_tbrescan_clicked (CtkToolButton *toolbutton, gpointer user_data);
+void on_radio_allfs_clicked (CtkButton *button, gpointer user_data);
+void on_radio_dir_clicked (CtkButton *button, gpointer user_data);
+gboolean on_delete_activate (CtkWidget *widget, GdkEvent *event, gpointer user_data);
+void open_file_cb (CtkMenuItem *pmenu, gpointer dummy);
+void scan_folder_cb (CtkMenuItem *pmenu, gpointer dummy);
+void trash_dir_cb (CtkMenuItem *pmenu, gpointer dummy);
+void list_all_cb (CtkMenuItem *pmenu, gpointer dummy);
+void on_pref_menu (CtkAction *a, gpointer user_data);
+void on_tb_scan_remote_clicked (CtkToolButton *toolbutton, gpointer user_data);
+void on_menu_scan_rem_activate (CtkMenuItem *menuitem, gpointer user_data);
+void on_ck_allocated_activate (CtkToggleAction *action, gpointer user_data);
+void on_helpcontents_activate (CtkAction *a, gpointer user_data);
+void on_tv_selection_changed (CtkTreeSelection *selection, gpointer user_data);
+void on_move_upwards_cb (CtkCheckMenuItem *checkmenuitem, gpointer user_data);
+void on_zoom_in_cb (CtkCheckMenuItem *checkmenuitem, gpointer user_data);
+void on_zoom_out_cb (CtkCheckMenuItem *checkmenuitem, gpointer user_data);
+void on_chart_snapshot_cb (CtkCheckMenuItem *checkmenuitem, gpointer user_data);
 
 #endif /* __BAOBAB_CALLBACKS_H__ */

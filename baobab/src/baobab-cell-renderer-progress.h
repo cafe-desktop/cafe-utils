@@ -38,7 +38,7 @@ typedef struct _BaobabCellRendererProgressPrivate  BaobabCellRendererProgressPri
 
 struct _BaobabCellRendererProgress
 {
-  GtkCellRenderer parent_instance;
+  CtkCellRenderer parent_instance;
 
   /*< private >*/
   BaobabCellRendererProgressPrivate *priv;
@@ -46,11 +46,11 @@ struct _BaobabCellRendererProgress
 
 struct _BaobabCellRendererProgressClass
 {
-  GtkCellRendererClass parent_class;
+  CtkCellRendererClass parent_class;
 };
 
 GType		 baobab_cell_renderer_progress_get_type (void) G_GNUC_CONST;
-GtkCellRenderer* baobab_cell_renderer_progress_new      (void);
+CtkCellRenderer* baobab_cell_renderer_progress_new      (void);
 
 G_END_DECLS
 
