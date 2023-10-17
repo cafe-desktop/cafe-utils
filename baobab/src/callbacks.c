@@ -65,6 +65,7 @@ void
 on_about_activate (CtkMenuItem *menuitem, gpointer user_data)
 {
 	const gchar * const authors[] = {
+		"Pablo Barciela <scow@riseup.net>",
 		"Fabio Marzocca <thesaltydog@gmail.com>",
 		"Paolo Borelli <pborelli@katamail.com>",
 		"Benoît Dejean <benoit@placenet.org>",
@@ -109,7 +110,8 @@ on_about_activate (CtkMenuItem *menuitem, gpointer user_data)
 		"title", _("About Disk Usage Analyzer"),
 		"comments", _("A graphical tool to analyze disk usage."),
 		"copyright", _("Copyright \xc2\xa9 2005-2010 Fabio Marzocca\n"
-		               "Copyright \xc2\xa9 2011-2020 CAFE developers"),
+		               "Copyright \xc2\xa9 2011-2020 MATE developers\n"
+		               "Copyright \xc2\xa9 2023 Pablo Barciela"),
 		"logo-icon-name", "cafe-disk-usage-analyzer",
 		"license", license_trans,
 		"authors", authors,
