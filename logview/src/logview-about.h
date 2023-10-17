@@ -23,6 +23,7 @@
 #define __LOGVIEW_ABOUT_H__
 
 static const char *logview_about_authors[] = {
+  "Pablo Barciela <scow@riseup.net>",
   "Cesar Miquel <miquel@df.uba.ar>",
   "Glynn Foster <glynn.foster@sun.com>",
   "Fernando Herrera  <fherrera@onirica.com>",
