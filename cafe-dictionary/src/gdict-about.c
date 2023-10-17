@@ -37,6 +37,7 @@ void
 gdict_show_about_dialog (CtkWidget *parent)
 {
   const gchar *authors[] = {
+    "Pablo Barciela <scow@riseup.net>",
     "Mike Hughes <mfh@psilord.com>",
     "Spiros Papadimitriou <spapadim+@cs.cmu.edu>",
     "Bradford Hovinen <hovinen@udel.edu>",
@@ -88,7 +89,8 @@ gdict_show_about_dialog (CtkWidget *parent)
   			 "version", VERSION,
 			 "title", _("About Dictionary"),
 			 "copyright", _("Copyright \xc2\xa9 2005-2006 Emmanuele Bassi\n"
-			                "Copyright \xc2\xa9 2011-2020 CAFE developers"),
+			                "Copyright \xc2\xa9 2011-2020 MATE developers\n"
+			                "Copyright \xc2\xa9 2023 Pablo Barciela"),
   			 "comments", comments,
   			 "authors", authors,
   			 "documenters", documenters,
