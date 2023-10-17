@@ -769,7 +769,8 @@ logview_about (CtkWidget *widget, CtkWidget *window)
                          "version", VERSION,
                          "title", _("About System Log Viewer"),
                          "copyright", _("Copyright \xc2\xa9 1998-2008 Free Software Foundation, Inc.\n"
-                                        "Copyright \xc2\xa9 2011-2020 CAFE developers"),
+                                        "Copyright \xc2\xa9 2011-2020 MATE developers\n"
+                                        "Copyright \xc2\xa9 2023 Pablo Barciela"),
                          "license", license_trans,
                          "wrap-license", TRUE,
                          "comments", _("A system log viewer for CAFE."),
