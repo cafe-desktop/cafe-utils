@@ -77,8 +77,6 @@ requires:
 
 before_scripts:
   - ./html-cppcheck
-  # disable pt language for help in search tool
-  - sed -i s/"IGNORE_HELP_LINGUAS ="/"IGNORE_HELP_LINGUAS = pt"/g gsearchtool/help/Makefile.am
   - ./debrepo-install 'libctk-3-dev gir1.2-ctk-3.0 libctk-3-common libctk-3-0 libctk-3-doc'
   - ./install-from-git https://github.com/cafe-desktop/libvnck master meson
   - ./install-from-git https://github.com/cafe-desktop/cafe-common master
