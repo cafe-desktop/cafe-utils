@@ -202,6 +202,7 @@ msgstr ""
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:73
+#, fuzzy
 msgid ""
 "<firstname>Dennis</firstname> <surname>Cranston</surname> <affiliation> "
 "<orgname>Search for Files Maintainer</orgname> <_:address-1/> </affiliation>"
