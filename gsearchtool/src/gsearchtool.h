@@ -54,7 +54,7 @@ extern "C" {
 #define DEFAULT_WINDOW_HEIGHT  350
 #define WINDOW_HEIGHT_STEP      35
 #define NUM_VISIBLE_COLUMNS      5
-#define CAJA_PREFERENCES_SCHEMA "org.cafe.caja.preferences"
+#define BAUL_PREFERENCES_SCHEMA "org.cafe.caja.preferences"
 
 typedef enum {
 	STOPPED,
@@ -71,9 +71,9 @@ typedef enum {
 } CajaSpeedTradeoff;
 
 typedef enum {
-	CAJA_DATE_FORMAT_LOCALE = 0,
-	CAJA_DATE_FORMAT_ISO,
-	CAJA_DATE_FORMAT_INFORMAL
+	BAUL_DATE_FORMAT_LOCALE = 0,
+	BAUL_DATE_FORMAT_ISO,
+	BAUL_DATE_FORMAT_INFORMAL
 } CajaDateFormat;
 
 typedef enum {

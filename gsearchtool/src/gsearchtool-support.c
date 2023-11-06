@@ -421,9 +421,9 @@ get_readable_date (const CajaDateFormat date_format_enum,
 	file_time = localtime (&file_time_raw);
 
 	/* Base format of date column on caja date-format key */
-	if (date_format_enum == CAJA_DATE_FORMAT_LOCALE) {
+	if (date_format_enum == BAUL_DATE_FORMAT_LOCALE) {
 		return gsearchtool_strdup_strftime ("%c", file_time);
-	} else if (date_format_enum == CAJA_DATE_FORMAT_ISO) {
+	} else if (date_format_enum == BAUL_DATE_FORMAT_ISO) {
 		return gsearchtool_strdup_strftime ("%Y-%m-%d %H:%M:%S", file_time);
 	}
 
@@ -1249,7 +1249,7 @@ gsearchtool_get_stored_window_geometry (gint * width,
 	g_object_unref (settings);
 }
 
-/* START OF CAJA/EEL FUNCTIONS: USED FOR HANDLING OF DUPLICATE FILENAMES */
+/* START OF BAUL/EEL FUNCTIONS: USED FOR HANDLING OF DUPLICATE FILENAMES */
 
 /* Localizers:
  * Feel free to leave out the st, nd, rd and th suffix or

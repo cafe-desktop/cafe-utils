@@ -55,7 +55,7 @@
 #define LAST_SAVE_DIRECTORY_KEY "last-save-directory"
 #define BORDER_EFFECT_KEY       "border-effect"
 #define DELAY_KEY               "delay"
-#define CAJA_PREFERENCES_SCHEMA "org.cafe.caja.preferences"
+#define BAUL_PREFERENCES_SCHEMA "org.cafe.caja.preferences"
 
 enum
 {
@@ -1122,13 +1122,13 @@ get_desktop_dir (void)
 
   /* Check if caja schema is installed before trying to read settings */
   GSettingsSchema *schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default (),
-                                                             CAJA_PREFERENCES_SCHEMA,
+                                                             BAUL_PREFERENCES_SCHEMA,
                                                              FALSE);
 
   if (schema != NULL) {
     GSettings *caja_prefs;
 
-    caja_prefs = g_settings_new (CAJA_PREFERENCES_SCHEMA);
+    caja_prefs = g_settings_new (BAUL_PREFERENCES_SCHEMA);
     desktop_is_home_dir = g_settings_get_boolean (caja_prefs, "desktop-is-home-dir");
 
     g_object_unref (caja_prefs);

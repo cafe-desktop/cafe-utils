@@ -1391,7 +1391,7 @@ msgstr ""
 msgid "link to %s"
 msgstr ""
 
-#. START OF CAJA/EEL FUNCTIONS: USED FOR HANDLING OF DUPLICATE FILENAMES
+#. START OF BAUL/EEL FUNCTIONS: USED FOR HANDLING OF DUPLICATE FILENAMES
 #. Localizers:
 #. * Feel free to leave out the st, nd, rd and th suffix or
 #. * make some or all of them match.

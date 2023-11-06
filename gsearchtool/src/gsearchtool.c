@@ -1912,7 +1912,7 @@ spawn_search_command (GSearchWindow * gsearch,
 		if (gsearch->caja_schema_exists) {
 			gsearch->search_results_date_format = g_settings_get_enum (gsearch->caja_settings, "date-format");
 		} else {
-			gsearch->search_results_date_format = CAJA_DATE_FORMAT_LOCALE;
+			gsearch->search_results_date_format = BAUL_DATE_FORMAT_LOCALE;
 		}
 
 		ctk_tree_view_scroll_to_point (CTK_TREE_VIEW (gsearch->search_results_tree_view), 0, 0);
@@ -2751,7 +2751,7 @@ gsearch_app_create (GSearchWindow * gsearch)
 	/* Check if caja schema is installed before trying to read caja settings */
 	gsearch->caja_schema_exists = FALSE;
 	GSettingsSchema *schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default (),
-								   CAJA_PREFERENCES_SCHEMA,
+								   BAUL_PREFERENCES_SCHEMA,
 								   FALSE);
 
 	if (schema != NULL) {
@@ -2760,7 +2760,7 @@ gsearch_app_create (GSearchWindow * gsearch)
 	}
 
 	if (gsearch->caja_schema_exists) {
-		gsearch->caja_settings = g_settings_new (CAJA_PREFERENCES_SCHEMA);
+		gsearch->caja_settings = g_settings_new (BAUL_PREFERENCES_SCHEMA);
 	} else {
 		gsearch->caja_settings = NULL;
 	}
