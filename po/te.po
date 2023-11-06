@@ -1354,7 +1354,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "\"%s\" సంచయమును తెరుచుటకు వీలుకాదు."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "నాటిలస్ దస్త్ర అభికర్త నడుచుటలేదు."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

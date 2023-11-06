@@ -1339,7 +1339,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "Не можам да ја отворам папката \"%s\"."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "Caja датотечен управувач не е активен."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

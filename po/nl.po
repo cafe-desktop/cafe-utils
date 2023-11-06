@@ -1396,7 +1396,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "Kon map ‘%s’ niet openen."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "Caja-bestandsbeheer is niet actief."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

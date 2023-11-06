@@ -1356,7 +1356,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "Ne mogu da otvorim fasciklu „%s“"
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "Upravljač datoteka Caja nije pokrenut."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

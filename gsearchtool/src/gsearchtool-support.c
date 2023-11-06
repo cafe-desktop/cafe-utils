@@ -420,7 +420,7 @@ get_readable_date (const CajaDateFormat date_format_enum,
 
 	file_time = localtime (&file_time_raw);
 
-	/* Base format of date column on caja date-format key */
+	/* Base format of date column on baul date-format key */
 	if (date_format_enum == BAUL_DATE_FORMAT_LOCALE) {
 		return gsearchtool_strdup_strftime ("%c", file_time);
 	} else if (date_format_enum == BAUL_DATE_FORMAT_ISO) {
@@ -964,8 +964,8 @@ open_file_with_filemanager (CtkWidget * window,
 	g_file = g_file_new_for_path (file);
 	g_app_info = g_file_query_default_handler (g_file, NULL, NULL);
 
-	if (strcmp (g_app_info_get_executable (g_app_info), "caja") == 0) {
-		command = g_strconcat ("caja ",
+	if (strcmp (g_app_info_get_executable (g_app_info), "baul") == 0) {
+		command = g_strconcat ("baul ",
 		                       "--sm-disable ",
 		                       "--no-desktop ",
 		                       "--no-default-window ",

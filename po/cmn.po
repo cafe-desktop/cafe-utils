@@ -1284,8 +1284,8 @@ msgid "Could not open folder \"%s\"."
 msgstr "無法開啟“%s”資料夾"
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
-msgstr "caja 檔案總管並未執行。"
+msgid "The baul file manager is not running."
+msgstr "baul 檔案總管並未執行。"
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

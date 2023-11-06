@@ -1305,8 +1305,8 @@ msgid "Could not open folder \"%s\"."
 msgstr "ፎልደሩን መክፈት አልተቻለም \"%s\"."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
-msgstr "የ caja fፋይል አስተዳዳሪ እየሄደ አይደለም "
+msgid "The baul file manager is not running."
+msgstr "የ baul fፋይል አስተዳዳሪ እየሄደ አይደለም "
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

@@ -1363,8 +1363,8 @@ msgid "Could not open folder \"%s\"."
 msgstr "Incapaz de abrir a pasta \"%s\"."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
-msgstr "O gestor de ficheiros caja não está a funcionar."
+msgid "The baul file manager is not running."
+msgstr "O gestor de ficheiros baul não está a funcionar."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

@@ -1387,7 +1387,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "Der Ordner »%s« konnte nicht geöffnet werden"
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "Die Dateiverwaltung-Caja läuft nicht."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

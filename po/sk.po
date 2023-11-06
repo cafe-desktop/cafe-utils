@@ -1372,8 +1372,8 @@ msgid "Could not open folder \"%s\"."
 msgstr "Nepodarilo sa otvoriť priečinok „%s“."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
-msgstr "Správca súborov caja nie je spustený."
+msgid "The baul file manager is not running."
+msgstr "Správca súborov baul nie je spustený."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

@@ -1383,7 +1383,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "Nelze otevřít složku „%s“."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "Správce souborů Caja neběží."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

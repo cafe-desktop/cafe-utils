@@ -661,9 +661,9 @@ build_search_command (GSearchWindow * gsearch,
 			disable_quick_search = g_settings_get_boolean (gsearch->cafe_search_tool_settings, "disable-quick-search");
 			gsearch->command_details->is_command_second_pass_enabled = !g_settings_get_boolean (gsearch->cafe_search_tool_settings, "disable-quick-search-second-scan");
 
-			/* Use caja settings for thumbnails if caja is installed, else fall back to the caja default */
-			if (gsearch->caja_schema_exists) {
-				show_thumbnails_enum = g_settings_get_enum (gsearch->caja_settings, "show-image-thumbnails");
+			/* Use baul settings for thumbnails if baul is installed, else fall back to the baul default */
+			if (gsearch->baul_schema_exists) {
+				show_thumbnails_enum = g_settings_get_enum (gsearch->baul_settings, "show-image-thumbnails");
 			} else {
 				show_thumbnails_enum = SPEED_TRADEOFF_LOCAL_ONLY;
 			}
@@ -673,8 +673,8 @@ build_search_command (GSearchWindow * gsearch,
 				GVariant * value;
 				guint64 size_limit = 10485760;
 
-				if (gsearch->caja_schema_exists) {
-					value = g_settings_get_value (gsearch->caja_settings, "thumbnail-limit");
+				if (gsearch->baul_schema_exists) {
+					value = g_settings_get_value (gsearch->baul_settings, "thumbnail-limit");
 					if (value) {
 						size_limit = g_variant_get_uint64 (value);
 						g_variant_unref (value);
@@ -1908,9 +1908,9 @@ spawn_search_command (GSearchWindow * gsearch,
 		gsearch->search_results_pixbuf_hash_table = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_object_unref);
 		gsearch->search_results_filename_hash_table = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
 
-		/* Get the value of the caja date-format key if available. */
-		if (gsearch->caja_schema_exists) {
-			gsearch->search_results_date_format = g_settings_get_enum (gsearch->caja_settings, "date-format");
+		/* Get the value of the baul date-format key if available. */
+		if (gsearch->baul_schema_exists) {
+			gsearch->search_results_date_format = g_settings_get_enum (gsearch->baul_settings, "date-format");
 		} else {
 			gsearch->search_results_date_format = BAUL_DATE_FORMAT_LOCALE;
 		}
@@ -2748,21 +2748,21 @@ gsearch_app_create (GSearchWindow * gsearch)
 	gsearch->cafe_search_tool_select_settings = g_settings_new ("org.cafe.search-tool.select");
 	gsearch->cafe_desktop_interface_settings = g_settings_new ("org.cafe.interface");
 
-	/* Check if caja schema is installed before trying to read caja settings */
-	gsearch->caja_schema_exists = FALSE;
+	/* Check if baul schema is installed before trying to read baul settings */
+	gsearch->baul_schema_exists = FALSE;
 	GSettingsSchema *schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default (),
 								   BAUL_PREFERENCES_SCHEMA,
 								   FALSE);
 
 	if (schema != NULL) {
-		gsearch->caja_schema_exists = TRUE;
+		gsearch->baul_schema_exists = TRUE;
 		g_settings_schema_unref (schema);
 	}
 
-	if (gsearch->caja_schema_exists) {
-		gsearch->caja_settings = g_settings_new (BAUL_PREFERENCES_SCHEMA);
+	if (gsearch->baul_schema_exists) {
+		gsearch->baul_settings = g_settings_new (BAUL_PREFERENCES_SCHEMA);
 	} else {
-		gsearch->caja_settings = NULL;
+		gsearch->baul_settings = NULL;
 	}
 
 	gsearch->window = ctk_window_new (CTK_WINDOW_TOPLEVEL);
@@ -3004,19 +3004,19 @@ gsearchtool_setup_gsettings_notifications (GSearchWindow * gsearch)
 {
 	gchar * click_to_activate_pref;
 
-	/* Use the default double click behavior if caja isn't installed */
-	if (gsearch->caja_schema_exists == FALSE) {
+	/* Use the default double click behavior if baul isn't installed */
+	if (gsearch->baul_schema_exists == FALSE) {
 		gsearch->is_search_results_single_click_to_activate = FALSE;
 		return;
 	}
 
-	g_signal_connect (gsearch->caja_settings,
+	g_signal_connect (gsearch->baul_settings,
 	                  "changed::click-policy",
 	                  G_CALLBACK (single_click_to_activate_key_changed_cb),
 	                  gsearch);
 
-	/* Get value of caja click behavior (single or double click to activate items) */
-	click_to_activate_pref = g_settings_get_string (gsearch->caja_settings, "click-policy");
+	/* Get value of baul click behavior (single or double click to activate items) */
+	click_to_activate_pref = g_settings_get_string (gsearch->baul_settings, "click-policy");
 
 	gsearch->is_search_results_single_click_to_activate =
 		(strncmp (click_to_activate_pref, "single", 6) == 0) ? TRUE : FALSE;

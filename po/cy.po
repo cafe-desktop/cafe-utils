@@ -1350,8 +1350,8 @@ msgid "Could not open folder \"%s\"."
 msgstr "Methwyd agor y blygell \"%s\"."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
-msgstr "Nid yw'r trefnydd ffeiliau caja yn rhedeg."
+msgid "The baul file manager is not running."
+msgstr "Nid yw'r trefnydd ffeiliau baul yn rhedeg."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

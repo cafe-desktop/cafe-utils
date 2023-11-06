@@ -1300,7 +1300,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "\"%s\" 폴더를 열 수 없습니다."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "노틸러스 파일 관리자가 실행 중이 아닙니다."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

@@ -1363,7 +1363,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "تعذّر فتح المجلّد \"%s\"."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "مدير الملفّات كاجا لا يعمل."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

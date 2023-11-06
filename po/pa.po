@@ -1342,7 +1342,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "ਫੋਲਡਰ \"%s\" ਨੂੰ ਖੋਲਿਆ ਨਹੀ ਜਾ ਸਕਿਆ ਹੈ।"
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "ਨਟੀਲਸ ਫਾਇਲ ਪਰਸ਼ਾਸਕ ਨੂੰ ਖੋਲਿਆ ਨਹੀ ਜਾ ਸਕਿਆ ਹੈ।"
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

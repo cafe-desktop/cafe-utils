@@ -2,7 +2,7 @@
 
 	baobab-remote-connect-dialog.c
 
-   Modified module from caja-connect-server-dialog.c
+   Modified module from baul-connect-server-dialog.c
    Released under same licence
  */
 /*
@@ -38,7 +38,7 @@
 
 
 /* Translators: all the strings in this file are meant to map the
-   similar strings inside caja-connect-server and should be
+   similar strings inside baul-connect-server and should be
    translated the same way
 */
 

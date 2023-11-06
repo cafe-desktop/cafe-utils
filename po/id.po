@@ -1359,8 +1359,8 @@ msgid "Could not open folder \"%s\"."
 msgstr "Folder \"%s\" tidak dapat dibuka."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
-msgstr "Pengatur berkas caja sedang tidak jalan."
+msgid "The baul file manager is not running."
+msgstr "Pengatur berkas baul sedang tidak jalan."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

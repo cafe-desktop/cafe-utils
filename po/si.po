@@ -1304,8 +1304,8 @@ msgid "Could not open folder \"%s\"."
 msgstr "\"%s\" බහාලුම විවෘත කල නොහැක."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
-msgstr "'caja' ගොනු කළමනාකරු ක්‍රියා නොකරයි."
+msgid "The baul file manager is not running."
+msgstr "'baul' ගොනු කළමනාකරු ක්‍රියා නොකරයි."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

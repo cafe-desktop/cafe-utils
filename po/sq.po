@@ -1342,7 +1342,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "E pamundur hapja e kartelës \"%s\"."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "Organizuesi i file Caja nuk është duke u ekzekutuar."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

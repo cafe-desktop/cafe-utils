@@ -1371,7 +1371,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "Nisam mogao otvoriti mapu \"%s\"."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "Caja upravitelj datotekama nije pokrenut"
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

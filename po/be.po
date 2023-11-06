@@ -1337,7 +1337,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "Немагчыма адкрыць каталог \"%s\"."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "Кіраўнік файлаў Caja незапушчаны."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

@@ -1389,7 +1389,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "No s'ha pogut obrir la carpeta «%s»."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "El gestor de fitxers Caja no s'està executant."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

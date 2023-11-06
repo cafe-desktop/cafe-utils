@@ -430,7 +430,7 @@ display_dialog_could_not_open_folder (CtkWidget * window,
 	                                 CTK_BUTTONS_OK,
 	                                 primary, NULL);
 	ctk_message_dialog_format_secondary_text (CTK_MESSAGE_DIALOG (dialog),
-	                                          _("The caja file manager is not running."));
+	                                          _("The baul file manager is not running."));
 
 	ctk_window_set_title (CTK_WINDOW (dialog), "");
 	ctk_container_set_border_width (CTK_CONTAINER (dialog), 5);

@@ -1357,8 +1357,8 @@ msgid "Could not open folder \"%s\"."
 msgstr "\"%s\" قىسقۇچنى ئاچالمايدۇ."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
-msgstr "caja ھۆججەت باشقۇرغۇچ ئىجرا قىلىنمىغان."
+msgid "The baul file manager is not running."
+msgstr "baul ھۆججەت باشقۇرغۇچ ئىجرا قىلىنمىغان."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

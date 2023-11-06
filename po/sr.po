@@ -1354,7 +1354,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "Не могу да отворим фасциклу „%s“."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "Управљач датотека цаја није покренут."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

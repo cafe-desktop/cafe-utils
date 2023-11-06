@@ -184,7 +184,7 @@ screenshot_find_current_window ()
   if (current_window)
     {
       if (screenshot_window_is_desktop (current_window))
-	/* if the current window is the desktop (e.g. caja), we
+	/* if the current window is the desktop (e.g. baul), we
 	 * return NULL, as getting the whole screen makes more sense.
          */
         return NULL;

@@ -1388,7 +1388,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "\"%s\" ഫോള്‍ഡര്‍ തുറക്കുവാന്‍ സാധിച്ചില്ല."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "നോട്ടിലസ് ഫയല്‍ മാനേജര്‍ പ്റവര്‍ത്തിക്കുന്നില്ല."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

@@ -1356,8 +1356,8 @@ msgid "Could not open folder \"%s\"."
 msgstr "Չհաջողվեց բացել թղթապանակը \"%s\"."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
-msgstr "caja ֆայլային կառավարիչը չի մեկնարկվում։"
+msgid "The baul file manager is not running."
+msgstr "baul ֆայլային կառավարիչը չի մեկնարկվում։"
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

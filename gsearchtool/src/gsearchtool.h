@@ -54,7 +54,7 @@ extern "C" {
 #define DEFAULT_WINDOW_HEIGHT  350
 #define WINDOW_HEIGHT_STEP      35
 #define NUM_VISIBLE_COLUMNS      5
-#define BAUL_PREFERENCES_SCHEMA "org.cafe.caja.preferences"
+#define BAUL_PREFERENCES_SCHEMA "org.cafe.baul.preferences"
 
 typedef enum {
 	STOPPED,
@@ -153,8 +153,8 @@ struct _GSearchWindow {
 	GSettings             * cafe_search_tool_settings;
 	GSettings             * cafe_search_tool_select_settings;
 	GSettings             * cafe_desktop_interface_settings;
-	GSettings             * caja_settings;
-	gboolean                caja_schema_exists;
+	GSettings             * baul_settings;
+	gboolean                baul_schema_exists;
 
 	GSearchCommandDetails * command_details;
 };

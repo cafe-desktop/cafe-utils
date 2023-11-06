@@ -1288,7 +1288,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "\"%s\" бумасын ашу мүмкін емес."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "Caja файлдар басқарушысы орындалып тұрған жоқ."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524

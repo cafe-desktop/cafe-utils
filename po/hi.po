@@ -1351,7 +1351,7 @@ msgid "Could not open folder \"%s\"."
 msgstr "फ़ोल्डर \"%s\" खोल नहीं सका."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
-msgid "The caja file manager is not running."
+msgid "The baul file manager is not running."
 msgstr "नॉटिलस फ़ाइल प्रबंधक चल नहीं रहा है."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
