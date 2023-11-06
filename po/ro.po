@@ -1364,7 +1364,7 @@ msgstr "Nu s-a putut deschide dosarul „%s“."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Administratorul de fișiere Caja nu este pornit."
+msgstr "Administratorul de fișiere Baul nu este pornit."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

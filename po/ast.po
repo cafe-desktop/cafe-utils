@@ -1363,7 +1363,7 @@ msgstr "Nun pue abrise la carpeta «%s»."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "El xestor de ficheros Caja nun se ta executando."
+msgstr "El xestor de ficheros Baul nun se ta executando."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

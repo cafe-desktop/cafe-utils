@@ -276,7 +276,7 @@ msgstr "iz prozora terminala;"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:161
-msgid "from Caja \"Open with...\" ;"
+msgid "from Baul \"Open with...\" ;"
 msgstr "iz Caje \"Otvori pomoću...\";"
 
 #. (itstool) path: sect1/para

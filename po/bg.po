@@ -1369,7 +1369,7 @@ msgstr "Папката „%s“ не може да бъде отворена."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Файловият мениджър Caja на е стартиран."
+msgstr "Файловият мениджър Baul на е стартиран."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

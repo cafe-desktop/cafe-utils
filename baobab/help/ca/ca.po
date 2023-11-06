@@ -315,8 +315,8 @@ msgstr "des de la finestra d'un terminal;"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:161
-msgid "from Caja \"Open with...\" ;"
-msgstr "des d'«Obre amb...» de Caja;"
+msgid "from Baul \"Open with...\" ;"
+msgstr "des d'«Obre amb...» de Baul;"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:166

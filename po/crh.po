@@ -1348,7 +1348,7 @@ msgstr "\"%s\" klasörü açılamadı."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Caja dosya yöneticisi çalışmıyor."
+msgstr "Baul dosya yöneticisi çalışmıyor."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

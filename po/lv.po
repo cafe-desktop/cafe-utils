@@ -1349,7 +1349,7 @@ msgstr "Nevar atvērt mapi \"%s\"."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Caja failu pārvaldnieks nav palaists."
+msgstr "Baul failu pārvaldnieks nav palaists."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

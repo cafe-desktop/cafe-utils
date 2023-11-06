@@ -1375,7 +1375,7 @@ msgstr "Nem nyitható meg a(z) „%s” mappa."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Nem fut a Caja fájlkezelő."
+msgstr "Nem fut a Baul fájlkezelő."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

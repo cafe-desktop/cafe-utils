@@ -1294,7 +1294,7 @@ msgstr "Kon nie gids \"%s\" oopmaak nie."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Die Caja-lêerbestuurder loop nie tans nie."
+msgstr "Die Baul-lêerbestuurder loop nie tans nie."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

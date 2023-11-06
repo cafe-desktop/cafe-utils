@@ -1277,7 +1277,7 @@ msgstr ""
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Caja fayl boshqaruvchisi ishlamayapti."
+msgstr "Baul fayl boshqaruvchisi ishlamayapti."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

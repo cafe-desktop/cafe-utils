@@ -408,7 +408,7 @@ remove_mnemonic_character (const gchar * string)
 }
 
 gchar *
-get_readable_date (const CajaDateFormat date_format_enum,
+get_readable_date (const BaulDateFormat date_format_enum,
                    const time_t file_time_raw)
 {
 	struct tm * file_time;
@@ -977,7 +977,7 @@ open_file_with_filemanager (CtkWidget * window,
 	}
 
 	contents = g_strdup_printf ("[Desktop Entry]\n"
-				    "Name=Caja\n"
+				    "Name=Baul\n"
 				    "Icon=file-manager\n"
 				    "Exec=%s\n"
 				    "Terminal=false\n"

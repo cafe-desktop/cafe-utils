@@ -323,8 +323,8 @@ msgstr "a partir de uma janela do terminal;"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:161
-msgid "from Caja \"Open with...\" ;"
-msgstr "a partir de Caja \"Abrir com...\" ;"
+msgid "from Baul \"Open with...\" ;"
+msgstr "a partir de Baul \"Abrir com...\" ;"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:166

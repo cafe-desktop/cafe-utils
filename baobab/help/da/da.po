@@ -314,8 +314,8 @@ msgstr "fra et terminalvindue;"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:161
-msgid "from Caja \"Open with...\" ;"
-msgstr "fraCaja »Åbn med ...« ;"
+msgid "from Baul \"Open with...\" ;"
+msgstr "fraBaul »Åbn med ...« ;"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:166

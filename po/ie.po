@@ -1298,7 +1298,7 @@ msgstr "Ne successat aperter li fólder «%s»."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Li gerente de files Caja ne es lansat."
+msgstr "Li gerente de files Baul ne es lansat."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

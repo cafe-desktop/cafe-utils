@@ -1368,7 +1368,7 @@ msgstr "No s'ha pogut obrir la carpeta «%s»."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "El gestor de fitxers Caja no s'està executant."
+msgstr "El gestor de fitxers Baul no s'està executant."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

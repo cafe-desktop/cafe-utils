@@ -1289,7 +1289,7 @@ msgstr "\"%s\" бумасын ашу мүмкін емес."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Caja файлдар басқарушысы орындалып тұрған жоқ."
+msgstr "Baul файлдар басқарушысы орындалып тұрған жоқ."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

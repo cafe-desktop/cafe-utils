@@ -312,8 +312,8 @@ msgstr "melalui tetingkap terminal;"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:161
-msgid "from Caja \"Open with...\" ;"
-msgstr "melalui Caja \"Buka dengan...\" ;"
+msgid "from Baul \"Open with...\" ;"
+msgstr "melalui Baul \"Buka dengan...\" ;"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:166

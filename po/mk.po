@@ -1340,7 +1340,7 @@ msgstr "Не можам да ја отворам папката \"%s\"."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Caja датотечен управувач не е активен."
+msgstr "Baul датотечен управувач не е активен."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

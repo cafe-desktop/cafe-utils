@@ -1342,7 +1342,7 @@ msgstr "\"%s\" ফোল্ডাৰ খোলা নাযায় ।"
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Caja নথিপত্ৰ পৰিচালন ব্যৱস্থা বৰ্তমানে চলছে না ।"
+msgstr "Baul নথিপত্ৰ পৰিচালন ব্যৱস্থা বৰ্তমানে চলছে না ।"
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

@@ -68,7 +68,7 @@ gchar *
 remove_mnemonic_character (const gchar * string);
 
 gchar *
-get_readable_date (const CajaDateFormat date_format_enum,
+get_readable_date (const BaulDateFormat date_format_enum,
                    const time_t file_time_raw);
 gchar *
 gsearchtool_strdup_strftime (const gchar * format,

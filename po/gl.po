@@ -1387,7 +1387,7 @@ msgstr "Non foi posíbel abrir o cartafol «%s»."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "O xestor de ficheiros Caja non está en execución."
+msgstr "O xestor de ficheiros Baul non está en execución."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

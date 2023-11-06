@@ -1358,7 +1358,7 @@ msgstr "Kansion ”%s” avaaminen epäonnistui."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Caja-tiedostonhallinta ei ole käynnissä."
+msgstr "Baul-tiedostonhallinta ei ole käynnissä."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

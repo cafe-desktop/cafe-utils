@@ -1356,7 +1356,7 @@ msgstr "Ezin izan da \"%s\" karpeta ireki."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Caja fitxategi-kudeatzailea ez dabil."
+msgstr "Baul fitxategi-kudeatzailea ez dabil."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

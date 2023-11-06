@@ -1404,7 +1404,7 @@ msgstr "Não foi possível abrir a pasta \"%s\"."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "O gerenciador de arquivos Caja não está em execução."
+msgstr "O gerenciador de arquivos Baul não está em execução."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

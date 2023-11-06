@@ -654,7 +654,7 @@ build_search_command (GSearchWindow * gsearch,
 		if (gsearch->command_details->is_command_first_pass == TRUE) {
 
 			gchar * locate;
-			CajaSpeedTradeoff show_thumbnails_enum;
+			BaulSpeedTradeoff show_thumbnails_enum;
 			gboolean disable_quick_search;
 
 			locate = g_find_program_in_path ("locate");

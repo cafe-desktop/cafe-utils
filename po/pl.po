@@ -1394,7 +1394,7 @@ msgstr "Nie można otworzyć katalogu \"%s\"."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:433
 msgid "The baul file manager is not running."
-msgstr "Menedżer plików Caja nie jest uruchomiony."
+msgstr "Menedżer plików Baul nie jest uruchomiony."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:524
 msgid "There is no installed viewer capable of displaying the document."

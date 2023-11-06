@@ -320,8 +320,8 @@ msgstr "da una finestra di terminale;"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:161
-msgid "from Caja \"Open with...\" ;"
-msgstr "da Caja \"Apri con...\" ;"
+msgid "from Baul \"Open with...\" ;"
+msgstr "da Baul \"Apri con...\" ;"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:166

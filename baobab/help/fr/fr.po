@@ -304,8 +304,8 @@ msgstr "depuis une fenêtre de console;"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:161
-msgid "from Caja \"Open with...\" ;"
-msgstr "depuis Caja \"Ouvrir avec...\";"
+msgid "from Baul \"Open with...\" ;"
+msgstr "depuis Baul \"Ouvrir avec...\";"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:166
