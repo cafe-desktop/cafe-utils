@@ -260,7 +260,7 @@ AS_IF([test "x$have_ipv6" = "xyes"],
 
 
 dnl strftime extension checks
-AC_TRY_RUN([
+AC_RUN_IFELSE([AC_LANG_SOURCE([[
   #include <time.h>
   int main (void) {
     char buf[100];
@@ -270,7 +270,7 @@ AC_TRY_RUN([
       return 0;
     return 1;
   }
-  ],
+  ]])],
   [
     AC_DEFINE([HAVE_STRFTIME_EXTENSION], [1],
               [Define if strftime supports %E and %O modifiers.])
