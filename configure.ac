@@ -222,15 +222,15 @@ AC_ARG_ENABLE([ipv6],
 
 AS_IF([test "x$enable_ipv6" = "xyes"],
       [
-        AC_TRY_COMPILE(
-          [
+        AC_COMPILE_IFELSE([AC_LANG_PROGRAM(
+          [[
             #include <sys/socket.h>
             #include <sys/types.h>
-          ],
-          [
+          ]],
+          [[
             struct sockaddr_storage ss;
             socket(AF_INET6, SOCK_STREAM, 0)
-          ],
+          ]])],
           [have_ipv6=yes],
           [have_ipv6=no]
         )
