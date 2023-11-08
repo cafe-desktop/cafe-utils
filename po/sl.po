@@ -1475,7 +1475,7 @@ msgstr "Izbrano ime dokumenta je mapa."
 
 #: gsearchtool/src/gsearchtool-callbacks.c:1817
 msgid "You may not have write permissions to the document."
-msgstr "Morda nicafe dovoljenj za pisanje v dokument."
+msgstr "Morda nimate dovoljenj za pisanje v dokument."
 
 #. Translators:  Below are the strings displayed in the 'Date Modified'
 #. column of the list view.  The format of this string can vary depending
