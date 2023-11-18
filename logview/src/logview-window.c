@@ -1461,6 +1461,8 @@ logview_window_init (LogviewWindow *logview)
   priv->active_filters = NULL;
   update_filter_menu (logview);
 
+  g_object_set (ctk_settings_get_default (), "ctk-overlay-scrolling", FALSE, NULL);
+
   ctk_widget_show (vbox);
   ctk_widget_show (main_view);
 }
