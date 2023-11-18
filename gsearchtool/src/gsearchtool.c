@@ -3057,6 +3057,8 @@ main (int argc,
 	g_set_application_name (_("Search for Files"));
 	ctk_window_set_default_icon_name (CAFE_SEARCH_TOOL_ICON);
 
+	g_object_set (ctk_settings_get_default (), "ctk-button-images", TRUE, NULL);
+
 	gsearchtool_init_stock_icons ();
 
 	window = g_object_new (GSEARCH_TYPE_WINDOW, NULL);
