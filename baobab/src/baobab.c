@@ -1263,6 +1263,9 @@ main (int argc, char *argv[])
 
 	ctk_window_set_default_icon_name ("cafe-disk-usage-analyzer");
 
+	g_object_set (ctk_settings_get_default (), "ctk-menu-images", TRUE, NULL);
+	g_object_set (ctk_settings_get_default (), "ctk-button-images", TRUE, NULL);
+
 	baobab_init ();
 
 	if (baobab.fs.total == 0) {
