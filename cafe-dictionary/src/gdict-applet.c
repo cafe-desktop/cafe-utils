@@ -1155,6 +1155,9 @@ gdict_applet_init (GdictApplet *applet)
 					 0,
 					 NULL);
 
+  g_object_set (ctk_settings_get_default (), "ctk-menu-images", TRUE, NULL);
+  g_object_set (ctk_settings_get_default (), "ctk-button-images", TRUE, NULL);
+
   /* force first draw */
   gdict_applet_draw (applet);
 
