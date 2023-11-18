@@ -1364,6 +1364,9 @@ main (int argc, char *argv[])
   }
 
   ctk_window_set_default_icon_name (SCREENSHOOTER_ICON);
+
+  g_object_set (ctk_settings_get_default (), "ctk-button-images", TRUE, NULL);
+
   screenshooter_init_stock_icons ();
 
   settings = g_settings_new (CAFE_SCREENSHOT_SCHEMA);
