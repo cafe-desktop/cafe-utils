@@ -16,6 +16,9 @@ int main (int argc, char *argv[])
 
 	gdict_init (&argc, &argv);
 
+	g_object_set (ctk_settings_get_default (), "ctk-menu-images", TRUE, NULL);
+	g_object_set (ctk_settings_get_default (), "ctk-button-images", TRUE, NULL);
+
 	gdict_main ();
 
 	gdict_cleanup ();
