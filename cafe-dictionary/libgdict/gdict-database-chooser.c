@@ -1125,11 +1125,7 @@ gdict_database_chooser_add_button (GdictDatabaseChooser *chooser,
 
   priv = chooser->priv;
 
-  button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-                                     "label", button_text,
-                                     "use-stock", TRUE,
-                                     "use-underline", TRUE,
-                                     NULL));
+  button = ctk_button_new_from_stock (button_text);
 
   ctk_widget_set_can_default (button, TRUE);
 
