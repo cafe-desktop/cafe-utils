@@ -1714,9 +1714,9 @@ baobab_chart_save_snapshot (CtkWidget *chart)
   fs_dlg = ctk_file_chooser_dialog_new (_("Save Snapshot"),
                                         NULL,
                                         CTK_FILE_CHOOSER_ACTION_SAVE,
-                                        "ctk-cancel",
+                                        CTK_STOCK_CANCEL,
                                         CTK_RESPONSE_CANCEL,
-                                        "ctk-save",
+                                        CTK_STOCK_SAVE,
                                         CTK_RESPONSE_ACCEPT, NULL);
 
   item = (BaobabChartItem *) priv->first_item->data;
