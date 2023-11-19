@@ -76,7 +76,7 @@ do_run_overwrite_confirm_dialog (gpointer _data)
                                               "Would you like to replace it?"),
 					    data->basename);
   ctk_dialog_add_button (CTK_DIALOG (dialog),
-			 "ctk-cancel",
+			 CTK_STOCK_CANCEL,
 			 CTK_RESPONSE_CANCEL);
   ctk_dialog_add_button (CTK_DIALOG (dialog),
 			 _("_Replace"),

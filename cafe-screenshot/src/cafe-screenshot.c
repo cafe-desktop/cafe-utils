@@ -527,8 +527,8 @@ create_interactive_dialog (void)
   create_screenshot_frame (main_vbox, _("Take Screenshot"));
   create_effects_frame (main_vbox, _("Effects"));
   ctk_dialog_add_buttons (CTK_DIALOG (retval),
-                          "ctk-help", CTK_RESPONSE_HELP,
-                          "ctk-cancel", CTK_RESPONSE_CANCEL,
+                          CTK_STOCK_HELP, CTK_RESPONSE_HELP,
+                          CTK_STOCK_CANCEL, CTK_RESPONSE_CANCEL,
                           _("Take _Screenshot"), CTK_RESPONSE_OK,
                           NULL);
   ctk_dialog_set_default_response (CTK_DIALOG (retval), CTK_RESPONSE_OK);
