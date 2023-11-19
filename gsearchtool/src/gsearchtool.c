@@ -1798,7 +1798,7 @@ handle_search_command_stderr_io (GIOChannel * ioc,
 					ctk_box_pack_start (CTK_BOX (ctk_dialog_get_content_area (CTK_DIALOG (dialog))), hbox, FALSE, FALSE, 0);
 					ctk_widget_show_all (hbox);
 
-					button = gsearchtool_button_new_with_icon (_("Disable _Quick Search"), "ctk-ok");
+					button = gsearchtool_button_new_with_stock_icon (_("Disable _Quick Search"), CTK_STOCK_OK);
 					ctk_widget_set_can_default (button, TRUE);
 					ctk_widget_show (button);
 
@@ -2051,11 +2051,7 @@ create_constraint_box (GSearchWindow * gsearch,
 	        break;
 	}
 
-	button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-					   "label", "ctk-remove",
-					   "use-stock", TRUE,
-					   "use-underline", TRUE,
-					   NULL));
+	button = ctk_button_new_from_stock (CTK_STOCK_REMOVE);
 
 	ctk_widget_set_can_default (button, FALSE);
 
@@ -2202,11 +2198,7 @@ create_additional_constraint_section (GSearchWindow * gsearch)
 				  _("Select a search option from the drop-down list."));
 	}
 
-	gsearch->available_options_add_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-									  "label", "ctk-add",
-									  "use-stock", TRUE,
-									  "use-underline", TRUE,
-									  NULL));
+	gsearch->available_options_add_button = ctk_button_new_from_stock (CTK_STOCK_ADD);
 
 	ctk_widget_set_can_default (gsearch->available_options_add_button, FALSE);
 	gsearch->available_options_button_size_group = ctk_size_group_new (CTK_SIZE_GROUP_BOTH);
@@ -2883,12 +2875,7 @@ gsearch_app_create (GSearchWindow * gsearch)
 
 	ctk_box_set_spacing (CTK_BOX (hbox), 6);
 
-	button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-					   "label", "ctk-help",
-					   "use-stock", TRUE,
-					   "use-underline", TRUE,
-					   NULL));
-
+	button = ctk_button_new_from_stock (CTK_STOCK_HELP);
 
 	ctk_widget_set_can_default (button, TRUE);
 	ctk_box_pack_start (CTK_BOX (hbox), button, FALSE, FALSE, 0);
@@ -2899,11 +2886,7 @@ gsearch_app_create (GSearchWindow * gsearch)
 		add_atk_namedesc (CTK_WIDGET (button), NULL, _("Click to display the help manual."));
 	}
 
-	button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-					   "label", "ctk-close",
-					   "use-stock", TRUE,
-					   "use-underline", TRUE,
-					   NULL));
+	button = ctk_button_new_from_stock (CTK_STOCK_CLOSE);
 
 	ctk_widget_set_can_default (button, TRUE);
 	g_signal_connect (G_OBJECT (button), "clicked",
@@ -2915,17 +2898,8 @@ gsearch_app_create (GSearchWindow * gsearch)
 	ctk_box_pack_start (CTK_BOX (hbox), button, FALSE, FALSE, 0);
 
 	/* Find and Stop buttons... */
-	gsearch->find_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-							 "label", "ctk-find",
-							 "use-stock", TRUE,
-							 "use-underline", TRUE,
-							 NULL));
-
-	gsearch->stop_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-							 "label", "ctk-stop",
-							 "use-stock", TRUE,
-							 "use-underline", TRUE,
-							 NULL));
+	gsearch->find_button = ctk_button_new_from_stock (CTK_STOCK_FIND);
+	gsearch->stop_button = ctk_button_new_from_stock (CTK_STOCK_STOP);
 
 	ctk_widget_set_can_default (gsearch->find_button, TRUE);
 	ctk_widget_set_can_default (gsearch->stop_button, TRUE);

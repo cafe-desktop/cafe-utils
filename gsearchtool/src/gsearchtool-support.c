@@ -1117,8 +1117,8 @@ gsearchtool_get_unique_filename (const gchar * path,
 }
 
 CtkWidget *
-gsearchtool_button_new_with_icon (const gchar * string,
-                                  const gchar * icon_name)
+gsearchtool_button_new_with_stock_icon (const gchar * string,
+                                        const gchar * stock_id)
 {
 	CtkWidget * button;
 	CtkWidget * hbox;
@@ -1128,7 +1128,7 @@ gsearchtool_button_new_with_icon (const gchar * string,
 	button = ctk_button_new ();
 	label = ctk_label_new_with_mnemonic (string);
 	ctk_label_set_mnemonic_widget (CTK_LABEL (label), CTK_WIDGET (button));
-	image = ctk_image_new_from_icon_name (icon_name, CTK_ICON_SIZE_BUTTON);
+	image = ctk_image_new_from_stock (stock_id, CTK_ICON_SIZE_BUTTON);
 	hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 2);
 	ctk_box_pack_start (CTK_BOX (hbox), image, FALSE, FALSE, 0);
 	ctk_box_pack_end (CTK_BOX (hbox), label, FALSE, FALSE, 0);
