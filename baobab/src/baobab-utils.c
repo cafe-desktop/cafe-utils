@@ -106,9 +106,9 @@ dir_select (gboolean SEARCH, CtkWidget *parent)
 		file_chooser = ctk_file_chooser_dialog_new (_("Select Folder"),
 					      CTK_WINDOW (parent),
 					      CTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
-					      "ctk-cancel",
+					      CTK_STOCK_CANCEL,
 					      CTK_RESPONSE_CANCEL,
-					      "ctk-open",
+					      CTK_STOCK_OPEN,
 					      CTK_RESPONSE_OK, NULL);
 
 		ctk_file_chooser_set_show_hidden (CTK_FILE_CHOOSER (file_chooser), FALSE);

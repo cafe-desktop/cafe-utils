@@ -726,7 +726,7 @@ baobab_remote_connect_dialog_init (BaobabRemoteConnectDialog *dialog)
 	setup_for_type (dialog);
 
 	ctk_dialog_add_button (CTK_DIALOG (dialog),
-			       "ctk-cancel",
+			       CTK_STOCK_CANCEL,
 			       CTK_RESPONSE_CANCEL);
 	ctk_dialog_add_button (CTK_DIALOG (dialog),
 			       _("_Scan"),
