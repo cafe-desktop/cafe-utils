@@ -197,7 +197,7 @@ logview_findbar_init (LogviewFindbar *findbar)
   ctk_widget_show_all (CTK_WIDGET (priv->forward_button));
 
   /* clear button */
-  priv->clear_button = ctk_tool_button_new_from_stock ("ctk-clear");
+  priv->clear_button = ctk_tool_button_new_from_stock (CTK_STOCK_CLEAR);
   ctk_tool_item_set_tooltip_text (priv->clear_button,
                                  _("Clear the search string"));
   ctk_toolbar_insert (gtoolbar, priv->clear_button, -1);

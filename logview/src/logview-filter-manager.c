@@ -461,7 +461,7 @@ logview_filter_manager_init (LogviewFilterManager *manager)
   priv->prefs = logview_prefs_get ();
 
   ctk_dialog_add_button (CTK_DIALOG(manager),
-                         "ctk-close",
+                         CTK_STOCK_CLOSE,
                          CTK_RESPONSE_CLOSE);
   ctk_window_set_modal (CTK_WINDOW (manager),
                         TRUE);
@@ -495,23 +495,9 @@ logview_filter_manager_init (LogviewFilterManager *manager)
   ctk_tree_view_append_column (CTK_TREE_VIEW (priv->tree),
                                column);
 
-  priv->add_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-					       "label", "ctk-add",
-					       "use-stock", TRUE,
-					       "use-underline", TRUE,
-					       NULL));
-
-  priv->edit_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-						"label", "ctk-properties",
-						"use-stock", TRUE,
-						"use-underline", TRUE,
-						NULL));
-
-  priv->remove_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-						  "label", "ctk-remove",
-						  "use-stock", TRUE,
-						  "use-underline", TRUE,
-						  NULL));
+  priv->add_button = ctk_button_new_from_stock (CTK_STOCK_ADD);
+  priv->edit_button = ctk_button_new_from_stock (CTK_STOCK_PROPERTIES);
+  priv->remove_button = ctk_button_new_from_stock (CTK_STOCK_REMOVE);
 
   ctk_window_set_title (CTK_WINDOW (manager),
                         _("Filters"));
