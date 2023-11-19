@@ -352,10 +352,10 @@ source_remove_clicked_cb (CtkWidget       *widget,
       						  "dictionary source from the list."));
 
       ctk_dialog_add_button (CTK_DIALOG (confirm_dialog),
-      			     "ctk-cancel",
+      			     CTK_STOCK_CANCEL,
       			     CTK_RESPONSE_CANCEL);
       ctk_dialog_add_button (CTK_DIALOG (confirm_dialog),
-      			     "ctk-remove",
+      			     CTK_STOCK_REMOVE,
       			     CTK_RESPONSE_OK);
 
       ctk_window_set_title (CTK_WINDOW (confirm_dialog), "");

@@ -204,8 +204,8 @@ save_cb (CtkWidget   *widget,
   dialog = ctk_file_chooser_dialog_new (_("Save a Copy"),
   					CTK_WINDOW (priv->window),
   					CTK_FILE_CHOOSER_ACTION_SAVE,
-  					"ctk-cancel", CTK_RESPONSE_CANCEL,
-  					"ctk-save", CTK_RESPONSE_ACCEPT,
+  					CTK_STOCK_CANCEL, CTK_RESPONSE_CANCEL,
+  					CTK_STOCK_SAVE, CTK_RESPONSE_ACCEPT,
   					NULL);
   ctk_file_chooser_set_do_overwrite_confirmation (CTK_FILE_CHOOSER (dialog), TRUE);
 
@@ -351,11 +351,7 @@ gdict_applet_build_window (GdictApplet *applet)
   ctk_box_pack_end (CTK_BOX (vbox), bbox, FALSE, FALSE, 0);
   ctk_widget_show (bbox);
 
-  button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-				     "label", "ctk-clear",
-				     "use-stock", TRUE,
-				     "use-underline", TRUE,
-				     NULL));
+  button = ctk_button_new_from_stock (CTK_STOCK_CLEAR);
 
   ctk_widget_set_tooltip_text (button, _("Clear the definitions found"));
   set_atk_name_description (button,
@@ -366,11 +362,7 @@ gdict_applet_build_window (GdictApplet *applet)
   ctk_box_pack_start (CTK_BOX (bbox), button, FALSE, FALSE, 0);
   ctk_widget_show (button);
 
-  button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-				     "label", "ctk-print",
-				     "use-stock", TRUE,
-				     "use-underline", TRUE,
-				     NULL));
+  button = ctk_button_new_from_stock (CTK_STOCK_PRINT);
 
   ctk_widget_set_tooltip_text (button, _("Print the definitions found"));
   set_atk_name_description (button,
@@ -381,11 +373,7 @@ gdict_applet_build_window (GdictApplet *applet)
   ctk_box_pack_start (CTK_BOX (bbox), button, FALSE, FALSE, 0);
   ctk_widget_show (button);
 
-  button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-				     "label", "ctk-save",
-				     "use-stock", TRUE,
-				     "use-underline", TRUE,
-				     NULL));
+  button = ctk_button_new_from_stock (CTK_STOCK_SAVE);
 
   ctk_widget_set_tooltip_text (button, _("Save the definitions found"));
   set_atk_name_description (button,
@@ -1168,25 +1156,25 @@ gdict_applet_init (GdictApplet *applet)
 }
 
 static const CtkActionEntry gdict_applet_menu_actions[] = {
-  {"DictionaryLookup", "edit-find", N_("_Look Up Selected Text"),
+  {"DictionaryLookup", CTK_STOCK_FIND, N_("_Look Up Selected Text"),
     NULL, NULL,
     G_CALLBACK (gdict_applet_cmd_lookup) },
-  {"DictionaryClear", "edit-clear", N_("Cl_ear"),
+  {"DictionaryClear", CTK_STOCK_CLEAR, N_("Cl_ear"),
     NULL, NULL,
     G_CALLBACK (gdict_applet_cmd_clear) },
-  {"DictionaryPrint", "document-print", N_("_Print"),
+  {"DictionaryPrint", CTK_STOCK_PRINT, N_("_Print"),
     NULL, NULL,
     G_CALLBACK (gdict_applet_cmd_print) },
-  {"DictionarySave", "document-save", N_("_Save"),
+  {"DictionarySave", CTK_STOCK_SAVE, N_("_Save"),
     NULL, NULL,
     G_CALLBACK (gdict_applet_cmd_save) },
-  {"DictionaryPreferences", "preferences-desktop", N_("Preferences"),
+  {"DictionaryPreferences", CTK_STOCK_PREFERENCES, N_("Preferences"),
     NULL, NULL,
     G_CALLBACK (gdict_applet_cmd_preferences) },
-  {"DictionaryHelp", "help-browser", N_("_Help"),
+  {"DictionaryHelp", CTK_STOCK_HELP, N_("_Help"),
     NULL, NULL,
     G_CALLBACK (gdict_applet_cmd_help) },
-  {"DictionaryAbout", "help-about", N_("_About"),
+  {"DictionaryAbout", CTK_STOCK_ABOUT, N_("_About"),
     NULL, NULL,
     G_CALLBACK (gdict_applet_cmd_about) },
 };
