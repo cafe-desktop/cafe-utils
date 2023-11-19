@@ -322,8 +322,8 @@ logview_open_log (CtkAction *action, LogviewWindow *logview)
     chooser = ctk_file_chooser_dialog_new (_("Open Log"),
                                            CTK_WINDOW (logview),
                                            CTK_FILE_CHOOSER_ACTION_OPEN,
-                                           "ctk-cancel", CTK_RESPONSE_CANCEL,
-                                           "ctk-open", CTK_RESPONSE_OK,
+                                           CTK_STOCK_CANCEL, CTK_RESPONSE_CANCEL,
+                                           CTK_STOCK_OPEN, CTK_RESPONSE_OK,
                                            NULL);
     ctk_dialog_set_default_response (CTK_DIALOG (chooser), CTK_RESPONSE_OK);
     ctk_window_set_modal (CTK_WINDOW (chooser), TRUE);
@@ -822,33 +822,33 @@ static CtkActionEntry entries[] = {
     { "FilterMenu", NULL, N_("_Filters"), NULL, NULL, NULL },
     { "HelpMenu", NULL, N_("_Help"), NULL, NULL, NULL },
 
-    { "OpenLog", "document-open", N_("_Open..."), "<control>O", N_("Open a log from file"),
+    { "OpenLog", CTK_STOCK_OPEN, N_("_Open..."), "<control>O", N_("Open a log from file"),
       G_CALLBACK (logview_open_log) },
-    { "CloseLog", "window-close", N_("_Close"), "<control>W", N_("Close this log"),
+    { "CloseLog", CTK_STOCK_CLOSE, N_("_Close"), "<control>W", N_("Close this log"),
       G_CALLBACK (logview_close_log) },
-    { "Quit", "application-exit", N_("_Quit"), "<control>Q", N_("Quit the log viewer"),
+    { "Quit", CTK_STOCK_QUIT, N_("_Quit"), "<control>Q", N_("Quit the log viewer"),
       G_CALLBACK (ctk_main_quit) },
 
-    { "Copy", "edit-copy", N_("_Copy"), "<control>C", N_("Copy the selection"),
+    { "Copy", CTK_STOCK_COPY, N_("_Copy"), "<control>C", N_("Copy the selection"),
       G_CALLBACK (logview_copy) },
     { "SelectAll", NULL, N_("Select _All"), "<Control>A", N_("Select the entire log"),
       G_CALLBACK (logview_select_all) },
-    { "Search", "edit-find", N_("_Find..."), "<control>F", N_("Find a word or phrase in the log"),
+    { "Search", CTK_STOCK_FIND, N_("_Find..."), "<control>F", N_("Find a word or phrase in the log"),
       G_CALLBACK (logview_search) },
 
-    { "ViewZoomIn", "zoom-in", N_("Zoom _In"), "<control>plus", N_("Bigger text size"),
+    { "ViewZoomIn", CTK_STOCK_ZOOM_IN, NULL, "<control>plus", N_("Bigger text size"),
       G_CALLBACK (logview_bigger_text)},
-    { "ViewZoomOut", "zoom-out", N_("Zoom _Out"), "<control>minus", N_("Smaller text size"),
+    { "ViewZoomOut", CTK_STOCK_ZOOM_OUT, NULL, "<control>minus", N_("Smaller text size"),
       G_CALLBACK (logview_smaller_text)},
-    { "ViewZoom100", "zoom-original", N_("_Normal Size"), "<control>0", N_("Normal text size"),
+    { "ViewZoom100", CTK_STOCK_ZOOM_100, NULL, "<control>0", N_("Normal text size"),
       G_CALLBACK (logview_normal_text)},
 
     { "FilterManage", NULL, N_("Manage Filters"), NULL, N_("Manage filters"),
       G_CALLBACK (logview_manage_filters)},
 
-    { "HelpContents", "help-browser", N_("_Contents"), "F1", N_("Open the help contents for the log viewer"),
+    { "HelpContents", CTK_STOCK_HELP, N_("_Contents"), "F1", N_("Open the help contents for the log viewer"),
       G_CALLBACK (logview_help) },
-    { "AboutAction", "help-about", N_("_About"), NULL, N_("Show the about dialog for the log viewer"),
+    { "AboutAction", CTK_STOCK_ABOUT, N_("_About"), NULL, N_("Show the about dialog for the log viewer"),
       G_CALLBACK (logview_about) },
 };
 
@@ -1367,7 +1367,7 @@ logview_window_init (LogviewWindow *logview)
   priv->message_area = ctk_info_bar_new ();
   message_area_create_error_box (logview, priv->message_area);
   ctk_info_bar_add_button (CTK_INFO_BAR (priv->message_area),
-                           "ctk-close", CTK_RESPONSE_CLOSE);
+                           CTK_STOCK_CLOSE, CTK_RESPONSE_CLOSE);
   ctk_box_pack_start (CTK_BOX (main_view), priv->message_area, FALSE, FALSE, 0);
 
   /* second pane: text view */
