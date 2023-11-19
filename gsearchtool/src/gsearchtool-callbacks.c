@@ -365,11 +365,7 @@ display_dialog_file_open_limit (CtkWidget * window,
 	ctk_container_set_border_width (CTK_CONTAINER (dialog), 5);
 	ctk_box_set_spacing (CTK_BOX (ctk_dialog_get_content_area (CTK_DIALOG (dialog))), 14);
 
-	button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-					   "label", "ctk-open",
-					   "use-stock", TRUE,
-					   "use-underline", TRUE,
-					   NULL));
+	button = ctk_button_new_from_stock (CTK_STOCK_OPEN);
 
 	ctk_widget_set_can_default (button, TRUE);
 	ctk_widget_show (button);
@@ -565,11 +561,7 @@ display_dialog_folder_open_limit (CtkWidget * window,
 	ctk_container_set_border_width (CTK_CONTAINER (dialog), 5);
 	ctk_box_set_spacing (CTK_BOX (ctk_dialog_get_content_area (CTK_DIALOG (dialog))), 14);
 
-	button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-					   "label", "ctk-open",
-					   "use-stock", TRUE,
-					   "use-underline", TRUE,
-					   NULL));
+	button = ctk_button_new_from_stock (CTK_STOCK_OPEN);
 
 	ctk_widget_set_can_default (button, TRUE);
 	ctk_widget_show (button);
@@ -747,11 +739,7 @@ display_dialog_delete_permanently (CtkWidget * window,
 	ctk_container_set_border_width (CTK_CONTAINER (dialog), 5);
 	ctk_box_set_spacing (CTK_BOX (ctk_dialog_get_content_area (CTK_DIALOG (dialog))), 14);
 
-	button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
-					   "label", "ctk-delete",
-					   "use-stock", TRUE,
-					   "use-underline", TRUE,
-					   NULL));
+	button = ctk_button_new_from_stock (CTK_STOCK_DELETE);
 
 	ctk_widget_set_can_default (button, TRUE);
 	ctk_widget_show (button);
@@ -1099,7 +1087,7 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 				ctk_image_menu_item_set_always_show_image (CTK_IMAGE_MENU_ITEM (new1), file_icon != NULL);
 
 				if (file_icon == NULL) {
-					file_icon = g_themed_icon_new ("ctk-open");
+					file_icon = g_themed_icon_new (CTK_STOCK_OPEN);
 				}
 
 				image1 = ctk_image_new_from_gicon (file_icon, CTK_ICON_SIZE_MENU);
@@ -1137,7 +1125,7 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 						ctk_image_menu_item_set_always_show_image (CTK_IMAGE_MENU_ITEM (new1), file_icon != NULL);
 
 						if (file_icon == NULL) {
-							file_icon = g_themed_icon_new ("ctk-open");
+							file_icon = g_themed_icon_new (CTK_STOCK_OPEN);
 						}
 
 						image1 = ctk_image_new_from_gicon (file_icon, CTK_ICON_SIZE_MENU);
@@ -1172,7 +1160,7 @@ build_popup_menu_for_file (GSearchWindow * gsearch,
 						ctk_image_menu_item_set_always_show_image (CTK_IMAGE_MENU_ITEM (new1), file_icon != NULL);
 
 						if (file_icon == NULL) {
-							file_icon = g_themed_icon_new ("ctk-open");
+							file_icon = g_themed_icon_new (CTK_STOCK_OPEN);
 						}
 
 						image1 = ctk_image_new_from_gicon (file_icon, CTK_ICON_SIZE_MENU);
@@ -1518,7 +1506,7 @@ drag_begin_file_cb (CtkWidget * widget,
 	number_of_selected_rows = ctk_tree_selection_count_selected_rows (CTK_TREE_SELECTION (gsearch->search_results_selection));
 
 	if (number_of_selected_rows > 1) {
-		ctk_drag_set_icon_stock (context, "ctk-dnd-multiple", 0, 0);
+		ctk_drag_set_icon_stock (context, CTK_STOCK_DND_MULTIPLE, 0, 0);
 	}
 	else if (number_of_selected_rows == 1) {
 		GdkPixbuf * pixbuf;
@@ -1541,7 +1529,7 @@ drag_begin_file_cb (CtkWidget * widget,
 			ctk_drag_set_icon_pixbuf (context, pixbuf, 0, 0);
 		}
 		else {
-			ctk_drag_set_icon_stock (context, "ctk-dnd", 0, 0);
+			ctk_drag_set_icon_stock (context, CTK_STOCK_DND, 0, 0);
 		}
 	}
 }
@@ -1620,8 +1608,8 @@ show_file_selector_cb (CtkAction * action,
 	file_chooser = ctk_file_chooser_dialog_new (_("Save Search Results As..."),
 	                                            CTK_WINDOW (gsearch->window),
 	                                            CTK_FILE_CHOOSER_ACTION_SAVE,
-	                                            "ctk-cancel", CTK_RESPONSE_CANCEL,
-	                                            "ctk-save", CTK_RESPONSE_OK,
+	                                            CTK_STOCK_CANCEL, CTK_RESPONSE_CANCEL,
+	                                            CTK_STOCK_SAVE, CTK_RESPONSE_OK,
 	                                            NULL);
 
 	ctk_file_chooser_set_do_overwrite_confirmation (CTK_FILE_CHOOSER (file_chooser), TRUE);
@@ -1729,7 +1717,7 @@ display_dialog_could_not_save_exists (CtkWidget * window,
 	ctk_container_set_border_width (CTK_CONTAINER (dialog), 5);
 	ctk_box_set_spacing (CTK_BOX (ctk_dialog_get_content_area (CTK_DIALOG (dialog))), 14);
 
-	button = gsearchtool_button_new_with_icon (_("_Replace"), "ctk-ok");
+	button = gsearchtool_button_new_with_stock_icon (_("_Replace"), CTK_STOCK_OK);
 	ctk_widget_set_can_default (button, TRUE);
 	ctk_widget_show (button);
 
