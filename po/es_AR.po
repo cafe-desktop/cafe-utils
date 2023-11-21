@@ -604,7 +604,7 @@ msgstr ""
 #: cafe-dictionary/src/gdict-about.c:56
 msgid "translator-credits"
 msgstr ""
-"Francisco Javier F. Serrador <serrador@cvs.cafe.org>\n"
+"Francisco Javier F. Serrador <serrador@cvs.mate.org>\n"
 "Jorge González González <jorge.gonzalez.gonzalez@hispalinux.es>"
 
 #: baobab/src/callbacks.c:215 gsearchtool/src/gsearchtool-callbacks.c:509

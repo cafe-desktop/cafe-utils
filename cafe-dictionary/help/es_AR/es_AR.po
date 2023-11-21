@@ -20,7 +20,7 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Francisco Javier F. Serrador <serrador@cvs.cafe.org>\n"
+"Francisco Javier F. Serrador <serrador@cvs.mate.org>\n"
 "Jorge González González <jorge.gonzalez.gonzalez@hispalinux.es>"
 
 #. (itstool) path: articleinfo/title

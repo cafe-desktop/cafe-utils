@@ -19,8 +19,8 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Jorge González <jorgegonz@svn.cafe.org>\n"
-"Francisco Javier F. Serrador <serrador@cvs.cafe.org>"
+"Jorge González <jorgegonz@svn.mate.org>\n"
+"Francisco Javier F. Serrador <serrador@cvs.mate.org>"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:23

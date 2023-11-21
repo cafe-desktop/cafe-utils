@@ -1,7 +1,7 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Étienne Deparis <etienne@depar.is>, 2018
-# Wolfgang Ulbrich <cafe@raveit.de>, 2018
+# Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Xorg, 2018
 # Guillaume Fayard <guillaume2.fayard@wanadoo.fr>, 2018
 # Laurent Napias <tamplan+transifex@free.fr>, 2018

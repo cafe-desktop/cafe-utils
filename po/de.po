@@ -7,7 +7,7 @@
 # nautilusx, 2018
 # Xpistian <xpistianbecker2@web.de>, 2018
 # valsu <valsu@hylia.de>, 2018
-# Wolfgang Ulbrich <cafe@raveit.de>, 2018
+# Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Julian Rüger <jr98@gmx.net>, 2019
 # clefebvre <clement.lefebvre@linuxmint.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019

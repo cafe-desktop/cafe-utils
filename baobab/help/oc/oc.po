@@ -1,6 +1,6 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Wolfgang Ulbrich <cafe@raveit.de>, 2018
+# Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Cfpo Miègjorn-Pirenèus <inactive+cfpomp@transifex.com>, 2018
 # 
 msgid ""

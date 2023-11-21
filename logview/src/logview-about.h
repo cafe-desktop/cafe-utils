@@ -30,7 +30,7 @@ static const char *logview_about_authors[] = {
   "Shakti Sen  <shprasad@novell.com>",
   "Julio M Merino Vidal <jmmv@menta.net>",
   "Jason Leach  <leach@wam.umd.edu>",
-  "Christian Neumair  <chris@cafe-de.org>",
+  "Christian Neumair  <chris@mate-de.org>",
   "Jan Arne Petersen  <jpetersen@uni-bonn.de>",
   "Jason Long  <jlong@messiah.edu>",
   "Kjartan Maraas  <kmaraas@gnome.org>",

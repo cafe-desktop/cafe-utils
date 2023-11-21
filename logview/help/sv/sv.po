@@ -1,7 +1,7 @@
 # Translators:
 # Kristoffer Grundström <hamnisdude@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Wolfgang Ulbrich <cafe@raveit.de>, 2018
+# Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Daniel Gullbransen <daniel@llama.nu>, 2018
 # crash <d.ubuntu@gmail.com>, 2019
 # 

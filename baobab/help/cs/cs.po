@@ -1,7 +1,7 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # ToMáš Marný, 2018
-# Wolfgang Ulbrich <cafe@raveit.de>, 2018
+# Wolfgang Ulbrich <mate@raveit.de>, 2018
 # LiberteCzech <liberte.czech@gmail.com>, 2018
 # phebix <dev@phebix.cz>, 2018
 # Lucas Lommer <drom@kdyne.net>, 2019

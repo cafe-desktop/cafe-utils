@@ -580,8 +580,8 @@ msgstr ""
 #: ../cafe-dictionary/src/gdict-about.c:55
 msgid "translator-credits"
 msgstr ""
-"Jorge González <jorgegonz@svn.cafe.org>\n"
-"Francisco Javier F. Serrador <serrador@cvs.cafe.org>"
+"Jorge González <jorgegonz@svn.mate.org>\n"
+"Francisco Javier F. Serrador <serrador@cvs.mate.org>"
 
 #: ../baobab/src/callbacks.c:202
 #: ../gsearchtool/src/gsearchtool-callbacks.c:514

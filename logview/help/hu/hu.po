@@ -1,7 +1,7 @@
 # Translators:
 # KAMI KAMI <kami911@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Wolfgang Ulbrich <cafe@raveit.de>, 2018
+# Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Falu <info@falu.me>, 2018
 # Balázs Meskó <meskobalazs@gmail.com>, 2018
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019
@@ -23,9 +23,9 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Dvornik László<dvornik at cafe dot hu>\n"
-"Kelemen Gábor<kelemeng at cafe dot hu>\n"
-"Tímár András<timar at cafe dot hu>\n"
+"Dvornik László<dvornik at mate dot hu>\n"
+"Kelemen Gábor<kelemeng at mate dot hu>\n"
+"Tímár András<timar at mate dot hu>\n"
 "Kalman „KAMI” Szalai<kami911 at gmail dot com>\n"
 "Falu<info at falu dot me>\n"
 "Rezső Páder<rezso at rezso dot net>\n"

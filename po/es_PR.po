@@ -579,7 +579,7 @@ msgstr ""
 #: ../cafe-dictionary/src/gdict-about.c:55
 msgid "translator-credits"
 msgstr ""
-"Francisco Javier F. Serrador <serrador@cvs.cafe.org>\n"
+"Francisco Javier F. Serrador <serrador@cvs.mate.org>\n"
 "Jorge González González <jorge.gonzalez.gonzalez@hispalinux.es>"
 
 #: ../baobab/src/callbacks.c:202

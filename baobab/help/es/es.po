@@ -2,7 +2,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Andres Sanchez <blackatze93@gmail.com>, 2018
 # elio <micta2003@hotmail.com>, 2018
-# Wolfgang Ulbrich <cafe@raveit.de>, 2018
+# Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Isabel Ortuño <isabel.ortuno1@gmail.com>, 2018
 # Toni Estévez <toni.estevez@gmail.com>, 2020
 # 
