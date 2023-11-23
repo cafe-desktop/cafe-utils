@@ -7,18 +7,18 @@
 # bf437f16c5a5796ac2a6f350075b40dc, 2018
 # Étienne Deparis <etienne@depar.is>, 2018
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-13 16:47+0100\n"
+"POT-Creation-Date: 2023-11-20 09:33+0100\n"
 "PO-Revision-Date: 2018-09-14 23:21+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019\n"
 "Language-Team: French (https://www.transifex.com/cafe/teams/13566/fr/)\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -83,118 +83,6 @@ msgstr "Le projet de documentation CAFE"
 msgid "GNOME Documentation Project"
 msgstr "GNOME Documentation Project"
 
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:2
-msgid ""
-"Permission is granted to copy, distribute and/or modify this document under "
-"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
-"later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
-" of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
-msgstr ""
-"Permission vous est donnée de copier, distribuer et/ou modifier ce document "
-"selon les termes de la Licence GNU Free Documentation License, Version 1.1 "
-"ou ultérieure publiée par la Free Software Foundation sans section "
-"inaltérable, sans texte de première page de couverture ni texte de dernière "
-"page de couverture. Vous trouverez un exemplaire de cette licence en suivant"
-" ce <ulink type=\"help\" url=\"help:fdl\">lien</ulink> ou dans le fichier "
-"COPYING-DOCS fourni avec le présent manuel."
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:12 C/legal.xml:12
-msgid ""
-"This manual is part of a collection of CAFE manuals distributed under the "
-"GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in"
-" section 6 of the license."
-msgstr ""
-"Ce manuel fait partie de la collection de manuels CAFE distribués selon les "
-"termes de la licence de documentation libre GNU. Si vous souhaitez "
-"distribuer ce manuel indépendamment de la collection, vous devez joindre un "
-"exemplaire de la licence au document, comme indiqué dans la section 6 de "
-"celle-ci."
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:19 C/legal.xml:19
-msgid ""
-"Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any CAFE "
-"documentation, and the members of the CAFE Documentation Project are made "
-"aware of those trademarks, then the names are in capital letters or initial "
-"capital letters."
-msgstr ""
-"La plupart des noms utilisés par les entreprises pour distinguer leurs "
-"produits et services sont des marques déposées. Lorsque ces noms "
-"apparaissent dans la documentation CAFE et que les membres du projet de "
-"Documentation CAFE sont informés de l'existence de ces marques déposées, "
-"soit ces noms entiers, soit leur première lettre est en majuscule."
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:35 C/legal.xml:35
-msgid ""
-"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
-"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
-"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
-"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
-"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
-"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
-"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
-"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
-"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
-"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
-"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
-msgstr ""
-"LE PRÉSENT DOCUMENT EST FOURNI « TEL QUEL », SANS AUCUNE GARANTIE, EXPRESSE "
-"OU IMPLICITE, Y COMPRIS, ET SANS LIMITATION, LES GARANTIES DE BONNE QUALITÉ "
-"MARCHANDE OU D'APTITUDE À UN EMPLOI PARTICULIER OU AUTORISÉ DU DOCUMENT OU "
-"DE SA VERSION MODIFIÉE. L'UTILISATEUR ASSUME TOUT RISQUE RELATIF À LA "
-"QUALITÉ, À LA PERTINENCE ET À LA PERFORMANCE DU DOCUMENT OU DE SA VERSION DE"
-" MISE À JOUR. SI LE DOCUMENT OU SA VERSION MODIFIÉE S'AVÉRAIT DÉFECTUEUSE, "
-"L'UTILISATEUR (ET NON LE RÉDACTEUR INITIAL, L'AUTEUR, NI TOUT AUTRE "
-"PARTICIPANT) ENDOSSERA LES COÛTS DE TOUTE INTERVENTION, RÉPARATION OU "
-"CORRECTION NÉCESSAIRE. CETTE DÉNÉGATION DE RESPONSABILITÉ CONSTITUE UNE "
-"PARTIE ESSENTIELLE DE CETTE LICENCE. AUCUNE UTILISATION DE CE DOCUMENT OU DE"
-" SA VERSION MODIFIÉE N'EST AUTORISÉE AUX TERMES DU PRÉSENT ACCORD, EXCEPTÉ "
-"SOUS CETTE DÉNÉGATION DE RESPONSABILITÉ ; "
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:55 C/legal.xml:55
-msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
-" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
-"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
-"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
-"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
-"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
-" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
-" POSSIBILITY OF SUCH DAMAGES."
-msgstr ""
-"EN AUCUNE CIRCONSTANCE ET SOUS AUCUNE INTERPRÉTATION DE LA LOI, QU'IL "
-"S'AGISSE DE RESPONSABILITÉ CIVILE (Y COMPRIS LA NÉGLIGENCE), CONTRACTUELLE "
-"OU AUTRE, L'AUTEUR, LE RÉDACTEUR INITIAL, TOUT PARTICIPANT ET TOUT "
-"DISTRIBUTEUR DE CE DOCUMENT OU DE SA VERSION DE MISE À JOUR AINSI QUE TOUT "
-"FOURNISSEUR DE QUELQUE PARTIE QUE CE SOIT NE POURRONT ÊTRE TENUS "
-"RESPONSABLES À L'ÉGARD DE QUICONQUE POUR TOUT DOMMAGE DIRECT, INDIRECT, "
-"PARTICULIER OU ACCIDENTEL DE TOUT TYPE Y COMPRIS, SANS LIMITATION, LES "
-"DOMMAGES LIÉS À LA PERTE DE CLIENTÈLE, AUX ARRÊTS DE TRAVAIL, AUX "
-"DÉFAILLANCES ET AUX DYSFONCTIONNEMENTS INFORMATIQUES OU TOUT AUTRE DOMMAGE "
-"OU PERTE LIÉE À L'UTILISATION DU PRÉSENT DOCUMENT ET DE SES VERSIONS DE MISE"
-" À JOUR, ET CE MÊME SI CES PARTIES ONT ÉTÉ INFORMÉES DE LA POSSIBILITÉ DE "
-"TELS DOMMAGES."
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:28 C/legal.xml:28
-msgid ""
-"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
-"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<_:orderedlist-1/>"
-msgstr ""
-"CE DOCUMENT ET SES VERSIONS MODIFIEES SONT FOURNIS SELON LES TERMES DE LA "
-"LICENCE GNU FREE DOCUMENTATION EN COMPRENANT QUE : <_:orderedlist-1/>"
-
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:60
 msgid ""
@@ -222,8 +110,8 @@ msgstr ""
 #: C/index.docbook:84
 msgid ""
 "<firstname>Paul</firstname> <surname>Cutler</surname> <affiliation> "
-"<orgname>GNOME Documentation Team</orgname> <address> "
-"<email>pcutler@gnome.org</email> </address> </affiliation>"
+"<orgname>GNOME Documentation Team</orgname> <address> <email>pcutler@gnome."
+"org</email> </address> </affiliation>"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
@@ -241,8 +129,8 @@ msgstr "Wolfgang Ulbrich"
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:116
 msgid ""
-"<revnumber>System Log Viewer Manual V1.10</revnumber> <date>July 2015</date>"
-" <_:revdescription-1/>"
+"<revnumber>System Log Viewer Manual V1.10</revnumber> <date>July 2015</date> "
+"<_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
@@ -253,8 +141,8 @@ msgstr ""
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:125
 msgid ""
-"<revnumber>System Log Viewer Manual V2.5</revnumber> <date>October "
-"2009</date> <_:revdescription-1/>"
+"<revnumber>System Log Viewer Manual V2.5</revnumber> <date>October 2009</"
+"date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
@@ -265,8 +153,8 @@ msgstr ""
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:135
 msgid ""
-"<revnumber>System Log Viewer Manual V2.4</revnumber> <date>October "
-"2005</date> <_:revdescription-1/>"
+"<revnumber>System Log Viewer Manual V2.4</revnumber> <date>October 2005</"
+"date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
@@ -278,15 +166,15 @@ msgstr ""
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:145
 msgid ""
-"<revnumber>System Log Viewer Manual V2.3</revnumber> <date>October "
-"2002</date> <_:revdescription-1/>"
+"<revnumber>System Log Viewer Manual V2.3</revnumber> <date>October 2002</"
+"date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:155
 msgid ""
-"<revnumber>System Log Viewer Manual V2.2</revnumber> <date>August "
-"2002</date> <_:revdescription-1/>"
+"<revnumber>System Log Viewer Manual V2.2</revnumber> <date>August 2002</"
+"date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
@@ -311,8 +199,7 @@ msgstr ""
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:185
 msgid ""
-"<revnumber>Logview Manual</revnumber> <date>2000</date> "
-"<_:revdescription-1/>"
+"<revnumber>Logview Manual</revnumber> <date>2000</date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: articleinfo/releaseinfo
@@ -329,8 +216,8 @@ msgstr "Votre avis"
 #: C/index.docbook:201
 msgid ""
 "To report a bug or make a suggestion regarding the System Log Viewer "
-"application or this manual, follow the directions in the <ulink url=\"help"
-":cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
+"application or this manual, follow the directions in the <ulink url=\"help:"
+"cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -348,8 +235,8 @@ msgstr "Introduction"
 msgid ""
 "<application>System Log Viewer</application> is a graphical, menu-driven "
 "viewer that you can use to view and monitor your system logs. "
-"<application>System Log Viewer</application> comes with a few functions that"
-" can help you manage your logs, including a log monitor and log statistics "
+"<application>System Log Viewer</application> comes with a few functions that "
+"can help you manage your logs, including a log monitor and log statistics "
 "display."
 msgstr ""
 "La <application>visionneuse de journaux système</application> est une "
@@ -397,8 +284,8 @@ msgid ""
 "You can start <application>System Log Viewer</application> in the following "
 "ways:"
 msgstr ""
-"Vous pouvez lancer la <application>visionneuse de journaux "
-"système</application> de l'une des façons suivantes :"
+"Vous pouvez lancer la <application>visionneuse de journaux système</"
+"application> de l'une des façons suivantes :"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:250
@@ -411,9 +298,9 @@ msgid ""
 "Choose <menuchoice><guisubmenu>System Tools</guisubmenu><guimenuitem>Log "
 "File Viewer</guimenuitem></menuchoice>."
 msgstr ""
-"Choisissez <menuchoice><guisubmenu>Outils "
-"système</guisubmenu><guimenuitem>Visionneuse de journaux "
-"système</guimenuitem></menuchoice>."
+"Choisissez <menuchoice><guisubmenu>Outils système</"
+"guisubmenu><guimenuitem>Visionneuse de journaux système</guimenuitem></"
+"menuchoice>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:256
@@ -434,8 +321,8 @@ msgid ""
 "When you start <application>System Log Viewer</application>, the following "
 "window is displayed."
 msgstr ""
-"Lorsque vous démarrez la <application>visionneuse de journaux "
-"système</application>, la fenêtre suivante est affichée."
+"Lorsque vous démarrez la <application>visionneuse de journaux système</"
+"application>, la fenêtre suivante est affichée."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:269
@@ -458,26 +345,26 @@ msgstr ""
 #: C/index.docbook:271
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/syslog_window.png\" "
-"format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows System Log Viewer"
-" main window. Contains menubar, display area, scrollbars, and statusbar. "
-"</phrase> </textobject>"
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows System Log Viewer "
+"main window. Contains menubar, display area, scrollbars, and statusbar. </"
+"phrase> </textobject>"
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:282
 msgid ""
 "The first time you start <application>System Log Viewer</application>, the "
-"application displays several log files by default (such as "
-"<filename>/var/log/messages</filename>). Opened logs are listed on the left "
-"side of the application window. The log selected in this list is displayed "
-"in the main area of the application window."
+"application displays several log files by default (such as <filename>/var/"
+"log/messages</filename>). Opened logs are listed on the left side of the "
+"application window. The log selected in this list is displayed in the main "
+"area of the application window."
 msgstr ""
-"Au premier lancement de la <application>visionneuse de journaux "
-"système</application>, l'application affiche plusieurs fichiers de "
-"journalisation par défaut (comme <filename>/var/log/messages</filename>). "
-"Les journaux ouverts sont listés dans la partie gauche de la fenêtre de "
-"l'application. Le journal sélectionné dans cette liste est affiché dans la "
-"zone principale de la fenêtre."
+"Au premier lancement de la <application>visionneuse de journaux système</"
+"application>, l'application affiche plusieurs fichiers de journalisation par "
+"défaut (comme <filename>/var/log/messages</filename>). Les journaux ouverts "
+"sont listés dans la partie gauche de la fenêtre de l'application. Le journal "
+"sélectionné dans cette liste est affiché dans la zone principale de la "
+"fenêtre."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:290
@@ -488,8 +375,8 @@ msgid ""
 msgstr ""
 "Par défaut, la <application>visionneuse de journaux système</application> "
 "surveille tous les journaux ouverts et tout changement s'affiche "
-"automatiquement dans la fenêtre principale. Consultez <xref linkend"
-"=\"syslog-monitor\"/> pour plus d'informations."
+"automatiquement dans la fenêtre principale. Consultez <xref linkend=\"syslog-"
+"monitor\"/> pour plus d'informations."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:299
@@ -504,27 +391,25 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: C/index.docbook:303
 msgid ""
-"To view a log, choose "
-"<menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></menuchoice>."
-" In the <guilabel>Open Log</guilabel> dialog, select the log that you want "
-"to open, then click <guibutton>Open</guibutton>. Use the scrollbars to "
-"scroll through the log."
+"To view a log, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open</"
+"guimenuitem></menuchoice>. In the <guilabel>Open Log</guilabel> dialog, "
+"select the log that you want to open, then click <guibutton>Open</"
+"guibutton>. Use the scrollbars to scroll through the log."
 msgstr ""
-"Pour ouvrir un fichier log, choisissez "
-"<menuchoice><guimenu>Fichier</guimenu><guimenuitem>Ouvrir</guimenuitem></menuchoice>."
-" Dans la fenêtre <guilabel>Ouvrir un journal</guilabel>, sélectionner le "
-"fichier log que vous désirez ouvrir, puis cliquer sur "
-"<guibutton>Ouvrir</guibutton>. Utiliser les barres de défilement pour "
-"naviguer dans le log."
+"Pour ouvrir un fichier log, choisissez <menuchoice><guimenu>Fichier</"
+"guimenu><guimenuitem>Ouvrir</guimenuitem></menuchoice>. Dans la fenêtre "
+"<guilabel>Ouvrir un journal</guilabel>, sélectionner le fichier log que vous "
+"désirez ouvrir, puis cliquer sur <guibutton>Ouvrir</guibutton>. Utiliser les "
+"barres de défilement pour naviguer dans le log."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:309
 msgid ""
-"You can open as many logs as you want. <application>System Log "
-"Viewer</application> displays one log at a time in the <guilabel>System Log "
-"Viewer</guilabel> window. Opened logs are listed on the left side of the "
-"application window. The log selected in this list is displayed in the main "
-"area of the application window. To display another log already opened in "
+"You can open as many logs as you want. <application>System Log Viewer</"
+"application> displays one log at a time in the <guilabel>System Log Viewer</"
+"guilabel> window. Opened logs are listed on the left side of the application "
+"window. The log selected in this list is displayed in the main area of the "
+"application window. To display another log already opened in "
 "<application>System Log Viewer</application>, select it in the log list."
 msgstr ""
 
@@ -543,13 +428,13 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: C/index.docbook:323
 msgid ""
-"To copy one or more log lines to the clipboard, just select the lines in the"
-" main area and choose the "
-"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy</guimenuitem></menuchoice>"
-" menu option. If you want to copy the entire log to the clipboard, select it"
-" entirely using the <menuchoice><guimenu>Edit</guimenu><guimenuitem>Select "
-"All</guimenuitem></menuchoice> menu option, then choose "
-"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy</guimenuitem></menuchoice>."
+"To copy one or more log lines to the clipboard, just select the lines in the "
+"main area and choose the <menuchoice><guimenu>Edit</"
+"guimenu><guimenuitem>Copy</guimenuitem></menuchoice> menu option. If you "
+"want to copy the entire log to the clipboard, select it entirely using the "
+"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Select All</guimenuitem></"
+"menuchoice> menu option, then choose <menuchoice><guimenu>Edit</"
+"guimenu><guimenuitem>Copy</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -561,8 +446,8 @@ msgstr ""
 #: C/index.docbook:336
 msgid ""
 "To hide the left sidebar, which contains the log list and calendar, just "
-"select the <menuchoice><guimenu>View</guimenu><guimenuitem>Side "
-"pane</guimenuitem></menuchoice> menu option."
+"select the <menuchoice><guimenu>View</guimenu><guimenuitem>Side pane</"
+"guimenuitem></menuchoice> menu option."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -573,9 +458,9 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: C/index.docbook:344
 msgid ""
-"You can use <application>System Log Viewer</application> to monitor logs. By"
-" default, all logs opened in <application>System Log Viewer</application> "
-"are monitored for changes. If new lines are added to a log monitored by "
+"You can use <application>System Log Viewer</application> to monitor logs. By "
+"default, all logs opened in <application>System Log Viewer</application> are "
+"monitored for changes. If new lines are added to a log monitored by "
 "<application>System Log Viewer</application>, the log name will appear in "
 "bold in the log list. If the log is currently displayed in the main area, "
 "the new lines will appear automatically at the end of the log and, after "
@@ -611,8 +496,8 @@ msgstr ""
 #: C/index.docbook:366
 msgid ""
 "The status bar can be displayed or hidden using the "
-"<menuchoice><guimenu>View</guimenu><guimenuitem>Statusbar</guimenuitem></menuchoice>"
-" option."
+"<menuchoice><guimenu>View</guimenu><guimenuitem>Statusbar</guimenuitem></"
+"menuchoice> option."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -623,8 +508,8 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: C/index.docbook:373
 msgid ""
-"To close a log, choose "
-"<menuchoice><guimenu>File</guimenu><guimenuitem>Close</guimenuitem></menuchoice>."
+"To close a log, choose <menuchoice><guimenu>File</"
+"guimenu><guimenuitem>Close</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -636,7 +521,8 @@ msgstr ""
 #: C/index.docbook:380
 msgid ""
 "To exit <application>System Log Viewer</application>, choose "
-"<menuchoice><guimenu>File</guimenu><guimenuitem>Quit</guimenuitem></menuchoice>."
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Quit</guimenuitem></"
+"menuchoice>."
 msgstr ""
 
 #. (itstool) path: para/ulink
@@ -650,14 +536,125 @@ msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
-" of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
 "with this manual."
 msgstr ""
 "Permission vous est donnée de copier, distribuer et/ou modifier ce document "
 "selon les termes de la Licence GNU Free Documentation License, Version 1.1 "
 "ou ultérieure publiée par la Free Software Foundation sans section "
 "inaltérable, sans texte de première page de couverture ni texte de dernière "
-"page de couverture. Vous trouverez un exemplaire de cette licence en suivant"
-" ce <_:ulink-1/> ou dans le fichier COPYING-DOCS fourni avec le présent "
+"page de couverture. Vous trouverez un exemplaire de cette licence en suivant "
+"ce <_:ulink-1/> ou dans le fichier COPYING-DOCS fourni avec le présent "
 "manuel."
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:12
+msgid ""
+"This manual is part of a collection of CAFE manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
+msgstr ""
+"Ce manuel fait partie de la collection de manuels CAFE distribués selon les "
+"termes de la licence de documentation libre GNU. Si vous souhaitez "
+"distribuer ce manuel indépendamment de la collection, vous devez joindre un "
+"exemplaire de la licence au document, comme indiqué dans la section 6 de "
+"celle-ci."
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:19
+msgid ""
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
+msgstr ""
+"La plupart des noms utilisés par les entreprises pour distinguer leurs "
+"produits et services sont des marques déposées. Lorsque ces noms "
+"apparaissent dans la documentation CAFE et que les membres du projet de "
+"Documentation CAFE sont informés de l'existence de ces marques déposées, "
+"soit ces noms entiers, soit leur première lettre est en majuscule."
+
+#. (itstool) path: listitem/para
+#: C/legal.xml:35
+msgid ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr ""
+"LE PRÉSENT DOCUMENT EST FOURNI « TEL QUEL », SANS AUCUNE GARANTIE, EXPRESSE "
+"OU IMPLICITE, Y COMPRIS, ET SANS LIMITATION, LES GARANTIES DE BONNE QUALITÉ "
+"MARCHANDE OU D'APTITUDE À UN EMPLOI PARTICULIER OU AUTORISÉ DU DOCUMENT OU "
+"DE SA VERSION MODIFIÉE. L'UTILISATEUR ASSUME TOUT RISQUE RELATIF À LA "
+"QUALITÉ, À LA PERTINENCE ET À LA PERFORMANCE DU DOCUMENT OU DE SA VERSION DE "
+"MISE À JOUR. SI LE DOCUMENT OU SA VERSION MODIFIÉE S'AVÉRAIT DÉFECTUEUSE, "
+"L'UTILISATEUR (ET NON LE RÉDACTEUR INITIAL, L'AUTEUR, NI TOUT AUTRE "
+"PARTICIPANT) ENDOSSERA LES COÛTS DE TOUTE INTERVENTION, RÉPARATION OU "
+"CORRECTION NÉCESSAIRE. CETTE DÉNÉGATION DE RESPONSABILITÉ CONSTITUE UNE "
+"PARTIE ESSENTIELLE DE CETTE LICENCE. AUCUNE UTILISATION DE CE DOCUMENT OU DE "
+"SA VERSION MODIFIÉE N'EST AUTORISÉE AUX TERMES DU PRÉSENT ACCORD, EXCEPTÉ "
+"SOUS CETTE DÉNÉGATION DE RESPONSABILITÉ ; "
+
+#. (itstool) path: listitem/para
+#: C/legal.xml:55
+msgid ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
+msgstr ""
+"EN AUCUNE CIRCONSTANCE ET SOUS AUCUNE INTERPRÉTATION DE LA LOI, QU'IL "
+"S'AGISSE DE RESPONSABILITÉ CIVILE (Y COMPRIS LA NÉGLIGENCE), CONTRACTUELLE "
+"OU AUTRE, L'AUTEUR, LE RÉDACTEUR INITIAL, TOUT PARTICIPANT ET TOUT "
+"DISTRIBUTEUR DE CE DOCUMENT OU DE SA VERSION DE MISE À JOUR AINSI QUE TOUT "
+"FOURNISSEUR DE QUELQUE PARTIE QUE CE SOIT NE POURRONT ÊTRE TENUS "
+"RESPONSABLES À L'ÉGARD DE QUICONQUE POUR TOUT DOMMAGE DIRECT, INDIRECT, "
+"PARTICULIER OU ACCIDENTEL DE TOUT TYPE Y COMPRIS, SANS LIMITATION, LES "
+"DOMMAGES LIÉS À LA PERTE DE CLIENTÈLE, AUX ARRÊTS DE TRAVAIL, AUX "
+"DÉFAILLANCES ET AUX DYSFONCTIONNEMENTS INFORMATIQUES OU TOUT AUTRE DOMMAGE "
+"OU PERTE LIÉE À L'UTILISATION DU PRÉSENT DOCUMENT ET DE SES VERSIONS DE MISE "
+"À JOUR, ET CE MÊME SI CES PARTIES ONT ÉTÉ INFORMÉES DE LA POSSIBILITÉ DE "
+"TELS DOMMAGES."
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:28
+msgid ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<_:orderedlist-1/>"
+msgstr ""
+"CE DOCUMENT ET SES VERSIONS MODIFIEES SONT FOURNIS SELON LES TERMES DE LA "
+"LICENCE GNU FREE DOCUMENTATION EN COMPRENANT QUE : <_:orderedlist-1/>"
+
+#~ msgid ""
+#~ "Permission is granted to copy, distribute and/or modify this document "
+#~ "under the terms of the GNU Free Documentation License (GFDL), Version 1.1 "
+#~ "or any later version published by the Free Software Foundation with no "
+#~ "Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You "
+#~ "can find a copy of the GFDL at this <ulink type=\"help\" url=\"help:"
+#~ "fdl\">link</ulink> or in the file COPYING-DOCS distributed with this "
+#~ "manual."
+#~ msgstr ""
+#~ "Permission vous est donnée de copier, distribuer et/ou modifier ce "
+#~ "document selon les termes de la Licence GNU Free Documentation License, "
+#~ "Version 1.1 ou ultérieure publiée par la Free Software Foundation sans "
+#~ "section inaltérable, sans texte de première page de couverture ni texte "
+#~ "de dernière page de couverture. Vous trouverez un exemplaire de cette "
+#~ "licence en suivant ce <ulink type=\"help\" url=\"help:fdl\">lien</ulink> "
+#~ "ou dans le fichier COPYING-DOCS fourni avec le présent manuel."

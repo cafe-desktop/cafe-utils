@@ -4,19 +4,22 @@
 # Микола Ткач <chistomov@gmail.com>, 2018
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019
 # Vlad - <priv4417@gmail.com>, 2019
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-13 16:47+0100\n"
+"POT-Creation-Date: 2023-11-20 09:33+0100\n"
 "PO-Revision-Date: 2018-09-14 23:21+0000\n"
 "Last-Translator: Vlad - <priv4417@gmail.com>, 2019\n"
 "Language-Team: Ukrainian (https://www.transifex.com/cafe/teams/13566/uk/)\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk\n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -37,8 +40,8 @@ msgid ""
 "System Log Viewer is a graphical user interface to view and monitor system "
 "log files."
 msgstr ""
-"Програма перегляду системних журналів — це графічний інтерфейс для перегляду"
-" й відстеження змін у файлах системних журналів."
+"Програма перегляду системних журналів — це графічний інтерфейс для перегляду "
+"й відстеження змін у файлах системних журналів."
 
 #. (itstool) path: articleinfo/copyright
 #: C/index.docbook:30
@@ -68,115 +71,6 @@ msgstr "Проєкт документування CAFE"
 #: C/index.docbook:182 C/index.docbook:192
 msgid "GNOME Documentation Project"
 msgstr "Проєкт документації GNOME"
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:2
-msgid ""
-"Permission is granted to copy, distribute and/or modify this document under "
-"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
-"later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
-" of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
-msgstr ""
-"Дозволяється копіювати, розповсюджувати і/або змінювати цей документ на "
-"умовах ліцензії GNU Free Documentation License (GFDL), версії 1.1 або будь-"
-"якої пізнішої версії, оголошеній Фундацією вільного програмного забезпечення"
-" (Free Software Foundation), без незмінюваних частин та без текстів на "
-"обкладинках. Ви можете знайти копію ліцензії GFDL за цим <ulink "
-"type=\"help\" url=\"help:fdl\">посиланням</ulink> або у файлі COPYING-DOCS, "
-"розповсюджуваним з цим документом."
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:12 C/legal.xml:12
-msgid ""
-"This manual is part of a collection of CAFE manuals distributed under the "
-"GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in"
-" section 6 of the license."
-msgstr ""
-"Цей посібник є частиною збірки документації CAFE, яка розповсюджується на "
-"умовах ліцензії GFDL. Якщо ви бажаєте розповсюджувати цей посібник окремо "
-"від збірки, можете це зробити додавши до нього копію ліцензії, як описано в "
-"пункті 6 ліцензії."
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:19 C/legal.xml:19
-msgid ""
-"Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any CAFE "
-"documentation, and the members of the CAFE Documentation Project are made "
-"aware of those trademarks, then the names are in capital letters or initial "
-"capital letters."
-msgstr ""
-"Деякі назви, які використовуються компаніями для розповсюдження своїх "
-"продуктів та послуг є торговими марками. Якщо такі назви зустрічаються в "
-"документації CAFE і учасникам проєкту документування CAFE відомо, що вони є "
-"торговими марками, тоді ці назви виділяться великими літерами або "
-"починаються з великої літери."
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:35 C/legal.xml:35
-msgid ""
-"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
-"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
-"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
-"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
-"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
-"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
-"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
-"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
-"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
-"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
-"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
-msgstr ""
-"ДОКУМЕНТ НАДАЄТЬСЯ \\\"ЯК Є\\\", БЕЗ БУДЬ-ЯКИХ ГАРАНТІЇ, ЯВНИХ ЧИ НЕЯВНИХ, "
-"ВКЛЮЧАЮЧИ, АЛЕ НЕ ОБМЕЖУЮЧИСЬ, ГАРАНТІЙ ЩО ЦЕЙ ДОКУМЕНТ ЧИ ЗМІНЕНА ВЕРСІЯ "
-"ДОКУМЕНТА ВІЛЬНІ ВІД ДЕФЕКТІВ, ПРИДАТНІ ДО ПРОДАЖУ, ВІДПОВІДАЮТЬ ПЕВНІЙ МЕТІ"
-" АБО НЕ ПОРУШУЮТЬ ЧИЇСЬ ПРАВА. ВЕСЬ РИЗИК ЗА ЯКІСТЬ, ТОЧНІСТЬ, ТА ЧИННІСТЬ "
-"ЦЬОГО ДОКУМЕНТУ АБО ЙОГО ЗМІНЕНИХ ВЕРСІЙ ЛЕЖИТЬ НА ВАС.  ЯКЩО БУДЬ-ЯКИЙ "
-"ДОКУМЕНТ ЧИ ЗМІНЕНА ВЕРСІЯ БУДУТЬ ВИЗНАНІ ДЕФЕКТНИМИ У БУДЬ-ЯКОМУ "
-"ВІДНОШЕННІ, ВИ (НЕ ПОЧАТКОВИЙ УКЛАДАЧ, АВТОР АБО БУДЬ-ЯКИЙ СПІВАВТОР) БЕРЕТЕ"
-" НА СЕБЕ ВИТРАТИ ЗА БУДЬ-ЯКЕ НЕОБХІДНЕ ОБСЛУГОВУВАННЯ, РЕМОНТ ЧИ "
-"ВИПРАВЛЕННЯ. ЦЯ ВІДМОВА ВІД ГАРАНТІЙ СКЛАДАЄ ВАЖЛИВУ ЧАСТИНУ ЦІЄЇ ЛІЦЕНЗІЇ. "
-"НЕ ДОПУСКАЄТЬСЯ ВИКОРИСТАННЯ ЦЬОГО ДОКУМЕНТУ АБО ЙОГО ЗМІНЕНОЇ ВЕРСІЇ БЕЗ "
-"ПРИЙНЯТТЯ ЦІЄЇ ВІДМОВИ; ТА"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:55 C/legal.xml:55
-msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
-" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
-"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
-"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
-"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
-"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
-" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
-" POSSIBILITY OF SUCH DAMAGES."
-msgstr ""
-"НІ ЗА ЯКИХ ОБСТАВИН ТА ЗА БУДЬ-ЯКОГО ЗАКОНОДАВСТВА, ЧИ ТО ГРОМАДЯНСЬКОЇ "
-"ВІДПОВІДАЛЬНОСТІ (ВКЛЮЧАЮЧИ ХАЛАТНІСТЬ), ДОГОВОРУ, ЧИ ЧОГОСЬ ІНШОГО, АВТОР, "
-"ПОЧАТКОВИЙ УКЛАДАЧ, БУДЬ-ЯКИЙ СПІВАВТОР, АБО ДИСТРИБ'ЮТОР ДОКУМЕНТУ ЧИ "
-"ЗМІНЕНОЇ ВЕРСІЇ ДОКУМЕНТУ, АБО БУДЬ-ЯКИЙ ПОСТАЧАЛЬНИК БУДЬ-ЯКОЇ З ЦИХ "
-"СТОРІН, НЕ НЕСЕ ВІДПОВІДАЛЬНІСТЬ ПЕРЕД БУДЬ-ЯКОЮ ОСОБОЮ ЗА БУДЬ-ЯКІ ПРЯМІ, "
-"НЕПРЯМІ, ОСОБЛИВІ, ВИПАДКОВІ, АБО ІСТОТНІ ЗБИТКИ БУДЬ-ЯКОГО ХАРАКТЕРУ "
-"ВКЛЮЧАЮЧИ, АЛЕ НЕ ОБМЕЖУЮЧИСЬ, ЗБИТКАМИ ВІД ВТРАТИ ПРЕСТИЖУ, ЗУПИНКИ РОБОТИ,"
-" ЗБОЇВ АБО НЕСПРАВНОСТЕЙ КОМП'ЮТЕРА, АБО БУДЬ-ЯКІ ІНШІ ЗБИТКИ АБО ВТРАТИ ЩО "
-"ВИНИКЛИ БЕЗВІДНОСНО АБО ВНАСЛІДОК ВИКОРИСТАННЯ ЦЬОГО ДОКУМЕНТУ ТА ЗМІНЕНИХ "
-"ВЕРСІЙ ЦЬОГО ДОКУМЕНТУ, НАВІТЬ ЯКЩО ЦІ СТОРОНИ, МОЖЛИВО, БУЛИ ПРОІНФОРМОВАНІ"
-" ПРО МОЖЛИВІСТЬ ТАКИХ ЗБИТКІВ."
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:28 C/legal.xml:28
-msgid ""
-"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
-"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<_:orderedlist-1/>"
-msgstr ""
-"ДОКУМЕНТ Й ЗМІНЕНІ ВЕРСІЇ ДОКУМЕНТУ НАДАЮТЬСЯ ЗА УМОВАМИ ЛІЦЕНЗІЇ "
-"БЕЗКОШТОВНОЇ ДОКУМЕНТАЦІЇ GNU З РОЗУМІННЯМ ЩО: <_:orderedlist-1/>"
 
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:60
@@ -210,8 +104,8 @@ msgstr ""
 #: C/index.docbook:84
 msgid ""
 "<firstname>Paul</firstname> <surname>Cutler</surname> <affiliation> "
-"<orgname>GNOME Documentation Team</orgname> <address> "
-"<email>pcutler@gnome.org</email> </address> </affiliation>"
+"<orgname>GNOME Documentation Team</orgname> <address> <email>pcutler@gnome."
+"org</email> </address> </affiliation>"
 msgstr ""
 "<firstname>Пол</firstname> <surname>Катлер</surname> <affiliation> "
 "<orgname>Команда документування GNOME</orgname> <address> "
@@ -234,11 +128,11 @@ msgstr "Вольфґанґ Ульбріх"
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:116
 msgid ""
-"<revnumber>System Log Viewer Manual V1.10</revnumber> <date>July 2015</date>"
-" <_:revdescription-1/>"
+"<revnumber>System Log Viewer Manual V1.10</revnumber> <date>July 2015</date> "
+"<_:revdescription-1/>"
 msgstr ""
-"<revnumber>Керівництво по Програмі перегляду системних журналів "
-"V1.10</revnumber> <date>Липень 2015</date> <_:revdescription-1/>"
+"<revnumber>Керівництво по Програмі перегляду системних журналів V1.10</"
+"revnumber> <date>Липень 2015</date> <_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:129
@@ -248,11 +142,11 @@ msgstr "Пол Катлер <email>pcutler@gnome.org</email>"
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:125
 msgid ""
-"<revnumber>System Log Viewer Manual V2.5</revnumber> <date>October "
-"2009</date> <_:revdescription-1/>"
+"<revnumber>System Log Viewer Manual V2.5</revnumber> <date>October 2009</"
+"date> <_:revdescription-1/>"
 msgstr ""
-"<revnumber>Керівництво по Програмі перегляду системних журналів "
-"V2.5</revnumber> <date>Жовтень 2009</date> <_:revdescription-1/>"
+"<revnumber>Керівництво по Програмі перегляду системних журналів V2.5</"
+"revnumber> <date>Жовтень 2009</date> <_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:139
@@ -262,11 +156,11 @@ msgstr "Вінсент Ноель <email>vincent.noel@gmail.com</email>"
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:135
 msgid ""
-"<revnumber>System Log Viewer Manual V2.4</revnumber> <date>October "
-"2005</date> <_:revdescription-1/>"
+"<revnumber>System Log Viewer Manual V2.4</revnumber> <date>October 2005</"
+"date> <_:revdescription-1/>"
 msgstr ""
-"<revnumber>Керівництво по Програмі перегляду системних журналів "
-"V2.4</revnumber> <date>Жовтень 2005</date> <_:revdescription-1/>"
+"<revnumber>Керівництво по Програмі перегляду системних журналів V2.4</"
+"revnumber> <date>Жовтень 2005</date> <_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:149 C/index.docbook:159 C/index.docbook:169
@@ -277,20 +171,20 @@ msgstr ""
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:145
 msgid ""
-"<revnumber>System Log Viewer Manual V2.3</revnumber> <date>October "
-"2002</date> <_:revdescription-1/>"
+"<revnumber>System Log Viewer Manual V2.3</revnumber> <date>October 2002</"
+"date> <_:revdescription-1/>"
 msgstr ""
-"<revnumber>Керівництво по Програмі перегляду системних журналів "
-"V2.3</revnumber> <date>Жовтень 2002</date> <_:revdescription-1/>"
+"<revnumber>Керівництво по Програмі перегляду системних журналів V2.3</"
+"revnumber> <date>Жовтень 2002</date> <_:revdescription-1/>"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:155
 msgid ""
-"<revnumber>System Log Viewer Manual V2.2</revnumber> <date>August "
-"2002</date> <_:revdescription-1/>"
+"<revnumber>System Log Viewer Manual V2.2</revnumber> <date>August 2002</"
+"date> <_:revdescription-1/>"
 msgstr ""
-"<revnumber>Керівництво по Програмі перегляду системних журналів "
-"V2.2</revnumber> <date>Серпень 2002</date> <_:revdescription-1/>"
+"<revnumber>Керівництво по Програмі перегляду системних журналів V2.2</"
+"revnumber> <date>Серпень 2002</date> <_:revdescription-1/>"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:165
@@ -298,8 +192,8 @@ msgid ""
 "<revnumber>System Log Viewer Manual V2.1</revnumber> <date>July 2002</date> "
 "<_:revdescription-1/>"
 msgstr ""
-"<revnumber>Керівництво по Програмі перегляду системних журналів "
-"V2.1</revnumber> <date>Липень 2002</date> <_:revdescription-1/>"
+"<revnumber>Керівництво по Програмі перегляду системних журналів V2.1</"
+"revnumber> <date>Липень 2002</date> <_:revdescription-1/>"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:175
@@ -307,8 +201,8 @@ msgid ""
 "<revnumber>System Log Viewer Manual V2.0</revnumber> <date>May 2002</date> "
 "<_:revdescription-1/>"
 msgstr ""
-"<revnumber>Керівництво по Програмі перегляду системних журналів "
-"V2.0</revnumber> <date>Травень 2002</date> <_:revdescription-1/>"
+"<revnumber>Керівництво по Програмі перегляду системних журналів V2.0</"
+"revnumber> <date>Травень 2002</date> <_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
 #: C/index.docbook:189
@@ -318,8 +212,7 @@ msgstr "Джудіт Самсон <email>judith@samsonsource.com</email>"
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:185
 msgid ""
-"<revnumber>Logview Manual</revnumber> <date>2000</date> "
-"<_:revdescription-1/>"
+"<revnumber>Logview Manual</revnumber> <date>2000</date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: articleinfo/releaseinfo
@@ -337,11 +230,11 @@ msgstr "Зворотній зв'язок"
 #: C/index.docbook:201
 msgid ""
 "To report a bug or make a suggestion regarding the System Log Viewer "
-"application or this manual, follow the directions in the <ulink url=\"help"
-":cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
+"application or this manual, follow the directions in the <ulink url=\"help:"
+"cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
-"Щоб повідомити про помилку або внести пропозицію стосовно Програми перегляду"
-" системних журналів або цього керівництва, дотримуйтеся вказівок на <ulink "
+"Щоб повідомити про помилку або внести пропозицію стосовно Програми перегляду "
+"системних журналів або цього керівництва, дотримуйтеся вказівок на <ulink "
 "url=\"help:cafe-user-guide/feedback\" type=\"help\">Сторінці зворотнього "
 "зв'язку CAFE</ulink>."
 
@@ -360,8 +253,8 @@ msgstr "Вступ"
 msgid ""
 "<application>System Log Viewer</application> is a graphical, menu-driven "
 "viewer that you can use to view and monitor your system logs. "
-"<application>System Log Viewer</application> comes with a few functions that"
-" can help you manage your logs, including a log monitor and log statistics "
+"<application>System Log Viewer</application> comes with a few functions that "
+"can help you manage your logs, including a log monitor and log statistics "
 "display."
 msgstr ""
 "<application>Програма перегляду системних журналів</application> — це "
@@ -383,8 +276,8 @@ msgstr ""
 "<application>Програма перегляду системних журналів</application> буде "
 "корисна новачкам в адмініструванні системи, оскільки забезпечує простий, "
 "більш зручний для користувача показ журналів, ніж перегляд файлу журналу у "
-"вигляді звичайного тексту. Вона корисна й більш досвідченим адміністраторам,"
-" оскільки містить монітор для постійного відстеження ключових системних "
+"вигляді звичайного тексту. Вона корисна й більш досвідченим адміністраторам, "
+"оскільки містить монітор для постійного відстеження ключових системних "
 "журналів."
 
 #. (itstool) path: warning/para
@@ -422,9 +315,9 @@ msgid ""
 "Choose <menuchoice><guisubmenu>System Tools</guisubmenu><guimenuitem>Log "
 "File Viewer</guimenuitem></menuchoice>."
 msgstr ""
-"Виберіть <menuchoice><guisubmenu>Системні "
-"засоби</guisubmenu><guimenuitem>Програма перегляду "
-"журналів</guimenuitem></menuchoice>."
+"Виберіть <menuchoice><guisubmenu>Системні засоби</"
+"guisubmenu><guimenuitem>Програма перегляду журналів</guimenuitem></"
+"menuchoice>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:256
@@ -436,8 +329,8 @@ msgstr "Командний рядок"
 msgid ""
 "Type <command>cafe-system-log</command>, then press <keycap>Return</keycap>."
 msgstr ""
-"Наберіть <command>cafe-system-log</command>, та натисніть "
-"<keycap>Enter</keycap>."
+"Наберіть <command>cafe-system-log</command>, та натисніть <keycap>Enter</"
+"keycap>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:265
@@ -445,8 +338,8 @@ msgid ""
 "When you start <application>System Log Viewer</application>, the following "
 "window is displayed."
 msgstr ""
-"Після запуску <application>Програми перегляду системних "
-"журналів</application>, з'являється наступне вікно."
+"Після запуску <application>Програми перегляду системних журналів</"
+"application>, з'являється наступне вікно."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:269
@@ -471,29 +364,29 @@ msgstr ""
 #: C/index.docbook:271
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/syslog_window.png\" "
-"format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows System Log Viewer"
-" main window. Contains menubar, display area, scrollbars, and statusbar. "
-"</phrase> </textobject>"
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows System Log Viewer "
+"main window. Contains menubar, display area, scrollbars, and statusbar. </"
+"phrase> </textobject>"
 msgstr ""
 "<imageobject> <imagedata fileref=\"figures/syslog_window.png\" "
-"format=\"PNG\"/> </imageobject> <textobject> <phrase>Показывает главное окно"
-" Программы просмотра системных журналов, содержащее строку меню, область "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Показывает главное окно "
+"Программы просмотра системных журналов, содержащее строку меню, область "
 "отображения, полосы прокрутки и строку состояния. </phrase> </textobject>"
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:282
 msgid ""
 "The first time you start <application>System Log Viewer</application>, the "
-"application displays several log files by default (such as "
-"<filename>/var/log/messages</filename>). Opened logs are listed on the left "
-"side of the application window. The log selected in this list is displayed "
-"in the main area of the application window."
+"application displays several log files by default (such as <filename>/var/"
+"log/messages</filename>). Opened logs are listed on the left side of the "
+"application window. The log selected in this list is displayed in the main "
+"area of the application window."
 msgstr ""
-"При першому запуску <application>Програми перегляду системних "
-"журналів</application>приложение по умолчанию показывает несколько файлов "
-"журналов (таких как <filename>/var/log/messages</filename>). Открытые "
-"журналы перечислены с левой стороны окна приложения. Содержимое выбранного в"
-" списке журнала отображается в главной области окна приложения."
+"При першому запуску <application>Програми перегляду системних журналів</"
+"application>приложение по умолчанию показывает несколько файлов журналов "
+"(таких как <filename>/var/log/messages</filename>). Открытые журналы "
+"перечислены с левой стороны окна приложения. Содержимое выбранного в списке "
+"журнала отображается в главной области окна приложения."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:290
@@ -519,26 +412,25 @@ msgstr "Щоб переглянути журнал"
 #. (itstool) path: sect2/para
 #: C/index.docbook:303
 msgid ""
-"To view a log, choose "
-"<menuchoice><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></menuchoice>."
-" In the <guilabel>Open Log</guilabel> dialog, select the log that you want "
-"to open, then click <guibutton>Open</guibutton>. Use the scrollbars to "
-"scroll through the log."
+"To view a log, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open</"
+"guimenuitem></menuchoice>. In the <guilabel>Open Log</guilabel> dialog, "
+"select the log that you want to open, then click <guibutton>Open</"
+"guibutton>. Use the scrollbars to scroll through the log."
 msgstr ""
-"Для перегляду журналу виберіть "
-"<menuchoice><guimenu>Файл</guimenu><guimenuitem>Відкрити</guimenuitem></menuchoice>."
-" У діялоґовому вікні <guilabel>Відкрити журнал</guilabel> виберіть потрібний"
-" журнал та натисніть <guibutton>Відкрити</guibutton>. Використовуйте смуги "
-"гортання для переміщення по журналу."
+"Для перегляду журналу виберіть <menuchoice><guimenu>Файл</"
+"guimenu><guimenuitem>Відкрити</guimenuitem></menuchoice>. У діялоґовому "
+"вікні <guilabel>Відкрити журнал</guilabel> виберіть потрібний журнал та "
+"натисніть <guibutton>Відкрити</guibutton>. Використовуйте смуги гортання для "
+"переміщення по журналу."
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:309
 msgid ""
-"You can open as many logs as you want. <application>System Log "
-"Viewer</application> displays one log at a time in the <guilabel>System Log "
-"Viewer</guilabel> window. Opened logs are listed on the left side of the "
-"application window. The log selected in this list is displayed in the main "
-"area of the application window. To display another log already opened in "
+"You can open as many logs as you want. <application>System Log Viewer</"
+"application> displays one log at a time in the <guilabel>System Log Viewer</"
+"guilabel> window. Opened logs are listed on the left side of the application "
+"window. The log selected in this list is displayed in the main area of the "
+"application window. To display another log already opened in "
 "<application>System Log Viewer</application>, select it in the log list."
 msgstr ""
 
@@ -557,13 +449,13 @@ msgstr "Щоб копіювати рядки журналу до буфера о
 #. (itstool) path: sect2/para
 #: C/index.docbook:323
 msgid ""
-"To copy one or more log lines to the clipboard, just select the lines in the"
-" main area and choose the "
-"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy</guimenuitem></menuchoice>"
-" menu option. If you want to copy the entire log to the clipboard, select it"
-" entirely using the <menuchoice><guimenu>Edit</guimenu><guimenuitem>Select "
-"All</guimenuitem></menuchoice> menu option, then choose "
-"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy</guimenuitem></menuchoice>."
+"To copy one or more log lines to the clipboard, just select the lines in the "
+"main area and choose the <menuchoice><guimenu>Edit</"
+"guimenu><guimenuitem>Copy</guimenuitem></menuchoice> menu option. If you "
+"want to copy the entire log to the clipboard, select it entirely using the "
+"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Select All</guimenuitem></"
+"menuchoice> menu option, then choose <menuchoice><guimenu>Edit</"
+"guimenu><guimenuitem>Copy</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -575,13 +467,12 @@ msgstr "Приховуваня бічної панелі"
 #: C/index.docbook:336
 msgid ""
 "To hide the left sidebar, which contains the log list and calendar, just "
-"select the <menuchoice><guimenu>View</guimenu><guimenuitem>Side "
-"pane</guimenuitem></menuchoice> menu option."
+"select the <menuchoice><guimenu>View</guimenu><guimenuitem>Side pane</"
+"guimenuitem></menuchoice> menu option."
 msgstr ""
 "Для приховування бічної панелі, що містить перелік журналів і календар, "
-"просто виберіть в меню "
-"<menuchoice><guimenu>Вигляд</guimenu><guimenuitem>Бічна "
-"панель</guimenuitem></menuchoice>."
+"просто виберіть в меню <menuchoice><guimenu>Вигляд</"
+"guimenu><guimenuitem>Бічна панель</guimenuitem></menuchoice>."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:343
@@ -591,9 +482,9 @@ msgstr "Моніторинг журналів"
 #. (itstool) path: sect2/para
 #: C/index.docbook:344
 msgid ""
-"You can use <application>System Log Viewer</application> to monitor logs. By"
-" default, all logs opened in <application>System Log Viewer</application> "
-"are monitored for changes. If new lines are added to a log monitored by "
+"You can use <application>System Log Viewer</application> to monitor logs. By "
+"default, all logs opened in <application>System Log Viewer</application> are "
+"monitored for changes. If new lines are added to a log monitored by "
 "<application>System Log Viewer</application>, the log name will appear in "
 "bold in the log list. If the log is currently displayed in the main area, "
 "the new lines will appear automatically at the end of the log and, after "
@@ -629,8 +520,8 @@ msgstr "Дата останньої зміни журналу."
 #: C/index.docbook:366
 msgid ""
 "The status bar can be displayed or hidden using the "
-"<menuchoice><guimenu>View</guimenu><guimenuitem>Statusbar</guimenuitem></menuchoice>"
-" option."
+"<menuchoice><guimenu>View</guimenu><guimenuitem>Statusbar</guimenuitem></"
+"menuchoice> option."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -641,11 +532,11 @@ msgstr "Щоб закрити журнал"
 #. (itstool) path: sect2/para
 #: C/index.docbook:373
 msgid ""
-"To close a log, choose "
-"<menuchoice><guimenu>File</guimenu><guimenuitem>Close</guimenuitem></menuchoice>."
+"To close a log, choose <menuchoice><guimenu>File</"
+"guimenu><guimenuitem>Close</guimenuitem></menuchoice>."
 msgstr ""
-"Щоб закрити журнал, виберіть "
-"<menuchoice><guimenu>Файл</guimenu><guimenuitem>Закрити</guimenuitem></menuchoice>."
+"Щоб закрити журнал, виберіть <menuchoice><guimenu>Файл</"
+"guimenu><guimenuitem>Закрити</guimenuitem></menuchoice>."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:379
@@ -656,11 +547,12 @@ msgstr "Завершення роботи з Програмою перегляд
 #: C/index.docbook:380
 msgid ""
 "To exit <application>System Log Viewer</application>, choose "
-"<menuchoice><guimenu>File</guimenu><guimenuitem>Quit</guimenuitem></menuchoice>."
+"<menuchoice><guimenu>File</guimenu><guimenuitem>Quit</guimenuitem></"
+"menuchoice>."
 msgstr ""
-"Щоб вийти з <application>Програми перегляду системних "
-"журналів</application>, виберіть "
-"<menuchoice><guimenu>Файл</guimenu><guimenuitem>Вийти</guimenuitem></menuchoice>."
+"Щоб вийти з <application>Програми перегляду системних журналів</"
+"application>, виберіть <menuchoice><guimenu>Файл</"
+"guimenu><guimenuitem>Вийти</guimenuitem></menuchoice>."
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
@@ -673,8 +565,8 @@ msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
-" of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
 "with this manual."
 msgstr ""
 "Дозволяється копіювати, розповсюджувати і / або змінювати цей документ у "
@@ -683,3 +575,111 @@ msgstr ""
 "програмного забезпечення без будь-яких інваріянтних розділів, без додавання "
 "тексту на початку або в кінці. Ви можете знайти копію GFDL тут <_:ulink-1/> "
 "або у файлі COPYING-DOCS, розповсюджуваному разом з цим керівництвом."
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:12
+msgid ""
+"This manual is part of a collection of CAFE manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
+msgstr ""
+"Цей посібник є частиною збірки документації CAFE, яка розповсюджується на "
+"умовах ліцензії GFDL. Якщо ви бажаєте розповсюджувати цей посібник окремо "
+"від збірки, можете це зробити додавши до нього копію ліцензії, як описано в "
+"пункті 6 ліцензії."
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:19
+msgid ""
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
+msgstr ""
+"Деякі назви, які використовуються компаніями для розповсюдження своїх "
+"продуктів та послуг є торговими марками. Якщо такі назви зустрічаються в "
+"документації CAFE і учасникам проєкту документування CAFE відомо, що вони є "
+"торговими марками, тоді ці назви виділяться великими літерами або "
+"починаються з великої літери."
+
+#. (itstool) path: listitem/para
+#: C/legal.xml:35
+msgid ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr ""
+"ДОКУМЕНТ НАДАЄТЬСЯ \\\"ЯК Є\\\", БЕЗ БУДЬ-ЯКИХ ГАРАНТІЇ, ЯВНИХ ЧИ НЕЯВНИХ, "
+"ВКЛЮЧАЮЧИ, АЛЕ НЕ ОБМЕЖУЮЧИСЬ, ГАРАНТІЙ ЩО ЦЕЙ ДОКУМЕНТ ЧИ ЗМІНЕНА ВЕРСІЯ "
+"ДОКУМЕНТА ВІЛЬНІ ВІД ДЕФЕКТІВ, ПРИДАТНІ ДО ПРОДАЖУ, ВІДПОВІДАЮТЬ ПЕВНІЙ МЕТІ "
+"АБО НЕ ПОРУШУЮТЬ ЧИЇСЬ ПРАВА. ВЕСЬ РИЗИК ЗА ЯКІСТЬ, ТОЧНІСТЬ, ТА ЧИННІСТЬ "
+"ЦЬОГО ДОКУМЕНТУ АБО ЙОГО ЗМІНЕНИХ ВЕРСІЙ ЛЕЖИТЬ НА ВАС.  ЯКЩО БУДЬ-ЯКИЙ "
+"ДОКУМЕНТ ЧИ ЗМІНЕНА ВЕРСІЯ БУДУТЬ ВИЗНАНІ ДЕФЕКТНИМИ У БУДЬ-ЯКОМУ "
+"ВІДНОШЕННІ, ВИ (НЕ ПОЧАТКОВИЙ УКЛАДАЧ, АВТОР АБО БУДЬ-ЯКИЙ СПІВАВТОР) БЕРЕТЕ "
+"НА СЕБЕ ВИТРАТИ ЗА БУДЬ-ЯКЕ НЕОБХІДНЕ ОБСЛУГОВУВАННЯ, РЕМОНТ ЧИ ВИПРАВЛЕННЯ. "
+"ЦЯ ВІДМОВА ВІД ГАРАНТІЙ СКЛАДАЄ ВАЖЛИВУ ЧАСТИНУ ЦІЄЇ ЛІЦЕНЗІЇ. НЕ "
+"ДОПУСКАЄТЬСЯ ВИКОРИСТАННЯ ЦЬОГО ДОКУМЕНТУ АБО ЙОГО ЗМІНЕНОЇ ВЕРСІЇ БЕЗ "
+"ПРИЙНЯТТЯ ЦІЄЇ ВІДМОВИ; ТА"
+
+#. (itstool) path: listitem/para
+#: C/legal.xml:55
+msgid ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
+msgstr ""
+"НІ ЗА ЯКИХ ОБСТАВИН ТА ЗА БУДЬ-ЯКОГО ЗАКОНОДАВСТВА, ЧИ ТО ГРОМАДЯНСЬКОЇ "
+"ВІДПОВІДАЛЬНОСТІ (ВКЛЮЧАЮЧИ ХАЛАТНІСТЬ), ДОГОВОРУ, ЧИ ЧОГОСЬ ІНШОГО, АВТОР, "
+"ПОЧАТКОВИЙ УКЛАДАЧ, БУДЬ-ЯКИЙ СПІВАВТОР, АБО ДИСТРИБ'ЮТОР ДОКУМЕНТУ ЧИ "
+"ЗМІНЕНОЇ ВЕРСІЇ ДОКУМЕНТУ, АБО БУДЬ-ЯКИЙ ПОСТАЧАЛЬНИК БУДЬ-ЯКОЇ З ЦИХ "
+"СТОРІН, НЕ НЕСЕ ВІДПОВІДАЛЬНІСТЬ ПЕРЕД БУДЬ-ЯКОЮ ОСОБОЮ ЗА БУДЬ-ЯКІ ПРЯМІ, "
+"НЕПРЯМІ, ОСОБЛИВІ, ВИПАДКОВІ, АБО ІСТОТНІ ЗБИТКИ БУДЬ-ЯКОГО ХАРАКТЕРУ "
+"ВКЛЮЧАЮЧИ, АЛЕ НЕ ОБМЕЖУЮЧИСЬ, ЗБИТКАМИ ВІД ВТРАТИ ПРЕСТИЖУ, ЗУПИНКИ РОБОТИ, "
+"ЗБОЇВ АБО НЕСПРАВНОСТЕЙ КОМП'ЮТЕРА, АБО БУДЬ-ЯКІ ІНШІ ЗБИТКИ АБО ВТРАТИ ЩО "
+"ВИНИКЛИ БЕЗВІДНОСНО АБО ВНАСЛІДОК ВИКОРИСТАННЯ ЦЬОГО ДОКУМЕНТУ ТА ЗМІНЕНИХ "
+"ВЕРСІЙ ЦЬОГО ДОКУМЕНТУ, НАВІТЬ ЯКЩО ЦІ СТОРОНИ, МОЖЛИВО, БУЛИ ПРОІНФОРМОВАНІ "
+"ПРО МОЖЛИВІСТЬ ТАКИХ ЗБИТКІВ."
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:28
+msgid ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<_:orderedlist-1/>"
+msgstr ""
+"ДОКУМЕНТ Й ЗМІНЕНІ ВЕРСІЇ ДОКУМЕНТУ НАДАЮТЬСЯ ЗА УМОВАМИ ЛІЦЕНЗІЇ "
+"БЕЗКОШТОВНОЇ ДОКУМЕНТАЦІЇ GNU З РОЗУМІННЯМ ЩО: <_:orderedlist-1/>"
+
+#~ msgid ""
+#~ "Permission is granted to copy, distribute and/or modify this document "
+#~ "under the terms of the GNU Free Documentation License (GFDL), Version 1.1 "
+#~ "or any later version published by the Free Software Foundation with no "
+#~ "Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You "
+#~ "can find a copy of the GFDL at this <ulink type=\"help\" url=\"help:"
+#~ "fdl\">link</ulink> or in the file COPYING-DOCS distributed with this "
+#~ "manual."
+#~ msgstr ""
+#~ "Дозволяється копіювати, розповсюджувати і/або змінювати цей документ на "
+#~ "умовах ліцензії GNU Free Documentation License (GFDL), версії 1.1 або "
+#~ "будь-якої пізнішої версії, оголошеній Фундацією вільного програмного "
+#~ "забезпечення (Free Software Foundation), без незмінюваних частин та без "
+#~ "текстів на обкладинках. Ви можете знайти копію ліцензії GFDL за цим "
+#~ "<ulink type=\"help\" url=\"help:fdl\">посиланням</ulink> або у файлі "
+#~ "COPYING-DOCS, розповсюджуваним з цим документом."
