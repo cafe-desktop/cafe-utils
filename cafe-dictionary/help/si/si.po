@@ -1,17 +1,17 @@
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-13 16:47+0100\n"
+"POT-Creation-Date: 2023-11-20 09:33+0100\n"
 "PO-Revision-Date: 2018-09-13 10:55+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Sinhala (https://www.transifex.com/cafe/teams/13566/si/)\n"
+"Language: si\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: si\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -27,8 +27,7 @@ msgstr ""
 #. (itstool) path: abstract/para
 #: C/index.docbook:27
 msgid ""
-"Dictionary enables you to look up definitions and correct spellings of "
-"words."
+"Dictionary enables you to look up definitions and correct spellings of words."
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
@@ -53,75 +52,6 @@ msgstr ""
 msgid "GNOME Documentation Project"
 msgstr ""
 
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:2
-msgid ""
-"Permission is granted to copy, distribute and/or modify this document under "
-"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
-"later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
-" of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
-msgstr ""
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:12 C/legal.xml:12
-msgid ""
-"This manual is part of a collection of CAFE manuals distributed under the "
-"GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in"
-" section 6 of the license."
-msgstr ""
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:19 C/legal.xml:19
-msgid ""
-"Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any CAFE "
-"documentation, and the members of the CAFE Documentation Project are made "
-"aware of those trademarks, then the names are in capital letters or initial "
-"capital letters."
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:35 C/legal.xml:35
-msgid ""
-"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
-"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
-"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
-"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
-"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
-"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
-"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
-"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
-"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
-"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
-"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:55 C/legal.xml:55
-msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
-" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
-"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
-"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
-"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
-"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
-" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
-" POSSIBILITY OF SUCH DAMAGES."
-msgstr ""
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:28 C/legal.xml:28
-msgid ""
-"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
-"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<_:orderedlist-1/>"
-msgstr ""
-
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:60
 msgid ""
@@ -144,8 +74,8 @@ msgstr ""
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:90 C/index.docbook:99
 msgid ""
-"<revnumber>Dictionary Manual V1.10.0</revnumber> <date>July 2015</date> "
-"<_:revdescription-1/>"
+"<revnumber>Dictionary Manual V1.10.0</revnumber> <date>July 2015</date> <_:"
+"revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
@@ -166,9 +96,9 @@ msgstr ""
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:112
 msgid ""
-"To report a bug or make a suggestion regarding the Dictionary application or"
-" this manual, follow the directions in the <ulink url=\"help:cafe-user-"
-"guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
+"To report a bug or make a suggestion regarding the Dictionary application or "
+"this manual, follow the directions in the <ulink url=\"help:cafe-user-guide/"
+"feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -253,8 +183,8 @@ msgstr ""
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:169
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-application.png\""
-" format=\"PNG\"/> </imageobject> <textobject><phrase>Shows Dictionary main "
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-application.png\" "
+"format=\"PNG\"/> </imageobject> <textobject><phrase>Shows Dictionary main "
 "window.</phrase></textobject>"
 msgstr ""
 
@@ -305,8 +235,8 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: C/index.docbook:207
 msgid ""
-"Otherwise, an error dialog will appear, with a message explaining the nature"
-" of the error."
+"Otherwise, an error dialog will appear, with a message explaining the nature "
+"of the error."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -317,10 +247,9 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: C/index.docbook:215
 msgid ""
-"To save the results of a look up, choose "
-"<menuchoice><guimenu>File</guimenu><guimenuitem>Save a "
-"Copy</guimenuitem></menuchoice>. Enter a name for the file in the "
-"<guilabel>Save a Copy</guilabel> dialog, then click "
+"To save the results of a look up, choose <menuchoice><guimenu>File</"
+"guimenu><guimenuitem>Save a Copy</guimenuitem></menuchoice>. Enter a name "
+"for the file in the <guilabel>Save a Copy</guilabel> dialog, then click "
 "<guibutton>Save</guibutton>."
 msgstr ""
 
@@ -332,8 +261,8 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: C/index.docbook:222
 msgid ""
-"To print the results of a look up, choose "
-"<menuchoice><guimenu>File</guimenu><guimenuitem>Print</guimenuitem></menuchoice>."
+"To print the results of a look up, choose <menuchoice><guimenu>File</"
+"guimenu><guimenuitem>Print</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -346,8 +275,8 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: C/index.docbook:227
 msgid ""
-"To see a preview of what will be printed, click "
-"<guibutton>Preview</guibutton>."
+"To see a preview of what will be printed, click <guibutton>Preview</"
+"guibutton>."
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -403,8 +332,8 @@ msgstr ""
 #: C/index.docbook:258
 msgid ""
 "To find the next occurrence of the text, click <guibutton>Next</guibutton>. "
-"To find the previous occurrence of the text, click "
-"<guibutton>Previous</guibutton>."
+"To find the previous occurrence of the text, click <guibutton>Previous</"
+"guibutton>."
 msgstr ""
 
 #. (itstool) path: sect1/title
@@ -416,9 +345,9 @@ msgstr "අභිප්‍රේත"
 #. (itstool) path: sect1/para
 #: C/index.docbook:271
 msgid ""
-"To change the <application>Dictionary</application> application preferences,"
-" choose "
-"<menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>."
+"To change the <application>Dictionary</application> application preferences, "
+"choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</"
+"guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -498,8 +427,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:315
 msgid ""
-"Change the transport type of the new source using the "
-"<guilabel>Transport</guilabel> combo box"
+"Change the transport type of the new source using the <guilabel>Transport</"
+"guilabel> combo box"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -515,8 +444,8 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: C/index.docbook:320
 msgid ""
-"Different source transport types uses different attributes. This is the list"
-" of available attributes per transport type:"
+"Different source transport types uses different attributes. This is the list "
+"of available attributes per transport type:"
 msgstr ""
 
 #. (itstool) path: entry/para
@@ -593,16 +522,16 @@ msgstr ""
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:370
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-preferences-"
-"print.png\" format=\"PNG\"/> </imageobject> <textobject><phrase>Shows the "
-"Print tab inside the Preferences dialog.</phrase></textobject>"
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-preferences-print."
+"png\" format=\"PNG\"/> </imageobject> <textobject><phrase>Shows the Print "
+"tab inside the Preferences dialog.</phrase></textobject>"
 msgstr ""
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:379
 msgid ""
-"If you want to change the font name and size used when printing, perform the"
-" following steps:"
+"If you want to change the font name and size used when printing, perform the "
+"following steps:"
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -655,8 +584,8 @@ msgstr ""
 #: C/index.docbook:404
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/cafe-dictionary-applet.png\" "
-"format=\"PNG\"/> </imageobject> <textobject><phrase>Shows Dictionary "
-"Applet.</phrase></textobject>"
+"format=\"PNG\"/> </imageobject> <textobject><phrase>Shows Dictionary Applet."
+"</phrase></textobject>"
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -669,8 +598,8 @@ msgstr ""
 msgid ""
 "To add <application>Dictionary Applet</application> to a panel, right-click "
 "on the panel, then choose <guimenuitem>Add to Panel</guimenuitem>. Select "
-"Dictionary Applet in the <application>Add to the panel</application> dialog,"
-" then click <guibutton>OK</guibutton>."
+"Dictionary Applet in the <application>Add to the panel</application> dialog, "
+"then click <guibutton>OK</guibutton>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -708,9 +637,9 @@ msgstr ""
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:440
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-applet-"
-"window.png\" format=\"PNG\"/> </imageobject> <textobject><phrase>Shows "
-"Dictionary Applet main window.</phrase></textobject>"
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-applet-window."
+"png\" format=\"PNG\"/> </imageobject> <textobject><phrase>Shows Dictionary "
+"Applet main window.</phrase></textobject>"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -724,8 +653,8 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: C/index.docbook:453
 msgid ""
-"You can make the window disappear by left-clicking on the dictionary icon or"
-" by pressing <keycap>Esc</keycap>."
+"You can make the window disappear by left-clicking on the dictionary icon or "
+"by pressing <keycap>Esc</keycap>."
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -739,8 +668,8 @@ msgstr ""
 #: C/index.docbook:464
 msgid ""
 "The <guilabel>Preferences</guilabel> dialog is the same used by the "
-"<application>Dictionary</application> application, so refer to <xref linkend"
-"=\"cafe-dictionary-preferences\"/>"
+"<application>Dictionary</application> application, so refer to <xref "
+"linkend=\"cafe-dictionary-preferences\"/>"
 msgstr ""
 
 #. (itstool) path: para/ulink
@@ -754,7 +683,65 @@ msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
-" of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
 "with this manual."
+msgstr ""
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:12
+msgid ""
+"This manual is part of a collection of CAFE manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
+msgstr ""
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:19
+msgid ""
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/legal.xml:35
+msgid ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/legal.xml:55
+msgid ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
+msgstr ""
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:28
+msgid ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<_:orderedlist-1/>"
 msgstr ""
