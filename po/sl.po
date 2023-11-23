@@ -15,7 +15,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-utils 1.23.1\n"
+"Project-Id-Version: cafe-utils 1.25.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
 "POT-Creation-Date: 2023-11-20 09:32+0100\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
