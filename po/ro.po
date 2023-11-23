@@ -2,27 +2,28 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-utils package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Laurentiu Archip, 2018
 # corneliu.e <corneliueva@yahoo.com>, 2018
 # Daniel <danny3@tutanota.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Inpresentia I., 2019
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-utils 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2020-01-13 16:47+0100\n"
+"POT-Creation-Date: 2023-11-20 09:32+0100\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
 "Last-Translator: Inpresentia I., 2019\n"
 "Language-Team: Romanian (https://www.transifex.com/cafe/teams/13566/ro/)\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ro\n"
-"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1));\n"
 
 #: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
 #: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:7
@@ -33,14 +34,7 @@ msgstr "Analizator disc CAFE"
 msgid "Check folder sizes and available disk space"
 msgstr "Verifică dimensiunea dosarului și spațiul disponibil pe disc"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:8
-msgid "cafe-disk-usage-analyzer"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:14
 msgid "CAFE;check;disk;usage;analyze;size;space;"
 msgstr ""
@@ -78,7 +72,7 @@ msgstr "Scanează un d_osar..."
 msgid "S_can Remote Folder..."
 msgstr "S_canează un dosar la distanță..."
 
-#: baobab/data/baobab-main-window.ui:74 logview/src/logview-window.c:819
+#: baobab/data/baobab-main-window.ui:74 logview/src/logview-window.c:820
 #: cafe-dictionary/src/gdict-window.c:1286
 msgid "_Edit"
 msgstr "_Editeaza"
@@ -91,7 +85,7 @@ msgstr "_Expandează tot"
 msgid "_Collapse All"
 msgstr "_Pliază tot"
 
-#: baobab/data/baobab-main-window.ui:101 logview/src/logview-window.c:820
+#: baobab/data/baobab-main-window.ui:101 logview/src/logview-window.c:821
 #: cafe-dictionary/src/gdict-window.c:1287
 msgid "_View"
 msgstr "_Vizualizare"
@@ -108,19 +102,19 @@ msgstr "B_ară de stare"
 msgid "All_ocated Space"
 msgstr "Spațiu al_ocat"
 
-#: baobab/data/baobab-main-window.ui:129 logview/src/logview-window.c:822
-#: cafe-dictionary/src/gdict-applet.c:1183
+#: baobab/data/baobab-main-window.ui:129 logview/src/logview-window.c:823
+#: cafe-dictionary/src/gdict-applet.c:1174
 #: cafe-dictionary/src/gdict-window.c:1289
 msgid "_Help"
 msgstr "_Ajutor"
 
-#: baobab/data/baobab-main-window.ui:136 logview/src/logview-window.c:848
+#: baobab/data/baobab-main-window.ui:136 logview/src/logview-window.c:849
 #: cafe-dictionary/src/gdict-window.c:1339
 msgid "_Contents"
 msgstr "_Conținut"
 
-#: baobab/data/baobab-main-window.ui:183 baobab/src/baobab.c:1236
-#: baobab/src/callbacks.c:107
+#: baobab/data/baobab-main-window.ui:183 baobab/src/baobab.c:1238
+#: baobab/src/callbacks.c:108
 msgid "Disk Usage Analyzer"
 msgstr "Analizare utilizare disc"
 
@@ -186,8 +180,7 @@ msgstr "Bara de unelte este vizibilă"
 
 #: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:22
 msgid "Whether the toolbar should be visible in main window."
-msgstr ""
-"Dacă bara cu unelte ar trebui sa fie vizibilă în fereastra principală."
+msgstr "Dacă bara cu unelte ar trebui sa fie vizibilă în fereastra principală."
 
 #: baobab/data/org.cafe.disk-usage-analyzer.gschema.xml.in:26
 msgid "Statusbar is Visible"
@@ -220,8 +213,8 @@ msgstr "O unealtă de analiză a spațiului ocupat pe disc pentru desktopul CAFE
 
 #: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:10
 msgid ""
-"As its name implies, Disk Usage Analyzer is a graphical utility that you can"
-" use to view and monitor your disk usage and folder structure. It displays "
+"As its name implies, Disk Usage Analyzer is a graphical utility that you can "
+"use to view and monitor your disk usage and folder structure. It displays "
 "summary information in ring or treemap charts."
 msgstr ""
 
@@ -232,43 +225,43 @@ msgid ""
 "changes to the home directory and warn the user if a file is added/removed."
 msgstr ""
 
-#: baobab/src/baobab.c:137 baobab/src/baobab.c:357
+#: baobab/src/baobab.c:139 baobab/src/baobab.c:359
 msgid "Scanning..."
 msgstr "Se scanează..."
 
-#: baobab/src/baobab.c:183
+#: baobab/src/baobab.c:185
 msgid "Total filesystem capacity:"
 msgstr "Capacitatea totală a sistemului de fișiere:"
 
-#: baobab/src/baobab.c:184
+#: baobab/src/baobab.c:186
 msgid "used:"
 msgstr "folosit:"
 
-#: baobab/src/baobab.c:185
+#: baobab/src/baobab.c:187
 msgid "available:"
 msgstr "disponibil:"
 
-#: baobab/src/baobab.c:242 baobab/src/baobab.c:299 baobab/src/callbacks.c:272
+#: baobab/src/baobab.c:244 baobab/src/baobab.c:301 baobab/src/callbacks.c:274
 msgid "Calculating percentage bars..."
 msgstr "Se calculează mărimea barelor..."
 
-#: baobab/src/baobab.c:253 baobab/src/baobab.c:1300 baobab/src/callbacks.c:276
+#: baobab/src/baobab.c:255 baobab/src/baobab.c:1305 baobab/src/callbacks.c:278
 msgid "Ready"
 msgstr "Pregătit"
 
-#: baobab/src/baobab.c:391
+#: baobab/src/baobab.c:393
 msgid "Total filesystem capacity"
 msgstr "Capacitate totală sistem de fișiere"
 
-#: baobab/src/baobab.c:415
+#: baobab/src/baobab.c:417
 msgid "Total filesystem usage"
 msgstr "Utilizare totală sistem de fișiere"
 
-#: baobab/src/baobab.c:457
+#: baobab/src/baobab.c:459
 msgid "contains hardlinks for:"
 msgstr "conține hardlink-uri pentru:"
 
-#: baobab/src/baobab.c:466
+#: baobab/src/baobab.c:468
 #, c-format
 msgid "%5d item"
 msgid_plural "%5d items"
@@ -276,55 +269,55 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: baobab/src/baobab.c:592
+#: baobab/src/baobab.c:594
 msgid "Could not initialize monitoring"
 msgstr "Nu s-a putut inițializa monitorizarea"
 
-#: baobab/src/baobab.c:593
+#: baobab/src/baobab.c:595
 msgid "Changes to your home folder will not be monitored."
 msgstr "Modificările din dosarul personal vor fi monitorizate."
 
-#: baobab/src/baobab.c:914
+#: baobab/src/baobab.c:916
 msgid "Move to parent folder"
 msgstr "Mută în dosar părinte"
 
-#: baobab/src/baobab.c:918
+#: baobab/src/baobab.c:920
 msgid "Zoom in"
 msgstr "Apropie"
 
-#: baobab/src/baobab.c:922
+#: baobab/src/baobab.c:924
 msgid "Zoom out"
 msgstr "Depărtează"
 
-#: baobab/src/baobab.c:926
+#: baobab/src/baobab.c:928
 msgid "Save screenshot"
 msgstr "Salvează captura de ecran"
 
-#: baobab/src/baobab.c:1112
+#: baobab/src/baobab.c:1114
 msgid "View as Rings Chart"
 msgstr "Afișează ca grafic inelar"
 
-#: baobab/src/baobab.c:1114
+#: baobab/src/baobab.c:1116
 msgid "View as Treemap Chart"
 msgstr "Vizualizare ca grafic arborescent"
 
-#: baobab/src/baobab.c:1225
+#: baobab/src/baobab.c:1227
 msgid "Show version"
 msgstr "Afișare versiune"
 
-#: baobab/src/baobab.c:1226
+#: baobab/src/baobab.c:1228
 msgid "[DIRECTORY]"
 msgstr "[DOSAR]"
 
-#: baobab/src/baobab.c:1256
+#: baobab/src/baobab.c:1258
 msgid "Too many arguments. Only one directory can be specified."
 msgstr "Prea multe argumente. Se poate specifica doar un singur dosar."
 
-#: baobab/src/baobab.c:1273
+#: baobab/src/baobab.c:1278
 msgid "Could not detect any mount point."
 msgstr "Nu s-a putut detecta un loc pentru montare."
 
-#: baobab/src/baobab.c:1275
+#: baobab/src/baobab.c:1280
 msgid "Without mount points disk usage cannot be analyzed."
 msgstr "Utilizarea discului nu poate fi analizată fără puncte de montare."
 
@@ -492,7 +485,7 @@ msgstr ""
 msgid "_Rescan"
 msgstr "_Rescanează"
 
-#: baobab/src/baobab-treeview.c:222 gsearchtool/src/gsearchtool.c:2436
+#: baobab/src/baobab-treeview.c:222 gsearchtool/src/gsearchtool.c:2428
 msgid "Folder"
 msgstr "Dosar"
 
@@ -500,7 +493,7 @@ msgstr "Dosar"
 msgid "Usage"
 msgstr "Utilizare"
 
-#: baobab/src/baobab-treeview.c:258 gsearchtool/src/gsearchtool.c:2449
+#: baobab/src/baobab-treeview.c:258 gsearchtool/src/gsearchtool.c:2441
 msgid "Size"
 msgstr "Dimensiune"
 
@@ -533,7 +526,7 @@ msgstr "Nu s-a putut analiza utilizarea discului."
 msgid "_Open Folder"
 msgstr "Deschide d_osar"
 
-#: baobab/src/baobab-utils.c:368 gsearchtool/src/gsearchtool-callbacks.c:1216
+#: baobab/src/baobab-utils.c:368 gsearchtool/src/gsearchtool-callbacks.c:1204
 msgid "Mo_ve to Trash"
 msgstr "Mută în coșul de _gunoi"
 
@@ -564,13 +557,13 @@ msgstr "Detalii: %s"
 msgid "There was an error displaying help."
 msgstr "A intervenit o eroare la afișarea ajutorului."
 
-#: baobab/src/callbacks.c:77 logview/src/logview-about.h:45
-#: cafe-dictionary/src/gdict-about.c:52
+#: baobab/src/callbacks.c:78 logview/src/logview-about.h:46
+#: cafe-dictionary/src/gdict-about.c:53
 msgid "CAFE Documentation Team"
 msgstr ""
 
-#: baobab/src/callbacks.c:82 logview/src/logview-about.h:50
-#: cafe-dictionary/src/gdict-about.c:60
+#: baobab/src/callbacks.c:83 logview/src/logview-about.h:51
+#: cafe-dictionary/src/gdict-about.c:61
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -582,8 +575,8 @@ msgstr ""
 "publicată de Free Software Foundation; fie versiunea 2 a Licenței, fie (la "
 "latitudinea dumneavoastră) orice versiune ulterioară."
 
-#: baobab/src/callbacks.c:87 logview/src/logview-about.h:54
-#: cafe-dictionary/src/gdict-about.c:65
+#: baobab/src/callbacks.c:88 logview/src/logview-about.h:55
+#: cafe-dictionary/src/gdict-about.c:66
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -594,38 +587,39 @@ msgstr ""
 "GARANȚIE, fără garanție implicită de vandabilitate și conformitate unui "
 "anumit scop. Citiți Licența Publică Generală GNU pentru detalii."
 
-#: baobab/src/callbacks.c:92 logview/src/logview-about.h:58
+#: baobab/src/callbacks.c:93 logview/src/logview-about.h:59
 msgid ""
-"You should have received a copy of the GNU General Public License along with"
-" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA."
 msgstr ""
 
-#: baobab/src/callbacks.c:109
+#: baobab/src/callbacks.c:110
 msgid "About Disk Usage Analyzer"
 msgstr ""
 
-#: baobab/src/callbacks.c:110
+#: baobab/src/callbacks.c:111
 msgid "A graphical tool to analyze disk usage."
 msgstr "Un program în mod grafic pentru analizarea utilizări discului"
 
-#: baobab/src/callbacks.c:111
+#: baobab/src/callbacks.c:112
 msgid ""
 "Copyright © 2005-2010 Fabio Marzocca\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
-#: baobab/src/callbacks.c:117 logview/src/logview-about.h:64
-#: cafe-dictionary/src/gdict-about.c:56
+#: baobab/src/callbacks.c:119 logview/src/logview-about.h:65
+#: cafe-dictionary/src/gdict-about.c:57
 msgid "translator-credits"
 msgstr "Daniel Alămiță <danny3@tutanota.com>"
 
-#: baobab/src/callbacks.c:215 gsearchtool/src/gsearchtool-callbacks.c:509
-#: gsearchtool/src/gsearchtool-callbacks.c:855
+#: baobab/src/callbacks.c:217 gsearchtool/src/gsearchtool-callbacks.c:505
+#: gsearchtool/src/gsearchtool-callbacks.c:843
 msgid "The document does not exist."
 msgstr "Documentul nu există."
 
-#: baobab/src/callbacks.c:296
+#: baobab/src/callbacks.c:298
 msgid "The folder does not exist."
 msgstr "Dosarul nu există."
 
@@ -642,23 +636,16 @@ msgstr "O unealtă pentru căutare de fișiere pentru desktopul CAFE"
 msgid ""
 "CAFE Search Tool is a simple but powerful utility that allows you to search "
 "for files and folders on any mounted file system. Its interface gives you "
-"instant access to a wide variety of parameters for each search, such as text"
-" contained within a file, ownership, date of modification, file size, folder"
-" exclusion, etc.."
+"instant access to a wide variety of parameters for each search, such as text "
+"contained within a file, ownership, date of modification, file size, folder "
+"exclusion, etc.."
 msgstr ""
 
 #: gsearchtool/data/cafe-search-tool.desktop.in:4
 msgid "Locate documents and folders on this computer by name or content"
 msgstr "Găsiți documente și dosare pe acest calculator după nume sau conținut"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gsearchtool/data/cafe-search-tool.desktop.in:7
-msgid "system-search"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: gsearchtool/data/cafe-search-tool.desktop.in:13
 msgid ""
 "CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
@@ -694,12 +681,12 @@ msgstr "Căi excluse pentru căutări rapide"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:20
 msgid ""
-"This key defines the paths the search tool will exclude from a quick search."
-" The wildcards '*' and '?' are supported. The default values are /mnt/*, "
-"/media/*, /dev/*, /tmp/*, /proc/*, and /var/*."
+"This key defines the paths the search tool will exclude from a quick search. "
+"The wildcards '*' and '?' are supported. The default values are /mnt/*, /"
+"media/*, /dev/*, /tmp/*, /proc/*, and /var/*."
 msgstr ""
-"Această cheie definește căile pe care utilitarul de căutare le va exclude de"
-" la o căutare rapidă. Metacaracterele „*” și „?” sunt suportate. Valorile "
+"Această cheie definește căile pe care utilitarul de căutare le va exclude de "
+"la o căutare rapidă. Metacaracterele „*” și „?” sunt suportate. Valorile "
 "implicite sunt /mnt/* , /media/*, /dev/*, /tmp/*, /proc/*, și /var/*."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:24
@@ -723,11 +710,11 @@ msgid ""
 "This key defines the paths the search tool will exclude from a second scan "
 "when performing a quick search. The second scan uses the find command to "
 "search for files. The purpose of the second scan is to find files that have "
-"not been indexed. The wildcards '*' and '?' are supported. The default value"
-" is /."
+"not been indexed. The wildcards '*' and '?' are supported. The default value "
+"is /."
 msgstr ""
-"Această cheie definește căile pe care utilitarul de căutare le va exclude de"
-" la o a doua scanare în tmpul unei căutari rapidă. A doua scanare folosește "
+"Această cheie definește căile pe care utilitarul de căutare le va exclude de "
+"la o a doua scanare în tmpul unei căutari rapidă. A doua scanare folosește "
 "comanda find pentru a căuta fișierele. Scopul celei de-a doua scanări este "
 "de a găsi fișierele ce nu au fost indexate. Metacaracterele „*” și „?” sunt "
 "suportate. Valorile implicite /."
@@ -741,8 +728,8 @@ msgid ""
 "This key defines the order of the columns in the search results. This key "
 "should not be modified by the user."
 msgstr ""
-"Această cheie definește ordinea coloanelor din rezultatele căutării. Această"
-" cheie nu ar trebui să fie modificată de către utilizator."
+"Această cheie definește ordinea coloanelor din rezultatele căutării. Această "
+"cheie nu ar trebui să fie modificată de către utilizator."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:39
 msgid "Default Window Width"
@@ -750,9 +737,9 @@ msgstr "Lățimea implicită a ferestrei"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:40
 msgid ""
-"This key defines the window width, and it's used to remember the size of the"
-" search tool between sessions. Setting it to -1 will make the search tool "
-"use the default width."
+"This key defines the window width, and it's used to remember the size of the "
+"search tool between sessions. Setting it to -1 will make the search tool use "
+"the default width."
 msgstr ""
 "Această cheie definește lățimea ferestrei, și este folosită pentru a memora "
 "dimensiunea aplicației de căutare între sesiuni. Setând-o la -1 veți "
@@ -765,8 +752,8 @@ msgstr "Înălțimea implicită a ferestrei"
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:45
 msgid ""
 "This key defines the window height, and it's used to remember the size of "
-"the search tool between sessions. Setting it to -1 will make the search tool"
-" use the default height."
+"the search tool between sessions. Setting it to -1 will make the search tool "
+"use the default height."
 msgstr ""
 "Această cheie definește înălțimea ferestrei, și este folosită pentru a "
 "memora dimensiunea aplicației de căutare între sesiuni. Setând-o la -1 veți "
@@ -779,8 +766,7 @@ msgstr "Fereastra implicită maximizată"
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:50
 msgid ""
 "This key determines if the search tool window starts in a maximized state."
-msgstr ""
-"Această cheie determină dacă utilitarul de căutare va porni maximizat."
+msgstr "Această cheie determină dacă utilitarul de căutare va porni maximizat."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:54
 msgid "Look in Folder"
@@ -821,8 +807,8 @@ msgid ""
 "This key determines if the \"Size at least\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"Această cheie determină dacă opțiunea de căutare „Mărimea de cel puțin” este"
-" selectată la pornirea utilitarului de căutare."
+"Această cheie determină dacă opțiunea de căutare „Mărimea de cel puțin” este "
+"selectată la pornirea utilitarului de căutare."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:78
 msgid ""
@@ -850,8 +836,8 @@ msgstr ""
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:90
 msgid ""
-"This key determines if the \"Owned by group\" search option is selected when"
-" the search tool is started."
+"This key determines if the \"Owned by group\" search option is selected when "
+"the search tool is started."
 msgstr ""
 "Această cheie determină dacă opțiunea de căutare „Deținut de grupul” este "
 "selectată la pornirea utilitarului de căutare."
@@ -874,8 +860,8 @@ msgstr ""
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:102
 msgid ""
-"This key determines if the \"Name matches regular expression\" search option"
-" is selected when the search tool is started."
+"This key determines if the \"Name matches regular expression\" search option "
+"is selected when the search tool is started."
 msgstr ""
 "Această cheie determină dacă opțiunea de căutare „Numele se potrivește "
 "expresiei regulate” este selectată la pornirea utilitarului de căutare."
@@ -1078,7 +1064,7 @@ msgid "Searching..."
 msgstr "Se caută..."
 
 #: gsearchtool/src/gsearchtool.c:511 gsearchtool/src/gsearchtool.c:1031
-#: gsearchtool/src/gsearchtool.c:3057
+#: gsearchtool/src/gsearchtool.c:3031
 msgid "Search for Files"
 msgstr "Caută fișiere"
 
@@ -1125,8 +1111,8 @@ msgstr "Definește textul pentru opțiunea de căutare „Caută în dosar”"
 #: gsearchtool/src/gsearchtool.c:1310
 msgid "Sort files by one of the following: name, folder, size, type, or date"
 msgstr ""
-"Sortează fișierele după una dintre următoarele: nume, dosar, mărime, tip sau"
-" dată"
+"Sortează fișierele după una dintre următoarele: nume, dosar, mărime, tip sau "
+"dată"
 
 #: gsearchtool/src/gsearchtool.c:1311
 msgid "Set sort order to descending, the default is ascending"
@@ -1164,8 +1150,8 @@ msgid ""
 "The search results may be invalid.  There were errors while performing this "
 "search."
 msgstr ""
-"Rezultatele căutării ar putea fi nevalide. Au fost întâlnite erori în timpul"
-" acestei căutări."
+"Rezultatele căutării ar putea fi nevalide. Au fost întâlnite erori în timpul "
+"acestei căutări."
 
 #: gsearchtool/src/gsearchtool.c:1746 gsearchtool/src/gsearchtool.c:1790
 msgid "Show more _details"
@@ -1176,8 +1162,8 @@ msgid ""
 "The search results may be out of date or invalid.  Do you want to disable "
 "the quick search feature?"
 msgstr ""
-"Rezultatele căutării ar putea fi nevalide. Doriți să dezactivați opțiunea de"
-" căutare rapidă?"
+"Rezultatele căutării ar putea fi nevalide. Doriți să dezactivați opțiunea de "
+"căutare rapidă?"
 
 #: gsearchtool/src/gsearchtool.c:1801
 msgid "Disable _Quick Search"
@@ -1213,120 +1199,119 @@ msgstr "„%s” în %s"
 msgid "Enter a value in %s for the \"%s\" search option."
 msgstr "Introduceți o valoare în %s pentru opțiunea de căutare „%s”."
 
-#: gsearchtool/src/gsearchtool.c:2078
+#: gsearchtool/src/gsearchtool.c:2074
 #, c-format
 msgid "Remove \"%s\""
 msgstr "Șterge „%s”"
 
-#: gsearchtool/src/gsearchtool.c:2079
+#: gsearchtool/src/gsearchtool.c:2075
 #, c-format
 msgid "Click to remove the \"%s\" search option."
 msgstr "Clic pentru a șterge opțiunea de căutare „%s”."
 
-#: gsearchtool/src/gsearchtool.c:2172
+#: gsearchtool/src/gsearchtool.c:2168
 msgid "A_vailable options:"
 msgstr "Opțiuni _disponibile:"
 
-#: gsearchtool/src/gsearchtool.c:2201
+#: gsearchtool/src/gsearchtool.c:2197
 msgid "Available options"
 msgstr "Opțiuni disponibile"
 
-#: gsearchtool/src/gsearchtool.c:2202
+#: gsearchtool/src/gsearchtool.c:2198
 msgid "Select a search option from the drop-down list."
 msgstr "Selectați o opțiune de căutare din lista derulantă."
 
-#: gsearchtool/src/gsearchtool.c:2219
+#: gsearchtool/src/gsearchtool.c:2211
 msgid "Add search option"
 msgstr "Adaugă o opțiune de căutare"
 
-#: gsearchtool/src/gsearchtool.c:2220
+#: gsearchtool/src/gsearchtool.c:2212
 msgid "Click to add the selected available search option."
 msgstr "Clic pentru a adăuga opțiunea selectată disponibilă pentru căutare."
 
-#: gsearchtool/src/gsearchtool.c:2309
+#: gsearchtool/src/gsearchtool.c:2301
 msgid "S_earch results:"
 msgstr "R_ezultatele căutării:"
 
-#: gsearchtool/src/gsearchtool.c:2352
+#: gsearchtool/src/gsearchtool.c:2344
 msgid "List View"
 msgstr "Vizualizare listă"
 
-#: gsearchtool/src/gsearchtool.c:2412
+#: gsearchtool/src/gsearchtool.c:2404
 #: cafe-dictionary/libgdict/gdict-source.c:243
 msgid "Name"
 msgstr "Nume"
 
-#: gsearchtool/src/gsearchtool.c:2461
+#: gsearchtool/src/gsearchtool.c:2453
 msgid "Type"
 msgstr "Tip"
 
-#: gsearchtool/src/gsearchtool.c:2473
+#: gsearchtool/src/gsearchtool.c:2465
 msgid "Date Modified"
 msgstr "Data modificării"
 
-#: gsearchtool/src/gsearchtool.c:2803
+#: gsearchtool/src/gsearchtool.c:2795
 msgid "_Name contains:"
 msgstr "_Numele conține:"
 
-#: gsearchtool/src/gsearchtool.c:2818 gsearchtool/src/gsearchtool.c:2819
+#: gsearchtool/src/gsearchtool.c:2810 gsearchtool/src/gsearchtool.c:2811
 msgid "Enter a filename or partial filename with or without wildcards."
 msgstr ""
 "Introduceți un nume de fișier întreg sau parțial cu sau fără metacaractere."
 
-#: gsearchtool/src/gsearchtool.c:2819
+#: gsearchtool/src/gsearchtool.c:2811
 msgid "Name contains"
 msgstr "Numele conține"
 
-#: gsearchtool/src/gsearchtool.c:2825
+#: gsearchtool/src/gsearchtool.c:2817
 msgid "_Look in folder:"
 msgstr "_Caută în dosar:"
 
-#: gsearchtool/src/gsearchtool.c:2831
+#: gsearchtool/src/gsearchtool.c:2823
 msgid "Browse"
 msgstr "Răsfoire"
 
-#: gsearchtool/src/gsearchtool.c:2841
+#: gsearchtool/src/gsearchtool.c:2833
 msgid "Look in folder"
 msgstr "Caută în dosar"
 
-#: gsearchtool/src/gsearchtool.c:2841
+#: gsearchtool/src/gsearchtool.c:2833
 msgid "Select the folder or device from which you want to begin the search."
-msgstr ""
-"Selectați dosarul sau dispozitivul în care doriți să porniți căutarea."
+msgstr "Selectați dosarul sau dispozitivul în care doriți să porniți căutarea."
 
-#: gsearchtool/src/gsearchtool.c:2859
+#: gsearchtool/src/gsearchtool.c:2851
 msgid "Select more _options"
 msgstr "Afișează mai multe _opțiuni"
 
-#: gsearchtool/src/gsearchtool.c:2868
+#: gsearchtool/src/gsearchtool.c:2860
 msgid "Select more options"
 msgstr "Afișează mai multe opțiuni"
 
-#: gsearchtool/src/gsearchtool.c:2868
+#: gsearchtool/src/gsearchtool.c:2860
 msgid "Click to expand or collapse the list of available options."
 msgstr "Clic pentru a desfășura sau plia lista cu opțiunile de căutare."
 
-#: gsearchtool/src/gsearchtool.c:2899
+#: gsearchtool/src/gsearchtool.c:2886
 msgid "Click to display the help manual."
 msgstr "Clic pentru a afișa ajutorul."
 
-#: gsearchtool/src/gsearchtool.c:2912
+#: gsearchtool/src/gsearchtool.c:2895
 msgid "Click to close \"Search for Files\"."
 msgstr "Clic pentru a închide „Caută fișiere”."
 
-#: gsearchtool/src/gsearchtool.c:2947
+#: gsearchtool/src/gsearchtool.c:2921
 msgid "Click to perform a search."
 msgstr "Clic pentru a realiza o căutare."
 
-#: gsearchtool/src/gsearchtool.c:2948
+#: gsearchtool/src/gsearchtool.c:2922
 msgid "Click to stop a search."
 msgstr "Clic pentru a opri o căutare."
 
-#: gsearchtool/src/gsearchtool.c:3042
+#: gsearchtool/src/gsearchtool.c:3016
 msgid "- the CAFE Search Tool"
 msgstr "- unealta de căutare CAFE"
 
-#: gsearchtool/src/gsearchtool.c:3051
+#: gsearchtool/src/gsearchtool.c:3025
 #, c-format
 msgid "Failed to parse command line arguments: %s\n"
 msgstr "Nu s-au putut analiza argumentele liniei de comandă: %s\n"
@@ -1344,7 +1329,7 @@ msgstr[1] ""
 msgstr[2] ""
 
 #: gsearchtool/src/gsearchtool-callbacks.c:351
-#: gsearchtool/src/gsearchtool-callbacks.c:551
+#: gsearchtool/src/gsearchtool-callbacks.c:547
 #, c-format
 msgid "This will open %d separate window."
 msgid_plural "This will open %d separate windows."
@@ -1352,25 +1337,25 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:396
+#: gsearchtool/src/gsearchtool-callbacks.c:392
 #, c-format
 msgid "Could not open document \"%s\"."
 msgstr "Nu s-a putut deschide documentul „%s“."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:425
+#: gsearchtool/src/gsearchtool-callbacks.c:421
 #, c-format
 msgid "Could not open folder \"%s\"."
 msgstr "Nu s-a putut deschide dosarul „%s“."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:433
+#: gsearchtool/src/gsearchtool-callbacks.c:429
 msgid "The baul file manager is not running."
 msgstr "Administratorul de fișiere Baul nu este pornit."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:524
+#: gsearchtool/src/gsearchtool-callbacks.c:520
 msgid "There is no installed viewer capable of displaying the document."
 msgstr "Nu este instalat nici un vizualizator capabil de a afișa documentul."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:546
+#: gsearchtool/src/gsearchtool-callbacks.c:542
 #, c-format
 msgid "Are you sure you want to open %d folder?"
 msgid_plural "Are you sure you want to open %d folders?"
@@ -1378,100 +1363,100 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:701
+#: gsearchtool/src/gsearchtool-callbacks.c:693
 #, c-format
 msgid "Could not move \"%s\" to trash."
 msgstr "Nu s-a putut muta „%s“ în coșul de gunoi."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:732
+#: gsearchtool/src/gsearchtool-callbacks.c:724
 #, c-format
 msgid "Do you want to delete \"%s\" permanently?"
 msgstr "Doriți să ștergeți permanent „%s“?"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:735
+#: gsearchtool/src/gsearchtool-callbacks.c:727
 #, c-format
 msgid "Trash is unavailable.  Could not move \"%s\" to the trash."
 msgstr ""
 "Coșul de gunoi nu este disponibil. Nu s-a putut muta „%s“ în coșul de gunoi."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:779
+#: gsearchtool/src/gsearchtool-callbacks.c:767
 #, c-format
 msgid "Could not delete \"%s\"."
 msgstr "Nu s-a putut șterge „%s“."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:891
+#: gsearchtool/src/gsearchtool-callbacks.c:879
 #, c-format
 msgid "Deleting \"%s\" failed: %s."
 msgstr "Ștergerea „%s“ a eșuat: %s"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:903
+#: gsearchtool/src/gsearchtool-callbacks.c:891
 #, c-format
 msgid "Moving \"%s\" failed: %s."
 msgstr "Mutarea „%s“ a eșuat: %s"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1030
-#: gsearchtool/src/gsearchtool-callbacks.c:1060
+#: gsearchtool/src/gsearchtool-callbacks.c:1018
+#: gsearchtool/src/gsearchtool-callbacks.c:1048
 msgid "_Open"
 msgstr "_Deschide"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1085
+#: gsearchtool/src/gsearchtool-callbacks.c:1073
 #, c-format
 msgid "_Open with %s"
 msgstr "_Deschide cu %s"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1120
+#: gsearchtool/src/gsearchtool-callbacks.c:1108
 #, c-format
 msgid "Open with %s"
 msgstr "Deschide cu %s"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1153
+#: gsearchtool/src/gsearchtool-callbacks.c:1141
 msgid "Open Wit_h"
 msgstr "Deschide _cu"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1198
+#: gsearchtool/src/gsearchtool-callbacks.c:1186
 msgid "Open Containing _Folder"
 msgstr "Deschide _dosarul conținător"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1238
+#: gsearchtool/src/gsearchtool-callbacks.c:1226
 msgid "_Save Results As..."
 msgstr "_Salvează rezultate ca..."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1620
+#: gsearchtool/src/gsearchtool-callbacks.c:1608
 msgid "Save Search Results As..."
 msgstr "Salvează rezultatele căutării ca..."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1649
+#: gsearchtool/src/gsearchtool-callbacks.c:1637
 msgid "Could not save document."
 msgstr "Nu s-a putut salva documentul."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1650
+#: gsearchtool/src/gsearchtool-callbacks.c:1638
 msgid "You did not select a document name."
 msgstr "Nu ați selectat un nume pentru document."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1680
+#: gsearchtool/src/gsearchtool-callbacks.c:1668
 #, c-format
 msgid "Could not save \"%s\" document to \"%s\"."
 msgstr "Nu s-a putut salva documentul „%s“ către „%s“."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1713
+#: gsearchtool/src/gsearchtool-callbacks.c:1701
 #, c-format
 msgid "The document \"%s\" already exists.  Would you like to replace it?"
 msgstr "Documentul „%s“ deja există. Doriți să-l înlocuiți?"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1717
+#: gsearchtool/src/gsearchtool-callbacks.c:1705
 msgid "If you replace an existing file, its contents will be overwritten."
 msgstr "Dacă înlocuiți un fișier existent, conținutul va fi suprascris."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1732
+#: gsearchtool/src/gsearchtool-callbacks.c:1720
 #: cafe-screenshot/src/screenshot-xfer.c:82
 msgid "_Replace"
 msgstr "Î_nlocuiește"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1781
+#: gsearchtool/src/gsearchtool-callbacks.c:1769
 msgid "The document name you selected is a folder."
 msgstr "Numele documentului pe care l-ați selectat este un dosar."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1817
+#: gsearchtool/src/gsearchtool-callbacks.c:1805
 msgid "You may not have write permissions to the document."
 msgstr "Probabil nu aveți permisiuni de scriere pentru document."
 
@@ -1583,14 +1568,7 @@ msgstr "Vizualizator fișier înregistrări"
 msgid "View or monitor system log files"
 msgstr "Vizualizează sau monitorizează fișierele cu înregistrările de sistem"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: logview/data/cafe-system-log.desktop.in.in:7
-msgid "cafe-system-log"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: logview/data/cafe-system-log.desktop.in.in:13
 msgid "CAFE;monitor;view;system;log;files;logviewer;"
 msgstr ""
@@ -1601,11 +1579,12 @@ msgstr "Fișierul de înregistrări deschis la pornire"
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:6
 msgid ""
-"Specifies the log file displayed at startup. The default is either "
-"/var/adm/messages or /var/log/messages, depending on your operating system."
+"Specifies the log file displayed at startup. The default is either /var/adm/"
+"messages or /var/log/messages, depending on your operating system."
 msgstr ""
-"Specifică fișierul de înregistrare deschis la pornire. Cel implicit este fie"
-" /var/adm/messages sau /var/log/messages, depinzând de sistemul de operare."
+"Specifică fișierul de înregistrare deschis la pornire. Cel implicit este "
+"fie /var/adm/messages sau /var/log/messages, depinzând de sistemul de "
+"operare."
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:10
 msgid "Size of the font used to display the log"
@@ -1685,7 +1664,7 @@ msgstr "Fundal:"
 msgid "Effect:"
 msgstr "Efecte:"
 
-#: logview/src/logview-about.h:42 cafe-dictionary/src/gdict-about.c:49
+#: logview/src/logview-about.h:43 cafe-dictionary/src/gdict-about.c:50
 msgid "Sun GNOME Documentation Team <gdocteam@sun.com>"
 msgstr ""
 
@@ -1723,7 +1702,7 @@ msgstr "Modificare filtru"
 msgid "Add new filter"
 msgstr "Adaugă filtru nou"
 
-#: logview/src/logview-filter-manager.c:517
+#: logview/src/logview-filter-manager.c:503
 msgid "Filters"
 msgstr "Filtre"
 
@@ -1836,149 +1815,138 @@ msgstr ""
 #: logview/src/logview-window.c:771
 msgid ""
 "Copyright © 1998-2008 Free Software Foundation, Inc.\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
-#: logview/src/logview-window.c:775
+#: logview/src/logview-window.c:776
 msgid "A system log viewer for CAFE."
 msgstr "Un vizualizator al înregistrărilor de sistem pentru CAFE."
 
-#: logview/src/logview-window.c:818 cafe-dictionary/src/gdict-window.c:1285
+#: logview/src/logview-window.c:819 cafe-dictionary/src/gdict-window.c:1285
 msgid "_File"
 msgstr "_Fișier"
 
-#: logview/src/logview-window.c:821
+#: logview/src/logview-window.c:822
 msgid "_Filters"
 msgstr "_Filtre"
 
-#: logview/src/logview-window.c:824
+#: logview/src/logview-window.c:825
 msgid "_Open..."
 msgstr "_Deschide..."
 
-#: logview/src/logview-window.c:824
+#: logview/src/logview-window.c:825
 msgid "Open a log from file"
 msgstr "Deschide o înregistrare din fișier"
 
-#: logview/src/logview-window.c:826 cafe-dictionary/src/gdict-window.c:1300
+#: logview/src/logview-window.c:827
 msgid "_Close"
 msgstr "În_chide"
 
-#: logview/src/logview-window.c:826
+#: logview/src/logview-window.c:827
 msgid "Close this log"
 msgstr "Închide această înregistrare"
 
-#: logview/src/logview-window.c:828
+#: logview/src/logview-window.c:829
 msgid "_Quit"
 msgstr "_Închide"
 
-#: logview/src/logview-window.c:828
+#: logview/src/logview-window.c:829
 msgid "Quit the log viewer"
 msgstr "Închide vizualizatorul de înregistrări"
 
-#: logview/src/logview-window.c:831 cafe-dictionary/src/gdict-window.c:1304
+#: logview/src/logview-window.c:832
 msgid "_Copy"
 msgstr "_Copiază"
 
-#: logview/src/logview-window.c:831
+#: logview/src/logview-window.c:832
 msgid "Copy the selection"
 msgstr "Copiază selecția"
 
-#: logview/src/logview-window.c:833 cafe-dictionary/src/gdict-window.c:1306
+#: logview/src/logview-window.c:834 cafe-dictionary/src/gdict-window.c:1306
 msgid "Select _All"
 msgstr "Selectează to_ate"
 
-#: logview/src/logview-window.c:833
+#: logview/src/logview-window.c:834
 msgid "Select the entire log"
 msgstr "Selectează toată înregistrarea"
 
-#: logview/src/logview-window.c:835
+#: logview/src/logview-window.c:836
 msgid "_Find..."
 msgstr "_Căutare..."
 
-#: logview/src/logview-window.c:835
+#: logview/src/logview-window.c:836
 msgid "Find a word or phrase in the log"
 msgstr "Caută un cuvând sau o frază în înregistrare"
 
-#: logview/src/logview-window.c:838
-msgid "Zoom _In"
-msgstr "_Mărește"
-
-#: logview/src/logview-window.c:838
+#: logview/src/logview-window.c:839
 msgid "Bigger text size"
 msgstr "Text mai mare"
 
-#: logview/src/logview-window.c:840
-msgid "Zoom _Out"
-msgstr "Mi_cșorează"
-
-#: logview/src/logview-window.c:840
+#: logview/src/logview-window.c:841
 msgid "Smaller text size"
 msgstr "Text mai mic"
 
-#: logview/src/logview-window.c:842
-msgid "_Normal Size"
-msgstr "Dimensiune _normală"
-
-#: logview/src/logview-window.c:842
+#: logview/src/logview-window.c:843
 msgid "Normal text size"
 msgstr "Text de dimensiuni normale"
 
-#: logview/src/logview-window.c:845
+#: logview/src/logview-window.c:846
 msgid "Manage Filters"
 msgstr "Administrare filtre"
 
-#: logview/src/logview-window.c:845
+#: logview/src/logview-window.c:846
 msgid "Manage filters"
 msgstr "Administrare filtre"
 
-#: logview/src/logview-window.c:848
+#: logview/src/logview-window.c:849
 msgid "Open the help contents for the log viewer"
 msgstr "Deschide ajutorul pentru vizualizatorul de înregistrări"
 
-#: logview/src/logview-window.c:850 cafe-dictionary/src/gdict-applet.c:1186
+#: logview/src/logview-window.c:851 cafe-dictionary/src/gdict-applet.c:1177
 #: cafe-dictionary/src/gdict-window.c:1341
 msgid "_About"
 msgstr "_Despre"
 
-#: logview/src/logview-window.c:850
+#: logview/src/logview-window.c:851
 msgid "Show the about dialog for the log viewer"
 msgstr "Afișează dialogul Despre pentru vizualizatorul de înregistrări"
 
-#: logview/src/logview-window.c:855
+#: logview/src/logview-window.c:856
 msgid "_Statusbar"
 msgstr "Bară de _stare"
 
-#: logview/src/logview-window.c:855
+#: logview/src/logview-window.c:856
 msgid "Show Status Bar"
 msgstr "Afișează bara de stare"
 
-#: logview/src/logview-window.c:857
+#: logview/src/logview-window.c:858
 msgid "Side _Pane"
 msgstr "_Vedere laterală"
 
-#: logview/src/logview-window.c:857
+#: logview/src/logview-window.c:858
 msgid "Show Side Pane"
 msgstr "Afișează panoul lateral"
 
-#: logview/src/logview-window.c:859
+#: logview/src/logview-window.c:860
 msgid "Show matches only"
 msgstr "Afișează doar potrivirile"
 
-#: logview/src/logview-window.c:859
+#: logview/src/logview-window.c:860
 msgid "Only show lines that match one of the given filters"
 msgstr ""
 "Afișează doar liniile care se potrivesc unuia dintre filtrele specificate"
 
-#: logview/src/logview-window.c:991
+#: logview/src/logview-window.c:992
 #, c-format
 msgid "Can't read from \"%s\""
 msgstr "Nu s-a putut citi de la „%s”"
 
-#: logview/src/logview-window.c:1416
+#: logview/src/logview-window.c:1417
 msgid "Version: "
 msgstr "Versiune: "
 
-#: logview/src/logview-window.c:1522
+#: logview/src/logview-window.c:1525
 msgid "Could not open the following files:"
 msgstr "Nu s-au putut deschide următoarele fișiere:"
 
@@ -1996,15 +1964,7 @@ msgid "Check word definitions and spellings in an online dictionary"
 msgstr ""
 "Verifică definițiile și ortografia unui cuvânt într-un dicționar online"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:9
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:12
-msgid "accessories-dictionary"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-dictionary/data/cafe-dictionary.desktop.in.in:13
 msgid "CAFE;dictionary;applet;thesaurus;spelling;definitions;online;"
 msgstr ""
@@ -2016,8 +1976,8 @@ msgstr "Un dicționar pentru desktopul CAFE"
 #: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:10
 msgid ""
 "CAFE Dictionary allows you to look up words in on-line dictionaries. It "
-"comes preconfigured with a list of Dict servers (RFC 2229), to which you can"
-" add your own sources, while you can select specific servers for a specific "
+"comes preconfigured with a list of Dict servers (RFC 2229), to which you can "
+"add your own sources, while you can select specific servers for a specific "
 "query."
 msgstr ""
 
@@ -2054,8 +2014,8 @@ msgid ""
 "available. The default strategy is 'exact', that is match exact words."
 msgstr ""
 "Numele strategiei implicite pentru căutare de folosit pe o sursă de "
-"dicționare, dacă este disponibilă. Strategia implicită este „exact”, adică o"
-" potrivire exactă pentru cuvinte."
+"dicționare, dacă este disponibilă. Strategia implicită este „exact”, adică o "
+"potrivire exactă pentru cuvinte."
 
 #: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:16
 msgid "The font to be used when printing"
@@ -2203,8 +2163,7 @@ msgstr ""
 #, c-format
 msgid "Connection timeout for the dictionary server at '%s:%d'"
 msgstr ""
-"Limită de timp depășită pentru conexiunea la servitorul de dicționare "
-"„%s:%d”"
+"Limită de timp depășită pentru conexiunea la servitorul de dicționare „%s:%d”"
 
 #: cafe-dictionary/libgdict/gdict-client-context.c:1878
 msgid "No hostname defined for the dictionary server"
@@ -2432,31 +2391,32 @@ msgstr "Opțiuni GDict"
 msgid "Show GDict Options"
 msgstr "Afișează opțiunile GDict"
 
-#: cafe-dictionary/src/gdict-about.c:57 cafe-dictionary/src/gdict-applet.c:587
+#: cafe-dictionary/src/gdict-about.c:58 cafe-dictionary/src/gdict-applet.c:575
 msgid "Look up words in dictionaries"
 msgstr "Caută cuvinte în dicționare"
 
-#: cafe-dictionary/src/gdict-about.c:70
+#: cafe-dictionary/src/gdict-about.c:71
 msgid ""
-"You should have received a copy of the GNU General Public License along with"
-" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: cafe-dictionary/src/gdict-about.c:87 cafe-dictionary/src/gdict-app.c:364
+#: cafe-dictionary/src/gdict-about.c:88 cafe-dictionary/src/gdict-app.c:364
 #: cafe-dictionary/src/gdict-window.c:607
 #: cafe-dictionary/src/gdict-window.c:1891
 msgid "Dictionary"
 msgstr "Dicționar"
 
-#: cafe-dictionary/src/gdict-about.c:89
+#: cafe-dictionary/src/gdict-about.c:90
 msgid "About Dictionary"
 msgstr ""
 
-#: cafe-dictionary/src/gdict-about.c:90
+#: cafe-dictionary/src/gdict-about.c:91
 msgid ""
 "Copyright © 2005-2006 Emmanuele Bassi\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
 #. Translators: the first is the word found, the second is the
@@ -2550,113 +2510,113 @@ msgstr "Document fără nume"
 msgid "Error while writing to '%s'"
 msgstr "Eroare la scrierea către „%s”"
 
-#: cafe-dictionary/src/gdict-applet.c:360
+#: cafe-dictionary/src/gdict-applet.c:356
 msgid "Clear the definitions found"
 msgstr "Șterge definițiile găsite"
 
-#: cafe-dictionary/src/gdict-applet.c:362
+#: cafe-dictionary/src/gdict-applet.c:358
 msgid "Clear definition"
 msgstr "Șterge definiția"
 
-#: cafe-dictionary/src/gdict-applet.c:363
+#: cafe-dictionary/src/gdict-applet.c:359
 msgid "Clear the text of the definition"
 msgstr "Șterge textul definiției"
 
-#: cafe-dictionary/src/gdict-applet.c:375
+#: cafe-dictionary/src/gdict-applet.c:367
 msgid "Print the definitions found"
 msgstr "Tipărește definițiile găsite"
 
-#: cafe-dictionary/src/gdict-applet.c:377
+#: cafe-dictionary/src/gdict-applet.c:369
 msgid "Print definition"
 msgstr "Tipărește definiția"
 
-#: cafe-dictionary/src/gdict-applet.c:378
+#: cafe-dictionary/src/gdict-applet.c:370
 msgid "Print the text of the definition"
 msgstr "Tipărește textul definiției"
 
-#: cafe-dictionary/src/gdict-applet.c:390
+#: cafe-dictionary/src/gdict-applet.c:378
 msgid "Save the definitions found"
 msgstr "Salvează definițiile găsite"
 
-#: cafe-dictionary/src/gdict-applet.c:392
+#: cafe-dictionary/src/gdict-applet.c:380
 msgid "Save definition"
 msgstr "Salvează definiția"
 
-#: cafe-dictionary/src/gdict-applet.c:393
+#: cafe-dictionary/src/gdict-applet.c:381
 msgid "Save the text of the definition to a file"
 msgstr "Salvează textul definiției într-un fișier"
 
-#: cafe-dictionary/src/gdict-applet.c:530
+#: cafe-dictionary/src/gdict-applet.c:518
 msgid "Click to view the dictionary window"
 msgstr "Apăsați pentru a vedea fereastra dicționar"
 
-#: cafe-dictionary/src/gdict-applet.c:532
+#: cafe-dictionary/src/gdict-applet.c:520
 msgid "Toggle dictionary window"
 msgstr "Comută fereastra dicționar"
 
-#: cafe-dictionary/src/gdict-applet.c:533
+#: cafe-dictionary/src/gdict-applet.c:521
 msgid "Show or hide the definition window"
 msgstr "Afișează sau ascunde fereastra de definiții"
 
-#: cafe-dictionary/src/gdict-applet.c:584
+#: cafe-dictionary/src/gdict-applet.c:572
 msgid "Type the word you want to look up"
 msgstr "Scrieți cuvântul pe care doriți să-l căutați"
 
-#: cafe-dictionary/src/gdict-applet.c:586
+#: cafe-dictionary/src/gdict-applet.c:574
 msgid "Dictionary entry"
 msgstr "Intrare dicționar"
 
-#: cafe-dictionary/src/gdict-applet.c:715
+#: cafe-dictionary/src/gdict-applet.c:703
 #: cafe-dictionary/src/gdict-window.c:1104
 msgid "Dictionary Preferences"
 msgstr "Preferințe dicționar"
 
-#: cafe-dictionary/src/gdict-applet.c:739
+#: cafe-dictionary/src/gdict-applet.c:727
 #: cafe-dictionary/src/gdict-pref-dialog.c:498
 #: cafe-dictionary/src/gdict-source-dialog.c:478
 #: cafe-dictionary/src/gdict-window.c:1251
 msgid "There was an error while displaying help"
 msgstr "A intervenit o eroare la afișarea ajutorului"
 
-#: cafe-dictionary/src/gdict-applet.c:878
+#: cafe-dictionary/src/gdict-applet.c:866
 #: cafe-dictionary/src/gdict-window.c:522
 #, c-format
 msgid "No dictionary source available with name '%s'"
 msgstr "Nici un dicționar sursă disponibil cu numele „%s”"
 
-#: cafe-dictionary/src/gdict-applet.c:882
+#: cafe-dictionary/src/gdict-applet.c:870
 #: cafe-dictionary/src/gdict-window.c:526
 msgid "Unable to find dictionary source"
 msgstr "Nu s-a putut găsi dicționarul sursă"
 
-#: cafe-dictionary/src/gdict-applet.c:898
+#: cafe-dictionary/src/gdict-applet.c:886
 #: cafe-dictionary/src/gdict-window.c:542
 #, c-format
 msgid "No context available for source '%s'"
 msgstr "Niciun context disponibil pentru sursa „%s”"
 
-#: cafe-dictionary/src/gdict-applet.c:902
+#: cafe-dictionary/src/gdict-applet.c:890
 #: cafe-dictionary/src/gdict-window.c:546
 msgid "Unable to create a context"
 msgstr "Nu s-a putut crea un context"
 
-#: cafe-dictionary/src/gdict-applet.c:1168
+#: cafe-dictionary/src/gdict-applet.c:1159
 msgid "_Look Up Selected Text"
 msgstr "_Caută text selectat"
 
-#: cafe-dictionary/src/gdict-applet.c:1171
+#: cafe-dictionary/src/gdict-applet.c:1162
 msgid "Cl_ear"
 msgstr "_Curăță"
 
-#: cafe-dictionary/src/gdict-applet.c:1174
+#: cafe-dictionary/src/gdict-applet.c:1165
 msgid "_Print"
 msgstr "Ti_părește"
 
-#: cafe-dictionary/src/gdict-applet.c:1177
+#: cafe-dictionary/src/gdict-applet.c:1168
 msgid "_Save"
 msgstr "_Salvează"
 
-#: cafe-dictionary/src/gdict-applet.c:1180
+#: cafe-dictionary/src/gdict-applet.c:1171
 msgid "Preferences"
 msgstr "Preferințe"
 
@@ -2779,10 +2739,6 @@ msgstr "Ti_părește..."
 #: cafe-dictionary/src/gdict-window.c:1299
 msgid "Print this document"
 msgstr "Tipărește acest document"
-
-#: cafe-dictionary/src/gdict-window.c:1308
-msgid "_Find"
-msgstr ""
 
 #: cafe-dictionary/src/gdict-window.c:1309
 msgid "Find a word or phrase in the document"
@@ -2962,12 +2918,6 @@ msgstr ""
 msgid "Attach and mount one or more disk image files"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:8
-msgid "drive-removable-media"
-msgstr ""
-
 #: cafe-disk-image-mounter/src/main.c:57
 msgid "An error occurred"
 msgstr "A intervenit o eroare"
@@ -3057,14 +3007,7 @@ msgid "Save images of your desktop or individual windows"
 msgstr ""
 "Salvează imagini ale spațiului de lucru sau ale unor ferestre individuale"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:9
-msgid "applets-screenshooter"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-screenshot/data/cafe-screenshot.desktop.in:13
 msgid "CAFE;screenshot;snapshot;desktop;window;image;"
 msgstr ""
@@ -3260,8 +3203,8 @@ msgstr "Realizează o imagine a ecranului"
 
 #: cafe-screenshot/src/cafe-screenshot.c:1355
 msgid ""
-"Conflicting options: --clipboard and --interactive should not be used at the"
-" same time.\n"
+"Conflicting options: --clipboard and --interactive should not be used at the "
+"same time.\n"
 msgstr ""
 
 #: cafe-screenshot/src/cafe-screenshot.c:1361
@@ -3278,7 +3221,8 @@ msgid ""
 "\n"
 "Please check your installation of cafe-utils."
 msgstr ""
-"Erroare la încărcarea fișierului de definirea a interfeței pentru programul de captură de ecran: \n"
+"Erroare la încărcarea fișierului de definirea a interfeței pentru programul "
+"de captură de ecran: \n"
 "%s\n"
 "\n"
 "Verificați instalarea cafe-utils."
@@ -3329,3 +3273,12 @@ msgstr "Se salvează fișierul..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "Nu s-a putut accesa sursa fișierului"
+
+#~ msgid "Zoom _In"
+#~ msgstr "_Mărește"
+
+#~ msgid "Zoom _Out"
+#~ msgstr "Mi_cșorează"
+
+#~ msgid "_Normal Size"
+#~ msgstr "Dimensiune _normală"

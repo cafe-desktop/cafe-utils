@@ -2,22 +2,22 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-utils package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-utils 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2020-01-13 16:47+0100\n"
+"POT-Creation-Date: 2023-11-20 09:32+0100\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Bengali (https://www.transifex.com/cafe/teams/13566/bn/)\n"
+"Language: bn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: bn\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
@@ -29,14 +29,7 @@ msgstr ""
 msgid "Check folder sizes and available disk space"
 msgstr "ফোল্ডারের মাপ ও ডিস্কে বিদ্যমান স্থান পরীক্ষা করা হবে"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:8
-msgid "cafe-disk-usage-analyzer"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:14
 msgid "CAFE;check;disk;usage;analyze;size;space;"
 msgstr ""
@@ -73,7 +66,7 @@ msgstr "ফোল্ডার স্ক্যান করুন...(_o)"
 msgid "S_can Remote Folder..."
 msgstr "দূরবর্তী ফোল্ডার স্ক্যান করুন...(_c)"
 
-#: baobab/data/baobab-main-window.ui:74 logview/src/logview-window.c:819
+#: baobab/data/baobab-main-window.ui:74 logview/src/logview-window.c:820
 #: cafe-dictionary/src/gdict-window.c:1286
 msgid "_Edit"
 msgstr "সম্পাদনা (_E)"
@@ -86,7 +79,7 @@ msgstr "সব প্রসারণ করা হবে (_E)"
 msgid "_Collapse All"
 msgstr "সব গুটিয়ে ফেলা হবে (_C)"
 
-#: baobab/data/baobab-main-window.ui:101 logview/src/logview-window.c:820
+#: baobab/data/baobab-main-window.ui:101 logview/src/logview-window.c:821
 #: cafe-dictionary/src/gdict-window.c:1287
 msgid "_View"
 msgstr "প্রদর্শন (_V)"
@@ -103,19 +96,19 @@ msgstr "স্ট্যাটাস-বার (_a)"
 msgid "All_ocated Space"
 msgstr "বরাদ্দকৃত স্থান (_o)"
 
-#: baobab/data/baobab-main-window.ui:129 logview/src/logview-window.c:822
-#: cafe-dictionary/src/gdict-applet.c:1183
+#: baobab/data/baobab-main-window.ui:129 logview/src/logview-window.c:823
+#: cafe-dictionary/src/gdict-applet.c:1174
 #: cafe-dictionary/src/gdict-window.c:1289
 msgid "_Help"
 msgstr "সহায়িকা (_H)"
 
-#: baobab/data/baobab-main-window.ui:136 logview/src/logview-window.c:848
+#: baobab/data/baobab-main-window.ui:136 logview/src/logview-window.c:849
 #: cafe-dictionary/src/gdict-window.c:1339
 msgid "_Contents"
 msgstr "বিষয়বস্তু (_C)"
 
-#: baobab/data/baobab-main-window.ui:183 baobab/src/baobab.c:1236
-#: baobab/src/callbacks.c:107
+#: baobab/data/baobab-main-window.ui:183 baobab/src/baobab.c:1238
+#: baobab/src/callbacks.c:108
 msgid "Disk Usage Analyzer"
 msgstr "ডিস্ক ব্যবহারের বিশ্লেষণ ব্যবস্থা"
 
@@ -213,8 +206,8 @@ msgstr ""
 
 #: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:10
 msgid ""
-"As its name implies, Disk Usage Analyzer is a graphical utility that you can"
-" use to view and monitor your disk usage and folder structure. It displays "
+"As its name implies, Disk Usage Analyzer is a graphical utility that you can "
+"use to view and monitor your disk usage and folder structure. It displays "
 "summary information in ring or treemap charts."
 msgstr ""
 
@@ -225,98 +218,98 @@ msgid ""
 "changes to the home directory and warn the user if a file is added/removed."
 msgstr ""
 
-#: baobab/src/baobab.c:137 baobab/src/baobab.c:357
+#: baobab/src/baobab.c:139 baobab/src/baobab.c:359
 msgid "Scanning..."
 msgstr "স্ক্যান করা হচ্ছে..."
 
-#: baobab/src/baobab.c:183
+#: baobab/src/baobab.c:185
 msgid "Total filesystem capacity:"
 msgstr "ফাইল-সিস্টেমের সর্বমোট ধারণক্ষমতা:"
 
-#: baobab/src/baobab.c:184
+#: baobab/src/baobab.c:186
 msgid "used:"
 msgstr "ব্যবহৃত:"
 
-#: baobab/src/baobab.c:185
+#: baobab/src/baobab.c:187
 msgid "available:"
 msgstr "বিদ্যমান:"
 
-#: baobab/src/baobab.c:242 baobab/src/baobab.c:299 baobab/src/callbacks.c:272
+#: baobab/src/baobab.c:244 baobab/src/baobab.c:301 baobab/src/callbacks.c:274
 msgid "Calculating percentage bars..."
 msgstr "শতাংশের বারের মান গণনা করা হচ্ছে..."
 
-#: baobab/src/baobab.c:253 baobab/src/baobab.c:1300 baobab/src/callbacks.c:276
+#: baobab/src/baobab.c:255 baobab/src/baobab.c:1305 baobab/src/callbacks.c:278
 msgid "Ready"
 msgstr "প্রস্তুত"
 
-#: baobab/src/baobab.c:391
+#: baobab/src/baobab.c:393
 msgid "Total filesystem capacity"
 msgstr "ফাইল-সিস্টেমের সর্বমোট ধারণক্ষমতা:"
 
-#: baobab/src/baobab.c:415
+#: baobab/src/baobab.c:417
 msgid "Total filesystem usage"
 msgstr "ফাইল-সিস্টেমের সর্বমোট ব্যবহার:"
 
-#: baobab/src/baobab.c:457
+#: baobab/src/baobab.c:459
 msgid "contains hardlinks for:"
 msgstr "চিহ্নিত সামগ্রীর হার্ড-লিংক ধারণকারী:"
 
-#: baobab/src/baobab.c:466
+#: baobab/src/baobab.c:468
 #, c-format
 msgid "%5d item"
 msgid_plural "%5d items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: baobab/src/baobab.c:592
+#: baobab/src/baobab.c:594
 msgid "Could not initialize monitoring"
 msgstr "পর্যবেক্ষণ ব্যবস্থা আরম্ভ করতে ব্যর্থ"
 
-#: baobab/src/baobab.c:593
+#: baobab/src/baobab.c:595
 msgid "Changes to your home folder will not be monitored."
 msgstr "হোম ফোল্ডারের মধ্যে কোনো পরিবর্তন পর্যবেক্ষণ করা হবে না।"
 
-#: baobab/src/baobab.c:914
+#: baobab/src/baobab.c:916
 msgid "Move to parent folder"
 msgstr "প্যারেন্ট ফোল্ডারে স্থানান্তর করুন"
 
-#: baobab/src/baobab.c:918
+#: baobab/src/baobab.c:920
 msgid "Zoom in"
 msgstr "বড় করে প্রদর্শন"
 
-#: baobab/src/baobab.c:922
+#: baobab/src/baobab.c:924
 msgid "Zoom out"
 msgstr "ছোট করে প্রদর্শন"
 
-#: baobab/src/baobab.c:926
+#: baobab/src/baobab.c:928
 msgid "Save screenshot"
 msgstr "স্ক্রিনশট সংরক্ষণ করা হবে"
 
-#: baobab/src/baobab.c:1112
+#: baobab/src/baobab.c:1114
 msgid "View as Rings Chart"
 msgstr "বৃত্তাকার রেখাচিত্র রূপে প্রদর্শন"
 
-#: baobab/src/baobab.c:1114
+#: baobab/src/baobab.c:1116
 msgid "View as Treemap Chart"
 msgstr "ট্রি-ম্যাপ রেখাচিত্র রূপে প্রদর্শন"
 
-#: baobab/src/baobab.c:1225
+#: baobab/src/baobab.c:1227
 msgid "Show version"
 msgstr "সংস্করণ প্রদর্শন করা হবে"
 
-#: baobab/src/baobab.c:1226
+#: baobab/src/baobab.c:1228
 msgid "[DIRECTORY]"
 msgstr "[DIRECTORY]"
 
-#: baobab/src/baobab.c:1256
+#: baobab/src/baobab.c:1258
 msgid "Too many arguments. Only one directory can be specified."
 msgstr "অত্যাধিক সংখ্যক আর্গুমেন্ট। শুধুমাত্র একটি ডিরেক্টরি উল্লেখ করা যাবে।"
 
-#: baobab/src/baobab.c:1273
+#: baobab/src/baobab.c:1278
 msgid "Could not detect any mount point."
 msgstr "কোনো মাউন্ট পয়েন্ট সনাক্ত করা যায়নি।"
 
-#: baobab/src/baobab.c:1275
+#: baobab/src/baobab.c:1280
 msgid "Without mount points disk usage cannot be analyzed."
 msgstr "মাউন্ট পয়েন্ট ছাড়া ডিস্কের ব্যবহার বিশ্লেষণ করা যাবে না।"
 
@@ -415,8 +408,7 @@ msgstr "নিরাপদ WebDAV (HTTPS)"
 
 #: baobab/src/baobab-remote-connect-dialog.c:244
 msgid "Cannot Connect to Server. You must enter a name for the server."
-msgstr ""
-"সার্ভারের সাথে সংযোগ স্থাপন করতে ব্যর্থ। সার্ভারের নাম উল্লেখ করা আবশ্যক।"
+msgstr "সার্ভারের সাথে সংযোগ স্থাপন করতে ব্যর্থ। সার্ভারের নাম উল্লেখ করা আবশ্যক।"
 
 #: baobab/src/baobab-remote-connect-dialog.c:247
 msgid "Please enter a name and try again."
@@ -476,14 +468,14 @@ msgid ""
 "The content of your home folder has changed. Select rescan to update the "
 "disk usage details."
 msgstr ""
-"আপনার হোম ডিরেক্টরির আইটেমের মধ্যে কিছু পরিবর্তন ঘটেছে। ডিস্ক ব্যবহারের "
-"বিবরণ হালনাগাদ করার জন্য অনুগ্রহ করে পুনরায় স্ক্যান করা নির্বাচন করুন।"
+"আপনার হোম ডিরেক্টরির আইটেমের মধ্যে কিছু পরিবর্তন ঘটেছে। ডিস্ক ব্যবহারের বিবরণ "
+"হালনাগাদ করার জন্য অনুগ্রহ করে পুনরায় স্ক্যান করা নির্বাচন করুন।"
 
 #: baobab/src/baobab-treeview.c:84
 msgid "_Rescan"
 msgstr "পুনরায় স্ক্যান (_R)"
 
-#: baobab/src/baobab-treeview.c:222 gsearchtool/src/gsearchtool.c:2436
+#: baobab/src/baobab-treeview.c:222 gsearchtool/src/gsearchtool.c:2428
 msgid "Folder"
 msgstr "ফোল্ডার"
 
@@ -491,7 +483,7 @@ msgstr "ফোল্ডার"
 msgid "Usage"
 msgstr "ব্যবহার প্রণালী"
 
-#: baobab/src/baobab-treeview.c:258 gsearchtool/src/gsearchtool.c:2449
+#: baobab/src/baobab-treeview.c:258 gsearchtool/src/gsearchtool.c:2441
 msgid "Size"
 msgstr "আকার"
 
@@ -524,7 +516,7 @@ msgstr "ডিস্কের ব্যবহার বিশ্লেষণ ক
 msgid "_Open Folder"
 msgstr "ফোল্ডার খুলুন (_O)"
 
-#: baobab/src/baobab-utils.c:368 gsearchtool/src/gsearchtool-callbacks.c:1216
+#: baobab/src/baobab-utils.c:368 gsearchtool/src/gsearchtool-callbacks.c:1204
 msgid "Mo_ve to Trash"
 msgstr "আবর্জানার বাক্সে স্থানান্তরণ করুন (_v)"
 
@@ -555,60 +547,59 @@ msgstr "বিবরণ %s:"
 msgid "There was an error displaying help."
 msgstr "সহায়িকা প্রদর্শনে সমস্যা।"
 
-#: baobab/src/callbacks.c:77 logview/src/logview-about.h:45
-#: cafe-dictionary/src/gdict-about.c:52
+#: baobab/src/callbacks.c:78 logview/src/logview-about.h:46
+#: cafe-dictionary/src/gdict-about.c:53
 msgid "CAFE Documentation Team"
 msgstr ""
 
-#: baobab/src/callbacks.c:82 logview/src/logview-about.h:50
-#: cafe-dictionary/src/gdict-about.c:60
+#: baobab/src/callbacks.c:83 logview/src/logview-about.h:51
+#: cafe-dictionary/src/gdict-about.c:61
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
-"এই প্রোগ্রামটি একটি মুক্ত সফ্টওয়্যার; Free Software Foundation দ্বারা "
-"প্রকাশিত GNU General Public License-র শর্তানুযায়ী এটি বিতরণ ও পরিবর্তন করা "
-"যাবে; লাইসেন্সের সংস্করণ ২ অথবা (আপনার সুবিধানুযায়ী) ঊর্ধ্বতন কোনো সংস্করণের"
-" অধীন।"
+"এই প্রোগ্রামটি একটি মুক্ত সফ্টওয়্যার; Free Software Foundation দ্বারা প্রকাশিত GNU "
+"General Public License-র শর্তানুযায়ী এটি বিতরণ ও পরিবর্তন করা যাবে; লাইসেন্সের "
+"সংস্করণ ২ অথবা (আপনার সুবিধানুযায়ী) ঊর্ধ্বতন কোনো সংস্করণের অধীন।"
 
-#: baobab/src/callbacks.c:87 logview/src/logview-about.h:54
-#: cafe-dictionary/src/gdict-about.c:65
+#: baobab/src/callbacks.c:88 logview/src/logview-about.h:55
+#: cafe-dictionary/src/gdict-about.c:66
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
 msgstr ""
-"এই প্রোগ্রামটি বিতরণ করার মূল উদ্দেশ্য যে ব্যবহারকারীরা এর দ্বারা উপকৃত "
-"হবেন, কিন্তু এটির জন্য কোনো সুস্পষ্ট ওয়ারেন্টি উপস্থিত নেই; বাণিজ্যিক ও কোনো"
-" সুনির্দিষ্ট কর্ম সাধনের জন্য অন্তর্নিহীত ওয়ারেন্টিও অনুপস্থিত। অধিক জানতে "
-"GNU General Public License পড়ুন।"
+"এই প্রোগ্রামটি বিতরণ করার মূল উদ্দেশ্য যে ব্যবহারকারীরা এর দ্বারা উপকৃত হবেন, কিন্তু "
+"এটির জন্য কোনো সুস্পষ্ট ওয়ারেন্টি উপস্থিত নেই; বাণিজ্যিক ও কোনো সুনির্দিষ্ট কর্ম সাধনের "
+"জন্য অন্তর্নিহীত ওয়ারেন্টিও অনুপস্থিত। অধিক জানতে GNU General Public License পড়ুন।"
 
-#: baobab/src/callbacks.c:92 logview/src/logview-about.h:58
+#: baobab/src/callbacks.c:93 logview/src/logview-about.h:59
 msgid ""
-"You should have received a copy of the GNU General Public License along with"
-" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA."
 msgstr ""
 
-#: baobab/src/callbacks.c:109
+#: baobab/src/callbacks.c:110
 msgid "About Disk Usage Analyzer"
 msgstr ""
 
-#: baobab/src/callbacks.c:110
+#: baobab/src/callbacks.c:111
 msgid "A graphical tool to analyze disk usage."
 msgstr "ডিস্কের ব্যবহার প্রদর্শনকারী গ্রাফিকাল টুল।"
 
-#: baobab/src/callbacks.c:111
+#: baobab/src/callbacks.c:112
 msgid ""
 "Copyright © 2005-2010 Fabio Marzocca\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
-#: baobab/src/callbacks.c:117 logview/src/logview-about.h:64
-#: cafe-dictionary/src/gdict-about.c:56
+#: baobab/src/callbacks.c:119 logview/src/logview-about.h:65
+#: cafe-dictionary/src/gdict-about.c:57
 msgid "translator-credits"
 msgstr ""
 "অঙ্কুর প্রকল্পের পক্ষে, সায়মিন্দু দাশগুপ্ত <unmadindu@bengalinux.org>\n"
@@ -617,12 +608,12 @@ msgstr ""
 "লোবা ইয়াসমীন <loba@ankur.org.bd>\n"
 "ইসরাত জাহান <israt@ankur.org.bd>"
 
-#: baobab/src/callbacks.c:215 gsearchtool/src/gsearchtool-callbacks.c:509
-#: gsearchtool/src/gsearchtool-callbacks.c:855
+#: baobab/src/callbacks.c:217 gsearchtool/src/gsearchtool-callbacks.c:505
+#: gsearchtool/src/gsearchtool-callbacks.c:843
 msgid "The document does not exist."
 msgstr "নথি বর্তমানে উপস্থিত নেই।"
 
-#: baobab/src/callbacks.c:296
+#: baobab/src/callbacks.c:298
 msgid "The folder does not exist."
 msgstr "ফোল্ডার বর্তমানে অনুপস্থিত।"
 
@@ -639,25 +630,16 @@ msgstr ""
 msgid ""
 "CAFE Search Tool is a simple but powerful utility that allows you to search "
 "for files and folders on any mounted file system. Its interface gives you "
-"instant access to a wide variety of parameters for each search, such as text"
-" contained within a file, ownership, date of modification, file size, folder"
-" exclusion, etc.."
+"instant access to a wide variety of parameters for each search, such as text "
+"contained within a file, ownership, date of modification, file size, folder "
+"exclusion, etc.."
 msgstr ""
 
 #: gsearchtool/data/cafe-search-tool.desktop.in:4
 msgid "Locate documents and folders on this computer by name or content"
-msgstr ""
-"নাম অথবা অন্তর্ভুক্ত বিষয় অনুসারে এই কম্পিউটারে ফাইল অথবা ফোল্ডার অনুসন্ধান "
-"করুন"
+msgstr "নাম অথবা অন্তর্ভুক্ত বিষয় অনুসারে এই কম্পিউটারে ফাইল অথবা ফোল্ডার অনুসন্ধান করুন"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gsearchtool/data/cafe-search-tool.desktop.in:7
-msgid "system-search"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: gsearchtool/data/cafe-search-tool.desktop.in:13
 msgid ""
 "CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
@@ -684,8 +666,8 @@ msgid ""
 "This key determines if the search tool disables the use of the locate "
 "command when performing simple file name searches."
 msgstr ""
-"এই কী দ্বারা নির্ধারিত হয় ফাইলের নাম অনুসারে সাধারণ অনুসন্ধানের সময় "
-"অনুসন্ধান ব্যবস্থার দ্বারা locate কমান্ডের ব্যবহার নিষ্ক্রিয় করা হবে কি না।"
+"এই কী দ্বারা নির্ধারিত হয় ফাইলের নাম অনুসারে সাধারণ অনুসন্ধানের সময় অনুসন্ধান "
+"ব্যবস্থার দ্বারা locate কমান্ডের ব্যবহার নিষ্ক্রিয় করা হবে কি না।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:19
 msgid "Quick Search Excluded Paths"
@@ -693,13 +675,13 @@ msgstr "দ্রুত অনুসন্ধান কর্মে উপেক
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:20
 msgid ""
-"This key defines the paths the search tool will exclude from a quick search."
-" The wildcards '*' and '?' are supported. The default values are /mnt/*, "
-"/media/*, /dev/*, /tmp/*, /proc/*, and /var/*."
+"This key defines the paths the search tool will exclude from a quick search. "
+"The wildcards '*' and '?' are supported. The default values are /mnt/*, /"
+"media/*, /dev/*, /tmp/*, /proc/*, and /var/*."
 msgstr ""
-"এই কী দ্বারা দ্রুত অনুসন্ধান ব্যবস্থায় বর্জিত পাথগুলি নির্ধারিত হয়। '*' ও "
-"'?' ওয়াইল্ড-কার্ডগুলি ব্যবহার করা সম্ভব হবে। ডিফল্ট মান হলো, /mnt/*, "
-"/media/*, /dev/*, /tmp/*, /proc/* এবং /var/*।"
+"এই কী দ্বারা দ্রুত অনুসন্ধান ব্যবস্থায় বর্জিত পাথগুলি নির্ধারিত হয়। '*' ও '?' ওয়াইল্ড-"
+"কার্ডগুলি ব্যবহার করা সম্ভব হবে। ডিফল্ট মান হলো, /mnt/*, /media/*, /dev/*, /tmp/"
+"*, /proc/* এবং /var/*।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:24
 msgid "Disable Quick Search Second Scan"
@@ -710,8 +692,8 @@ msgid ""
 "This key determines if the search tool disables the use of the find command "
 "after performing a quick search."
 msgstr ""
-"এই কী দ্বারা নির্ধারিত হয় দ্রুত অনুসন্ধানের পরে অনুসন্ধান ব্যবস্থার দ্বারা "
-"find কমান্ডের ব্যবহার নিষ্ক্রিয় করা হবে কি না।"
+"এই কী দ্বারা নির্ধারিত হয় দ্রুত অনুসন্ধানের পরে অনুসন্ধান ব্যবস্থার দ্বারা find কমান্ডের "
+"ব্যবহার নিষ্ক্রিয় করা হবে কি না।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:29
 msgid "Quick Search Second Scan Excluded Paths"
@@ -722,13 +704,13 @@ msgid ""
 "This key defines the paths the search tool will exclude from a second scan "
 "when performing a quick search. The second scan uses the find command to "
 "search for files. The purpose of the second scan is to find files that have "
-"not been indexed. The wildcards '*' and '?' are supported. The default value"
-" is /."
+"not been indexed. The wildcards '*' and '?' are supported. The default value "
+"is /."
 msgstr ""
-"এই কী দ্বারা দ্রুত অনুসন্ধান ব্যবস্থায় দ্বিতীয় স্ক্যানের সময় উপেক্ষিত "
-"পাথগুলি নির্ধারিত হয়। দ্বিতীয় স্ক্যানের সময় find কমান্ডের সাহায্যে ফাইল "
-"অনুসন্ধান করা হয়। মূলত ইনডেক্স না করা ফাইল এই পদ্ধতিতে অনুসন্ধান করা হয়। '*'"
-" ও '?' ওয়াইল্ড-কার্ডগুলি ব্যবহার করা সম্ভব হবে। ডিফল্ট মান হলো, /।"
+"এই কী দ্বারা দ্রুত অনুসন্ধান ব্যবস্থায় দ্বিতীয় স্ক্যানের সময় উপেক্ষিত পাথগুলি নির্ধারিত "
+"হয়। দ্বিতীয় স্ক্যানের সময় find কমান্ডের সাহায্যে ফাইল অনুসন্ধান করা হয়। মূলত ইনডেক্স "
+"না করা ফাইল এই পদ্ধতিতে অনুসন্ধান করা হয়। '*' ও '?' ওয়াইল্ড-কার্ডগুলি ব্যবহার করা "
+"সম্ভব হবে। ডিফল্ট মান হলো, /।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:34
 msgid "Search Result Columns Order"
@@ -739,8 +721,8 @@ msgid ""
 "This key defines the order of the columns in the search results. This key "
 "should not be modified by the user."
 msgstr ""
-"অনুসন্ধানের ফলাফলে প্রদর্শনের কলামের ক্ষেত্রে ব্যবহৃত অনুক্রম এই কী দ্বারা "
-"ধার্য করা হয়। ব্যবহারকারী দ্বারা এই কী পরিবর্তন করা হবে না।"
+"অনুসন্ধানের ফলাফলে প্রদর্শনের কলামের ক্ষেত্রে ব্যবহৃত অনুক্রম এই কী দ্বারা ধার্য করা হয়। "
+"ব্যবহারকারী দ্বারা এই কী পরিবর্তন করা হবে না।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:39
 msgid "Default Window Width"
@@ -748,13 +730,13 @@ msgstr "উইন্ডোর প্রস্থের ডিফল্ট মা
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:40
 msgid ""
-"This key defines the window width, and it's used to remember the size of the"
-" search tool between sessions. Setting it to -1 will make the search tool "
-"use the default width."
+"This key defines the window width, and it's used to remember the size of the "
+"search tool between sessions. Setting it to -1 will make the search tool use "
+"the default width."
 msgstr ""
-"এই কী-এর মান দ্বারা উইন্ডোর প্রস্থ নির্ধারণ করা হয় ও সেশান সমাপ্তির পরেও এই "
-"মান প্রয়োগ করা হয়। -1 মান ধার্য করা হলে, অনুসন্ধান সামগ্রীর জন্য ডিফল্ট "
-"প্রস্থের মাপ ব্যবহার করা হয়েছে।"
+"এই কী-এর মান দ্বারা উইন্ডোর প্রস্থ নির্ধারণ করা হয় ও সেশান সমাপ্তির পরেও এই মান "
+"প্রয়োগ করা হয়। -1 মান ধার্য করা হলে, অনুসন্ধান সামগ্রীর জন্য ডিফল্ট প্রস্থের মাপ "
+"ব্যবহার করা হয়েছে।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:44
 msgid "Default Window Height"
@@ -763,12 +745,12 @@ msgstr "উইন্ডোর উচ্চতার ডিফল্ট মাপ
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:45
 msgid ""
 "This key defines the window height, and it's used to remember the size of "
-"the search tool between sessions. Setting it to -1 will make the search tool"
-" use the default height."
+"the search tool between sessions. Setting it to -1 will make the search tool "
+"use the default height."
 msgstr ""
-"এই কী-এর মান দ্বারা উইন্ডোর উচ্চতা নির্ধারণ করা হয় ও সেশান সমাপ্তির পরেও এই "
-"মান প্রয়োগ করা হয়। -1 মান ধার্য করা হলে, অনুসন্ধান সামগ্রীর জন্য ডিফল্ট "
-"উচ্চতার মাপ ব্যবহার করা হয়েছে।"
+"এই কী-এর মান দ্বারা উইন্ডোর উচ্চতা নির্ধারণ করা হয় ও সেশান সমাপ্তির পরেও এই মান "
+"প্রয়োগ করা হয়। -1 মান ধার্য করা হলে, অনুসন্ধান সামগ্রীর জন্য ডিফল্ট উচ্চতার মাপ "
+"ব্যবহার করা হয়েছে।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:49
 msgid "Default Window Maximized"
@@ -778,8 +760,8 @@ msgstr "ডিফল্ট অবস্থায় উইন্ডো সর্ব
 msgid ""
 "This key determines if the search tool window starts in a maximized state."
 msgstr ""
-"এই কী দ্বারা নির্ধারিত হয় প্রারম্ভকালে অনুসন্ধানব্যবস্থার উইন্ডোর ক্ষেত্রে "
-"সর্বোচ্চ মাপ প্রয়োগ করা হবে কি না।"
+"এই কী দ্বারা নির্ধারিত হয় প্রারম্ভকালে অনুসন্ধানব্যবস্থার উইন্ডোর ক্ষেত্রে সর্বোচ্চ মাপ "
+"প্রয়োগ করা হবে কি না।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:54
 msgid "Look in Folder"
@@ -788,122 +770,119 @@ msgstr "চিহ্নিত ফোল্ডারে অনুসন্ধা�
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:55
 msgid "This key defines the default value of the \"Look in Folder\" widget."
 msgstr ""
-"\"চিহ্নিত ফোল্ডারে অনুসন্ধান করা হবে\" উইজেটের ডিফল্ট মান এই কী দ্বারা "
-"নির্ধারিত হয়।"
+"\"চিহ্নিত ফোল্ডারে অনুসন্ধান করা হবে\" উইজেটের ডিফল্ট মান এই কী দ্বারা নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:62
 msgid ""
 "This key determines if the \"Contains the text\" search option is selected "
 "when the search tool is started."
 msgstr ""
-"\"চিহ্নিত লেখাসহ\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা এই কী দ্বারা "
-"অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
+"\"চিহ্নিত লেখাসহ\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা এই কী দ্বারা অনুসন্ধান "
+"ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:66
 msgid ""
 "This key determines if the \"Date modified less than\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"\"সর্বশেষ পরিবর্তনের তারিখ চিহ্নিত সংখ্যার মধ্যে\" অনুসন্ধান অপশনটি "
-"নির্বাচিত হয়েছে কি না তা এই কী দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে "
-"নির্ধারিত হয়।"
+"\"সর্বশেষ পরিবর্তনের তারিখ চিহ্নিত সংখ্যার মধ্যে\" অনুসন্ধান অপশনটি নির্বাচিত হয়েছে "
+"কি না তা এই কী দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:70
 msgid ""
 "This key determines if the \"Date modified more than\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"\"সর্বশেষ পরিবর্তনের তারিখ চিহ্নিত সংখ্যার ঊর্ধ্বে\" অনুসন্ধান অপশনটি "
-"নির্বাচিত হয়েছে কি না তা এই কী দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে "
-"নির্ধারিত হয়।"
+"\"সর্বশেষ পরিবর্তনের তারিখ চিহ্নিত সংখ্যার ঊর্ধ্বে\" অনুসন্ধান অপশনটি নির্বাচিত হয়েছে "
+"কি না তা এই কী দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:74
 msgid ""
 "This key determines if the \"Size at least\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"\"ন্যূনতম মাপ\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা এই কী দ্বারা "
-"অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
+"\"ন্যূনতম মাপ\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা এই কী দ্বারা অনুসন্ধান "
+"ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:78
 msgid ""
 "This key determines if the \"Size at most\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"\"সর্বাধিক মাপ\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা এই কী দ্বারা "
-"অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
+"\"সর্বাধিক মাপ\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা এই কী দ্বারা অনুসন্ধান "
+"ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:82
 msgid ""
 "This key determines if the \"File is empty\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"\"ফাঁকা ফাইল\" অনুসন্ধান অপশনটি নির্বাচিত হয়েছে কি না তা এই কী দ্বারা "
-"অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
+"\"ফাঁকা ফাইল\" অনুসন্ধান অপশনটি নির্বাচিত হয়েছে কি না তা এই কী দ্বারা অনুসন্ধান "
+"ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:86
 msgid ""
 "This key determines if the \"Owned by user\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"\"চিহ্নিত ব্যবহারকারীর মালিকানাধীন\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা"
-" এই কী দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
+"\"চিহ্নিত ব্যবহারকারীর মালিকানাধীন\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা এই "
+"কী দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:90
 msgid ""
-"This key determines if the \"Owned by group\" search option is selected when"
-" the search tool is started."
+"This key determines if the \"Owned by group\" search option is selected when "
+"the search tool is started."
 msgstr ""
-"\"চিহ্নিত দলের মালিকানাধীন\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা এই কী "
-"দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
+"\"চিহ্নিত দলের মালিকানাধীন\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা এই কী দ্বারা "
+"অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:94
 msgid ""
 "This key determines if the \"Owner is unrecognized\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"\"অজ্ঞাত মালিকের অধীনহ\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা এই কী "
-"দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
+"\"অজ্ঞাত মালিকের অধীনহ\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা এই কী দ্বারা "
+"অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:98
 msgid ""
 "This key determines if the \"Name does not contain\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"\"নামের মধ্যে অনুপস্থিত\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা এই কী "
-"দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
+"\"নামের মধ্যে অনুপস্থিত\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা এই কী দ্বারা "
+"অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:102
 msgid ""
-"This key determines if the \"Name matches regular expression\" search option"
-" is selected when the search tool is started."
+"This key determines if the \"Name matches regular expression\" search option "
+"is selected when the search tool is started."
 msgstr ""
-"\"রেগুলার এক্সপ্রেশনের সাথে মেলানো নাম\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি "
-"না তা এই কী দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
+"\"রেগুলার এক্সপ্রেশনের সাথে মেলানো নাম\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না তা "
+"এই কী দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:106
 msgid ""
 "This key determines if the \"Show hidden files and folders\" search option "
 "is selected when the search tool is started."
 msgstr ""
-"\"আড়াল করা ফাইল ও ফোল্ডার প্রদর্শন করা হবে\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে "
-"কি না তা এই কী দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
+"\"আড়াল করা ফাইল ও ফোল্ডার প্রদর্শন করা হবে\" অনুসন্ধান অপশনটি নির্বাচিত হয়ে কি না "
+"তা এই কী দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:110
 msgid ""
 "This key determines if the \"Follow symbolic links\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"\"সিম্বলিক লিঙ্ক অনুসরণ করা হবে\" অনুসন্ধান অপশনটি নির্বাচিত হয়েছে কি না তা "
-"এই কী দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
+"\"সিম্বলিক লিঙ্ক অনুসরণ করা হবে\" অনুসন্ধান অপশনটি নির্বাচিত হয়েছে কি না তা এই কী "
+"দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:114
 msgid ""
 "This key determines if the \"Exclude other filesystems\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"\"অন্যান্য ফাইল-সিস্টম অন্তর্ভুক্ত করা হবে\" অনুসন্ধান অপশনটি নির্বাচিত "
-"হয়েছে কি না তা এই কী দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
+"\"অন্যান্য ফাইল-সিস্টম অন্তর্ভুক্ত করা হবে\" অনুসন্ধান অপশনটি নির্বাচিত হয়েছে কি না তা "
+"এই কী দ্বারা অনুসন্ধান ব্যবস্থা আরম্ভ কালে নির্ধারিত হয়।"
 
 #: gsearchtool/libeggsmclient/eggdesktopfile.c:165
 msgid "File is not a valid .desktop file"
@@ -1079,7 +1058,7 @@ msgid "Searching..."
 msgstr "অনুসন্ধান করা হচ্ছে..."
 
 #: gsearchtool/src/gsearchtool.c:511 gsearchtool/src/gsearchtool.c:1031
-#: gsearchtool/src/gsearchtool.c:3057
+#: gsearchtool/src/gsearchtool.c:3031
 msgid "Search for Files"
 msgstr "ফাইল অনুসন্ধান"
 
@@ -1119,14 +1098,13 @@ msgstr "অনুসন্ধান কাজের \"নামের মধ্�
 
 #: gsearchtool/src/gsearchtool.c:1309
 msgid "Set the text of \"Look in folder\" search option"
-msgstr ""
-"অনুসন্ধান কাজের \"চিহ্নিত ফোল্ডারে অনুসন্ধান করা হবে\" অপশনের টেক্সট লিখুন"
+msgstr "অনুসন্ধান কাজের \"চিহ্নিত ফোল্ডারে অনুসন্ধান করা হবে\" অপশনের টেক্সট লিখুন"
 
 #: gsearchtool/src/gsearchtool.c:1310
 msgid "Sort files by one of the following: name, folder, size, type, or date"
 msgstr ""
-"ফাইলগুলো উল্লিখিত বিষয়ের যে কোনো একটি ক্রমে বিন্যাস করা হবে: "
-"নাম,ফোল্ডার,মাপ,ধরন অথবা তারিখ"
+"ফাইলগুলো উল্লিখিত বিষয়ের যে কোনো একটি ক্রমে বিন্যাস করা হবে: নাম,ফোল্ডার,মাপ,ধরন "
+"অথবা তারিখ"
 
 #: gsearchtool/src/gsearchtool.c:1311
 msgid "Set sort order to descending, the default is ascending"
@@ -1163,8 +1141,7 @@ msgid ""
 "The search results may be invalid.  There were errors while performing this "
 "search."
 msgstr ""
-"অনুসন্ধানের ফলাফল সম্ভবত বৈধ নয়।  অনুসন্ধান চলাকালীন কিছু সমস্যা উৎ‌পন্ন "
-"হয়েছিল।"
+"অনুসন্ধানের ফলাফল সম্ভবত বৈধ নয়।  অনুসন্ধান চলাকালীন কিছু সমস্যা উৎ‌পন্ন হয়েছিল।"
 
 #: gsearchtool/src/gsearchtool.c:1746 gsearchtool/src/gsearchtool.c:1790
 msgid "Show more _details"
@@ -1175,8 +1152,8 @@ msgid ""
 "The search results may be out of date or invalid.  Do you want to disable "
 "the quick search feature?"
 msgstr ""
-"অনুসন্ধানের ফলাফল অচল অথবা অকার্যকর হওয়ার সম্ভাবনা রয়েছে।  আপনি কি দ্রুত "
-"অনুসন্ধান ব্যবস্থা নিষ্ক্রিয় করতে চন?"
+"অনুসন্ধানের ফলাফল অচল অথবা অকার্যকর হওয়ার সম্ভাবনা রয়েছে।  আপনি কি দ্রুত অনুসন্ধান "
+"ব্যবস্থা নিষ্ক্রিয় করতে চন?"
 
 #: gsearchtool/src/gsearchtool.c:1801
 msgid "Disable _Quick Search"
@@ -1212,119 +1189,118 @@ msgstr "\"%s\", %s-এর মধ্যে"
 msgid "Enter a value in %s for the \"%s\" search option."
 msgstr "%s-র মধ্যে, অনুসন্ধান কাজের \"%s\" অপশনের জন্য মান লিখুন।"
 
-#: gsearchtool/src/gsearchtool.c:2078
+#: gsearchtool/src/gsearchtool.c:2074
 #, c-format
 msgid "Remove \"%s\""
 msgstr "\"%s\" মুছে ফেলুন"
 
-#: gsearchtool/src/gsearchtool.c:2079
+#: gsearchtool/src/gsearchtool.c:2075
 #, c-format
 msgid "Click to remove the \"%s\" search option."
 msgstr "ক্লিক করে অনুসন্ধান কর্মের \"%s\" অপশনটি মুছে ফেলুন।"
 
-#: gsearchtool/src/gsearchtool.c:2172
+#: gsearchtool/src/gsearchtool.c:2168
 msgid "A_vailable options:"
 msgstr "বিদ্যমান অপশন (_v):"
 
-#: gsearchtool/src/gsearchtool.c:2201
+#: gsearchtool/src/gsearchtool.c:2197
 msgid "Available options"
 msgstr "বিদ্যমান অপশন"
 
-#: gsearchtool/src/gsearchtool.c:2202
+#: gsearchtool/src/gsearchtool.c:2198
 msgid "Select a search option from the drop-down list."
 msgstr "ড্রপ-ডাউন মেনু থেকে অনুসন্ধান সংক্রান্ত একটি অপশন নির্বাচন করুন।"
 
-#: gsearchtool/src/gsearchtool.c:2219
+#: gsearchtool/src/gsearchtool.c:2211
 msgid "Add search option"
 msgstr "অনুসন্ধান কর্ম সংক্রান্ত অপশন যোগ করুন"
 
-#: gsearchtool/src/gsearchtool.c:2220
+#: gsearchtool/src/gsearchtool.c:2212
 msgid "Click to add the selected available search option."
 msgstr "নির্বাচিত বিদ্যমান অনুসন্ধান অপশন যোগ করতে ক্লিক করুন।"
 
-#: gsearchtool/src/gsearchtool.c:2309
+#: gsearchtool/src/gsearchtool.c:2301
 msgid "S_earch results:"
 msgstr "অনুসন্ধানের ফলাফল (_e):"
 
-#: gsearchtool/src/gsearchtool.c:2352
+#: gsearchtool/src/gsearchtool.c:2344
 msgid "List View"
 msgstr "তালিকা অনুসারে প্রদর্শন"
 
-#: gsearchtool/src/gsearchtool.c:2412
+#: gsearchtool/src/gsearchtool.c:2404
 #: cafe-dictionary/libgdict/gdict-source.c:243
 msgid "Name"
 msgstr "নাম"
 
-#: gsearchtool/src/gsearchtool.c:2461
+#: gsearchtool/src/gsearchtool.c:2453
 msgid "Type"
 msgstr "ধরণ"
 
-#: gsearchtool/src/gsearchtool.c:2473
+#: gsearchtool/src/gsearchtool.c:2465
 msgid "Date Modified"
 msgstr "পরিবর্তনের তারিখ"
 
-#: gsearchtool/src/gsearchtool.c:2803
+#: gsearchtool/src/gsearchtool.c:2795
 msgid "_Name contains:"
 msgstr "নামের মধ্যে অন্তর্ভুক্ত (_N):"
 
-#: gsearchtool/src/gsearchtool.c:2818 gsearchtool/src/gsearchtool.c:2819
+#: gsearchtool/src/gsearchtool.c:2810 gsearchtool/src/gsearchtool.c:2811
 msgid "Enter a filename or partial filename with or without wildcards."
-msgstr ""
-"ওয়াইল্ড-কার্ড সহ অথবা ছাড়া ফাইলের সম্পূর্ণ অথবা আংশিক নাম প্রবেশ করান।"
+msgstr "ওয়াইল্ড-কার্ড সহ অথবা ছাড়া ফাইলের সম্পূর্ণ অথবা আংশিক নাম প্রবেশ করান।"
 
-#: gsearchtool/src/gsearchtool.c:2819
+#: gsearchtool/src/gsearchtool.c:2811
 msgid "Name contains"
 msgstr "নামের মধ্যে উপস্থিত"
 
-#: gsearchtool/src/gsearchtool.c:2825
+#: gsearchtool/src/gsearchtool.c:2817
 msgid "_Look in folder:"
 msgstr "চিহ্নিত ফোল্ডারে অনুসন্ধান করা হবে (_L):"
 
-#: gsearchtool/src/gsearchtool.c:2831
+#: gsearchtool/src/gsearchtool.c:2823
 msgid "Browse"
 msgstr "ব্রাউজ করুন"
 
-#: gsearchtool/src/gsearchtool.c:2841
+#: gsearchtool/src/gsearchtool.c:2833
 msgid "Look in folder"
 msgstr "চিহ্নিত ফোল্ডারে অনুসন্ধান করা হবে"
 
-#: gsearchtool/src/gsearchtool.c:2841
+#: gsearchtool/src/gsearchtool.c:2833
 msgid "Select the folder or device from which you want to begin the search."
 msgstr "যে ফোল্ডার থেকে আপনি অনুসন্ধান শুরু করতে চান সেটির নাম লিখুন।"
 
-#: gsearchtool/src/gsearchtool.c:2859
+#: gsearchtool/src/gsearchtool.c:2851
 msgid "Select more _options"
 msgstr "অতিরিক্ত অপশন নির্বাচন করুন (_o)"
 
-#: gsearchtool/src/gsearchtool.c:2868
+#: gsearchtool/src/gsearchtool.c:2860
 msgid "Select more options"
 msgstr "অতিরিক্ত অপশন নির্বাচন করুন"
 
-#: gsearchtool/src/gsearchtool.c:2868
+#: gsearchtool/src/gsearchtool.c:2860
 msgid "Click to expand or collapse the list of available options."
 msgstr "বিদ্যমান অপশনের তালিকা প্রসারণ অথবা সঙ্কোচন করুন।"
 
-#: gsearchtool/src/gsearchtool.c:2899
+#: gsearchtool/src/gsearchtool.c:2886
 msgid "Click to display the help manual."
 msgstr "ক্লিক করে সহায়িকা প্রদর্শন করুন।"
 
-#: gsearchtool/src/gsearchtool.c:2912
+#: gsearchtool/src/gsearchtool.c:2895
 msgid "Click to close \"Search for Files\"."
 msgstr "ক্লিক করে \"ফাইল অনুসন্ধান\" বন্ধ করুন।"
 
-#: gsearchtool/src/gsearchtool.c:2947
+#: gsearchtool/src/gsearchtool.c:2921
 msgid "Click to perform a search."
 msgstr "অনুসন্ধান করতে ক্লিক করুন।"
 
-#: gsearchtool/src/gsearchtool.c:2948
+#: gsearchtool/src/gsearchtool.c:2922
 msgid "Click to stop a search."
 msgstr "অনুসন্ধান থামাতে ক্লিক করুন।"
 
-#: gsearchtool/src/gsearchtool.c:3042
+#: gsearchtool/src/gsearchtool.c:3016
 msgid "- the CAFE Search Tool"
 msgstr "- CAFE অনুসন্ধান টুল"
 
-#: gsearchtool/src/gsearchtool.c:3051
+#: gsearchtool/src/gsearchtool.c:3025
 #, c-format
 msgid "Failed to parse command line arguments: %s\n"
 msgstr "কমান্ড লাইন আর্গুমেন্ট পার্স করতে ব্যর্থ: %s\n"
@@ -1341,135 +1317,134 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: gsearchtool/src/gsearchtool-callbacks.c:351
-#: gsearchtool/src/gsearchtool-callbacks.c:551
+#: gsearchtool/src/gsearchtool-callbacks.c:547
 #, c-format
 msgid "This will open %d separate window."
 msgid_plural "This will open %d separate windows."
 msgstr[0] ""
 msgstr[1] ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:396
+#: gsearchtool/src/gsearchtool-callbacks.c:392
 #, c-format
 msgid "Could not open document \"%s\"."
 msgstr "\"%s\" নথি খোলা যায়নি।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:425
+#: gsearchtool/src/gsearchtool-callbacks.c:421
 #, c-format
 msgid "Could not open folder \"%s\"."
 msgstr "\"%s\" ফোল্ডার খোলা যায়নি।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:433
+#: gsearchtool/src/gsearchtool-callbacks.c:429
 msgid "The baul file manager is not running."
 msgstr "Baul ফাইল পরিচালন ব্যবস্থা বর্তমানে চলছে না।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:524
+#: gsearchtool/src/gsearchtool-callbacks.c:520
 msgid "There is no installed viewer capable of displaying the document."
 msgstr "নথি প্রদর্শনের উদ্দেশ্যে কোনো যথাযত সামগ্রী ইনস্টল করা হয়নি।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:546
+#: gsearchtool/src/gsearchtool-callbacks.c:542
 #, c-format
 msgid "Are you sure you want to open %d folder?"
 msgid_plural "Are you sure you want to open %d folders?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:701
+#: gsearchtool/src/gsearchtool-callbacks.c:693
 #, c-format
 msgid "Could not move \"%s\" to trash."
 msgstr "\"%s\" অবর্জনার বাক্সে সরানো যায়নি।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:732
+#: gsearchtool/src/gsearchtool-callbacks.c:724
 #, c-format
 msgid "Do you want to delete \"%s\" permanently?"
 msgstr "আপনি কি \"%s\" স্থায়ীরূপে মুছে ফেলতে চান?"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:735
+#: gsearchtool/src/gsearchtool-callbacks.c:727
 #, c-format
 msgid "Trash is unavailable.  Could not move \"%s\" to the trash."
 msgstr "অবর্জনার বাক্স বিদ্যমান নয়। \"%s\" অবর্জনার বাক্সে সরানো যায়নি।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:779
+#: gsearchtool/src/gsearchtool-callbacks.c:767
 #, c-format
 msgid "Could not delete \"%s\"."
 msgstr "\"%s\" মুছে ফেলা যায়নি।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:891
+#: gsearchtool/src/gsearchtool-callbacks.c:879
 #, c-format
 msgid "Deleting \"%s\" failed: %s."
 msgstr "\"%s\" মুছে ফেলতে ব্যর্থ: %s।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:903
+#: gsearchtool/src/gsearchtool-callbacks.c:891
 #, c-format
 msgid "Moving \"%s\" failed: %s."
 msgstr "\"%s\" সরাতে ব্যর্থ: %s।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1030
-#: gsearchtool/src/gsearchtool-callbacks.c:1060
+#: gsearchtool/src/gsearchtool-callbacks.c:1018
+#: gsearchtool/src/gsearchtool-callbacks.c:1048
 msgid "_Open"
 msgstr "খুলুন (_O)"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1085
+#: gsearchtool/src/gsearchtool-callbacks.c:1073
 #, c-format
 msgid "_Open with %s"
 msgstr "%s-র সাথে খুলুন (_O)"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1120
+#: gsearchtool/src/gsearchtool-callbacks.c:1108
 #, c-format
 msgid "Open with %s"
 msgstr "%s-র সাথে খুলুন "
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1153
+#: gsearchtool/src/gsearchtool-callbacks.c:1141
 msgid "Open Wit_h"
 msgstr "চিহ্নিত প্রোগ্রাম সহযোগে খুলুন (_h)"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1198
+#: gsearchtool/src/gsearchtool-callbacks.c:1186
 msgid "Open Containing _Folder"
 msgstr ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1238
+#: gsearchtool/src/gsearchtool-callbacks.c:1226
 msgid "_Save Results As..."
 msgstr "নতুন ভাবে ফলাফল সংরক্ষণ করুন (_S)..."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1620
+#: gsearchtool/src/gsearchtool-callbacks.c:1608
 msgid "Save Search Results As..."
 msgstr "অনুসন্ধানের ফলাফল নতুন ভাবে সংরক্ষণ..."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1649
+#: gsearchtool/src/gsearchtool-callbacks.c:1637
 msgid "Could not save document."
 msgstr "নথি সংরক্ষণ করতে ব্যর্থ।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1650
+#: gsearchtool/src/gsearchtool-callbacks.c:1638
 msgid "You did not select a document name."
 msgstr "নথির কোনো নাম নির্বাচন করা হয়নি।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1680
+#: gsearchtool/src/gsearchtool-callbacks.c:1668
 #, c-format
 msgid "Could not save \"%s\" document to \"%s\"."
 msgstr "\"%s\" ডকুমেন্ট \"%s\"-এ সংরক্ষণ করা যায়নি।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1713
+#: gsearchtool/src/gsearchtool-callbacks.c:1701
 #, c-format
 msgid "The document \"%s\" already exists.  Would you like to replace it?"
 msgstr ""
-"\"%s\" নথিটি বর্তমানে উপস্থিত রয়েছে।  আপনি কি এটি মুছে নতুন নথি স্থাপন করতে "
-"চান?"
+"\"%s\" নথিটি বর্তমানে উপস্থিত রয়েছে।  আপনি কি এটি মুছে নতুন নথি স্থাপন করতে চান?"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1717
+#: gsearchtool/src/gsearchtool-callbacks.c:1705
 msgid "If you replace an existing file, its contents will be overwritten."
 msgstr ""
-"উপস্থিত কোনো ফাইলের পরিবর্তে নতুন ফাইল স্থাপন করা হলে পুরোনো ফাইলের "
-"বিষয়বস্তু মুছে ফেলা হবে।"
+"উপস্থিত কোনো ফাইলের পরিবর্তে নতুন ফাইল স্থাপন করা হলে পুরোনো ফাইলের বিষয়বস্তু মুছে "
+"ফেলা হবে।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1732
+#: gsearchtool/src/gsearchtool-callbacks.c:1720
 #: cafe-screenshot/src/screenshot-xfer.c:82
 msgid "_Replace"
 msgstr "প্রতিস্থাপন (_R)"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1781
+#: gsearchtool/src/gsearchtool-callbacks.c:1769
 msgid "The document name you selected is a folder."
 msgstr "আপনার নির্বাচিত নথি মূলত একটি ফোল্ডার।"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1817
+#: gsearchtool/src/gsearchtool-callbacks.c:1805
 msgid "You may not have write permissions to the document."
 msgstr "সম্ভবত নথিতে লেখার অনুমতি আপনার নেই।"
 
@@ -1581,14 +1556,7 @@ msgstr "লগ ফাইল প্রদর্শন ব্যবস্থা"
 msgid "View or monitor system log files"
 msgstr "সিস্টেম লগ ফাইল পড়ুন অথবা পর্যবেক্ষণ করুন"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: logview/data/cafe-system-log.desktop.in.in:7
-msgid "cafe-system-log"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: logview/data/cafe-system-log.desktop.in.in:13
 msgid "CAFE;monitor;view;system;log;files;logviewer;"
 msgstr ""
@@ -1599,12 +1567,11 @@ msgstr "প্রারম্ভে খোলার উদ্দেশ্যে 
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:6
 msgid ""
-"Specifies the log file displayed at startup. The default is either "
-"/var/adm/messages or /var/log/messages, depending on your operating system."
+"Specifies the log file displayed at startup. The default is either /var/adm/"
+"messages or /var/log/messages, depending on your operating system."
 msgstr ""
-"প্রারম্ভে খোলার উদ্দেশ্যে লগ ফাইল নির্ধারণ করে। ব্যবহৃত অপারেটিং সিস্টেমের "
-"উপর ভিত্তি করে ডিফল্টরূপে /var/adm/messages অথবা /var/log/messages প্রয়োগ "
-"করা হবে।"
+"প্রারম্ভে খোলার উদ্দেশ্যে লগ ফাইল নির্ধারণ করে। ব্যবহৃত অপারেটিং সিস্টেমের উপর ভিত্তি "
+"করে ডিফল্টরূপে /var/adm/messages অথবা /var/log/messages প্রয়োগ করা হবে।"
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:10
 msgid "Size of the font used to display the log"
@@ -1615,9 +1582,8 @@ msgid ""
 "Specifies the size of the fixed-width font used to display the log in the "
 "main tree view. The default is taken from the default terminal font size."
 msgstr ""
-"মূল ট্রি-ভিউয়ের মধ্যে লগ প্রদর্শনের জন্য ব্যবহৃত স্থায়ী-প্রস্থের ফন্টের মাপ "
-"নির্ধারণ করে। টার্মিনালে ব্যবহৃত ডিফল্ট ফন্টের থেকে ডিফল্ট মান নির্ধারণ করা "
-"হয়।"
+"মূল ট্রি-ভিউয়ের মধ্যে লগ প্রদর্শনের জন্য ব্যবহৃত স্থায়ী-প্রস্থের ফন্টের মাপ নির্ধারণ করে। "
+"টার্মিনালে ব্যবহৃত ডিফল্ট ফন্টের থেকে ডিফল্ট মান নির্ধারণ করা হয়।"
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:15
 msgid "Height of the main window in pixels"
@@ -1644,8 +1610,8 @@ msgid ""
 "Specifies a list of log files to open up at startup. A default list is "
 "created by reading /etc/syslog.conf."
 msgstr ""
-"প্রারম্ভে খোলার উদ্দেশ্যে লগ ফাইলের তালিকা উল্লেখ করে। /etc/syslog.conf ফাইল"
-" থেকে একটি ডিফল্ট তালিকা নির্মিত হয়।"
+"প্রারম্ভে খোলার উদ্দেশ্যে লগ ফাইলের তালিকা উল্লেখ করে। /etc/syslog.conf ফাইল থেকে "
+"একটি ডিফল্ট তালিকা নির্মিত হয়।"
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:30
 msgid "List of saved filters"
@@ -1684,7 +1650,7 @@ msgstr "পটভূমি:"
 msgid "Effect:"
 msgstr "আবহ:"
 
-#: logview/src/logview-about.h:42 cafe-dictionary/src/gdict-about.c:49
+#: logview/src/logview-about.h:43 cafe-dictionary/src/gdict-about.c:50
 msgid "Sun GNOME Documentation Team <gdocteam@sun.com>"
 msgstr ""
 
@@ -1712,8 +1678,7 @@ msgstr "রেগুলার এক্সপ্রেশন বৈধ নয়: %
 
 #: logview/src/logview-filter-manager.c:237
 msgid "Please specify either foreground or background color!"
-msgstr ""
-"অনুগ্রহ করে পটভূমি অথবা অগ্রভূমির রংয়ের মধ্যে শুধুমাত্র একটি উল্লেখ করুন!"
+msgstr "অনুগ্রহ করে পটভূমি অথবা অগ্রভূমির রংয়ের মধ্যে শুধুমাত্র একটি উল্লেখ করুন!"
 
 #: logview/src/logview-filter-manager.c:289
 msgid "Edit filter"
@@ -1723,7 +1688,7 @@ msgstr "পরিশোধক সম্পাদনা"
 msgid "Add new filter"
 msgstr "নতুন পরিশোধক যোগ করুন"
 
-#: logview/src/logview-filter-manager.c:517
+#: logview/src/logview-filter-manager.c:503
 msgid "Filters"
 msgstr "পরিশোধক"
 
@@ -1754,8 +1719,7 @@ msgstr "অনুসন্ধান স্ট্রিং মুছে ফেল
 #: logview/src/logview-log.c:588
 msgid "Error while uncompressing the GZipped log. The file might be corrupt."
 msgstr ""
-"GZip করা লগ ফাইল আন-কম্প্রেস করতে ত্রুটি দেখা দিয়েছে। সম্ভবত ফাইলটি "
-"ত্রুটিপূর্ণ।"
+"GZip করা লগ ফাইল আন-কম্প্রেস করতে ত্রুটি দেখা দিয়েছে। সম্ভবত ফাইলটি ত্রুটিপূর্ণ।"
 
 #: logview/src/logview-log.c:635
 msgid "You don't have enough permissions to read the file."
@@ -1834,150 +1798,138 @@ msgstr ""
 #: logview/src/logview-window.c:771
 msgid ""
 "Copyright © 1998-2008 Free Software Foundation, Inc.\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
-#: logview/src/logview-window.c:775
+#: logview/src/logview-window.c:776
 msgid "A system log viewer for CAFE."
 msgstr "CAFE-এ ব্যবহারযোগ্য সিস্টেম লগ প্রদর্শক।"
 
-#: logview/src/logview-window.c:818 cafe-dictionary/src/gdict-window.c:1285
+#: logview/src/logview-window.c:819 cafe-dictionary/src/gdict-window.c:1285
 msgid "_File"
 msgstr "ফাইল (_F)"
 
-#: logview/src/logview-window.c:821
+#: logview/src/logview-window.c:822
 msgid "_Filters"
 msgstr "পরিশোধক (_F)"
 
-#: logview/src/logview-window.c:824
+#: logview/src/logview-window.c:825
 msgid "_Open..."
 msgstr "খুলুন...(_O)"
 
-#: logview/src/logview-window.c:824
+#: logview/src/logview-window.c:825
 msgid "Open a log from file"
 msgstr "ফাইল থেকে একটি লগ খুলুন"
 
-#: logview/src/logview-window.c:826 cafe-dictionary/src/gdict-window.c:1300
+#: logview/src/logview-window.c:827
 msgid "_Close"
 msgstr "বন্ধ করুন (_C)"
 
-#: logview/src/logview-window.c:826
+#: logview/src/logview-window.c:827
 msgid "Close this log"
 msgstr "বর্তমান লগ বন্ধ করুন"
 
-#: logview/src/logview-window.c:828
+#: logview/src/logview-window.c:829
 msgid "_Quit"
 msgstr "প্রস্থান (_Q)"
 
-#: logview/src/logview-window.c:828
+#: logview/src/logview-window.c:829
 msgid "Quit the log viewer"
 msgstr "লগ প্রদর্শক থেকে প্রস্থান"
 
-#: logview/src/logview-window.c:831 cafe-dictionary/src/gdict-window.c:1304
+#: logview/src/logview-window.c:832
 msgid "_Copy"
 msgstr "অনুলিপি করুন (_C)"
 
-#: logview/src/logview-window.c:831
+#: logview/src/logview-window.c:832
 msgid "Copy the selection"
 msgstr "নির্বাচিত অংশ কপি করা হবে"
 
-#: logview/src/logview-window.c:833 cafe-dictionary/src/gdict-window.c:1306
+#: logview/src/logview-window.c:834 cafe-dictionary/src/gdict-window.c:1306
 msgid "Select _All"
 msgstr "সবকিছু নির্বাচন করুন (_A)"
 
-#: logview/src/logview-window.c:833
+#: logview/src/logview-window.c:834
 msgid "Select the entire log"
 msgstr "সম্পূর্ণ লগ নির্বাচন করুন"
 
-#: logview/src/logview-window.c:835
+#: logview/src/logview-window.c:836
 msgid "_Find..."
 msgstr "অনুসন্ধান... (_F)"
 
-#: logview/src/logview-window.c:835
+#: logview/src/logview-window.c:836
 msgid "Find a word or phrase in the log"
 msgstr "লগের মধ্যে একটি শব্দ অথবা বাক্যাংশ সন্ধান করুন"
 
-#: logview/src/logview-window.c:838
-msgid "Zoom _In"
-msgstr "বড় করে প্রদর্শন (_I)"
-
-#: logview/src/logview-window.c:838
+#: logview/src/logview-window.c:839
 msgid "Bigger text size"
 msgstr "হরফের মাপ বৃদ্ধি করুন"
 
-#: logview/src/logview-window.c:840
-msgid "Zoom _Out"
-msgstr "ছোট আকারে প্রদর্শন (_O)"
-
-#: logview/src/logview-window.c:840
+#: logview/src/logview-window.c:841
 msgid "Smaller text size"
 msgstr "হরফের মাপ হ্রাস করুন"
 
-#: logview/src/logview-window.c:842
-msgid "_Normal Size"
-msgstr "স্বাভাবিক আকার (_N)"
-
-#: logview/src/logview-window.c:842
+#: logview/src/logview-window.c:843
 msgid "Normal text size"
 msgstr "হরফের স্বাভাবিক মাপ"
 
-#: logview/src/logview-window.c:845
+#: logview/src/logview-window.c:846
 msgid "Manage Filters"
 msgstr "পরিশোধক ব্যবস্থাপনা"
 
-#: logview/src/logview-window.c:845
+#: logview/src/logview-window.c:846
 msgid "Manage filters"
 msgstr "পরিশোধক ব্যবস্থাপনা"
 
-#: logview/src/logview-window.c:848
+#: logview/src/logview-window.c:849
 msgid "Open the help contents for the log viewer"
 msgstr "লগ প্রদর্শক সংক্রান্ত সহায়িকা প্রদর্শন"
 
-#: logview/src/logview-window.c:850 cafe-dictionary/src/gdict-applet.c:1186
+#: logview/src/logview-window.c:851 cafe-dictionary/src/gdict-applet.c:1177
 #: cafe-dictionary/src/gdict-window.c:1341
 msgid "_About"
 msgstr "পরিচিতি (_A)"
 
-#: logview/src/logview-window.c:850
+#: logview/src/logview-window.c:851
 msgid "Show the about dialog for the log viewer"
 msgstr "লগ প্রদর্শকের পরিচিতি প্রদর্শন"
 
-#: logview/src/logview-window.c:855
+#: logview/src/logview-window.c:856
 msgid "_Statusbar"
 msgstr "স্ট্যাটাস-বার (_S)"
 
-#: logview/src/logview-window.c:855
+#: logview/src/logview-window.c:856
 msgid "Show Status Bar"
 msgstr "স্ট্যাটাস-বার প্রদর্শন করা হবে"
 
-#: logview/src/logview-window.c:857
+#: logview/src/logview-window.c:858
 msgid "Side _Pane"
 msgstr "সাইড পেন (_P)"
 
-#: logview/src/logview-window.c:857
+#: logview/src/logview-window.c:858
 msgid "Show Side Pane"
 msgstr "পার্শ্ববর্তী পেন প্রদর্শন করা হবে"
 
-#: logview/src/logview-window.c:859
+#: logview/src/logview-window.c:860
 msgid "Show matches only"
 msgstr "শুধুমাত্র মিল প্রদর্শন করা হবে"
 
-#: logview/src/logview-window.c:859
+#: logview/src/logview-window.c:860
 msgid "Only show lines that match one of the given filters"
 msgstr ""
-"উল্লিখিত যে কোনো একটি পরিশোধকের সাথে মিল পাওয়া পংক্তিগুলি শুধুমাত্র প্রদর্শন"
-" করা হবে"
+"উল্লিখিত যে কোনো একটি পরিশোধকের সাথে মিল পাওয়া পংক্তিগুলি শুধুমাত্র প্রদর্শন করা হবে"
 
-#: logview/src/logview-window.c:991
+#: logview/src/logview-window.c:992
 #, c-format
 msgid "Can't read from \"%s\""
 msgstr "\"%s\" থেকে পড়া যাচ্ছে না"
 
-#: logview/src/logview-window.c:1416
+#: logview/src/logview-window.c:1417
 msgid "Version: "
 msgstr "সংস্করণ: "
 
-#: logview/src/logview-window.c:1522
+#: logview/src/logview-window.c:1525
 msgid "Could not open the following files:"
 msgstr "নিম্নলিখিত ফাইল খুলতে ব্যর্থ:"
 
@@ -1994,15 +1946,7 @@ msgstr ""
 msgid "Check word definitions and spellings in an online dictionary"
 msgstr "অনলাইন অভিধানে শব্দের সংজ্ঞা ও বানান পরীক্ষা করুন"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:9
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:12
-msgid "accessories-dictionary"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-dictionary/data/cafe-dictionary.desktop.in.in:13
 msgid "CAFE;dictionary;applet;thesaurus;spelling;definitions;online;"
 msgstr ""
@@ -2014,8 +1958,8 @@ msgstr ""
 #: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:10
 msgid ""
 "CAFE Dictionary allows you to look up words in on-line dictionaries. It "
-"comes preconfigured with a list of Dict servers (RFC 2229), to which you can"
-" add your own sources, while you can select specific servers for a specific "
+"comes preconfigured with a list of Dict servers (RFC 2229), to which you can "
+"add your own sources, while you can select specific servers for a specific "
 "query."
 msgstr ""
 
@@ -2037,9 +1981,9 @@ msgid ""
 "dictionary source. An exclamation mark (\"!\") means that all the databases "
 "present in a dictionary source should be searched"
 msgstr ""
-"অভিধান সার্ভারে ব্যবহত স্বতন্ত্র ডাটাবেস অথবা মিটা-ডাটাবেসের নাম। বিস্ময়সূচক"
-" চিহ্নের (\"!\")  সাহায্যে নির্দিষ্ট সার্ভারে উপস্থিত সকল ডাটাবেস "
-"অনুসন্ধানের নির্দেশ দেওয়া হয়।"
+"অভিধান সার্ভারে ব্যবহত স্বতন্ত্র ডাটাবেস অথবা মিটা-ডাটাবেসের নাম। বিস্ময়সূচক চিহ্নের "
+"(\"!\")  সাহায্যে নির্দিষ্ট সার্ভারে উপস্থিত সকল ডাটাবেস অনুসন্ধানের নির্দেশ দেওয়া "
+"হয়।"
 
 #: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:11
 msgid "The default search strategy to use"
@@ -2050,9 +1994,8 @@ msgid ""
 "The name of the default search strategy to use on a dictionary source, if "
 "available. The default strategy is 'exact', that is match exact words."
 msgstr ""
-"অভিধানের উৎস উপলব্ধ থাকলে, ব্যবহারযোগ্য ডিফল্ট অনুসন্ধান নীতির নাম। "
-"ডিফল্টরূপে ব্যবহৃড নীতি হল, 'exact', অর্থাৎ শব্দগুলি সম্পূর্ণরূপে মেলানো "
-"হবে।"
+"অভিধানের উৎস উপলব্ধ থাকলে, ব্যবহারযোগ্য ডিফল্ট অনুসন্ধান নীতির নাম। ডিফল্টরূপে ব্যবহৃড "
+"নীতি হল, 'exact', অর্থাৎ শব্দগুলি সম্পূর্ণরূপে মেলানো হবে।"
 
 #: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:16
 msgid "The font to be used when printing"
@@ -2133,8 +2076,8 @@ msgid ""
 "Unable to connect to the dictionary server at '%s:%d'. The server replied "
 "with code %d (server down)"
 msgstr ""
-"'%1$s:%2$d'-এ উপস্থিত অভিধান সার্ভারের সাথে সংযোগ করতে ব্যর্থ। সার্ভার থেকে "
-"কোড %3$d প্রাপ্ত হয়েছে (সার্ভার বর্তমানে বন্ধ রয়েছে)"
+"'%1$s:%2$d'-এ উপস্থিত অভিধান সার্ভারের সাথে সংযোগ করতে ব্যর্থ। সার্ভার থেকে কোড "
+"%3$d প্রাপ্ত হয়েছে (সার্ভার বর্তমানে বন্ধ রয়েছে)"
 
 #: cafe-dictionary/libgdict/gdict-client-context.c:1188
 #, c-format
@@ -2198,8 +2141,8 @@ msgstr ""
 #, c-format
 msgid "Connection timeout for the dictionary server at '%s:%d'"
 msgstr ""
-"%s:%d-এ উপস্থিত অভিধান সার্ভারের সাথে সংযোগ স্থাপনের প্রচেষ্টার সময় সীমা "
-"অতিক্রান্ত হয়েছে"
+"%s:%d-এ উপস্থিত অভিধান সার্ভারের সাথে সংযোগ স্থাপনের প্রচেষ্টার সময় সীমা অতিক্রান্ত "
+"হয়েছে"
 
 #: cafe-dictionary/libgdict/gdict-client-context.c:1878
 msgid "No hostname defined for the dictionary server"
@@ -2425,31 +2368,32 @@ msgstr "GDict সংক্রান্ত অপশন"
 msgid "Show GDict Options"
 msgstr "GDict সংক্রান্ত অপশন প্রদর্শন করা হবে"
 
-#: cafe-dictionary/src/gdict-about.c:57 cafe-dictionary/src/gdict-applet.c:587
+#: cafe-dictionary/src/gdict-about.c:58 cafe-dictionary/src/gdict-applet.c:575
 msgid "Look up words in dictionaries"
 msgstr "অভিধানে শব্দ অনুসন্ধান করুন"
 
-#: cafe-dictionary/src/gdict-about.c:70
+#: cafe-dictionary/src/gdict-about.c:71
 msgid ""
-"You should have received a copy of the GNU General Public License along with"
-" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: cafe-dictionary/src/gdict-about.c:87 cafe-dictionary/src/gdict-app.c:364
+#: cafe-dictionary/src/gdict-about.c:88 cafe-dictionary/src/gdict-app.c:364
 #: cafe-dictionary/src/gdict-window.c:607
 #: cafe-dictionary/src/gdict-window.c:1891
 msgid "Dictionary"
 msgstr "অভিধান"
 
-#: cafe-dictionary/src/gdict-about.c:89
+#: cafe-dictionary/src/gdict-about.c:90
 msgid "About Dictionary"
 msgstr ""
 
-#: cafe-dictionary/src/gdict-about.c:90
+#: cafe-dictionary/src/gdict-about.c:91
 msgid ""
 "Copyright © 2005-2006 Emmanuele Bassi\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
 #. Translators: the first is the word found, the second is the
@@ -2543,113 +2487,113 @@ msgstr "নামবিহীন নথি"
 msgid "Error while writing to '%s'"
 msgstr "'%s'-এ লিখতে সমস্যা"
 
-#: cafe-dictionary/src/gdict-applet.c:360
+#: cafe-dictionary/src/gdict-applet.c:356
 msgid "Clear the definitions found"
 msgstr "প্রাপ্ত সংজ্ঞাগুলো মুছে ফেলুন"
 
-#: cafe-dictionary/src/gdict-applet.c:362
+#: cafe-dictionary/src/gdict-applet.c:358
 msgid "Clear definition"
 msgstr "সংজ্ঞা মুছে ফেলুন"
 
-#: cafe-dictionary/src/gdict-applet.c:363
+#: cafe-dictionary/src/gdict-applet.c:359
 msgid "Clear the text of the definition"
 msgstr "সংজ্ঞার লেখা মুছে ফেলুন"
 
-#: cafe-dictionary/src/gdict-applet.c:375
+#: cafe-dictionary/src/gdict-applet.c:367
 msgid "Print the definitions found"
 msgstr "প্রাপ্ত সংজ্ঞা মুদ্রণ করুন"
 
-#: cafe-dictionary/src/gdict-applet.c:377
+#: cafe-dictionary/src/gdict-applet.c:369
 msgid "Print definition"
 msgstr "সংজ্ঞা মুদ্রণ করুন"
 
-#: cafe-dictionary/src/gdict-applet.c:378
+#: cafe-dictionary/src/gdict-applet.c:370
 msgid "Print the text of the definition"
 msgstr "সংজ্ঞার তথ্য মুদ্রণ করুন"
 
-#: cafe-dictionary/src/gdict-applet.c:390
+#: cafe-dictionary/src/gdict-applet.c:378
 msgid "Save the definitions found"
 msgstr "প্রাপ্ত সংজ্ঞা সংরক্ষণ করুন"
 
-#: cafe-dictionary/src/gdict-applet.c:392
+#: cafe-dictionary/src/gdict-applet.c:380
 msgid "Save definition"
 msgstr "সংজ্ঞা সংরক্ষণ করুন"
 
-#: cafe-dictionary/src/gdict-applet.c:393
+#: cafe-dictionary/src/gdict-applet.c:381
 msgid "Save the text of the definition to a file"
 msgstr "সংজ্ঞার ফাইলের টেক্সট একটি ফাইলের সংরক্ষণ করুন"
 
-#: cafe-dictionary/src/gdict-applet.c:530
+#: cafe-dictionary/src/gdict-applet.c:518
 msgid "Click to view the dictionary window"
 msgstr "অভিধানের উইন্ডো প্রদর্শনের জন্য ক্লিক করুন"
 
-#: cafe-dictionary/src/gdict-applet.c:532
+#: cafe-dictionary/src/gdict-applet.c:520
 msgid "Toggle dictionary window"
 msgstr "অভিধানের উইন্ডো টগল করা হবে"
 
-#: cafe-dictionary/src/gdict-applet.c:533
+#: cafe-dictionary/src/gdict-applet.c:521
 msgid "Show or hide the definition window"
 msgstr "সংজ্ঞা উইন্ডো প্রদর্শন অথবা আড়াল করা হবে"
 
-#: cafe-dictionary/src/gdict-applet.c:584
+#: cafe-dictionary/src/gdict-applet.c:572
 msgid "Type the word you want to look up"
 msgstr "অনুসন্ধানের উদ্দেশ্যে শব্দ লিখুন"
 
-#: cafe-dictionary/src/gdict-applet.c:586
+#: cafe-dictionary/src/gdict-applet.c:574
 msgid "Dictionary entry"
 msgstr "অভিধানের শব্দের এন্ট্রি"
 
-#: cafe-dictionary/src/gdict-applet.c:715
+#: cafe-dictionary/src/gdict-applet.c:703
 #: cafe-dictionary/src/gdict-window.c:1104
 msgid "Dictionary Preferences"
 msgstr "অভিধান সম্বন্ধীয় পছন্দ"
 
-#: cafe-dictionary/src/gdict-applet.c:739
+#: cafe-dictionary/src/gdict-applet.c:727
 #: cafe-dictionary/src/gdict-pref-dialog.c:498
 #: cafe-dictionary/src/gdict-source-dialog.c:478
 #: cafe-dictionary/src/gdict-window.c:1251
 msgid "There was an error while displaying help"
 msgstr "সহায়িকা প্রদর্শনে সমস্যা"
 
-#: cafe-dictionary/src/gdict-applet.c:878
+#: cafe-dictionary/src/gdict-applet.c:866
 #: cafe-dictionary/src/gdict-window.c:522
 #, c-format
 msgid "No dictionary source available with name '%s'"
 msgstr "'%s' নামক কোনো অভিধান উৎস উপলব্ধ নয়"
 
-#: cafe-dictionary/src/gdict-applet.c:882
+#: cafe-dictionary/src/gdict-applet.c:870
 #: cafe-dictionary/src/gdict-window.c:526
 msgid "Unable to find dictionary source"
 msgstr "অভিধানের উৎস অনুসন্ধান করতে ব্যর্থ"
 
-#: cafe-dictionary/src/gdict-applet.c:898
+#: cafe-dictionary/src/gdict-applet.c:886
 #: cafe-dictionary/src/gdict-window.c:542
 #, c-format
 msgid "No context available for source '%s'"
 msgstr "'%s' উৎসের জন্য কোনো কনটেক্সট বিদ্যমান নয়"
 
-#: cafe-dictionary/src/gdict-applet.c:902
+#: cafe-dictionary/src/gdict-applet.c:890
 #: cafe-dictionary/src/gdict-window.c:546
 msgid "Unable to create a context"
 msgstr "কনটেক্সট নির্মাণ করতে ব্যর্থ"
 
-#: cafe-dictionary/src/gdict-applet.c:1168
+#: cafe-dictionary/src/gdict-applet.c:1159
 msgid "_Look Up Selected Text"
 msgstr "নির্বাচিত টেক্সট অনুসন্ধান করা হবে (_L)"
 
-#: cafe-dictionary/src/gdict-applet.c:1171
+#: cafe-dictionary/src/gdict-applet.c:1162
 msgid "Cl_ear"
 msgstr "পরিশ্রুত করুন (_e)"
 
-#: cafe-dictionary/src/gdict-applet.c:1174
+#: cafe-dictionary/src/gdict-applet.c:1165
 msgid "_Print"
 msgstr "মুদ্রণ করুন (_P)"
 
-#: cafe-dictionary/src/gdict-applet.c:1177
+#: cafe-dictionary/src/gdict-applet.c:1168
 msgid "_Save"
 msgstr "সংরক্ষণ করুন (_S)"
 
-#: cafe-dictionary/src/gdict-applet.c:1180
+#: cafe-dictionary/src/gdict-applet.c:1171
 msgid "Preferences"
 msgstr "পছন্দতালিকা"
 
@@ -2771,10 +2715,6 @@ msgstr "মুদ্রণ করুন...(_P)"
 #: cafe-dictionary/src/gdict-window.c:1299
 msgid "Print this document"
 msgstr "এই ডকুমেন্টটি মুদ্রণ করুন"
-
-#: cafe-dictionary/src/gdict-window.c:1308
-msgid "_Find"
-msgstr ""
 
 #: cafe-dictionary/src/gdict-window.c:1309
 msgid "Find a word or phrase in the document"
@@ -2954,12 +2894,6 @@ msgstr ""
 msgid "Attach and mount one or more disk image files"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:8
-msgid "drive-removable-media"
-msgstr ""
-
 #: cafe-disk-image-mounter/src/main.c:57
 msgid "An error occurred"
 msgstr "সমস্যা উৎপন্ন হয়েছে"
@@ -3048,14 +2982,7 @@ msgstr "পর্দার ছবি নিন"
 msgid "Save images of your desktop or individual windows"
 msgstr "ডেস্কটপ অথবা স্বতন্ত্র উইন্ডোর ছবি সংরক্ষণ করুন"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:9
-msgid "applets-screenshooter"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-screenshot/data/cafe-screenshot.desktop.in:13
 msgid "CAFE;screenshot;snapshot;desktop;window;image;"
 msgstr ""
@@ -3113,8 +3040,8 @@ msgid ""
 "Effect to add to the outside of a border. Possible values are \"shadow\", "
 "\"none\", and \"border\"."
 msgstr ""
-"সীমারেখার বাহির অংশে যে ইফেক্ট প্রয়োগ করা হবে। সম্ভাব্য মান \"shadow "
-"(ছায়া)\", \"none(শূণ্য)\" এবং \"black-line(কালো-রেখা)\"।"
+"সীমারেখার বাহির অংশে যে ইফেক্ট প্রয়োগ করা হবে। সম্ভাব্য মান \"shadow (ছায়া)\", "
+"\"none(শূণ্য)\" এবং \"black-line(কালো-রেখা)\"।"
 
 #: cafe-screenshot/src/cafe-screenshot.c:138
 msgid "Error loading the help page"
@@ -3232,8 +3159,7 @@ msgstr "সুনির্দিষ্ট সময় [সেকেন্ডে] �
 
 #: cafe-screenshot/src/cafe-screenshot.c:1321
 msgid "Effect to add to the border (shadow, border or none)"
-msgstr ""
-"সীমারেখার জন্য প্রয়োগের উদ্দেশ্যে ইফেক্ট (ছায়া, প্রান্তরেখা অথবা শূণ্য)"
+msgstr "সীমারেখার জন্য প্রয়োগের উদ্দেশ্যে ইফেক্ট (ছায়া, প্রান্তরেখা অথবা শূণ্য)"
 
 #: cafe-screenshot/src/cafe-screenshot.c:1321
 msgid "effect"
@@ -3253,17 +3179,15 @@ msgstr "সম্পূর্ণ পর্দার একটি ছবি ন�
 
 #: cafe-screenshot/src/cafe-screenshot.c:1355
 msgid ""
-"Conflicting options: --clipboard and --interactive should not be used at the"
-" same time.\n"
+"Conflicting options: --clipboard and --interactive should not be used at the "
+"same time.\n"
 msgstr ""
 
 #: cafe-screenshot/src/cafe-screenshot.c:1361
 msgid ""
 "Conflicting options: --window and --area should not be used at the same "
 "time.\n"
-msgstr ""
-"দ্বন্দ্বপূর্ণ অপশন: --window ও --area অপশন দুটি একসাথে ব্যবহার করা যাবে "
-"না।\n"
+msgstr "দ্বন্দ্বপূর্ণ অপশন: --window ও --area অপশন দুটি একসাথে ব্যবহার করা যাবে না।\n"
 
 #: cafe-screenshot/src/screenshot-dialog.c:205
 #, c-format
@@ -3297,8 +3221,8 @@ msgid ""
 "The child save process unexpectedly exited.  We are unable to write the "
 "screenshot to disk."
 msgstr ""
-"সংরক্ষণের উদ্দেশ্যে চলমান চাইল্ড প্রসেস অপ্রত্যাশিতভাবে বন্ধ হওয়ার ফলে "
-"পর্দার ছবি ডিস্কে সংরক্ষণ করা যায়নি।"
+"সংরক্ষণের উদ্দেশ্যে চলমান চাইল্ড প্রসেস অপ্রত্যাশিতভাবে বন্ধ হওয়ার ফলে পর্দার ছবি "
+"ডিস্কে সংরক্ষণ করা যায়নি।"
 
 #: cafe-screenshot/src/screenshot-save.c:225
 msgid "Unknown error saving screenshot to disk"
@@ -3320,3 +3244,12 @@ msgstr "ফাইল সংরক্ষণ করা হচ্ছে..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "উৎস ফাইল ব্যবহার করতে ব্যর্থ"
+
+#~ msgid "Zoom _In"
+#~ msgstr "বড় করে প্রদর্শন (_I)"
+
+#~ msgid "Zoom _Out"
+#~ msgstr "ছোট আকারে প্রদর্শন (_O)"
+
+#~ msgid "_Normal Size"
+#~ msgstr "স্বাভাবিক আকার (_N)"

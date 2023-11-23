@@ -2,22 +2,22 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-utils package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-utils 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2020-01-13 16:47+0100\n"
+"POT-Creation-Date: 2023-11-20 09:32+0100\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Maithili (https://www.transifex.com/cafe/teams/13566/mai/)\n"
+"Language: mai\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: mai\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
@@ -29,14 +29,7 @@ msgstr ""
 msgid "Check folder sizes and available disk space"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:8
-msgid "cafe-disk-usage-analyzer"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:14
 msgid "CAFE;check;disk;usage;analyze;size;space;"
 msgstr ""
@@ -73,7 +66,7 @@ msgstr "स्कैन फ़ोल्डर (_o)..."
 msgid "S_can Remote Folder..."
 msgstr "रिमोट फोल्डर स्कैन करू (_c)..."
 
-#: baobab/data/baobab-main-window.ui:74 logview/src/logview-window.c:819
+#: baobab/data/baobab-main-window.ui:74 logview/src/logview-window.c:820
 #: cafe-dictionary/src/gdict-window.c:1286
 msgid "_Edit"
 msgstr "संपादन (_E)"
@@ -86,7 +79,7 @@ msgstr "सबहि विस्तारित करू (_E)"
 msgid "_Collapse All"
 msgstr "सबहि कोलैप्स करू (_C)"
 
-#: baobab/data/baobab-main-window.ui:101 logview/src/logview-window.c:820
+#: baobab/data/baobab-main-window.ui:101 logview/src/logview-window.c:821
 #: cafe-dictionary/src/gdict-window.c:1287
 msgid "_View"
 msgstr "देखू (_V)"
@@ -103,19 +96,19 @@ msgstr "स्थिति-पट्टी (_a)"
 msgid "All_ocated Space"
 msgstr "आबंटित स्थान (_o)"
 
-#: baobab/data/baobab-main-window.ui:129 logview/src/logview-window.c:822
-#: cafe-dictionary/src/gdict-applet.c:1183
+#: baobab/data/baobab-main-window.ui:129 logview/src/logview-window.c:823
+#: cafe-dictionary/src/gdict-applet.c:1174
 #: cafe-dictionary/src/gdict-window.c:1289
 msgid "_Help"
 msgstr "मद्दति (_H)"
 
-#: baobab/data/baobab-main-window.ui:136 logview/src/logview-window.c:848
+#: baobab/data/baobab-main-window.ui:136 logview/src/logview-window.c:849
 #: cafe-dictionary/src/gdict-window.c:1339
 msgid "_Contents"
 msgstr "विषय सूची (_C)"
 
-#: baobab/data/baobab-main-window.ui:183 baobab/src/baobab.c:1236
-#: baobab/src/callbacks.c:107
+#: baobab/data/baobab-main-window.ui:183 baobab/src/baobab.c:1238
+#: baobab/src/callbacks.c:108
 msgid "Disk Usage Analyzer"
 msgstr "डिस्क प्रयोग विश्लेषण"
 
@@ -213,8 +206,8 @@ msgstr ""
 
 #: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:10
 msgid ""
-"As its name implies, Disk Usage Analyzer is a graphical utility that you can"
-" use to view and monitor your disk usage and folder structure. It displays "
+"As its name implies, Disk Usage Analyzer is a graphical utility that you can "
+"use to view and monitor your disk usage and folder structure. It displays "
 "summary information in ring or treemap charts."
 msgstr ""
 
@@ -225,98 +218,98 @@ msgid ""
 "changes to the home directory and warn the user if a file is added/removed."
 msgstr ""
 
-#: baobab/src/baobab.c:137 baobab/src/baobab.c:357
+#: baobab/src/baobab.c:139 baobab/src/baobab.c:359
 msgid "Scanning..."
 msgstr "स्कैनिंग..."
 
-#: baobab/src/baobab.c:183
+#: baobab/src/baobab.c:185
 msgid "Total filesystem capacity:"
 msgstr "कुल फ़ाइल-सिस्टम क्षमता:"
 
-#: baobab/src/baobab.c:184
+#: baobab/src/baobab.c:186
 msgid "used:"
 msgstr "प्रयुक्त:"
 
-#: baobab/src/baobab.c:185
+#: baobab/src/baobab.c:187
 msgid "available:"
 msgstr "उपलब्ध:"
 
-#: baobab/src/baobab.c:242 baobab/src/baobab.c:299 baobab/src/callbacks.c:272
+#: baobab/src/baobab.c:244 baobab/src/baobab.c:301 baobab/src/callbacks.c:274
 msgid "Calculating percentage bars..."
 msgstr "प्रतिशत बार क' गणना कए रहल अछि..."
 
-#: baobab/src/baobab.c:253 baobab/src/baobab.c:1300 baobab/src/callbacks.c:276
+#: baobab/src/baobab.c:255 baobab/src/baobab.c:1305 baobab/src/callbacks.c:278
 msgid "Ready"
 msgstr "तैआर"
 
-#: baobab/src/baobab.c:391
+#: baobab/src/baobab.c:393
 msgid "Total filesystem capacity"
 msgstr ""
 
-#: baobab/src/baobab.c:415
+#: baobab/src/baobab.c:417
 msgid "Total filesystem usage"
 msgstr ""
 
-#: baobab/src/baobab.c:457
+#: baobab/src/baobab.c:459
 msgid "contains hardlinks for:"
 msgstr "एहि क'लेल हार्डलिंक सामिल करैत अछि:"
 
-#: baobab/src/baobab.c:466
+#: baobab/src/baobab.c:468
 #, c-format
 msgid "%5d item"
 msgid_plural "%5d items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: baobab/src/baobab.c:592
+#: baobab/src/baobab.c:594
 msgid "Could not initialize monitoring"
 msgstr ""
 
-#: baobab/src/baobab.c:593
+#: baobab/src/baobab.c:595
 msgid "Changes to your home folder will not be monitored."
 msgstr "अहाँक होम फोल्डरमे बदलाव निरीक्षण नहि कएल जएताह."
 
-#: baobab/src/baobab.c:914
+#: baobab/src/baobab.c:916
 msgid "Move to parent folder"
 msgstr ""
 
-#: baobab/src/baobab.c:918
+#: baobab/src/baobab.c:920
 msgid "Zoom in"
 msgstr "पैघ रूपमे देखाबू"
 
-#: baobab/src/baobab.c:922
+#: baobab/src/baobab.c:924
 msgid "Zoom out"
 msgstr "छोट रूपमे देखाबू"
 
-#: baobab/src/baobab.c:926
+#: baobab/src/baobab.c:928
 msgid "Save screenshot"
 msgstr ""
 
-#: baobab/src/baobab.c:1112
+#: baobab/src/baobab.c:1114
 msgid "View as Rings Chart"
 msgstr ""
 
-#: baobab/src/baobab.c:1114
+#: baobab/src/baobab.c:1116
 msgid "View as Treemap Chart"
 msgstr ""
 
-#: baobab/src/baobab.c:1225
+#: baobab/src/baobab.c:1227
 msgid "Show version"
 msgstr ""
 
-#: baobab/src/baobab.c:1226
+#: baobab/src/baobab.c:1228
 msgid "[DIRECTORY]"
 msgstr ""
 
-#: baobab/src/baobab.c:1256
+#: baobab/src/baobab.c:1258
 msgid "Too many arguments. Only one directory can be specified."
 msgstr ""
 
-#: baobab/src/baobab.c:1273
+#: baobab/src/baobab.c:1278
 msgid "Could not detect any mount point."
 msgstr ""
 
-#: baobab/src/baobab.c:1275
+#: baobab/src/baobab.c:1280
 msgid "Without mount points disk usage cannot be analyzed."
 msgstr ""
 
@@ -475,14 +468,14 @@ msgid ""
 "The content of your home folder has changed. Select rescan to update the "
 "disk usage details."
 msgstr ""
-"अहाँक होम फोल्डर क' सामग्री बदैल गेल अछि डिस्क प्रयोग विवरणकेँ अद्यतन करब क'"
-" लेल फिनु स्कैन करै लेल चुनू."
+"अहाँक होम फोल्डर क' सामग्री बदैल गेल अछि डिस्क प्रयोग विवरणकेँ अद्यतन करब क' लेल फिनु "
+"स्कैन करै लेल चुनू."
 
 #: baobab/src/baobab-treeview.c:84
 msgid "_Rescan"
 msgstr "फिनु स्कैन करू (_R)"
 
-#: baobab/src/baobab-treeview.c:222 gsearchtool/src/gsearchtool.c:2436
+#: baobab/src/baobab-treeview.c:222 gsearchtool/src/gsearchtool.c:2428
 msgid "Folder"
 msgstr "फ़ोल्डर"
 
@@ -490,7 +483,7 @@ msgstr "फ़ोल्डर"
 msgid "Usage"
 msgstr "प्रयोग"
 
-#: baobab/src/baobab-treeview.c:258 gsearchtool/src/gsearchtool.c:2449
+#: baobab/src/baobab-treeview.c:258 gsearchtool/src/gsearchtool.c:2441
 msgid "Size"
 msgstr "आकार"
 
@@ -523,7 +516,7 @@ msgstr "डिस्क प्रयोग विश्लेषण नहि �
 msgid "_Open Folder"
 msgstr "फोल्डर खोलू (_O)"
 
-#: baobab/src/baobab-utils.c:368 gsearchtool/src/gsearchtool-callbacks.c:1216
+#: baobab/src/baobab-utils.c:368 gsearchtool/src/gsearchtool-callbacks.c:1204
 msgid "Mo_ve to Trash"
 msgstr "रद्दीमे भेजू (_v)"
 
@@ -534,8 +527,7 @@ msgstr "फ़ोल्डर \"%s\" खोलि नहि सकल."
 
 #: baobab/src/baobab-utils.c:400
 msgid "There is no installed viewer capable of displaying the folder."
-msgstr ""
-"एतय कोनो एहन प्रदर्शक संस्थापित नहि अछि जे फोल्डरकेँ प्रदर्शित कए सकै."
+msgstr "एतय कोनो एहन प्रदर्शक संस्थापित नहि अछि जे फोल्डरकेँ प्रदर्शित कए सकै."
 
 #: baobab/src/baobab-utils.c:467
 #, c-format
@@ -555,13 +547,13 @@ msgstr "विवरण %s:"
 msgid "There was an error displaying help."
 msgstr "मद्दति देखाबैमे कोनो त्रुटि भेल."
 
-#: baobab/src/callbacks.c:77 logview/src/logview-about.h:45
-#: cafe-dictionary/src/gdict-about.c:52
+#: baobab/src/callbacks.c:78 logview/src/logview-about.h:46
+#: cafe-dictionary/src/gdict-about.c:53
 msgid "CAFE Documentation Team"
 msgstr ""
 
-#: baobab/src/callbacks.c:82 logview/src/logview-about.h:50
-#: cafe-dictionary/src/gdict-about.c:60
+#: baobab/src/callbacks.c:83 logview/src/logview-about.h:51
+#: cafe-dictionary/src/gdict-about.c:61
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -569,8 +561,8 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: baobab/src/callbacks.c:87 logview/src/logview-about.h:54
-#: cafe-dictionary/src/gdict-about.c:65
+#: baobab/src/callbacks.c:88 logview/src/logview-about.h:55
+#: cafe-dictionary/src/gdict-about.c:66
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -578,38 +570,39 @@ msgid ""
 "more details."
 msgstr ""
 
-#: baobab/src/callbacks.c:92 logview/src/logview-about.h:58
+#: baobab/src/callbacks.c:93 logview/src/logview-about.h:59
 msgid ""
-"You should have received a copy of the GNU General Public License along with"
-" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA."
 msgstr ""
 
-#: baobab/src/callbacks.c:109
+#: baobab/src/callbacks.c:110
 msgid "About Disk Usage Analyzer"
 msgstr ""
 
-#: baobab/src/callbacks.c:110
+#: baobab/src/callbacks.c:111
 msgid "A graphical tool to analyze disk usage."
 msgstr "डिस्क प्रयोग विश्लेषण क'लेल एकटा आलेखीय अओजार"
 
-#: baobab/src/callbacks.c:111
+#: baobab/src/callbacks.c:112
 msgid ""
 "Copyright © 2005-2010 Fabio Marzocca\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
-#: baobab/src/callbacks.c:117 logview/src/logview-about.h:64
-#: cafe-dictionary/src/gdict-about.c:56
+#: baobab/src/callbacks.c:119 logview/src/logview-about.h:65
+#: cafe-dictionary/src/gdict-about.c:57
 msgid "translator-credits"
 msgstr "संगीता कुमारी (sangeeta09@gmail.com)"
 
-#: baobab/src/callbacks.c:215 gsearchtool/src/gsearchtool-callbacks.c:509
-#: gsearchtool/src/gsearchtool-callbacks.c:855
+#: baobab/src/callbacks.c:217 gsearchtool/src/gsearchtool-callbacks.c:505
+#: gsearchtool/src/gsearchtool-callbacks.c:843
 msgid "The document does not exist."
 msgstr "दस्ताबेज़ मोजुद नहि अछि."
 
-#: baobab/src/callbacks.c:296
+#: baobab/src/callbacks.c:298
 msgid "The folder does not exist."
 msgstr "फोल्डर मोजुद नहि अछि."
 
@@ -626,23 +619,16 @@ msgstr ""
 msgid ""
 "CAFE Search Tool is a simple but powerful utility that allows you to search "
 "for files and folders on any mounted file system. Its interface gives you "
-"instant access to a wide variety of parameters for each search, such as text"
-" contained within a file, ownership, date of modification, file size, folder"
-" exclusion, etc.."
+"instant access to a wide variety of parameters for each search, such as text "
+"contained within a file, ownership, date of modification, file size, folder "
+"exclusion, etc.."
 msgstr ""
 
 #: gsearchtool/data/cafe-search-tool.desktop.in:4
 msgid "Locate documents and folders on this computer by name or content"
 msgstr "नाम आ सामग्री क' आधार पर एहि कंप्यूटर पर दस्ताबेज आ फोल्डर लोकेट करू"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gsearchtool/data/cafe-search-tool.desktop.in:7
-msgid "system-search"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: gsearchtool/data/cafe-search-tool.desktop.in:13
 msgid ""
 "CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
@@ -669,8 +655,8 @@ msgid ""
 "This key determines if the search tool disables the use of the locate "
 "command when performing simple file name searches."
 msgstr ""
-"ई कुँजी निर्धारित करैत अछि जे जँ खोज अओजार locate कमांड क' प्रयोगकेँ "
-"निष्क्रिय करैत अछि जखन साधारण फाइल नाम खोज क' निष्पादन करैत अछि."
+"ई कुँजी निर्धारित करैत अछि जे जँ खोज अओजार locate कमांड क' प्रयोगकेँ निष्क्रिय करैत अछि "
+"जखन साधारण फाइल नाम खोज क' निष्पादन करैत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:19
 msgid "Quick Search Excluded Paths"
@@ -678,13 +664,13 @@ msgstr "तेज खोज निकालल पथ"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:20
 msgid ""
-"This key defines the paths the search tool will exclude from a quick search."
-" The wildcards '*' and '?' are supported. The default values are /mnt/*, "
-"/media/*, /dev/*, /tmp/*, /proc/*, and /var/*."
+"This key defines the paths the search tool will exclude from a quick search. "
+"The wildcards '*' and '?' are supported. The default values are /mnt/*, /"
+"media/*, /dev/*, /tmp/*, /proc/*, and /var/*."
 msgstr ""
-"कुँजी ओहि पथकेँ परिभाषित करैत अछि जकरा खोज अओजार एकटा द्रुत खोज सँ अलग "
-"करताह. वाइल्डकार्ड '*' आ '?' समर्थित अछि. मूलभूत मान अछि /mnt/*, /media/*, "
-"/dev/*, /tmp/*, /proc/*, आओर /var/*."
+"कुँजी ओहि पथकेँ परिभाषित करैत अछि जकरा खोज अओजार एकटा द्रुत खोज सँ अलग करताह. "
+"वाइल्डकार्ड '*' आ '?' समर्थित अछि. मूलभूत मान अछि /mnt/*, /media/*, /dev/*, /tmp/"
+"*, /proc/*, आओर /var/*."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:24
 msgid "Disable Quick Search Second Scan"
@@ -695,8 +681,8 @@ msgid ""
 "This key determines if the search tool disables the use of the find command "
 "after performing a quick search."
 msgstr ""
-"ई कुँजी निर्धारित करैत अछि जे जँ खोज अओजार खोजबाक कमांड क' प्रयोगकेँ "
-"निष्क्रिय करैत अछि एकटा द्रुत खोज क' निष्पादन क' बाद."
+"ई कुँजी निर्धारित करैत अछि जे जँ खोज अओजार खोजबाक कमांड क' प्रयोगकेँ निष्क्रिय करैत अछि "
+"एकटा द्रुत खोज क' निष्पादन क' बाद."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:29
 msgid "Quick Search Second Scan Excluded Paths"
@@ -707,13 +693,13 @@ msgid ""
 "This key defines the paths the search tool will exclude from a second scan "
 "when performing a quick search. The second scan uses the find command to "
 "search for files. The purpose of the second scan is to find files that have "
-"not been indexed. The wildcards '*' and '?' are supported. The default value"
-" is /."
+"not been indexed. The wildcards '*' and '?' are supported. The default value "
+"is /."
 msgstr ""
-"ई कुँजी पथकेँ परिभाषित करैत अछि जकरा खोज अओजार दोसर स्कैन सँ अलग करैत अछि "
-"जखन एकटा द्रुत खोज कएल जाएत अछि दोसर स्कैन खोजू कमांड क' प्रयोग फाइल क'लेल "
-"करैत अछि. दोसर स्कैन क' उद्देश्य ई पता कएनाइ अछि जे ककरा सूचीबद्ध नहि कएनाइ "
-"अछि वाइल्डकार्ड '*' आओर '?' समर्थित अछि. मूलभूत मान अछि /."
+"ई कुँजी पथकेँ परिभाषित करैत अछि जकरा खोज अओजार दोसर स्कैन सँ अलग करैत अछि जखन एकटा "
+"द्रुत खोज कएल जाएत अछि दोसर स्कैन खोजू कमांड क' प्रयोग फाइल क'लेल करैत अछि. दोसर स्कैन "
+"क' उद्देश्य ई पता कएनाइ अछि जे ककरा सूचीबद्ध नहि कएनाइ अछि वाइल्डकार्ड '*' आओर '?' "
+"समर्थित अछि. मूलभूत मान अछि /."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:34
 msgid "Search Result Columns Order"
@@ -724,8 +710,8 @@ msgid ""
 "This key defines the order of the columns in the search results. This key "
 "should not be modified by the user."
 msgstr ""
-"कुँजी कॉलम क' क्रमकेँ खोज परिणाममे परिभाषित करैत अछि. एहि कुँजीकेँ प्रयोक्ता"
-" क' द्वारा नहि बदलल जएनाइ चाही."
+"कुँजी कॉलम क' क्रमकेँ खोज परिणाममे परिभाषित करैत अछि. एहि कुँजीकेँ प्रयोक्ता क' द्वारा नहि "
+"बदलल जएनाइ चाही."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:39
 msgid "Default Window Width"
@@ -733,13 +719,12 @@ msgstr "मूलभूत विंडो चओड़ाइ"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:40
 msgid ""
-"This key defines the window width, and it's used to remember the size of the"
-" search tool between sessions. Setting it to -1 will make the search tool "
-"use the default width."
+"This key defines the window width, and it's used to remember the size of the "
+"search tool between sessions. Setting it to -1 will make the search tool use "
+"the default width."
 msgstr ""
-"ई कुँजी विंडो चओड़ाइकेँ परिभाषित करैत अछि, आओर सत्र क' बीच खोज टूल क' "
-"आकारकेँ याद राखब क' लेल प्रयुक्त हाएत अछि एकरा -1मे सेट कएनाइ मूलभूत चओड़ाइ "
-"क' प्रयोगकेँ बनओताह."
+"ई कुँजी विंडो चओड़ाइकेँ परिभाषित करैत अछि, आओर सत्र क' बीच खोज टूल क' आकारकेँ याद राखब "
+"क' लेल प्रयुक्त हाएत अछि एकरा -1मे सेट कएनाइ मूलभूत चओड़ाइ क' प्रयोगकेँ बनओताह."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:44
 msgid "Default Window Height"
@@ -748,12 +733,11 @@ msgstr "मूलभूत विंडो उँचाइ"
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:45
 msgid ""
 "This key defines the window height, and it's used to remember the size of "
-"the search tool between sessions. Setting it to -1 will make the search tool"
-" use the default height."
+"the search tool between sessions. Setting it to -1 will make the search tool "
+"use the default height."
 msgstr ""
-"ई कुँजी विंडो उँचाइकेँ परिभाषित करैत अछि, आओर सत्र क' बीच खोज टूल क' आकारकेँ"
-" याद राखब क' लेल प्रयुक्त हाएत अछि एकरा -1मे सेट कएनाइ मूलभूत उँचाइ क' "
-"प्रयोगकेँ बनओताह."
+"ई कुँजी विंडो उँचाइकेँ परिभाषित करैत अछि, आओर सत्र क' बीच खोज टूल क' आकारकेँ याद राखब "
+"क' लेल प्रयुक्त हाएत अछि एकरा -1मे सेट कएनाइ मूलभूत उँचाइ क' प्रयोगकेँ बनओताह."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:49
 msgid "Default Window Maximized"
@@ -762,9 +746,7 @@ msgstr "मूलभूत विंडो अघिकतम"
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:50
 msgid ""
 "This key determines if the search tool window starts in a maximized state."
-msgstr ""
-"ई कुँजी निर्धारित करैत अछि जे जँ खोज अओजार विंडो अघिकतम स्थितिमे आरंभ हाएत "
-"अछि."
+msgstr "ई कुँजी निर्धारित करैत अछि जे जँ खोज अओजार विंडो अघिकतम स्थितिमे आरंभ हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:54
 msgid "Look in Folder"
@@ -779,104 +761,104 @@ msgid ""
 "This key determines if the \"Contains the text\" search option is selected "
 "when the search tool is started."
 msgstr ""
-"ई कुँजी निश्चित करैत अछि जे जँ \"पाठ समाहित करैत अछि\" खोज विकल्प चुनल जाएत "
-"अछि जखन खोज अओजार शुरू हाएत अछि."
+"ई कुँजी निश्चित करैत अछि जे जँ \"पाठ समाहित करैत अछि\" खोज विकल्प चुनल जाएत अछि जखन "
+"खोज अओजार शुरू हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:66
 msgid ""
 "This key determines if the \"Date modified less than\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"ई कुँजी निश्चित करैत अछि जे जँ \"एकरासँ कम क' तिथि रूपांतरित\" खोज विकल्प "
-"चुनल जाएत अछि जखन खोज अओजार शुरू हाएत अछि."
+"ई कुँजी निश्चित करैत अछि जे जँ \"एकरासँ कम क' तिथि रूपांतरित\" खोज विकल्प चुनल जाएत अछि "
+"जखन खोज अओजार शुरू हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:70
 msgid ""
 "This key determines if the \"Date modified more than\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"ई कुँजी निश्चित करैत अछि जे जँ \"एकरासँ बेसी तिथि रूपांतरित\" खोज विकल्प "
-"चुनल जाएत अछि जखन खोज अओजार शुरू हाएत अछि."
+"ई कुँजी निश्चित करैत अछि जे जँ \"एकरासँ बेसी तिथि रूपांतरित\" खोज विकल्प चुनल जाएत अछि "
+"जखन खोज अओजार शुरू हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:74
 msgid ""
 "This key determines if the \"Size at least\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"ई कुँजी निश्चित करैत अछि जे जँ \"आकार कम सँ कम\" खोज विकल्प चुनल जाएत अछि "
-"जखन खोज अओजार शुरू हाएत अछि."
+"ई कुँजी निश्चित करैत अछि जे जँ \"आकार कम सँ कम\" खोज विकल्प चुनल जाएत अछि जखन खोज "
+"अओजार शुरू हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:78
 msgid ""
 "This key determines if the \"Size at most\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"ई कुँजी निश्चित करैत अछि जे जँ \"आकार बेसी सँ बेसी \" खोज विकल्प चुनल जाएत "
-"अछि जखन खोज अओजार शुरू हाएत अछि."
+"ई कुँजी निश्चित करैत अछि जे जँ \"आकार बेसी सँ बेसी \" खोज विकल्प चुनल जाएत अछि जखन खोज "
+"अओजार शुरू हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:82
 msgid ""
 "This key determines if the \"File is empty\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"ई कुँजी निश्चित करैत अछि जे जँ \"फाइल रिक्त अछि\" खोज विकल्प चुनल जाएत अछि "
-"जखन खोज अओजार शुरू हाएत अछि."
+"ई कुँजी निश्चित करैत अछि जे जँ \"फाइल रिक्त अछि\" खोज विकल्प चुनल जाएत अछि जखन खोज "
+"अओजार शुरू हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:86
 msgid ""
 "This key determines if the \"Owned by user\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"ई कुँजी निश्चित करैत अछि जे जँ \"प्रयोक्ता क' द्वारा स्वामित्व\" खोज विकल्प "
-"चुनल जाएत अछि जखन खोज अओजार शुरू हाएत अछि."
+"ई कुँजी निश्चित करैत अछि जे जँ \"प्रयोक्ता क' द्वारा स्वामित्व\" खोज विकल्प चुनल जाएत अछि "
+"जखन खोज अओजार शुरू हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:90
 msgid ""
-"This key determines if the \"Owned by group\" search option is selected when"
-" the search tool is started."
+"This key determines if the \"Owned by group\" search option is selected when "
+"the search tool is started."
 msgstr ""
-"ई कुँजी निश्चित करैत अछि जे जँ \"समूह क' द्वारा स्वामित्व\" खोज विकल्प चुनल "
-"जाएत अछि जखन खोज अओजार शुरू हाएत अछि."
+"ई कुँजी निश्चित करैत अछि जे जँ \"समूह क' द्वारा स्वामित्व\" खोज विकल्प चुनल जाएत अछि जखन "
+"खोज अओजार शुरू हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:94
 msgid ""
 "This key determines if the \"Owner is unrecognized\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"ई कुँजी निश्चित करैत अछि जे जँ \"स्वामी अपरिचित अछि\" खोज विकल्प चुनल जाएत "
-"अछि जखन खोज अओजार शुरू हाएत अछि."
+"ई कुँजी निश्चित करैत अछि जे जँ \"स्वामी अपरिचित अछि\" खोज विकल्प चुनल जाएत अछि जखन "
+"खोज अओजार शुरू हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:98
 msgid ""
 "This key determines if the \"Name does not contain\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"ई कुँजी निश्चित करैत अछि जे जँ \"नाममे सामिल नहि अछि\" खोज विकल्प चुनल जाएत "
-"अछि जखन खोज अओजार शुरू हाएत अछि."
+"ई कुँजी निश्चित करैत अछि जे जँ \"नाममे सामिल नहि अछि\" खोज विकल्प चुनल जाएत अछि जखन "
+"खोज अओजार शुरू हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:102
 msgid ""
-"This key determines if the \"Name matches regular expression\" search option"
-" is selected when the search tool is started."
+"This key determines if the \"Name matches regular expression\" search option "
+"is selected when the search tool is started."
 msgstr ""
-"ई कुँजी निश्चित करैत अछि जे जँ \"नाम नियमित अभिव्यक्ति सँ मेल करैत अछि\" खोज"
-" विकल्प चुनल जाएत अछि जखन खोज अओजार शुरू हाएत अछि."
+"ई कुँजी निश्चित करैत अछि जे जँ \"नाम नियमित अभिव्यक्ति सँ मेल करैत अछि\" खोज विकल्प चुनल "
+"जाएत अछि जखन खोज अओजार शुरू हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:106
 msgid ""
 "This key determines if the \"Show hidden files and folders\" search option "
 "is selected when the search tool is started."
 msgstr ""
-"खोज अओजार निश्चित करैत अछि जे जँ \"नुकाएल फाइल आ फोल्डर देखाबू\" खोज विकल्प "
-"चुनल जाएत अछि जखन खोज अओजार शुरू हाएत अछि."
+"खोज अओजार निश्चित करैत अछि जे जँ \"नुकाएल फाइल आ फोल्डर देखाबू\" खोज विकल्प चुनल जाएत "
+"अछि जखन खोज अओजार शुरू हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:110
 msgid ""
 "This key determines if the \"Follow symbolic links\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"ई कुँजी निश्चित करैत अछि जे जँ \"सांकेतिक लिंक क' पालन करैत अछि\" खोज विकल्प"
-" चुनल जाएत अछि जखन खोज अओजार शुरू हाएत अछि."
+"ई कुँजी निश्चित करैत अछि जे जँ \"सांकेतिक लिंक क' पालन करैत अछि\" खोज विकल्प चुनल जाएत "
+"अछि जखन खोज अओजार शुरू हाएत अछि."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:114
 msgid ""
@@ -1058,7 +1040,7 @@ msgid "Searching..."
 msgstr "खोजि रहल अछि..."
 
 #: gsearchtool/src/gsearchtool.c:511 gsearchtool/src/gsearchtool.c:1031
-#: gsearchtool/src/gsearchtool.c:3057
+#: gsearchtool/src/gsearchtool.c:3031
 msgid "Search for Files"
 msgstr "फ़ाइल क' लेल खोज"
 
@@ -1103,8 +1085,7 @@ msgstr "\"फोल्डरमे देखू\" खोज विकल्प �
 #: gsearchtool/src/gsearchtool.c:1310
 msgid "Sort files by one of the following: name, folder, size, type, or date"
 msgstr ""
-"फ़ाइलसभकेँ निम्नमे सँ कोनो एकटा आधार पर क्रमबद्ध करू: नाम, फ़ोल्डर, आकार, "
-"प्रकार आओर तिथि"
+"फ़ाइलसभकेँ निम्नमे सँ कोनो एकटा आधार पर क्रमबद्ध करू: नाम, फ़ोल्डर, आकार, प्रकार आओर तिथि"
 
 #: gsearchtool/src/gsearchtool.c:1311
 msgid "Set sort order to descending, the default is ascending"
@@ -1186,119 +1167,118 @@ msgstr "\"%s\" %sमे"
 msgid "Enter a value in %s for the \"%s\" search option."
 msgstr "%sमे एकटा मान दिअ' \"%s\" खोज विकल्प क'लेल ."
 
-#: gsearchtool/src/gsearchtool.c:2078
+#: gsearchtool/src/gsearchtool.c:2074
 #, c-format
 msgid "Remove \"%s\""
 msgstr "हटाबू \"%s\""
 
-#: gsearchtool/src/gsearchtool.c:2079
+#: gsearchtool/src/gsearchtool.c:2075
 #, c-format
 msgid "Click to remove the \"%s\" search option."
 msgstr "\"%s\" खोज विकल्प हटाबै क'लेल क्लिक करू."
 
-#: gsearchtool/src/gsearchtool.c:2172
+#: gsearchtool/src/gsearchtool.c:2168
 msgid "A_vailable options:"
 msgstr "उपलब्ध विकल्प (_v):"
 
-#: gsearchtool/src/gsearchtool.c:2201
+#: gsearchtool/src/gsearchtool.c:2197
 msgid "Available options"
 msgstr "उपलब्ध विकल्प"
 
-#: gsearchtool/src/gsearchtool.c:2202
+#: gsearchtool/src/gsearchtool.c:2198
 msgid "Select a search option from the drop-down list."
 msgstr "लटकैत सूची सँ एकटा खोज विकल्प चुनू."
 
-#: gsearchtool/src/gsearchtool.c:2219
+#: gsearchtool/src/gsearchtool.c:2211
 msgid "Add search option"
 msgstr "खोज विकल्प जोड़ू"
 
-#: gsearchtool/src/gsearchtool.c:2220
+#: gsearchtool/src/gsearchtool.c:2212
 msgid "Click to add the selected available search option."
 msgstr "चयनित उपलब्ध खोज विकल्प जोड़बाक लेल क्लिक करू."
 
-#: gsearchtool/src/gsearchtool.c:2309
+#: gsearchtool/src/gsearchtool.c:2301
 msgid "S_earch results:"
 msgstr "खोज परिणाम (_e):"
 
-#: gsearchtool/src/gsearchtool.c:2352
+#: gsearchtool/src/gsearchtool.c:2344
 msgid "List View"
 msgstr "सूची दृश्य"
 
-#: gsearchtool/src/gsearchtool.c:2412
+#: gsearchtool/src/gsearchtool.c:2404
 #: cafe-dictionary/libgdict/gdict-source.c:243
 msgid "Name"
 msgstr "नाम"
 
-#: gsearchtool/src/gsearchtool.c:2461
+#: gsearchtool/src/gsearchtool.c:2453
 msgid "Type"
 msgstr "प्रकार"
 
-#: gsearchtool/src/gsearchtool.c:2473
+#: gsearchtool/src/gsearchtool.c:2465
 msgid "Date Modified"
 msgstr "तिथि परिवर्धित"
 
-#: gsearchtool/src/gsearchtool.c:2803
+#: gsearchtool/src/gsearchtool.c:2795
 msgid "_Name contains:"
 msgstr "नाममे सामिल अछि (_N):"
 
-#: gsearchtool/src/gsearchtool.c:2818 gsearchtool/src/gsearchtool.c:2819
+#: gsearchtool/src/gsearchtool.c:2810 gsearchtool/src/gsearchtool.c:2811
 msgid "Enter a filename or partial filename with or without wildcards."
 msgstr "फाइलनाम आ आंशिक फाइल नामकेँ वाइल्डकार्ड क' सँग आ बिनु दाखिल करू."
 
-#: gsearchtool/src/gsearchtool.c:2819
+#: gsearchtool/src/gsearchtool.c:2811
 msgid "Name contains"
 msgstr "नाममे सामिल अछि"
 
-#: gsearchtool/src/gsearchtool.c:2825
+#: gsearchtool/src/gsearchtool.c:2817
 msgid "_Look in folder:"
 msgstr "फ़ोल्डरमे देखू (_L):"
 
-#: gsearchtool/src/gsearchtool.c:2831
+#: gsearchtool/src/gsearchtool.c:2823
 msgid "Browse"
 msgstr "ब्रॉउज करू"
 
-#: gsearchtool/src/gsearchtool.c:2841
+#: gsearchtool/src/gsearchtool.c:2833
 msgid "Look in folder"
 msgstr "फ़ोल्डरमे देखू"
 
-#: gsearchtool/src/gsearchtool.c:2841
+#: gsearchtool/src/gsearchtool.c:2833
 msgid "Select the folder or device from which you want to begin the search."
-msgstr ""
-"फ़ोल्डर अथवा डिवाइस क' नाम चुनू जतए अहाँ खोजनाइ प्रारंभ कएनाइ चाहैत अछि."
+msgstr "फ़ोल्डर अथवा डिवाइस क' नाम चुनू जतए अहाँ खोजनाइ प्रारंभ कएनाइ चाहैत अछि."
 
-#: gsearchtool/src/gsearchtool.c:2859
+#: gsearchtool/src/gsearchtool.c:2851
 msgid "Select more _options"
 msgstr "बेसी विकल्प देखाबू (_o)"
 
-#: gsearchtool/src/gsearchtool.c:2868
+#: gsearchtool/src/gsearchtool.c:2860
 msgid "Select more options"
 msgstr "बेसी विकल्प देखाबू"
 
-#: gsearchtool/src/gsearchtool.c:2868
+#: gsearchtool/src/gsearchtool.c:2860
 msgid "Click to expand or collapse the list of available options."
 msgstr "खोजबाक विकल्पसभकेँ विस्तारित अथवा कोलेप्स करैत अछि."
 
-#: gsearchtool/src/gsearchtool.c:2899
+#: gsearchtool/src/gsearchtool.c:2886
 msgid "Click to display the help manual."
 msgstr "मद्दति दस्ताबेज़ खोलब क'लेल क्लिक करू."
 
-#: gsearchtool/src/gsearchtool.c:2912
+#: gsearchtool/src/gsearchtool.c:2895
 msgid "Click to close \"Search for Files\"."
 msgstr "\"फाइल क' लेल खोजू\"केँ बन्न करब क'लेल क्लिक करू."
 
-#: gsearchtool/src/gsearchtool.c:2947
+#: gsearchtool/src/gsearchtool.c:2921
 msgid "Click to perform a search."
 msgstr "खोज क' लेल क्लिक करू"
 
-#: gsearchtool/src/gsearchtool.c:2948
+#: gsearchtool/src/gsearchtool.c:2922
 msgid "Click to stop a search."
 msgstr "खोजनाए रोकबाक लेल क्लिक करू"
 
-#: gsearchtool/src/gsearchtool.c:3042
+#: gsearchtool/src/gsearchtool.c:3016
 msgid "- the CAFE Search Tool"
 msgstr ""
 
-#: gsearchtool/src/gsearchtool.c:3051
+#: gsearchtool/src/gsearchtool.c:3025
 #, c-format
 msgid "Failed to parse command line arguments: %s\n"
 msgstr ""
@@ -1315,132 +1295,131 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: gsearchtool/src/gsearchtool-callbacks.c:351
-#: gsearchtool/src/gsearchtool-callbacks.c:551
+#: gsearchtool/src/gsearchtool-callbacks.c:547
 #, c-format
 msgid "This will open %d separate window."
 msgid_plural "This will open %d separate windows."
 msgstr[0] ""
 msgstr[1] ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:396
+#: gsearchtool/src/gsearchtool-callbacks.c:392
 #, c-format
 msgid "Could not open document \"%s\"."
 msgstr "दस्ताबेज़ \"%s\" खोलि नहि सकल."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:425
+#: gsearchtool/src/gsearchtool-callbacks.c:421
 #, c-format
 msgid "Could not open folder \"%s\"."
 msgstr "फ़ोल्डर \"%s\" खोलि नहि सकल."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:433
+#: gsearchtool/src/gsearchtool-callbacks.c:429
 msgid "The baul file manager is not running."
 msgstr "नॉटिलस फ़ाइल प्रबंधक चलि नहि रहल अछि."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:524
+#: gsearchtool/src/gsearchtool-callbacks.c:520
 msgid "There is no installed viewer capable of displaying the document."
-msgstr ""
-"एतय कोनो एहन प्रदर्शक संस्थापित नहि अछि जे दस्ताबेज़केँ प्रदर्शित कए सकै."
+msgstr "एतय कोनो एहन प्रदर्शक संस्थापित नहि अछि जे दस्ताबेज़केँ प्रदर्शित कए सकै."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:546
+#: gsearchtool/src/gsearchtool-callbacks.c:542
 #, c-format
 msgid "Are you sure you want to open %d folder?"
 msgid_plural "Are you sure you want to open %d folders?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:701
+#: gsearchtool/src/gsearchtool-callbacks.c:693
 #, c-format
 msgid "Could not move \"%s\" to trash."
 msgstr "\"%s\" केँ रद्दी पर नहि लए जाए सकल."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:732
+#: gsearchtool/src/gsearchtool-callbacks.c:724
 #, c-format
 msgid "Do you want to delete \"%s\" permanently?"
 msgstr "की अहाँ \"%s\"केँ स्थायी रूप सँ मेटओनाइ चाहैत अछि?"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:735
+#: gsearchtool/src/gsearchtool-callbacks.c:727
 #, c-format
 msgid "Trash is unavailable.  Could not move \"%s\" to the trash."
 msgstr ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:779
+#: gsearchtool/src/gsearchtool-callbacks.c:767
 #, c-format
 msgid "Could not delete \"%s\"."
 msgstr "\"%s\"केँ मेटाए नहि सकल."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:891
+#: gsearchtool/src/gsearchtool-callbacks.c:879
 #, c-format
 msgid "Deleting \"%s\" failed: %s."
 msgstr "\"%s\"केँ मेटओनाइ असफल: %s."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:903
+#: gsearchtool/src/gsearchtool-callbacks.c:891
 #, c-format
 msgid "Moving \"%s\" failed: %s."
 msgstr " \"%s\"केँ घसकओनाइ असफल: %s."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1030
-#: gsearchtool/src/gsearchtool-callbacks.c:1060
+#: gsearchtool/src/gsearchtool-callbacks.c:1018
+#: gsearchtool/src/gsearchtool-callbacks.c:1048
 msgid "_Open"
 msgstr "खोलू (_O)"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1085
+#: gsearchtool/src/gsearchtool-callbacks.c:1073
 #, c-format
 msgid "_Open with %s"
 msgstr ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1120
+#: gsearchtool/src/gsearchtool-callbacks.c:1108
 #, c-format
 msgid "Open with %s"
 msgstr ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1153
+#: gsearchtool/src/gsearchtool-callbacks.c:1141
 msgid "Open Wit_h"
 msgstr "एकरा सँग खोलू (_h)"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1198
+#: gsearchtool/src/gsearchtool-callbacks.c:1186
 msgid "Open Containing _Folder"
 msgstr ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1238
+#: gsearchtool/src/gsearchtool-callbacks.c:1226
 msgid "_Save Results As..."
 msgstr "परिणाम एहन सहेजू (_S)..."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1620
+#: gsearchtool/src/gsearchtool-callbacks.c:1608
 msgid "Save Search Results As..."
 msgstr "परिणाम एहन सहेजू..."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1649
+#: gsearchtool/src/gsearchtool-callbacks.c:1637
 msgid "Could not save document."
 msgstr "दस्ताबेज़ सहेज नहि सकल."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1650
+#: gsearchtool/src/gsearchtool-callbacks.c:1638
 msgid "You did not select a document name."
 msgstr "अहाँ दस्ताबेज़ नाम नहि चुनने अछि."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1680
+#: gsearchtool/src/gsearchtool-callbacks.c:1668
 #, c-format
 msgid "Could not save \"%s\" document to \"%s\"."
 msgstr "\"%s\" दस्ताबेज़ \"%s\"मे सहेज नहि सकल."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1713
+#: gsearchtool/src/gsearchtool-callbacks.c:1701
 #, c-format
 msgid "The document \"%s\" already exists.  Would you like to replace it?"
 msgstr ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1717
+#: gsearchtool/src/gsearchtool-callbacks.c:1705
 msgid "If you replace an existing file, its contents will be overwritten."
 msgstr "जँ अहाँ एकटा मोजुदा फ़ाइलकेँ बदलैत छी तँ एकर अवयव मेटाए कए लिखल जाएत."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1732
+#: gsearchtool/src/gsearchtool-callbacks.c:1720
 #: cafe-screenshot/src/screenshot-xfer.c:82
 msgid "_Replace"
 msgstr "बदलू (_R)"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1781
+#: gsearchtool/src/gsearchtool-callbacks.c:1769
 msgid "The document name you selected is a folder."
 msgstr "अहाँ जे दस्ताबेज़ नाम चुनने अछि ओ एकटा फ़ोल्डर अछि."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1817
+#: gsearchtool/src/gsearchtool-callbacks.c:1805
 msgid "You may not have write permissions to the document."
 msgstr "अहाँक दस्ताबेज़मे लिखबाक अनुमति साइत नहि हाएत."
 
@@ -1552,14 +1531,7 @@ msgstr ""
 msgid "View or monitor system log files"
 msgstr "सिस्टम लॉग फ़ाइल देखाबू आ मॉनीटर करू"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: logview/data/cafe-system-log.desktop.in.in:7
-msgid "cafe-system-log"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: logview/data/cafe-system-log.desktop.in.in:13
 msgid "CAFE;monitor;view;system;log;files;logviewer;"
 msgstr ""
@@ -1570,12 +1542,11 @@ msgstr "प्रारंभमे खोलब लेल लॉग फ़ा�
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:6
 msgid ""
-"Specifies the log file displayed at startup. The default is either "
-"/var/adm/messages or /var/log/messages, depending on your operating system."
+"Specifies the log file displayed at startup. The default is either /var/adm/"
+"messages or /var/log/messages, depending on your operating system."
 msgstr ""
-"प्रारंभमे खोलब लेल लॉग फ़ाइल निर्दिष्ट करैत अछि. मूलभूत अथवा तँ अछि "
-"/var/adm/messages अथवा /var/log/messages, जे अहाँक ऑपरेटिंग सिस्टम पर निर्भर"
-" करैत अछि."
+"प्रारंभमे खोलब लेल लॉग फ़ाइल निर्दिष्ट करैत अछि. मूलभूत अथवा तँ अछि /var/adm/messages "
+"अथवा /var/log/messages, जे अहाँक ऑपरेटिंग सिस्टम पर निर्भर करैत अछि."
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:10
 msgid "Size of the font used to display the log"
@@ -1586,8 +1557,8 @@ msgid ""
 "Specifies the size of the fixed-width font used to display the log in the "
 "main tree view. The default is taken from the default terminal font size."
 msgstr ""
-"मुख्य तरू दृश्यमे लॉग देखाबै क' लेल प्रयुक्त स्थिर चओड़ाइ फोन्ट क' आकारकेँ "
-"निर्दिष्ट करैत अछि. मूलभूतकेँ मूलभूत टर्मिनल फोन्ट आकार सँ लेल जाएत अछि."
+"मुख्य तरू दृश्यमे लॉग देखाबै क' लेल प्रयुक्त स्थिर चओड़ाइ फोन्ट क' आकारकेँ निर्दिष्ट करैत अछि. "
+"मूलभूतकेँ मूलभूत टर्मिनल फोन्ट आकार सँ लेल जाएत अछि."
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:15
 msgid "Height of the main window in pixels"
@@ -1614,8 +1585,8 @@ msgid ""
 "Specifies a list of log files to open up at startup. A default list is "
 "created by reading /etc/syslog.conf."
 msgstr ""
-"प्रारंभमे खोलब लेल लॉग फ़ाइल क' सूची निर्दिष्ट करैत अछि. मूलभूत सूचीकेँ "
-"/etc/syslog.confकेँ पढ़ि कए बनाओल जाएत अछि."
+"प्रारंभमे खोलब लेल लॉग फ़ाइल क' सूची निर्दिष्ट करैत अछि. मूलभूत सूचीकेँ /etc/syslog.confकेँ "
+"पढ़ि कए बनाओल जाएत अछि."
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:30
 msgid "List of saved filters"
@@ -1654,7 +1625,7 @@ msgstr ""
 msgid "Effect:"
 msgstr ""
 
-#: logview/src/logview-about.h:42 cafe-dictionary/src/gdict-about.c:49
+#: logview/src/logview-about.h:43 cafe-dictionary/src/gdict-about.c:50
 msgid "Sun GNOME Documentation Team <gdocteam@sun.com>"
 msgstr ""
 
@@ -1692,7 +1663,7 @@ msgstr ""
 msgid "Add new filter"
 msgstr ""
 
-#: logview/src/logview-filter-manager.c:517
+#: logview/src/logview-filter-manager.c:503
 msgid "Filters"
 msgstr ""
 
@@ -1801,148 +1772,137 @@ msgstr ""
 #: logview/src/logview-window.c:771
 msgid ""
 "Copyright © 1998-2008 Free Software Foundation, Inc.\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
-#: logview/src/logview-window.c:775
+#: logview/src/logview-window.c:776
 msgid "A system log viewer for CAFE."
 msgstr "गनोम लेल सिस्टम लॉग प्रदर्शक."
 
-#: logview/src/logview-window.c:818 cafe-dictionary/src/gdict-window.c:1285
+#: logview/src/logview-window.c:819 cafe-dictionary/src/gdict-window.c:1285
 msgid "_File"
 msgstr "फाइल (_F)"
 
-#: logview/src/logview-window.c:821
+#: logview/src/logview-window.c:822
 msgid "_Filters"
 msgstr ""
 
-#: logview/src/logview-window.c:824
+#: logview/src/logview-window.c:825
 msgid "_Open..."
 msgstr "खोलू (_O)..."
 
-#: logview/src/logview-window.c:824
+#: logview/src/logview-window.c:825
 msgid "Open a log from file"
 msgstr "फ़ाइल सँ एकटा लॉग खोलू"
 
-#: logview/src/logview-window.c:826 cafe-dictionary/src/gdict-window.c:1300
+#: logview/src/logview-window.c:827
 msgid "_Close"
 msgstr "बन्न करू (_C)"
 
-#: logview/src/logview-window.c:826
+#: logview/src/logview-window.c:827
 msgid "Close this log"
 msgstr "एहि लॉगकेँ बन्न करू"
 
-#: logview/src/logview-window.c:828
+#: logview/src/logview-window.c:829
 msgid "_Quit"
 msgstr "बाहर (_Q)"
 
-#: logview/src/logview-window.c:828
+#: logview/src/logview-window.c:829
 msgid "Quit the log viewer"
 msgstr "लॉग प्रदर्शक छोड़ू"
 
-#: logview/src/logview-window.c:831 cafe-dictionary/src/gdict-window.c:1304
+#: logview/src/logview-window.c:832
 msgid "_Copy"
 msgstr "कॉपी करू (_C)"
 
-#: logview/src/logview-window.c:831
+#: logview/src/logview-window.c:832
 msgid "Copy the selection"
 msgstr "चयनित कापी करू"
 
-#: logview/src/logview-window.c:833 cafe-dictionary/src/gdict-window.c:1306
+#: logview/src/logview-window.c:834 cafe-dictionary/src/gdict-window.c:1306
 msgid "Select _All"
 msgstr "सबहि चुनू (_A)"
 
-#: logview/src/logview-window.c:833
+#: logview/src/logview-window.c:834
 msgid "Select the entire log"
 msgstr "सभ लॉगकेँ चुनू"
 
-#: logview/src/logview-window.c:835
+#: logview/src/logview-window.c:836
 msgid "_Find..."
 msgstr "खोजू (_F)..."
 
-#: logview/src/logview-window.c:835
+#: logview/src/logview-window.c:836
 msgid "Find a word or phrase in the log"
 msgstr ""
 
-#: logview/src/logview-window.c:838
-msgid "Zoom _In"
-msgstr "पैघ आकार (_I)"
-
-#: logview/src/logview-window.c:838
+#: logview/src/logview-window.c:839
 msgid "Bigger text size"
 msgstr "पैघ पाठ आकार"
 
-#: logview/src/logview-window.c:840
-msgid "Zoom _Out"
-msgstr "छोट आकार (_O)"
-
-#: logview/src/logview-window.c:840
+#: logview/src/logview-window.c:841
 msgid "Smaller text size"
 msgstr "छोट पाठ आकार"
 
-#: logview/src/logview-window.c:842
-msgid "_Normal Size"
-msgstr "सामान्य आकार (_N)"
-
-#: logview/src/logview-window.c:842
+#: logview/src/logview-window.c:843
 msgid "Normal text size"
 msgstr "सामान्य पाठ आकार"
 
-#: logview/src/logview-window.c:845
+#: logview/src/logview-window.c:846
 msgid "Manage Filters"
 msgstr ""
 
-#: logview/src/logview-window.c:845
+#: logview/src/logview-window.c:846
 msgid "Manage filters"
 msgstr ""
 
-#: logview/src/logview-window.c:848
+#: logview/src/logview-window.c:849
 msgid "Open the help contents for the log viewer"
 msgstr "लॉग प्रदर्शक क'लेल मद्दति सामग्री खोलू"
 
-#: logview/src/logview-window.c:850 cafe-dictionary/src/gdict-applet.c:1186
+#: logview/src/logview-window.c:851 cafe-dictionary/src/gdict-applet.c:1177
 #: cafe-dictionary/src/gdict-window.c:1341
 msgid "_About"
 msgstr "क' संबंधमे (_A)"
 
-#: logview/src/logview-window.c:850
+#: logview/src/logview-window.c:851
 msgid "Show the about dialog for the log viewer"
 msgstr "लॉग प्रदर्शक क'लेल समाद क' संबंघमे देखाबू"
 
-#: logview/src/logview-window.c:855
+#: logview/src/logview-window.c:856
 msgid "_Statusbar"
 msgstr "स्थिति-पट्टी (_S)"
 
-#: logview/src/logview-window.c:855
+#: logview/src/logview-window.c:856
 msgid "Show Status Bar"
 msgstr "स्थिति-पट्टी देखाबू"
 
-#: logview/src/logview-window.c:857
+#: logview/src/logview-window.c:858
 msgid "Side _Pane"
 msgstr "किनार क' पट्टी (_P)"
 
-#: logview/src/logview-window.c:857
+#: logview/src/logview-window.c:858
 msgid "Show Side Pane"
 msgstr "साइडबार देखाबू"
 
-#: logview/src/logview-window.c:859
+#: logview/src/logview-window.c:860
 msgid "Show matches only"
 msgstr ""
 
-#: logview/src/logview-window.c:859
+#: logview/src/logview-window.c:860
 msgid "Only show lines that match one of the given filters"
 msgstr ""
 
-#: logview/src/logview-window.c:991
+#: logview/src/logview-window.c:992
 #, c-format
 msgid "Can't read from \"%s\""
 msgstr ""
 
-#: logview/src/logview-window.c:1416
+#: logview/src/logview-window.c:1417
 msgid "Version: "
 msgstr "संस्करण : "
 
-#: logview/src/logview-window.c:1522
+#: logview/src/logview-window.c:1525
 msgid "Could not open the following files:"
 msgstr ""
 
@@ -1959,15 +1919,7 @@ msgstr ""
 msgid "Check word definitions and spellings in an online dictionary"
 msgstr "ऑन लाइन शब्दकोशमे परिभाषा आ वर्तनी देखू"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:9
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:12
-msgid "accessories-dictionary"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-dictionary/data/cafe-dictionary.desktop.in.in:13
 msgid "CAFE;dictionary;applet;thesaurus;spelling;definitions;online;"
 msgstr ""
@@ -1979,8 +1931,8 @@ msgstr ""
 #: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:10
 msgid ""
 "CAFE Dictionary allows you to look up words in on-line dictionaries. It "
-"comes preconfigured with a list of Dict servers (RFC 2229), to which you can"
-" add your own sources, while you can select specific servers for a specific "
+"comes preconfigured with a list of Dict servers (RFC 2229), to which you can "
+"add your own sources, while you can select specific servers for a specific "
 "query."
 msgstr ""
 
@@ -2002,9 +1954,9 @@ msgid ""
 "dictionary source. An exclamation mark (\"!\") means that all the databases "
 "present in a dictionary source should be searched"
 msgstr ""
-"शब्दकोश श्रोतमेमे निजी डाटाबेस अथवामेटा-डाटाबेस क' प्रयोग क'लेल नाम. "
-"विस्मयादिबोधक चिह्न (\"!\") निर्दिष्ट करैत अछि जे शब्दकोश श्रोतमे उपस्थित "
-"सबहि डाटाबेसकेँ खोजल जएनाइ चाही."
+"शब्दकोश श्रोतमेमे निजी डाटाबेस अथवामेटा-डाटाबेस क' प्रयोग क'लेल नाम. विस्मयादिबोधक "
+"चिह्न (\"!\") निर्दिष्ट करैत अछि जे शब्दकोश श्रोतमे उपस्थित सबहि डाटाबेसकेँ खोजल जएनाइ "
+"चाही."
 
 #: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:11
 msgid "The default search strategy to use"
@@ -2015,8 +1967,8 @@ msgid ""
 "The name of the default search strategy to use on a dictionary source, if "
 "available. The default strategy is 'exact', that is match exact words."
 msgstr ""
-"शब्दकोष श्रोत पर प्रयोग क' लेल मूलभूत खोज रणनीति क' नाम, जँ उपलब्ध अछि "
-"मूलभूत रणनीति 'सटीक' अछि जे सटीक शब्द मिलाओल अछि."
+"शब्दकोष श्रोत पर प्रयोग क' लेल मूलभूत खोज रणनीति क' नाम, जँ उपलब्ध अछि मूलभूत रणनीति "
+"'सटीक' अछि जे सटीक शब्द मिलाओल अछि."
 
 #: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:16
 msgid "The font to be used when printing"
@@ -2033,8 +1985,7 @@ msgstr "प्रयुक्त शब्दकोश श्रोत क' न�
 #: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:22
 msgid ""
 "The name of the dictionary source used to retrieve the definitions of words."
-msgstr ""
-"प्रयुक्त शब्दकोश श्रोत क' नाम जकरा शब्द क' परिभाषा क' प्रयोग कएनाइ अछि."
+msgstr "प्रयुक्त शब्दकोश श्रोत क' नाम जकरा शब्द क' परिभाषा क' प्रयोग कएनाइ अछि."
 
 #: cafe-dictionary/data/thai.desktop.in:3
 msgid "Thai"
@@ -2098,8 +2049,7 @@ msgid ""
 "Unable to connect to the dictionary server at '%s:%d'. The server replied "
 "with code %d (server down)"
 msgstr ""
-"शब्दकोष सर्वरमे '%s:%d' पर जुड़बमे असमर्थ. सर्वरकेँ कोड %d (सर्वर डाउन) सँ "
-"उत्तर देल गेल ."
+"शब्दकोष सर्वरमे '%s:%d' पर जुड़बमे असमर्थ. सर्वरकेँ कोड %d (सर्वर डाउन) सँ उत्तर देल गेल ."
 
 #: cafe-dictionary/libgdict/gdict-client-context.c:1188
 #, c-format
@@ -2388,31 +2338,32 @@ msgstr ""
 msgid "Show GDict Options"
 msgstr ""
 
-#: cafe-dictionary/src/gdict-about.c:57 cafe-dictionary/src/gdict-applet.c:587
+#: cafe-dictionary/src/gdict-about.c:58 cafe-dictionary/src/gdict-applet.c:575
 msgid "Look up words in dictionaries"
 msgstr "शब्दकोशमे शब्द खोजू"
 
-#: cafe-dictionary/src/gdict-about.c:70
+#: cafe-dictionary/src/gdict-about.c:71
 msgid ""
-"You should have received a copy of the GNU General Public License along with"
-" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: cafe-dictionary/src/gdict-about.c:87 cafe-dictionary/src/gdict-app.c:364
+#: cafe-dictionary/src/gdict-about.c:88 cafe-dictionary/src/gdict-app.c:364
 #: cafe-dictionary/src/gdict-window.c:607
 #: cafe-dictionary/src/gdict-window.c:1891
 msgid "Dictionary"
 msgstr "शब्दकोश"
 
-#: cafe-dictionary/src/gdict-about.c:89
+#: cafe-dictionary/src/gdict-about.c:90
 msgid "About Dictionary"
 msgstr ""
 
-#: cafe-dictionary/src/gdict-about.c:90
+#: cafe-dictionary/src/gdict-about.c:91
 msgid ""
 "Copyright © 2005-2006 Emmanuele Bassi\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
 #. Translators: the first is the word found, the second is the
@@ -2502,113 +2453,113 @@ msgstr "शीर्षकहीन दस्तावेज"
 msgid "Error while writing to '%s'"
 msgstr "'%s'मे लिखबामे त्रुटि"
 
-#: cafe-dictionary/src/gdict-applet.c:360
+#: cafe-dictionary/src/gdict-applet.c:356
 msgid "Clear the definitions found"
 msgstr "प्राप्त परिभाषा साफ करू"
 
-#: cafe-dictionary/src/gdict-applet.c:362
+#: cafe-dictionary/src/gdict-applet.c:358
 msgid "Clear definition"
 msgstr "परिभाषा साफ करू"
 
-#: cafe-dictionary/src/gdict-applet.c:363
+#: cafe-dictionary/src/gdict-applet.c:359
 msgid "Clear the text of the definition"
 msgstr "परिभाषा पाठ साफ करू"
 
-#: cafe-dictionary/src/gdict-applet.c:375
+#: cafe-dictionary/src/gdict-applet.c:367
 msgid "Print the definitions found"
 msgstr "मोजुदा परिभाषा छापू"
 
-#: cafe-dictionary/src/gdict-applet.c:377
+#: cafe-dictionary/src/gdict-applet.c:369
 msgid "Print definition"
 msgstr "परिभाषा छापू"
 
-#: cafe-dictionary/src/gdict-applet.c:378
+#: cafe-dictionary/src/gdict-applet.c:370
 msgid "Print the text of the definition"
 msgstr "परिभाषा पाठ छापू"
 
-#: cafe-dictionary/src/gdict-applet.c:390
+#: cafe-dictionary/src/gdict-applet.c:378
 msgid "Save the definitions found"
 msgstr "भेटल परिभाषा सहेजू"
 
-#: cafe-dictionary/src/gdict-applet.c:392
+#: cafe-dictionary/src/gdict-applet.c:380
 msgid "Save definition"
 msgstr "परिभाषा सहेजू"
 
-#: cafe-dictionary/src/gdict-applet.c:393
+#: cafe-dictionary/src/gdict-applet.c:381
 msgid "Save the text of the definition to a file"
 msgstr "फाइलमे परिभाषा क' पाठ सहेजू"
 
-#: cafe-dictionary/src/gdict-applet.c:530
+#: cafe-dictionary/src/gdict-applet.c:518
 msgid "Click to view the dictionary window"
 msgstr "शब्दकोश विंडो देखब क'लेल क्लिक करू"
 
-#: cafe-dictionary/src/gdict-applet.c:532
+#: cafe-dictionary/src/gdict-applet.c:520
 msgid "Toggle dictionary window"
 msgstr "शब्दकोश विंडो टॉगल करू"
 
-#: cafe-dictionary/src/gdict-applet.c:533
+#: cafe-dictionary/src/gdict-applet.c:521
 msgid "Show or hide the definition window"
 msgstr "परिभाषा विंडो देखाबू अथवा नुकाबू"
 
-#: cafe-dictionary/src/gdict-applet.c:584
+#: cafe-dictionary/src/gdict-applet.c:572
 msgid "Type the word you want to look up"
 msgstr "शब्द टाइप करू जकरा अहाँ देखनाइ चाहैत अछि"
 
-#: cafe-dictionary/src/gdict-applet.c:586
+#: cafe-dictionary/src/gdict-applet.c:574
 msgid "Dictionary entry"
 msgstr "शब्दकोश प्रविष्टि"
 
-#: cafe-dictionary/src/gdict-applet.c:715
+#: cafe-dictionary/src/gdict-applet.c:703
 #: cafe-dictionary/src/gdict-window.c:1104
 msgid "Dictionary Preferences"
 msgstr "शब्दकोश वरीयतासभ "
 
-#: cafe-dictionary/src/gdict-applet.c:739
+#: cafe-dictionary/src/gdict-applet.c:727
 #: cafe-dictionary/src/gdict-pref-dialog.c:498
 #: cafe-dictionary/src/gdict-source-dialog.c:478
 #: cafe-dictionary/src/gdict-window.c:1251
 msgid "There was an error while displaying help"
 msgstr "मद्दति देखाबैमे कोनो त्रुटि भेल."
 
-#: cafe-dictionary/src/gdict-applet.c:878
+#: cafe-dictionary/src/gdict-applet.c:866
 #: cafe-dictionary/src/gdict-window.c:522
 #, c-format
 msgid "No dictionary source available with name '%s'"
 msgstr "'%s' नाम क' सँग कोनो शब्दकोष श्रोत उपलब्ध नहि"
 
-#: cafe-dictionary/src/gdict-applet.c:882
+#: cafe-dictionary/src/gdict-applet.c:870
 #: cafe-dictionary/src/gdict-window.c:526
 msgid "Unable to find dictionary source"
 msgstr "शब्दकोष श्रोत पाबैमे असमर्थ"
 
-#: cafe-dictionary/src/gdict-applet.c:898
+#: cafe-dictionary/src/gdict-applet.c:886
 #: cafe-dictionary/src/gdict-window.c:542
 #, c-format
 msgid "No context available for source '%s'"
 msgstr "'%s' क' लेल कोनो संदर्भ उपलब्ध नहि"
 
-#: cafe-dictionary/src/gdict-applet.c:902
+#: cafe-dictionary/src/gdict-applet.c:890
 #: cafe-dictionary/src/gdict-window.c:546
 msgid "Unable to create a context"
 msgstr "संदर्भ बनाबैमे असमर्थ"
 
-#: cafe-dictionary/src/gdict-applet.c:1168
+#: cafe-dictionary/src/gdict-applet.c:1159
 msgid "_Look Up Selected Text"
 msgstr "चयनित पाठ देखू (_L)"
 
-#: cafe-dictionary/src/gdict-applet.c:1171
+#: cafe-dictionary/src/gdict-applet.c:1162
 msgid "Cl_ear"
 msgstr "साफ करू (_e)"
 
-#: cafe-dictionary/src/gdict-applet.c:1174
+#: cafe-dictionary/src/gdict-applet.c:1165
 msgid "_Print"
 msgstr "छापू (_P)"
 
-#: cafe-dictionary/src/gdict-applet.c:1177
+#: cafe-dictionary/src/gdict-applet.c:1168
 msgid "_Save"
 msgstr "सहेजू (_S)"
 
-#: cafe-dictionary/src/gdict-applet.c:1180
+#: cafe-dictionary/src/gdict-applet.c:1171
 msgid "Preferences"
 msgstr "वरीयतासभ"
 
@@ -2730,10 +2681,6 @@ msgstr "छापू... (_P)"
 #: cafe-dictionary/src/gdict-window.c:1299
 msgid "Print this document"
 msgstr "एहि दस्ताबेजकेँ छापू"
-
-#: cafe-dictionary/src/gdict-window.c:1308
-msgid "_Find"
-msgstr ""
 
 #: cafe-dictionary/src/gdict-window.c:1309
 msgid "Find a word or phrase in the document"
@@ -2913,12 +2860,6 @@ msgstr ""
 msgid "Attach and mount one or more disk image files"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:8
-msgid "drive-removable-media"
-msgstr ""
-
 #: cafe-disk-image-mounter/src/main.c:57
 msgid "An error occurred"
 msgstr "एकटा त्रुटि आएल"
@@ -3007,14 +2948,7 @@ msgstr "स्क्रीनशॉट लिअ'"
 msgid "Save images of your desktop or individual windows"
 msgstr "अपन डेस्कटाप अथवा निजी विंडो क' चित्रकेँ सहेजू"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:9
-msgid "applets-screenshooter"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-screenshot/data/cafe-screenshot.desktop.in:13
 msgid "CAFE;screenshot;snapshot;desktop;window;image;"
 msgstr ""
@@ -3206,8 +3140,8 @@ msgstr "स्क्रीन क' एकटा चित्र लिअ'"
 
 #: cafe-screenshot/src/cafe-screenshot.c:1355
 msgid ""
-"Conflicting options: --clipboard and --interactive should not be used at the"
-" same time.\n"
+"Conflicting options: --clipboard and --interactive should not be used at the "
+"same time.\n"
 msgstr ""
 
 #: cafe-screenshot/src/cafe-screenshot.c:1361
@@ -3269,3 +3203,12 @@ msgstr ""
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr ""
+
+#~ msgid "Zoom _In"
+#~ msgstr "पैघ आकार (_I)"
+
+#~ msgid "Zoom _Out"
+#~ msgstr "छोट आकार (_O)"
+
+#~ msgid "_Normal Size"
+#~ msgstr "सामान्य आकार (_N)"

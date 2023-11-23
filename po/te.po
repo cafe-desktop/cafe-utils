@@ -2,24 +2,24 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-utils package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # parijathakumar <parijathakumar@gmail.com>, 2018
 # ప్రవీణ్ ఇళ్ళ <mail2ipn@gmail.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-utils 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2020-01-13 16:47+0100\n"
+"POT-Creation-Date: 2023-11-20 09:32+0100\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Telugu (https://www.transifex.com/cafe/teams/13566/te/)\n"
+"Language: te\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: te\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
@@ -31,14 +31,7 @@ msgstr ""
 msgid "Check folder sizes and available disk space"
 msgstr "ఖని ఖాళీ లభ్యత మరియు సంచయము ఖాళీ లభ్యతలను తనిఖీచేయుము"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:8
-msgid "cafe-disk-usage-analyzer"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:14
 msgid "CAFE;check;disk;usage;analyze;size;space;"
 msgstr ""
@@ -75,7 +68,7 @@ msgstr "సంచయంను సంశోధించు(_o)..."
 msgid "S_can Remote Folder..."
 msgstr "సూదూర సంచయంను సంశోధించు(_c)..."
 
-#: baobab/data/baobab-main-window.ui:74 logview/src/logview-window.c:819
+#: baobab/data/baobab-main-window.ui:74 logview/src/logview-window.c:820
 #: cafe-dictionary/src/gdict-window.c:1286
 msgid "_Edit"
 msgstr "సరికూర్చు (_E)"
@@ -88,7 +81,7 @@ msgstr "అన్నింటిని పొడగింపు(_E)"
 msgid "_Collapse All"
 msgstr "అన్నింటిని ముకుళించు(_C)"
 
-#: baobab/data/baobab-main-window.ui:101 logview/src/logview-window.c:820
+#: baobab/data/baobab-main-window.ui:101 logview/src/logview-window.c:821
 #: cafe-dictionary/src/gdict-window.c:1287
 msgid "_View"
 msgstr "చూడటం (_V)"
@@ -105,19 +98,19 @@ msgstr "సుస్థితి పట్టీ(_a)"
 msgid "All_ocated Space"
 msgstr "ఖళీ నిర్ణయించు(_o)"
 
-#: baobab/data/baobab-main-window.ui:129 logview/src/logview-window.c:822
-#: cafe-dictionary/src/gdict-applet.c:1183
+#: baobab/data/baobab-main-window.ui:129 logview/src/logview-window.c:823
+#: cafe-dictionary/src/gdict-applet.c:1174
 #: cafe-dictionary/src/gdict-window.c:1289
 msgid "_Help"
 msgstr "సహాయం (_H)"
 
-#: baobab/data/baobab-main-window.ui:136 logview/src/logview-window.c:848
+#: baobab/data/baobab-main-window.ui:136 logview/src/logview-window.c:849
 #: cafe-dictionary/src/gdict-window.c:1339
 msgid "_Contents"
 msgstr "సారములు (_C)"
 
-#: baobab/data/baobab-main-window.ui:183 baobab/src/baobab.c:1236
-#: baobab/src/callbacks.c:107
+#: baobab/data/baobab-main-window.ui:183 baobab/src/baobab.c:1238
+#: baobab/src/callbacks.c:108
 msgid "Disk Usage Analyzer"
 msgstr "ఖని వినిమయ విశ్లేషకి"
 
@@ -215,8 +208,8 @@ msgstr ""
 
 #: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:10
 msgid ""
-"As its name implies, Disk Usage Analyzer is a graphical utility that you can"
-" use to view and monitor your disk usage and folder structure. It displays "
+"As its name implies, Disk Usage Analyzer is a graphical utility that you can "
+"use to view and monitor your disk usage and folder structure. It displays "
 "summary information in ring or treemap charts."
 msgstr ""
 
@@ -227,98 +220,98 @@ msgid ""
 "changes to the home directory and warn the user if a file is added/removed."
 msgstr ""
 
-#: baobab/src/baobab.c:137 baobab/src/baobab.c:357
+#: baobab/src/baobab.c:139 baobab/src/baobab.c:359
 msgid "Scanning..."
 msgstr "సంశోధించుచున్నది..."
 
-#: baobab/src/baobab.c:183
+#: baobab/src/baobab.c:185
 msgid "Total filesystem capacity:"
 msgstr "మొత్తం దస్త్ర వ్యవస్థ సామర్థ్యము:"
 
-#: baobab/src/baobab.c:184
+#: baobab/src/baobab.c:186
 msgid "used:"
 msgstr "వాడబడిన:"
 
-#: baobab/src/baobab.c:185
+#: baobab/src/baobab.c:187
 msgid "available:"
 msgstr "లభించు:"
 
-#: baobab/src/baobab.c:242 baobab/src/baobab.c:299 baobab/src/callbacks.c:272
+#: baobab/src/baobab.c:244 baobab/src/baobab.c:301 baobab/src/callbacks.c:274
 msgid "Calculating percentage bars..."
 msgstr "శాతం పట్టీలను గణించుచున్నది..."
 
-#: baobab/src/baobab.c:253 baobab/src/baobab.c:1300 baobab/src/callbacks.c:276
+#: baobab/src/baobab.c:255 baobab/src/baobab.c:1305 baobab/src/callbacks.c:278
 msgid "Ready"
 msgstr "సన్నద్దము"
 
-#: baobab/src/baobab.c:391
+#: baobab/src/baobab.c:393
 msgid "Total filesystem capacity"
 msgstr "మొత్తం దస్త్ర వ్యవస్థ సామర్థ్యము"
 
-#: baobab/src/baobab.c:415
+#: baobab/src/baobab.c:417
 msgid "Total filesystem usage"
 msgstr "మొత్తం దస్త్ర వ్యవస్థ వినిమయం"
 
-#: baobab/src/baobab.c:457
+#: baobab/src/baobab.c:459
 msgid "contains hardlinks for:"
 msgstr "ప్రధాన జోడిల కొరకు కలిగివున్నది:"
 
-#: baobab/src/baobab.c:466
+#: baobab/src/baobab.c:468
 #, c-format
 msgid "%5d item"
 msgid_plural "%5d items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: baobab/src/baobab.c:592
+#: baobab/src/baobab.c:594
 msgid "Could not initialize monitoring"
 msgstr "పర్యవేక్షణను సిద్దపరచలేక పోయింది"
 
-#: baobab/src/baobab.c:593
+#: baobab/src/baobab.c:595
 msgid "Changes to your home folder will not be monitored."
 msgstr "మీ నివాస సంచయమునకు మార్పులు భోధపడుతుందా."
 
-#: baobab/src/baobab.c:914
+#: baobab/src/baobab.c:916
 msgid "Move to parent folder"
 msgstr "మాత్రుక సంచయమునకు కదుల్చుము"
 
-#: baobab/src/baobab.c:918
+#: baobab/src/baobab.c:920
 msgid "Zoom in"
 msgstr "జూమ్ లోపలికి"
 
-#: baobab/src/baobab.c:922
+#: baobab/src/baobab.c:924
 msgid "Zoom out"
 msgstr "జూమ్ బయటకి"
 
-#: baobab/src/baobab.c:926
+#: baobab/src/baobab.c:928
 msgid "Save screenshot"
 msgstr ""
 
-#: baobab/src/baobab.c:1112
+#: baobab/src/baobab.c:1114
 msgid "View as Rings Chart"
 msgstr "రింగుల చార్టువలె దర్శించు"
 
-#: baobab/src/baobab.c:1114
+#: baobab/src/baobab.c:1116
 msgid "View as Treemap Chart"
 msgstr "ట్రీమాప్ చార్టువలె దర్శించు"
 
-#: baobab/src/baobab.c:1225
+#: baobab/src/baobab.c:1227
 msgid "Show version"
 msgstr "వర్షన్ చూపుము"
 
-#: baobab/src/baobab.c:1226
+#: baobab/src/baobab.c:1228
 msgid "[DIRECTORY]"
 msgstr "[DIRECTORY]"
 
-#: baobab/src/baobab.c:1256
+#: baobab/src/baobab.c:1258
 msgid "Too many arguments. Only one directory can be specified."
 msgstr "చాలా యెక్కువ ఆర్గుమెంట్లు. వొక డెరెక్టరీ మాత్రమే తెలుపగలము."
 
-#: baobab/src/baobab.c:1273
+#: baobab/src/baobab.c:1278
 msgid "Could not detect any mount point."
 msgstr "ఏ మరల్పు బిందువును గుర్తించలేక పోయింది."
 
-#: baobab/src/baobab.c:1275
+#: baobab/src/baobab.c:1280
 msgid "Without mount points disk usage cannot be analyzed."
 msgstr "మరల్పు బిందువులు లేకుండా డిస్కు వినియోగము విశ్లేషించలేము."
 
@@ -417,8 +410,7 @@ msgstr "రక్షిత WebDAV (HTTPS)"
 
 #: baobab/src/baobab-remote-connect-dialog.c:244
 msgid "Cannot Connect to Server. You must enter a name for the server."
-msgstr ""
-"సేవికకు అనుసంధానము కాలేము. మీరు సేవిక కొరకు వొక నామమును ప్రవేశపెట్టాలి."
+msgstr "సేవికకు అనుసంధానము కాలేము. మీరు సేవిక కొరకు వొక నామమును ప్రవేశపెట్టాలి."
 
 #: baobab/src/baobab-remote-connect-dialog.c:247
 msgid "Please enter a name and try again."
@@ -477,15 +469,13 @@ msgstr "మీ నివాస సంచయంను మరలా సంశో�
 msgid ""
 "The content of your home folder has changed. Select rescan to update the "
 "disk usage details."
-msgstr ""
-"మీ యొక్క నివాస సంచయ సారము మార్చబడినది. ఖని వినిమయ వివరములు మరలా సంశోధన "
-"ఎంచుకొనుము."
+msgstr "మీ యొక్క నివాస సంచయ సారము మార్చబడినది. ఖని వినిమయ వివరములు మరలా సంశోధన ఎంచుకొనుము."
 
 #: baobab/src/baobab-treeview.c:84
 msgid "_Rescan"
 msgstr "మరలా సంశోధించు(_R)"
 
-#: baobab/src/baobab-treeview.c:222 gsearchtool/src/gsearchtool.c:2436
+#: baobab/src/baobab-treeview.c:222 gsearchtool/src/gsearchtool.c:2428
 msgid "Folder"
 msgstr "సంచయము"
 
@@ -493,7 +483,7 @@ msgstr "సంచయము"
 msgid "Usage"
 msgstr "వినిమయం"
 
-#: baobab/src/baobab-treeview.c:258 gsearchtool/src/gsearchtool.c:2449
+#: baobab/src/baobab-treeview.c:258 gsearchtool/src/gsearchtool.c:2441
 msgid "Size"
 msgstr "పరిమాణం"
 
@@ -526,7 +516,7 @@ msgstr "ఖని వినిమయమును విశ్లేషించ�
 msgid "_Open Folder"
 msgstr "సంచయము తెరువుము(_O)"
 
-#: baobab/src/baobab-utils.c:368 gsearchtool/src/gsearchtool-callbacks.c:1216
+#: baobab/src/baobab-utils.c:368 gsearchtool/src/gsearchtool-callbacks.c:1204
 msgid "Mo_ve to Trash"
 msgstr "చెత్తకుండి కి స్థానాన్ని మార్చుము(_v)"
 
@@ -557,67 +547,68 @@ msgstr ": %s"
 msgid "There was an error displaying help."
 msgstr "సహాయము ప్రదర్శించుటలో ఒక దోషము కలదు."
 
-#: baobab/src/callbacks.c:77 logview/src/logview-about.h:45
-#: cafe-dictionary/src/gdict-about.c:52
+#: baobab/src/callbacks.c:78 logview/src/logview-about.h:46
+#: cafe-dictionary/src/gdict-about.c:53
 msgid "CAFE Documentation Team"
 msgstr ""
 
-#: baobab/src/callbacks.c:82 logview/src/logview-about.h:50
-#: cafe-dictionary/src/gdict-about.c:60
+#: baobab/src/callbacks.c:83 logview/src/logview-about.h:51
+#: cafe-dictionary/src/gdict-about.c:61
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
-"ఈ ప్రోగ్రామ్ ఉచిత సాఫ్టువేరు; మీరు దానిని ఉచిత సాఫ్టువేరు సంస్థ ద్వారా "
-"ప్రచురించబడిన GNU జనరల్ పబ్లిక్ లైసెన్సు వర్షన్ 2, లేదా (మీ ఐచ్చికము వద్ద) "
-"దాని తర్వాతి వర్షన్‌కు లోబడి పునఃపంపిణి చేయవచ్చును మరియు/లేదా సవరించవచ్చును;"
+"ఈ ప్రోగ్రామ్ ఉచిత సాఫ్టువేరు; మీరు దానిని ఉచిత సాఫ్టువేరు సంస్థ ద్వారా ప్రచురించబడిన GNU జనరల్ పబ్లిక్ "
+"లైసెన్సు వర్షన్ 2, లేదా (మీ ఐచ్చికము వద్ద) దాని తర్వాతి వర్షన్‌కు లోబడి పునఃపంపిణి చేయవచ్చును మరియు/లేదా "
+"సవరించవచ్చును;"
 
-#: baobab/src/callbacks.c:87 logview/src/logview-about.h:54
-#: cafe-dictionary/src/gdict-about.c:65
+#: baobab/src/callbacks.c:88 logview/src/logview-about.h:55
+#: cafe-dictionary/src/gdict-about.c:66
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
 msgstr ""
-"ఈ ప్రోగ్రామ్ అది వుపయోగపడుతుంది అనే వుద్దేశ్యముతో పంపిణి చేయబడింది, అయితే "
-"ఎటువంటి హామి లేదు; కనీసం వ్యాపారపరంగా లేదా ఫలానా ప్రయోజనం కొరకు ప్రత్యేకించి"
-" అనికూడా లేదు.  మరింత సమాచారము కొరకు GNU జనరల్ పబ్లిక్ లైసెన్సును చూడండి."
+"ఈ ప్రోగ్రామ్ అది వుపయోగపడుతుంది అనే వుద్దేశ్యముతో పంపిణి చేయబడింది, అయితే ఎటువంటి హామి లేదు; కనీసం "
+"వ్యాపారపరంగా లేదా ఫలానా ప్రయోజనం కొరకు ప్రత్యేకించి అనికూడా లేదు.  మరింత సమాచారము కొరకు GNU జనరల్ "
+"పబ్లిక్ లైసెన్సును చూడండి."
 
-#: baobab/src/callbacks.c:92 logview/src/logview-about.h:58
+#: baobab/src/callbacks.c:93 logview/src/logview-about.h:59
 msgid ""
-"You should have received a copy of the GNU General Public License along with"
-" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA."
 msgstr ""
 
-#: baobab/src/callbacks.c:109
+#: baobab/src/callbacks.c:110
 msgid "About Disk Usage Analyzer"
 msgstr ""
 
-#: baobab/src/callbacks.c:110
+#: baobab/src/callbacks.c:111
 msgid "A graphical tool to analyze disk usage."
 msgstr "ఖని వినిమయ విశ్లేషణకు ఒక చిత్రరూప పనిముట్టు."
 
-#: baobab/src/callbacks.c:111
+#: baobab/src/callbacks.c:112
 msgid ""
 "Copyright © 2005-2010 Fabio Marzocca\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
-#: baobab/src/callbacks.c:117 logview/src/logview-about.h:64
-#: cafe-dictionary/src/gdict-about.c:56
+#: baobab/src/callbacks.c:119 logview/src/logview-about.h:65
+#: cafe-dictionary/src/gdict-about.c:57
 msgid "translator-credits"
 msgstr "Praveen Illa <mail2ipn@gmail.com>, 2014"
 
-#: baobab/src/callbacks.c:215 gsearchtool/src/gsearchtool-callbacks.c:509
-#: gsearchtool/src/gsearchtool-callbacks.c:855
+#: baobab/src/callbacks.c:217 gsearchtool/src/gsearchtool-callbacks.c:505
+#: gsearchtool/src/gsearchtool-callbacks.c:843
 msgid "The document does not exist."
 msgstr "పత్రం కలిగిలేదు."
 
-#: baobab/src/callbacks.c:296
+#: baobab/src/callbacks.c:298
 msgid "The folder does not exist."
 msgstr "సంచయము కలిగిలేదు."
 
@@ -634,24 +625,16 @@ msgstr ""
 msgid ""
 "CAFE Search Tool is a simple but powerful utility that allows you to search "
 "for files and folders on any mounted file system. Its interface gives you "
-"instant access to a wide variety of parameters for each search, such as text"
-" contained within a file, ownership, date of modification, file size, folder"
-" exclusion, etc.."
+"instant access to a wide variety of parameters for each search, such as text "
+"contained within a file, ownership, date of modification, file size, folder "
+"exclusion, etc.."
 msgstr ""
 
 #: gsearchtool/data/cafe-search-tool.desktop.in:4
 msgid "Locate documents and folders on this computer by name or content"
-msgstr ""
-"నామము లేదా సారముల ద్వారా పత్రములను మరియు సంచయాలను ఈ కంప్యూటర్ లో గుర్తించండి"
+msgstr "నామము లేదా సారముల ద్వారా పత్రములను మరియు సంచయాలను ఈ కంప్యూటర్ లో గుర్తించండి"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gsearchtool/data/cafe-search-tool.desktop.in:7
-msgid "system-search"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: gsearchtool/data/cafe-search-tool.desktop.in:13
 msgid ""
 "CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
@@ -678,8 +661,8 @@ msgid ""
 "This key determines if the search tool disables the use of the locate "
 "command when performing simple file name searches."
 msgstr ""
-"సులభమైన దస్త్రనామ శోధన చేసినప్పుడు శోధన సాధనం గుర్తించు ఆదేశం ఉపయోగంను "
-"అచేతనం చేస్తే ఈ మీట నిశ్చయించబడుతుంది."
+"సులభమైన దస్త్రనామ శోధన చేసినప్పుడు శోధన సాధనం గుర్తించు ఆదేశం ఉపయోగంను అచేతనం చేస్తే ఈ మీట "
+"నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:19
 msgid "Quick Search Excluded Paths"
@@ -687,13 +670,12 @@ msgstr "తొందరగా వెతుకుట త్రోవలను బ
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:20
 msgid ""
-"This key defines the paths the search tool will exclude from a quick search."
-" The wildcards '*' and '?' are supported. The default values are /mnt/*, "
-"/media/*, /dev/*, /tmp/*, /proc/*, and /var/*."
+"This key defines the paths the search tool will exclude from a quick search. "
+"The wildcards '*' and '?' are supported. The default values are /mnt/*, /"
+"media/*, /dev/*, /tmp/*, /proc/*, and /var/*."
 msgstr ""
-"ఈ కీ శోధన సాధనం త్వరిత శోధన నుండి బహిష్కరించు త్రోవలను నిర్వచిస్తుంది. "
-"wildcards '*' మరియు '?' మద్దతునిస్తాయి.అప్రమేయ విలువలు /mnt/*, /media/*, "
-"/dev/*, /tmp/*, /proc/*, and /var/*."
+"ఈ కీ శోధన సాధనం త్వరిత శోధన నుండి బహిష్కరించు త్రోవలను నిర్వచిస్తుంది. wildcards '*' మరియు '?' "
+"మద్దతునిస్తాయి.అప్రమేయ విలువలు /mnt/*, /media/*, /dev/*, /tmp/*, /proc/*, and /var/*."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:24
 msgid "Disable Quick Search Second Scan"
@@ -704,8 +686,7 @@ msgid ""
 "This key determines if the search tool disables the use of the find command "
 "after performing a quick search."
 msgstr ""
-"త్వరిత శోధన జరిపినతర్వాత శోధన సాధనం వెతుకు ఆదేశం ఉపయోగాన్ని అచేతనం చేస్తే ఈ "
-"మీట నిశ్చయించబడుతుంది."
+"త్వరిత శోధన జరిపినతర్వాత శోధన సాధనం వెతుకు ఆదేశం ఉపయోగాన్ని అచేతనం చేస్తే ఈ మీట నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:29
 msgid "Quick Search Second Scan Excluded Paths"
@@ -716,13 +697,13 @@ msgid ""
 "This key defines the paths the search tool will exclude from a second scan "
 "when performing a quick search. The second scan uses the find command to "
 "search for files. The purpose of the second scan is to find files that have "
-"not been indexed. The wildcards '*' and '?' are supported. The default value"
-" is /."
+"not been indexed. The wildcards '*' and '?' are supported. The default value "
+"is /."
 msgstr ""
-"శోధన సాధనం త్వరిత శోధనను చేస్తున్నప్పుడు రెండవ సంశోధన నుండి బహిష్కరించు "
-"త్రోవలను ఈ మీట నిర్వచిస్తుంది.దస్త్రములను శోధించుటకు రెండవ సంశోధన వెతుకు "
-"ఆదేశాన్ని ఉపయోగిస్తుంది.రెండవ సంశోధన యొక్క ఉపయోగార్ధం విషయసూచిక చేయబడనటువంటి"
-" దస్త్రంలను వెతుకుట.wildcards '*' మరియు '?' మద్దుతునిస్తాయి.అప్రమేయ విలువ /."
+"శోధన సాధనం త్వరిత శోధనను చేస్తున్నప్పుడు రెండవ సంశోధన నుండి బహిష్కరించు త్రోవలను ఈ మీట "
+"నిర్వచిస్తుంది.దస్త్రములను శోధించుటకు రెండవ సంశోధన వెతుకు ఆదేశాన్ని ఉపయోగిస్తుంది.రెండవ సంశోధన యొక్క "
+"ఉపయోగార్ధం విషయసూచిక చేయబడనటువంటి దస్త్రంలను వెతుకుట.wildcards '*' మరియు '?' మద్దుతునిస్తాయి."
+"అప్రమేయ విలువ /."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:34
 msgid "Search Result Columns Order"
@@ -733,8 +714,7 @@ msgid ""
 "This key defines the order of the columns in the search results. This key "
 "should not be modified by the user."
 msgstr ""
-"ఈ కీ శోధించిన ఫలితాలలోని నిలువువరుసల క్రమాన్ని నిర్వచిస్తుంది.ఈ కీ "
-"వినియోగదారుని చేత మార్చబడకూడదు."
+"ఈ కీ శోధించిన ఫలితాలలోని నిలువువరుసల క్రమాన్ని నిర్వచిస్తుంది.ఈ కీ వినియోగదారుని చేత మార్చబడకూడదు."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:39
 msgid "Default Window Width"
@@ -742,13 +722,13 @@ msgstr "అప్రమేయ గవాక్ష పొడవు"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:40
 msgid ""
-"This key defines the window width, and it's used to remember the size of the"
-" search tool between sessions. Setting it to -1 will make the search tool "
-"use the default width."
+"This key defines the window width, and it's used to remember the size of the "
+"search tool between sessions. Setting it to -1 will make the search tool use "
+"the default width."
 msgstr ""
-"ఈ మీట గవాక్షం వెడల్పును నిర్వచిస్తుంది మరియు సెషన్సు మద్య శోధన సాధనం యొక్క "
-"పరిమాణం ను గుర్తుంచుకొనుటకు ఉపయోగించబడుతుంది.-1 కు అమర్చుట శోధన సాధనంను "
-"అప్రమేయ వెడల్పును ఉపయోగించుకొనునట్లు చేస్తుంది."
+"ఈ మీట గవాక్షం వెడల్పును నిర్వచిస్తుంది మరియు సెషన్సు మద్య శోధన సాధనం యొక్క పరిమాణం ను "
+"గుర్తుంచుకొనుటకు ఉపయోగించబడుతుంది.-1 కు అమర్చుట శోధన సాధనంను అప్రమేయ వెడల్పును "
+"ఉపయోగించుకొనునట్లు చేస్తుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:44
 msgid "Default Window Height"
@@ -757,12 +737,12 @@ msgstr "అప్రమేయ గవాక్షం ఎత్తు"
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:45
 msgid ""
 "This key defines the window height, and it's used to remember the size of "
-"the search tool between sessions. Setting it to -1 will make the search tool"
-" use the default height."
+"the search tool between sessions. Setting it to -1 will make the search tool "
+"use the default height."
 msgstr ""
-"ఈ మీట గవాక్షం ఎత్తును నిర్వచిస్తుంది మరియు సెషన్సు మద్య శోధన సాధనం యొక్క "
-"పరిమాణం ను గుర్తుంచుకొనుటకు ఉపయోగించబడుతుంది.-1 కు అమర్చుట శోధన సాధనంను "
-"అప్రమేయ ఎత్తును ఉపయోగించుకొనునట్లు చేస్తుంది."
+"ఈ మీట గవాక్షం ఎత్తును నిర్వచిస్తుంది మరియు సెషన్సు మద్య శోధన సాధనం యొక్క పరిమాణం ను "
+"గుర్తుంచుకొనుటకు ఉపయోగించబడుతుంది.-1 కు అమర్చుట శోధన సాధనంను అప్రమేయ ఎత్తును "
+"ఉపయోగించుకొనునట్లు చేస్తుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:49
 msgid "Default Window Maximized"
@@ -771,9 +751,7 @@ msgstr "అప్రమేయ గవాక్షం పెద్దదిచే�
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:50
 msgid ""
 "This key determines if the search tool window starts in a maximized state."
-msgstr ""
-"శోధన సాధనం గవాక్షం పెద్దదైన స్థితి లో ప్రారంభించబడితే ఈ మీట "
-"నిశ్చయించబడుతుంది."
+msgstr "శోధన సాధనం గవాక్షం పెద్దదైన స్థితి లో ప్రారంభించబడితే ఈ మీట నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:54
 msgid "Look in Folder"
@@ -788,112 +766,112 @@ msgid ""
 "This key determines if the \"Contains the text\" search option is selected "
 "when the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"పాఠము కలిగిఉన్న\" శోధన ఇచ్ఛాపూర్వకం "
-"ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"పాఠము కలిగిఉన్న\" శోధన ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట "
+"నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:66
 msgid ""
 "This key determines if the \"Date modified less than\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"దీనికి తక్కువగా మార్చబడిన తారీఖు\" శోధన "
-"ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"దీనికి తక్కువగా మార్చబడిన తారీఖు\" శోధన ఇచ్ఛాపూర్వకం "
+"ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:70
 msgid ""
 "This key determines if the \"Date modified more than\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"దీనికి ఎక్కువగా మార్చబడిన తారీఖు\" శోధన "
-"ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"దీనికి ఎక్కువగా మార్చబడిన తారీఖు\" శోధన ఇచ్ఛాపూర్వకం "
+"ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:74
 msgid ""
 "This key determines if the \"Size at least\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"తక్కువలో ఉన్న పరిమాణం\" శోధన ఇచ్ఛాపూర్వకం "
-"ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"తక్కువలో ఉన్న పరిమాణం\" శోధన ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట "
+"నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:78
 msgid ""
 "This key determines if the \"Size at most\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"ఎక్కువలో ఉన్న పరిమాణం\" శోధన ఇచ్ఛాపూర్వకం "
-"ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"ఎక్కువలో ఉన్న పరిమాణం\" శోధన ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట "
+"నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:82
 msgid ""
 "This key determines if the \"File is empty\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"దస్త్రం ఖాళీగా ఉంది\" శోధన ఇచ్ఛాపూర్వకం "
-"ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"దస్త్రం ఖాళీగా ఉంది\" శోధన ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట "
+"నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:86
 msgid ""
 "This key determines if the \"Owned by user\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"ఈ వినియోగదారునికి స్వకీయమైన\" శోధన "
-"ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"ఈ వినియోగదారునికి స్వకీయమైన\" శోధన ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ "
+"మీట నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:90
 msgid ""
-"This key determines if the \"Owned by group\" search option is selected when"
-" the search tool is started."
+"This key determines if the \"Owned by group\" search option is selected when "
+"the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"ఈ సమూహానికి స్వకీయమైన \" శోధన ఇచ్ఛాపూర్వకం"
-" ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"ఈ సమూహానికి స్వకీయమైన \" శోధన ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట "
+"నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:94
 msgid ""
 "This key determines if the \"Owner is unrecognized\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"యజమాని గుర్తించబడుటలేదు\" శోధన "
-"ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"యజమాని గుర్తించబడుటలేదు\" శోధన ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ "
+"మీట నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:98
 msgid ""
 "This key determines if the \"Name does not contain\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"ఇది కలిగిలేని నామము\" శోధన ఇచ్ఛాపూర్వకం "
-"ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"ఇది కలిగిలేని నామము\" శోధన ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట "
+"నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:102
 msgid ""
-"This key determines if the \"Name matches regular expression\" search option"
-" is selected when the search tool is started."
+"This key determines if the \"Name matches regular expression\" search option "
+"is selected when the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"ఈ సాదారణ ఎక్సప్రెషన్ కు సరితూగిన నామము\" "
-"శోధన ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"ఈ సాదారణ ఎక్సప్రెషన్ కు సరితూగిన నామము\" శోధన ఇచ్ఛాపూర్వకం "
+"ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:106
 msgid ""
 "This key determines if the \"Show hidden files and folders\" search option "
 "is selected when the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"దాచబడిన దస్త్రములను మరియు సంచయాలను "
-"చూపుము\" శోధన ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"దాచబడిన దస్త్రములను మరియు సంచయాలను చూపుము\" శోధన "
+"ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:110
 msgid ""
 "This key determines if the \"Follow symbolic links\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"చిహ్నపూరిత జోడీలను అనుసరించు\" శోధన "
-"ఇచ్ఛాపూర్వకం ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"చిహ్నపూరిత జోడీలను అనుసరించు\" శోధన ఇచ్ఛాపూర్వకం "
+"ఎంపికకాబడి‌వుంటే ఈ మీట నిశ్చయించబడుతుంది."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:114
 msgid ""
 "This key determines if the \"Exclude other filesystems\" search option is "
 "selected when the search tool is started."
 msgstr ""
-"శోధన సాధనం ప్రారంభించబడినప్పుడు \"ఇతర దస్త్రసిస్టమ్సును తీసివేయి\" శోధన "
-"ఇచ్ఛాపూర్వకం ఎంపికకాబడాలేమో ఈ మీట నిశ్చయించుతుంది."
+"శోధన సాధనం ప్రారంభించబడినప్పుడు \"ఇతర దస్త్రసిస్టమ్సును తీసివేయి\" శోధన ఇచ్ఛాపూర్వకం ఎంపికకాబడాలేమో ఈ "
+"మీట నిశ్చయించుతుంది."
 
 #: gsearchtool/libeggsmclient/eggdesktopfile.c:165
 msgid "File is not a valid .desktop file"
@@ -1069,7 +1047,7 @@ msgid "Searching..."
 msgstr "వెతుకుచున్నది..."
 
 #: gsearchtool/src/gsearchtool.c:511 gsearchtool/src/gsearchtool.c:1031
-#: gsearchtool/src/gsearchtool.c:3057
+#: gsearchtool/src/gsearchtool.c:3031
 msgid "Search for Files"
 msgstr "దస్త్రముల కొరకు వెతుకు"
 
@@ -1114,8 +1092,7 @@ msgstr "పాఠం అమర్చుట యొక్క \"సంచయము�
 #: gsearchtool/src/gsearchtool.c:1310
 msgid "Sort files by one of the following: name, folder, size, type, or date"
 msgstr ""
-"క్రింది ఇవ్వబడిన ఒక దాని ద్వారా దస్త్రములు చక్కదిద్దు: నామము, సంచయము, "
-"పరిమాణం, రకము, లేదా తేది"
+"క్రింది ఇవ్వబడిన ఒక దాని ద్వారా దస్త్రములు చక్కదిద్దు: నామము, సంచయము, పరిమాణం, రకము, లేదా తేది"
 
 #: gsearchtool/src/gsearchtool.c:1311
 msgid "Set sort order to descending, the default is ascending"
@@ -1137,8 +1114,7 @@ msgstr "\"%s\" వెతుకు ఇఛ్ఛాపూర్వకం ఎంచ
 
 #: gsearchtool/src/gsearchtool.c:1428
 msgid "Invalid option passed to sortby command line argument."
-msgstr ""
-"చక్కదిద్దు ఆదేశ వాక్య క్రమానుగత సంకేతం కు నిస్సారమైన ఇఛ్ఛాపూర్వకం పంపబడినది."
+msgstr "చక్కదిద్దు ఆదేశ వాక్య క్రమానుగత సంకేతం కు నిస్సారమైన ఇఛ్ఛాపూర్వకం పంపబడినది."
 
 #: gsearchtool/src/gsearchtool.c:1720
 msgid ""
@@ -1152,9 +1128,7 @@ msgstr ""
 msgid ""
 "The search results may be invalid.  There were errors while performing this "
 "search."
-msgstr ""
-"వెతికిన ఫలితం నిస్సారమై ఉండవచ్చు.  చేస్తున్నపుడు అక్కడ దోషములు ఏర్పడినవి "
-"వెతుకు."
+msgstr "వెతికిన ఫలితం నిస్సారమై ఉండవచ్చు.  చేస్తున్నపుడు అక్కడ దోషములు ఏర్పడినవి వెతుకు."
 
 #: gsearchtool/src/gsearchtool.c:1746 gsearchtool/src/gsearchtool.c:1790
 msgid "Show more _details"
@@ -1165,8 +1139,8 @@ msgid ""
 "The search results may be out of date or invalid.  Do you want to disable "
 "the quick search feature?"
 msgstr ""
-"శోధించ ఫలితాలు తారీఖు మించిపోయినవి లేదా విలువైనవికావు.  మీరు త్వరిత శోధన "
-"ప్రయోజనాన్ని అచేతనం చేయాలనుకుంటున్నారా?"
+"శోధించ ఫలితాలు తారీఖు మించిపోయినవి లేదా విలువైనవికావు.  మీరు త్వరిత శోధన ప్రయోజనాన్ని అచేతనం "
+"చేయాలనుకుంటున్నారా?"
 
 #: gsearchtool/src/gsearchtool.c:1801
 msgid "Disable _Quick Search"
@@ -1202,124 +1176,119 @@ msgstr "\"%s\" లో %s"
 msgid "Enter a value in %s for the \"%s\" search option."
 msgstr "\"%s\" వెతుకు ఇఛ్ఛాపూర్వకం కొరకు %s లో విలువను చేర్చుము."
 
-#: gsearchtool/src/gsearchtool.c:2078
+#: gsearchtool/src/gsearchtool.c:2074
 #, c-format
 msgid "Remove \"%s\""
 msgstr "\"%s\" తొలగించు"
 
-#: gsearchtool/src/gsearchtool.c:2079
+#: gsearchtool/src/gsearchtool.c:2075
 #, c-format
 msgid "Click to remove the \"%s\" search option."
 msgstr "\"%s\" వెతుకు ఇఛ్ఛాపూర్వకం తొలగించుటకు నొక్కుము."
 
-#: gsearchtool/src/gsearchtool.c:2172
+#: gsearchtool/src/gsearchtool.c:2168
 msgid "A_vailable options:"
 msgstr "లభ్యత కల్గిన ఇఛ్ఛాపూర్వకాలు(_v):"
 
-#: gsearchtool/src/gsearchtool.c:2201
+#: gsearchtool/src/gsearchtool.c:2197
 msgid "Available options"
 msgstr "లభ్యత కల్గిన ఇఛ్ఛాపూర్వకాలు"
 
-#: gsearchtool/src/gsearchtool.c:2202
+#: gsearchtool/src/gsearchtool.c:2198
 msgid "Select a search option from the drop-down list."
 msgstr "కిందికి లాగు జాబితా నుండి వెతుకు ఇఛ్ఛాపూర్వకంను ఎంచుకొను"
 
-#: gsearchtool/src/gsearchtool.c:2219
+#: gsearchtool/src/gsearchtool.c:2211
 msgid "Add search option"
 msgstr "వెతుకు ఇఛ్ఛాపూర్వకం చేర్చుము"
 
-#: gsearchtool/src/gsearchtool.c:2220
+#: gsearchtool/src/gsearchtool.c:2212
 msgid "Click to add the selected available search option."
 msgstr "ఎంచుకొనబడిన లభ్యత కల్గిన వెతుకు ఇఛ్ఛాపూర్వకంను చేర్చుటకు నొక్కుము. "
 
-#: gsearchtool/src/gsearchtool.c:2309
+#: gsearchtool/src/gsearchtool.c:2301
 msgid "S_earch results:"
 msgstr "_ఫలితాలు వెతుకు:"
 
-#: gsearchtool/src/gsearchtool.c:2352
+#: gsearchtool/src/gsearchtool.c:2344
 msgid "List View"
 msgstr "జాబితా దర్శనం"
 
-#: gsearchtool/src/gsearchtool.c:2412
+#: gsearchtool/src/gsearchtool.c:2404
 #: cafe-dictionary/libgdict/gdict-source.c:243
 msgid "Name"
 msgstr "నామము"
 
-#: gsearchtool/src/gsearchtool.c:2461
+#: gsearchtool/src/gsearchtool.c:2453
 msgid "Type"
 msgstr "రకము"
 
-#: gsearchtool/src/gsearchtool.c:2473
+#: gsearchtool/src/gsearchtool.c:2465
 msgid "Date Modified"
 msgstr "తేది మార్చబడినది"
 
-#: gsearchtool/src/gsearchtool.c:2803
+#: gsearchtool/src/gsearchtool.c:2795
 msgid "_Name contains:"
 msgstr "_నామము కలిగివున్న:"
 
-#: gsearchtool/src/gsearchtool.c:2818 gsearchtool/src/gsearchtool.c:2819
+#: gsearchtool/src/gsearchtool.c:2810 gsearchtool/src/gsearchtool.c:2811
 msgid "Enter a filename or partial filename with or without wildcards."
-msgstr ""
-"wildcards తోగాని లేకుండాగాని దస్త్రనామాన్ని లేదా పాక్షిక దస్త్రనామాన్ని "
-"ప్రవేశపెట్టండి."
+msgstr "wildcards తోగాని లేకుండాగాని దస్త్రనామాన్ని లేదా పాక్షిక దస్త్రనామాన్ని ప్రవేశపెట్టండి."
 
-#: gsearchtool/src/gsearchtool.c:2819
+#: gsearchtool/src/gsearchtool.c:2811
 msgid "Name contains"
 msgstr "నామము కలిగివున్నది"
 
-#: gsearchtool/src/gsearchtool.c:2825
+#: gsearchtool/src/gsearchtool.c:2817
 msgid "_Look in folder:"
 msgstr "సంచయములో చూడుము(_L):"
 
-#: gsearchtool/src/gsearchtool.c:2831
+#: gsearchtool/src/gsearchtool.c:2823
 msgid "Browse"
 msgstr "అన్వేషించు"
 
-#: gsearchtool/src/gsearchtool.c:2841
+#: gsearchtool/src/gsearchtool.c:2833
 msgid "Look in folder"
 msgstr "సంచయం లో చూడుము"
 
-#: gsearchtool/src/gsearchtool.c:2841
+#: gsearchtool/src/gsearchtool.c:2833
 msgid "Select the folder or device from which you want to begin the search."
 msgstr ""
-"దేనినుండైతే మీరు శోధన ప్రారంభించాలని అనుకుంటున్నారో ఆ దస్త్రాన్ని కాని లేదా "
-"పరికరాన్ని కాని ఎంపకచేసుకొనండి."
+"దేనినుండైతే మీరు శోధన ప్రారంభించాలని అనుకుంటున్నారో ఆ దస్త్రాన్ని కాని లేదా పరికరాన్ని కాని ఎంపకచేసుకొనండి."
 
-#: gsearchtool/src/gsearchtool.c:2859
+#: gsearchtool/src/gsearchtool.c:2851
 msgid "Select more _options"
 msgstr "చాలా ఇఛ్ఛాపూర్వకాలు ఎంచుకొను(_o)"
 
-#: gsearchtool/src/gsearchtool.c:2868
+#: gsearchtool/src/gsearchtool.c:2860
 msgid "Select more options"
 msgstr "చాలా ఇఛ్ఛాపూర్వకాలు"
 
-#: gsearchtool/src/gsearchtool.c:2868
+#: gsearchtool/src/gsearchtool.c:2860
 msgid "Click to expand or collapse the list of available options."
-msgstr ""
-"లభ్యత కల్గిన ఇఛ్ఛాపూర్వకముల యొక్క జాబితాను పొడగించుటకు లేదా  నాశనము చేయుటకు "
-"నొక్కుము."
+msgstr "లభ్యత కల్గిన ఇఛ్ఛాపూర్వకముల యొక్క జాబితాను పొడగించుటకు లేదా  నాశనము చేయుటకు నొక్కుము."
 
-#: gsearchtool/src/gsearchtool.c:2899
+#: gsearchtool/src/gsearchtool.c:2886
 msgid "Click to display the help manual."
 msgstr "సహాయ నిర్థేశికత ప్రదర్శించుటకు నొక్కుము"
 
-#: gsearchtool/src/gsearchtool.c:2912
+#: gsearchtool/src/gsearchtool.c:2895
 msgid "Click to close \"Search for Files\"."
 msgstr "మూయుటకు నొక్కుము \"దస్త్రముల కొరకు వెతుకు\"."
 
-#: gsearchtool/src/gsearchtool.c:2947
+#: gsearchtool/src/gsearchtool.c:2921
 msgid "Click to perform a search."
 msgstr "వెతుకుటను నెరవేర్చుటకు నొక్కుము"
 
-#: gsearchtool/src/gsearchtool.c:2948
+#: gsearchtool/src/gsearchtool.c:2922
 msgid "Click to stop a search."
 msgstr "వెతుకుటను ఆపివేయుటకు నొక్కుము"
 
-#: gsearchtool/src/gsearchtool.c:3042
+#: gsearchtool/src/gsearchtool.c:3016
 msgid "- the CAFE Search Tool"
 msgstr "- CAFE శోధన సాధనం"
 
-#: gsearchtool/src/gsearchtool.c:3051
+#: gsearchtool/src/gsearchtool.c:3025
 #, c-format
 msgid "Failed to parse command line arguments: %s\n"
 msgstr ""
@@ -1336,135 +1305,131 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: gsearchtool/src/gsearchtool-callbacks.c:351
-#: gsearchtool/src/gsearchtool-callbacks.c:551
+#: gsearchtool/src/gsearchtool-callbacks.c:547
 #, c-format
 msgid "This will open %d separate window."
 msgid_plural "This will open %d separate windows."
 msgstr[0] ""
 msgstr[1] ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:396
+#: gsearchtool/src/gsearchtool-callbacks.c:392
 #, c-format
 msgid "Could not open document \"%s\"."
 msgstr "\"%s\" పత్రమును తెరుచుటకు వీలుకాదు."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:425
+#: gsearchtool/src/gsearchtool-callbacks.c:421
 #, c-format
 msgid "Could not open folder \"%s\"."
 msgstr "\"%s\" సంచయమును తెరుచుటకు వీలుకాదు."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:433
+#: gsearchtool/src/gsearchtool-callbacks.c:429
 msgid "The baul file manager is not running."
 msgstr "నాటిలస్ దస్త్ర అభికర్త నడుచుటలేదు."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:524
+#: gsearchtool/src/gsearchtool-callbacks.c:520
 msgid "There is no installed viewer capable of displaying the document."
 msgstr "సామర్థ్యముగల పత్రమును ప్రదర్శించుటకు నెలకొల్పబడిన దర్శిని లేదు."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:546
+#: gsearchtool/src/gsearchtool-callbacks.c:542
 #, c-format
 msgid "Are you sure you want to open %d folder?"
 msgid_plural "Are you sure you want to open %d folders?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:701
+#: gsearchtool/src/gsearchtool-callbacks.c:693
 #, c-format
 msgid "Could not move \"%s\" to trash."
 msgstr "\"%s\" ను చెత్తకుండి కి కదిపించలేము."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:732
+#: gsearchtool/src/gsearchtool-callbacks.c:724
 #, c-format
 msgid "Do you want to delete \"%s\" permanently?"
 msgstr "\"%s\" ను నీవు శాశ్వతంగా తొలగించదలచుకున్నావా?"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:735
+#: gsearchtool/src/gsearchtool-callbacks.c:727
 #, c-format
 msgid "Trash is unavailable.  Could not move \"%s\" to the trash."
 msgstr "చెత్తకుండి లభించలేదు. \"%s\" ను చెత్తకుండికి కదిపించలేము."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:779
+#: gsearchtool/src/gsearchtool-callbacks.c:767
 #, c-format
 msgid "Could not delete \"%s\"."
 msgstr "\"%s\" ను తొలగించలేము."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:891
+#: gsearchtool/src/gsearchtool-callbacks.c:879
 #, c-format
 msgid "Deleting \"%s\" failed: %s."
 msgstr "\"%s\" తొలగించుటకు విఫలమైనది : %s."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:903
+#: gsearchtool/src/gsearchtool-callbacks.c:891
 #, c-format
 msgid "Moving \"%s\" failed: %s."
 msgstr "\"%s\"ను కదిపించుట విఫలమైనది: %s."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1030
-#: gsearchtool/src/gsearchtool-callbacks.c:1060
+#: gsearchtool/src/gsearchtool-callbacks.c:1018
+#: gsearchtool/src/gsearchtool-callbacks.c:1048
 msgid "_Open"
 msgstr "తెరచు(_O)"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1085
+#: gsearchtool/src/gsearchtool-callbacks.c:1073
 #, c-format
 msgid "_Open with %s"
 msgstr "%s తో తెరువుము (_O)"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1120
+#: gsearchtool/src/gsearchtool-callbacks.c:1108
 #, c-format
 msgid "Open with %s"
 msgstr "%s తో తెరువుము"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1153
+#: gsearchtool/src/gsearchtool-callbacks.c:1141
 msgid "Open Wit_h"
 msgstr "దీనితో తెరువుము (_h)"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1198
+#: gsearchtool/src/gsearchtool-callbacks.c:1186
 msgid "Open Containing _Folder"
 msgstr ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1238
+#: gsearchtool/src/gsearchtool-callbacks.c:1226
 msgid "_Save Results As..."
 msgstr "లా ఫలితములు దాచు(_S)..."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1620
+#: gsearchtool/src/gsearchtool-callbacks.c:1608
 msgid "Save Search Results As..."
 msgstr "వెతుకు ఫలితాలను లా దాచు..."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1649
+#: gsearchtool/src/gsearchtool-callbacks.c:1637
 msgid "Could not save document."
 msgstr "పత్రమును దాచుటకు వీలుకాదు."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1650
+#: gsearchtool/src/gsearchtool-callbacks.c:1638
 msgid "You did not select a document name."
 msgstr "మీరు పత్ర నామమును ఎంచుకొనలేదు."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1680
+#: gsearchtool/src/gsearchtool-callbacks.c:1668
 #, c-format
 msgid "Could not save \"%s\" document to \"%s\"."
 msgstr "\"%s\" పత్రంకు \"%s\" ను దాచలేము."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1713
+#: gsearchtool/src/gsearchtool-callbacks.c:1701
 #, c-format
 msgid "The document \"%s\" already exists.  Would you like to replace it?"
-msgstr ""
-"పత్రం \"%s\" ఇదివరకే కలిగివున్నది. మీరు దాన్ని పునఃస్థాపించుటకు "
-"ఇష్టపడుతున్నారా?"
+msgstr "పత్రం \"%s\" ఇదివరకే కలిగివున్నది. మీరు దాన్ని పునఃస్థాపించుటకు ఇష్టపడుతున్నారా?"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1717
+#: gsearchtool/src/gsearchtool-callbacks.c:1705
 msgid "If you replace an existing file, its contents will be overwritten."
-msgstr ""
-"మీరు కలిగివున్న దస్త్రంను పునఃస్థాపించినట్టయితే, దాని సారములు "
-"చెరిపిరాయబడును."
+msgstr "మీరు కలిగివున్న దస్త్రంను పునఃస్థాపించినట్టయితే, దాని సారములు చెరిపిరాయబడును."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1732
+#: gsearchtool/src/gsearchtool-callbacks.c:1720
 #: cafe-screenshot/src/screenshot-xfer.c:82
 msgid "_Replace"
 msgstr "పునఃస్థాపించు(_R)"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1781
+#: gsearchtool/src/gsearchtool-callbacks.c:1769
 msgid "The document name you selected is a folder."
 msgstr "మీరు ఎంచుకున్న పత్ర నామము సంచయం"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1817
+#: gsearchtool/src/gsearchtool-callbacks.c:1805
 msgid "You may not have write permissions to the document."
 msgstr "మీకు పత్రమునకు వ్రాయుటకు అనుమతులు లేవు."
 
@@ -1576,14 +1541,7 @@ msgstr "లాగ్ దస్త్రపు దర్శిని"
 msgid "View or monitor system log files"
 msgstr "దర్శించు లేదా దర్శిని వ్యవస్థ log దస్త్రములు"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: logview/data/cafe-system-log.desktop.in.in:7
-msgid "cafe-system-log"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: logview/data/cafe-system-log.desktop.in.in:13
 msgid "CAFE;monitor;view;system;log;files;logviewer;"
 msgstr ""
@@ -1594,12 +1552,11 @@ msgstr "మొదలు పెట్టినపుడు log దస్త్ర
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:6
 msgid ""
-"Specifies the log file displayed at startup. The default is either "
-"/var/adm/messages or /var/log/messages, depending on your operating system."
+"Specifies the log file displayed at startup. The default is either /var/adm/"
+"messages or /var/log/messages, depending on your operating system."
 msgstr ""
-"ప్రారంభంనందు ప్రదర్శితమయ్యే లాగ్ దస్త్రాన్ని తెలియజేస్తుంది.అప్రమేయమనునది మీ"
-" ఆపరేటింగ్ సిస్టమ్ పై ఆధారపడి, /var/adm/messages కాని లేదా /var/log/messages"
-" కాని అవుతుంది."
+"ప్రారంభంనందు ప్రదర్శితమయ్యే లాగ్ దస్త్రాన్ని తెలియజేస్తుంది.అప్రమేయమనునది మీ ఆపరేటింగ్ సిస్టమ్ పై ఆధారపడి, /"
+"var/adm/messages కాని లేదా /var/log/messages కాని అవుతుంది."
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:10
 msgid "Size of the font used to display the log"
@@ -1610,9 +1567,8 @@ msgid ""
 "Specifies the size of the fixed-width font used to display the log in the "
 "main tree view. The default is taken from the default terminal font size."
 msgstr ""
-"లాగ్ ను ప్రధాన ట్రీ దర్శిని లో ప్రదర్శించుటకు ఉపయోగించు నిర్దేశిత-వెడల్పు "
-"ఫాంటు యొక్క పరిమాణంను తెలియజేస్తుంది.అప్రమేయం అప్రమేయ టెర్మినల్ ఫాంటు "
-"పరిమాణంనుండి తీసుకోబడుతుంది."
+"లాగ్ ను ప్రధాన ట్రీ దర్శిని లో ప్రదర్శించుటకు ఉపయోగించు నిర్దేశిత-వెడల్పు ఫాంటు యొక్క పరిమాణంను "
+"తెలియజేస్తుంది.అప్రమేయం అప్రమేయ టెర్మినల్ ఫాంటు పరిమాణంనుండి తీసుకోబడుతుంది."
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:15
 msgid "Height of the main window in pixels"
@@ -1639,8 +1595,8 @@ msgid ""
 "Specifies a list of log files to open up at startup. A default list is "
 "created by reading /etc/syslog.conf."
 msgstr ""
-"ప్రారంభం నందు తెరువుటకు లాగ్ దస్త్రముల జాబితాను తెలియపరచండి.అప్రమేయ జాబితా "
-"/etc/syslog.conf చదువుట ద్వారా సృష్టించబడుతుంది."
+"ప్రారంభం నందు తెరువుటకు లాగ్ దస్త్రముల జాబితాను తెలియపరచండి.అప్రమేయ జాబితా /etc/syslog.conf "
+"చదువుట ద్వారా సృష్టించబడుతుంది."
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:30
 msgid "List of saved filters"
@@ -1679,7 +1635,7 @@ msgstr ""
 msgid "Effect:"
 msgstr ""
 
-#: logview/src/logview-about.h:42 cafe-dictionary/src/gdict-about.c:49
+#: logview/src/logview-about.h:43 cafe-dictionary/src/gdict-about.c:50
 msgid "Sun GNOME Documentation Team <gdocteam@sun.com>"
 msgstr ""
 
@@ -1717,7 +1673,7 @@ msgstr "వడపోతను సరికూర్చుము"
 msgid "Add new filter"
 msgstr "కొత్త వడపోతను జతచేయి"
 
-#: logview/src/logview-filter-manager.c:517
+#: logview/src/logview-filter-manager.c:503
 msgid "Filters"
 msgstr "వడపోతలు"
 
@@ -1747,9 +1703,7 @@ msgstr "శోధన పదబందం(స్ట్రింగు)ను శ�
 
 #: logview/src/logview-log.c:588
 msgid "Error while uncompressing the GZipped log. The file might be corrupt."
-msgstr ""
-"GZipped లాగ్‌ను విడమర్చుతుంటే(అన్‌కంప్రెస్) దోషము. బహుశా దస్త్రము "
-"పాడైవుంటుంది."
+msgstr "GZipped లాగ్‌ను విడమర్చుతుంటే(అన్‌కంప్రెస్) దోషము. బహుశా దస్త్రము పాడైవుంటుంది."
 
 #: logview/src/logview-log.c:635
 msgid "You don't have enough permissions to read the file."
@@ -1828,148 +1782,137 @@ msgstr ""
 #: logview/src/logview-window.c:771
 msgid ""
 "Copyright © 1998-2008 Free Software Foundation, Inc.\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
-#: logview/src/logview-window.c:775
+#: logview/src/logview-window.c:776
 msgid "A system log viewer for CAFE."
 msgstr "వ్యవస్థ Log దర్శకి గ్నోమ్ కొరకు."
 
-#: logview/src/logview-window.c:818 cafe-dictionary/src/gdict-window.c:1285
+#: logview/src/logview-window.c:819 cafe-dictionary/src/gdict-window.c:1285
 msgid "_File"
 msgstr "దస్త్రము(_F)"
 
-#: logview/src/logview-window.c:821
+#: logview/src/logview-window.c:822
 msgid "_Filters"
 msgstr "వడపోతలు (_F)"
 
-#: logview/src/logview-window.c:824
+#: logview/src/logview-window.c:825
 msgid "_Open..."
 msgstr "తెరచు(_O)..."
 
-#: logview/src/logview-window.c:824
+#: logview/src/logview-window.c:825
 msgid "Open a log from file"
 msgstr "దస్త్రం నుండి log తెరువుము"
 
-#: logview/src/logview-window.c:826 cafe-dictionary/src/gdict-window.c:1300
+#: logview/src/logview-window.c:827
 msgid "_Close"
 msgstr "మూసివేయి (_C)"
 
-#: logview/src/logview-window.c:826
+#: logview/src/logview-window.c:827
 msgid "Close this log"
 msgstr "ఈ log మూసివేయు"
 
-#: logview/src/logview-window.c:828
+#: logview/src/logview-window.c:829
 msgid "_Quit"
 msgstr "నిష్క్రమించు (_Q)"
 
-#: logview/src/logview-window.c:828
+#: logview/src/logview-window.c:829
 msgid "Quit the log viewer"
 msgstr "log దర్శకిని త్యజించు"
 
-#: logview/src/logview-window.c:831 cafe-dictionary/src/gdict-window.c:1304
+#: logview/src/logview-window.c:832
 msgid "_Copy"
 msgstr "నకలుతీయు(_C)"
 
-#: logview/src/logview-window.c:831
+#: logview/src/logview-window.c:832
 msgid "Copy the selection"
 msgstr "ఎంపికను నకలు చేయి"
 
-#: logview/src/logview-window.c:833 cafe-dictionary/src/gdict-window.c:1306
+#: logview/src/logview-window.c:834 cafe-dictionary/src/gdict-window.c:1306
 msgid "Select _All"
 msgstr "అన్నింటిని ఎంపికచేయు (_A)"
 
-#: logview/src/logview-window.c:833
+#: logview/src/logview-window.c:834
 msgid "Select the entire log"
 msgstr "మొత్తం log ను ఎంచుకొను"
 
-#: logview/src/logview-window.c:835
+#: logview/src/logview-window.c:836
 msgid "_Find..."
 msgstr "వెతుకు... (_F)"
 
-#: logview/src/logview-window.c:835
+#: logview/src/logview-window.c:836
 msgid "Find a word or phrase in the log"
 msgstr "లాగ్‌నందు పదమును లేదా మాట(ఫ్రేజ్)ను కనుగొనుము"
 
-#: logview/src/logview-window.c:838
-msgid "Zoom _In"
-msgstr "జూమ్ చేయి(_I)"
-
-#: logview/src/logview-window.c:838
+#: logview/src/logview-window.c:839
 msgid "Bigger text size"
 msgstr "పెద్దదైన పాఠం పరిమాణం"
 
-#: logview/src/logview-window.c:840
-msgid "Zoom _Out"
-msgstr "జూమ్ తగ్గించు (_O)"
-
-#: logview/src/logview-window.c:840
+#: logview/src/logview-window.c:841
 msgid "Smaller text size"
 msgstr "చిన్నదైన పాఠం పరిమాణం"
 
-#: logview/src/logview-window.c:842
-msgid "_Normal Size"
-msgstr "సాధారణ పరిమాణం (_N)"
-
-#: logview/src/logview-window.c:842
+#: logview/src/logview-window.c:843
 msgid "Normal text size"
 msgstr "సాధారణమైన పాఠం పరిమాణం"
 
-#: logview/src/logview-window.c:845
+#: logview/src/logview-window.c:846
 msgid "Manage Filters"
 msgstr "వడపోతలను నిర్వహించుము"
 
-#: logview/src/logview-window.c:845
+#: logview/src/logview-window.c:846
 msgid "Manage filters"
 msgstr "వడపోతలను నిర్వహించుము"
 
-#: logview/src/logview-window.c:848
+#: logview/src/logview-window.c:849
 msgid "Open the help contents for the log viewer"
 msgstr "log దర్శకి కొరకు సహాయ సారములను తెరువుము"
 
-#: logview/src/logview-window.c:850 cafe-dictionary/src/gdict-applet.c:1186
+#: logview/src/logview-window.c:851 cafe-dictionary/src/gdict-applet.c:1177
 #: cafe-dictionary/src/gdict-window.c:1341
 msgid "_About"
 msgstr "గురించి (_A)"
 
-#: logview/src/logview-window.c:850
+#: logview/src/logview-window.c:851
 msgid "Show the about dialog for the log viewer"
 msgstr " log దర్శకి కొరకు గురించి వివరణ చూపుము"
 
-#: logview/src/logview-window.c:855
+#: logview/src/logview-window.c:856
 msgid "_Statusbar"
 msgstr "సుస్థితి పట్టీ(_S)"
 
-#: logview/src/logview-window.c:855
+#: logview/src/logview-window.c:856
 msgid "Show Status Bar"
 msgstr "సుస్థితి పట్టీ చూపుము"
 
-#: logview/src/logview-window.c:857
+#: logview/src/logview-window.c:858
 msgid "Side _Pane"
 msgstr "పక్కన పలక (_P)"
 
-#: logview/src/logview-window.c:857
+#: logview/src/logview-window.c:858
 msgid "Show Side Pane"
 msgstr "పక్క ప్యాన్ చూపుము"
 
-#: logview/src/logview-window.c:859
+#: logview/src/logview-window.c:860
 msgid "Show matches only"
 msgstr "పోలికలను మాత్రమే చూపుము"
 
-#: logview/src/logview-window.c:859
+#: logview/src/logview-window.c:860
 msgid "Only show lines that match one of the given filters"
 msgstr "ఇచ్చిన వడపోతలలో వొక దానిని పోలు పంక్తులను మాత్రమే చూపుము"
 
-#: logview/src/logview-window.c:991
+#: logview/src/logview-window.c:992
 #, c-format
 msgid "Can't read from \"%s\""
 msgstr ""
 
-#: logview/src/logview-window.c:1416
+#: logview/src/logview-window.c:1417
 msgid "Version: "
 msgstr "వివరణము:"
 
-#: logview/src/logview-window.c:1522
+#: logview/src/logview-window.c:1525
 msgid "Could not open the following files:"
 msgstr "ఈ క్రింది దస్త్రములను తెరువలేక పోయింది:"
 
@@ -1984,18 +1927,9 @@ msgstr ""
 
 #: cafe-dictionary/data/cafe-dictionary.desktop.in.in:4
 msgid "Check word definitions and spellings in an online dictionary"
-msgstr ""
-"లైను వెలుపల నిఘంటువులో పదము నిర్వచనములను మరియు వర్ణక్రమములను తనిఖీచేయుము"
+msgstr "లైను వెలుపల నిఘంటువులో పదము నిర్వచనములను మరియు వర్ణక్రమములను తనిఖీచేయుము"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:9
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:12
-msgid "accessories-dictionary"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-dictionary/data/cafe-dictionary.desktop.in.in:13
 msgid "CAFE;dictionary;applet;thesaurus;spelling;definitions;online;"
 msgstr ""
@@ -2007,8 +1941,8 @@ msgstr ""
 #: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:10
 msgid ""
 "CAFE Dictionary allows you to look up words in on-line dictionaries. It "
-"comes preconfigured with a list of Dict servers (RFC 2229), to which you can"
-" add your own sources, while you can select specific servers for a specific "
+"comes preconfigured with a list of Dict servers (RFC 2229), to which you can "
+"add your own sources, while you can select specific servers for a specific "
 "query."
 msgstr ""
 
@@ -2030,9 +1964,8 @@ msgid ""
 "dictionary source. An exclamation mark (\"!\") means that all the databases "
 "present in a dictionary source should be searched"
 msgstr ""
-"నిఘంటువు వనరు లో వాడుటకు అప్రమేయ స్వతంత్ర దత్తాంశస్థానం లేదా "
-"మెటా-దత్తాంశస్థానం యొక్క నామము.ఆశ్చర్యార్ధంకం (\"!\") అర్ధం నిఘంటువు వనరు లో"
-" ఇవ్వబడినటువంటి అన్ని దత్తాంశస్థానములు శోధించబడాలి."
+"నిఘంటువు వనరు లో వాడుటకు అప్రమేయ స్వతంత్ర దత్తాంశస్థానం లేదా మెటా-దత్తాంశస్థానం యొక్క నామము."
+"ఆశ్చర్యార్ధంకం (\"!\") అర్ధం నిఘంటువు వనరు లో ఇవ్వబడినటువంటి అన్ని దత్తాంశస్థానములు శోధించబడాలి."
 
 #: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:11
 msgid "The default search strategy to use"
@@ -2043,8 +1976,8 @@ msgid ""
 "The name of the default search strategy to use on a dictionary source, if "
 "available. The default strategy is 'exact', that is match exact words."
 msgstr ""
-"నిఘంటువు వనరులో ఉపయోగించుటకు అప్రమేయ శోధనా ఎత్తుగడ నామము, అందుబాటులో ఉంటే. "
-"అప్రమేయ ఎత్తుగడ 'ఖచ్చితం', అంటే ఖచ్చితమైన పదాలను సరిపోల్చాలి."
+"నిఘంటువు వనరులో ఉపయోగించుటకు అప్రమేయ శోధనా ఎత్తుగడ నామము, అందుబాటులో ఉంటే. అప్రమేయ ఎత్తుగడ "
+"'ఖచ్చితం', అంటే ఖచ్చితమైన పదాలను సరిపోల్చాలి."
 
 #: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:16
 msgid "The font to be used when printing"
@@ -2061,8 +1994,7 @@ msgstr "నిఘంటువు వనరు యొక్క నామము �
 #: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:22
 msgid ""
 "The name of the dictionary source used to retrieve the definitions of words."
-msgstr ""
-"పదముల యొక్క నిర్వచనములు వెలికితీయుటకు నిఘంటువు వనరు యొక్క నామము వాడబడినది."
+msgstr "పదముల యొక్క నిర్వచనములు వెలికితీయుటకు నిఘంటువు వనరు యొక్క నామము వాడబడినది."
 
 #: cafe-dictionary/data/thai.desktop.in:3
 msgid "Thai"
@@ -2126,8 +2058,8 @@ msgid ""
 "Unable to connect to the dictionary server at '%s:%d'. The server replied "
 "with code %d (server down)"
 msgstr ""
-"'%s:%d' సేవిక వద్ద నిఘంటువు కు అనుసంధానము కుదరలేదు. సేవిక బదులిచ్చింది %d "
-"సంకేతంతో  (సేవిక కిందికి)"
+"'%s:%d' సేవిక వద్ద నిఘంటువు కు అనుసంధానము కుదరలేదు. సేవిక బదులిచ్చింది %d సంకేతంతో  (సేవిక "
+"కిందికి)"
 
 #: cafe-dictionary/libgdict/gdict-client-context.c:1188
 #, c-format
@@ -2416,31 +2348,32 @@ msgstr "GDict ఇఛ్ఛాపూర్వకాలు"
 msgid "Show GDict Options"
 msgstr "GDict ఇఛ్ఛాపూర్వకాలు ను చూపుము"
 
-#: cafe-dictionary/src/gdict-about.c:57 cafe-dictionary/src/gdict-applet.c:587
+#: cafe-dictionary/src/gdict-about.c:58 cafe-dictionary/src/gdict-applet.c:575
 msgid "Look up words in dictionaries"
 msgstr "నిఘంటువులలో పదాలకొరకు చూడుము"
 
-#: cafe-dictionary/src/gdict-about.c:70
+#: cafe-dictionary/src/gdict-about.c:71
 msgid ""
-"You should have received a copy of the GNU General Public License along with"
-" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: cafe-dictionary/src/gdict-about.c:87 cafe-dictionary/src/gdict-app.c:364
+#: cafe-dictionary/src/gdict-about.c:88 cafe-dictionary/src/gdict-app.c:364
 #: cafe-dictionary/src/gdict-window.c:607
 #: cafe-dictionary/src/gdict-window.c:1891
 msgid "Dictionary"
 msgstr "నిఘంటువు"
 
-#: cafe-dictionary/src/gdict-about.c:89
+#: cafe-dictionary/src/gdict-about.c:90
 msgid "About Dictionary"
 msgstr ""
 
-#: cafe-dictionary/src/gdict-about.c:90
+#: cafe-dictionary/src/gdict-about.c:91
 msgid ""
 "Copyright © 2005-2006 Emmanuele Bassi\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
 #. Translators: the first is the word found, the second is the
@@ -2534,113 +2467,113 @@ msgstr "పత్రము"
 msgid "Error while writing to '%s'"
 msgstr "'%s' కు వ్రాయునప్పుడు దోషము"
 
-#: cafe-dictionary/src/gdict-applet.c:360
+#: cafe-dictionary/src/gdict-applet.c:356
 msgid "Clear the definitions found"
 msgstr "లభించిన నిర్వచనములు శుభ్రపరచుము"
 
-#: cafe-dictionary/src/gdict-applet.c:362
+#: cafe-dictionary/src/gdict-applet.c:358
 msgid "Clear definition"
 msgstr "నిర్వచనము శుభ్రపరచు"
 
-#: cafe-dictionary/src/gdict-applet.c:363
+#: cafe-dictionary/src/gdict-applet.c:359
 msgid "Clear the text of the definition"
 msgstr "నిర్వచనము యొక్క పాఠంను శుభ్రపరచుము"
 
-#: cafe-dictionary/src/gdict-applet.c:375
+#: cafe-dictionary/src/gdict-applet.c:367
 msgid "Print the definitions found"
 msgstr "లభించిన నిర్వచనములను ముద్రించుము"
 
-#: cafe-dictionary/src/gdict-applet.c:377
+#: cafe-dictionary/src/gdict-applet.c:369
 msgid "Print definition"
 msgstr "నిర్వచనము ముద్రించు"
 
-#: cafe-dictionary/src/gdict-applet.c:378
+#: cafe-dictionary/src/gdict-applet.c:370
 msgid "Print the text of the definition"
 msgstr "నిర్వచనం యొక్క పాఠంను ముద్రించు"
 
-#: cafe-dictionary/src/gdict-applet.c:390
+#: cafe-dictionary/src/gdict-applet.c:378
 msgid "Save the definitions found"
 msgstr "లభించిన నిర్వచనములు దాచుము"
 
-#: cafe-dictionary/src/gdict-applet.c:392
+#: cafe-dictionary/src/gdict-applet.c:380
 msgid "Save definition"
 msgstr "నిర్వచనం దాయు"
 
-#: cafe-dictionary/src/gdict-applet.c:393
+#: cafe-dictionary/src/gdict-applet.c:381
 msgid "Save the text of the definition to a file"
 msgstr "దస్త్రం నకు పాఠం యొక్క నిర్వచనంను దాచుము"
 
-#: cafe-dictionary/src/gdict-applet.c:530
+#: cafe-dictionary/src/gdict-applet.c:518
 msgid "Click to view the dictionary window"
 msgstr "నిఘంటువు గవాక్షంను దర్శించుటకు క్లిక్ చేయుము"
 
-#: cafe-dictionary/src/gdict-applet.c:532
+#: cafe-dictionary/src/gdict-applet.c:520
 msgid "Toggle dictionary window"
 msgstr "మార్పు నిఘంటువు గవాక్షము"
 
-#: cafe-dictionary/src/gdict-applet.c:533
+#: cafe-dictionary/src/gdict-applet.c:521
 msgid "Show or hide the definition window"
 msgstr "నిర్వచనము గవాక్షమును చూపుము లేదా దాచుము"
 
-#: cafe-dictionary/src/gdict-applet.c:584
+#: cafe-dictionary/src/gdict-applet.c:572
 msgid "Type the word you want to look up"
 msgstr "నీవు చూచుటకు కావలసిన పదమును టైప్ చేయుము"
 
-#: cafe-dictionary/src/gdict-applet.c:586
+#: cafe-dictionary/src/gdict-applet.c:574
 msgid "Dictionary entry"
 msgstr "నిఘంటువు చేర్పు"
 
-#: cafe-dictionary/src/gdict-applet.c:715
+#: cafe-dictionary/src/gdict-applet.c:703
 #: cafe-dictionary/src/gdict-window.c:1104
 msgid "Dictionary Preferences"
 msgstr "నిఘంటువు అభీష్టాలు"
 
-#: cafe-dictionary/src/gdict-applet.c:739
+#: cafe-dictionary/src/gdict-applet.c:727
 #: cafe-dictionary/src/gdict-pref-dialog.c:498
 #: cafe-dictionary/src/gdict-source-dialog.c:478
 #: cafe-dictionary/src/gdict-window.c:1251
 msgid "There was an error while displaying help"
 msgstr "సహాయమును ప్రదర్శించుతున్నపుడు అక్కడ దోషము ఏర్పడింది"
 
-#: cafe-dictionary/src/gdict-applet.c:878
+#: cafe-dictionary/src/gdict-applet.c:866
 #: cafe-dictionary/src/gdict-window.c:522
 #, c-format
 msgid "No dictionary source available with name '%s'"
 msgstr "'%s' నామముతో ఎటువంటి నిఘంటువు వనరు లభించలేదు"
 
-#: cafe-dictionary/src/gdict-applet.c:882
+#: cafe-dictionary/src/gdict-applet.c:870
 #: cafe-dictionary/src/gdict-window.c:526
 msgid "Unable to find dictionary source"
 msgstr "నిఘంటువు వనరును వెతకలేక పోయింది"
 
-#: cafe-dictionary/src/gdict-applet.c:898
+#: cafe-dictionary/src/gdict-applet.c:886
 #: cafe-dictionary/src/gdict-window.c:542
 #, c-format
 msgid "No context available for source '%s'"
 msgstr "'%s' వనరు కొరకు ఎటువంటి సంధర్భము లభించలేదు"
 
-#: cafe-dictionary/src/gdict-applet.c:902
+#: cafe-dictionary/src/gdict-applet.c:890
 #: cafe-dictionary/src/gdict-window.c:546
 msgid "Unable to create a context"
 msgstr "సంధర్భమును సృష్టించలేము"
 
-#: cafe-dictionary/src/gdict-applet.c:1168
+#: cafe-dictionary/src/gdict-applet.c:1159
 msgid "_Look Up Selected Text"
 msgstr "‌ఎంచుకున్న పాఠం వెతుకుము(_L)"
 
-#: cafe-dictionary/src/gdict-applet.c:1171
+#: cafe-dictionary/src/gdict-applet.c:1162
 msgid "Cl_ear"
 msgstr "తీసివేయు(_e)"
 
-#: cafe-dictionary/src/gdict-applet.c:1174
+#: cafe-dictionary/src/gdict-applet.c:1165
 msgid "_Print"
 msgstr "ముద్రించు(_P)"
 
-#: cafe-dictionary/src/gdict-applet.c:1177
+#: cafe-dictionary/src/gdict-applet.c:1168
 msgid "_Save"
 msgstr "దాచు(_S)"
 
-#: cafe-dictionary/src/gdict-applet.c:1180
+#: cafe-dictionary/src/gdict-applet.c:1171
 msgid "Preferences"
 msgstr "అభిరుచులు"
 
@@ -2762,10 +2695,6 @@ msgstr "ముద్రించు(_P)..."
 #: cafe-dictionary/src/gdict-window.c:1299
 msgid "Print this document"
 msgstr "ఈ పత్రాన్ని ముద్రించు"
-
-#: cafe-dictionary/src/gdict-window.c:1308
-msgid "_Find"
-msgstr ""
 
 #: cafe-dictionary/src/gdict-window.c:1309
 msgid "Find a word or phrase in the document"
@@ -2945,12 +2874,6 @@ msgstr ""
 msgid "Attach and mount one or more disk image files"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:8
-msgid "drive-removable-media"
-msgstr ""
-
 #: cafe-disk-image-mounter/src/main.c:57
 msgid "An error occurred"
 msgstr "ఒక దోషం ఎదురైంది"
@@ -3039,14 +2962,7 @@ msgstr "తెర ఛాయాచిత్రం తీసుకొను"
 msgid "Save images of your desktop or individual windows"
 msgstr "మీ యొక్క రంగస్థలం లేదా వ్యక్తిగత గవాక్షాల ప్రతిరూపాలను దాచుము"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:9
-msgid "applets-screenshooter"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-screenshot/data/cafe-screenshot.desktop.in:13
 msgid "CAFE;screenshot;snapshot;desktop;window;image;"
 msgstr ""
@@ -3069,8 +2985,7 @@ msgstr "తెరపట్టు(స్క్రీన్‌షాట్) ఆల
 
 #: cafe-screenshot/data/org.cafe.screenshot.gschema.xml.in:6
 msgid "The number of seconds to wait before taking the screenshot."
-msgstr ""
-"తెరపట్టు(స్క్రీన్‌షాట్) తీసుకొనుటకు ముందుగా వేచివుండవలసిన సమయం సెకనులలో."
+msgstr "తెరపట్టు(స్క్రీన్‌షాట్) తీసుకొనుటకు ముందుగా వేచివుండవలసిన సమయం సెకనులలో."
 
 #: cafe-screenshot/data/org.cafe.screenshot.gschema.xml.in:10
 msgid "Screenshot directory"
@@ -3105,8 +3020,8 @@ msgid ""
 "Effect to add to the outside of a border. Possible values are \"shadow\", "
 "\"none\", and \"border\"."
 msgstr ""
-"బయటఉన్న సరిహద్దుకు కలుపవలిసిన పర్యావసానం.సాధ్యమగు విలువలు \"గవాక్షం\", "
-"\"ఏదీకాదు\", మరియు \"సరిహద్దు\"."
+"బయటఉన్న సరిహద్దుకు కలుపవలిసిన పర్యావసానం.సాధ్యమగు విలువలు \"గవాక్షం\", \"ఏదీకాదు\", మరియు "
+"\"సరిహద్దు\"."
 
 #: cafe-screenshot/src/cafe-screenshot.c:138
 msgid "Error loading the help page"
@@ -3244,16 +3159,15 @@ msgstr "తెర యొక్క ప్రతిరూపాన్ని తీ
 
 #: cafe-screenshot/src/cafe-screenshot.c:1355
 msgid ""
-"Conflicting options: --clipboard and --interactive should not be used at the"
-" same time.\n"
+"Conflicting options: --clipboard and --interactive should not be used at the "
+"same time.\n"
 msgstr ""
 
 #: cafe-screenshot/src/cafe-screenshot.c:1361
 msgid ""
 "Conflicting options: --window and --area should not be used at the same "
 "time.\n"
-msgstr ""
-"విభేదించుచున్న ఐచ్చికములు: --window మరియు --area వొకేసారి వుపయోగించకూడదు.\n"
+msgstr "విభేదించుచున్న ఐచ్చికములు: --window మరియు --area వొకేసారి వుపయోగించకూడదు.\n"
 
 #: cafe-screenshot/src/screenshot-dialog.c:205
 #, c-format
@@ -3287,8 +3201,7 @@ msgid ""
 "The child save process unexpectedly exited.  We are unable to write the "
 "screenshot to disk."
 msgstr ""
-"శిశువును భద్రపరచు క్రమణం అనుకోకుండా ప్రభావితం అయినది. మేము ఛాయాచిత్రంను "
-"డిస్కునకు వ్రాయలేము."
+"శిశువును భద్రపరచు క్రమణం అనుకోకుండా ప్రభావితం అయినది. మేము ఛాయాచిత్రంను డిస్కునకు వ్రాయలేము."
 
 #: cafe-screenshot/src/screenshot-save.c:225
 msgid "Unknown error saving screenshot to disk"
@@ -3301,9 +3214,7 @@ msgstr "దస్త్రం ఇదివరకే కలిగివుంద�
 #: cafe-screenshot/src/screenshot-xfer.c:75
 #, c-format
 msgid "The file \"%s\" already exists. Would you like to replace it?"
-msgstr ""
-"దస్త్రం \"%s\" ఇదివరకే కలిగివుంది. నీవు దాన్నిపునఃస్థాపించుటకు "
-"ఇష్టపడుతున్నావా?"
+msgstr "దస్త్రం \"%s\" ఇదివరకే కలిగివుంది. నీవు దాన్నిపునఃస్థాపించుటకు ఇష్టపడుతున్నావా?"
 
 #: cafe-screenshot/src/screenshot-xfer.c:120
 msgid "Saving file..."
@@ -3312,3 +3223,12 @@ msgstr "దస్త్రాన్ని దాయుచున్నది..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "మూలపు దస్త్రాన్ని యాక్సిస్ చేయలేదు"
+
+#~ msgid "Zoom _In"
+#~ msgstr "జూమ్ చేయి(_I)"
+
+#~ msgid "Zoom _Out"
+#~ msgstr "జూమ్ తగ్గించు (_O)"
+
+#~ msgid "_Normal Size"
+#~ msgstr "సాధారణ పరిమాణం (_N)"

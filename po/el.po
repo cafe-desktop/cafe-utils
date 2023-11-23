@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-utils package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # alexandros_ <alexandros.venn@gmail.com>, 2018
 # Panos Panagiotopoulos <panagiotopoulos@gmail.com>, 2018
@@ -18,19 +18,19 @@
 # Αλέξανδρος Καπετάνιος <alexandros@gnugr.org>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Constantinos Tsakiris, 2019
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-utils 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2020-01-13 16:47+0100\n"
+"POT-Creation-Date: 2023-11-20 09:32+0100\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
 "Last-Translator: Constantinos Tsakiris, 2019\n"
 "Language-Team: Greek (https://www.transifex.com/cafe/teams/13566/el/)\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
@@ -42,14 +42,7 @@ msgstr "Ανάλυση χρήσης δίσκου του CAFE"
 msgid "Check folder sizes and available disk space"
 msgstr "Έλεγχος μεγέθους φακέλων και διαθέσιμου χώρου στο δίσκο"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:8
-msgid "cafe-disk-usage-analyzer"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:14
 msgid "CAFE;check;disk;usage;analyze;size;space;"
 msgstr ""
@@ -88,7 +81,7 @@ msgstr "Σάρωση _φακέλου..."
 msgid "S_can Remote Folder..."
 msgstr "Σάρωση α_πομακρυσμένου φακέλου..."
 
-#: baobab/data/baobab-main-window.ui:74 logview/src/logview-window.c:819
+#: baobab/data/baobab-main-window.ui:74 logview/src/logview-window.c:820
 #: cafe-dictionary/src/gdict-window.c:1286
 msgid "_Edit"
 msgstr "_Επεξεργασία"
@@ -101,7 +94,7 @@ msgstr "Α_νάπτυξη όλων"
 msgid "_Collapse All"
 msgstr "Σύμπτυξη ό_λων"
 
-#: baobab/data/baobab-main-window.ui:101 logview/src/logview-window.c:820
+#: baobab/data/baobab-main-window.ui:101 logview/src/logview-window.c:821
 #: cafe-dictionary/src/gdict-window.c:1287
 msgid "_View"
 msgstr "_Προβολή"
@@ -118,19 +111,19 @@ msgstr "_Γραμμή κατάστασης"
 msgid "All_ocated Space"
 msgstr "Εκχωρημένος _χώρος"
 
-#: baobab/data/baobab-main-window.ui:129 logview/src/logview-window.c:822
-#: cafe-dictionary/src/gdict-applet.c:1183
+#: baobab/data/baobab-main-window.ui:129 logview/src/logview-window.c:823
+#: cafe-dictionary/src/gdict-applet.c:1174
 #: cafe-dictionary/src/gdict-window.c:1289
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: baobab/data/baobab-main-window.ui:136 logview/src/logview-window.c:848
+#: baobab/data/baobab-main-window.ui:136 logview/src/logview-window.c:849
 #: cafe-dictionary/src/gdict-window.c:1339
 msgid "_Contents"
 msgstr "_Περιεχόμενα"
 
-#: baobab/data/baobab-main-window.ui:183 baobab/src/baobab.c:1236
-#: baobab/src/callbacks.c:107
+#: baobab/data/baobab-main-window.ui:183 baobab/src/baobab.c:1238
+#: baobab/src/callbacks.c:108
 msgid "Disk Usage Analyzer"
 msgstr "Ανάλυση χρήσης δίσκου"
 
@@ -232,8 +225,8 @@ msgstr ""
 
 #: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:10
 msgid ""
-"As its name implies, Disk Usage Analyzer is a graphical utility that you can"
-" use to view and monitor your disk usage and folder structure. It displays "
+"As its name implies, Disk Usage Analyzer is a graphical utility that you can "
+"use to view and monitor your disk usage and folder structure. It displays "
 "summary information in ring or treemap charts."
 msgstr ""
 
@@ -244,98 +237,98 @@ msgid ""
 "changes to the home directory and warn the user if a file is added/removed."
 msgstr ""
 
-#: baobab/src/baobab.c:137 baobab/src/baobab.c:357
+#: baobab/src/baobab.c:139 baobab/src/baobab.c:359
 msgid "Scanning..."
 msgstr "Σάρωση..."
 
-#: baobab/src/baobab.c:183
+#: baobab/src/baobab.c:185
 msgid "Total filesystem capacity:"
 msgstr "Συνολική χωρητικότητα συστήματος αρχείων:"
 
-#: baobab/src/baobab.c:184
+#: baobab/src/baobab.c:186
 msgid "used:"
 msgstr "σε χρήση:"
 
-#: baobab/src/baobab.c:185
+#: baobab/src/baobab.c:187
 msgid "available:"
 msgstr "Διαθέσιμο:"
 
-#: baobab/src/baobab.c:242 baobab/src/baobab.c:299 baobab/src/callbacks.c:272
+#: baobab/src/baobab.c:244 baobab/src/baobab.c:301 baobab/src/callbacks.c:274
 msgid "Calculating percentage bars..."
 msgstr "Υπολογισμός ποσοστιαίων μπαρών..."
 
-#: baobab/src/baobab.c:253 baobab/src/baobab.c:1300 baobab/src/callbacks.c:276
+#: baobab/src/baobab.c:255 baobab/src/baobab.c:1305 baobab/src/callbacks.c:278
 msgid "Ready"
 msgstr "Έτοιμο"
 
-#: baobab/src/baobab.c:391
+#: baobab/src/baobab.c:393
 msgid "Total filesystem capacity"
 msgstr "Συνολική χωρητικότητα συστήματος αρχείων"
 
-#: baobab/src/baobab.c:415
+#: baobab/src/baobab.c:417
 msgid "Total filesystem usage"
 msgstr "Συνολική χρήση συστήματος αρχείων"
 
-#: baobab/src/baobab.c:457
+#: baobab/src/baobab.c:459
 msgid "contains hardlinks for:"
 msgstr "περιέχει hardlinks για:"
 
-#: baobab/src/baobab.c:466
+#: baobab/src/baobab.c:468
 #, c-format
 msgid "%5d item"
 msgid_plural "%5d items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: baobab/src/baobab.c:592
+#: baobab/src/baobab.c:594
 msgid "Could not initialize monitoring"
 msgstr "Αδυναμία αρχικοποίησης παρακολούθησης "
 
-#: baobab/src/baobab.c:593
+#: baobab/src/baobab.c:595
 msgid "Changes to your home folder will not be monitored."
 msgstr "Δεν θα παρακολουθείται για αλλαγές ο αρχικός σας κατάλογος."
 
-#: baobab/src/baobab.c:914
+#: baobab/src/baobab.c:916
 msgid "Move to parent folder"
 msgstr "Μετακίνηση σε γονικό φάκελο"
 
-#: baobab/src/baobab.c:918
+#: baobab/src/baobab.c:920
 msgid "Zoom in"
 msgstr "Μεγέθυνση "
 
-#: baobab/src/baobab.c:922
+#: baobab/src/baobab.c:924
 msgid "Zoom out"
 msgstr "Σμίκρυνση"
 
-#: baobab/src/baobab.c:926
+#: baobab/src/baobab.c:928
 msgid "Save screenshot"
 msgstr "Αποθήκευση στιγμιότυπου οθόνης"
 
-#: baobab/src/baobab.c:1112
+#: baobab/src/baobab.c:1114
 msgid "View as Rings Chart"
 msgstr "Προβολή ως διάγραμμα δακτυλίων"
 
-#: baobab/src/baobab.c:1114
+#: baobab/src/baobab.c:1116
 msgid "View as Treemap Chart"
 msgstr "Προβολή ως  δενδροειδές διάγραμμα "
 
-#: baobab/src/baobab.c:1225
+#: baobab/src/baobab.c:1227
 msgid "Show version"
 msgstr "Προβολή έκδοσης"
 
-#: baobab/src/baobab.c:1226
+#: baobab/src/baobab.c:1228
 msgid "[DIRECTORY]"
 msgstr "[ΚΑΤΑΛΟΓΟΣ]"
 
-#: baobab/src/baobab.c:1256
+#: baobab/src/baobab.c:1258
 msgid "Too many arguments. Only one directory can be specified."
 msgstr "Πάρα πολλές επιλογές. Μόνο ένας κατάλογος μπορεί να οριστεί."
 
-#: baobab/src/baobab.c:1273
+#: baobab/src/baobab.c:1278
 msgid "Could not detect any mount point."
 msgstr "Δεν εντοπίστηκε κάποιο σημείο προσάρτησης."
 
-#: baobab/src/baobab.c:1275
+#: baobab/src/baobab.c:1280
 msgid "Without mount points disk usage cannot be analyzed."
 msgstr "Χωρίς τα σημεία προσάρτησης δεν είναι δυνατή η ανάλυση χρήσης δίσκων."
 
@@ -345,8 +338,7 @@ msgstr "Μέγιστο βάθος"
 
 #: baobab/src/baobab-chart.c:204
 msgid "The maximum depth drawn in the chart from the root"
-msgstr ""
-"Το μέγιστος βάος που θα σχεδιάζεται στο διάγραμμα από το κατάλογο root"
+msgstr "Το μέγιστος βάος που θα σχεδιάζεται στο διάγραμμα από το κατάλογο root"
 
 #: baobab/src/baobab-chart.c:213
 msgid "Chart model"
@@ -504,7 +496,7 @@ msgstr ""
 msgid "_Rescan"
 msgstr "Σάρωση _ξανά"
 
-#: baobab/src/baobab-treeview.c:222 gsearchtool/src/gsearchtool.c:2436
+#: baobab/src/baobab-treeview.c:222 gsearchtool/src/gsearchtool.c:2428
 msgid "Folder"
 msgstr "Φάκελος"
 
@@ -512,7 +504,7 @@ msgstr "Φάκελος"
 msgid "Usage"
 msgstr "Χρήση"
 
-#: baobab/src/baobab-treeview.c:258 gsearchtool/src/gsearchtool.c:2449
+#: baobab/src/baobab-treeview.c:258 gsearchtool/src/gsearchtool.c:2441
 msgid "Size"
 msgstr "Μέγεθος"
 
@@ -545,7 +537,7 @@ msgstr "Αδυναμία ανάλυσης χρήσης του δίσκου"
 msgid "_Open Folder"
 msgstr "Ά_νοιγμα φακέλου "
 
-#: baobab/src/baobab-utils.c:368 gsearchtool/src/gsearchtool-callbacks.c:1216
+#: baobab/src/baobab-utils.c:368 gsearchtool/src/gsearchtool-callbacks.c:1204
 msgid "Mo_ve to Trash"
 msgstr "_Μετακίνηση στα απορρίμματα"
 
@@ -557,8 +549,7 @@ msgstr "Αδυναμία ανοίγματος φακέλου \"%s\"."
 #: baobab/src/baobab-utils.c:400
 msgid "There is no installed viewer capable of displaying the folder."
 msgstr ""
-"Δεν υπάρχει εγκατεστημένο πρόγραμμα παρουσίασης για την εμφάνιση του "
-"φακέλου."
+"Δεν υπάρχει εγκατεστημένο πρόγραμμα παρουσίασης για την εμφάνιση του φακέλου."
 
 #: baobab/src/baobab-utils.c:467
 #, c-format
@@ -578,27 +569,27 @@ msgstr "Λεπτομέρειες: %s"
 msgid "There was an error displaying help."
 msgstr "Υπήρξε σφάλμα κατά την εμφάνιση της βοήθειας."
 
-#: baobab/src/callbacks.c:77 logview/src/logview-about.h:45
-#: cafe-dictionary/src/gdict-about.c:52
+#: baobab/src/callbacks.c:78 logview/src/logview-about.h:46
+#: cafe-dictionary/src/gdict-about.c:53
 msgid "CAFE Documentation Team"
 msgstr "Ομάδα τεκμηρίωσης CAFE"
 
-#: baobab/src/callbacks.c:82 logview/src/logview-about.h:50
-#: cafe-dictionary/src/gdict-about.c:60
+#: baobab/src/callbacks.c:83 logview/src/logview-about.h:51
+#: cafe-dictionary/src/gdict-about.c:61
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
-"Αυτό το πρόγραμμα είναι ελεύθερο λογισμικό. Επιτρέπεται η αναδιανομή ή/και η"
-" τροποποίησή του υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU (GNU "
+"Αυτό το πρόγραμμα είναι ελεύθερο λογισμικό. Επιτρέπεται η αναδιανομή ή/και η "
+"τροποποίησή του υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU (GNU "
 "General Public License) όπως αυτή δημοσιεύεται από το Ίδρυμα Ελεύθερου "
 "Λογισμικού (Free Software Foundation) -είτε της έκδοσης 2 της άδειας, είτε "
 "(κατ' επιλογήν) οποιασδήποτε μεταγενέστερης έκδοσης."
 
-#: baobab/src/callbacks.c:87 logview/src/logview-about.h:54
-#: cafe-dictionary/src/gdict-about.c:65
+#: baobab/src/callbacks.c:88 logview/src/logview-about.h:55
+#: cafe-dictionary/src/gdict-about.c:66
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -607,32 +598,33 @@ msgid ""
 msgstr ""
 "Αυτό το πρόγραμμα διανέμεται με την ελπίδα οτι θα είναι χρήσιμο, αλλά ΧΩΡΙΣ "
 "ΚΑΜΙΑ ΑΠΟΛΥΤΩΣ ΕΓΓΥΗΣΗ -χωρίς ακόμη και την έμμεση εγγύηση ΕΜΠΟΡΕΥΣΙΜΟΤΗΤΑΣ "
-"ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ ΣΥΓΚΕΚΡΙΜΕΝΟ ΣΚΟΠΟ. Δείτε για περισσότερες λεπτομέρειες"
-" τη Γενική Άδεια Δημόσιας Χρήσης GNU (GNU General Public License)."
+"ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ ΣΥΓΚΕΚΡΙΜΕΝΟ ΣΚΟΠΟ. Δείτε για περισσότερες λεπτομέρειες "
+"τη Γενική Άδεια Δημόσιας Χρήσης GNU (GNU General Public License)."
 
-#: baobab/src/callbacks.c:92 logview/src/logview-about.h:58
+#: baobab/src/callbacks.c:93 logview/src/logview-about.h:59
 msgid ""
-"You should have received a copy of the GNU General Public License along with"
-" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA."
 msgstr ""
 
-#: baobab/src/callbacks.c:109
+#: baobab/src/callbacks.c:110
 msgid "About Disk Usage Analyzer"
 msgstr ""
 
-#: baobab/src/callbacks.c:110
+#: baobab/src/callbacks.c:111
 msgid "A graphical tool to analyze disk usage."
 msgstr "Ένα γραφικό εργαλείο για την ανάλυση της χρήσης του δίσκου."
 
-#: baobab/src/callbacks.c:111
+#: baobab/src/callbacks.c:112
 msgid ""
 "Copyright © 2005-2010 Fabio Marzocca\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
-#: baobab/src/callbacks.c:117 logview/src/logview-about.h:64
-#: cafe-dictionary/src/gdict-about.c:56
+#: baobab/src/callbacks.c:119 logview/src/logview-about.h:65
+#: cafe-dictionary/src/gdict-about.c:57
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα CAFE\n"
@@ -640,12 +632,12 @@ msgstr ""
 "\n"
 "Για περισσότερες πληροφορίες, επισκεφθείτε την σελίδα http://www.cafe.gr/"
 
-#: baobab/src/callbacks.c:215 gsearchtool/src/gsearchtool-callbacks.c:509
-#: gsearchtool/src/gsearchtool-callbacks.c:855
+#: baobab/src/callbacks.c:217 gsearchtool/src/gsearchtool-callbacks.c:505
+#: gsearchtool/src/gsearchtool-callbacks.c:843
 msgid "The document does not exist."
 msgstr "Το έγγραφο δεν υπάρχει."
 
-#: baobab/src/callbacks.c:296
+#: baobab/src/callbacks.c:298
 msgid "The folder does not exist."
 msgstr "Ο φάκελος δεν υπάρχει."
 
@@ -662,25 +654,18 @@ msgstr "Ένα εργαλείο αναζήτησης για το CAFE"
 msgid ""
 "CAFE Search Tool is a simple but powerful utility that allows you to search "
 "for files and folders on any mounted file system. Its interface gives you "
-"instant access to a wide variety of parameters for each search, such as text"
-" contained within a file, ownership, date of modification, file size, folder"
-" exclusion, etc.."
+"instant access to a wide variety of parameters for each search, such as text "
+"contained within a file, ownership, date of modification, file size, folder "
+"exclusion, etc.."
 msgstr ""
 
 #: gsearchtool/data/cafe-search-tool.desktop.in:4
 msgid "Locate documents and folders on this computer by name or content"
 msgstr ""
-"Εντοπισμός εγγράφων και φακέλων σε αυτό τον υπολογιστή με βάση το όνομα ή το"
-" περιεχόμενο"
+"Εντοπισμός εγγράφων και φακέλων σε αυτό τον υπολογιστή με βάση το όνομα ή το "
+"περιεχόμενο"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gsearchtool/data/cafe-search-tool.desktop.in:7
-msgid "system-search"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: gsearchtool/data/cafe-search-tool.desktop.in:13
 msgid ""
 "CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
@@ -717,14 +702,14 @@ msgstr "Γρήγορη αναζήτηση διαδρομών που έχουν �
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:20
 msgid ""
-"This key defines the paths the search tool will exclude from a quick search."
-" The wildcards '*' and '?' are supported. The default values are /mnt/*, "
-"/media/*, /dev/*, /tmp/*, /proc/*, and /var/*."
+"This key defines the paths the search tool will exclude from a quick search. "
+"The wildcards '*' and '?' are supported. The default values are /mnt/*, /"
+"media/*, /dev/*, /tmp/*, /proc/*, and /var/*."
 msgstr ""
 "Αυτό το κλειδί καθορίζει τις διαδρομές του εργαλείου αναζήτησης που θα "
 "εξαιρούνται από την γρήγορη αναζήτηση. Τα wildcards '*' και '?' "
-"υποστηρίζονται. Οι προεπιλεγμένες τιμές είναι  /mnt/*, /media/*, /dev/*, "
-"/tmp/*, /proc/*, and /var/*."
+"υποστηρίζονται. Οι προεπιλεγμένες τιμές είναι  /mnt/*, /media/*, /dev/*, /"
+"tmp/*, /proc/*, and /var/*."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:24
 msgid "Disable Quick Search Second Scan"
@@ -747,12 +732,12 @@ msgid ""
 "This key defines the paths the search tool will exclude from a second scan "
 "when performing a quick search. The second scan uses the find command to "
 "search for files. The purpose of the second scan is to find files that have "
-"not been indexed. The wildcards '*' and '?' are supported. The default value"
-" is /."
+"not been indexed. The wildcards '*' and '?' are supported. The default value "
+"is /."
 msgstr ""
 "Αυτό το κλειδί καθορίζει τις διαδρομές του εργαλείου αναζήτησης που θα "
-"εξαιρούνται από την δεύτερη σάρωση όταν γίνεται γρήγορη αναζήτηση. Η δεύτερη"
-" σάρωση χρησιμοποιεί την εντολή find για την αναζήτηση αρχείων και ο σκοπός "
+"εξαιρούνται από την δεύτερη σάρωση όταν γίνεται γρήγορη αναζήτηση. Η δεύτερη "
+"σάρωση χρησιμοποιεί την εντολή find για την αναζήτηση αρχείων και ο σκοπός "
 "της είναι να βρεθούν τα αρχεία που δεν έχουν ταξινομηθεί. Τα wildcards '*' "
 "και '?' υποστηρίζονται. Η προεπιλεγμένη τιμή είναι /."
 
@@ -774,9 +759,9 @@ msgstr "Προεπιλεγμένο πλάτος παραθύρου"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:40
 msgid ""
-"This key defines the window width, and it's used to remember the size of the"
-" search tool between sessions. Setting it to -1 will make the search tool "
-"use the default width."
+"This key defines the window width, and it's used to remember the size of the "
+"search tool between sessions. Setting it to -1 will make the search tool use "
+"the default width."
 msgstr ""
 "Αυτό το κλειδί καθορίζει το πλάτος του παραθύρου, και χρησιμοποιείται για "
 "την απομνημόνευση τουμεγέθους του εργαλείου αναζήτησης ανάμεσα στις "
@@ -790,12 +775,12 @@ msgstr "Προεπιλεγμένο ύψος παραθύρου"
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:45
 msgid ""
 "This key defines the window height, and it's used to remember the size of "
-"the search tool between sessions. Setting it to -1 will make the search tool"
-" use the default height."
+"the search tool between sessions. Setting it to -1 will make the search tool "
+"use the default height."
 msgstr ""
 "Αυτό το κλειδί καθορίζει το ύψος του παραθύρου, και χρησιμοποιείται για την "
-"απομνημόνευση τουμεγέθους του εργαλείου αναζήτησης ανάμεσα στις συνεδρίες. Ο"
-" ορισμός του σε -1 θα κάνει το εργαλείοαναζήτησης να χρησιμοποιεί το "
+"απομνημόνευση τουμεγέθους του εργαλείου αναζήτησης ανάμεσα στις συνεδρίες. Ο "
+"ορισμός του σε -1 θα κάνει το εργαλείοαναζήτησης να χρησιμοποιεί το "
 "προεπιλεγμένο ύψος."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:49
@@ -877,8 +862,8 @@ msgstr ""
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:90
 msgid ""
-"This key determines if the \"Owned by group\" search option is selected when"
-" the search tool is started."
+"This key determines if the \"Owned by group\" search option is selected when "
+"the search tool is started."
 msgstr ""
 "Αυτό το κλειδί καθορίζει αν η επιλογή αναζήτησης \"Ανήκει σε ομάδα\" είναι "
 "επιλεγμένη όταν εκκινείται το εργαλείο αναζήτησης."
@@ -901,8 +886,8 @@ msgstr ""
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:102
 msgid ""
-"This key determines if the \"Name matches regular expression\" search option"
-" is selected when the search tool is started."
+"This key determines if the \"Name matches regular expression\" search option "
+"is selected when the search tool is started."
 msgstr ""
 "Αυτό το κλειδί καθορίζει αν η επιλογή αναζήτησης  \"'Ονομα ταιριάζει με "
 "κανονική έκφραση\" είναι επιλεγμένη όταν εκκινείται το εργαλείο αναζήτησης."
@@ -1108,7 +1093,7 @@ msgid "Searching..."
 msgstr "Αναζήτηση..."
 
 #: gsearchtool/src/gsearchtool.c:511 gsearchtool/src/gsearchtool.c:1031
-#: gsearchtool/src/gsearchtool.c:3057
+#: gsearchtool/src/gsearchtool.c:3031
 msgid "Search for Files"
 msgstr "Αναζήτηση για αρχεία"
 
@@ -1153,8 +1138,8 @@ msgstr "Ορισμός του κειμένου της επιλογής αναζ�
 #: gsearchtool/src/gsearchtool.c:1310
 msgid "Sort files by one of the following: name, folder, size, type, or date"
 msgstr ""
-"Ταξινόμηση αρχείων σύμφωνα με τα ακόλουθα: όνομα, φάκελος. μέγεθος, τύπος, ή"
-" ημερομηνία"
+"Ταξινόμηση αρχείων σύμφωνα με τα ακόλουθα: όνομα, φάκελος. μέγεθος, τύπος, ή "
+"ημερομηνία"
 
 #: gsearchtool/src/gsearchtool.c:1311
 msgid "Set sort order to descending, the default is ascending"
@@ -1191,8 +1176,8 @@ msgid ""
 "The search results may be invalid.  There were errors while performing this "
 "search."
 msgstr ""
-"Τα αποτελέσματα αναζήτησης μπορεί να μην είναι έγκυρα. Υπήρξαν σφάλματα κατα"
-" την εκτέλεση αυτής της αναζήτησης."
+"Τα αποτελέσματα αναζήτησης μπορεί να μην είναι έγκυρα. Υπήρξαν σφάλματα κατα "
+"την εκτέλεση αυτής της αναζήτησης."
 
 #: gsearchtool/src/gsearchtool.c:1746 gsearchtool/src/gsearchtool.c:1790
 msgid "Show more _details"
@@ -1240,120 +1225,120 @@ msgstr "\"%s\" σε %s"
 msgid "Enter a value in %s for the \"%s\" search option."
 msgstr "Εισάγετε μια τιμή σε %s για την επιλογή αναζήτησης  \"%s\""
 
-#: gsearchtool/src/gsearchtool.c:2078
+#: gsearchtool/src/gsearchtool.c:2074
 #, c-format
 msgid "Remove \"%s\""
 msgstr "Διαγραφή  \"%s\""
 
-#: gsearchtool/src/gsearchtool.c:2079
+#: gsearchtool/src/gsearchtool.c:2075
 #, c-format
 msgid "Click to remove the \"%s\" search option."
 msgstr "Πατήστε για αφαίρεση της  επιλογή αναζήτησης  \"%s\""
 
-#: gsearchtool/src/gsearchtool.c:2172
+#: gsearchtool/src/gsearchtool.c:2168
 msgid "A_vailable options:"
 msgstr "Δια_θέσιμες επιλογές:"
 
-#: gsearchtool/src/gsearchtool.c:2201
+#: gsearchtool/src/gsearchtool.c:2197
 msgid "Available options"
 msgstr "Διαθέσιμες επιλογές:"
 
-#: gsearchtool/src/gsearchtool.c:2202
+#: gsearchtool/src/gsearchtool.c:2198
 msgid "Select a search option from the drop-down list."
 msgstr "Επιλέξτε μια επιλογή αναζήτησης από την κυλιόμενη λίστα"
 
-#: gsearchtool/src/gsearchtool.c:2219
+#: gsearchtool/src/gsearchtool.c:2211
 msgid "Add search option"
 msgstr "Προσθήκη επιλογής αναζήτησης"
 
-#: gsearchtool/src/gsearchtool.c:2220
+#: gsearchtool/src/gsearchtool.c:2212
 msgid "Click to add the selected available search option."
 msgstr "Πατήστε για προσθήκη της επιλεγμένης διαθέσιμης επιλογής αναζήτησης."
 
-#: gsearchtool/src/gsearchtool.c:2309
+#: gsearchtool/src/gsearchtool.c:2301
 msgid "S_earch results:"
 msgstr "Αποτελέσματα α_ναζήτησης:"
 
-#: gsearchtool/src/gsearchtool.c:2352
+#: gsearchtool/src/gsearchtool.c:2344
 msgid "List View"
 msgstr "Προβολή λίστας"
 
-#: gsearchtool/src/gsearchtool.c:2412
+#: gsearchtool/src/gsearchtool.c:2404
 #: cafe-dictionary/libgdict/gdict-source.c:243
 msgid "Name"
 msgstr "Όνομα"
 
-#: gsearchtool/src/gsearchtool.c:2461
+#: gsearchtool/src/gsearchtool.c:2453
 msgid "Type"
 msgstr "Τύπος"
 
-#: gsearchtool/src/gsearchtool.c:2473
+#: gsearchtool/src/gsearchtool.c:2465
 msgid "Date Modified"
 msgstr "Ημερομηνία τροποποίησης"
 
-#: gsearchtool/src/gsearchtool.c:2803
+#: gsearchtool/src/gsearchtool.c:2795
 msgid "_Name contains:"
 msgstr "Το ό_νομα περιέχει:"
 
-#: gsearchtool/src/gsearchtool.c:2818 gsearchtool/src/gsearchtool.c:2819
+#: gsearchtool/src/gsearchtool.c:2810 gsearchtool/src/gsearchtool.c:2811
 msgid "Enter a filename or partial filename with or without wildcards."
 msgstr ""
 "Εισάγετε ένα όνομα αρχείου ή ένα μερικό όνομα αρχείου με ή χωρίς wildcards."
 
-#: gsearchtool/src/gsearchtool.c:2819
+#: gsearchtool/src/gsearchtool.c:2811
 msgid "Name contains"
 msgstr "Όνομα περιέχει"
 
-#: gsearchtool/src/gsearchtool.c:2825
+#: gsearchtool/src/gsearchtool.c:2817
 msgid "_Look in folder:"
 msgstr "_Αναζήτηση στο φάκελο:"
 
-#: gsearchtool/src/gsearchtool.c:2831
+#: gsearchtool/src/gsearchtool.c:2823
 msgid "Browse"
 msgstr "Περιήγηση"
 
-#: gsearchtool/src/gsearchtool.c:2841
+#: gsearchtool/src/gsearchtool.c:2833
 msgid "Look in folder"
 msgstr "Αναζήτηση σε φάκελο"
 
-#: gsearchtool/src/gsearchtool.c:2841
+#: gsearchtool/src/gsearchtool.c:2833
 msgid "Select the folder or device from which you want to begin the search."
 msgstr ""
 "Επιλέξτε το φάκελο ή τη συσκευή  από όπου θέλετε να ξεκινήσει η αναζήτηση"
 
-#: gsearchtool/src/gsearchtool.c:2859
+#: gsearchtool/src/gsearchtool.c:2851
 msgid "Select more _options"
 msgstr "Περισσότερες _επιλογές"
 
-#: gsearchtool/src/gsearchtool.c:2868
+#: gsearchtool/src/gsearchtool.c:2860
 msgid "Select more options"
 msgstr "Περισσότερες επιλογές"
 
-#: gsearchtool/src/gsearchtool.c:2868
+#: gsearchtool/src/gsearchtool.c:2860
 msgid "Click to expand or collapse the list of available options."
 msgstr "Πατήστε για ανάπτυξη η σύμπτυξη μιας λίστας των διαθέσιμων επιλογών."
 
-#: gsearchtool/src/gsearchtool.c:2899
+#: gsearchtool/src/gsearchtool.c:2886
 msgid "Click to display the help manual."
 msgstr "Πατήστε για εμφάνιση του εγχειριδίου βοήθειας."
 
-#: gsearchtool/src/gsearchtool.c:2912
+#: gsearchtool/src/gsearchtool.c:2895
 msgid "Click to close \"Search for Files\"."
 msgstr "Πατήστε για κλείσιμο του \"Αναζήτηση για αρχεία\"."
 
-#: gsearchtool/src/gsearchtool.c:2947
+#: gsearchtool/src/gsearchtool.c:2921
 msgid "Click to perform a search."
 msgstr "Πατήστε για αναζήτηση."
 
-#: gsearchtool/src/gsearchtool.c:2948
+#: gsearchtool/src/gsearchtool.c:2922
 msgid "Click to stop a search."
 msgstr "Πατήστε για να διακόψετε την αναζήτηση"
 
-#: gsearchtool/src/gsearchtool.c:3042
+#: gsearchtool/src/gsearchtool.c:3016
 msgid "- the CAFE Search Tool"
 msgstr "- το εργαλείο αναζήτησης του CAFE"
 
-#: gsearchtool/src/gsearchtool.c:3051
+#: gsearchtool/src/gsearchtool.c:3025
 #, c-format
 msgid "Failed to parse command line arguments: %s\n"
 msgstr "Αποτυχία ανάλυσης των ορισμάτων της γραμμής εντολής: %s\n"
@@ -1370,137 +1355,136 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: gsearchtool/src/gsearchtool-callbacks.c:351
-#: gsearchtool/src/gsearchtool-callbacks.c:551
+#: gsearchtool/src/gsearchtool-callbacks.c:547
 #, c-format
 msgid "This will open %d separate window."
 msgid_plural "This will open %d separate windows."
 msgstr[0] ""
 msgstr[1] ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:396
+#: gsearchtool/src/gsearchtool-callbacks.c:392
 #, c-format
 msgid "Could not open document \"%s\"."
 msgstr "Αδυναμία ανοίγματος εγγράφου  \"%s\"."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:425
+#: gsearchtool/src/gsearchtool-callbacks.c:421
 #, c-format
 msgid "Could not open folder \"%s\"."
 msgstr "Αδυναμία ανοίγματος φακέλου \"%s\"."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:433
+#: gsearchtool/src/gsearchtool-callbacks.c:429
 msgid "The baul file manager is not running."
 msgstr "Ο διαχειριστής αρχείων του Ναυτίλου δεν εκτελείται."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:524
+#: gsearchtool/src/gsearchtool-callbacks.c:520
 msgid "There is no installed viewer capable of displaying the document."
 msgstr ""
 "Δεν υπάρχει εγκατεστημένο πρόγραμμα παρουσίασης για την εμφάνιση του "
 "εγγράφου."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:546
+#: gsearchtool/src/gsearchtool-callbacks.c:542
 #, c-format
 msgid "Are you sure you want to open %d folder?"
 msgid_plural "Are you sure you want to open %d folders?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: gsearchtool/src/gsearchtool-callbacks.c:701
+#: gsearchtool/src/gsearchtool-callbacks.c:693
 #, c-format
 msgid "Could not move \"%s\" to trash."
 msgstr "Αδυναμία μετακίνησης \"%s\" στα απορρίμματα."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:732
+#: gsearchtool/src/gsearchtool-callbacks.c:724
 #, c-format
 msgid "Do you want to delete \"%s\" permanently?"
 msgstr "Θέλετε την οριστική διαγραφή του \"%s\";"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:735
+#: gsearchtool/src/gsearchtool-callbacks.c:727
 #, c-format
 msgid "Trash is unavailable.  Could not move \"%s\" to the trash."
 msgstr ""
 "Τα απορρίμματα δεν είναι προσβάσιμα. Αδυναμία μετακίνησης\"%s\" στα "
 "απορρίμματα."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:779
+#: gsearchtool/src/gsearchtool-callbacks.c:767
 #, c-format
 msgid "Could not delete \"%s\"."
 msgstr "Αδυναμία διαγραφής \"%s\"."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:891
+#: gsearchtool/src/gsearchtool-callbacks.c:879
 #, c-format
 msgid "Deleting \"%s\" failed: %s."
 msgstr "Η διαγραφή του \"%s\" απέτυχε: %s."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:903
+#: gsearchtool/src/gsearchtool-callbacks.c:891
 #, c-format
 msgid "Moving \"%s\" failed: %s."
 msgstr "Η μετακίνηση \"%s\" απέτυχε: %s."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1030
-#: gsearchtool/src/gsearchtool-callbacks.c:1060
+#: gsearchtool/src/gsearchtool-callbacks.c:1018
+#: gsearchtool/src/gsearchtool-callbacks.c:1048
 msgid "_Open"
 msgstr "Ά_νοιγμα"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1085
+#: gsearchtool/src/gsearchtool-callbacks.c:1073
 #, c-format
 msgid "_Open with %s"
 msgstr "Άνοιγμα _με %s"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1120
+#: gsearchtool/src/gsearchtool-callbacks.c:1108
 #, c-format
 msgid "Open with %s"
 msgstr "Άνοιγμα με %s"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1153
+#: gsearchtool/src/gsearchtool-callbacks.c:1141
 msgid "Open Wit_h"
 msgstr "Άνοιγμα _με"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1198
+#: gsearchtool/src/gsearchtool-callbacks.c:1186
 msgid "Open Containing _Folder"
 msgstr "Ανοιχτός _Φάκελος που περιέχει"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1238
+#: gsearchtool/src/gsearchtool-callbacks.c:1226
 msgid "_Save Results As..."
 msgstr "Αποθήκευ_ση αποτελεσμάτων ως..."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1620
+#: gsearchtool/src/gsearchtool-callbacks.c:1608
 msgid "Save Search Results As..."
 msgstr "Αποθήκευση αποτελεσμάτων αναζήτησης ως..."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1649
+#: gsearchtool/src/gsearchtool-callbacks.c:1637
 msgid "Could not save document."
 msgstr "Αδυναμία αποθήκευσης εγγράφου."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1650
+#: gsearchtool/src/gsearchtool-callbacks.c:1638
 msgid "You did not select a document name."
 msgstr "Δεν επιλέξατε ένα όνομα εγγράφου."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1680
+#: gsearchtool/src/gsearchtool-callbacks.c:1668
 #, c-format
 msgid "Could not save \"%s\" document to \"%s\"."
 msgstr "Αδυναμία αποθήκευσης εγγράφου   \"%s\" σε \"%s\"."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1713
+#: gsearchtool/src/gsearchtool-callbacks.c:1701
 #, c-format
 msgid "The document \"%s\" already exists.  Would you like to replace it?"
 msgstr "Το έγγραφο\"%s\" υπάρχει ήδη. Θέλετε να το αντικαταστήσετε;"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1717
+#: gsearchtool/src/gsearchtool-callbacks.c:1705
 msgid "If you replace an existing file, its contents will be overwritten."
 msgstr ""
-"Αν αντικαταστήσετε ένα υπάρχον αρχείο, τα περιεχόμενα του θα "
-"αντικατασταθούν."
+"Αν αντικαταστήσετε ένα υπάρχον αρχείο, τα περιεχόμενα του θα αντικατασταθούν."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1732
+#: gsearchtool/src/gsearchtool-callbacks.c:1720
 #: cafe-screenshot/src/screenshot-xfer.c:82
 msgid "_Replace"
 msgstr "_Αντικατάσταση"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1781
+#: gsearchtool/src/gsearchtool-callbacks.c:1769
 msgid "The document name you selected is a folder."
 msgstr "Το όνομα εγγράφου που επιλέξατε είναι ένας φάκελος."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1817
+#: gsearchtool/src/gsearchtool-callbacks.c:1805
 msgid "You may not have write permissions to the document."
 msgstr "Μπορεί να μην έχετε τα απαραίτητα δικαιώματα εγγραφής για το έγγραφο."
 
@@ -1612,14 +1596,7 @@ msgstr "Παρακολούθηση αρχείων καταγραφών"
 msgid "View or monitor system log files"
 msgstr "Εμφάνιση ή παρακολούθηση των αρχείων καταγραφής συστήματος"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: logview/data/cafe-system-log.desktop.in.in:7
-msgid "cafe-system-log"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: logview/data/cafe-system-log.desktop.in.in:13
 msgid "CAFE;monitor;view;system;log;files;logviewer;"
 msgstr ""
@@ -1630,8 +1607,8 @@ msgstr "Αρχείο καταγραφής για άνοιγμα κατά την 
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:6
 msgid ""
-"Specifies the log file displayed at startup. The default is either "
-"/var/adm/messages or /var/log/messages, depending on your operating system."
+"Specifies the log file displayed at startup. The default is either /var/adm/"
+"messages or /var/log/messages, depending on your operating system."
 msgstr ""
 "Καθορίζει το αρχείο καταγραφής που θα ανοίγει κατά την εκκίνηση. Η "
 "προεπιλογή  είναι μηνύματα  /var/log/, ανάλογα με τη διανομή σας."
@@ -1645,8 +1622,8 @@ msgid ""
 "Specifies the size of the fixed-width font used to display the log in the "
 "main tree view. The default is taken from the default terminal font size."
 msgstr ""
-"Καθορίζει το μέγεθος της σταθερού πλάτους γραμματοσειράς που χρησιμοποιείται"
-" για την απεικόνισης της καταγραφής στη προβολή του κύριου δέντρου.Το "
+"Καθορίζει το μέγεθος της σταθερού πλάτους γραμματοσειράς που χρησιμοποιείται "
+"για την απεικόνισης της καταγραφής στη προβολή του κύριου δέντρου.Το "
 "προεπιλεγμένο μέγεθος είναι το προεπιλεγμένο μέγεθος γραμματοσειράς "
 "τερματικού."
 
@@ -1718,7 +1695,7 @@ msgstr "Παρασκήνιο:"
 msgid "Effect:"
 msgstr "Εφέ:"
 
-#: logview/src/logview-about.h:42 cafe-dictionary/src/gdict-about.c:49
+#: logview/src/logview-about.h:43 cafe-dictionary/src/gdict-about.c:50
 msgid "Sun GNOME Documentation Team <gdocteam@sun.com>"
 msgstr ""
 
@@ -1756,7 +1733,7 @@ msgstr "Επεξεργασία φίλτρου"
 msgid "Add new filter"
 msgstr "Προσθήκη νέου φίλτρου"
 
-#: logview/src/logview-filter-manager.c:517
+#: logview/src/logview-filter-manager.c:503
 msgid "Filters"
 msgstr "Φίλτρα"
 
@@ -1867,151 +1844,139 @@ msgstr ""
 #: logview/src/logview-window.c:771
 msgid ""
 "Copyright © 1998-2008 Free Software Foundation, Inc.\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
-#: logview/src/logview-window.c:775
+#: logview/src/logview-window.c:776
 msgid "A system log viewer for CAFE."
 msgstr "Μια εφαρμογή προβολής καταγραφών συστήματος για το CAFE."
 
-#: logview/src/logview-window.c:818 cafe-dictionary/src/gdict-window.c:1285
+#: logview/src/logview-window.c:819 cafe-dictionary/src/gdict-window.c:1285
 msgid "_File"
 msgstr "_Αρχείο"
 
-#: logview/src/logview-window.c:821
+#: logview/src/logview-window.c:822
 msgid "_Filters"
 msgstr "_Φίλτρα"
 
-#: logview/src/logview-window.c:824
+#: logview/src/logview-window.c:825
 msgid "_Open..."
 msgstr "Άν_οιγμα..."
 
-#: logview/src/logview-window.c:824
+#: logview/src/logview-window.c:825
 msgid "Open a log from file"
 msgstr "Άνοιγμα καταγραφής από αρχείο"
 
-#: logview/src/logview-window.c:826 cafe-dictionary/src/gdict-window.c:1300
+#: logview/src/logview-window.c:827
 msgid "_Close"
 msgstr "_Κλείσιμο"
 
-#: logview/src/logview-window.c:826
+#: logview/src/logview-window.c:827
 msgid "Close this log"
 msgstr "Κλείσιμο αυτού του αρχείου καταγραφής"
 
-#: logview/src/logview-window.c:828
+#: logview/src/logview-window.c:829
 msgid "_Quit"
 msgstr "_Έξοδος"
 
-#: logview/src/logview-window.c:828
+#: logview/src/logview-window.c:829
 msgid "Quit the log viewer"
 msgstr "Κλείσιμο παρακολούθησης καταγραφών συστήματος"
 
-#: logview/src/logview-window.c:831 cafe-dictionary/src/gdict-window.c:1304
+#: logview/src/logview-window.c:832
 msgid "_Copy"
 msgstr "_Αντιγραφή"
 
-#: logview/src/logview-window.c:831
+#: logview/src/logview-window.c:832
 msgid "Copy the selection"
 msgstr "Αντιγραφή της επιλογής"
 
-#: logview/src/logview-window.c:833 cafe-dictionary/src/gdict-window.c:1306
+#: logview/src/logview-window.c:834 cafe-dictionary/src/gdict-window.c:1306
 msgid "Select _All"
 msgstr "Επιλογή ό_λων"
 
-#: logview/src/logview-window.c:833
+#: logview/src/logview-window.c:834
 msgid "Select the entire log"
 msgstr "Επιλογή όλου του αρχείου καταγραφής"
 
-#: logview/src/logview-window.c:835
+#: logview/src/logview-window.c:836
 msgid "_Find..."
 msgstr "Εύ_ρεση"
 
-#: logview/src/logview-window.c:835
+#: logview/src/logview-window.c:836
 msgid "Find a word or phrase in the log"
 msgstr "Εύρεση μια λέξης ή φράσης στην καταγραφή"
 
-#: logview/src/logview-window.c:838
-msgid "Zoom _In"
-msgstr "_Μεγέθυνση"
-
-#: logview/src/logview-window.c:838
+#: logview/src/logview-window.c:839
 msgid "Bigger text size"
 msgstr "Μεγαλύτερο μέγεθος κειμένου"
 
-#: logview/src/logview-window.c:840
-msgid "Zoom _Out"
-msgstr "Σ_μίκρυνση"
-
-#: logview/src/logview-window.c:840
+#: logview/src/logview-window.c:841
 msgid "Smaller text size"
 msgstr "Μικρότερο μέγεθος κειμένου"
 
-#: logview/src/logview-window.c:842
-msgid "_Normal Size"
-msgstr "Κα_νονικό μέγεθος"
-
-#: logview/src/logview-window.c:842
+#: logview/src/logview-window.c:843
 msgid "Normal text size"
 msgstr "Κανονικό μέγεθος κειμένου"
 
-#: logview/src/logview-window.c:845
+#: logview/src/logview-window.c:846
 msgid "Manage Filters"
 msgstr "Διαχείριση φίλτρων"
 
-#: logview/src/logview-window.c:845
+#: logview/src/logview-window.c:846
 msgid "Manage filters"
 msgstr "Διαχείριση φίλτρων"
 
-#: logview/src/logview-window.c:848
+#: logview/src/logview-window.c:849
 msgid "Open the help contents for the log viewer"
-msgstr ""
-"Άνοιγμα των περιεχομένων βοήθειας για την εφαρμογή προβολής καταγραφών"
+msgstr "Άνοιγμα των περιεχομένων βοήθειας για την εφαρμογή προβολής καταγραφών"
 
-#: logview/src/logview-window.c:850 cafe-dictionary/src/gdict-applet.c:1186
+#: logview/src/logview-window.c:851 cafe-dictionary/src/gdict-applet.c:1177
 #: cafe-dictionary/src/gdict-window.c:1341
 msgid "_About"
 msgstr "Πε_ρί"
 
-#: logview/src/logview-window.c:850
+#: logview/src/logview-window.c:851
 msgid "Show the about dialog for the log viewer"
 msgstr "Προβολή του διαλόγου Περί για τον επεξεργαστή cafeconf"
 
-#: logview/src/logview-window.c:855
+#: logview/src/logview-window.c:856
 msgid "_Statusbar"
 msgstr "_Γραμμή κατάστασης"
 
-#: logview/src/logview-window.c:855
+#: logview/src/logview-window.c:856
 msgid "Show Status Bar"
 msgstr "Προβολή γραμμής κατάστασης"
 
-#: logview/src/logview-window.c:857
+#: logview/src/logview-window.c:858
 msgid "Side _Pane"
 msgstr "Πλευρικό _ταμπλώ"
 
-#: logview/src/logview-window.c:857
+#: logview/src/logview-window.c:858
 msgid "Show Side Pane"
 msgstr "Προβολή της πλευρικής στηλης"
 
-#: logview/src/logview-window.c:859
+#: logview/src/logview-window.c:860
 msgid "Show matches only"
 msgstr "Εμφάνιση μόνο ταιριασμάτων"
 
-#: logview/src/logview-window.c:859
+#: logview/src/logview-window.c:860
 msgid "Only show lines that match one of the given filters"
 msgstr ""
 "Να εμφανίζονται μόνο οι γραμμές που ταιριάζουν με ένα από τα φίλτρα που "
 "δίνονται"
 
-#: logview/src/logview-window.c:991
+#: logview/src/logview-window.c:992
 #, c-format
 msgid "Can't read from \"%s\""
 msgstr "Αδυναμία ανάγνωσης από «%s»"
 
-#: logview/src/logview-window.c:1416
+#: logview/src/logview-window.c:1417
 msgid "Version: "
 msgstr "Έκδοση : "
 
-#: logview/src/logview-window.c:1522
+#: logview/src/logview-window.c:1525
 msgid "Could not open the following files:"
 msgstr "Αδυναμία ανοίγματος των ακόλουθων αρχείων:"
 
@@ -2028,15 +1993,7 @@ msgstr "Λεξικό CAFE"
 msgid "Check word definitions and spellings in an online dictionary"
 msgstr "Έλεγχος ορισμών λέξεων και ορθογραφίας σε ένα λεξικό του Διαδικτύου"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:9
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:12
-msgid "accessories-dictionary"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-dictionary/data/cafe-dictionary.desktop.in.in:13
 msgid "CAFE;dictionary;applet;thesaurus;spelling;definitions;online;"
 msgstr ""
@@ -2048,8 +2005,8 @@ msgstr "Ένα λεξικό για την επιφάνεια εργασίας CA
 #: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:10
 msgid ""
 "CAFE Dictionary allows you to look up words in on-line dictionaries. It "
-"comes preconfigured with a list of Dict servers (RFC 2229), to which you can"
-" add your own sources, while you can select specific servers for a specific "
+"comes preconfigured with a list of Dict servers (RFC 2229), to which you can "
+"add your own sources, while you can select specific servers for a specific "
 "query."
 msgstr ""
 
@@ -2084,8 +2041,8 @@ msgid ""
 "The name of the default search strategy to use on a dictionary source, if "
 "available. The default strategy is 'exact', that is match exact words."
 msgstr ""
-"Το όνομα της προεπιλεγμένης στρατηγικής αναζήτησης που θα χρησιμοποιείται σε"
-" μια πηγή λεξικού,αν είναι διαθέσιμη. Η προεπιλεγμένη στρατηγική είναι "
+"Το όνομα της προεπιλεγμένης στρατηγικής αναζήτησης που θα χρησιμοποιείται σε "
+"μια πηγή λεξικού,αν είναι διαθέσιμη. Η προεπιλεγμένη στρατηγική είναι "
 "'ακριβώς', που σημαίνει ότι θα ταιριάζει τις λέξεις με ακρίβεια."
 
 #: cafe-dictionary/data/org.cafe.dictionary.gschema.xml.in:16
@@ -2426,8 +2383,7 @@ msgstr "Καθαρισμός λίστας παρόμοιων λέξεων"
 #: cafe-dictionary/libgdict/gdict-speller.c:369
 msgid "The GdictContext object used to get the word definition"
 msgstr ""
-"Το αντικείμενο GdictContext που χρησιμοποιείται για τη λήψη του ορισμού "
-"λέξης"
+"Το αντικείμενο GdictContext που χρησιμοποιείται για τη λήψη του ορισμού λέξης"
 
 #: cafe-dictionary/libgdict/gdict-speller.c:376
 msgid "The database used to query the GdictContext"
@@ -2466,14 +2422,14 @@ msgstr "Επιλογές GDict"
 msgid "Show GDict Options"
 msgstr "Εμφάνιση επιλογών GDict"
 
-#: cafe-dictionary/src/gdict-about.c:57 cafe-dictionary/src/gdict-applet.c:587
+#: cafe-dictionary/src/gdict-about.c:58 cafe-dictionary/src/gdict-applet.c:575
 msgid "Look up words in dictionaries"
 msgstr "Αναζήτηση λέξεων στα λεξικά"
 
-#: cafe-dictionary/src/gdict-about.c:70
+#: cafe-dictionary/src/gdict-about.c:71
 msgid ""
-"You should have received a copy of the GNU General Public License along with"
-" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 "Θα πρέπει να έχετε λάβει ένα αντίγραφο της Γενικής Άδειας Δημόσιας Χρήσης "
@@ -2482,20 +2438,21 @@ msgstr ""
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, "
 "USA."
 
-#: cafe-dictionary/src/gdict-about.c:87 cafe-dictionary/src/gdict-app.c:364
+#: cafe-dictionary/src/gdict-about.c:88 cafe-dictionary/src/gdict-app.c:364
 #: cafe-dictionary/src/gdict-window.c:607
 #: cafe-dictionary/src/gdict-window.c:1891
 msgid "Dictionary"
 msgstr "Λεξικό"
 
-#: cafe-dictionary/src/gdict-about.c:89
+#: cafe-dictionary/src/gdict-about.c:90
 msgid "About Dictionary"
 msgstr ""
 
-#: cafe-dictionary/src/gdict-about.c:90
+#: cafe-dictionary/src/gdict-about.c:91
 msgid ""
 "Copyright © 2005-2006 Emmanuele Bassi\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
 #. Translators: the first is the word found, the second is the
@@ -2589,113 +2546,113 @@ msgstr "Ανώνυμο έγγραφο"
 msgid "Error while writing to '%s'"
 msgstr "Σφάλμα κατά την εγγραφή στο '%s'"
 
-#: cafe-dictionary/src/gdict-applet.c:360
+#: cafe-dictionary/src/gdict-applet.c:356
 msgid "Clear the definitions found"
 msgstr "Εκκαθάριση των ορισμών που βρέθηκαν"
 
-#: cafe-dictionary/src/gdict-applet.c:362
+#: cafe-dictionary/src/gdict-applet.c:358
 msgid "Clear definition"
 msgstr "Εκκαθάριση ορισμού λέξης"
 
-#: cafe-dictionary/src/gdict-applet.c:363
+#: cafe-dictionary/src/gdict-applet.c:359
 msgid "Clear the text of the definition"
 msgstr "Εκκαθάριση του κειμένου του ορισμού"
 
-#: cafe-dictionary/src/gdict-applet.c:375
+#: cafe-dictionary/src/gdict-applet.c:367
 msgid "Print the definitions found"
 msgstr "Εκτύπωση των ορισμών που βρέθηκαν"
 
-#: cafe-dictionary/src/gdict-applet.c:377
+#: cafe-dictionary/src/gdict-applet.c:369
 msgid "Print definition"
 msgstr "Εκτύπωση ορισμού λέξης"
 
-#: cafe-dictionary/src/gdict-applet.c:378
+#: cafe-dictionary/src/gdict-applet.c:370
 msgid "Print the text of the definition"
 msgstr "Εκτύπωση του κειμένου του ορισμού"
 
-#: cafe-dictionary/src/gdict-applet.c:390
+#: cafe-dictionary/src/gdict-applet.c:378
 msgid "Save the definitions found"
 msgstr "Αποθήκευση των ορισμών που βρέθηκαν"
 
-#: cafe-dictionary/src/gdict-applet.c:392
+#: cafe-dictionary/src/gdict-applet.c:380
 msgid "Save definition"
 msgstr "Αποθήκευση ορισμού"
 
-#: cafe-dictionary/src/gdict-applet.c:393
+#: cafe-dictionary/src/gdict-applet.c:381
 msgid "Save the text of the definition to a file"
 msgstr "Αποθήκευση του κειμένου του ορισμού σε αρχείο"
 
-#: cafe-dictionary/src/gdict-applet.c:530
+#: cafe-dictionary/src/gdict-applet.c:518
 msgid "Click to view the dictionary window"
 msgstr "Κάντε κλικ για να δείτε το παράθυρο του λεξικού"
 
-#: cafe-dictionary/src/gdict-applet.c:532
+#: cafe-dictionary/src/gdict-applet.c:520
 msgid "Toggle dictionary window"
 msgstr "Εναλλαγή παραθύρου λεξικού"
 
-#: cafe-dictionary/src/gdict-applet.c:533
+#: cafe-dictionary/src/gdict-applet.c:521
 msgid "Show or hide the definition window"
 msgstr "Προβολή η απόκρυψη του παραθύρου του ορισμού"
 
-#: cafe-dictionary/src/gdict-applet.c:584
+#: cafe-dictionary/src/gdict-applet.c:572
 msgid "Type the word you want to look up"
 msgstr "Εισάγετε τη λέξη που θέλετε να αναζητήσετε"
 
-#: cafe-dictionary/src/gdict-applet.c:586
+#: cafe-dictionary/src/gdict-applet.c:574
 msgid "Dictionary entry"
 msgstr "Λήμμα λεξικού"
 
-#: cafe-dictionary/src/gdict-applet.c:715
+#: cafe-dictionary/src/gdict-applet.c:703
 #: cafe-dictionary/src/gdict-window.c:1104
 msgid "Dictionary Preferences"
 msgstr "Προτιμήσεις λεξικού"
 
-#: cafe-dictionary/src/gdict-applet.c:739
+#: cafe-dictionary/src/gdict-applet.c:727
 #: cafe-dictionary/src/gdict-pref-dialog.c:498
 #: cafe-dictionary/src/gdict-source-dialog.c:478
 #: cafe-dictionary/src/gdict-window.c:1251
 msgid "There was an error while displaying help"
 msgstr "Υπήρξε σφάλμα κατά την εμφάνιση της βοήθειας"
 
-#: cafe-dictionary/src/gdict-applet.c:878
+#: cafe-dictionary/src/gdict-applet.c:866
 #: cafe-dictionary/src/gdict-window.c:522
 #, c-format
 msgid "No dictionary source available with name '%s'"
 msgstr "Δεν βρέθηκε διαθέσιμη πηγή λεξικού με το όνομα  '%s'"
 
-#: cafe-dictionary/src/gdict-applet.c:882
+#: cafe-dictionary/src/gdict-applet.c:870
 #: cafe-dictionary/src/gdict-window.c:526
 msgid "Unable to find dictionary source"
 msgstr "Αδυναμία εύρεσης πηγής λεξικού."
 
-#: cafe-dictionary/src/gdict-applet.c:898
+#: cafe-dictionary/src/gdict-applet.c:886
 #: cafe-dictionary/src/gdict-window.c:542
 #, c-format
 msgid "No context available for source '%s'"
 msgstr "Δεν υπάρχει διαθέσιμο περιεχόμενο για τη πηγή '%s'"
 
-#: cafe-dictionary/src/gdict-applet.c:902
+#: cafe-dictionary/src/gdict-applet.c:890
 #: cafe-dictionary/src/gdict-window.c:546
 msgid "Unable to create a context"
 msgstr "Αδύνατη η δημιουργία περιεχομένου"
 
-#: cafe-dictionary/src/gdict-applet.c:1168
+#: cafe-dictionary/src/gdict-applet.c:1159
 msgid "_Look Up Selected Text"
 msgstr "Αναζήτηση επι_λεγμένου κειμένου"
 
-#: cafe-dictionary/src/gdict-applet.c:1171
+#: cafe-dictionary/src/gdict-applet.c:1162
 msgid "Cl_ear"
 msgstr "Ε_κκαθάριση"
 
-#: cafe-dictionary/src/gdict-applet.c:1174
+#: cafe-dictionary/src/gdict-applet.c:1165
 msgid "_Print"
 msgstr "Εκτύ_πωση"
 
-#: cafe-dictionary/src/gdict-applet.c:1177
+#: cafe-dictionary/src/gdict-applet.c:1168
 msgid "_Save"
 msgstr "Απο_θήκευση"
 
-#: cafe-dictionary/src/gdict-applet.c:1180
+#: cafe-dictionary/src/gdict-applet.c:1171
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
@@ -2817,10 +2774,6 @@ msgstr "Εκτύ_πωση..."
 #: cafe-dictionary/src/gdict-window.c:1299
 msgid "Print this document"
 msgstr "Εκτύπωση αυτού του εγγράφου"
-
-#: cafe-dictionary/src/gdict-window.c:1308
-msgid "_Find"
-msgstr ""
 
 #: cafe-dictionary/src/gdict-window.c:1309
 msgid "Find a word or phrase in the document"
@@ -3000,12 +2953,6 @@ msgstr ""
 msgid "Attach and mount one or more disk image files"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:8
-msgid "drive-removable-media"
-msgstr ""
-
 #: cafe-disk-image-mounter/src/main.c:57
 msgid "An error occurred"
 msgstr "Δημιουργήθηκε ένα σφάλμα"
@@ -3094,14 +3041,7 @@ msgstr "Λήψη στιγμιότυπου οθόνης"
 msgid "Save images of your desktop or individual windows"
 msgstr "Αποθήκευση εικόνων της επιφάνειας εργασίας σας ή ξεχωριστών παραθύρων"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:9
-msgid "applets-screenshooter"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-screenshot/data/cafe-screenshot.desktop.in:13
 msgid "CAFE;screenshot;snapshot;desktop;window;image;"
 msgstr ""
@@ -3302,8 +3242,8 @@ msgstr "Λήψη μιας φωτογραφίας της οθόνης"
 
 #: cafe-screenshot/src/cafe-screenshot.c:1355
 msgid ""
-"Conflicting options: --clipboard and --interactive should not be used at the"
-" same time.\n"
+"Conflicting options: --clipboard and --interactive should not be used at the "
+"same time.\n"
 msgstr ""
 
 #: cafe-screenshot/src/cafe-screenshot.c:1361
@@ -3373,3 +3313,12 @@ msgstr "Αποθήκευση αρχείου..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "Αδυναμία πρόσβασης στο αρχείο πηγής"
+
+#~ msgid "Zoom _In"
+#~ msgstr "_Μεγέθυνση"
+
+#~ msgid "Zoom _Out"
+#~ msgstr "Σ_μίκρυνση"
+
+#~ msgid "_Normal Size"
+#~ msgstr "Κα_νονικό μέγεθος"

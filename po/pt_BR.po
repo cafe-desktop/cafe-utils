@@ -2,7 +2,7 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-utils package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Herick Vinicius <herick.gustavo@gmail.com>, 2018
 # Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2018
@@ -24,19 +24,20 @@
 # Roger Araújo <roger.rf@gmail.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Rodrigo Piñero <rodrigo.pinero@yahoo.com.br>, 2019
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: cafe-utils 1.23.1\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2020-01-13 16:47+0100\n"
+"POT-Creation-Date: 2023-11-20 09:32+0100\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
 "Last-Translator: Rodrigo Piñero <rodrigo.pinero@yahoo.com.br>, 2019\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/cafe/teams/13566/pt_BR/)\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/cafe/"
+"teams/13566/pt_BR/)\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
@@ -48,14 +49,7 @@ msgstr "Analisador de Uso do Disco CAFE"
 msgid "Check folder sizes and available disk space"
 msgstr "Verifique o tamanho das pastas e o espaço disponível em disco"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:8
-msgid "cafe-disk-usage-analyzer"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:14
 msgid "CAFE;check;disk;usage;analyze;size;space;"
 msgstr ""
@@ -93,7 +87,7 @@ msgstr "Varrer _pasta..."
 msgid "S_can Remote Folder..."
 msgstr "_Varrer pasta remota..."
 
-#: baobab/data/baobab-main-window.ui:74 logview/src/logview-window.c:819
+#: baobab/data/baobab-main-window.ui:74 logview/src/logview-window.c:820
 #: cafe-dictionary/src/gdict-window.c:1286
 msgid "_Edit"
 msgstr "_Editar"
@@ -106,7 +100,7 @@ msgstr "Expan_dir tudo"
 msgid "_Collapse All"
 msgstr "Re_colher tudo"
 
-#: baobab/data/baobab-main-window.ui:101 logview/src/logview-window.c:820
+#: baobab/data/baobab-main-window.ui:101 logview/src/logview-window.c:821
 #: cafe-dictionary/src/gdict-window.c:1287
 msgid "_View"
 msgstr "_Exibir"
@@ -123,19 +117,19 @@ msgstr "Barra de st_atus"
 msgid "All_ocated Space"
 msgstr "E_spaço alocado"
 
-#: baobab/data/baobab-main-window.ui:129 logview/src/logview-window.c:822
-#: cafe-dictionary/src/gdict-applet.c:1183
+#: baobab/data/baobab-main-window.ui:129 logview/src/logview-window.c:823
+#: cafe-dictionary/src/gdict-applet.c:1174
 #: cafe-dictionary/src/gdict-window.c:1289
 msgid "_Help"
 msgstr "_Ajuda"
 
-#: baobab/data/baobab-main-window.ui:136 logview/src/logview-window.c:848
+#: baobab/data/baobab-main-window.ui:136 logview/src/logview-window.c:849
 #: cafe-dictionary/src/gdict-window.c:1339
 msgid "_Contents"
 msgstr "S_umário"
 
-#: baobab/data/baobab-main-window.ui:183 baobab/src/baobab.c:1236
-#: baobab/src/callbacks.c:107
+#: baobab/data/baobab-main-window.ui:183 baobab/src/baobab.c:1238
+#: baobab/src/callbacks.c:108
 msgid "Disk Usage Analyzer"
 msgstr "Analisador de Uso do Disco"
 
@@ -238,8 +232,8 @@ msgstr ""
 
 #: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:10
 msgid ""
-"As its name implies, Disk Usage Analyzer is a graphical utility that you can"
-" use to view and monitor your disk usage and folder structure. It displays "
+"As its name implies, Disk Usage Analyzer is a graphical utility that you can "
+"use to view and monitor your disk usage and folder structure. It displays "
 "summary information in ring or treemap charts."
 msgstr ""
 
@@ -250,98 +244,98 @@ msgid ""
 "changes to the home directory and warn the user if a file is added/removed."
 msgstr ""
 
-#: baobab/src/baobab.c:137 baobab/src/baobab.c:357
+#: baobab/src/baobab.c:139 baobab/src/baobab.c:359
 msgid "Scanning..."
 msgstr "Varrendo..."
 
-#: baobab/src/baobab.c:183
+#: baobab/src/baobab.c:185
 msgid "Total filesystem capacity:"
 msgstr "Capacidade total do sistema de arquivos:"
 
-#: baobab/src/baobab.c:184
+#: baobab/src/baobab.c:186
 msgid "used:"
 msgstr "usado:"
 
-#: baobab/src/baobab.c:185
+#: baobab/src/baobab.c:187
 msgid "available:"
 msgstr "disponível:"
 
-#: baobab/src/baobab.c:242 baobab/src/baobab.c:299 baobab/src/callbacks.c:272
+#: baobab/src/baobab.c:244 baobab/src/baobab.c:301 baobab/src/callbacks.c:274
 msgid "Calculating percentage bars..."
 msgstr "Calculando barras de porcentagem..."
 
-#: baobab/src/baobab.c:253 baobab/src/baobab.c:1300 baobab/src/callbacks.c:276
+#: baobab/src/baobab.c:255 baobab/src/baobab.c:1305 baobab/src/callbacks.c:278
 msgid "Ready"
 msgstr "Pronto"
 
-#: baobab/src/baobab.c:391
+#: baobab/src/baobab.c:393
 msgid "Total filesystem capacity"
 msgstr "Capacidade total do sistema de arquivos"
 
-#: baobab/src/baobab.c:415
+#: baobab/src/baobab.c:417
 msgid "Total filesystem usage"
 msgstr "Uso total do sistema de arquivos"
 
-#: baobab/src/baobab.c:457
+#: baobab/src/baobab.c:459
 msgid "contains hardlinks for:"
 msgstr "contém hardlinks para:"
 
-#: baobab/src/baobab.c:466
+#: baobab/src/baobab.c:468
 #, c-format
 msgid "%5d item"
 msgid_plural "%5d items"
 msgstr[0] "%5d item"
 msgstr[1] "%5d itens"
 
-#: baobab/src/baobab.c:592
+#: baobab/src/baobab.c:594
 msgid "Could not initialize monitoring"
 msgstr "Não foi possível iniciar o monitoramento"
 
-#: baobab/src/baobab.c:593
+#: baobab/src/baobab.c:595
 msgid "Changes to your home folder will not be monitored."
 msgstr "Alterações na sua pasta pessoal não serão monitoradas."
 
-#: baobab/src/baobab.c:914
+#: baobab/src/baobab.c:916
 msgid "Move to parent folder"
 msgstr "Mover para a pasta mãe"
 
-#: baobab/src/baobab.c:918
+#: baobab/src/baobab.c:920
 msgid "Zoom in"
 msgstr "Ampliar"
 
-#: baobab/src/baobab.c:922
+#: baobab/src/baobab.c:924
 msgid "Zoom out"
 msgstr "Reduzir"
 
-#: baobab/src/baobab.c:926
+#: baobab/src/baobab.c:928
 msgid "Save screenshot"
 msgstr "Salvar captura de tela"
 
-#: baobab/src/baobab.c:1112
+#: baobab/src/baobab.c:1114
 msgid "View as Rings Chart"
 msgstr "Ver como Gráfico de Anéis"
 
-#: baobab/src/baobab.c:1114
+#: baobab/src/baobab.c:1116
 msgid "View as Treemap Chart"
 msgstr "Ver como Gráfico de Mapa em Árvore"
 
-#: baobab/src/baobab.c:1225
+#: baobab/src/baobab.c:1227
 msgid "Show version"
 msgstr "Mostra a versão"
 
-#: baobab/src/baobab.c:1226
+#: baobab/src/baobab.c:1228
 msgid "[DIRECTORY]"
 msgstr "[PASTA]"
 
-#: baobab/src/baobab.c:1256
+#: baobab/src/baobab.c:1258
 msgid "Too many arguments. Only one directory can be specified."
 msgstr "Excesso de argumentos. Somente uma pasta pode ser especificada."
 
-#: baobab/src/baobab.c:1273
+#: baobab/src/baobab.c:1278
 msgid "Could not detect any mount point."
 msgstr "Não foi possível detectar nenhum ponto de montagem."
 
-#: baobab/src/baobab.c:1275
+#: baobab/src/baobab.c:1280
 msgid "Without mount points disk usage cannot be analyzed."
 msgstr "Sem um ponto de montagem o uso de disco não pode ser analisado."
 
@@ -502,14 +496,14 @@ msgid ""
 "The content of your home folder has changed. Select rescan to update the "
 "disk usage details."
 msgstr ""
-"O conteúdo da sua pasta pessoal foi alterado. Selecione \"Varrer novamente\""
-" para atualizar os detalhes de uso do disco."
+"O conteúdo da sua pasta pessoal foi alterado. Selecione \"Varrer novamente\" "
+"para atualizar os detalhes de uso do disco."
 
 #: baobab/src/baobab-treeview.c:84
 msgid "_Rescan"
 msgstr "Varrer _novamente"
 
-#: baobab/src/baobab-treeview.c:222 gsearchtool/src/gsearchtool.c:2436
+#: baobab/src/baobab-treeview.c:222 gsearchtool/src/gsearchtool.c:2428
 msgid "Folder"
 msgstr "Pasta"
 
@@ -517,7 +511,7 @@ msgstr "Pasta"
 msgid "Usage"
 msgstr "Utilização"
 
-#: baobab/src/baobab-treeview.c:258 gsearchtool/src/gsearchtool.c:2449
+#: baobab/src/baobab-treeview.c:258 gsearchtool/src/gsearchtool.c:2441
 msgid "Size"
 msgstr "Tamanho"
 
@@ -550,7 +544,7 @@ msgstr "Não foi possível analisar o uso de disco."
 msgid "_Open Folder"
 msgstr "_Abrir pasta"
 
-#: baobab/src/baobab-utils.c:368 gsearchtool/src/gsearchtool-callbacks.c:1216
+#: baobab/src/baobab-utils.c:368 gsearchtool/src/gsearchtool-callbacks.c:1204
 msgid "Mo_ve to Trash"
 msgstr "_Mover para a lixeira"
 
@@ -581,26 +575,26 @@ msgstr "Detalhes: %s"
 msgid "There was an error displaying help."
 msgstr "Ocorreu um erro ao exibir a ajuda."
 
-#: baobab/src/callbacks.c:77 logview/src/logview-about.h:45
-#: cafe-dictionary/src/gdict-about.c:52
+#: baobab/src/callbacks.c:78 logview/src/logview-about.h:46
+#: cafe-dictionary/src/gdict-about.c:53
 msgid "CAFE Documentation Team"
 msgstr "Equipe de Documentação do CAFE"
 
-#: baobab/src/callbacks.c:82 logview/src/logview-about.h:50
-#: cafe-dictionary/src/gdict-about.c:60
+#: baobab/src/callbacks.c:83 logview/src/logview-about.h:51
+#: cafe-dictionary/src/gdict-about.c:61
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
-"Este programa é um software livre; você pode redistribuí-lo e/ou modificá-lo"
-" sob os termos da Licença Pública Geral GNU como publicada pela Free "
-"Software Foundation (FSF); na versão 2 da Licença, ou (na sua opinião) "
-"qualquer versão."
+"Este programa é um software livre; você pode redistribuí-lo e/ou modificá-lo "
+"sob os termos da Licença Pública Geral GNU como publicada pela Free Software "
+"Foundation (FSF); na versão 2 da Licença, ou (na sua opinião) qualquer "
+"versão."
 
-#: baobab/src/callbacks.c:87 logview/src/logview-about.h:54
-#: cafe-dictionary/src/gdict-about.c:65
+#: baobab/src/callbacks.c:88 logview/src/logview-about.h:55
+#: cafe-dictionary/src/gdict-about.c:66
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -608,37 +602,39 @@ msgid ""
 "more details."
 msgstr ""
 "Este programa é distribuído na esperança de que seja útil, mas SEM NENHUMA "
-"GARANTIA; sem mesmo implicar garantias de COMERCIABILIDADE ou ADAPTAÇÃO A UM"
-" PROPÓSITO PARTICULAR.  Veja a Licença Pública Geral GNU (GPL) para mais "
+"GARANTIA; sem mesmo implicar garantias de COMERCIABILIDADE ou ADAPTAÇÃO A UM "
+"PROPÓSITO PARTICULAR.  Veja a Licença Pública Geral GNU (GPL) para mais "
 "detalhes. "
 
-#: baobab/src/callbacks.c:92 logview/src/logview-about.h:58
+#: baobab/src/callbacks.c:93 logview/src/logview-about.h:59
 msgid ""
-"You should have received a copy of the GNU General Public License along with"
-" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA."
 msgstr ""
 
-#: baobab/src/callbacks.c:109
+#: baobab/src/callbacks.c:110
 msgid "About Disk Usage Analyzer"
 msgstr ""
 
-#: baobab/src/callbacks.c:110
+#: baobab/src/callbacks.c:111
 msgid "A graphical tool to analyze disk usage."
 msgstr "Uma ferramenta gráfica para analisar o uso de disco."
 
-#: baobab/src/callbacks.c:111
+#: baobab/src/callbacks.c:112
 msgid ""
 "Copyright © 2005-2010 Fabio Marzocca\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
-#: baobab/src/callbacks.c:117 logview/src/logview-about.h:64
-#: cafe-dictionary/src/gdict-about.c:56
+#: baobab/src/callbacks.c:119 logview/src/logview-about.h:65
+#: cafe-dictionary/src/gdict-about.c:57
 msgid "translator-credits"
 msgstr ""
 "Equipe de tradução no Transifex:\n"
-"Fabrizzio Alphonsus Soares https://www.transifex.com/accounts/profile/fabrizzio\n"
+"Fabrizzio Alphonsus Soares https://www.transifex.com/accounts/profile/"
+"fabrizzio\n"
 "Alberto Federman Neto https://www.transifex.com/accounts/profile/albfneto\n"
 "Appes https://www.transifex.com/accounts/profile/apps\n"
 "arm332 https://www.transifex.com/accounts/profile/arm332\n"
@@ -647,24 +643,28 @@ msgstr ""
 "Enrico Nicoletto https://www.transifex.com/accounts/profile/EnricoNicoletto\n"
 "everton_seib https://www.transifex.com/accounts/profile/everton_seib\n"
 "Felipe Rozelio https://www.transifex.com/accounts/profile/feliperozelio\n"
-"João Paulo da Silva Júnior https://www.transifex.com/accounts/profile/jpsilvaj\n"
+"João Paulo da Silva Júnior https://www.transifex.com/accounts/profile/"
+"jpsilvaj\n"
 "Juliana Paula Felix https://www.transifex.com/accounts/profile/jufelix\n"
-"Lucas Cenir Friederich https://www.transifex.com/user/profile/lucasalvarokedrines\n"
+"Lucas Cenir Friederich https://www.transifex.com/user/profile/"
+"lucasalvarokedrines\n"
 "Marcelo Ghelman https://www.transifex.com/accounts/profile/marcelo.ghelman\n"
 "Marcio Andre Padula https://www.transifex.com/accounts/profile/Padula\n"
-"Marcus Vinícius Marques https://www.transifex.com/accounts/profile/Pygmalion\n"
+"Marcus Vinícius Marques https://www.transifex.com/accounts/profile/"
+"Pygmalion\n"
 "Matheus Macabu https://www.transifex.com/accounts/profile/mkbu95\n"
 "Matheus Martins https://www.transifex.com/accounts/profile/Matheus_Martins\n"
-"Michele dos Santos da Silva https://www.transifex.com/accounts/profile/mchelem\n"
+"Michele dos Santos da Silva https://www.transifex.com/accounts/profile/"
+"mchelem\n"
 "Thiago Cangussu https://www.transifex.com/accounts/profile/cangussu.thg\n"
 "vitorgatti https://www.transifex.com/accounts/profile/vitorgatti"
 
-#: baobab/src/callbacks.c:215 gsearchtool/src/gsearchtool-callbacks.c:509
-#: gsearchtool/src/gsearchtool-callbacks.c:855
+#: baobab/src/callbacks.c:217 gsearchtool/src/gsearchtool-callbacks.c:505
+#: gsearchtool/src/gsearchtool-callbacks.c:843
 msgid "The document does not exist."
 msgstr "O documento não existe."
 
-#: baobab/src/callbacks.c:296
+#: baobab/src/callbacks.c:298
 msgid "The folder does not exist."
 msgstr "A pasta não existe."
 
@@ -681,23 +681,16 @@ msgstr "Uma ferramenta de busca de arquivos para o Ambiente de Trabalho CAFE"
 msgid ""
 "CAFE Search Tool is a simple but powerful utility that allows you to search "
 "for files and folders on any mounted file system. Its interface gives you "
-"instant access to a wide variety of parameters for each search, such as text"
-" contained within a file, ownership, date of modification, file size, folder"
-" exclusion, etc.."
+"instant access to a wide variety of parameters for each search, such as text "
+"contained within a file, ownership, date of modification, file size, folder "
+"exclusion, etc.."
 msgstr ""
 
 #: gsearchtool/data/cafe-search-tool.desktop.in:4
 msgid "Locate documents and folders on this computer by name or content"
 msgstr "Localizar documentos e pastas neste computador por nome ou conteúdo"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: gsearchtool/data/cafe-search-tool.desktop.in:7
-msgid "system-search"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: gsearchtool/data/cafe-search-tool.desktop.in:13
 msgid ""
 "CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
@@ -733,12 +726,12 @@ msgstr "Caminhos excluídos da busca rápida"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:20
 msgid ""
-"This key defines the paths the search tool will exclude from a quick search."
-" The wildcards '*' and '?' are supported. The default values are /mnt/*, "
-"/media/*, /dev/*, /tmp/*, /proc/*, and /var/*."
+"This key defines the paths the search tool will exclude from a quick search. "
+"The wildcards '*' and '?' are supported. The default values are /mnt/*, /"
+"media/*, /dev/*, /tmp/*, /proc/*, and /var/*."
 msgstr ""
-"Esta chave define os caminhos que a ferramenta de busca irá excluir da busca"
-" rápida. Os caracteres curinga \"*\" e \"?\" são válidos. Os valores padrão "
+"Esta chave define os caminhos que a ferramenta de busca irá excluir da busca "
+"rápida. Os caracteres curinga \"*\" e \"?\" são válidos. Os valores padrão "
 "são /mnt/*, /media/*, /dev/*, /tmp/*, /proc/* e /var/*."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:24
@@ -762,13 +755,13 @@ msgid ""
 "This key defines the paths the search tool will exclude from a second scan "
 "when performing a quick search. The second scan uses the find command to "
 "search for files. The purpose of the second scan is to find files that have "
-"not been indexed. The wildcards '*' and '?' are supported. The default value"
-" is /."
+"not been indexed. The wildcards '*' and '?' are supported. The default value "
+"is /."
 msgstr ""
 "Esta chave define os caminhos que a ferramenta de busca irá excluir de uma "
 "segunda varredura ao realizar uma busca rápida. A segunda varredura usa o "
-"comando \"find\" para localizar os arquivos. O objetivo da segunda varredura"
-" é localizar arquivos que não tenham sido indexados. Os caracteres curinga "
+"comando \"find\" para localizar os arquivos. O objetivo da segunda varredura "
+"é localizar arquivos que não tenham sido indexados. Os caracteres curinga "
 "\"*\" e \"?\" são válidos. O valor padrão é /."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:34
@@ -789,12 +782,12 @@ msgstr "Largura padrão da janela"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:40
 msgid ""
-"This key defines the window width, and it's used to remember the size of the"
-" search tool between sessions. Setting it to -1 will make the search tool "
-"use the default width."
+"This key defines the window width, and it's used to remember the size of the "
+"search tool between sessions. Setting it to -1 will make the search tool use "
+"the default width."
 msgstr ""
-"Essa chave define a largura da janela, e é usada para preservar o tamanho da"
-" ferramenta de busca entre sessões. Defini-la como -1 fará a ferramenta de "
+"Essa chave define a largura da janela, e é usada para preservar o tamanho da "
+"ferramenta de busca entre sessões. Defini-la como -1 fará a ferramenta de "
 "busca usar a largura padrão."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:44
@@ -804,8 +797,8 @@ msgstr "Altura padrão da janela"
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:45
 msgid ""
 "This key defines the window height, and it's used to remember the size of "
-"the search tool between sessions. Setting it to -1 will make the search tool"
-" use the default height."
+"the search tool between sessions. Setting it to -1 will make the search tool "
+"use the default height."
 msgstr ""
 "Essa chave define a altura da janela, e é usada para preservar o tamanho da "
 "ferramenta de busca entre sessões. Defini-la como -1 fará a ferramenta de "
@@ -859,16 +852,16 @@ msgid ""
 "This key determines if the \"Size at least\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"Esta chave determina se a opção \"Tamanho mínimo\" estará selecionada quando"
-" a ferramenta de busca for iniciada."
+"Esta chave determina se a opção \"Tamanho mínimo\" estará selecionada quando "
+"a ferramenta de busca for iniciada."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:78
 msgid ""
 "This key determines if the \"Size at most\" search option is selected when "
 "the search tool is started."
 msgstr ""
-"Esta chave determina se a opção \"Tamanho máximo\" estará selecionada quando"
-" a ferramenta de busca for iniciada."
+"Esta chave determina se a opção \"Tamanho máximo\" estará selecionada quando "
+"a ferramenta de busca for iniciada."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:82
 msgid ""
@@ -888,8 +881,8 @@ msgstr ""
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:90
 msgid ""
-"This key determines if the \"Owned by group\" search option is selected when"
-" the search tool is started."
+"This key determines if the \"Owned by group\" search option is selected when "
+"the search tool is started."
 msgstr ""
 "Esta chave determina se a opção \"Pertence ao grupo\" estará selecionada "
 "quando a ferramenta de busca for iniciada."
@@ -912,8 +905,8 @@ msgstr ""
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:102
 msgid ""
-"This key determines if the \"Name matches regular expression\" search option"
-" is selected when the search tool is started."
+"This key determines if the \"Name matches regular expression\" search option "
+"is selected when the search tool is started."
 msgstr ""
 "Esta chave determina se a opção \"Nome corresponde a expressão regular\" "
 "estará selecionada quando a ferramenta de busca for iniciada."
@@ -1120,7 +1113,7 @@ msgid "Searching..."
 msgstr "Buscando..."
 
 #: gsearchtool/src/gsearchtool.c:511 gsearchtool/src/gsearchtool.c:1031
-#: gsearchtool/src/gsearchtool.c:3057
+#: gsearchtool/src/gsearchtool.c:3031
 msgid "Search for Files"
 msgstr "Buscar arquivos"
 
@@ -1171,8 +1164,7 @@ msgstr ""
 #: gsearchtool/src/gsearchtool.c:1311
 msgid "Set sort order to descending, the default is ascending"
 msgstr ""
-"Define o sentido da ordenação como decrescente. O sentido padrão é "
-"crescente."
+"Define o sentido da ordenação como decrescente. O sentido padrão é crescente."
 
 #: gsearchtool/src/gsearchtool.c:1312
 msgid "Automatically start a search"
@@ -1190,7 +1182,8 @@ msgstr "Seleciona e define a opção de busca \"%s\""
 
 #: gsearchtool/src/gsearchtool.c:1428
 msgid "Invalid option passed to sortby command line argument."
-msgstr "Opção inválida passada para o argumento de linha de comando \"sortby\"."
+msgstr ""
+"Opção inválida passada para o argumento de linha de comando \"sortby\"."
 
 #: gsearchtool/src/gsearchtool.c:1720
 msgid ""
@@ -1254,121 +1247,121 @@ msgstr "\"%s\" em %s"
 msgid "Enter a value in %s for the \"%s\" search option."
 msgstr "Informe uma expressão em %s para a opção de busca \"%s\"."
 
-#: gsearchtool/src/gsearchtool.c:2078
+#: gsearchtool/src/gsearchtool.c:2074
 #, c-format
 msgid "Remove \"%s\""
 msgstr "Remover \"%s\""
 
-#: gsearchtool/src/gsearchtool.c:2079
+#: gsearchtool/src/gsearchtool.c:2075
 #, c-format
 msgid "Click to remove the \"%s\" search option."
 msgstr "Clique para remover a opção de busca \"%s\"."
 
-#: gsearchtool/src/gsearchtool.c:2172
+#: gsearchtool/src/gsearchtool.c:2168
 msgid "A_vailable options:"
 msgstr "Opções disponí_veis:"
 
-#: gsearchtool/src/gsearchtool.c:2201
+#: gsearchtool/src/gsearchtool.c:2197
 msgid "Available options"
 msgstr "Opções disponíveis"
 
-#: gsearchtool/src/gsearchtool.c:2202
+#: gsearchtool/src/gsearchtool.c:2198
 msgid "Select a search option from the drop-down list."
 msgstr "Selecione uma opção de busca a partir da lista suspensa."
 
-#: gsearchtool/src/gsearchtool.c:2219
+#: gsearchtool/src/gsearchtool.c:2211
 msgid "Add search option"
 msgstr "Adicionar uma opção de busca"
 
-#: gsearchtool/src/gsearchtool.c:2220
+#: gsearchtool/src/gsearchtool.c:2212
 msgid "Click to add the selected available search option."
 msgstr "Clique para adicionar a opção de busca disponível selecionada."
 
-#: gsearchtool/src/gsearchtool.c:2309
+#: gsearchtool/src/gsearchtool.c:2301
 msgid "S_earch results:"
 msgstr "R_esultados da busca:"
 
-#: gsearchtool/src/gsearchtool.c:2352
+#: gsearchtool/src/gsearchtool.c:2344
 msgid "List View"
 msgstr "Visão em lista"
 
-#: gsearchtool/src/gsearchtool.c:2412
+#: gsearchtool/src/gsearchtool.c:2404
 #: cafe-dictionary/libgdict/gdict-source.c:243
 msgid "Name"
 msgstr "Nome"
 
-#: gsearchtool/src/gsearchtool.c:2461
+#: gsearchtool/src/gsearchtool.c:2453
 msgid "Type"
 msgstr "Tipo"
 
-#: gsearchtool/src/gsearchtool.c:2473
+#: gsearchtool/src/gsearchtool.c:2465
 msgid "Date Modified"
 msgstr "Data de modificação"
 
-#: gsearchtool/src/gsearchtool.c:2803
+#: gsearchtool/src/gsearchtool.c:2795
 msgid "_Name contains:"
 msgstr "_Nome contém:"
 
-#: gsearchtool/src/gsearchtool.c:2818 gsearchtool/src/gsearchtool.c:2819
+#: gsearchtool/src/gsearchtool.c:2810 gsearchtool/src/gsearchtool.c:2811
 msgid "Enter a filename or partial filename with or without wildcards."
 msgstr ""
 "Digite um nome de arquivo completo ou parcial, com ou sem caracteres "
 "curingas."
 
-#: gsearchtool/src/gsearchtool.c:2819
+#: gsearchtool/src/gsearchtool.c:2811
 msgid "Name contains"
 msgstr "Nome contém"
 
-#: gsearchtool/src/gsearchtool.c:2825
+#: gsearchtool/src/gsearchtool.c:2817
 msgid "_Look in folder:"
 msgstr "_Buscar na pasta:"
 
-#: gsearchtool/src/gsearchtool.c:2831
+#: gsearchtool/src/gsearchtool.c:2823
 msgid "Browse"
 msgstr "Navegar"
 
-#: gsearchtool/src/gsearchtool.c:2841
+#: gsearchtool/src/gsearchtool.c:2833
 msgid "Look in folder"
 msgstr "Busca na pasta"
 
-#: gsearchtool/src/gsearchtool.c:2841
+#: gsearchtool/src/gsearchtool.c:2833
 msgid "Select the folder or device from which you want to begin the search."
 msgstr ""
 "Selecione a pasta ou dispositivo a partir do qual deseja iniciar a busca."
 
-#: gsearchtool/src/gsearchtool.c:2859
+#: gsearchtool/src/gsearchtool.c:2851
 msgid "Select more _options"
 msgstr "Selecionar mais _opções"
 
-#: gsearchtool/src/gsearchtool.c:2868
+#: gsearchtool/src/gsearchtool.c:2860
 msgid "Select more options"
 msgstr "Selecionar mais opções"
 
-#: gsearchtool/src/gsearchtool.c:2868
+#: gsearchtool/src/gsearchtool.c:2860
 msgid "Click to expand or collapse the list of available options."
 msgstr "Clique para expandir ou recolher a lista de opções disponíveis."
 
-#: gsearchtool/src/gsearchtool.c:2899
+#: gsearchtool/src/gsearchtool.c:2886
 msgid "Click to display the help manual."
 msgstr "Clique para exibir o manual de ajuda."
 
-#: gsearchtool/src/gsearchtool.c:2912
+#: gsearchtool/src/gsearchtool.c:2895
 msgid "Click to close \"Search for Files\"."
 msgstr "Clique para fechar \"Buscar arquivos\"."
 
-#: gsearchtool/src/gsearchtool.c:2947
+#: gsearchtool/src/gsearchtool.c:2921
 msgid "Click to perform a search."
 msgstr "Clique para realizar uma busca."
 
-#: gsearchtool/src/gsearchtool.c:2948
+#: gsearchtool/src/gsearchtool.c:2922
 msgid "Click to stop a search."
 msgstr "Clique para interromper uma busca."
 
-#: gsearchtool/src/gsearchtool.c:3042
+#: gsearchtool/src/gsearchtool.c:3016
 msgid "- the CAFE Search Tool"
 msgstr "- a Ferramenta de Busca do CAFE"
 
-#: gsearchtool/src/gsearchtool.c:3051
+#: gsearchtool/src/gsearchtool.c:3025
 #, c-format
 msgid "Failed to parse command line arguments: %s\n"
 msgstr "Falha ao analisar os argumentos da linha de comando: %s\n"
@@ -1385,133 +1378,133 @@ msgstr[0] "Você tem certeza de que deseja abrir %d documento?"
 msgstr[1] "Você tem certeza de que deseja abrir %d documentos?"
 
 #: gsearchtool/src/gsearchtool-callbacks.c:351
-#: gsearchtool/src/gsearchtool-callbacks.c:551
+#: gsearchtool/src/gsearchtool-callbacks.c:547
 #, c-format
 msgid "This will open %d separate window."
 msgid_plural "This will open %d separate windows."
 msgstr[0] "Isso abrirá %d janela distinta."
 msgstr[1] "Isso abrirá %d janelas distintas."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:396
+#: gsearchtool/src/gsearchtool-callbacks.c:392
 #, c-format
 msgid "Could not open document \"%s\"."
 msgstr "Não foi possível abrir o documento \"%s\"."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:425
+#: gsearchtool/src/gsearchtool-callbacks.c:421
 #, c-format
 msgid "Could not open folder \"%s\"."
 msgstr "Não foi possível abrir a pasta \"%s\"."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:433
+#: gsearchtool/src/gsearchtool-callbacks.c:429
 msgid "The baul file manager is not running."
 msgstr "O gerenciador de arquivos Baul não está em execução."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:524
+#: gsearchtool/src/gsearchtool-callbacks.c:520
 msgid "There is no installed viewer capable of displaying the document."
 msgstr "Não há visualizador instalado capaz de exibir o documento."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:546
+#: gsearchtool/src/gsearchtool-callbacks.c:542
 #, c-format
 msgid "Are you sure you want to open %d folder?"
 msgid_plural "Are you sure you want to open %d folders?"
 msgstr[0] "Tem certeza de que deseja abrir %d pasta?"
 msgstr[1] "Tem certeza de que deseja abrir %d pastas?"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:701
+#: gsearchtool/src/gsearchtool-callbacks.c:693
 #, c-format
 msgid "Could not move \"%s\" to trash."
 msgstr "Não foi possível mover \"%s\" para a lixeira."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:732
+#: gsearchtool/src/gsearchtool-callbacks.c:724
 #, c-format
 msgid "Do you want to delete \"%s\" permanently?"
 msgstr "Deseja excluir \"%s\" permanentemente?"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:735
+#: gsearchtool/src/gsearchtool-callbacks.c:727
 #, c-format
 msgid "Trash is unavailable.  Could not move \"%s\" to the trash."
 msgstr ""
 "A lixeira está indisponível. Não foi possível mover \"%s\" para a lixeira."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:779
+#: gsearchtool/src/gsearchtool-callbacks.c:767
 #, c-format
 msgid "Could not delete \"%s\"."
 msgstr "Não foi possível excluir \"%s\"."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:891
+#: gsearchtool/src/gsearchtool-callbacks.c:879
 #, c-format
 msgid "Deleting \"%s\" failed: %s."
 msgstr "A tentativa de excluir \"%s\" falhou: %s."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:903
+#: gsearchtool/src/gsearchtool-callbacks.c:891
 #, c-format
 msgid "Moving \"%s\" failed: %s."
 msgstr "A tentativa de mover \"%s\" falhou: %s."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1030
-#: gsearchtool/src/gsearchtool-callbacks.c:1060
+#: gsearchtool/src/gsearchtool-callbacks.c:1018
+#: gsearchtool/src/gsearchtool-callbacks.c:1048
 msgid "_Open"
 msgstr "_Abrir"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1085
+#: gsearchtool/src/gsearchtool-callbacks.c:1073
 #, c-format
 msgid "_Open with %s"
 msgstr "_Abrir com %s"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1120
+#: gsearchtool/src/gsearchtool-callbacks.c:1108
 #, c-format
 msgid "Open with %s"
 msgstr "Abrir com %s"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1153
+#: gsearchtool/src/gsearchtool-callbacks.c:1141
 msgid "Open Wit_h"
 msgstr "Abrir _com"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1198
+#: gsearchtool/src/gsearchtool-callbacks.c:1186
 msgid "Open Containing _Folder"
 msgstr "Abrir pasta correspondente"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1238
+#: gsearchtool/src/gsearchtool-callbacks.c:1226
 msgid "_Save Results As..."
 msgstr "_Salvar resultados como..."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1620
+#: gsearchtool/src/gsearchtool-callbacks.c:1608
 msgid "Save Search Results As..."
 msgstr "Salvar resultados da busca como..."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1649
+#: gsearchtool/src/gsearchtool-callbacks.c:1637
 msgid "Could not save document."
 msgstr "Não foi possível salvar o documento."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1650
+#: gsearchtool/src/gsearchtool-callbacks.c:1638
 msgid "You did not select a document name."
 msgstr "Você não selecionou um nome de documento."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1680
+#: gsearchtool/src/gsearchtool-callbacks.c:1668
 #, c-format
 msgid "Could not save \"%s\" document to \"%s\"."
 msgstr "Não foi possível salvar o documento \"%s\" em \"%s\"."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1713
+#: gsearchtool/src/gsearchtool-callbacks.c:1701
 #, c-format
 msgid "The document \"%s\" already exists.  Would you like to replace it?"
 msgstr "O documento \"%s\" já existe. Deseja substituí-lo?"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1717
+#: gsearchtool/src/gsearchtool-callbacks.c:1705
 msgid "If you replace an existing file, its contents will be overwritten."
 msgstr ""
 "Se você substituir um arquivo existente, seu conteúdo será sobrescrito."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1732
+#: gsearchtool/src/gsearchtool-callbacks.c:1720
 #: cafe-screenshot/src/screenshot-xfer.c:82
 msgid "_Replace"
 msgstr "_Substituir"
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1781
+#: gsearchtool/src/gsearchtool-callbacks.c:1769
 msgid "The document name you selected is a folder."
 msgstr "O nome de documento que você selecionou é uma pasta."
 
-#: gsearchtool/src/gsearchtool-callbacks.c:1817
+#: gsearchtool/src/gsearchtool-callbacks.c:1805
 msgid "You may not have write permissions to the document."
 msgstr "Você pode não ter permissões de escrita para o documento."
 
@@ -1623,14 +1616,7 @@ msgstr "Visualizador de arquivos de log"
 msgid "View or monitor system log files"
 msgstr "Ver ou monitorar arquivos de log do sistema"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: logview/data/cafe-system-log.desktop.in.in:7
-msgid "cafe-system-log"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: logview/data/cafe-system-log.desktop.in.in:13
 msgid "CAFE;monitor;view;system;log;files;logviewer;"
 msgstr ""
@@ -1641,11 +1627,11 @@ msgstr "Arquivo de log para abrir ao iniciar"
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:6
 msgid ""
-"Specifies the log file displayed at startup. The default is either "
-"/var/adm/messages or /var/log/messages, depending on your operating system."
+"Specifies the log file displayed at startup. The default is either /var/adm/"
+"messages or /var/log/messages, depending on your operating system."
 msgstr ""
-"Especifica o arquivo de log exibido ao iniciar. O padrão é /var/adm/messages"
-" ou /var/log/messages, a depender do seu sistema operacional."
+"Especifica o arquivo de log exibido ao iniciar. O padrão é /var/adm/messages "
+"ou /var/log/messages, a depender do seu sistema operacional."
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:10
 msgid "Size of the font used to display the log"
@@ -1657,8 +1643,8 @@ msgid ""
 "main tree view. The default is taken from the default terminal font size."
 msgstr ""
 "Especifica o tamanho da fonte de largura fixa usada para exibir o log na "
-"visão em árvore principal. O padrão é derivado do tamanho da fonte padrão do"
-" terminal."
+"visão em árvore principal. O padrão é derivado do tamanho da fonte padrão do "
+"terminal."
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:15
 msgid "Height of the main window in pixels"
@@ -1727,7 +1713,7 @@ msgstr "Plano de fundo:"
 msgid "Effect:"
 msgstr "Efeito:"
 
-#: logview/src/logview-about.h:42 cafe-dictionary/src/gdict-about.c:49
+#: logview/src/logview-about.h:43 cafe-dictionary/src/gdict-about.c:50
 msgid "Sun GNOME Documentation Team <gdocteam@sun.com>"
 msgstr "Sun GNOME Equipe de documentação <gdocteam@sun.com>"
 
@@ -1765,7 +1751,7 @@ msgstr "Editar filtro"
 msgid "Add new filter"
 msgstr "Adicionar novo filtro"
 
-#: logview/src/logview-filter-manager.c:517
+#: logview/src/logview-filter-manager.c:503
 msgid "Filters"
 msgstr "Filtros"
 
@@ -1877,149 +1863,137 @@ msgstr ""
 #: logview/src/logview-window.c:771
 msgid ""
 "Copyright © 1998-2008 Free Software Foundation, Inc.\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
-#: logview/src/logview-window.c:775
+#: logview/src/logview-window.c:776
 msgid "A system log viewer for CAFE."
 msgstr "Um visualizador de logs de sistema para o Ambiente de Trabalho CAFE."
 
-#: logview/src/logview-window.c:818 cafe-dictionary/src/gdict-window.c:1285
+#: logview/src/logview-window.c:819 cafe-dictionary/src/gdict-window.c:1285
 msgid "_File"
 msgstr "_Arquivo"
 
-#: logview/src/logview-window.c:821
+#: logview/src/logview-window.c:822
 msgid "_Filters"
 msgstr "_Filtros"
 
-#: logview/src/logview-window.c:824
+#: logview/src/logview-window.c:825
 msgid "_Open..."
 msgstr "_Abrir..."
 
-#: logview/src/logview-window.c:824
+#: logview/src/logview-window.c:825
 msgid "Open a log from file"
 msgstr "Abre um log a partir de um arquivo"
 
-#: logview/src/logview-window.c:826 cafe-dictionary/src/gdict-window.c:1300
+#: logview/src/logview-window.c:827
 msgid "_Close"
 msgstr "_Fechar"
 
-#: logview/src/logview-window.c:826
+#: logview/src/logview-window.c:827
 msgid "Close this log"
 msgstr "Fecha este log"
 
-#: logview/src/logview-window.c:828
+#: logview/src/logview-window.c:829
 msgid "_Quit"
 msgstr "_Sair"
 
-#: logview/src/logview-window.c:828
+#: logview/src/logview-window.c:829
 msgid "Quit the log viewer"
 msgstr "Sai do visualizador de logs"
 
-#: logview/src/logview-window.c:831 cafe-dictionary/src/gdict-window.c:1304
+#: logview/src/logview-window.c:832
 msgid "_Copy"
 msgstr "_Copiar"
 
-#: logview/src/logview-window.c:831
+#: logview/src/logview-window.c:832
 msgid "Copy the selection"
 msgstr "Copiar a seleção"
 
-#: logview/src/logview-window.c:833 cafe-dictionary/src/gdict-window.c:1306
+#: logview/src/logview-window.c:834 cafe-dictionary/src/gdict-window.c:1306
 msgid "Select _All"
 msgstr "Selecionar _tudo"
 
-#: logview/src/logview-window.c:833
+#: logview/src/logview-window.c:834
 msgid "Select the entire log"
 msgstr "Seleciona todo o log"
 
-#: logview/src/logview-window.c:835
+#: logview/src/logview-window.c:836
 msgid "_Find..."
 msgstr "_Localizar..."
 
-#: logview/src/logview-window.c:835
+#: logview/src/logview-window.c:836
 msgid "Find a word or phrase in the log"
 msgstr "Localiza uma palavra ou frase no arquivo de log"
 
-#: logview/src/logview-window.c:838
-msgid "Zoom _In"
-msgstr "_Ampliar"
-
-#: logview/src/logview-window.c:838
+#: logview/src/logview-window.c:839
 msgid "Bigger text size"
 msgstr "Tamanho de texto maior"
 
-#: logview/src/logview-window.c:840
-msgid "Zoom _Out"
-msgstr "_Reduzir"
-
-#: logview/src/logview-window.c:840
+#: logview/src/logview-window.c:841
 msgid "Smaller text size"
 msgstr "Tamanho de texto menor"
 
-#: logview/src/logview-window.c:842
-msgid "_Normal Size"
-msgstr "Tamanho _normal"
-
-#: logview/src/logview-window.c:842
+#: logview/src/logview-window.c:843
 msgid "Normal text size"
 msgstr "Tamanho de texto normal"
 
-#: logview/src/logview-window.c:845
+#: logview/src/logview-window.c:846
 msgid "Manage Filters"
 msgstr "Gerenciar filtros"
 
-#: logview/src/logview-window.c:845
+#: logview/src/logview-window.c:846
 msgid "Manage filters"
 msgstr "Gerencia filtros"
 
-#: logview/src/logview-window.c:848
+#: logview/src/logview-window.c:849
 msgid "Open the help contents for the log viewer"
 msgstr "Abre o sumário da ajuda para o visualizador de logs"
 
-#: logview/src/logview-window.c:850 cafe-dictionary/src/gdict-applet.c:1186
+#: logview/src/logview-window.c:851 cafe-dictionary/src/gdict-applet.c:1177
 #: cafe-dictionary/src/gdict-window.c:1341
 msgid "_About"
 msgstr "_Sobre"
 
-#: logview/src/logview-window.c:850
+#: logview/src/logview-window.c:851
 msgid "Show the about dialog for the log viewer"
 msgstr "Mostra a janela \"Sobre\" para o visualizador de logs"
 
-#: logview/src/logview-window.c:855
+#: logview/src/logview-window.c:856
 msgid "_Statusbar"
 msgstr "Barra de _status"
 
-#: logview/src/logview-window.c:855
+#: logview/src/logview-window.c:856
 msgid "Show Status Bar"
 msgstr "Mostra a barra de status"
 
-#: logview/src/logview-window.c:857
+#: logview/src/logview-window.c:858
 msgid "Side _Pane"
 msgstr "_Barra lateral"
 
-#: logview/src/logview-window.c:857
+#: logview/src/logview-window.c:858
 msgid "Show Side Pane"
 msgstr "Mostra o painel lateral"
 
-#: logview/src/logview-window.c:859
+#: logview/src/logview-window.c:860
 msgid "Show matches only"
 msgstr "Mostrar somente ocorrências"
 
-#: logview/src/logview-window.c:859
+#: logview/src/logview-window.c:860
 msgid "Only show lines that match one of the given filters"
-msgstr ""
-"Mostrar somente linhas que correspondam a algum dos filtros fornecidos"
+msgstr "Mostrar somente linhas que correspondam a algum dos filtros fornecidos"
 
-#: logview/src/logview-window.c:991
+#: logview/src/logview-window.c:992
 #, c-format
 msgid "Can't read from \"%s\""
 msgstr "Não é possível ler \"%s\""
 
-#: logview/src/logview-window.c:1416
+#: logview/src/logview-window.c:1417
 msgid "Version: "
 msgstr "Versão: "
 
-#: logview/src/logview-window.c:1522
+#: logview/src/logview-window.c:1525
 msgid "Could not open the following files:"
 msgstr "Não foi possível abrir os seguintes arquivos:"
 
@@ -2034,18 +2008,9 @@ msgstr "Dicionário CAFE"
 
 #: cafe-dictionary/data/cafe-dictionary.desktop.in.in:4
 msgid "Check word definitions and spellings in an online dictionary"
-msgstr ""
-"Consultar definições e ortografia de palavras em um dicionário on-line"
+msgstr "Consultar definições e ortografia de palavras em um dicionário on-line"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:9
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:12
-msgid "accessories-dictionary"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-dictionary/data/cafe-dictionary.desktop.in.in:13
 msgid "CAFE;dictionary;applet;thesaurus;spelling;definitions;online;"
 msgstr ""
@@ -2057,8 +2022,8 @@ msgstr "Um dicionário para o Ambiente de Trabalho CAFE"
 #: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:10
 msgid ""
 "CAFE Dictionary allows you to look up words in on-line dictionaries. It "
-"comes preconfigured with a list of Dict servers (RFC 2229), to which you can"
-" add your own sources, while you can select specific servers for a specific "
+"comes preconfigured with a list of Dict servers (RFC 2229), to which you can "
+"add your own sources, while you can select specific servers for a specific "
 "query."
 msgstr ""
 
@@ -2114,8 +2079,7 @@ msgstr "O nome da fonte de dicionário usada"
 msgid ""
 "The name of the dictionary source used to retrieve the definitions of words."
 msgstr ""
-"O nome da fonte de dicionário usada para recuperar as definições de "
-"palavras."
+"O nome da fonte de dicionário usada para recuperar as definições de palavras."
 
 #: cafe-dictionary/data/thai.desktop.in:3
 msgid "Thai"
@@ -2181,8 +2145,8 @@ msgid ""
 "Unable to connect to the dictionary server at '%s:%d'. The server replied "
 "with code %d (server down)"
 msgstr ""
-"Não foi possível conectar ao servidor de dicionário em \"%s:%d\". O servidor"
-" respondeu com o código %d (servidor fora do ar)"
+"Não foi possível conectar ao servidor de dicionário em \"%s:%d\". O servidor "
+"respondeu com o código %d (servidor fora do ar)"
 
 #: cafe-dictionary/libgdict/gdict-client-context.c:1188
 #, c-format
@@ -2474,34 +2438,35 @@ msgstr "Opções do GDict"
 msgid "Show GDict Options"
 msgstr "Mostra as opções do GDict"
 
-#: cafe-dictionary/src/gdict-about.c:57 cafe-dictionary/src/gdict-applet.c:587
+#: cafe-dictionary/src/gdict-about.c:58 cafe-dictionary/src/gdict-applet.c:575
 msgid "Look up words in dictionaries"
 msgstr "Consultar palavras em dicionários"
 
-#: cafe-dictionary/src/gdict-about.c:70
+#: cafe-dictionary/src/gdict-about.c:71
 msgid ""
-"You should have received a copy of the GNU General Public License along with"
-" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
-"Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com este"
-" programa; se não, escreva para a Fundação do Software Livre (FSF) Inc., 51 "
+"Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com este "
+"programa; se não, escreva para a Fundação do Software Livre (FSF) Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301 USA."
 
-#: cafe-dictionary/src/gdict-about.c:87 cafe-dictionary/src/gdict-app.c:364
+#: cafe-dictionary/src/gdict-about.c:88 cafe-dictionary/src/gdict-app.c:364
 #: cafe-dictionary/src/gdict-window.c:607
 #: cafe-dictionary/src/gdict-window.c:1891
 msgid "Dictionary"
 msgstr "Dicionário"
 
-#: cafe-dictionary/src/gdict-about.c:89
+#: cafe-dictionary/src/gdict-about.c:90
 msgid "About Dictionary"
 msgstr ""
 
-#: cafe-dictionary/src/gdict-about.c:90
+#: cafe-dictionary/src/gdict-about.c:91
 msgid ""
 "Copyright © 2005-2006 Emmanuele Bassi\n"
-"Copyright © 2011-2020 CAFE developers"
+"Copyright © 2011-2020 MATE developers\n"
+"Copyright © 2023 Pablo Barciela"
 msgstr ""
 
 #. Translators: the first is the word found, the second is the
@@ -2595,113 +2560,113 @@ msgstr "Documento sem título"
 msgid "Error while writing to '%s'"
 msgstr "Erro ao gravar em '%s'"
 
-#: cafe-dictionary/src/gdict-applet.c:360
+#: cafe-dictionary/src/gdict-applet.c:356
 msgid "Clear the definitions found"
 msgstr "Limpa as definições localizadas"
 
-#: cafe-dictionary/src/gdict-applet.c:362
+#: cafe-dictionary/src/gdict-applet.c:358
 msgid "Clear definition"
 msgstr "Limpar definição"
 
-#: cafe-dictionary/src/gdict-applet.c:363
+#: cafe-dictionary/src/gdict-applet.c:359
 msgid "Clear the text of the definition"
 msgstr "Limpa o texto da definição"
 
-#: cafe-dictionary/src/gdict-applet.c:375
+#: cafe-dictionary/src/gdict-applet.c:367
 msgid "Print the definitions found"
 msgstr "Imprime as definições localizadas"
 
-#: cafe-dictionary/src/gdict-applet.c:377
+#: cafe-dictionary/src/gdict-applet.c:369
 msgid "Print definition"
 msgstr "Imprimir definição"
 
-#: cafe-dictionary/src/gdict-applet.c:378
+#: cafe-dictionary/src/gdict-applet.c:370
 msgid "Print the text of the definition"
 msgstr "Imprime o texto da definição"
 
-#: cafe-dictionary/src/gdict-applet.c:390
+#: cafe-dictionary/src/gdict-applet.c:378
 msgid "Save the definitions found"
 msgstr "Salva as definições localizadas"
 
-#: cafe-dictionary/src/gdict-applet.c:392
+#: cafe-dictionary/src/gdict-applet.c:380
 msgid "Save definition"
 msgstr "Salvar definição"
 
-#: cafe-dictionary/src/gdict-applet.c:393
+#: cafe-dictionary/src/gdict-applet.c:381
 msgid "Save the text of the definition to a file"
 msgstr "Salva o texto da definição em um arquivo"
 
-#: cafe-dictionary/src/gdict-applet.c:530
+#: cafe-dictionary/src/gdict-applet.c:518
 msgid "Click to view the dictionary window"
 msgstr "Clique para ver a janela do dicionário"
 
-#: cafe-dictionary/src/gdict-applet.c:532
+#: cafe-dictionary/src/gdict-applet.c:520
 msgid "Toggle dictionary window"
 msgstr "Alternar janela do dicionário"
 
-#: cafe-dictionary/src/gdict-applet.c:533
+#: cafe-dictionary/src/gdict-applet.c:521
 msgid "Show or hide the definition window"
 msgstr "Mostra ou oculta a janela de definição"
 
-#: cafe-dictionary/src/gdict-applet.c:584
+#: cafe-dictionary/src/gdict-applet.c:572
 msgid "Type the word you want to look up"
 msgstr "Informe a palavra que deseja consultar"
 
-#: cafe-dictionary/src/gdict-applet.c:586
+#: cafe-dictionary/src/gdict-applet.c:574
 msgid "Dictionary entry"
 msgstr "Entrada de dicionário"
 
-#: cafe-dictionary/src/gdict-applet.c:715
+#: cafe-dictionary/src/gdict-applet.c:703
 #: cafe-dictionary/src/gdict-window.c:1104
 msgid "Dictionary Preferences"
 msgstr "Preferências do dicionário"
 
-#: cafe-dictionary/src/gdict-applet.c:739
+#: cafe-dictionary/src/gdict-applet.c:727
 #: cafe-dictionary/src/gdict-pref-dialog.c:498
 #: cafe-dictionary/src/gdict-source-dialog.c:478
 #: cafe-dictionary/src/gdict-window.c:1251
 msgid "There was an error while displaying help"
 msgstr "Ocorreu um erro ao exibir a ajuda"
 
-#: cafe-dictionary/src/gdict-applet.c:878
+#: cafe-dictionary/src/gdict-applet.c:866
 #: cafe-dictionary/src/gdict-window.c:522
 #, c-format
 msgid "No dictionary source available with name '%s'"
 msgstr "Nenhuma fonte de dicionário disponível com o nome '%s'"
 
-#: cafe-dictionary/src/gdict-applet.c:882
+#: cafe-dictionary/src/gdict-applet.c:870
 #: cafe-dictionary/src/gdict-window.c:526
 msgid "Unable to find dictionary source"
 msgstr "Não foi possível localizar a fonte de dicionário"
 
-#: cafe-dictionary/src/gdict-applet.c:898
+#: cafe-dictionary/src/gdict-applet.c:886
 #: cafe-dictionary/src/gdict-window.c:542
 #, c-format
 msgid "No context available for source '%s'"
 msgstr "Nenhum contexto disponível para a fonte '%s'"
 
-#: cafe-dictionary/src/gdict-applet.c:902
+#: cafe-dictionary/src/gdict-applet.c:890
 #: cafe-dictionary/src/gdict-window.c:546
 msgid "Unable to create a context"
 msgstr "Não foi possível criar um contexto"
 
-#: cafe-dictionary/src/gdict-applet.c:1168
+#: cafe-dictionary/src/gdict-applet.c:1159
 msgid "_Look Up Selected Text"
 msgstr "Consultar o texto se_lecionado"
 
-#: cafe-dictionary/src/gdict-applet.c:1171
+#: cafe-dictionary/src/gdict-applet.c:1162
 msgid "Cl_ear"
 msgstr "L_impar"
 
-#: cafe-dictionary/src/gdict-applet.c:1174
+#: cafe-dictionary/src/gdict-applet.c:1165
 msgid "_Print"
 msgstr "_Imprimir"
 
-#: cafe-dictionary/src/gdict-applet.c:1177
+#: cafe-dictionary/src/gdict-applet.c:1168
 msgid "_Save"
 msgstr "_Salvar"
 
-#: cafe-dictionary/src/gdict-applet.c:1180
+#: cafe-dictionary/src/gdict-applet.c:1171
 msgid "Preferences"
 msgstr "Preferências"
 
@@ -2823,10 +2788,6 @@ msgstr "Im_primir..."
 #: cafe-dictionary/src/gdict-window.c:1299
 msgid "Print this document"
 msgstr "Imprime este documento"
-
-#: cafe-dictionary/src/gdict-window.c:1308
-msgid "_Find"
-msgstr "_Localizar"
 
 #: cafe-dictionary/src/gdict-window.c:1309
 msgid "Find a word or phrase in the document"
@@ -3006,12 +2967,6 @@ msgstr ""
 msgid "Attach and mount one or more disk image files"
 msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:8
-msgid "drive-removable-media"
-msgstr ""
-
 #: cafe-disk-image-mounter/src/main.c:57
 msgid "An error occurred"
 msgstr "Ocorreu um erro"
@@ -3100,14 +3055,7 @@ msgstr "Capturar imagem da tela"
 msgid "Save images of your desktop or individual windows"
 msgstr "Salvar imagens da sua área de trabalho ou de janelas individuais"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:9
-msgid "applets-screenshooter"
-msgstr ""
-
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-screenshot/data/cafe-screenshot.desktop.in:13
 msgid "CAFE;screenshot;snapshot;desktop;window;image;"
 msgstr ""
@@ -3304,8 +3252,8 @@ msgstr "Tira uma foto da tela"
 
 #: cafe-screenshot/src/cafe-screenshot.c:1355
 msgid ""
-"Conflicting options: --clipboard and --interactive should not be used at the"
-" same time.\n"
+"Conflicting options: --clipboard and --interactive should not be used at the "
+"same time.\n"
 msgstr ""
 "Conflito de opções: --clipboard e --interactive não devem ser usados ao "
 "mesmo tempo.\n"
@@ -3315,8 +3263,7 @@ msgid ""
 "Conflicting options: --window and --area should not be used at the same "
 "time.\n"
 msgstr ""
-"Opções conflitantes: --window e --area não devem ser usadas ao mesmo "
-"tempo.\n"
+"Opções conflitantes: --window e --area não devem ser usadas ao mesmo tempo.\n"
 
 #: cafe-screenshot/src/screenshot-dialog.c:205
 #, c-format
@@ -3326,7 +3273,8 @@ msgid ""
 "\n"
 "Please check your installation of cafe-utils."
 msgstr ""
-"Erro ao carregar arquivo de definição da interface do usuário para o programa de captura de tela:\n"
+"Erro ao carregar arquivo de definição da interface do usuário para o "
+"programa de captura de tela:\n"
 "%s\n"
 "\n"
 "Verifique a instalação do cafe-utils."
@@ -3377,3 +3325,15 @@ msgstr "Salvando arquivo..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "Não foi possível acessar o arquivo de fonte"
+
+#~ msgid "Zoom _In"
+#~ msgstr "_Ampliar"
+
+#~ msgid "Zoom _Out"
+#~ msgstr "_Reduzir"
+
+#~ msgid "_Normal Size"
+#~ msgstr "Tamanho _normal"
+
+#~ msgid "_Find"
+#~ msgstr "_Localizar"
