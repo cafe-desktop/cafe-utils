@@ -1,18 +1,18 @@
 # Translators:
 # Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-13 16:47+0100\n"
+"POT-Creation-Date: 2023-11-20 09:33+0100\n"
 "PO-Revision-Date: 2018-09-13 10:15+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Kazakh (https://www.transifex.com/cafe/teams/13566/kk/)\n"
+"Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: kk\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -65,80 +65,11 @@ msgstr ""
 msgid "GNOME Documentation Project"
 msgstr ""
 
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:2
-msgid ""
-"Permission is granted to copy, distribute and/or modify this document under "
-"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
-"later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
-" of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
-msgstr ""
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:12 C/legal.xml:12
-msgid ""
-"This manual is part of a collection of CAFE manuals distributed under the "
-"GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in"
-" section 6 of the license."
-msgstr ""
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:19 C/legal.xml:19
-msgid ""
-"Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any CAFE "
-"documentation, and the members of the CAFE Documentation Project are made "
-"aware of those trademarks, then the names are in capital letters or initial "
-"capital letters."
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:35 C/legal.xml:35
-msgid ""
-"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
-"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
-"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
-"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
-"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
-"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
-"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
-"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
-"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
-"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
-"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
-msgstr ""
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:55 C/legal.xml:55
-msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING"
-" NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
-"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
-"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
-"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
-"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES"
-" OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE"
-" POSSIBILITY OF SUCH DAMAGES."
-msgstr ""
-
-#. (itstool) path: legalnotice/para
-#: C/index.docbook:28 C/legal.xml:28
-msgid ""
-"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
-"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<_:orderedlist-1/>"
-msgstr ""
-
 #. (itstool) path: authorgroup/author
 #: C/index.docbook:67
 msgid ""
-"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Search for"
-" Files Maintainer</orgname> </affiliation>"
+"<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Search for "
+"Files Maintainer</orgname> </affiliation>"
 msgstr ""
 
 #. (itstool) path: affiliation/address
@@ -158,8 +89,8 @@ msgstr ""
 #: C/index.docbook:81
 msgid ""
 "<firstname>Sun</firstname> <surname>GNOME Documentation Team</surname> "
-"<affiliation> <orgname>Sun Microsystems</orgname> <_:address-1/> "
-"</affiliation>"
+"<affiliation> <orgname>Sun Microsystems</orgname> <_:address-1/> </"
+"affiliation>"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
@@ -207,8 +138,8 @@ msgstr ""
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:140
 msgid ""
-"<revnumber>Search for Files Manual V2.6</revnumber> <date>January "
-"2005</date> <_:revdescription-1/>"
+"<revnumber>Search for Files Manual V2.6</revnumber> <date>January 2005</"
+"date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
@@ -220,22 +151,22 @@ msgstr ""
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:150
 msgid ""
-"<revnumber>Search for Files Manual V2.4</revnumber> <date>February "
-"2004</date> <_:revdescription-1/>"
+"<revnumber>Search for Files Manual V2.4</revnumber> <date>February 2004</"
+"date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:158
 msgid ""
-"<revnumber>Search for Files Manual V2.3</revnumber> <date>September "
-"2002</date> <_:revdescription-1/>"
+"<revnumber>Search for Files Manual V2.3</revnumber> <date>September 2002</"
+"date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:166
 msgid ""
-"<revnumber>Search for Filesl Manual V2.2</revnumber> <date>August "
-"2002</date> <_:revdescription-1/>"
+"<revnumber>Search for Filesl Manual V2.2</revnumber> <date>August 2002</"
+"date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
@@ -248,8 +179,8 @@ msgstr ""
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:182
 msgid ""
-"<revnumber>Search for Files Manual V2.0</revnumber> <date>May 2002</date> "
-"<_:revdescription-1/>"
+"<revnumber>Search for Files Manual V2.0</revnumber> <date>May 2002</date> <_:"
+"revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
@@ -260,8 +191,8 @@ msgstr ""
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:190
 msgid ""
-"<revnumber>Search for Files Manual</revnumber> <date>2000</date> "
-"<_:revdescription-1/>"
+"<revnumber>Search for Files Manual</revnumber> <date>2000</date> <_:"
+"revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: articleinfo/releaseinfo
@@ -278,8 +209,8 @@ msgstr ""
 #: C/index.docbook:206
 msgid ""
 "To report a bug or make a suggestion regarding the Search for Files "
-"application or this manual, follow the directions in the <ulink url=\"help"
-":cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
+"application or this manual, follow the directions in the <ulink url=\"help:"
+"cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -304,21 +235,20 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:222
 msgid ""
-"<application>Search for Files</application> uses the "
-"<command>find</command>, <command>grep</command>, and "
-"<command>locate</command> UNIX commands. By default, when performing a basic"
-" search <application>Search for Files</application> first uses the "
-"<command>locate</command> command, and then uses the slower but more "
-"thorough <command>find</command> command."
+"<application>Search for Files</application> uses the <command>find</"
+"command>, <command>grep</command>, and <command>locate</command> UNIX "
+"commands. By default, when performing a basic search <application>Search for "
+"Files</application> first uses the <command>locate</command> command, and "
+"then uses the slower but more thorough <command>find</command> command."
 msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:223
 msgid ""
 "The case sensitivity of the search depends on your operating system. For "
-"example, on Linux, the <command>find</command>, <command>grep</command>, and"
-" <command>locate</command> commands support the <literal>-i</literal> "
-"option, so all searches are case-insensitive."
+"example, on Linux, the <command>find</command>, <command>grep</command>, and "
+"<command>locate</command> commands support the <literal>-i</literal> option, "
+"so all searches are case-insensitive."
 msgstr ""
 
 #. (itstool) path: sect1/title
@@ -353,8 +283,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:241
 msgid ""
-"Choose <menuchoice><guimenuitem>Search for "
-"Files...</guimenuitem></menuchoice>"
+"Choose <menuchoice><guimenuitem>Search for Files...</guimenuitem></"
+"menuchoice>"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
@@ -469,8 +399,8 @@ msgstr ""
 #. (itstool) path: entry/para
 #: C/index.docbook:326
 msgid ""
-"<application>Search for Files</application> searches for all files that have"
-" extension <userinput>.c</userinput> or <userinput>.h</userinput>."
+"<application>Search for Files</application> searches for all files that have "
+"extension <userinput>.c</userinput> or <userinput>.h</userinput>."
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -490,8 +420,8 @@ msgstr ""
 #: C/index.docbook:339
 msgid ""
 "<application>Search for Files</application> searches in the directory that "
-"you specify and the subdirectories of the directory. <application>Search for"
-" Files</application> displays the results of the search in the "
+"you specify and the subdirectories of the directory. <application>Search for "
+"Files</application> displays the results of the search in the "
 "<guilabel>Search results</guilabel> list box. If <application>Search for "
 "Files</application> does not find any files that match the search criteria, "
 "the application displays the message \"No files found\" in the "
@@ -501,8 +431,8 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: C/index.docbook:343
 msgid ""
-"By default, <application>Search for Files</application> will perform a quick"
-" search using the <command>locate</command> command followed by a more "
+"By default, <application>Search for Files</application> will perform a quick "
+"search using the <command>locate</command> command followed by a more "
 "thorough second search using the <command>find</command> command. The "
 "<command>locate</command> command is faster because it uses a database of "
 "information about files. If this database is more than a week old, "
@@ -671,8 +601,8 @@ msgstr ""
 #. (itstool) path: entry/para
 #: C/index.docbook:420
 msgid ""
-"Search for files that are owned by the group specified. Type the name of the"
-" group in the text box provided."
+"Search for files that are owned by the group specified. Type the name of the "
+"group in the text box provided."
 msgstr ""
 
 #. (itstool) path: entry/para
@@ -742,8 +672,7 @@ msgstr "Басқа файлдық жүйелерді елемеу"
 #. (itstool) path: entry/para
 #: C/index.docbook:456
 msgid ""
-"Search in directories that are in the same filesystem as the start "
-"directory."
+"Search in directories that are in the same filesystem as the start directory."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -797,8 +726,8 @@ msgstr ""
 #: C/index.docbook:482
 msgid ""
 "To delete a file displayed in the <guilabel>Search results</guilabel> list "
-"box, right-click on the file, then choose <guimenuitem>Move to "
-"Trash</guimenuitem>."
+"box, right-click on the file, then choose <guimenuitem>Move to Trash</"
+"guimenuitem>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -809,11 +738,11 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: C/index.docbook:494
 msgid ""
-"To save the results of the last search that <application>Search for "
-"Files</application> performed, right-click in the <guilabel>Search "
-"results</guilabel> list, then choose <guimenuitem>Save Results "
-"As</guimenuitem>. Enter the name of the file to which you want to save the "
-"results, then click Save."
+"To save the results of the last search that <application>Search for Files</"
+"application> performed, right-click in the <guilabel>Search results</"
+"guilabel> list, then choose <guimenuitem>Save Results As</guimenuitem>. "
+"Enter the name of the file to which you want to save the results, then click "
+"Save."
 msgstr ""
 
 #. (itstool) path: sect1/title
@@ -825,8 +754,8 @@ msgstr ""
 #: C/index.docbook:504
 msgid ""
 "<application>Search for Files</application> provides gsettings keys to "
-"modify some of its behavior. The gsettings values can be changed by starting"
-" the <application>Configuration Editor</application> in the following ways:"
+"modify some of its behavior. The gsettings values can be changed by starting "
+"the <application>Configuration Editor</application> in the following ways:"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
@@ -889,10 +818,10 @@ msgstr ""
 #. (itstool) path: sect2/para
 #: C/index.docbook:532
 msgid ""
-"After completing a quick search, <application>Search for Files</application>"
-" will perform a thorough search using the <command>find</command> command. "
-"The purpose of this second scan is to find files that have not been indexed."
-" Files that match the search criteria are added to the <guilabel>Search "
+"After completing a quick search, <application>Search for Files</application> "
+"will perform a thorough search using the <command>find</command> command. "
+"The purpose of this second scan is to find files that have not been indexed. "
+"Files that match the search criteria are added to the <guilabel>Search "
 "results</guilabel> list keeping the list up to date."
 msgstr ""
 
@@ -972,7 +901,65 @@ msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy"
-" of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
 "with this manual."
+msgstr ""
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:12
+msgid ""
+"This manual is part of a collection of CAFE manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
+msgstr ""
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:19
+msgid ""
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any CAFE "
+"documentation, and the members of the CAFE Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/legal.xml:35
+msgid ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/legal.xml:55
+msgid ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
+msgstr ""
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:28
+msgid ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<_:orderedlist-1/>"
 msgstr ""
