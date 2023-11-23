@@ -3253,15 +3253,3 @@ msgstr "Menyimpan berkas..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "Tak bisa mengakses berkas sumber"
-
-#~ msgid "Zoom _In"
-#~ msgstr "Perbesar Tamp_ilan"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "P_erkecil"
-
-#~ msgid "_Normal Size"
-#~ msgstr "Ukuran _Normal"
-
-#~ msgid "_Find"
-#~ msgstr "_Cari"

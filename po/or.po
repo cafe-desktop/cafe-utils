@@ -3237,12 +3237,3 @@ msgstr "ଫାଇଲ ସଂରକ୍ଷଣ କରୁଅଛି..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "ଉତ୍ସ ଫାଇଲରେ ଅଭିଗମ୍ୟ କରିବାରେ ଅସମର୍ଥ"
-
-#~ msgid "Zoom _In"
-#~ msgstr "ବଡ କରନ୍ତୁ (_I)"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "ସାନ କରନ୍ତୁ (_O)"
-
-#~ msgid "_Normal Size"
-#~ msgstr "ସାଧାରଣ ଆକାର (_N)"

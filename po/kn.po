@@ -3253,12 +3253,3 @@ msgstr "ಕಡತವನ್ನು ಉಳಿಸಲಾಗುತ್ತಿದೆ..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "ಆಕರ ಕಡತವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳ ಸಾಧ್ಯವಾಗಿಲ್ಲ"
-
-#~ msgid "Zoom _In"
-#~ msgstr "ಹಿಗ್ಗಿಸು(_I)"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "ಕುಗ್ಗಿಸು(_O)"
-
-#~ msgid "_Normal Size"
-#~ msgstr "ಮಾಮೂಲಿ ಗಾತ್ರ(_N)"

@@ -3251,15 +3251,3 @@ msgstr "Tallennetaan tiedostoa…"
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "Lähdetiedostoa ei voi avata"
-
-#~ msgid "Zoom _In"
-#~ msgstr "L_ähennä"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "L_oitonna"
-
-#~ msgid "_Normal Size"
-#~ msgstr "_Normaalikoko"
-
-#~ msgid "_Find"
-#~ msgstr "_Etsi"

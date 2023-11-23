@@ -3143,12 +3143,3 @@ msgstr ""
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr ""
-
-#~ msgid "Zoom _In"
-#~ msgstr "Татаж ой_ртуулах"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "Агшаах"
-
-#~ msgid "_Normal Size"
-#~ msgstr "_Энгийн хэмжээ"

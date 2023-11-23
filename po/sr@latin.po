@@ -3252,12 +3252,3 @@ msgstr "Spremanje datoteke..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "Ne mogu da pristupim izvornoj datoteci"
-
-#~ msgid "Zoom _In"
-#~ msgstr "U_većaj"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "U_manji"
-
-#~ msgid "_Normal Size"
-#~ msgstr "_Normalna veličina"

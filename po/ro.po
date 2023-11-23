@@ -3273,12 +3273,3 @@ msgstr "Se salvează fișierul..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "Nu s-a putut accesa sursa fișierului"
-
-#~ msgid "Zoom _In"
-#~ msgstr "_Mărește"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "Mi_cșorează"
-
-#~ msgid "_Normal Size"
-#~ msgstr "Dimensiune _normală"

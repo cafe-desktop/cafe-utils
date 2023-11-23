@@ -3244,9 +3244,3 @@ msgstr "Dosya saqlana..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "Kaynak dosyaya erişilemiyor"
-
-#~ msgid "Zoom _In"
-#~ msgstr "Yaqı_nlaştır"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "U_zaqlaştır"

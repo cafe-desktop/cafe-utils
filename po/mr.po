@@ -3225,12 +3225,3 @@ msgstr "फाइल संचयन चालू आहे..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "स्त्रोत फाइल करीता प्रवेश अशक्य"
-
-#~ msgid "Zoom _In"
-#~ msgstr "आतील बाजूनी विशालीकरण (_I)"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "लहानात लहान करा (_O)"
-
-#~ msgid "_Normal Size"
-#~ msgstr "सामान्य आकार (_N)"

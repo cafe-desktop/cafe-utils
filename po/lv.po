@@ -3245,12 +3245,3 @@ msgstr "Saglabā failu..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "Nevar piekļūt avota failam"
-
-#~ msgid "Zoom _In"
-#~ msgstr "Tuv_ināt"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "Tā_lināt"
-
-#~ msgid "_Normal Size"
-#~ msgstr "_Parastais izmērs"

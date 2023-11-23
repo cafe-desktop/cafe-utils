@@ -3135,9 +3135,3 @@ msgstr ""
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr ""
-
-#~ msgid "Zoom _In"
-#~ msgstr "פֿאַרגרעסער"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "פֿאַרקלענער"

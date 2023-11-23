@@ -3181,12 +3181,3 @@ msgstr "ፋይሉን በማስቀመጥ ላይ..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "የፋይሉ ምንጭ ጋር መድረስ አልተቻለም "
-
-#~ msgid "Zoom _In"
-#~ msgstr "በቅርብ _ማሳያ"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "በርቀት _ማሳያ"
-
-#~ msgid "_Normal Size"
-#~ msgstr "የ_ተለመደ መጠን"

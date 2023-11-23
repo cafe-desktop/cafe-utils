@@ -3279,15 +3279,3 @@ msgstr "Fájl mentése…"
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "Nem érhető el a forrásfájl"
-
-#~ msgid "Zoom _In"
-#~ msgstr "_Nagyítás"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "_Kicsinyítés"
-
-#~ msgid "_Normal Size"
-#~ msgstr "_Normál méret"
-
-#~ msgid "_Find"
-#~ msgstr "_Keresés"

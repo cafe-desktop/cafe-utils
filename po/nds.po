@@ -3139,15 +3139,3 @@ msgstr "Spieker Datei..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr ""
-
-#~ msgid "Zoom _In"
-#~ msgstr "Gröter _maken"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "_Lütter maken"
-
-#~ msgid "_Normal Size"
-#~ msgstr "_Normale Gröte"
-
-#~ msgid "_Find"
-#~ msgstr "_Finnen"

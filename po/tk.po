@@ -3135,12 +3135,3 @@ msgstr ""
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr ""
-
-#~ msgid "Zoom _In"
-#~ msgstr "_Ulalt"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "_Ulalt"
-
-#~ msgid "_Normal Size"
-#~ msgstr "_Kadaly Ululyk"

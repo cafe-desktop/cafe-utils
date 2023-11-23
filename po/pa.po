@@ -3218,12 +3218,3 @@ msgstr "ਫਾਇਲ ਸੰਭਾਲੀ ਜਾ ਰਹੀ ਹੈ..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "ਸਰੋਤ ਫਾਇਲ ਅਸੈੱਸ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ"
-
-#~ msgid "Zoom _In"
-#~ msgstr "ਜ਼ੂਮ ਇਨ(_I)"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "ਜ਼ੂਮ ਆਉਟ(_O)"
-
-#~ msgid "_Normal Size"
-#~ msgstr "ਸਧਾਰਨ ਅਕਾਰ(_N)"

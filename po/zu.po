@@ -3137,12 +3137,3 @@ msgstr ""
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr ""
-
-#~ msgid "Zoom _In"
-#~ msgstr "Lwizela _Phakathi"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "Inkulisa _buqamama"
-
-#~ msgid "_Normal Size"
-#~ msgstr "_Ukulingana ngokujwayelekile"

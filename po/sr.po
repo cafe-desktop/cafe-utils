@@ -3260,12 +3260,3 @@ msgstr "Чувам датотеку..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "Не могу да приступим изворној датотеци"
-
-#~ msgid "Zoom _In"
-#~ msgstr "У_већај"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "У_мањи"
-
-#~ msgid "_Normal Size"
-#~ msgstr "_Уобичајена величина"

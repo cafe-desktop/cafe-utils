@@ -3308,12 +3308,3 @@ msgstr "Oc'h enrollañ ar restr..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "N'hall ket tizhout restr an tarzh"
-
-#~ msgid "Zoom _In"
-#~ msgstr "Zoum _brasaat"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "Zoom _bihanaat"
-
-#~ msgid "_Normal Size"
-#~ msgstr "Ment _reizh"

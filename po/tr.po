@@ -3269,15 +3269,3 @@ msgstr "Dosya kaydediliyor..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "Kaynak dosyaya erişilemiyor"
-
-#~ msgid "Zoom _In"
-#~ msgstr "_Yakınlaş"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "_Uzaklaştır"
-
-#~ msgid "_Normal Size"
-#~ msgstr "_Normal Boyut"
-
-#~ msgid "_Find"
-#~ msgstr "_Bul"

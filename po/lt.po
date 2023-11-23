@@ -3283,37 +3283,3 @@ msgstr "Įrašomas failas..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "Nepavyko pasiekti šaltinio failo"
-
-#~ msgid "cafe-disk-usage-analyzer"
-#~ msgstr "cafe-disk-usage-analyzer"
-
-#~ msgid ""
-#~ "Copyright © 2005-2010 Fabio Marzocca\n"
-#~ "Copyright © 2011-2020 CAFE developers"
-#~ msgstr ""
-#~ "Autorių teisės © 2005-2010 Fabio Marzocca\n"
-#~ "Autorių teisės © 2011-2020 CAFE kūrėjai"
-
-#~ msgid "cafe-system-log"
-#~ msgstr "cafe-system-log"
-
-#~ msgid "Zoom _In"
-#~ msgstr "_Didinti"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "_Mažinti"
-
-#~ msgid "_Normal Size"
-#~ msgstr "_Normalus dydis"
-
-#~ msgid "accessories-dictionary"
-#~ msgstr "accessories-dictionary"
-
-#~ msgid "_Find"
-#~ msgstr "_Rasti"
-
-#~ msgid "drive-removable-media"
-#~ msgstr "drive-removable-media"
-
-#~ msgid "applets-screenshooter"
-#~ msgstr "applets-screenshooter"

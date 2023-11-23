@@ -3154,9 +3154,3 @@ msgstr "Konservante dosieron..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr ""
-
-#~ msgid "Zoom _In"
-#~ msgstr "Zom_i"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "Malz_omi"

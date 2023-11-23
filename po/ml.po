@@ -3234,12 +3234,3 @@ msgstr "ഫയല്‍ സൂക്ഷിയ്ക്കുന്നു..."
 #: cafe-screenshot/src/screenshot-xfer.c:290
 msgid "Can't access source file"
 msgstr "ഉറവിടമായ ഫയലിനെ സമീപിയ്ക്കാന്‍ സാധിയ്ക്കില്ല"
-
-#~ msgid "Zoom _In"
-#~ msgstr "വ_ലുതാക്കുക"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "_ചെറുതാക്കുക"
-
-#~ msgid "_Normal Size"
-#~ msgstr "_സാധാരണ വലിപ്പം"
