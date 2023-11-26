@@ -1,5 +1,5 @@
 m4_define([cafe_utils_major], [1])
-m4_define([cafe_utils_minor], [24])
+m4_define([cafe_utils_minor], [25])
 m4_define([cafe_utils_micro], [0])
 
 m4_define([cafe_utils_version], [cafe_utils_major.cafe_utils_minor.cafe_utils_micro])
