@@ -50,7 +50,6 @@ requires:
 
     #required for libcafeweather
     - intltool
-    - libsoup-gnome2.4-dev
     - libtool
     - libxml2-dev
     - libxml2-utils
