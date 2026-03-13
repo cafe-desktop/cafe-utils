@@ -34,6 +34,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <errno.h>
+#include <signal.h>
+#include <glib-unix.h>
 #include <locale.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
@@ -1298,6 +1300,14 @@ loop_dialog_screenshot ()
   ctk_main ();
 }
 
+static gboolean
+signal_handler (gpointer data)
+{
+	/* exit cleanly on signals to allow cleaning up temporary files */
+	ctk_main_quit ();
+	return FALSE;
+}
+
 /* main */
 int
 main (int argc, char *argv[])
@@ -1392,6 +1402,9 @@ main (int argc, char *argv[])
 
   if (delay_arg > 0)
     delay = delay_arg;
+
+  g_unix_signal_add (SIGINT, signal_handler, NULL);
+  g_unix_signal_add (SIGTERM, signal_handler, NULL);
 
   loop_dialog_screenshot();
 
