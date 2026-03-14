@@ -1,0 +1,4 @@
+cafe-screenshot: Cleanup on SIGINT and SIGTERM
+
+based in mate-utils commit:
+https://github.com/mate-desktop/mate-utils/commit/b70d97e762a165828402307bca87221fdfa26d51

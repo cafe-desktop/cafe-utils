@@ -1,0 +1,6 @@
+screenshot-save: Replace fork save with sync save
+
+based in mate-utils commit:
+https://github.com/mate-desktop/mate-utils/commit/c74d86d0f25435b1d90f70015d210448126bb6ef
+
+Fixes save screenshot behavior since gdk-pixbuf 2.44.5
