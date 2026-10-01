@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-11-20 09:33+0100\n"
+"POT-Creation-Date: 2026-10-01 12:13+0200\n"
 "PO-Revision-Date: 2018-09-14 23:21+0000\n"
 "Last-Translator: Tea Coba <sleepwalkdroid@gmail.com>, 2018\n"
 "Language-Team: Interlingua (https://www.transifex.com/cafe/teams/13566/ia/)\n"
@@ -20,55 +20,55 @@ msgid "translator-credits"
 msgstr "creditos de traduction"
 
 #. (itstool) path: articleinfo/title
-#: C/index.docbook:23
+#: C/index.docbook:22
 msgid "System Log Viewer Manual"
 msgstr ""
 
 #. (itstool) path: abstract/para
-#: C/index.docbook:26
+#: C/index.docbook:25
 msgid ""
 "System Log Viewer is a graphical user interface to view and monitor system "
 "log files."
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:30
+#: C/index.docbook:29
 msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:34
+#: C/index.docbook:33
 msgid "<year>2003</year> <holder>Sun Microsystems</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:38
+#: C/index.docbook:37
 msgid "<year>2000</year> <holder>Judith Samson</holder>"
 msgstr ""
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
-#: C/index.docbook:51 C/index.docbook:122
+#: C/index.docbook:50 C/index.docbook:121
 msgid "CAFE Documentation Project"
 msgstr ""
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
-#: C/index.docbook:54 C/index.docbook:132 C/index.docbook:142
-#: C/index.docbook:152 C/index.docbook:162 C/index.docbook:172
-#: C/index.docbook:182 C/index.docbook:192
+#: C/index.docbook:53 C/index.docbook:131 C/index.docbook:141
+#: C/index.docbook:151 C/index.docbook:161 C/index.docbook:171
+#: C/index.docbook:181 C/index.docbook:191
 msgid "GNOME Documentation Project"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:60
+#: C/index.docbook:59
 msgid ""
 "<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Cafe "
 "desktop</orgname> </affiliation>"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:66
+#: C/index.docbook:65
 msgid ""
 "<firstname>Sun</firstname> <surname>GNOME Documentation Team</surname> "
 "<affiliation> <orgname>Sun Microsystems</orgname> <address> "
@@ -76,7 +76,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:75
+#: C/index.docbook:74
 msgid ""
 "<firstname>Judith</firstname> <surname>Samson</surname> <affiliation> "
 "<orgname>GNOME Documentation Project</orgname> <address> "
@@ -84,131 +84,132 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:84
+#: C/index.docbook:83
 msgid ""
 "<firstname>Paul</firstname> <surname>Cutler</surname> <affiliation> "
-"<orgname>GNOME Documentation Team</orgname> <address> <email>pcutler@gnome."
-"org</email> </address> </affiliation>"
+"<orgname>GNOME Documentation Team</orgname> <address> "
+"<email>pcutler@gnome.org</email> </address> </affiliation>"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:93
+#: C/index.docbook:92
 msgid ""
 "<firstname>Vincent</firstname> <surname>Noel</surname> <affiliation> "
 "<address><email>vincent.noel@gmail.com</email></address> </affiliation>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:120
+#: C/index.docbook:119
 msgid "Wolfgang Ulbrich"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:116
+#: C/index.docbook:115
 msgid ""
 "<revnumber>System Log Viewer Manual V1.10</revnumber> <date>July 2015</date> "
 "<_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:129
+#: C/index.docbook:128
 msgid "Paul Cutler <email>pcutler@gnome.org</email>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:125
+#: C/index.docbook:124
 msgid ""
 "<revnumber>System Log Viewer Manual V2.5</revnumber> <date>October 2009</"
 "date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:139
+#: C/index.docbook:138
 msgid "Vincent Noel <email>vincent.noel@gmail.com</email>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:135
+#: C/index.docbook:134
 msgid ""
 "<revnumber>System Log Viewer Manual V2.4</revnumber> <date>October 2005</"
 "date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:149 C/index.docbook:159 C/index.docbook:169
-#: C/index.docbook:179
+#: C/index.docbook:148 C/index.docbook:158 C/index.docbook:168
+#: C/index.docbook:178
 msgid "Sun GNOME Documentation Team <email>gdocteam@sun.com</email>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:145
+#: C/index.docbook:144
 msgid ""
 "<revnumber>System Log Viewer Manual V2.3</revnumber> <date>October 2002</"
 "date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:155
+#: C/index.docbook:154
 msgid ""
 "<revnumber>System Log Viewer Manual V2.2</revnumber> <date>August 2002</"
 "date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:165
+#: C/index.docbook:164
 msgid ""
 "<revnumber>System Log Viewer Manual V2.1</revnumber> <date>July 2002</date> "
 "<_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:175
+#: C/index.docbook:174
 msgid ""
 "<revnumber>System Log Viewer Manual V2.0</revnumber> <date>May 2002</date> "
 "<_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:189
+#: C/index.docbook:188
 msgid "Judith Samson <email>judith@samsonsource.com</email>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:185
+#: C/index.docbook:184
 msgid ""
 "<revnumber>Logview Manual</revnumber> <date>2000</date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: articleinfo/releaseinfo
-#: C/index.docbook:197
+#: C/index.docbook:196
 msgid "This manual describes version 1.10 of System Log Viewer."
 msgstr ""
 
 #. (itstool) path: legalnotice/title
-#: C/index.docbook:200
+#: C/index.docbook:199
 msgid "Feedback"
 msgstr ""
 
 #. (itstool) path: legalnotice/para
-#: C/index.docbook:201
+#: C/index.docbook:200
 msgid ""
 "To report a bug or make a suggestion regarding the System Log Viewer "
-"application or this manual, follow the directions in the <ulink url=\"help:"
-"cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
+"application or this manual, follow the directions in the <ulink "
+"url=\"help:cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</"
+"ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
-#: C/index.docbook:210
+#: C/index.docbook:209
 msgid "<primary>System Log Viewer</primary>"
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:218
+#: C/index.docbook:217
 msgid "Introduction"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:220
+#: C/index.docbook:219
 msgid ""
 "<application>System Log Viewer</application> is a graphical, menu-driven "
 "viewer that you can use to view and monitor your system logs. "
@@ -218,7 +219,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:228
+#: C/index.docbook:227
 msgid ""
 "<application>System Log Viewer</application> is useful if you are new to "
 "system administration because it provides an easier, more user-friendly "
@@ -228,56 +229,56 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: warning/para
-#: C/index.docbook:237
+#: C/index.docbook:236
 msgid ""
 "<application>System Log Viewer</application> is useful only to those who "
 "have access to the system log files, which generally requires root access."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:244
+#: C/index.docbook:243
 msgid "Getting Started"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:246
+#: C/index.docbook:245
 msgid ""
 "You can start <application>System Log Viewer</application> in the following "
 "ways:"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:250
+#: C/index.docbook:249
 msgid "<guimenu>Applications</guimenu> menu"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:252
+#: C/index.docbook:251
 msgid ""
 "Choose <menuchoice><guisubmenu>System Tools</guisubmenu><guimenuitem>Log "
 "File Viewer</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:256
+#: C/index.docbook:255
 msgid "Command line"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:258
+#: C/index.docbook:257
 msgid ""
 "Type <command>cafe-system-log</command>, then press <keycap>Return</keycap>."
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:265
+#: C/index.docbook:264
 msgid ""
 "When you start <application>System Log Viewer</application>, the following "
 "window is displayed."
 msgstr ""
 
 #. (itstool) path: figure/title
-#: C/index.docbook:269
+#: C/index.docbook:268
 msgid "System Log Viewer Window"
 msgstr ""
 
@@ -286,7 +287,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:273
+#: C/index.docbook:272
 msgctxt "_"
 msgid ""
 "external ref='figures/syslog_window.png' "
@@ -294,7 +295,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:271
+#: C/index.docbook:270
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/syslog_window.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows System Log Viewer "
@@ -303,7 +304,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:282
+#: C/index.docbook:281
 msgid ""
 "The first time you start <application>System Log Viewer</application>, the "
 "application displays several log files by default (such as <filename>/var/"
@@ -313,7 +314,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:290
+#: C/index.docbook:289
 msgid ""
 "By default, <application>System Log Viewer</application> monitors every "
 "opened log, and any change appears automatically in the main window. See "
@@ -321,17 +322,17 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:299
+#: C/index.docbook:298
 msgid "Usage"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:302
+#: C/index.docbook:301
 msgid "To View a Log"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:303
+#: C/index.docbook:302
 msgid ""
 "To view a log, choose <menuchoice><guimenu>File</guimenu><guimenuitem>Open</"
 "guimenuitem></menuchoice>. In the <guilabel>Open Log</guilabel> dialog, "
@@ -340,7 +341,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:309
+#: C/index.docbook:308
 msgid ""
 "You can open as many logs as you want. <application>System Log Viewer</"
 "application> displays one log at a time in the <guilabel>System Log Viewer</"
@@ -351,19 +352,19 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:317
+#: C/index.docbook:316
 msgid ""
 "Note that <application>System Log Viewer</application> also lets you open "
 "zipped logs (whole filenames end in \".gz\")."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:322
+#: C/index.docbook:321
 msgid "To Copy Log Lines to the Clipboard"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:323
+#: C/index.docbook:322
 msgid ""
 "To copy one or more log lines to the clipboard, just select the lines in the "
 "main area and choose the <menuchoice><guimenu>Edit</"
@@ -375,12 +376,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:335
+#: C/index.docbook:334
 msgid "To Hide the Sidebar"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:336
+#: C/index.docbook:335
 msgid ""
 "To hide the left sidebar, which contains the log list and calendar, just "
 "select the <menuchoice><guimenu>View</guimenu><guimenuitem>Side pane</"
@@ -388,12 +389,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:343
+#: C/index.docbook:342
 msgid "To Monitor Logs"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:344
+#: C/index.docbook:343
 msgid ""
 "You can use <application>System Log Viewer</application> to monitor logs. By "
 "default, all logs opened in <application>System Log Viewer</application> are "
@@ -405,32 +406,32 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:355
+#: C/index.docbook:354
 msgid "To View Log Information"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:356
+#: C/index.docbook:355
 msgid "Log information are generally displayed in the status bar, including :"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:359
+#: C/index.docbook:358
 msgid "Number of lines in the log."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:361
+#: C/index.docbook:360
 msgid "Size of the log in bytes."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:363
+#: C/index.docbook:362
 msgid "Date the log was last modified."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:366
+#: C/index.docbook:365
 msgid ""
 "The status bar can be displayed or hidden using the "
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Statusbar</guimenuitem></"
@@ -438,24 +439,24 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:372
+#: C/index.docbook:371
 msgid "To Close a Log"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:373
+#: C/index.docbook:372
 msgid ""
 "To close a log, choose <menuchoice><guimenu>File</"
 "guimenu><guimenuitem>Close</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:379
+#: C/index.docbook:378
 msgid "To Exit System Log Viewer"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:380
+#: C/index.docbook:379
 msgid ""
 "To exit <application>System Log Viewer</application>, choose "
 "<menuchoice><guimenu>File</guimenu><guimenuitem>Quit</guimenuitem></"
