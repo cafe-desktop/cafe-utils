@@ -492,7 +492,7 @@ make_region_with_monitors (CdkScreen *screen)
 }
 
 static void
-blank_rectangle_in_pixbuf (GdkPixbuf *pixbuf, CdkRectangle *rect)
+blank_rectangle_in_pixbuf (CdkPixbuf *pixbuf, CdkRectangle *rect)
 {
   int x, y;
   int x2, y2;
@@ -532,7 +532,7 @@ blank_rectangle_in_pixbuf (GdkPixbuf *pixbuf, CdkRectangle *rect)
 }
 
 static void
-blank_region_in_pixbuf (GdkPixbuf *pixbuf, cairo_region_t *region)
+blank_region_in_pixbuf (CdkPixbuf *pixbuf, cairo_region_t *region)
 {
   int n_rects;
   int i;
@@ -567,7 +567,7 @@ blank_region_in_pixbuf (GdkPixbuf *pixbuf, cairo_region_t *region)
  * that the user won't ever see.
  */
 static void
-mask_monitors (GdkPixbuf *pixbuf, CdkWindow *root_window)
+mask_monitors (CdkPixbuf *pixbuf, CdkWindow *root_window)
 {
   CdkScreen *screen;
   cairo_region_t *region_with_monitors;
@@ -594,7 +594,7 @@ mask_monitors (GdkPixbuf *pixbuf, CdkWindow *root_window)
   cairo_region_destroy (invisible_region);
 }
 
-GdkPixbuf *
+CdkPixbuf *
 screenshot_get_pixbuf (CdkWindow    *window,
                        CdkRectangle *rectangle,
                        gboolean      include_pointer,
@@ -602,7 +602,7 @@ screenshot_get_pixbuf (CdkWindow    *window,
                        gboolean      include_mask)
 {
   CdkWindow *root;
-  GdkPixbuf *screenshot;
+  CdkPixbuf *screenshot;
   gint x_real_orig, y_real_orig, x_orig, y_orig;
   gint width, real_width, height, real_height;
   gint screen_width, screen_height, scale;
@@ -678,7 +678,7 @@ screenshot_get_pixbuf (CdkWindow    *window,
   if (include_border)
     {
       XRectangle *rectangles;
-      GdkPixbuf *tmp;
+      CdkPixbuf *tmp;
       int rectangle_count, rectangle_order, i;
 
       /* we must use XShape to avoid showing what's under the rounder corners
@@ -777,7 +777,7 @@ screenshot_get_pixbuf (CdkWindow    *window,
   if (include_pointer && !rectangle)
     {
       CdkCursor *cursor;
-      GdkPixbuf *cursor_pixbuf;
+      CdkPixbuf *cursor_pixbuf;
 
       cursor = cdk_cursor_new_for_display (cdk_display_get_default (), CDK_LEFT_PTR);
       cursor_pixbuf = cdk_cursor_get_image (cursor);

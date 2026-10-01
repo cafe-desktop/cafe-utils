@@ -1162,11 +1162,11 @@ baobab_chart_query_tooltip (CtkWidget  *widget,
   return TRUE;
 }
 
-GdkPixbuf*
+CdkPixbuf*
 baobab_chart_get_pixbuf (CtkWidget *widget)
 {
   gint w, h;
-  GdkPixbuf *pixbuf;
+  CdkPixbuf *pixbuf;
 
   g_return_val_if_fail (BAOBAB_IS_CHART (widget), NULL);
 
@@ -1674,7 +1674,7 @@ baobab_chart_save_snapshot (CtkWidget *chart)
 {
   BaobabChartPrivate *priv;
 
-  GdkPixbuf *pixbuf;
+  CdkPixbuf *pixbuf;
 
   CtkWidget *fs_dlg;
   CtkWidget *vbox;
