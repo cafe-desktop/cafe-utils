@@ -3,92 +3,12 @@
 ##########################################################
 requires:
   debian:
-    # Useful URL: https://github.com/cafe-desktop/debian-packages
-    # cafe B-D: libkanberra-ctk3-dev libctk-3-dev libcafe-panel-applet-dev cafe-common
-    - aptitude
-    - autoconf-archive
-    - autopoint
-    - clang
-    - clang-tools
-    - cppcheck
-    - expect #required for unbuffer
-    - gcc
-    - g++
-    - git
-    - gtk-doc-tools
-    - libglib2.0-dev
-    - libgtop2-dev
-    - libudisks2-dev
-    - libx11-dev
-    - libxext-dev
-    - libxt-dev
-    - make
-    - x11proto-xext-dev
-    - xsltproc
-    - yelp-tools
-    - zlib1g-dev
-
-    #required for cafe-common
-    - autoconf
-
-    #required for cafe-panel
-    - gir1.2-freedesktop
-    - gobject-introspection
-    - gtk-doc-tools
-    - libatk1.0-dev
-    - libcairo2-dev
-    - libdconf-dev
-    - libgirepository1.0-dev
-    - libice-dev
-    - libpango1.0-dev
-    - librsvg2-dev
-    - libsm-dev
-    - libsoup-3.0-dev
-    - libxau-dev
-    - lsb-release
-    - meson
-
-    #required for libcafeweather
-    - intltool
-    - libtool
-    - libxml2-dev
-    - libxml2-utils
-    - tzdata
-
-    #required for cafe-desktop
-    - iso-codes
-    - libglib2.0-doc
-    - libstartup-notification0-dev
-
-    #required for libvnck
-    - build-essential
-    - docbook-xml
-    - gettext
-    - libxres-dev
-    - ninja-build
-
-    #required for libkanberra
-    - gnome-pkg-tools
-    - libltdl-dev
-    - libvorbis-dev
-    - libtdb-dev
-    - libgstreamer1.0-dev
 
 before_scripts:
-  - ./html-cppcheck
-  - ./debrepo-install 'libctk-3-dev gir1.2-ctk-3.0 libctk-3-common libctk-3-0 libctk-3-doc'
-  - ./install-from-git https://github.com/cafe-desktop/libvnck master meson
-  - ./install-from-git https://github.com/cafe-desktop/cafe-common master
-  - ./install-from-git https://github.com/cafe-desktop/cafe-desktop master
-  - ./install-from-git https://github.com/cafe-desktop/cafe-menus master
-  - ./install-from-git https://github.com/cafe-desktop/libcafeweather master
-  - ./install-from-git https://github.com/cafe-desktop/cafe-panel master
-  - ./install-from-git https://github.com/cafe-desktop/libkanberra master
+  - ./debrepo-install
 
 build_scripts:
-  - ./before-build
-  - ./make-scanbuild '--enable-compile-warnings=maximum'
-  - ./after-build
+  - ./build-debs https://github.com/cafe-desktop/debian-packages devel cafe-utils
 
 after_scripts:
   - if [ -f "gen-index" ]; then ./gen-index -l 20; fi
