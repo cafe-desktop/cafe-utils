@@ -4,7 +4,6 @@
 <!ENTITY applet "Dictionary Applet">
 <!ENTITY appversion "1.10">
 <!ENTITY date "July 2015">
-<!ENTITY legal SYSTEM "legal.xml">
 <!ENTITY manrevision "1.10.0">
 ]>
 <!-- This file describes the Dictionary applet and application. -->
@@ -17,7 +16,7 @@
   
 -->
 <!-- =============Document Header ============================= -->
-<article id="index" lang="en">
+<article id="index" lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
 <!-- please do not change the id; for translations, change language to -->
 <!-- appropriate code -->
   <articleinfo> 
@@ -54,7 +53,7 @@
     <publisher> 
       <publishername>GNOME Documentation Project</publishername>
     </publisher>
-   &legal;
+   <xi:include href="legal.xml"/>
 
     <authorgroup>
       <author role="maintainer" lang="en"> 

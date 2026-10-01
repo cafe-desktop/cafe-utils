@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" 
 "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [ 
-  <!ENTITY legal SYSTEM "legal.xml">
   <!ENTITY appversion "1.10">
   <!ENTITY manrevision "1.10">
   <!ENTITY date "July 2015">
@@ -16,7 +15,7 @@
   
 -->
 <!-- =============Document Header ============================= -->
-<article id="index" lang="en">
+<article id="index" lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
 <!-- please do not change the id; for translations, change lang to -->
 <!-- appropriate code -->
   <articleinfo> 
@@ -54,7 +53,7 @@
       <publishername>GNOME Documentation Project</publishername>
     </publisher> 
 
-   &legal;
+   <xi:include href="legal.xml"/>
 
    <authorgroup>
       <author role="maintainer" lang="en"> 
