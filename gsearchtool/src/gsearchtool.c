@@ -2321,7 +2321,7 @@ create_search_results_section (GSearchWindow * gsearch)
                                         CTK_POLICY_AUTOMATIC);
 
 	gsearch->search_results_list_store = ctk_list_store_new (NUM_COLUMNS,
-					      GDK_TYPE_PIXBUF,
+					      CDK_TYPE_PIXBUF,
 					      G_TYPE_STRING,
 					      G_TYPE_STRING,
 					      G_TYPE_STRING,
