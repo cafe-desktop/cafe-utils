@@ -84,7 +84,7 @@ on_preview_draw (CtkWidget      *drawing_area,
       dialog->preview_image = cdk_pixbuf_scale_simple (dialog->screenshot,
                                                        width,
                                                        height,
-                                                       GDK_INTERP_BILINEAR);
+                                                       CDK_INTERP_BILINEAR);
     }
 
   context = ctk_widget_get_style_context (drawing_area);

@@ -546,7 +546,7 @@ gdict_applet_draw (GdictApplet *applet)
       scaled = cdk_pixbuf_scale_simple (priv->icon,
 		      			priv->size - 5,
 					priv->size - 5,
-					GDK_INTERP_BILINEAR);
+					CDK_INTERP_BILINEAR);
 
       ctk_image_set_from_pixbuf (CTK_IMAGE (priv->image), scaled);
       g_object_unref (scaled);
@@ -790,7 +790,7 @@ gdict_applet_size_allocate (CtkWidget    *widget,
 	  scaled = cdk_pixbuf_scale_simple (priv->icon,
 			  		    priv->size - 5,
 					    priv->size - 5,
-					    GDK_INTERP_BILINEAR);
+					    CDK_INTERP_BILINEAR);
 
 	  ctk_image_set_from_pixbuf (CTK_IMAGE (priv->image), scaled);
 	  g_object_unref (scaled);
