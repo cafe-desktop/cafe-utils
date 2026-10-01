@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-11-20 09:33+0100\n"
+"POT-Creation-Date: 2026-10-01 12:13+0200\n"
 "PO-Revision-Date: 2018-09-13 10:15+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019\n"
 "Language-Team: Catalan (https://www.transifex.com/cafe/teams/13566/ca/)\n"
@@ -21,29 +21,29 @@ msgid "translator-credits"
 msgstr "Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>"
 
 #. (itstool) path: articleinfo/title
-#: C/index.docbook:23
+#: C/index.docbook:22
 msgid "Search for Files Manual"
 msgstr "Manual de la cerca de fitxers"
 
 #. (itstool) path: abstract/para
-#: C/index.docbook:26
+#: C/index.docbook:25
 msgid "A search tool to find files, folders and documents on your computer."
 msgstr ""
 "Una eina de cerca per trobar fitxers, carpetes i documents al vostre "
 "ordinador."
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:31
+#: C/index.docbook:30
 msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:35
+#: C/index.docbook:34
 msgid "<year>2005</year> <holder>Dennis Cranston</holder>"
 msgstr "<year>2005</year> <holder>Dennis Cranston</holder>"
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:39
+#: C/index.docbook:38
 msgid ""
 "<year>2002</year> <year>2003</year> <year>2004</year> <holder>Sun "
 "Microsystems</holder>"
@@ -52,25 +52,25 @@ msgstr ""
 "Microsystems</holder>"
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:45
+#: C/index.docbook:44
 msgid "<year>2000</year> <holder>Alexander Kirillov</holder>"
 msgstr "<year>2000</year> <holder>Alexander Kirillov</holder>"
 
 #. (itstool) path: publisher/publishername
-#: C/index.docbook:58
+#: C/index.docbook:57
 msgid "CAFE Documentation Project"
 msgstr "Projecte de documentació de CAFE"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
-#: C/index.docbook:61 C/index.docbook:155 C/index.docbook:163
-#: C/index.docbook:171 C/index.docbook:179 C/index.docbook:187
-#: C/index.docbook:197
+#: C/index.docbook:60 C/index.docbook:154 C/index.docbook:162
+#: C/index.docbook:170 C/index.docbook:178 C/index.docbook:186
+#: C/index.docbook:196
 msgid "GNOME Documentation Project"
 msgstr "Projecte de documentació de GNOME"
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:67
+#: C/index.docbook:66
 msgid ""
 "<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Search for "
 "Files Maintainer</orgname> </affiliation>"
@@ -79,13 +79,13 @@ msgstr ""
 "<orgname>Mantenidor de cerca de fitxers</orgname> </affiliation>"
 
 #. (itstool) path: affiliation/address
-#: C/index.docbook:78
+#: C/index.docbook:77
 #, no-wrap
 msgid "dennis_cranston@yahoo.com"
 msgstr "dennis_cranston@yahoo.com"
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:73
+#: C/index.docbook:72
 msgid ""
 "<firstname>Dennis</firstname> <surname>Cranston</surname> <affiliation> "
 "<orgname>Search for Files Maintainer</orgname> <_:address-1/> </affiliation>"
@@ -95,7 +95,7 @@ msgstr ""
 "affiliation>"
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:81
+#: C/index.docbook:80
 msgid ""
 "<firstname>Sun</firstname> <surname>GNOME Documentation Team</surname> "
 "<affiliation> <orgname>Sun Microsystems</orgname> <_:address-1/> </"
@@ -106,7 +106,7 @@ msgstr ""
 "affiliation>"
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:89
+#: C/index.docbook:88
 msgid ""
 "<firstname>Alexander</firstname> <surname>Kirillov</surname> <affiliation> "
 "<orgname>GNOME Documentation Project</orgname> <address> "
@@ -117,17 +117,17 @@ msgstr ""
 "<email>kirillov@math.sunysb.edu</email> </address> </affiliation>"
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:125
+#: C/index.docbook:124
 msgid "Wolfgang Ulbrich"
 msgstr "Wolfgang Ulbrich"
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:127 C/index.docbook:137 C/index.docbook:147
+#: C/index.docbook:126 C/index.docbook:136 C/index.docbook:146
 msgid "Search for Files Maintainer"
 msgstr "Mantenidor de cerca de fitxers"
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:121
+#: C/index.docbook:120
 msgid ""
 "<revnumber>Search for Files Manual V1.10</revnumber> <date>July 2015</date> "
 "<_:revdescription-1/>"
@@ -136,12 +136,12 @@ msgstr ""
 "<date>Juliol de 2015</date> <_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:134
+#: C/index.docbook:133
 msgid "Joachim Noreiko <email>jnoreiko@yahoo.com</email>"
 msgstr "Joachim Noreiko <email>jnoreiko@yahoo.com</email>"
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:130
+#: C/index.docbook:129
 msgid ""
 "<revnumber>Search for Files Manual V2.7</revnumber> <date>June 2005</date> "
 "<_:revdescription-1/>"
@@ -150,12 +150,12 @@ msgstr ""
 "de 2005</date> <_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:144
+#: C/index.docbook:143
 msgid "Dennis Cranston <email>dennis_cranston@yahoo.com</email>"
 msgstr "Dennis Cranston <email>dennis_cranston@yahoo.com</email>"
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:140
+#: C/index.docbook:139
 msgid ""
 "<revnumber>Search for Files Manual V2.6</revnumber> <date>January 2005</"
 "date> <_:revdescription-1/>"
@@ -164,13 +164,13 @@ msgstr ""
 "de 2005</date> <_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:154 C/index.docbook:162 C/index.docbook:170
-#: C/index.docbook:178 C/index.docbook:186
+#: C/index.docbook:153 C/index.docbook:161 C/index.docbook:169
+#: C/index.docbook:177 C/index.docbook:185
 msgid "Sun GNOME Documentation Team"
 msgstr "Equip de documentació de GNOME de Sun"
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:150
+#: C/index.docbook:149
 msgid ""
 "<revnumber>Search for Files Manual V2.4</revnumber> <date>February 2004</"
 "date> <_:revdescription-1/>"
@@ -179,7 +179,7 @@ msgstr ""
 "<date>Febrer de 2004</date> <_:revdescription-1/>"
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:158
+#: C/index.docbook:157
 msgid ""
 "<revnumber>Search for Files Manual V2.3</revnumber> <date>September 2002</"
 "date> <_:revdescription-1/>"
@@ -188,7 +188,7 @@ msgstr ""
 "<date>Setembre de 2002</date> <_:revdescription-1/>"
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:166
+#: C/index.docbook:165
 msgid ""
 "<revnumber>Search for Filesl Manual V2.2</revnumber> <date>August 2002</"
 "date> <_:revdescription-1/>"
@@ -197,7 +197,7 @@ msgstr ""
 "de 2002</date> <_:revdescription-1/>"
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:174
+#: C/index.docbook:173
 msgid ""
 "<revnumber>Search for Files Manual V2.1</revnumber> <date>July 2002</date> "
 "<_:revdescription-1/>"
@@ -206,62 +206,63 @@ msgstr ""
 "<date>Juliol de 2002</date> <_:revdescription-1/>"
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:182
+#: C/index.docbook:181
 msgid ""
-"<revnumber>Search for Files Manual V2.0</revnumber> <date>May 2002</date> <_:"
-"revdescription-1/>"
+"<revnumber>Search for Files Manual V2.0</revnumber> <date>May 2002</date> "
+"<_:revdescription-1/>"
 msgstr ""
 "<revnumber>Versió 2.0 del manual de cerca de fitxers</revnumber> <date>Maig "
 "de 2002</date> <_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:194
+#: C/index.docbook:193
 msgid "Alexander Kirillov <email>kirillov@math.sunysb.edu</email>"
 msgstr "Alexander Kirillov <email>kirillov@math.sunysb.edu</email>"
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:190
+#: C/index.docbook:189
 msgid ""
-"<revnumber>Search for Files Manual</revnumber> <date>2000</date> <_:"
-"revdescription-1/>"
+"<revnumber>Search for Files Manual</revnumber> <date>2000</date> "
+"<_:revdescription-1/>"
 msgstr ""
-"<revnumber>Manual de cerca de fitxers</revnumber> <date>2000</date> <_:"
-"revdescription-1/>"
+"<revnumber>Manual de cerca de fitxers</revnumber> <date>2000</date> "
+"<_:revdescription-1/>"
 
 #. (itstool) path: articleinfo/releaseinfo
-#: C/index.docbook:202
+#: C/index.docbook:201
 msgid "This manual describes version 1.10 of Search for Files."
 msgstr "Aquest manual descriu la versió 1.10 de cerca de fitxers."
 
 #. (itstool) path: legalnotice/title
-#: C/index.docbook:205
+#: C/index.docbook:204
 msgid "Feedback"
 msgstr "Retroacció"
 
 #. (itstool) path: legalnotice/para
-#: C/index.docbook:206
+#: C/index.docbook:205
 msgid ""
 "To report a bug or make a suggestion regarding the Search for Files "
-"application or this manual, follow the directions in the <ulink url=\"help:"
-"cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
+"application or this manual, follow the directions in the <ulink "
+"url=\"help:cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</"
+"ulink>."
 msgstr ""
 "Per informar d'un error o fer un suggeriment sobre l'aplicació de cerca de "
-"fitxers o d'aquest manual, seguiu les instruccions de la <ulink url=\"help:"
-"cafe-user-guide/feedback\" type=\"help\">pàgina de retroacció de CAFE</"
-"ulink>."
+"fitxers o d'aquest manual, seguiu les instruccions de la <ulink "
+"url=\"help:cafe-user-guide/feedback\" type=\"help\">pàgina de retroacció de "
+"CAFE</ulink>."
 
 #. (itstool) path: article/indexterm
-#: C/index.docbook:212
+#: C/index.docbook:211
 msgid "<primary>Search Tool</primary>"
 msgstr "<primary>Eina de cerca</primary>"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:220
+#: C/index.docbook:219
 msgid "Introduction"
 msgstr "Introducció"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:221
+#: C/index.docbook:220
 msgid ""
 "The <application>Search for Files</application> application enables you to "
 "search for files on your system. To perform a basic search, you can type a "
@@ -274,7 +275,7 @@ msgstr ""
 "la cerca, podeu aplicar opcions de cerca addicionals."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:222
+#: C/index.docbook:221
 msgid ""
 "<application>Search for Files</application> uses the <command>find</"
 "command>, <command>grep</command>, and <command>locate</command> UNIX "
@@ -290,7 +291,7 @@ msgstr ""
 "<command>find</command>."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:223
+#: C/index.docbook:222
 msgid ""
 "The case sensitivity of the search depends on your operating system. For "
 "example, on Linux, the <command>find</command>, <command>grep</command>, and "
@@ -303,12 +304,12 @@ msgstr ""
 "de manera que totes les cerques distingeixen majúscules i minúscules."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:227
+#: C/index.docbook:226
 msgid "Getting Started"
 msgstr "Primers passos"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:229
+#: C/index.docbook:228
 msgid ""
 "You can start <application>Search for Files</application> in the following "
 "ways:"
@@ -317,12 +318,12 @@ msgstr ""
 "següents:"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:233
+#: C/index.docbook:232
 msgid "From a <guimenu>Menu Bar</guimenu> on a panel"
 msgstr "Des d'una <guimenu>barra de menús</guimenu> en un tauler"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:235
+#: C/index.docbook:234
 msgid ""
 "Choose <menuchoice><guisubmenu>Places</guisubmenu><guimenuitem>Search for "
 "Files...</guimenuitem></menuchoice>"
@@ -331,12 +332,12 @@ msgstr ""
 "fitxers...</guimenuitem></menuchoice>"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:239
+#: C/index.docbook:238
 msgid "From a <guimenu>Main Menu</guimenu> on a panel"
 msgstr "Des d'un <guimenu>menú principal</guimenu> en un tauler"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:241
+#: C/index.docbook:240
 msgid ""
 "Choose <menuchoice><guimenuitem>Search for Files...</guimenuitem></"
 "menuchoice>"
@@ -345,17 +346,17 @@ msgstr ""
 "menuchoice>"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:245
+#: C/index.docbook:244
 msgid "From a command line"
 msgstr "Des d'una línia d'ordres"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:247
+#: C/index.docbook:246
 msgid "Execute the following command: <command>cafe-search-tool</command>"
 msgstr "Executeu l'ordre següent: <command>cafe-search-tool</command>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:254
+#: C/index.docbook:253
 msgid ""
 "When you start <application>Search for Files</application>, the following "
 "window is displayed."
@@ -364,7 +365,7 @@ msgstr ""
 "finestra següent."
 
 #. (itstool) path: figure/title
-#: C/index.docbook:258
+#: C/index.docbook:257
 msgid "Search for Files Window"
 msgstr "Finestra de Cerca de fitxers"
 
@@ -373,7 +374,7 @@ msgstr "Finestra de Cerca de fitxers"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:262
+#: C/index.docbook:261
 msgctxt "_"
 msgid ""
 "external ref='figures/cafe-search-tool_window.png' "
@@ -383,7 +384,7 @@ msgstr ""
 "md5='bb0f097535682e53e6bd43c66f0373c7'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:260
+#: C/index.docbook:259
 msgid ""
 "<imageobject><imagedata fileref=\"figures/cafe-search-tool_window.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Search for Files "
@@ -394,17 +395,17 @@ msgstr ""
 "principal de Cerca de fitxers. </phrase> </textobject>"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:277
+#: C/index.docbook:276
 msgid "Usage"
 msgstr "Utilització"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:280
+#: C/index.docbook:279
 msgid "To Perform a Basic Search"
 msgstr "Com realitzar una cerca bàsica"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:282
+#: C/index.docbook:281
 msgid ""
 "To perform a basic search for a file on the system, perform the following "
 "steps:"
@@ -413,7 +414,7 @@ msgstr ""
 "següents:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:284
+#: C/index.docbook:283
 msgid ""
 "Enter the search text in the <guilabel>Name contains</guilabel> field. The "
 "search text can be a filename or partial filename, with or without "
@@ -424,32 +425,32 @@ msgstr ""
 "sense, com es mostra a la taula següent:"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:294
+#: C/index.docbook:293
 msgid "Name Contains Text"
 msgstr "El nom conté el text"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:296
+#: C/index.docbook:295
 msgid "Example"
 msgstr "Exemple"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:298
+#: C/index.docbook:297
 msgid "Result"
 msgstr "Resultat"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:304
+#: C/index.docbook:303
 msgid "Full or partial filename"
 msgstr "Nom de fitxer complet o parcial"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:308
+#: C/index.docbook:307
 msgid "<userinput>myfile.txt</userinput>"
 msgstr "<userinput>fitxer.txt</userinput>"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:312
+#: C/index.docbook:311
 msgid ""
 "<application>Search for Files</application> searches for all files that "
 "contain the text <userinput>myfile.txt</userinput> in the filename."
@@ -458,17 +459,17 @@ msgstr ""
 "contenen el text <userinput>fitxer.txt</userinput> al nom de fitxer."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:318
+#: C/index.docbook:317
 msgid "Partial filename combined with wildcards (*, [, ])"
 msgstr "Nom de fitxer parcial combinat amb comodins (*, [, ])"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:322
+#: C/index.docbook:321
 msgid "<userinput>*.[ch]</userinput>"
 msgstr "<userinput>*.[ch]</userinput>"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:326
+#: C/index.docbook:325
 msgid ""
 "<application>Search for Files</application> searches for all files that have "
 "extension <userinput>.c</userinput> or <userinput>.h</userinput>."
@@ -477,7 +478,7 @@ msgstr ""
 "l'extensió <userinput>.c</userinput> o <userinput>.h</userinput>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:334
+#: C/index.docbook:333
 msgid ""
 "In the <guilabel>Look in folder</guilabel> field, select the folder or "
 "device from which you want <application>Search for Files</application> to "
@@ -488,12 +489,12 @@ msgstr ""
 "application>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:336
+#: C/index.docbook:335
 msgid "Click <guibutton>Find</guibutton> to perform the search."
 msgstr "Feu clic a <guibutton>Cerca</guibutton> per realitzar la cerca."
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:339
+#: C/index.docbook:338
 msgid ""
 "<application>Search for Files</application> searches in the directory that "
 "you specify and the subdirectories of the directory. <application>Search for "
@@ -512,7 +513,7 @@ msgstr ""
 "quadre de llista <guilabel>Resultats de la cerca</guilabel>."
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:343
+#: C/index.docbook:342
 msgid ""
 "By default, <application>Search for Files</application> will perform a quick "
 "search using the <command>locate</command> command followed by a more "
@@ -535,12 +536,12 @@ msgstr ""
 "executeu l'ordre <command>updatedb</command> amb l'usuari root."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:347
+#: C/index.docbook:346
 msgid "To Add Search Options"
 msgstr "Com afegir opcions de cerca"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:348
+#: C/index.docbook:347
 msgid ""
 "You can add additional options to search for a file on the system. To add "
 "search options, perform the following steps:"
@@ -549,28 +550,28 @@ msgstr ""
 "opcions de cerca, seguiu els passos següents:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:350
+#: C/index.docbook:349
 msgid "Click on the <guilabel>Select more options</guilabel> text."
 msgstr "Feu clic al text <guilabel>Seleccioneu més opcions</guilabel>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:351
+#: C/index.docbook:350
 msgid "Click on the <guilabel>Available options</guilabel> drop-down list."
 msgstr ""
 "Feu clic a la llista desplegable <guilabel>Opcions disponibles</guilabel>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:352
+#: C/index.docbook:351
 msgid "Select the search option that you want to apply."
 msgstr "Seleccioneu l'opció de cerca que voleu aplicar."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:353
+#: C/index.docbook:352
 msgid "Click <guibutton>Add</guibutton>."
 msgstr "Feu clic a <guibutton>Afegeix</guibutton>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:354
+#: C/index.docbook:353
 msgid ""
 "Specify the required search information for the search option, as described "
 "in <xref linkend=\"tbl-search-rules\"/>."
@@ -579,14 +580,14 @@ msgstr ""
 "com es descriu a <xref linkend=\"tbl-search-rules\"/>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:355
+#: C/index.docbook:354
 msgid "Repeat the above steps for each search option that you want to apply."
 msgstr ""
 "Repetiu els passos anteriors per a cadascuna de les opcions de cerca que "
 "voleu aplicar."
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:357
+#: C/index.docbook:356
 msgid ""
 "To remove a search option from the current search, click on the "
 "<guibutton>Remove</guibutton> button next to the option."
@@ -595,7 +596,7 @@ msgstr ""
 "<guibutton>Suprimeix</guibutton> que està al costat de l'opció."
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:358
+#: C/index.docbook:357
 msgid ""
 "To disable the search options from the current search, click on the "
 "<guilabel>Select more options</guilabel> text."
@@ -604,49 +605,49 @@ msgstr ""
 "<guilabel>Seleccioneu més opcions</guilabel>."
 
 #. (itstool) path: table/title
-#: C/index.docbook:361
+#: C/index.docbook:360
 msgid "Search Options"
 msgstr "Opcions de cerca"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:368
+#: C/index.docbook:367
 msgid "Option Name"
 msgstr "Nom de l'opció"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:370
+#: C/index.docbook:369
 msgid "Description"
 msgstr "Descripció"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:376
+#: C/index.docbook:375
 msgid "Contains the text"
 msgstr "Conté el text"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:378
+#: C/index.docbook:377
 msgid "Search for files of type plain text that contain the specified text."
 msgstr "Cerca els fitxers de tipus text pla que contenen el text especificat."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:382
+#: C/index.docbook:381
 msgid "Date modified less than"
 msgstr "La data de modificació és anterior a"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:384
+#: C/index.docbook:383
 msgid ""
 "Search for files that are modified less than the period specified in days."
 msgstr ""
 "Cerca els fitxers que s'han modificat abans del període especificat en dies."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:388
+#: C/index.docbook:387
 msgid "Date modified more than"
 msgstr "La data de modificació és posterior a"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:390
+#: C/index.docbook:389
 msgid ""
 "Search for files that are modified longer than the period specified in days."
 msgstr ""
@@ -654,12 +655,12 @@ msgstr ""
 "dies."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:394
+#: C/index.docbook:393
 msgid "Size at least"
 msgstr "La mida és almenys"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:396
+#: C/index.docbook:395
 msgid ""
 "Search for files that are equal to or larger than the size specified in "
 "kilobytes."
@@ -668,12 +669,12 @@ msgstr ""
 "kilobytes."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:400
+#: C/index.docbook:399
 msgid "Size at most"
 msgstr "La mida és com a molt"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:402
+#: C/index.docbook:401
 msgid ""
 "Search for files that are smaller than or equal to the size specified in "
 "kilobytes."
@@ -682,22 +683,22 @@ msgstr ""
 "kilobytes."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:406
+#: C/index.docbook:405
 msgid "File is empty"
 msgstr "El fitxer està buit"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:408
+#: C/index.docbook:407
 msgid "Search for empty files."
 msgstr "Cerca els fitxers buits."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:412
+#: C/index.docbook:411
 msgid "Owned by user"
 msgstr "Propietari del fitxer"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:414
+#: C/index.docbook:413
 msgid ""
 "Search for files that are owned by the user specified. Type the name of the "
 "user in the text box provided."
@@ -706,12 +707,12 @@ msgstr ""
 "de l'usuari al quadre de text proporcionat."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:418
+#: C/index.docbook:417
 msgid "Owned by group"
 msgstr "Grup del fitxer"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:420
+#: C/index.docbook:419
 msgid ""
 "Search for files that are owned by the group specified. Type the name of the "
 "group in the text box provided."
@@ -720,12 +721,12 @@ msgstr ""
 "del grup al quadre de text proporcionat."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:424
+#: C/index.docbook:423
 msgid "Owner is unrecognized"
 msgstr "No es reconeix el propietari"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:426
+#: C/index.docbook:425
 msgid ""
 "Search for files that are owned by a user or group that is unknown to the "
 "system."
@@ -734,12 +735,12 @@ msgstr ""
 "sistema."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:430
+#: C/index.docbook:429
 msgid "Name does not contain"
 msgstr "El nom no conté"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:432
+#: C/index.docbook:431
 msgid ""
 "Search for filenames that do not contain the string that you enter. Enter a "
 "full filename or a partial filename with wildcards in the field provided. "
@@ -753,12 +754,12 @@ msgstr ""
 "minúscules."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:436
+#: C/index.docbook:435
 msgid "Name matches regular expression"
 msgstr "El nom coincideix amb una expressió regular"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:438
+#: C/index.docbook:437
 msgid ""
 "Search for files that contain the specified regular expression in their "
 "directory path or filename. Type the regular expression in the text box "
@@ -769,32 +770,32 @@ msgstr ""
 "proporcionat."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:442
+#: C/index.docbook:441
 msgid "Show hidden and backup files"
 msgstr "Mostra els fitxers ocults i de còpia de seguretat"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:444
+#: C/index.docbook:443
 msgid "Include hidden and backup files in the search."
 msgstr "Inclou els fitxers ocults i de còpia de seguretat a la cerca."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:448
+#: C/index.docbook:447
 msgid "Follow symbolic links"
 msgstr "Segueix els enllaços simbòlics"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:450
+#: C/index.docbook:449
 msgid "Follow symbolic links when searching for files."
 msgstr "Segueix els enllaços simbòlics quan se cerquen fitxers."
 
 #. (itstool) path: entry/para
-#: C/index.docbook:454
+#: C/index.docbook:453
 msgid "Exclude other filesystems"
 msgstr "Exclou altres sistemes de fitxers"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:456
+#: C/index.docbook:455
 msgid ""
 "Search in directories that are in the same filesystem as the start directory."
 msgstr ""
@@ -802,12 +803,12 @@ msgstr ""
 "directori d'inici."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:466
+#: C/index.docbook:465
 msgid "To Stop a Search"
 msgstr "Com aturar una cerca"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:467
+#: C/index.docbook:466
 msgid ""
 "Click <guibutton>Stop</guibutton> to stop a search before "
 "<application>Search for Files</application> completes the search."
@@ -816,12 +817,12 @@ msgstr ""
 "fitxers</application> abans que completi la cerca."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:471
+#: C/index.docbook:470
 msgid "To Open a Displayed File"
 msgstr "Com obrir un fitxer mostrat"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:472
+#: C/index.docbook:471
 msgid ""
 "To open a file displayed in the <guilabel>Search results</guilabel> list "
 "box, perform one of the following steps:"
@@ -830,19 +831,19 @@ msgstr ""
 "cerca</guilabel>, realitzeu uns dels passos següents:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:474
+#: C/index.docbook:473
 msgid "Right-click on the file, then choose <guimenuitem>Open</guimenuitem>."
 msgstr ""
 "Feu clic dret al fitxer, i després seleccioneu <guimenuitem>Obre</"
 "guimenuitem>."
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:475
+#: C/index.docbook:474
 msgid "Double-click on the file."
 msgstr "Feu doble clic al fitxer."
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:477
+#: C/index.docbook:476
 msgid ""
 "To open the folder that contains a file displayed in the <guilabel>Search "
 "results</guilabel> list box, right-click on the file, then choose "
@@ -853,12 +854,12 @@ msgstr ""
 "després seleccioneu <guimenuitem>Obre la carpeta contenidora</guimenuitem>."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:481
+#: C/index.docbook:480
 msgid "To Delete a Displayed File"
 msgstr "Com suprimir un fitxer mostrat"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:482
+#: C/index.docbook:481
 msgid ""
 "To delete a file displayed in the <guilabel>Search results</guilabel> list "
 "box, right-click on the file, then choose <guimenuitem>Move to Trash</"
@@ -869,12 +870,12 @@ msgstr ""
 "<guimenuitem>Mou a la paperera</guimenuitem>."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:493
+#: C/index.docbook:492
 msgid "To Save the Search Results"
 msgstr "Com desar els resultats de la cerca"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:494
+#: C/index.docbook:493
 msgid ""
 "To save the results of the last search that <application>Search for Files</"
 "application> performed, right-click in the <guilabel>Search results</"
@@ -889,12 +890,12 @@ msgstr ""
 "resultats i, a continuació, feu clic a Desa."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:502
+#: C/index.docbook:501
 msgid "Settings"
 msgstr "Ajusts"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:504
+#: C/index.docbook:503
 msgid ""
 "<application>Search for Files</application> provides gsettings keys to "
 "modify some of its behavior. The gsettings values can be changed by starting "
@@ -906,12 +907,12 @@ msgstr ""
 "maneres següents:"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:508
+#: C/index.docbook:507
 msgid "<guimenu>Applications</guimenu> menu"
 msgstr "Menú <guimenu>Aplicacions</guimenu>"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:510
+#: C/index.docbook:509
 msgid ""
 "Choose <menuchoice><guisubmenu>System Tools</guisubmenu><guimenuitem>dconf "
 "Editor</guimenuitem></menuchoice>."
@@ -920,32 +921,32 @@ msgstr ""
 "guisubmenu><guimenuitem>Editor dconf</guimenuitem></menuchoice>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:514
+#: C/index.docbook:513
 msgid "Command line"
 msgstr "Línia d'ordres"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:516
+#: C/index.docbook:515
 msgid "Execute the following command: <command>dconf-editor</command>"
 msgstr "Executeu l'ordre següent: <command>dconf-editor</command>"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:522
+#: C/index.docbook:521
 msgid "Disable Quick Search"
 msgstr "Inhabilita la cerca ràpida"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:523
+#: C/index.docbook:522
 msgid "Key name: org.cafe.search-tool.disable-quick-search"
 msgstr "Nom de la clau: org.cafe.search-tool.disable-quick-search"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:524 C/index.docbook:531 C/index.docbook:552
+#: C/index.docbook:523 C/index.docbook:530 C/index.docbook:551
 msgid "Default value: false"
 msgstr "Valor predeterminat: false"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:525
+#: C/index.docbook:524
 msgid ""
 "<application>Search for Files</application> speeds up file name searches by "
 "using the <command>locate</command> command. <command>Locate</command> "
@@ -961,17 +962,17 @@ msgstr ""
 "sempre al dia."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:529
+#: C/index.docbook:528
 msgid "Disable Quick Search Second Scan"
 msgstr "Inhabilita el segon pas de la cerca ràpida"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:530
+#: C/index.docbook:529
 msgid "Key name: org.cafe.search-tool.disable-quick-search-second-scan"
 msgstr "Nom de la clau: org.cafe.search-tool.disable-quick-search-second-scan"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:532
+#: C/index.docbook:531
 msgid ""
 "After completing a quick search, <application>Search for Files</application> "
 "will perform a thorough search using the <command>find</command> command. "
@@ -987,22 +988,22 @@ msgstr ""
 "la llista actualitzada."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:536
+#: C/index.docbook:535
 msgid "Quick Search Excluded Paths"
 msgstr "Camins exclosos de la cerca ràpida"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:537
+#: C/index.docbook:536
 msgid "Key name: org.cafe.search-tool.quick-search-excluded-paths"
 msgstr "Nom de la clau: org.cafe.search-tool.quick-search-excluded-paths"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:538
+#: C/index.docbook:537
 msgid "Default values: [/mnt/*,/media/*,/dev/*,/tmp/*,/proc/*,/var/*]"
 msgstr "Valors predeterminats: [/mnt/*,/media/*,/dev/*,/tmp/*,/proc/*,/var/*]"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:539
+#: C/index.docbook:538
 msgid ""
 "<application>Search for Files</application> will not perform a quick search "
 "for paths defined by this key. File name searches in the defined paths will "
@@ -1015,23 +1016,23 @@ msgstr ""
 "comodins «*» i «?»."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:543
+#: C/index.docbook:542
 msgid "Quick Search Second Scan Excluded Paths"
 msgstr "Camins exclosos del segon pas de la cerca ràpida"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:544
+#: C/index.docbook:543
 msgid "Key name: org.cafe.search-tool.quick-search-second-scan-excluded-paths"
 msgstr ""
 "Nom de la clau: org.cafe.search-tool.quick-search-second-scan-excluded-paths"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:545
+#: C/index.docbook:544
 msgid "Default values: [/]"
 msgstr "Valors predeterminats: [/]"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:546
+#: C/index.docbook:545
 msgid ""
 "<application>Search for Files</application> will not perform a second scan "
 "after a quick search for the paths defined by this key. Quick searches in "
@@ -1045,17 +1046,17 @@ msgstr ""
 "comodins «*» i «?»."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:550
+#: C/index.docbook:549
 msgid "Show Additional Options"
 msgstr "Mostra les opcions addicionals"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:551
+#: C/index.docbook:550
 msgid "Key name: org.cafe.search-tool.show-additional-options"
 msgstr "Nom de la clau: org.cafe.search-tool.show-additional-options"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:553
+#: C/index.docbook:552
 msgid ""
 "This key determines if the <guilabel>Select more options</guilabel> section "
 "is expanded when <application>Search for Files</application> is started."

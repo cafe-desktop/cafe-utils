@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-11-20 09:33+0100\n"
+"POT-Creation-Date: 2026-10-01 12:13+0200\n"
 "PO-Revision-Date: 2018-09-13 10:15+0000\n"
 "Last-Translator: karthik holla <karthikholla87@gmail.com>, 2018\n"
 "Language-Team: Kannada (https://www.transifex.com/cafe/teams/13566/kn/)\n"
@@ -22,72 +22,72 @@ msgstr ""
 "ಶಂಕರ್ ಪ್ರಸಾದ್ <svenkate@redhat.com>,ಕಾರ್ತಿಕ ಹೊಳ್ಳ <karthikholla87@gmail.com>"
 
 #. (itstool) path: articleinfo/title
-#: C/index.docbook:23
+#: C/index.docbook:22
 msgid "Search for Files Manual"
 msgstr ""
 
 #. (itstool) path: abstract/para
-#: C/index.docbook:26
+#: C/index.docbook:25
 msgid "A search tool to find files, folders and documents on your computer."
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:31
+#: C/index.docbook:30
 msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:35
+#: C/index.docbook:34
 msgid "<year>2005</year> <holder>Dennis Cranston</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:39
+#: C/index.docbook:38
 msgid ""
 "<year>2002</year> <year>2003</year> <year>2004</year> <holder>Sun "
 "Microsystems</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:45
+#: C/index.docbook:44
 msgid "<year>2000</year> <holder>Alexander Kirillov</holder>"
 msgstr ""
 
 #. (itstool) path: publisher/publishername
-#: C/index.docbook:58
+#: C/index.docbook:57
 msgid "CAFE Documentation Project"
 msgstr ""
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
-#: C/index.docbook:61 C/index.docbook:155 C/index.docbook:163
-#: C/index.docbook:171 C/index.docbook:179 C/index.docbook:187
-#: C/index.docbook:197
+#: C/index.docbook:60 C/index.docbook:154 C/index.docbook:162
+#: C/index.docbook:170 C/index.docbook:178 C/index.docbook:186
+#: C/index.docbook:196
 msgid "GNOME Documentation Project"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:67
+#: C/index.docbook:66
 msgid ""
 "<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Search for "
 "Files Maintainer</orgname> </affiliation>"
 msgstr ""
 
 #. (itstool) path: affiliation/address
-#: C/index.docbook:78
+#: C/index.docbook:77
 #, no-wrap
 msgid "dennis_cranston@yahoo.com"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:73
+#: C/index.docbook:72
 msgid ""
 "<firstname>Dennis</firstname> <surname>Cranston</surname> <affiliation> "
 "<orgname>Search for Files Maintainer</orgname> <_:address-1/> </affiliation>"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:81
+#: C/index.docbook:80
 msgid ""
 "<firstname>Sun</firstname> <surname>GNOME Documentation Team</surname> "
 "<affiliation> <orgname>Sun Microsystems</orgname> <_:address-1/> </"
@@ -95,7 +95,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:89
+#: C/index.docbook:88
 msgid ""
 "<firstname>Alexander</firstname> <surname>Kirillov</surname> <affiliation> "
 "<orgname>GNOME Documentation Project</orgname> <address> "
@@ -103,129 +103,130 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:125
+#: C/index.docbook:124
 msgid "Wolfgang Ulbrich"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:127 C/index.docbook:137 C/index.docbook:147
+#: C/index.docbook:126 C/index.docbook:136 C/index.docbook:146
 msgid "Search for Files Maintainer"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:121
+#: C/index.docbook:120
 msgid ""
 "<revnumber>Search for Files Manual V1.10</revnumber> <date>July 2015</date> "
 "<_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:134
+#: C/index.docbook:133
 msgid "Joachim Noreiko <email>jnoreiko@yahoo.com</email>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:130
+#: C/index.docbook:129
 msgid ""
 "<revnumber>Search for Files Manual V2.7</revnumber> <date>June 2005</date> "
 "<_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:144
+#: C/index.docbook:143
 msgid "Dennis Cranston <email>dennis_cranston@yahoo.com</email>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:140
+#: C/index.docbook:139
 msgid ""
 "<revnumber>Search for Files Manual V2.6</revnumber> <date>January 2005</"
 "date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:154 C/index.docbook:162 C/index.docbook:170
-#: C/index.docbook:178 C/index.docbook:186
+#: C/index.docbook:153 C/index.docbook:161 C/index.docbook:169
+#: C/index.docbook:177 C/index.docbook:185
 msgid "Sun GNOME Documentation Team"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:150
+#: C/index.docbook:149
 msgid ""
 "<revnumber>Search for Files Manual V2.4</revnumber> <date>February 2004</"
 "date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:158
+#: C/index.docbook:157
 msgid ""
 "<revnumber>Search for Files Manual V2.3</revnumber> <date>September 2002</"
 "date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:166
+#: C/index.docbook:165
 msgid ""
 "<revnumber>Search for Filesl Manual V2.2</revnumber> <date>August 2002</"
 "date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:174
+#: C/index.docbook:173
 msgid ""
 "<revnumber>Search for Files Manual V2.1</revnumber> <date>July 2002</date> "
 "<_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:182
+#: C/index.docbook:181
 msgid ""
-"<revnumber>Search for Files Manual V2.0</revnumber> <date>May 2002</date> <_:"
-"revdescription-1/>"
+"<revnumber>Search for Files Manual V2.0</revnumber> <date>May 2002</date> "
+"<_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:194
+#: C/index.docbook:193
 msgid "Alexander Kirillov <email>kirillov@math.sunysb.edu</email>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:190
+#: C/index.docbook:189
 msgid ""
-"<revnumber>Search for Files Manual</revnumber> <date>2000</date> <_:"
-"revdescription-1/>"
+"<revnumber>Search for Files Manual</revnumber> <date>2000</date> "
+"<_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: articleinfo/releaseinfo
-#: C/index.docbook:202
+#: C/index.docbook:201
 msgid "This manual describes version 1.10 of Search for Files."
 msgstr ""
 
 #. (itstool) path: legalnotice/title
-#: C/index.docbook:205
+#: C/index.docbook:204
 msgid "Feedback"
 msgstr ""
 
 #. (itstool) path: legalnotice/para
-#: C/index.docbook:206
+#: C/index.docbook:205
 msgid ""
 "To report a bug or make a suggestion regarding the Search for Files "
-"application or this manual, follow the directions in the <ulink url=\"help:"
-"cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
+"application or this manual, follow the directions in the <ulink "
+"url=\"help:cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</"
+"ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
-#: C/index.docbook:212
+#: C/index.docbook:211
 msgid "<primary>Search Tool</primary>"
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:220
+#: C/index.docbook:219
 msgid "Introduction"
 msgstr "ಪರಿಚಯ"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:221
+#: C/index.docbook:220
 msgid ""
 "The <application>Search for Files</application> application enables you to "
 "search for files on your system. To perform a basic search, you can type a "
@@ -234,7 +235,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:222
+#: C/index.docbook:221
 msgid ""
 "<application>Search for Files</application> uses the <command>find</"
 "command>, <command>grep</command>, and <command>locate</command> UNIX "
@@ -244,7 +245,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:223
+#: C/index.docbook:222
 msgid ""
 "The case sensitivity of the search depends on your operating system. For "
 "example, on Linux, the <command>find</command>, <command>grep</command>, and "
@@ -253,60 +254,60 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:227
+#: C/index.docbook:226
 msgid "Getting Started"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:229
+#: C/index.docbook:228
 msgid ""
 "You can start <application>Search for Files</application> in the following "
 "ways:"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:233
+#: C/index.docbook:232
 msgid "From a <guimenu>Menu Bar</guimenu> on a panel"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:235
+#: C/index.docbook:234
 msgid ""
 "Choose <menuchoice><guisubmenu>Places</guisubmenu><guimenuitem>Search for "
 "Files...</guimenuitem></menuchoice>"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:239
+#: C/index.docbook:238
 msgid "From a <guimenu>Main Menu</guimenu> on a panel"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:241
+#: C/index.docbook:240
 msgid ""
 "Choose <menuchoice><guimenuitem>Search for Files...</guimenuitem></"
 "menuchoice>"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:245
+#: C/index.docbook:244
 msgid "From a command line"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:247
+#: C/index.docbook:246
 msgid "Execute the following command: <command>cafe-search-tool</command>"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:254
+#: C/index.docbook:253
 msgid ""
 "When you start <application>Search for Files</application>, the following "
 "window is displayed."
 msgstr ""
 
 #. (itstool) path: figure/title
-#: C/index.docbook:258
+#: C/index.docbook:257
 msgid "Search for Files Window"
 msgstr ""
 
@@ -315,7 +316,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:262
+#: C/index.docbook:261
 msgctxt "_"
 msgid ""
 "external ref='figures/cafe-search-tool_window.png' "
@@ -323,7 +324,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:260
+#: C/index.docbook:259
 msgid ""
 "<imageobject><imagedata fileref=\"figures/cafe-search-tool_window.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Search for Files "
@@ -331,24 +332,24 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:277
+#: C/index.docbook:276
 msgid "Usage"
 msgstr "ಬಳಕೆ"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:280
+#: C/index.docbook:279
 msgid "To Perform a Basic Search"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:282
+#: C/index.docbook:281
 msgid ""
 "To perform a basic search for a file on the system, perform the following "
 "steps:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:284
+#: C/index.docbook:283
 msgid ""
 "Enter the search text in the <guilabel>Name contains</guilabel> field. The "
 "search text can be a filename or partial filename, with or without "
@@ -356,56 +357,56 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:294
+#: C/index.docbook:293
 msgid "Name Contains Text"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:296
+#: C/index.docbook:295
 msgid "Example"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:298
+#: C/index.docbook:297
 msgid "Result"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:304
+#: C/index.docbook:303
 msgid "Full or partial filename"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:308
+#: C/index.docbook:307
 msgid "<userinput>myfile.txt</userinput>"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:312
+#: C/index.docbook:311
 msgid ""
 "<application>Search for Files</application> searches for all files that "
 "contain the text <userinput>myfile.txt</userinput> in the filename."
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:318
+#: C/index.docbook:317
 msgid "Partial filename combined with wildcards (*, [, ])"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:322
+#: C/index.docbook:321
 msgid "<userinput>*.[ch]</userinput>"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:326
+#: C/index.docbook:325
 msgid ""
 "<application>Search for Files</application> searches for all files that have "
 "extension <userinput>.c</userinput> or <userinput>.h</userinput>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:334
+#: C/index.docbook:333
 msgid ""
 "In the <guilabel>Look in folder</guilabel> field, select the folder or "
 "device from which you want <application>Search for Files</application> to "
@@ -413,12 +414,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:336
+#: C/index.docbook:335
 msgid "Click <guibutton>Find</guibutton> to perform the search."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:339
+#: C/index.docbook:338
 msgid ""
 "<application>Search for Files</application> searches in the directory that "
 "you specify and the subdirectories of the directory. <application>Search for "
@@ -430,7 +431,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:343
+#: C/index.docbook:342
 msgid ""
 "By default, <application>Search for Files</application> will perform a quick "
 "search using the <command>locate</command> command followed by a more "
@@ -444,187 +445,187 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:347
+#: C/index.docbook:346
 msgid "To Add Search Options"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:348
+#: C/index.docbook:347
 msgid ""
 "You can add additional options to search for a file on the system. To add "
 "search options, perform the following steps:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:350
+#: C/index.docbook:349
 msgid "Click on the <guilabel>Select more options</guilabel> text."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:351
+#: C/index.docbook:350
 msgid "Click on the <guilabel>Available options</guilabel> drop-down list."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:352
+#: C/index.docbook:351
 msgid "Select the search option that you want to apply."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:353
+#: C/index.docbook:352
 msgid "Click <guibutton>Add</guibutton>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:354
+#: C/index.docbook:353
 msgid ""
 "Specify the required search information for the search option, as described "
 "in <xref linkend=\"tbl-search-rules\"/>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:355
+#: C/index.docbook:354
 msgid "Repeat the above steps for each search option that you want to apply."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:357
+#: C/index.docbook:356
 msgid ""
 "To remove a search option from the current search, click on the "
 "<guibutton>Remove</guibutton> button next to the option."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:358
+#: C/index.docbook:357
 msgid ""
 "To disable the search options from the current search, click on the "
 "<guilabel>Select more options</guilabel> text."
 msgstr ""
 
 #. (itstool) path: table/title
-#: C/index.docbook:361
+#: C/index.docbook:360
 msgid "Search Options"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:368
+#: C/index.docbook:367
 msgid "Option Name"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:370
+#: C/index.docbook:369
 msgid "Description"
 msgstr "ವಿವರಣೆ"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:376
+#: C/index.docbook:375
 msgid "Contains the text"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:378
+#: C/index.docbook:377
 msgid "Search for files of type plain text that contain the specified text."
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:382
+#: C/index.docbook:381
 msgid "Date modified less than"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:384
+#: C/index.docbook:383
 msgid ""
 "Search for files that are modified less than the period specified in days."
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:388
+#: C/index.docbook:387
 msgid "Date modified more than"
 msgstr "ಈ ದಿನಾಂಕಕ್ಕಿಂತ ನಂತರ ಮಾರ್ಪಡಿಸಲಾಗಿದ್ದು"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:390
+#: C/index.docbook:389
 msgid ""
 "Search for files that are modified longer than the period specified in days."
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:394
+#: C/index.docbook:393
 msgid "Size at least"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:396
+#: C/index.docbook:395
 msgid ""
 "Search for files that are equal to or larger than the size specified in "
 "kilobytes."
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:400
+#: C/index.docbook:399
 msgid "Size at most"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:402
+#: C/index.docbook:401
 msgid ""
 "Search for files that are smaller than or equal to the size specified in "
 "kilobytes."
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:406
+#: C/index.docbook:405
 msgid "File is empty"
 msgstr "ಕಡತವು ಖಾಲಿ ಇದೆ"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:408
+#: C/index.docbook:407
 msgid "Search for empty files."
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:412
+#: C/index.docbook:411
 msgid "Owned by user"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:414
+#: C/index.docbook:413
 msgid ""
 "Search for files that are owned by the user specified. Type the name of the "
 "user in the text box provided."
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:418
+#: C/index.docbook:417
 msgid "Owned by group"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:420
+#: C/index.docbook:419
 msgid ""
 "Search for files that are owned by the group specified. Type the name of the "
 "group in the text box provided."
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:424
+#: C/index.docbook:423
 msgid "Owner is unrecognized"
 msgstr "ಗುರುತಿಸಲಾಗದ ಮಾಲಿಕತ್ವವನ್ನು ಹೊಂದಿರುವ"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:426
+#: C/index.docbook:425
 msgid ""
 "Search for files that are owned by a user or group that is unknown to the "
 "system."
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:430
+#: C/index.docbook:429
 msgid "Name does not contain"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:432
+#: C/index.docbook:431
 msgid ""
 "Search for filenames that do not contain the string that you enter. Enter a "
 "full filename or a partial filename with wildcards in the field provided. "
@@ -633,12 +634,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:436
+#: C/index.docbook:435
 msgid "Name matches regular expression"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:438
+#: C/index.docbook:437
 msgid ""
 "Search for files that contain the specified regular expression in their "
 "directory path or filename. Type the regular expression in the text box "
@@ -646,72 +647,72 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:442
+#: C/index.docbook:441
 msgid "Show hidden and backup files"
 msgstr "ಅಡಗಿಸಲಾದ ಹಾಗು ಬ್ಯಾಕ್ಅಪ್‌ ಕಡತಗಳನ್ನು ತೋರಿಸು"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:444
+#: C/index.docbook:443
 msgid "Include hidden and backup files in the search."
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:448
+#: C/index.docbook:447
 msgid "Follow symbolic links"
 msgstr "ಸಾಂಕೇತಿಕ ಕೊಂಡಿಗಳನ್ನು ಅನುಸರಿಸು"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:450
+#: C/index.docbook:449
 msgid "Follow symbolic links when searching for files."
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:454
+#: C/index.docbook:453
 msgid "Exclude other filesystems"
 msgstr "ಇತರೆ ಕಡತವ್ಯವಸ್ಥೆಗಳನ್ನು ಹೊರತುಪಡಿಸಿ"
 
 #. (itstool) path: entry/para
-#: C/index.docbook:456
+#: C/index.docbook:455
 msgid ""
 "Search in directories that are in the same filesystem as the start directory."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:466
+#: C/index.docbook:465
 msgid "To Stop a Search"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:467
+#: C/index.docbook:466
 msgid ""
 "Click <guibutton>Stop</guibutton> to stop a search before "
 "<application>Search for Files</application> completes the search."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:471
+#: C/index.docbook:470
 msgid "To Open a Displayed File"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:472
+#: C/index.docbook:471
 msgid ""
 "To open a file displayed in the <guilabel>Search results</guilabel> list "
 "box, perform one of the following steps:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:474
+#: C/index.docbook:473
 msgid "Right-click on the file, then choose <guimenuitem>Open</guimenuitem>."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:475
+#: C/index.docbook:474
 msgid "Double-click on the file."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:477
+#: C/index.docbook:476
 msgid ""
 "To open the folder that contains a file displayed in the <guilabel>Search "
 "results</guilabel> list box, right-click on the file, then choose "
@@ -719,12 +720,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:481
+#: C/index.docbook:480
 msgid "To Delete a Displayed File"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:482
+#: C/index.docbook:481
 msgid ""
 "To delete a file displayed in the <guilabel>Search results</guilabel> list "
 "box, right-click on the file, then choose <guimenuitem>Move to Trash</"
@@ -732,12 +733,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:493
+#: C/index.docbook:492
 msgid "To Save the Search Results"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:494
+#: C/index.docbook:493
 msgid ""
 "To save the results of the last search that <application>Search for Files</"
 "application> performed, right-click in the <guilabel>Search results</"
@@ -747,12 +748,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:502
+#: C/index.docbook:501
 msgid "Settings"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:504
+#: C/index.docbook:503
 msgid ""
 "<application>Search for Files</application> provides gsettings keys to "
 "modify some of its behavior. The gsettings values can be changed by starting "
@@ -760,44 +761,44 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:508
+#: C/index.docbook:507
 msgid "<guimenu>Applications</guimenu> menu"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:510
+#: C/index.docbook:509
 msgid ""
 "Choose <menuchoice><guisubmenu>System Tools</guisubmenu><guimenuitem>dconf "
 "Editor</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:514
+#: C/index.docbook:513
 msgid "Command line"
 msgstr "ಆಜ್ಞಾ ಸಾಲು"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:516
+#: C/index.docbook:515
 msgid "Execute the following command: <command>dconf-editor</command>"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:522
+#: C/index.docbook:521
 msgid "Disable Quick Search"
 msgstr "ಕ್ಷಿಪ್ರ ಹುಡುಕನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:523
+#: C/index.docbook:522
 msgid "Key name: org.cafe.search-tool.disable-quick-search"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:524 C/index.docbook:531 C/index.docbook:552
+#: C/index.docbook:523 C/index.docbook:530 C/index.docbook:551
 msgid "Default value: false"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:525
+#: C/index.docbook:524
 msgid ""
 "<application>Search for Files</application> speeds up file name searches by "
 "using the <command>locate</command> command. <command>Locate</command> "
@@ -807,17 +808,17 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:529
+#: C/index.docbook:528
 msgid "Disable Quick Search Second Scan"
 msgstr "ಕ್ಷಿಪ್ರ ಹುಡುಕು ಎರಡನೆಯ ಶೋಧನೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:530
+#: C/index.docbook:529
 msgid "Key name: org.cafe.search-tool.disable-quick-search-second-scan"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:532
+#: C/index.docbook:531
 msgid ""
 "After completing a quick search, <application>Search for Files</application> "
 "will perform a thorough search using the <command>find</command> command. "
@@ -827,22 +828,22 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:536
+#: C/index.docbook:535
 msgid "Quick Search Excluded Paths"
 msgstr "ಕ್ಷಿಪ್ರ ಹುಡುಕುವಿಕೆಯಿಂದ ಹೊರತಾಗಿಸಬೇಕಾದ ಮಾರ್ಗಗಳು"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:537
+#: C/index.docbook:536
 msgid "Key name: org.cafe.search-tool.quick-search-excluded-paths"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:538
+#: C/index.docbook:537
 msgid "Default values: [/mnt/*,/media/*,/dev/*,/tmp/*,/proc/*,/var/*]"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:539
+#: C/index.docbook:538
 msgid ""
 "<application>Search for Files</application> will not perform a quick search "
 "for paths defined by this key. File name searches in the defined paths will "
@@ -851,22 +852,22 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:543
+#: C/index.docbook:542
 msgid "Quick Search Second Scan Excluded Paths"
 msgstr "ಕ್ಷಿಪ್ರ ಹುಡುಕುವಿಕೆಯ ಎರಡನೆ ಬಾರಿ ಶೋಧಿಸುವಿಕೆಯಿಂದ ಹೊರತಾಗಿಸಬೇಕಾದ ಮಾರ್ಗಗಳು"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:544
+#: C/index.docbook:543
 msgid "Key name: org.cafe.search-tool.quick-search-second-scan-excluded-paths"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:545
+#: C/index.docbook:544
 msgid "Default values: [/]"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:546
+#: C/index.docbook:545
 msgid ""
 "<application>Search for Files</application> will not perform a second scan "
 "after a quick search for the paths defined by this key. Quick searches in "
@@ -875,17 +876,17 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:550
+#: C/index.docbook:549
 msgid "Show Additional Options"
 msgstr "ಹೆಚ್ಚುವರಿ ಆಯ್ಕೆಗಳನ್ನು ತೋರಿಸು"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:551
+#: C/index.docbook:550
 msgid "Key name: org.cafe.search-tool.show-additional-options"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:553
+#: C/index.docbook:552
 msgid ""
 "This key determines if the <guilabel>Select more options</guilabel> section "
 "is expanded when <application>Search for Files</application> is started."
