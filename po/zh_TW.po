@@ -12,9 +12,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-utils 1.25.0\n"
+"Project-Id-Version: cafe-utils 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2023-11-20 09:32+0100\n"
+"POT-Creation-Date: 2026-10-01 12:04+0200\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
 "Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/cafe/teams/13566/"
@@ -25,17 +25,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:2
 #: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:7
 msgid "CAFE Disk Usage Analyzer"
 msgstr "CAFE 磁碟用量分析器"
 
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:4
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
 msgid "Check folder sizes and available disk space"
 msgstr "檢查資料夾大小與可用的磁碟空間"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:14
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:13
 msgid "CAFE;check;disk;usage;analyze;size;space;"
 msgstr "CAFE;check;disk;usage;analyze;size;space;"
 
@@ -628,7 +628,7 @@ msgid "The folder does not exist."
 msgstr "資料夾不存在。"
 
 #: gsearchtool/data/cafe-search-tool.appdata.xml.in:7
-#: gsearchtool/data/cafe-search-tool.desktop.in:3
+#: gsearchtool/data/cafe-search-tool.desktop.in:2
 msgid "CAFE Search Tool"
 msgstr "CAFE 搜尋工具"
 
@@ -648,16 +648,14 @@ msgstr ""
 "搜尋檔案及資料夾。其介面讓您可以立即的存取各式各樣的搜尋參數，像是在檔案中包"
 "含特定文字、擁有者、修改日期、檔案大小、資料夾排除等。"
 
-#: gsearchtool/data/cafe-search-tool.desktop.in:4
+#: gsearchtool/data/cafe-search-tool.desktop.in:3
 msgid "Locate documents and folders on this computer by name or content"
 msgstr "以名稱或內容尋找此電腦中的文件及資料夾"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: gsearchtool/data/cafe-search-tool.desktop.in:13
-msgid ""
-"CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
-msgstr ""
-"CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
+#: gsearchtool/data/cafe-search-tool.desktop.in:12
+msgid "CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
+msgstr "CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:5
 msgid "Search history"
@@ -1508,16 +1506,16 @@ msgstr " ("
 msgid " (%d"
 msgstr " (第 %d"
 
-#: logview/data/cafe-system-log.desktop.in.in:3
+#: logview/data/cafe-system-log.desktop.in.in:2
 msgid "Log File Viewer"
 msgstr "紀錄檔檢視器"
 
-#: logview/data/cafe-system-log.desktop.in.in:4
+#: logview/data/cafe-system-log.desktop.in.in:3
 msgid "View or monitor system log files"
 msgstr "顯示或監察系統日誌檔案"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: logview/data/cafe-system-log.desktop.in.in:13
+#: logview/data/cafe-system-log.desktop.in.in:12
 msgid "CAFE;monitor;view;system;log;files;logviewer;"
 msgstr "CAFE;monitor;view;system;log;files;logviewer;"
 
@@ -1690,6 +1688,7 @@ msgid "This version of System Log does not support GZipped logs."
 msgstr "這個版本的系統紀錄檔不支援 GZip 壓縮式紀錄檔。"
 
 #: logview/src/logview-loglist.c:103
+#, c-format
 msgid "%A, %e %b"
 msgstr "%A, %e %b"
 
@@ -1888,21 +1887,21 @@ msgstr "版本:"
 msgid "Could not open the following files:"
 msgstr "無法開啟下列檔案："
 
-#: cafe-dictionary/data/default.desktop.in:3
+#: cafe-dictionary/data/default.desktop.in:2
 msgid "Default"
 msgstr "預設值"
 
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:3
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:2
 #: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:7
 msgid "CAFE Dictionary"
 msgstr "CAFE 字典"
 
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:4
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:3
 msgid "Check word definitions and spellings in an online dictionary"
 msgstr "在線上字典中查詢字詞的解譯及拼法"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:13
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:12
 msgid "CAFE;dictionary;applet;thesaurus;spelling;definitions;online;"
 msgstr "CAFE;dictionary;applet;thesaurus;spelling;definitions;online;"
 
@@ -1920,11 +1919,11 @@ msgstr ""
 "CAFE 字典讓您可以線上查詢單字。它伴隨著一個預先設定好的字典伺服器清單 (RFC "
 "2229)，您可以在其中加入您自己的來源，您也可以在特定的查詢中選取特定的伺服器。"
 
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:5
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:4
 msgid "Dictionary Applet Factory"
 msgstr "字典小程式工廠"
 
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:9
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:8
 msgid "Dictionary Look up"
 msgstr "查字典"
 
@@ -1970,7 +1969,7 @@ msgid ""
 "The name of the dictionary source used to retrieve the definitions of words."
 msgstr "在字典伺服器中用來擷取字詞解釋的資料庫名稱。"
 
-#: cafe-dictionary/data/thai.desktop.in:3
+#: cafe-dictionary/data/thai.desktop.in:2
 msgid "Thai"
 msgstr "泰文"
 
@@ -2839,12 +2838,12 @@ msgstr "字典"
 msgid "Strategies"
 msgstr "搜尋方法"
 
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:3
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:2
 #: cafe-disk-image-mounter/src/main.c:59
 msgid "CAFE Disk Image Mounter"
 msgstr "CAFE 磁碟映像檔掛載程式"
 
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:4
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:3
 msgid "Attach and mount one or more disk image files"
 msgstr "附加並掛載一個或更多磁碟映像檔"
 
@@ -2931,18 +2930,18 @@ msgstr ""
 "以選取以將它們複製到系統剪貼簿中或是將它們儲存為可攜式網路圖形 (.png) 圖片格"
 "式。"
 
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:3
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:2
 #: cafe-screenshot/src/cafe-screenshot.c:519
 #: cafe-screenshot/src/cafe-screenshot.c:527
 msgid "Take Screenshot"
 msgstr "拍下螢幕截圖"
 
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:4
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:3
 msgid "Save images of your desktop or individual windows"
 msgstr "將整個桌面或獨立的視窗儲存為圖片"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:13
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:12
 msgid "CAFE;screenshot;snapshot;desktop;window;image;"
 msgstr "CAFE;screenshot;snapshot;desktop;window;image;"
 

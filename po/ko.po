@@ -11,9 +11,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-utils 1.25.0\n"
+"Project-Id-Version: cafe-utils 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2023-11-20 09:32+0100\n"
+"POT-Creation-Date: 2026-10-01 12:04+0200\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
 "Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/cafe/teams/13566/ko/)\n"
@@ -23,17 +23,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:2
 #: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:7
 msgid "CAFE Disk Usage Analyzer"
 msgstr "마테 디스크 사용 분석기"
 
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:4
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
 msgid "Check folder sizes and available disk space"
 msgstr "폴더 크기와 디스크의 사용 가능한 공간을 검사합니다"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:14
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:13
 msgid "CAFE;check;disk;usage;analyze;size;space;"
 msgstr ""
 
@@ -626,7 +626,7 @@ msgid "The folder does not exist."
 msgstr "폴더가 없습니다."
 
 #: gsearchtool/data/cafe-search-tool.appdata.xml.in:7
-#: gsearchtool/data/cafe-search-tool.desktop.in:3
+#: gsearchtool/data/cafe-search-tool.desktop.in:2
 msgid "CAFE Search Tool"
 msgstr "마테 검색 도구"
 
@@ -643,14 +643,13 @@ msgid ""
 "exclusion, etc.."
 msgstr ""
 
-#: gsearchtool/data/cafe-search-tool.desktop.in:4
+#: gsearchtool/data/cafe-search-tool.desktop.in:3
 msgid "Locate documents and folders on this computer by name or content"
 msgstr "이 컴퓨터의 문서나 폴더를 이름이나 내용으로 찾습니다"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: gsearchtool/data/cafe-search-tool.desktop.in:13
-msgid ""
-"CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
+#: gsearchtool/data/cafe-search-tool.desktop.in:12
+msgid "CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
 msgstr ""
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:5
@@ -1538,16 +1537,16 @@ msgstr " ("
 msgid " (%d"
 msgstr " (%d"
 
-#: logview/data/cafe-system-log.desktop.in.in:3
+#: logview/data/cafe-system-log.desktop.in.in:2
 msgid "Log File Viewer"
 msgstr "로그 파일 보기"
 
-#: logview/data/cafe-system-log.desktop.in.in:4
+#: logview/data/cafe-system-log.desktop.in.in:3
 msgid "View or monitor system log files"
 msgstr "시스템의 로그 파일을 보거나 상태 변화를 봅니다"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: logview/data/cafe-system-log.desktop.in.in:13
+#: logview/data/cafe-system-log.desktop.in.in:12
 msgid "CAFE;monitor;view;system;log;files;logviewer;"
 msgstr ""
 
@@ -1600,8 +1599,8 @@ msgid ""
 "Specifies a list of log files to open up at startup. A default list is "
 "created by reading /etc/syslog.conf."
 msgstr ""
-"시작할 때 열어 볼 로그 파일의 목록을 지정합니다. 기본 목록은 /etc/syslog."
-"conf 파일을 읽어서 만듭니다."
+"시작할 때 열어 볼 로그 파일의 목록을 지정합니다. 기본 목록은 /etc/"
+"syslog.conf 파일을 읽어서 만듭니다."
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:30
 msgid "List of saved filters"
@@ -1725,6 +1724,7 @@ msgid "This version of System Log does not support GZipped logs."
 msgstr "이 시스템 로그는 GZIP 압축한 로그를 지원하지 않습니다."
 
 #: logview/src/logview-loglist.c:103
+#, c-format
 msgid "%A, %e %b"
 msgstr ""
 
@@ -1923,21 +1923,21 @@ msgstr "버전: "
 msgid "Could not open the following files:"
 msgstr "다음 파일을 열 수 없습니다:"
 
-#: cafe-dictionary/data/default.desktop.in:3
+#: cafe-dictionary/data/default.desktop.in:2
 msgid "Default"
 msgstr "기본값"
 
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:3
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:2
 #: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:7
 msgid "CAFE Dictionary"
 msgstr "마테 사전"
 
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:4
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:3
 msgid "Check word definitions and spellings in an online dictionary"
 msgstr "온라인 사전에서 단어의 의미와 맞춤법을 찾아 봅니다"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:13
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:12
 msgid "CAFE;dictionary;applet;thesaurus;spelling;definitions;online;"
 msgstr ""
 
@@ -1953,11 +1953,11 @@ msgid ""
 "query."
 msgstr ""
 
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:5
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:4
 msgid "Dictionary Applet Factory"
 msgstr "사전 애플릿 팩토리"
 
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:9
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:8
 msgid "Dictionary Look up"
 msgstr "사전 살펴보기"
 
@@ -2003,7 +2003,7 @@ msgid ""
 "The name of the dictionary source used to retrieve the definitions of words."
 msgstr "단어 정의를 가져올 때 사용할 사전 소스의 이름."
 
-#: cafe-dictionary/data/thai.desktop.in:3
+#: cafe-dictionary/data/thai.desktop.in:2
 msgid "Thai"
 msgstr "타이 문자"
 
@@ -2874,12 +2874,12 @@ msgstr "사전"
 msgid "Strategies"
 msgstr "찾기 방식"
 
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:3
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:2
 #: cafe-disk-image-mounter/src/main.c:59
 msgid "CAFE Disk Image Mounter"
 msgstr ""
 
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:4
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:3
 msgid "Attach and mount one or more disk image files"
 msgstr ""
 
@@ -2961,18 +2961,18 @@ msgid ""
 "format."
 msgstr ""
 
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:3
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:2
 #: cafe-screenshot/src/cafe-screenshot.c:519
 #: cafe-screenshot/src/cafe-screenshot.c:527
 msgid "Take Screenshot"
 msgstr "스크린샷 찍기"
 
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:4
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:3
 msgid "Save images of your desktop or individual windows"
 msgstr "데스크톱이나 창 한 개의 스크린샷을 저장합니다"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:13
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:12
 msgid "CAFE;screenshot;snapshot;desktop;window;image;"
 msgstr ""
 

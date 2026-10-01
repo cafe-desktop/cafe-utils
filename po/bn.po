@@ -8,9 +8,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-utils 1.25.0\n"
+"Project-Id-Version: cafe-utils 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2023-11-20 09:32+0100\n"
+"POT-Creation-Date: 2026-10-01 12:04+0200\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Bengali (https://www.transifex.com/cafe/teams/13566/bn/)\n"
@@ -20,17 +20,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:2
 #: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:7
 msgid "CAFE Disk Usage Analyzer"
 msgstr ""
 
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:4
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
 msgid "Check folder sizes and available disk space"
 msgstr "ফোল্ডারের মাপ ও ডিস্কে বিদ্যমান স্থান পরীক্ষা করা হবে"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:14
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:13
 msgid "CAFE;check;disk;usage;analyze;size;space;"
 msgstr ""
 
@@ -618,7 +618,7 @@ msgid "The folder does not exist."
 msgstr "ফোল্ডার বর্তমানে অনুপস্থিত।"
 
 #: gsearchtool/data/cafe-search-tool.appdata.xml.in:7
-#: gsearchtool/data/cafe-search-tool.desktop.in:3
+#: gsearchtool/data/cafe-search-tool.desktop.in:2
 msgid "CAFE Search Tool"
 msgstr ""
 
@@ -635,14 +635,13 @@ msgid ""
 "exclusion, etc.."
 msgstr ""
 
-#: gsearchtool/data/cafe-search-tool.desktop.in:4
+#: gsearchtool/data/cafe-search-tool.desktop.in:3
 msgid "Locate documents and folders on this computer by name or content"
 msgstr "নাম অথবা অন্তর্ভুক্ত বিষয় অনুসারে এই কম্পিউটারে ফাইল অথবা ফোল্ডার অনুসন্ধান করুন"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: gsearchtool/data/cafe-search-tool.desktop.in:13
-msgid ""
-"CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
+#: gsearchtool/data/cafe-search-tool.desktop.in:12
+msgid "CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
 msgstr ""
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:5
@@ -1548,16 +1547,16 @@ msgstr " ("
 msgid " (%d"
 msgstr " (%d"
 
-#: logview/data/cafe-system-log.desktop.in.in:3
+#: logview/data/cafe-system-log.desktop.in.in:2
 msgid "Log File Viewer"
 msgstr "লগ ফাইল প্রদর্শন ব্যবস্থা"
 
-#: logview/data/cafe-system-log.desktop.in.in:4
+#: logview/data/cafe-system-log.desktop.in.in:3
 msgid "View or monitor system log files"
 msgstr "সিস্টেম লগ ফাইল পড়ুন অথবা পর্যবেক্ষণ করুন"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: logview/data/cafe-system-log.desktop.in.in:13
+#: logview/data/cafe-system-log.desktop.in.in:12
 msgid "CAFE;monitor;view;system;log;files;logviewer;"
 msgstr ""
 
@@ -1734,6 +1733,7 @@ msgid "This version of System Log does not support GZipped logs."
 msgstr "System Log-র বর্তমান সংস্করণ দ্বারা GZip করা লগ ফাইল সমর্থিত হয় না।"
 
 #: logview/src/logview-loglist.c:103
+#, c-format
 msgid "%A, %e %b"
 msgstr ""
 
@@ -1933,21 +1933,21 @@ msgstr "সংস্করণ: "
 msgid "Could not open the following files:"
 msgstr "নিম্নলিখিত ফাইল খুলতে ব্যর্থ:"
 
-#: cafe-dictionary/data/default.desktop.in:3
+#: cafe-dictionary/data/default.desktop.in:2
 msgid "Default"
 msgstr "ডিফল্ট"
 
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:3
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:2
 #: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:7
 msgid "CAFE Dictionary"
 msgstr ""
 
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:4
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:3
 msgid "Check word definitions and spellings in an online dictionary"
 msgstr "অনলাইন অভিধানে শব্দের সংজ্ঞা ও বানান পরীক্ষা করুন"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:13
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:12
 msgid "CAFE;dictionary;applet;thesaurus;spelling;definitions;online;"
 msgstr ""
 
@@ -1963,11 +1963,11 @@ msgid ""
 "query."
 msgstr ""
 
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:5
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:4
 msgid "Dictionary Applet Factory"
 msgstr ""
 
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:9
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:8
 msgid "Dictionary Look up"
 msgstr "অভিধানে সন্ধান"
 
@@ -2014,7 +2014,7 @@ msgid ""
 "The name of the dictionary source used to retrieve the definitions of words."
 msgstr "শব্দের সংজ্ঞা উদ্ধার করতে ব্যবহৃত অভিধান উৎসের নাম।"
 
-#: cafe-dictionary/data/thai.desktop.in:3
+#: cafe-dictionary/data/thai.desktop.in:2
 msgid "Thai"
 msgstr "থাই"
 
@@ -2885,12 +2885,12 @@ msgstr "অভিধান"
 msgid "Strategies"
 msgstr "নীতি"
 
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:3
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:2
 #: cafe-disk-image-mounter/src/main.c:59
 msgid "CAFE Disk Image Mounter"
 msgstr ""
 
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:4
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:3
 msgid "Attach and mount one or more disk image files"
 msgstr ""
 
@@ -2972,18 +2972,18 @@ msgid ""
 "format."
 msgstr ""
 
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:3
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:2
 #: cafe-screenshot/src/cafe-screenshot.c:519
 #: cafe-screenshot/src/cafe-screenshot.c:527
 msgid "Take Screenshot"
 msgstr "পর্দার ছবি নিন"
 
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:4
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:3
 msgid "Save images of your desktop or individual windows"
 msgstr "ডেস্কটপ অথবা স্বতন্ত্র উইন্ডোর ছবি সংরক্ষণ করুন"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:13
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:12
 msgid "CAFE;screenshot;snapshot;desktop;window;image;"
 msgstr ""
 

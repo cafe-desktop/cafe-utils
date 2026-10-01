@@ -18,9 +18,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-utils 1.25.0\n"
+"Project-Id-Version: cafe-utils 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2023-11-20 09:32+0100\n"
+"POT-Creation-Date: 2026-10-01 12:04+0200\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
 "Last-Translator: clefebvre <clement.lefebvre@linuxmint.com>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/cafe/teams/13566/ja/)\n"
@@ -30,17 +30,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:2
 #: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:7
 msgid "CAFE Disk Usage Analyzer"
 msgstr "CAFE ディスク使用量解析"
 
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:4
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
 msgid "Check folder sizes and available disk space"
 msgstr "フォルダと利用可能なディスク容量をチェックします"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:14
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:13
 msgid "CAFE;check;disk;usage;analyze;size;space;"
 msgstr ""
 
@@ -634,7 +634,7 @@ msgid "The folder does not exist."
 msgstr "そのフォルダは存在しません"
 
 #: gsearchtool/data/cafe-search-tool.appdata.xml.in:7
-#: gsearchtool/data/cafe-search-tool.desktop.in:3
+#: gsearchtool/data/cafe-search-tool.desktop.in:2
 msgid "CAFE Search Tool"
 msgstr "CAFE 検索ツール"
 
@@ -651,14 +651,13 @@ msgid ""
 "exclusion, etc.."
 msgstr ""
 
-#: gsearchtool/data/cafe-search-tool.desktop.in:4
+#: gsearchtool/data/cafe-search-tool.desktop.in:3
 msgid "Locate documents and folders on this computer by name or content"
 msgstr "このコンピュータから名前や内容でドキュメントとフォルダーを特定します"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: gsearchtool/data/cafe-search-tool.desktop.in:13
-msgid ""
-"CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
+#: gsearchtool/data/cafe-search-tool.desktop.in:12
+msgid "CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
 msgstr ""
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:5
@@ -1555,16 +1554,16 @@ msgstr " ("
 msgid " (%d"
 msgstr " (%d"
 
-#: logview/data/cafe-system-log.desktop.in.in:3
+#: logview/data/cafe-system-log.desktop.in.in:2
 msgid "Log File Viewer"
 msgstr "ログ・ビューア"
 
-#: logview/data/cafe-system-log.desktop.in.in:4
+#: logview/data/cafe-system-log.desktop.in.in:3
 msgid "View or monitor system log files"
 msgstr "システム・ログを表示したり監視します"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: logview/data/cafe-system-log.desktop.in.in:13
+#: logview/data/cafe-system-log.desktop.in.in:12
 msgid "CAFE;monitor;view;system;log;files;logviewer;"
 msgstr ""
 
@@ -1748,6 +1747,7 @@ msgstr ""
 "せん。"
 
 #: logview/src/logview-loglist.c:103
+#, c-format
 msgid "%A, %e %b"
 msgstr ""
 
@@ -1946,21 +1946,21 @@ msgstr "バージョン: "
 msgid "Could not open the following files:"
 msgstr "次のファイルを開けませんでした:"
 
-#: cafe-dictionary/data/default.desktop.in:3
+#: cafe-dictionary/data/default.desktop.in:2
 msgid "Default"
 msgstr "デフォルト"
 
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:3
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:2
 #: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:7
 msgid "CAFE Dictionary"
 msgstr "CAFE 辞書"
 
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:4
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:3
 msgid "Check word definitions and spellings in an online dictionary"
 msgstr "オンライン辞書を使って単語の意味や綴りを調べます"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:13
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:12
 msgid "CAFE;dictionary;applet;thesaurus;spelling;definitions;online;"
 msgstr ""
 
@@ -1976,11 +1976,11 @@ msgid ""
 "query."
 msgstr ""
 
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:5
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:4
 msgid "Dictionary Applet Factory"
 msgstr "辞書アプレットファクトリ"
 
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:9
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:8
 msgid "Dictionary Look up"
 msgstr "辞書検索"
 
@@ -2027,7 +2027,7 @@ msgid ""
 "The name of the dictionary source used to retrieve the definitions of words."
 msgstr "単語の意味を取得する際に使用する辞書サーバの名前です。"
 
-#: cafe-dictionary/data/thai.desktop.in:3
+#: cafe-dictionary/data/thai.desktop.in:2
 msgid "Thai"
 msgstr "タイ文字"
 
@@ -2899,12 +2899,12 @@ msgstr "辞書"
 msgid "Strategies"
 msgstr "検索ルール"
 
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:3
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:2
 #: cafe-disk-image-mounter/src/main.c:59
 msgid "CAFE Disk Image Mounter"
 msgstr ""
 
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:4
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:3
 msgid "Attach and mount one or more disk image files"
 msgstr ""
 
@@ -2986,18 +2986,18 @@ msgid ""
 "format."
 msgstr ""
 
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:3
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:2
 #: cafe-screenshot/src/cafe-screenshot.c:519
 #: cafe-screenshot/src/cafe-screenshot.c:527
 msgid "Take Screenshot"
 msgstr "スクリーンショットの取得"
 
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:4
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:3
 msgid "Save images of your desktop or individual windows"
 msgstr "デスクトップ全体またはウィンドウの画像を保存します"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:13
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:12
 msgid "CAFE;screenshot;snapshot;desktop;window;image;"
 msgstr ""
 
@@ -3055,8 +3055,8 @@ msgid ""
 "Effect to add to the outside of a border. Possible values are \"shadow\", "
 "\"none\", and \"border\"."
 msgstr ""
-"画像の境界の外側に適用する効果です。選択可能な値: "
-"\"shadow\"、\"none\"、\"border\""
+"画像の境界の外側に適用する効果です。選択可能な値: \"shadow\"、\"none\"、"
+"\"border\""
 
 #: cafe-screenshot/src/cafe-screenshot.c:138
 msgid "Error loading the help page"

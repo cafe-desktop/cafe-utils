@@ -13,9 +13,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-utils 1.25.0\n"
+"Project-Id-Version: cafe-utils 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2023-11-20 09:32+0100\n"
+"POT-Creation-Date: 2026-10-01 12:04+0200\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
 "Last-Translator: Horazone Detex <thmmt2017d@gmail.com>, 2019\n"
 "Language-Team: Vietnamese (https://www.transifex.com/cafe/teams/13566/vi/)\n"
@@ -25,17 +25,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:2
 #: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:7
 msgid "CAFE Disk Usage Analyzer"
 msgstr "Bộ phân tích sử dụng đĩa CAFE"
 
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:4
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
 msgid "Check folder sizes and available disk space"
 msgstr "Kiểm tra kích cỡ thư mục và chỗ rảnh trên đĩa"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:14
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:13
 msgid "CAFE;check;disk;usage;analyze;size;space;"
 msgstr ""
 
@@ -577,10 +577,10 @@ msgid ""
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details."
 msgstr ""
-"Chương trình này được phát hành với mong muốn nó sẽ là một phần mềm có ích,"
-"nhưng KHÔNG PHẢI CHỊU BẤT KÌ TRÁCH NHIỆM NÀO; thậm chí cả về KHẢ NĂNG BÁN "
-"LẠI hoặc PHÙ HỢP VỚI TỪNG MỤC ĐÍCH CỤ THỂ. Xem Giấy phép Công cộng GNU để "
-"biết thêm chi tiết."
+"Chương trình này được phát hành với mong muốn nó sẽ là một phần mềm có "
+"ích,nhưng KHÔNG PHẢI CHỊU BẤT KÌ TRÁCH NHIỆM NÀO; thậm chí cả về KHẢ NĂNG "
+"BÁN LẠI hoặc PHÙ HỢP VỚI TỪNG MỤC ĐÍCH CỤ THỂ. Xem Giấy phép Công cộng GNU "
+"để biết thêm chi tiết."
 
 #: baobab/src/callbacks.c:93 logview/src/logview-about.h:59
 msgid ""
@@ -619,7 +619,7 @@ msgid "The folder does not exist."
 msgstr "Thư mục không tồn tại."
 
 #: gsearchtool/data/cafe-search-tool.appdata.xml.in:7
-#: gsearchtool/data/cafe-search-tool.desktop.in:3
+#: gsearchtool/data/cafe-search-tool.desktop.in:2
 msgid "CAFE Search Tool"
 msgstr ""
 
@@ -636,14 +636,13 @@ msgid ""
 "exclusion, etc.."
 msgstr ""
 
-#: gsearchtool/data/cafe-search-tool.desktop.in:4
+#: gsearchtool/data/cafe-search-tool.desktop.in:3
 msgid "Locate documents and folders on this computer by name or content"
 msgstr "Trên máy tính này, tìm tài liệu và thư mục theo tên hay nội dung"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: gsearchtool/data/cafe-search-tool.desktop.in:13
-msgid ""
-"CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
+#: gsearchtool/data/cafe-search-tool.desktop.in:12
+msgid "CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
 msgstr ""
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:5
@@ -667,8 +666,8 @@ msgid ""
 "This key determines if the search tool disables the use of the locate "
 "command when performing simple file name searches."
 msgstr ""
-"Khóa này định nghĩa nếu công cụ tìm kiếm vô hiệu hóa sử dụng lệnh « Locate  "
-"» (định vị) sau khi tìm kiếm tên tập tin cách đơn giản."
+"Khóa này định nghĩa nếu công cụ tìm kiếm vô hiệu hóa sử dụng lệnh "
+"« Locate  » (định vị) sau khi tìm kiếm tên tập tin cách đơn giản."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:19
 msgid "Quick Search Excluded Paths"
@@ -694,8 +693,8 @@ msgid ""
 "This key determines if the search tool disables the use of the find command "
 "after performing a quick search."
 msgstr ""
-"Khóa này định nghĩa nếu công cụ tìm kiếm vô hiệu hóa sử dụng lệnh « Find  "
-"» (tìm) sau khi Tìm nhanh."
+"Khóa này định nghĩa nếu công cụ tìm kiếm vô hiệu hóa sử dụng lệnh « Find  » "
+"(tìm) sau khi Tìm nhanh."
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:29
 msgid "Quick Search Second Scan Excluded Paths"
@@ -1542,16 +1541,16 @@ msgstr " ("
 msgid " (%d"
 msgstr " (%d"
 
-#: logview/data/cafe-system-log.desktop.in.in:3
+#: logview/data/cafe-system-log.desktop.in.in:2
 msgid "Log File Viewer"
 msgstr "Bộ Xem Tập Tin Ghi Lưu"
 
-#: logview/data/cafe-system-log.desktop.in.in:4
+#: logview/data/cafe-system-log.desktop.in.in:3
 msgid "View or monitor system log files"
 msgstr "Xem hay theo dõi tập tin bản ghi hệ thống"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: logview/data/cafe-system-log.desktop.in.in:13
+#: logview/data/cafe-system-log.desktop.in.in:12
 msgid "CAFE;monitor;view;system;log;files;logviewer;"
 msgstr ""
 
@@ -1606,8 +1605,8 @@ msgid ""
 "created by reading /etc/syslog.conf."
 msgstr ""
 "Xác định danh sách các tập tin bản ghi cần mở vào lúc khởi động. Danh sách "
-"mặc định được tạo do việc đọc tập tin cấu hình bản ghi hệ thống </etc/syslog."
-"conf>."
+"mặc định được tạo do việc đọc tập tin cấu hình bản ghi hệ thống </etc/"
+"syslog.conf>."
 
 #: logview/data/org.cafe.system-log.gschema.xml.in:30
 msgid "List of saved filters"
@@ -1734,6 +1733,7 @@ msgstr ""
 "Phiên bản Bản ghi Hệ thống (System Log) không hỗ trợ bản ghi đã nén GZip."
 
 #: logview/src/logview-loglist.c:103
+#, c-format
 msgid "%A, %e %b"
 msgstr ""
 
@@ -1932,21 +1932,21 @@ msgstr "Phiên bản: "
 msgid "Could not open the following files:"
 msgstr "Không thể mở những tập tin theo đây:"
 
-#: cafe-dictionary/data/default.desktop.in:3
+#: cafe-dictionary/data/default.desktop.in:2
 msgid "Default"
 msgstr "Mặt định"
 
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:3
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:2
 #: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:7
 msgid "CAFE Dictionary"
 msgstr ""
 
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:4
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:3
 msgid "Check word definitions and spellings in an online dictionary"
 msgstr "Tìm từ trong từ điển trực tuyến để kiểm tra chính tả và sự định nghĩa"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:13
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:12
 msgid "CAFE;dictionary;applet;thesaurus;spelling;definitions;online;"
 msgstr ""
 
@@ -1962,11 +1962,11 @@ msgid ""
 "query."
 msgstr ""
 
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:5
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:4
 msgid "Dictionary Applet Factory"
 msgstr ""
 
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:9
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:8
 msgid "Dictionary Look up"
 msgstr "Tìm tra từ điển"
 
@@ -2014,7 +2014,7 @@ msgid ""
 "The name of the dictionary source used to retrieve the definitions of words."
 msgstr "Tên của nguồn từ điển được dùng để lấy lời định nghĩa của từ."
 
-#: cafe-dictionary/data/thai.desktop.in:3
+#: cafe-dictionary/data/thai.desktop.in:2
 msgid "Thai"
 msgstr "Thái"
 
@@ -2882,12 +2882,12 @@ msgstr "Từ điển"
 msgid "Strategies"
 msgstr "Chiến lược"
 
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:3
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:2
 #: cafe-disk-image-mounter/src/main.c:59
 msgid "CAFE Disk Image Mounter"
 msgstr ""
 
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:4
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:3
 msgid "Attach and mount one or more disk image files"
 msgstr ""
 
@@ -2969,18 +2969,18 @@ msgid ""
 "format."
 msgstr ""
 
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:3
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:2
 #: cafe-screenshot/src/cafe-screenshot.c:519
 #: cafe-screenshot/src/cafe-screenshot.c:527
 msgid "Take Screenshot"
 msgstr "Chụp hình màn hình"
 
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:4
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:3
 msgid "Save images of your desktop or individual windows"
 msgstr "Lưu ảnh của màn hình nền hay cửa sổ riêng"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:13
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:12
 msgid "CAFE;screenshot;snapshot;desktop;window;image;"
 msgstr ""
 
@@ -3037,8 +3037,8 @@ msgid ""
 "Effect to add to the outside of a border. Possible values are \"shadow\", "
 "\"none\", and \"border\"."
 msgstr ""
-"Tác dụng cần thêm vào cạnh ở ngoại viền. Giá trị có thể là "
-"\"shadow\" (bóng), \"none\" (không), và \"border\" (viền)."
+"Tác dụng cần thêm vào cạnh ở ngoại viền. Giá trị có thể là \"shadow\" "
+"(bóng), \"none\" (không), và \"border\" (viền)."
 
 #: cafe-screenshot/src/cafe-screenshot.c:138
 msgid "Error loading the help page"

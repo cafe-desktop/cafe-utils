@@ -12,9 +12,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cafe-utils 1.25.0\n"
+"Project-Id-Version: cafe-utils 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
-"POT-Creation-Date: 2023-11-20 09:32+0100\n"
+"POT-Creation-Date: 2026-10-01 12:04+0200\n"
 "PO-Revision-Date: 2018-03-12 09:18+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2020\n"
 "Language-Team: Catalan (https://www.transifex.com/cafe/teams/13566/ca/)\n"
@@ -24,17 +24,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:2
 #: baobab/data/cafe-disk-usage-analyzer.appdata.xml.in:7
 msgid "CAFE Disk Usage Analyzer"
 msgstr "Analitzador de l'ús dels discs de CAFE"
 
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:4
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:3
 msgid "Check folder sizes and available disk space"
 msgstr "Comproveu la mida de les carpetes i l'espai disponible al disc"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:14
+#: baobab/data/cafe-disk-usage-analyzer.desktop.in.in:13
 msgid "CAFE;check;disk;usage;analyze;size;space;"
 msgstr "CAFE;comprovar;disc;ús;anàlisi;mida;espai;"
 
@@ -643,7 +643,7 @@ msgid "The folder does not exist."
 msgstr "La carpeta no existeix."
 
 #: gsearchtool/data/cafe-search-tool.appdata.xml.in:7
-#: gsearchtool/data/cafe-search-tool.desktop.in:3
+#: gsearchtool/data/cafe-search-tool.desktop.in:2
 msgid "CAFE Search Tool"
 msgstr "Eina de cerca de CAFE"
 
@@ -665,19 +665,16 @@ msgstr ""
 "a cada cerca, com ara el text contingut en un fitxer, el propietari, la data "
 "de modificació, la mida del fitxer, l'exclusió de carpetes, etc."
 
-#: gsearchtool/data/cafe-search-tool.desktop.in:4
+#: gsearchtool/data/cafe-search-tool.desktop.in:3
 msgid "Locate documents and folders on this computer by name or content"
 msgstr ""
 "Localitzeu els documents i les carpetes en aquest ordinador pel nom o "
 "contingut"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: gsearchtool/data/cafe-search-tool.desktop.in:13
-msgid ""
-"CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
-msgstr ""
-"CAFE;cerca;fitxers;trobar;documents;carpetes;ordinador;nom;contingut;buscar;"
-"eina;"
+#: gsearchtool/data/cafe-search-tool.desktop.in:12
+msgid "CAFE;search;files;locate;documents;folders;computer;name;content;find;tool;"
+msgstr "CAFE;cerca;fitxers;trobar;documents;carpetes;ordinador;nom;contingut;buscar;eina;"
 
 #: gsearchtool/data/org.cafe.search-tool.gschema.xml.in:5
 msgid "Search history"
@@ -1582,16 +1579,16 @@ msgstr " ("
 msgid " (%d"
 msgstr " (%d"
 
-#: logview/data/cafe-system-log.desktop.in.in:3
+#: logview/data/cafe-system-log.desktop.in.in:2
 msgid "Log File Viewer"
 msgstr "Visualitzador de fitxers de registres"
 
-#: logview/data/cafe-system-log.desktop.in.in:4
+#: logview/data/cafe-system-log.desktop.in.in:3
 msgid "View or monitor system log files"
 msgstr "Visualitzeu o monitoreu els fitxers de registre del sistema"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: logview/data/cafe-system-log.desktop.in.in:13
+#: logview/data/cafe-system-log.desktop.in.in:12
 msgid "CAFE;monitor;view;system;log;files;logviewer;"
 msgstr "CAFE;monitor;veure;sistema;registre;fitxers;visualitzador;"
 
@@ -1776,6 +1773,7 @@ msgstr ""
 "Gzip."
 
 #: logview/src/logview-loglist.c:103
+#, c-format
 msgid "%A, %e %b"
 msgstr "%a %e %b"
 
@@ -1975,23 +1973,23 @@ msgstr "Versió: "
 msgid "Could not open the following files:"
 msgstr "No s'han pogut obrir els fitxers següents:"
 
-#: cafe-dictionary/data/default.desktop.in:3
+#: cafe-dictionary/data/default.desktop.in:2
 msgid "Default"
 msgstr "Predeterminat"
 
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:3
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:2
 #: cafe-dictionary/data/cafe-dictionary.appdata.xml.in:7
 msgid "CAFE Dictionary"
 msgstr "Diccionari de CAFE"
 
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:4
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:3
 msgid "Check word definitions and spellings in an online dictionary"
 msgstr ""
 "Comproveu les definicions de paraules i l'ortografia en un diccionari en "
 "línia"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:13
+#: cafe-dictionary/data/cafe-dictionary.desktop.in.in:12
 msgid "CAFE;dictionary;applet;thesaurus;spelling;definitions;online;"
 msgstr "CAFE;diccionari;miniaplicació;separació;paraules;definicions;Internet;"
 
@@ -2011,11 +2009,11 @@ msgstr ""
 "que podeu afegir les vostres pròpies fonts, mentre que podeu seleccionar els "
 "servidors específics per a una consulta específica."
 
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:5
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:4
 msgid "Dictionary Applet Factory"
 msgstr "Fàbrica de la miniaplicació de diccionari"
 
-#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:9
+#: cafe-dictionary/data/org.cafe.DictionaryApplet.cafe-panel-applet.desktop.in.in:8
 msgid "Dictionary Look up"
 msgstr "Consulta al diccionari"
 
@@ -2065,7 +2063,7 @@ msgstr ""
 "El nom de la font de diccionari utilitzat per obtenir les definicions de les "
 "paraules."
 
-#: cafe-dictionary/data/thai.desktop.in:3
+#: cafe-dictionary/data/thai.desktop.in:2
 msgid "Thai"
 msgstr "Tai"
 
@@ -2945,12 +2943,12 @@ msgstr "Diccionaris"
 msgid "Strategies"
 msgstr "Estratègies"
 
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:3
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:2
 #: cafe-disk-image-mounter/src/main.c:59
 msgid "CAFE Disk Image Mounter"
 msgstr "Muntador d'imatges de disc de CAFE"
 
-#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:4
+#: cafe-disk-image-mounter/data/cafe-disk-image-mounter.desktop.in:3
 msgid "Attach and mount one or more disk image files"
 msgstr "Adjunteu i munteu un o més fitxers d'imatge de disc"
 
@@ -3038,18 +3036,18 @@ msgstr ""
 "aplicacions. Podeu seleccionar copiar-les al porta-retalls del sistema o "
 "desar-les amb el format d'imatge «Portable Network Graphics» (.png)."
 
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:3
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:2
 #: cafe-screenshot/src/cafe-screenshot.c:519
 #: cafe-screenshot/src/cafe-screenshot.c:527
 msgid "Take Screenshot"
 msgstr "Fes una captura de pantalla"
 
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:4
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:3
 msgid "Save images of your desktop or individual windows"
 msgstr "Deseu imatges del vostre escriptori o de finestres individuals"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: cafe-screenshot/data/cafe-screenshot.desktop.in:13
+#: cafe-screenshot/data/cafe-screenshot.desktop.in:12
 msgid "CAFE;screenshot;snapshot;desktop;window;image;"
 msgstr "CAFE;captura;pantalla;escriptori;finestra;imatge;"
 
@@ -3106,8 +3104,8 @@ msgid ""
 "Effect to add to the outside of a border. Possible values are \"shadow\", "
 "\"none\", and \"border\"."
 msgstr ""
-"Efecte que s'afegirà a fora del contorn. Els valors possibles són "
-"«shadow» (ombra), «none» (cap), i «border» (contorn)."
+"Efecte que s'afegirà a fora del contorn. Els valors possibles són «shadow» "
+"(ombra), «none» (cap), i «border» (contorn)."
 
 #: cafe-screenshot/src/cafe-screenshot.c:138
 msgid "Error loading the help page"
