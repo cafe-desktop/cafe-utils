@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-11-20 09:33+0100\n"
+"POT-Creation-Date: 2026-10-01 12:13+0200\n"
 "PO-Revision-Date: 2018-09-13 09:22+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>, 2019\n"
 "Language-Team: Malay (https://www.transifex.com/cafe/teams/13566/ms/)\n"
@@ -22,12 +22,12 @@ msgid "translator-credits"
 msgstr "Abuyop"
 
 #. (itstool) path: articleinfo/title
-#: C/index.docbook:23
+#: C/index.docbook:22
 msgid "Disk Usage Analyzer Manual"
 msgstr "Panduan Penganalisis Penggunaan Cakera"
 
 #. (itstool) path: abstract/para
-#: C/index.docbook:26
+#: C/index.docbook:25
 msgid ""
 "Disk Usage Analyzer is a graphical, menu-driven viewer that you can use to "
 "view and monitor your disk usage and folder structure."
@@ -36,29 +36,29 @@ msgstr ""
 "dapat melihat dan memantau penggunaan dan struktur folder cakera anda."
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:30
+#: C/index.docbook:29
 msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:34
+#: C/index.docbook:33
 msgid "<year>2006</year> <holder>Fabio Marzocca</holder>"
 msgstr "<year>2006</year> <holder>Fabio Marzocca</holder>"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
-#: C/index.docbook:47 C/index.docbook:103
+#: C/index.docbook:46 C/index.docbook:102
 msgid "CAFE Documentation Project"
 msgstr "Projek Dokumentasi CAFE"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
-#: C/index.docbook:50 C/index.docbook:113
+#: C/index.docbook:49 C/index.docbook:112
 msgid "GNOME Documentation Project"
 msgstr "Projek Dokumentasi GNOME"
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:56
+#: C/index.docbook:55
 msgid ""
 "<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Cafe "
 "desktop</orgname> </affiliation>"
@@ -67,7 +67,7 @@ msgstr ""
 "desktop</orgname> </affiliation>"
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:62
+#: C/index.docbook:61
 msgid ""
 "<firstname>Fabio</firstname> <surname>Marzocca</surname> <affiliation> "
 "<orgname>GNOME Documentation Project</orgname> <address> "
@@ -78,7 +78,7 @@ msgstr ""
 "<email>thesaltydog@gmail.com</email> </address> </affiliation>"
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:71
+#: C/index.docbook:70
 msgid ""
 "<firstname>Fabio</firstname> <surname>Marzocca</surname> <affiliation> "
 "<address><email>thesaltydog@gmail.com</email></address> </affiliation>"
@@ -87,12 +87,12 @@ msgstr ""
 "<address><email>thesaltydog@gmail.com</email></address> </affiliation>"
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:101
+#: C/index.docbook:100
 msgid "Wolfgang Ulbrich"
 msgstr "Wolfgang Ulbrich"
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:97
+#: C/index.docbook:96
 msgid ""
 "<revnumber>Disk Usage Analyzer Manual 1.10</revnumber> <date>July 2015</"
 "date> <_:revdescription-1/>"
@@ -101,12 +101,12 @@ msgstr ""
 "<date>Julai 2015</date> <_:revdescription-1/>"
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:110
+#: C/index.docbook:109
 msgid "Emmanuele Bassi <email>ebassi@gmail.com</email>"
 msgstr "Emmanuele Bassi <email>ebassi@gmail.com</email>"
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:106
+#: C/index.docbook:105
 msgid ""
 "<revnumber>Disk Usage Analyzer Manual 1.0</revnumber> <date>April 2006</"
 "date> <_:revdescription-1/>"
@@ -115,21 +115,22 @@ msgstr ""
 "<date>April 2006</date> <_:revdescription-1/>"
 
 #. (itstool) path: articleinfo/releaseinfo
-#: C/index.docbook:118
+#: C/index.docbook:117
 msgid "This manual describes version 1.10 of Disk Usage Analyzer."
 msgstr "Panduan ini menerangkan Penganalisis Penggunaan Cakera Versi 1.10."
 
 #. (itstool) path: legalnotice/title
-#: C/index.docbook:121
+#: C/index.docbook:120
 msgid "Feedback"
 msgstr "Maklumbalas"
 
 #. (itstool) path: legalnotice/para
-#: C/index.docbook:122
+#: C/index.docbook:121
 msgid ""
 "To report a bug or make a suggestion regarding the Disk Usage Analyzer "
-"application or this manual, follow the directions in the <ulink url=\"help:"
-"cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
+"application or this manual, follow the directions in the <ulink "
+"url=\"help:cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</"
+"ulink>."
 msgstr ""
 "Untuk melaporkan pepijat atau membuat saranan berkenaan aplikasi "
 "Penganalisis Penggunaan Cakera atau panduan ini, ikuti arahan di dalam "
@@ -137,17 +138,17 @@ msgstr ""
 "Maklumbalas CAFE</ulink>."
 
 #. (itstool) path: article/indexterm
-#: C/index.docbook:130
+#: C/index.docbook:129
 msgid "<primary>Disk Usage Analyzer</primary>"
 msgstr "<primary>Penganalisis Penggunaan Cakera</primary>"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:138
+#: C/index.docbook:137
 msgid "Introduction"
 msgstr "Pengenalan"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:140
+#: C/index.docbook:139
 msgid ""
 "<application>Disk Usage Analyzer</application> is a graphical, menu-driven "
 "application to analyze disk usage in any Cafe environment. <application>Disk "
@@ -161,7 +162,7 @@ msgstr ""
 "direktori dipinta-pengguna khusus (setempat atau jauh)."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:144
+#: C/index.docbook:143
 msgid ""
 "It also auto-detects in real-time any changes made to your home directory as "
 "far as any mounted/unmounted device. <application>Disk Usage Analyzer</"
@@ -174,12 +175,12 @@ msgstr ""
 "satu tetingkap peta pepohon bergrafik lengkap untuk setiap folder terpilih."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:153
+#: C/index.docbook:152
 msgid "Getting Started"
 msgstr "Membiasakan Diri"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:155
+#: C/index.docbook:154
 msgid ""
 "<application>Disk Usage Analyzer</application> can be started in three ways:"
 msgstr ""
@@ -187,7 +188,7 @@ msgstr ""
 "dalam tiga cara:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:157
+#: C/index.docbook:156
 msgid ""
 "from Cafe menu <menuchoice><guimenu>Applications</"
 "guimenu><guimenuitem>Accessories</guimenuitem></menuchoice>;"
@@ -196,17 +197,17 @@ msgstr ""
 "guimenu><guimenuitem>Aksesori</guimenuitem></menuchoice>;"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:159
+#: C/index.docbook:158
 msgid "from a terminal window;"
 msgstr "melalui tetingkap terminal;"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:161
+#: C/index.docbook:160
 msgid "from Baul \"Open with...\" ;"
 msgstr "melalui Baul \"Buka dengan...\" ;"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:166
+#: C/index.docbook:165
 msgid ""
 "If you want to start <application>Disk Usage Analyzer</application> from a "
 "terminal window, just type:"
@@ -215,7 +216,7 @@ msgstr ""
 "application> melalui tetingkap terminal, hanya taip:"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:168
+#: C/index.docbook:167
 msgid ""
 "<command>cafe-disk-usage-analyzer &lt;full_path_to_a_directory&gt;</"
 "command>, then press <keycap>Return</keycap>."
@@ -224,7 +225,7 @@ msgstr ""
 "</command>, kemudian ketik <keycap>Return</keycap>."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:170
+#: C/index.docbook:169
 msgid ""
 "If launched from Cafe menu, <application>Disk Usage Analyzer</application> "
 "starts and remains in a stand-by state, waiting for user action."
@@ -234,7 +235,7 @@ msgstr ""
 "tindakan pengguna."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:171
+#: C/index.docbook:170
 msgid ""
 "When you start <application>Disk Usage Analyzer</application> from the Cafe "
 "Menu, the following window is displayed."
@@ -243,7 +244,7 @@ msgstr ""
 "application>, melalui Menu Cafe, tetingkap berikut dipaparkan."
 
 #. (itstool) path: figure/title
-#: C/index.docbook:175
+#: C/index.docbook:174
 msgid "Disk Usage Analyzer Window"
 msgstr "Tetingkap Penganalisis Penggunaan Cakera"
 
@@ -252,7 +253,7 @@ msgstr "Tetingkap Penganalisis Penggunaan Cakera"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:179
+#: C/index.docbook:178
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_window.png' "
@@ -262,7 +263,7 @@ msgstr ""
 "md5='100896a46f48130752a9d88ac516fa3a'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:177
+#: C/index.docbook:176
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_window.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Disk Usage "
@@ -275,42 +276,42 @@ msgstr ""
 "paparan, palang tatal, dan palang status. </phrase> </textobject>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:189
+#: C/index.docbook:188
 msgid "The user can then:"
 msgstr "Kemudian pengguna boleh:"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:191
+#: C/index.docbook:190
 msgid "start a full filesystem scan;"
 msgstr "memulakan pengimbasan sistem fail penuh;"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:193
+#: C/index.docbook:192
 msgid "select a specific local directory branch to scan"
 msgstr "memilih cabang direktori setempat khusus untuk diimbas"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:195
+#: C/index.docbook:194
 msgid "select a remote server and folder to scan"
 msgstr "pilih pelayan dan folder jauh untuk diimbas"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:197
+#: C/index.docbook:196
 msgid "set preferences"
 msgstr "tetapkan keutamaan"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:207
+#: C/index.docbook:206
 msgid "Usage"
 msgstr "Penggunaan"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:210
+#: C/index.docbook:209
 msgid "Full filesystem scan"
 msgstr "Imbas sistem fail penuh"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:211
+#: C/index.docbook:210
 msgid ""
 "To start a full filesystem scan select <menuchoice><guimenu>Analyzer</"
 "guimenu><guimenuitem>Scan Filesystem</guimenuitem></menuchoice> from the "
@@ -322,7 +323,7 @@ msgstr ""
 "<guibutton>Imbas Sistem Fail</guibutton>."
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:214
+#: C/index.docbook:213
 msgid ""
 "When the scanning process ends up, you will get the full tree of your "
 "filesystem, like the one in the next Figure."
@@ -331,7 +332,7 @@ msgstr ""
 "bagi sistem fail anda, seperti Rajah berikut"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:219
+#: C/index.docbook:218
 msgid "Disk Usage Analyzer Full filesystem scan"
 msgstr "Imbas Penuh sistem Fail Penganalisis Penggunaan Cakera"
 
@@ -340,7 +341,7 @@ msgstr "Imbas Penuh sistem Fail Penganalisis Penggunaan Cakera"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:223
+#: C/index.docbook:222
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_fullscan.png' "
@@ -350,7 +351,7 @@ msgstr ""
 "md5='17895f3407c9282a55a324642fd20e0b'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:221
+#: C/index.docbook:220
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_fullscan.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Disk Usage "
@@ -363,7 +364,7 @@ msgstr ""
 "paparan, palang tatal, dan palang status. </phrase> </textobject>"
 
 #. (itstool) path: note/para
-#: C/index.docbook:233
+#: C/index.docbook:232
 msgid ""
 "When you run a full filesystem scan, <application>Disk Usage Analyzer</"
 "application> window will start drawing the tree as soon as the thread starts "
@@ -376,7 +377,7 @@ msgstr ""
 "sekatan bersaiz besar terlekap dalam sistem fail, ia juga akan diimbas."
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:238
+#: C/index.docbook:237
 msgid ""
 "<application>Disk Usage Analyzer</application> will display sizes in the "
 "directory tree as allocated space. This means that the displayed sizes refer "
@@ -392,7 +393,7 @@ msgstr ""
 "guimenuitem></menuchoice> ."
 
 #. (itstool) path: warning/para
-#: C/index.docbook:243
+#: C/index.docbook:242
 msgid ""
 "<application>Disk Usage Analyzer</application> will not count the /proc dir, "
 "nor any file size that is not related to a \"plain\" file, so symlinks, "
@@ -404,7 +405,7 @@ msgstr ""
 "peranti tidak dimasukkan dalam saiz direktori."
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:247
+#: C/index.docbook:246
 msgid ""
 "Hard-links are managed in a different way: this first hardlink is counted as "
 "a normal file, while the subsequent links to the same inode device are not "
@@ -415,12 +416,12 @@ msgstr ""
 "tidak dikira, tetapi disorot dalam lajur sebelah-kanan tetingkap."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:254
+#: C/index.docbook:253
 msgid "Single folder scan"
 msgstr "Imbas satu folder"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:256
+#: C/index.docbook:255
 msgid ""
 "To start a single folder scan select <menuchoice><guimenu>Analyzer</"
 "guimenu><guimenuitem>Scan Folder...</guimenuitem></menuchoice> from the "
@@ -432,12 +433,12 @@ msgstr ""
 "<guibutton>Imbas Folder</guibutton>."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:263
+#: C/index.docbook:262
 msgid "Remote scan"
 msgstr "Imbas jauh"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:265
+#: C/index.docbook:264
 msgid ""
 "If you need to scan a remote server-folder, just click on the toolbar icon "
 "<guibutton>Scan Remote Folder</guibutton> or select "
@@ -454,7 +455,7 @@ msgstr ""
 "bersambung ke pelayan melalui ssh, ftp, smb, http dan https."
 
 #. (itstool) path: figure/title
-#: C/index.docbook:272
+#: C/index.docbook:271
 msgid "Disk Usage Analyzer Remote folder scan"
 msgstr "Imbas folder Jauh Penganalisis Penggunaan Cakera"
 
@@ -463,7 +464,7 @@ msgstr "Imbas folder Jauh Penganalisis Penggunaan Cakera"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:276
+#: C/index.docbook:275
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_remote.png' "
@@ -473,7 +474,7 @@ msgstr ""
 "md5='b11c5d1001dfbab2628df824a2660643'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:274
+#: C/index.docbook:273
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_remote.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Disk Usage "
@@ -484,12 +485,12 @@ msgstr ""
 "dialog folder jauh Penganalisis Penggunaan Cakera. </phrase> </textobject>"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:293
+#: C/index.docbook:292
 msgid "Preferences"
 msgstr "Keutamaan"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:295
+#: C/index.docbook:294
 msgid ""
 "To change the <application>Disk Usage Analyzer</application> application "
 "preferences, choose <menuchoice><guimenu>Edit</"
@@ -500,7 +501,7 @@ msgstr ""
 "guimenu><guimenuitem>Keutamaan</guimenuitem></menuchoice>."
 
 #. (itstool) path: figure/title
-#: C/index.docbook:300
+#: C/index.docbook:299
 msgid "Disk Usage Analyzer Preferences Window"
 msgstr "Tetingkap Keutamaan Penganalisis Penggunaan Cakera"
 
@@ -509,7 +510,7 @@ msgstr "Tetingkap Keutamaan Penganalisis Penggunaan Cakera"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:304
+#: C/index.docbook:303
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_prefs.png' "
@@ -519,7 +520,7 @@ msgstr ""
 "md5='94dbb42d65cc8c32e50ac87bf9932811'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:302
+#: C/index.docbook:301
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_prefs.png\" format=\"PNG\"/"
 "> </imageobject> <textobject> <phrase>Preferences window </phrase> </"
@@ -530,12 +531,12 @@ msgstr ""
 "textobject>"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:315
+#: C/index.docbook:314
 msgid "Select devices to be scanned"
 msgstr "Pilih peranti untuk diimbas"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:316
+#: C/index.docbook:315
 msgid ""
 "In the first part of the Preferences window, all detected mounted devices "
 "are listed. Click on the checkbox to include/exclude the partition into the "
@@ -546,17 +547,17 @@ msgstr ""
 "ke dalam operasi pengimbasan sistem fail."
 
 #. (itstool) path: note/para
-#: C/index.docbook:319
+#: C/index.docbook:318
 msgid "The device mounted on \"/\" cannot be excluded from the scan."
 msgstr "Peranti terlekap pada \"/\" tidak boleh diasingkan dari pengimbasan."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:323
+#: C/index.docbook:322
 msgid "Enable monitoring of home"
 msgstr "Benarkan pemantauan rumah"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:324
+#: C/index.docbook:323
 msgid ""
 "If this option is checked, <application>Disk Usage Analyzer</application> "
 "will constantly monitor any external changes to home directory and warn the "
@@ -567,24 +568,24 @@ msgstr ""
 "rumha dan beri amaran kepada pengguna jika ada fail ditambah/dibuang."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:332
+#: C/index.docbook:331
 msgid "Treemaps"
 msgstr "Peta Pepohon"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:334
+#: C/index.docbook:333
 msgid ""
 "<guilabel>Treemap</guilabel> concepts have been developed by Ben Shneiderman "
 "in the '90s. Read his <ulink type=\"http\" url=\"http://www.cs.umd.edu/hcil/"
 "treemap-history/index.shtml\">vision on treemaps</ulink>."
 msgstr ""
 "Konsep <guilabel>Peta Pepohon</guilabel> telah dibangunkan oleh Ben "
-"Shneiderman pada tahun '90-an. Baca <ulink type=\"http\" url=\"http://www.cs."
-"umd.edu/hcil/treemap-history/index.shtml\">visinya berkenaan peta pepohon</"
-"ulink>."
+"Shneiderman pada tahun '90-an. Baca <ulink type=\"http\" url=\"http://"
+"www.cs.umd.edu/hcil/treemap-history/index.shtml\">visinya berkenaan peta "
+"pepohon</ulink>."
 
 #. (itstool) path: figure/title
-#: C/index.docbook:339
+#: C/index.docbook:338
 msgid "Disk Usage Analyzer Treemap Window"
 msgstr "Tetingkap Peta Pepohon Penganalisis Penggunaan Cakera"
 
@@ -593,7 +594,7 @@ msgstr "Tetingkap Peta Pepohon Penganalisis Penggunaan Cakera"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:343
+#: C/index.docbook:342
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_treemaps.png' "
@@ -603,7 +604,7 @@ msgstr ""
 "md5='b553b49db25f9d6b98efcc394a5d3689'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:341
+#: C/index.docbook:340
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_treemaps.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Treemap's theory. Shows "
@@ -614,7 +615,7 @@ msgstr ""
 "Menunjukkan 2 rajah peta pepohon </phrase> </textobject>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:354
+#: C/index.docbook:353
 msgid ""
 "Figure shows an example of treemap's theory. Each node (as shown in the tree "
 "diagram) has a name (a letter) and an associated size (a number). The size "
@@ -627,7 +628,7 @@ msgstr ""
 "ialah jumlah saiz anak-anaknya."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:359
+#: C/index.docbook:358
 msgid ""
 "The treemap is constructed via recursive subdivision of the initial "
 "rectangle. The size of each sub-rectangle corresponds to the size of the "
@@ -647,7 +648,7 @@ msgstr ""
 "memberikan maklumat tambahan berkenaan daun-daun."
 
 #. (itstool) path: note/para
-#: C/index.docbook:368
+#: C/index.docbook:367
 msgid ""
 "Treemaps are very effective when size is the most important feature to be "
 "displayed."
@@ -656,12 +657,12 @@ msgstr ""
 "dipaparkan."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:374
+#: C/index.docbook:373
 msgid "Ringschart"
 msgstr "Carta Gelang"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:376
+#: C/index.docbook:375
 msgid ""
 "<guilabel>Ringschart</guilabel> is a graphical representation of the disk "
 "usage by a concrete folder. When launching the application, it is notified "
@@ -672,7 +673,7 @@ msgstr ""
 "penggunaan sistem fail sepertimana pada rajah berikutnya:"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:383
+#: C/index.docbook:382
 msgid "Disk Usage Analyzer showing a ringschart with the file system usage"
 msgstr ""
 "Penganalisis Penggunaan Cakera menunjukkan sebuah carta gelang dengan "
@@ -683,7 +684,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:387
+#: C/index.docbook:386
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_ringschart1.png' "
@@ -693,7 +694,7 @@ msgstr ""
 "md5='84b2e52d360fbda7311ce59a9532be7a'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:385
+#: C/index.docbook:384
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_ringschart1.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>After launching the "
@@ -706,7 +707,7 @@ msgstr ""
 "berada di sebelah kanan. </phrase> </textobject>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:398
+#: C/index.docbook:397
 msgid ""
 "When you start scanning a folder, the tree of subfolders is created and "
 "listed on the left side. Each row contains information for the name, how "
@@ -725,7 +726,7 @@ msgstr ""
 "sahaja selesai berdasarkan yang mana telah dikira."
 
 #. (itstool) path: figure/title
-#: C/index.docbook:411
+#: C/index.docbook:410
 msgid "Disk Usage Analyzer showing a ringschart with the usage of a folder"
 msgstr ""
 "Penganalisis Penggunaan Cakera menunjukkan sebuah carta gelang dengan "
@@ -736,7 +737,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:415
+#: C/index.docbook:414
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_ringschart2.png' "
@@ -746,7 +747,7 @@ msgstr ""
 "md5='d938ef7e9299de5b304c7654bf14e364'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:413
+#: C/index.docbook:412
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_ringschart2.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>After scanning a "
@@ -757,7 +758,7 @@ msgstr ""
 "folder. </phrase> </textobject>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:425
+#: C/index.docbook:424
 msgid ""
 "The <guilabel>Ringschart</guilabel> is composed of a set of nested rings "
 "around a central circle. This circle symbolizes the root folder of the "
@@ -797,7 +798,7 @@ msgstr ""
 "dipaparkan, untuk menghindari pertindihan."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:446
+#: C/index.docbook:445
 msgid ""
 "You can go up and down the rows in the list (optionally expanding those with "
 "subfolders), the graphic representation will change using the selected "
@@ -820,7 +821,7 @@ msgstr ""
 "anda melakukan tindakan berlawanan, naik ke atas selangkah di dalam hieraki."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:457
+#: C/index.docbook:456
 msgid ""
 "The percentage of its parent's radius that is used by a given folder is "
 "directly proportional to the relation between its own size and its parent's. "

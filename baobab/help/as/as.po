@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-11-20 09:33+0100\n"
+"POT-Creation-Date: 2026-10-01 12:13+0200\n"
 "PO-Revision-Date: 2018-09-13 09:22+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Assamese (https://www.transifex.com/cafe/teams/13566/as/)\n"
@@ -20,48 +20,48 @@ msgid "translator-credits"
 msgstr "অমিতাক্ষ ফুকন (aphukan@fedoraproject.org)"
 
 #. (itstool) path: articleinfo/title
-#: C/index.docbook:23
+#: C/index.docbook:22
 msgid "Disk Usage Analyzer Manual"
 msgstr ""
 
 #. (itstool) path: abstract/para
-#: C/index.docbook:26
+#: C/index.docbook:25
 msgid ""
 "Disk Usage Analyzer is a graphical, menu-driven viewer that you can use to "
 "view and monitor your disk usage and folder structure."
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:30
+#: C/index.docbook:29
 msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:34
+#: C/index.docbook:33
 msgid "<year>2006</year> <holder>Fabio Marzocca</holder>"
 msgstr ""
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
-#: C/index.docbook:47 C/index.docbook:103
+#: C/index.docbook:46 C/index.docbook:102
 msgid "CAFE Documentation Project"
 msgstr ""
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
-#: C/index.docbook:50 C/index.docbook:113
+#: C/index.docbook:49 C/index.docbook:112
 msgid "GNOME Documentation Project"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:56
+#: C/index.docbook:55
 msgid ""
 "<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Cafe "
 "desktop</orgname> </affiliation>"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:62
+#: C/index.docbook:61
 msgid ""
 "<firstname>Fabio</firstname> <surname>Marzocca</surname> <affiliation> "
 "<orgname>GNOME Documentation Project</orgname> <address> "
@@ -69,66 +69,67 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:71
+#: C/index.docbook:70
 msgid ""
 "<firstname>Fabio</firstname> <surname>Marzocca</surname> <affiliation> "
 "<address><email>thesaltydog@gmail.com</email></address> </affiliation>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:101
+#: C/index.docbook:100
 msgid "Wolfgang Ulbrich"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:97
+#: C/index.docbook:96
 msgid ""
 "<revnumber>Disk Usage Analyzer Manual 1.10</revnumber> <date>July 2015</"
 "date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:110
+#: C/index.docbook:109
 msgid "Emmanuele Bassi <email>ebassi@gmail.com</email>"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:106
+#: C/index.docbook:105
 msgid ""
 "<revnumber>Disk Usage Analyzer Manual 1.0</revnumber> <date>April 2006</"
 "date> <_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: articleinfo/releaseinfo
-#: C/index.docbook:118
+#: C/index.docbook:117
 msgid "This manual describes version 1.10 of Disk Usage Analyzer."
 msgstr ""
 
 #. (itstool) path: legalnotice/title
-#: C/index.docbook:121
+#: C/index.docbook:120
 msgid "Feedback"
 msgstr ""
 
 #. (itstool) path: legalnotice/para
-#: C/index.docbook:122
+#: C/index.docbook:121
 msgid ""
 "To report a bug or make a suggestion regarding the Disk Usage Analyzer "
-"application or this manual, follow the directions in the <ulink url=\"help:"
-"cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</ulink>."
+"application or this manual, follow the directions in the <ulink "
+"url=\"help:cafe-user-guide/feedback\" type=\"help\">CAFE Feedback Page</"
+"ulink>."
 msgstr ""
 
 #. (itstool) path: article/indexterm
-#: C/index.docbook:130
+#: C/index.docbook:129
 msgid "<primary>Disk Usage Analyzer</primary>"
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:138
+#: C/index.docbook:137
 msgid "Introduction"
 msgstr "ভূমিকা"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:140
+#: C/index.docbook:139
 msgid ""
 "<application>Disk Usage Analyzer</application> is a graphical, menu-driven "
 "application to analyze disk usage in any Cafe environment. <application>Disk "
@@ -137,7 +138,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:144
+#: C/index.docbook:143
 msgid ""
 "It also auto-detects in real-time any changes made to your home directory as "
 "far as any mounted/unmounted device. <application>Disk Usage Analyzer</"
@@ -146,63 +147,63 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:153
+#: C/index.docbook:152
 msgid "Getting Started"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:155
+#: C/index.docbook:154
 msgid ""
 "<application>Disk Usage Analyzer</application> can be started in three ways:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:157
+#: C/index.docbook:156
 msgid ""
 "from Cafe menu <menuchoice><guimenu>Applications</"
 "guimenu><guimenuitem>Accessories</guimenuitem></menuchoice>;"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:159
+#: C/index.docbook:158
 msgid "from a terminal window;"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:161
+#: C/index.docbook:160
 msgid "from Baul \"Open with...\" ;"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:166
+#: C/index.docbook:165
 msgid ""
 "If you want to start <application>Disk Usage Analyzer</application> from a "
 "terminal window, just type:"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:168
+#: C/index.docbook:167
 msgid ""
 "<command>cafe-disk-usage-analyzer &lt;full_path_to_a_directory&gt;</"
 "command>, then press <keycap>Return</keycap>."
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:170
+#: C/index.docbook:169
 msgid ""
 "If launched from Cafe menu, <application>Disk Usage Analyzer</application> "
 "starts and remains in a stand-by state, waiting for user action."
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:171
+#: C/index.docbook:170
 msgid ""
 "When you start <application>Disk Usage Analyzer</application> from the Cafe "
 "Menu, the following window is displayed."
 msgstr ""
 
 #. (itstool) path: figure/title
-#: C/index.docbook:175
+#: C/index.docbook:174
 msgid "Disk Usage Analyzer Window"
 msgstr ""
 
@@ -211,7 +212,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:179
+#: C/index.docbook:178
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_window.png' "
@@ -219,7 +220,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:177
+#: C/index.docbook:176
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_window.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Disk Usage "
@@ -228,42 +229,42 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:189
+#: C/index.docbook:188
 msgid "The user can then:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:191
+#: C/index.docbook:190
 msgid "start a full filesystem scan;"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:193
+#: C/index.docbook:192
 msgid "select a specific local directory branch to scan"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:195
+#: C/index.docbook:194
 msgid "select a remote server and folder to scan"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:197
+#: C/index.docbook:196
 msgid "set preferences"
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:207
+#: C/index.docbook:206
 msgid "Usage"
 msgstr "Usage"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:210
+#: C/index.docbook:209
 msgid "Full filesystem scan"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:211
+#: C/index.docbook:210
 msgid ""
 "To start a full filesystem scan select <menuchoice><guimenu>Analyzer</"
 "guimenu><guimenuitem>Scan Filesystem</guimenuitem></menuchoice> from the "
@@ -271,14 +272,14 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:214
+#: C/index.docbook:213
 msgid ""
 "When the scanning process ends up, you will get the full tree of your "
 "filesystem, like the one in the next Figure."
 msgstr ""
 
 #. (itstool) path: figure/title
-#: C/index.docbook:219
+#: C/index.docbook:218
 msgid "Disk Usage Analyzer Full filesystem scan"
 msgstr ""
 
@@ -287,7 +288,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:223
+#: C/index.docbook:222
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_fullscan.png' "
@@ -295,7 +296,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:221
+#: C/index.docbook:220
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_fullscan.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Disk Usage "
@@ -304,7 +305,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: note/para
-#: C/index.docbook:233
+#: C/index.docbook:232
 msgid ""
 "When you run a full filesystem scan, <application>Disk Usage Analyzer</"
 "application> window will start drawing the tree as soon as the thread starts "
@@ -313,7 +314,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:238
+#: C/index.docbook:237
 msgid ""
 "<application>Disk Usage Analyzer</application> will display sizes in the "
 "directory tree as allocated space. This means that the displayed sizes refer "
@@ -323,7 +324,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: warning/para
-#: C/index.docbook:243
+#: C/index.docbook:242
 msgid ""
 "<application>Disk Usage Analyzer</application> will not count the /proc dir, "
 "nor any file size that is not related to a \"plain\" file, so symlinks, "
@@ -331,7 +332,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:247
+#: C/index.docbook:246
 msgid ""
 "Hard-links are managed in a different way: this first hardlink is counted as "
 "a normal file, while the subsequent links to the same inode device are not "
@@ -339,12 +340,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:254
+#: C/index.docbook:253
 msgid "Single folder scan"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:256
+#: C/index.docbook:255
 msgid ""
 "To start a single folder scan select <menuchoice><guimenu>Analyzer</"
 "guimenu><guimenuitem>Scan Folder...</guimenuitem></menuchoice> from the "
@@ -352,12 +353,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:263
+#: C/index.docbook:262
 msgid "Remote scan"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:265
+#: C/index.docbook:264
 msgid ""
 "If you need to scan a remote server-folder, just click on the toolbar icon "
 "<guibutton>Scan Remote Folder</guibutton> or select "
@@ -368,7 +369,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: figure/title
-#: C/index.docbook:272
+#: C/index.docbook:271
 msgid "Disk Usage Analyzer Remote folder scan"
 msgstr ""
 
@@ -377,7 +378,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:276
+#: C/index.docbook:275
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_remote.png' "
@@ -385,7 +386,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:274
+#: C/index.docbook:273
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_remote.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows Disk Usage "
@@ -393,12 +394,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:293
+#: C/index.docbook:292
 msgid "Preferences"
 msgstr "পছন্দসমূহ"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:295
+#: C/index.docbook:294
 msgid ""
 "To change the <application>Disk Usage Analyzer</application> application "
 "preferences, choose <menuchoice><guimenu>Edit</"
@@ -406,7 +407,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: figure/title
-#: C/index.docbook:300
+#: C/index.docbook:299
 msgid "Disk Usage Analyzer Preferences Window"
 msgstr ""
 
@@ -415,7 +416,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:304
+#: C/index.docbook:303
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_prefs.png' "
@@ -423,7 +424,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:302
+#: C/index.docbook:301
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_prefs.png\" format=\"PNG\"/"
 "> </imageobject> <textobject> <phrase>Preferences window </phrase> </"
@@ -431,12 +432,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:315
+#: C/index.docbook:314
 msgid "Select devices to be scanned"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:316
+#: C/index.docbook:315
 msgid ""
 "In the first part of the Preferences window, all detected mounted devices "
 "are listed. Click on the checkbox to include/exclude the partition into the "
@@ -444,17 +445,17 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: note/para
-#: C/index.docbook:319
+#: C/index.docbook:318
 msgid "The device mounted on \"/\" cannot be excluded from the scan."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:323
+#: C/index.docbook:322
 msgid "Enable monitoring of home"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:324
+#: C/index.docbook:323
 msgid ""
 "If this option is checked, <application>Disk Usage Analyzer</application> "
 "will constantly monitor any external changes to home directory and warn the "
@@ -462,12 +463,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:332
+#: C/index.docbook:331
 msgid "Treemaps"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:334
+#: C/index.docbook:333
 msgid ""
 "<guilabel>Treemap</guilabel> concepts have been developed by Ben Shneiderman "
 "in the '90s. Read his <ulink type=\"http\" url=\"http://www.cs.umd.edu/hcil/"
@@ -475,7 +476,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: figure/title
-#: C/index.docbook:339
+#: C/index.docbook:338
 msgid "Disk Usage Analyzer Treemap Window"
 msgstr ""
 
@@ -484,7 +485,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:343
+#: C/index.docbook:342
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_treemaps.png' "
@@ -492,7 +493,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:341
+#: C/index.docbook:340
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_treemaps.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Treemap's theory. Shows "
@@ -500,7 +501,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:354
+#: C/index.docbook:353
 msgid ""
 "Figure shows an example of treemap's theory. Each node (as shown in the tree "
 "diagram) has a name (a letter) and an associated size (a number). The size "
@@ -509,7 +510,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:359
+#: C/index.docbook:358
 msgid ""
 "The treemap is constructed via recursive subdivision of the initial "
 "rectangle. The size of each sub-rectangle corresponds to the size of the "
@@ -522,19 +523,19 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: note/para
-#: C/index.docbook:368
+#: C/index.docbook:367
 msgid ""
 "Treemaps are very effective when size is the most important feature to be "
 "displayed."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:374
+#: C/index.docbook:373
 msgid "Ringschart"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:376
+#: C/index.docbook:375
 msgid ""
 "<guilabel>Ringschart</guilabel> is a graphical representation of the disk "
 "usage by a concrete folder. When launching the application, it is notified "
@@ -542,7 +543,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: figure/title
-#: C/index.docbook:383
+#: C/index.docbook:382
 msgid "Disk Usage Analyzer showing a ringschart with the file system usage"
 msgstr ""
 
@@ -551,7 +552,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:387
+#: C/index.docbook:386
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_ringschart1.png' "
@@ -559,7 +560,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:385
+#: C/index.docbook:384
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_ringschart1.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>After launching the "
@@ -568,7 +569,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:398
+#: C/index.docbook:397
 msgid ""
 "When you start scanning a folder, the tree of subfolders is created and "
 "listed on the left side. Each row contains information for the name, how "
@@ -580,7 +581,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: figure/title
-#: C/index.docbook:411
+#: C/index.docbook:410
 msgid "Disk Usage Analyzer showing a ringschart with the usage of a folder"
 msgstr ""
 
@@ -589,7 +590,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:415
+#: C/index.docbook:414
 msgctxt "_"
 msgid ""
 "external ref='figures/baobab_ringschart2.png' "
@@ -597,7 +598,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:413
+#: C/index.docbook:412
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/baobab_ringschart2.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>After scanning a "
@@ -605,7 +606,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:425
+#: C/index.docbook:424
 msgid ""
 "The <guilabel>Ringschart</guilabel> is composed of a set of nested rings "
 "around a central circle. This circle symbolizes the root folder of the "
@@ -628,7 +629,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:446
+#: C/index.docbook:445
 msgid ""
 "You can go up and down the rows in the list (optionally expanding those with "
 "subfolders), the graphic representation will change using the selected "
@@ -642,7 +643,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:457
+#: C/index.docbook:456
 msgid ""
 "The percentage of its parent's radius that is used by a given folder is "
 "directly proportional to the relation between its own size and its parent's. "
