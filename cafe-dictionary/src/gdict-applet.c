@@ -80,7 +80,7 @@ struct _GdictAppletPrivate
 
   guint idle_draw_id;
 
-  GdkPixbuf *icon;
+  CdkPixbuf *icon;
 
   gint window_width;
   gint window_height;
@@ -538,7 +538,7 @@ gdict_applet_draw (GdictApplet *applet)
 
   if (priv->icon)
     {
-      GdkPixbuf *scaled;
+      CdkPixbuf *scaled;
 
       priv->image = ctk_image_new ();
       ctk_image_set_pixel_size (CTK_IMAGE (priv->image), priv->size - 10);
@@ -785,7 +785,7 @@ gdict_applet_size_allocate (CtkWidget    *widget,
       /* re-scale the icon, if it was found */
       if (priv->icon)
         {
-          GdkPixbuf *scaled;
+          CdkPixbuf *scaled;
 
 	  scaled = cdk_pixbuf_scale_simple (priv->icon,
 			  		    priv->size - 5,
