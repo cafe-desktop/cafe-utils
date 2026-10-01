@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CAFE Desktop Environment\n"
-"POT-Creation-Date: 2023-11-20 09:33+0100\n"
+"POT-Creation-Date: 2026-10-01 12:13+0200\n"
 "PO-Revision-Date: 2018-09-13 10:55+0000\n"
 "Last-Translator: Ngalim Siregar <ngalim.siregar@gmail.com>, 2018\n"
 "Language-Team: Javanese (https://www.transifex.com/cafe/teams/13566/jv/)\n"
@@ -20,81 +20,81 @@ msgid "translator-credits"
 msgstr "kridit-wong sing nyalin nganggo basa liya"
 
 #. (itstool) path: articleinfo/title
-#: C/index.docbook:24
+#: C/index.docbook:23
 msgid "Dictionary Manual"
 msgstr ""
 
 #. (itstool) path: abstract/para
-#: C/index.docbook:27
+#: C/index.docbook:26
 msgid ""
 "Dictionary enables you to look up definitions and correct spellings of words."
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:33
+#: C/index.docbook:32
 msgid "<year>2015-2020</year> <holder>CAFE Documentation Project</holder>"
 msgstr ""
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:37
+#: C/index.docbook:36
 msgid "<year>2005</year> <holder>Emmanuele Bassi</holder>"
 msgstr ""
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
-#: C/index.docbook:52 C/index.docbook:96
+#: C/index.docbook:51 C/index.docbook:95
 msgid "CAFE Documentation Project"
 msgstr ""
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
-#: C/index.docbook:55 C/index.docbook:104
+#: C/index.docbook:54 C/index.docbook:103
 msgid "GNOME Documentation Project"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:60
+#: C/index.docbook:59
 msgid ""
 "<surname>CAFE-Dokumentationsteam</surname> <affiliation> <orgname>Cafe "
 "desktop</orgname> </affiliation>"
 msgstr ""
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:66
+#: C/index.docbook:65
 msgid ""
 "<firstname>Emmanuele</firstname> <surname>Bassi</surname> <affiliation> "
 "<address><email>ebassi@gmail.com</email></address> </affiliation>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:94
+#: C/index.docbook:93
 msgid "Wolfgang Ulbrich"
 msgstr ""
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:90 C/index.docbook:99
+#: C/index.docbook:89 C/index.docbook:98
 msgid ""
-"<revnumber>Dictionary Manual V1.10.0</revnumber> <date>July 2015</date> <_:"
-"revdescription-1/>"
+"<revnumber>Dictionary Manual V1.10.0</revnumber> <date>July 2015</date> "
+"<_:revdescription-1/>"
 msgstr ""
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:103
+#: C/index.docbook:102
 msgid "Emmanuele Bassi"
 msgstr ""
 
 #. (itstool) path: articleinfo/releaseinfo
-#: C/index.docbook:109
+#: C/index.docbook:108
 msgid "This manual describes version 1.10 of Dictionary."
 msgstr ""
 
 #. (itstool) path: legalnotice/title
-#: C/index.docbook:111
+#: C/index.docbook:110
 msgid "Feedback"
 msgstr ""
 
 #. (itstool) path: legalnotice/para
-#: C/index.docbook:112
+#: C/index.docbook:111
 msgid ""
 "To report a bug or make a suggestion regarding the Dictionary application or "
 "this manual, follow the directions in the <ulink url=\"help:cafe-user-guide/"
@@ -102,69 +102,69 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: article/indexterm
-#: C/index.docbook:121
+#: C/index.docbook:120
 msgid "<primary>Dictionary</primary>"
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:128
+#: C/index.docbook:127
 msgid "Introduction"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:130
+#: C/index.docbook:129
 msgid ""
 "The <application>Dictionary</application> application enables you to search "
 "words and terms on a dictionary source."
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:137
+#: C/index.docbook:136
 msgid "Getting Started"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:141
+#: C/index.docbook:140
 msgid "To Start Dictionary"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:143
+#: C/index.docbook:142
 msgid ""
 "You can start <application>Dictionary</application> in the following ways:"
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:148
+#: C/index.docbook:147
 msgid "<guimenu>Applications</guimenu> menu"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:150
+#: C/index.docbook:149
 msgid ""
 "Choose <menuchoice><guisubmenu>Accessories</guisubmenu> "
 "<guimenuitem>Dictionary</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:156
+#: C/index.docbook:155
 msgid "Command line"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:158
+#: C/index.docbook:157
 msgid "Execute the following command: <command>cafe-dictionary</command>"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:163
+#: C/index.docbook:162
 msgid ""
 "Once started, the <application>Dictionary</application> window is displayed:"
 msgstr ""
 
 #. (itstool) path: figure/title
-#: C/index.docbook:167 C/index.docbook:196 C/index.docbook:238
-#: C/index.docbook:279 C/index.docbook:299 C/index.docbook:368
+#: C/index.docbook:166 C/index.docbook:195 C/index.docbook:237
+#: C/index.docbook:278 C/index.docbook:298 C/index.docbook:367
 msgid "Dictionary Window"
 msgstr ""
 
@@ -173,7 +173,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:171
+#: C/index.docbook:170
 msgctxt "_"
 msgid ""
 "external ref='figures/cafe-dictionary-application.png' "
@@ -181,7 +181,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:169
+#: C/index.docbook:168
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/cafe-dictionary-application.png\" "
 "format=\"PNG\"/> </imageobject> <textobject><phrase>Shows Dictionary main "
@@ -189,24 +189,24 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:184
+#: C/index.docbook:183
 msgid "Usage"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:187
+#: C/index.docbook:186
 msgid "Looking up a word"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:189
+#: C/index.docbook:188
 msgid ""
 "To look up a word, type it into the <guilabel>entry field</guilabel> and "
 "press <keycap>Enter</keycap>."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:192
+#: C/index.docbook:191
 msgid ""
 "If some definition for the word is found, it will appear inside the main "
 "window area:"
@@ -217,7 +217,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:200
+#: C/index.docbook:199
 msgctxt "_"
 msgid ""
 "external ref='figures/cafe-dictionary-lookup.png' "
@@ -225,7 +225,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:198
+#: C/index.docbook:197
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/cafe-dictionary-lookup.png\" "
 "format=\"PNG\"/> </imageobject> <textobject><phrase>Shows a definition "
@@ -233,19 +233,19 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:207
+#: C/index.docbook:206
 msgid ""
 "Otherwise, an error dialog will appear, with a message explaining the nature "
 "of the error."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:213
+#: C/index.docbook:212
 msgid "Save look up results"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:215
+#: C/index.docbook:214
 msgid ""
 "To save the results of a look up, choose <menuchoice><guimenu>File</"
 "guimenu><guimenuitem>Save a Copy</guimenuitem></menuchoice>. Enter a name "
@@ -254,38 +254,38 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:220
+#: C/index.docbook:219
 msgid "Print look up results"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:222
+#: C/index.docbook:221
 msgid ""
 "To print the results of a look up, choose <menuchoice><guimenu>File</"
 "guimenu><guimenuitem>Print</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:224
+#: C/index.docbook:223
 msgid ""
 "Inside the <guilabel>Print</guilabel> dialog you can select the printer to "
 "use, the paper format, the number of copies."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:227
+#: C/index.docbook:226
 msgid ""
 "To see a preview of what will be printed, click <guibutton>Preview</"
 "guibutton>."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:230
+#: C/index.docbook:229
 msgid "To print, click <guibutton>Print</guibutton>."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:235
+#: C/index.docbook:234
 msgid "Find Text"
 msgstr ""
 
@@ -294,7 +294,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:242
+#: C/index.docbook:241
 msgctxt "_"
 msgid ""
 "external ref='figures/cafe-dictionary-find.png' "
@@ -302,7 +302,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:240
+#: C/index.docbook:239
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/cafe-dictionary-find.png\" "
 "format=\"PNG\"/> </imageobject> <textobject><phrase>Shows the Dictionary "
@@ -310,26 +310,26 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:250
+#: C/index.docbook:249
 msgid ""
 "To find text inside the results of a look up, perform the following steps:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:254
+#: C/index.docbook:253
 msgid ""
 "Choose <menuchoice> <guimenu>Edit</guimenu> <guimenuitem>Find</guimenuitem> "
 "</menuchoice> to display the <guilabel>Find</guilabel> pane."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:256
+#: C/index.docbook:255
 msgid ""
 "Type the text you want to find inside the <guilabel>Search</guilabel> entry."
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:258
+#: C/index.docbook:257
 msgid ""
 "To find the next occurrence of the text, click <guibutton>Next</guibutton>. "
 "To find the previous occurrence of the text, click <guibutton>Previous</"
@@ -338,12 +338,12 @@ msgstr ""
 
 #. (itstool) path: sect1/title
 #. (itstool) path: sect2/title
-#: C/index.docbook:269 C/index.docbook:459
+#: C/index.docbook:268 C/index.docbook:458
 msgid "Preferences"
 msgstr "Paling disenengi"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:271
+#: C/index.docbook:270
 msgid ""
 "To change the <application>Dictionary</application> application preferences, "
 "choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</"
@@ -351,7 +351,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:276
+#: C/index.docbook:275
 msgid "Dictionary Sources"
 msgstr ""
 
@@ -360,7 +360,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:283
+#: C/index.docbook:282
 msgctxt "_"
 msgid ""
 "external ref='figures/cafe-dictionary-preferences-source.png' "
@@ -368,7 +368,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:281
+#: C/index.docbook:280
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/cafe-dictionary-preferences-"
 "source.png\" format=\"PNG\"/> </imageobject> <textobject><phrase>Shows the "
@@ -376,14 +376,14 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:290
+#: C/index.docbook:289
 msgid ""
 "To change the dictionary source used to look up words, select the desired "
 "source from the list."
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:296
+#: C/index.docbook:295
 msgid "Adding a new source"
 msgstr ""
 
@@ -392,7 +392,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:303
+#: C/index.docbook:302
 msgctxt "_"
 msgid ""
 "external ref='figures/cafe-dictionary-add-source.png' "
@@ -400,7 +400,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:301
+#: C/index.docbook:300
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/cafe-dictionary-add-source.png\" "
 "format=\"PNG\"/> </imageobject> <textobject><phrase>Shows the Add Source "
@@ -408,93 +408,93 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:310
+#: C/index.docbook:309
 msgid "To add a new dictionary source, perform the following steps:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:313
+#: C/index.docbook:312
 msgid "Click on the <guibutton>Add</guibutton> button"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:314
+#: C/index.docbook:313
 msgid ""
 "Edit the name of the new source inside the <guilabel>Description</guilabel> "
 "entry"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:315
+#: C/index.docbook:314
 msgid ""
 "Change the transport type of the new source using the <guilabel>Transport</"
 "guilabel> combo box"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:316
+#: C/index.docbook:315
 msgid "Edit the attributes of the new source"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:317
+#: C/index.docbook:316
 msgid "Click <guibutton>Add</guibutton>"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:320
+#: C/index.docbook:319
 msgid ""
 "Different source transport types uses different attributes. This is the list "
 "of available attributes per transport type:"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:327
+#: C/index.docbook:326
 msgid "Transport"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:328
+#: C/index.docbook:327
 msgid "Attributes"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:333
+#: C/index.docbook:332
 msgid "Dictionary Server"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:335
+#: C/index.docbook:334
 msgid "Hostname: the hostname of the dictionary server"
 msgstr ""
 
 #. (itstool) path: entry/para
-#: C/index.docbook:336
+#: C/index.docbook:335
 msgid "Port: the port of the dictionary server"
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:347
+#: C/index.docbook:346
 msgid "Removing a source"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:349
+#: C/index.docbook:348
 msgid "To remove a dictionary source, perform the following steps:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:352
+#: C/index.docbook:351
 msgid "Select the source you wish to remove"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:353
+#: C/index.docbook:352
 msgid "Click the <guibutton>Remove</guibutton> button"
 msgstr ""
 
 #. (itstool) path: warning/para
-#: C/index.docbook:356
+#: C/index.docbook:355
 msgid ""
 "If you remove a dictionary source it will be permanently deleted from the "
 "list of available sources. Also, as some sources might be defined system-"
@@ -503,7 +503,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:365
+#: C/index.docbook:364
 msgid "Print Options"
 msgstr ""
 
@@ -512,7 +512,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:372
+#: C/index.docbook:371
 msgctxt "_"
 msgid ""
 "external ref='figures/cafe-dictionary-preferences-print.png' "
@@ -520,42 +520,42 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:370
+#: C/index.docbook:369
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-preferences-print."
-"png\" format=\"PNG\"/> </imageobject> <textobject><phrase>Shows the Print "
-"tab inside the Preferences dialog.</phrase></textobject>"
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-preferences-"
+"print.png\" format=\"PNG\"/> </imageobject> <textobject><phrase>Shows the "
+"Print tab inside the Preferences dialog.</phrase></textobject>"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:379
+#: C/index.docbook:378
 msgid ""
 "If you want to change the font name and size used when printing, perform the "
 "following steps:"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:383
+#: C/index.docbook:382
 msgid "Click on the <guilabel>Print Font</guilabel> button"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:384
+#: C/index.docbook:383
 msgid "Select the font and size you wish to use"
 msgstr ""
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:385
+#: C/index.docbook:384
 msgid "Click <guibutton>Ok</guibutton>"
 msgstr ""
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:394
+#: C/index.docbook:393
 msgid "The Dictionary Applet"
 msgstr ""
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:396
+#: C/index.docbook:395
 msgid ""
 "The <application>Dictionary</application> application comes with a panel "
 "applet, the <application>Dictionary Applet</application>. You can add the "
@@ -564,7 +564,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: figure/title
-#: C/index.docbook:402 C/index.docbook:438
+#: C/index.docbook:401 C/index.docbook:437
 msgid "Dictionary Applet Window"
 msgstr ""
 
@@ -573,7 +573,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:406
+#: C/index.docbook:405
 msgctxt "_"
 msgid ""
 "external ref='figures/cafe-dictionary-applet.png' "
@@ -581,7 +581,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:404
+#: C/index.docbook:403
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/cafe-dictionary-applet.png\" "
 "format=\"PNG\"/> </imageobject> <textobject><phrase>Shows Dictionary Applet."
@@ -589,12 +589,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:416
+#: C/index.docbook:415
 msgid "To Start Dictionary Applet"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:418
+#: C/index.docbook:417
 msgid ""
 "To add <application>Dictionary Applet</application> to a panel, right-click "
 "on the panel, then choose <guimenuitem>Add to Panel</guimenuitem>. Select "
@@ -603,12 +603,12 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:427
+#: C/index.docbook:426
 msgid "Using the Dictionary Applet"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:429
+#: C/index.docbook:428
 msgid ""
 "To look up a word, type it into the <guilabel>entry field</guilabel>, and "
 "press <keycap>Enter</keycap> or right-click on the dictionary icon and then "
@@ -616,7 +616,7 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:434
+#: C/index.docbook:433
 msgid ""
 "If some definition for the word was found, a window will appear, with the "
 "text of the definitions:"
@@ -627,7 +627,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:442
+#: C/index.docbook:441
 msgctxt "_"
 msgid ""
 "external ref='figures/cafe-dictionary-applet-window.png' "
@@ -635,15 +635,15 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:440
+#: C/index.docbook:439
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-applet-window."
-"png\" format=\"PNG\"/> </imageobject> <textobject><phrase>Shows Dictionary "
-"Applet main window.</phrase></textobject>"
+"<imageobject> <imagedata fileref=\"figures/cafe-dictionary-applet-"
+"window.png\" format=\"PNG\"/> </imageobject> <textobject><phrase>Shows "
+"Dictionary Applet main window.</phrase></textobject>"
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:449
+#: C/index.docbook:448
 msgid ""
 "Click <guibutton>Save</guibutton> to save the definitions to a text file. "
 "Click <guibutton>Print</guibutton> to print the definitions. Click "
@@ -651,21 +651,21 @@ msgid ""
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:453
+#: C/index.docbook:452
 msgid ""
 "You can make the window disappear by left-clicking on the dictionary icon or "
 "by pressing <keycap>Esc</keycap>."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:461
+#: C/index.docbook:460
 msgid ""
 "To configure the <application>Dictionary Applet</application>, right-click "
 "on the dictionary icon, then choose <guimenuitem>Preferences</guimenuitem>."
 msgstr ""
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:464
+#: C/index.docbook:463
 msgid ""
 "The <guilabel>Preferences</guilabel> dialog is the same used by the "
 "<application>Dictionary</application> application, so refer to <xref "
