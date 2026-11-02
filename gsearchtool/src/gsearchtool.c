@@ -840,7 +840,7 @@ add_file_to_search_results (const gchar * file,
 	GFileInfo * file_info;
 	GFile * g_file;
 	GError * error = NULL;
-	GTimeVal time_val;
+	time_t time_val;
 	CtkTreePath * path;
 	CtkTreeRowReference * reference;
 	gchar * description;
@@ -875,8 +875,8 @@ add_file_to_search_results (const gchar * file,
 	description = get_file_type_description (file, file_info);
 		readable_size = g_format_size (g_file_info_get_size (file_info));
 
-	g_file_info_get_modification_time (file_info, &time_val);
-	readable_date = get_readable_date (gsearch->search_results_date_format, time_val.tv_sec);
+	time_val = (time_t) g_file_info_get_attribute_uint64 (file_info, G_FILE_ATTRIBUTE_TIME_MODIFIED);
+	readable_date = get_readable_date (gsearch->search_results_date_format, time_val);
 
 	base_name = g_path_get_basename (file);
 	dir_name = g_path_get_dirname (file);
@@ -914,7 +914,7 @@ add_file_to_search_results (const gchar * file,
 			    COLUMN_SIZE, (-1) * (gdouble) g_file_info_get_size(file_info),
 			    COLUMN_TYPE, (description != NULL) ? description : g_strdup (g_file_info_get_content_type (file_info)),
 			    COLUMN_READABLE_DATE, readable_date,
-			    COLUMN_DATE, (-1) * (gdouble) time_val.tv_sec,
+			    COLUMN_DATE, (-1) * (gdouble) time_val,
 			    COLUMN_NO_FILES_FOUND, FALSE,
 			    -1);
 
