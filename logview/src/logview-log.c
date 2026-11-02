@@ -609,7 +609,6 @@ log_load (GIOSchedulerJob *io_job,
   const char *content_type;
   GFileType type;
   GError *err = NULL;
-  GTimeVal timeval;
   gboolean is_archive, can_read;
 
   info = g_file_query_info (f,
@@ -654,8 +653,8 @@ log_load (GIOSchedulerJob *io_job,
   }
 
   log->priv->file_size = g_file_info_get_size (info);
-  g_file_info_get_modification_time (info, &timeval);
-  log->priv->file_time = timeval.tv_sec;
+  log->priv->file_time = (time_t) g_file_info_get_attribute_uint64 (info,
+                                                                    G_FILE_ATTRIBUTE_TIME_MODIFIED);
   log->priv->display_name = g_strdup (g_file_info_get_display_name (info));
 
   g_object_unref (info);
